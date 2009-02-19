@@ -84,7 +84,8 @@ strong {
 }
 
 em {
-	font-style: italic;
+	colro: #fffeca;
+	/*font-style: italic;*/
 }
 
 abbr {

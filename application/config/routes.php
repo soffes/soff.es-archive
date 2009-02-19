@@ -2,6 +2,7 @@
 /**
  * @package  Core
  *
- * Sets the default route to "home"
+ * Sets the default route to "blog"
  */
-$config['_default'] = 'home';
+$config['_default'] = 'blog';
+$config['post/([a-zA-Z0-9\-]+)'] = 'blog/post/$1';

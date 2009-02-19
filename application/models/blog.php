@@ -4,10 +4,7 @@ class Blog_Model extends Model {
 
 	public function get_posts()
 	{
-		$post1->title = 'This is awesome';
-		$post1->content = 'I love markdown. Reasons:
-* It\'s awesome
-* It\s super easy to use';
-		return array($post1);
+		$result = $this->db->select('title, content, slug, created')->from('posts')->get();
+		return $result->result_array();
 	}
 }

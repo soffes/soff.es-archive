@@ -1,0 +1,3 @@
+[submodule "modules/pages"]
+	path = modules/pages
+	url = git://github.com/lifechurch/pages-module.git

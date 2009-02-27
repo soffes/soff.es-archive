@@ -146,21 +146,14 @@ code {
 
 h1 {
 	border-top: 4px solid #aaa;
-	font-size: 2.1em;
+	font-size: 1.9em;
 	margin-top: 0.5em;
 	padding-top: 0.5em;
-}
-
-h1:first-child {
-	border-top: medium none;
-	margin-top: 0;
-	padding-top: 0.25em;
 }
 
 h2 {
 	border-top: 4px solid #e0e0e0;
 	font-size: 1.5em;
-	font-weight: bold;
 	margin-top: 1.5em;
 	padding-top: 0.5em;
 }
@@ -182,4 +175,8 @@ ul {
 li {
 	list-style: disc;
 	margin-left: 1em;
+}
+
+div.post {
+	margin-bottom: 2em;
 }

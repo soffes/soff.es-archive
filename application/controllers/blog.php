@@ -14,11 +14,11 @@ class Blog_Controller extends Page_Controller {
 	{
 		$data = array
 		(
-			'posts' => $this->model->get_posts()
+			'posts' => $this->model->get_posts(),
 		);
 		
 		// Display the page
-		$this->page->display('blog/posts', $data, 'markdown');
+		$this->page->display('blog/posts', $data);
 	}
 	
 	public function post($slug = NULL)
@@ -40,10 +40,11 @@ class Blog_Controller extends Page_Controller {
 		
 		$data = array
 		(
-			'post' => $post
+			'post' => $post,
+			'comments' => $this->model->get_comments_by_post_id($post->id)
 		);
 		
 		$this->page->addTitle($post->title);
-		$this->page->display('blog/post', $data, 'markdown');
+		$this->page->display('blog/post', $data);
 	}
 }

@@ -84,8 +84,9 @@ strong {
 }
 
 em {
-	colro: #fffeca;
+	background-color: #fffeca;
 	/*font-style: italic;*/
+	padding: 0 0.2em;
 }
 
 abbr {

@@ -45,6 +45,8 @@ class Blog_Controller extends Page_Controller {
 		);
 		
 		$this->page->addTitle($post->title);
+//		$this->page->addJS('http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js');
+//		$this->page->addJS('comments');
 		$this->page->display('blog/post', $data);
 	}
 }

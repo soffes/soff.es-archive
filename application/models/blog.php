@@ -23,8 +23,8 @@ class Blog_Model extends Model {
 	
 	public function get_comments_by_post_id($id)
 	{
-		$result = $this->db->query("SELECT name, website, content FROM comments WHERE post_id = '$id' ORDER BY created ASC;");
-		if (count($result) != 1)
+		$result = $this->db->query("SELECT id, name, website, content, created FROM comments WHERE post_id = '$id' ORDER BY created ASC;");
+		if (count($result) < 1)
 		{
 			return FALSE;
 		}

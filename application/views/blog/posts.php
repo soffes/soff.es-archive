@@ -1,4 +1,7 @@
-<p>Welcome to <?php echo html::anchor(FALSE, 'samsoff.es') ?>. Enjoy my blog.</p>
+<div id="header" class="clear">
+	<p>Welcome to <?php echo html::anchor(FALSE, 'samsoff.es') ?>. Enjoy my blog.</p>
+	<?php echo page::view('_templates/nav') ?>
+</div>
 
 <?php foreach ($posts as $post) : ?>
 

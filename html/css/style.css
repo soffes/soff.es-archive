@@ -47,9 +47,7 @@ blockquote,q {
 /* @group General */
 
 body {
-	padding: 1em 2em;
-	margin: 0 auto;
-	width: 50em;
+	background: #f7f7f7;
 }
 
 body * {
@@ -171,6 +169,20 @@ li {
 
 /* @end */
 
+div#wrapper {
+	background: #fff;
+	padding: 1em 2em;
+	margin: 0 auto 2em;
+	width: 50em;
+}
+
+div#footer {
+	background: #fff;
+	padding: 1em;
+	margin: 0 auto 2em;
+	width: 50em;
+}
+
 div.post {
 	margin-bottom: 2em;
 }
@@ -235,6 +247,10 @@ div.post p.meta a {
 /* @end */
 
 /* @group Comments */
+
+div.comments h2.no-comments {
+	color: #aaa;
+}
 
 div.comments ul {
 	margin: 0;

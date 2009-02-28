@@ -20,7 +20,7 @@ $config['title_seperator'] = ' - ';
  * by default. You will probably override this later in your controllers. See the docs for
  * how to make a template.
  */
-$config['template'] = '_templates/blank';
+$config['template'] = '_templates/blog';
 
 /**
  * Format output. none, compress, indent

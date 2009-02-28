@@ -9,6 +9,6 @@
 		<dt><label for="comment-website">Your Website <small>optional</small></label></dt>
 		<dd><input id="comment-website" name="website" type="text" class="text" /></dd>
 	</dl>
-	<textarea id="comment-content" name="content"></textarea>
-	<input type="submit" value="Post Your Comment" />
+	<p><textarea id="comment-content" name="content"></textarea></p>
+	<p><input type="submit" value="Post Your Comment" /></p>
 </form>

@@ -10,15 +10,10 @@ class Blog_Controller extends Page_Controller {
 		$this->model = new Blog_Model;
 	}
 
-	public function index()
+	public function index($page = 1)
 	{
-		$data = array
-		(
-			'posts' => $this->model->get_posts(),
-		);
-		
 		// Display the page
-		$this->page->display('blog/posts', $data);
+		$this->page->display('blog/posts', $this->model->get_posts($page));
 	}
 	
 	public function post($slug = NULL)
@@ -48,5 +43,12 @@ class Blog_Controller extends Page_Controller {
 //		$this->page->addJS('http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js');
 //		$this->page->addJS('comments');
 		$this->page->display('blog/post', $data);
+	}
+	
+	public function rss()
+	{
+		// Display the feed
+		header('Content-type: text/xml');
+		echo page::view('blog/rss', $this->model->get_posts(1, 20));
 	}
 }

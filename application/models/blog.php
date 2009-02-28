@@ -2,11 +2,24 @@
 
 class Blog_Model extends Model {
 
-	public function get_posts()
+	public function get_posts($page = 1, $limit = 7)
 	{
-		$sql = 'SELECT p.id, p.title, p.content, p.slug, p.created, COUNT(c.post_id) as comments FROM posts p LEFT JOIN comments c ON c.post_id = p.id GROUP BY p.id ORDER BY p.created DESC;';
+		$sql = 'SELECT p.id, p.title, p.content, p.slug, p.created, COUNT(c.post_id) as comments FROM posts p LEFT JOIN comments c ON c.post_id = p.id GROUP BY p.id ORDER BY p.created DESC';
+		
+		// Get the total number of posts
 		$result = $this->db->query($sql);
-		return $result->result_array();
+		$total = count($result);
+		
+		// Get the posts for the current page
+		$posts = FALSE;		
+		if ($total > 0)
+		{
+			$sql .= ' LIMIT '.(($page - 1) * $limit).', '.$limit;
+			$result = $this->db->query($sql);
+			$posts = $result->result_array();
+		}
+		
+		return compact('total', 'posts');
 	}
 	
 	public function get_post_by_slug($slug)

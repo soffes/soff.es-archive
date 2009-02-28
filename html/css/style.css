@@ -47,6 +47,18 @@ blockquote,q {
 
 /* @end */
 
+/* @group Misc */
+
+.clear:after {
+	clear: both;
+	content: " ";
+	display: block;
+	height: 0;
+	zoom: 1;
+}
+
+/* @end */
+
 /* @group General */
 
 body {
@@ -172,11 +184,30 @@ li {
 
 /* @end */
 
+/* @group Layout */
+
 div#wrapper {
 	background: #fff;
 	padding: 1em 2em;
 	margin: 0 auto 1em;
 	width: 50em;
+}
+
+div#header p {
+	float: left;
+}
+
+div#header ul {
+	float: right;
+	margin: 0;
+	padding: 0;
+}
+
+div#header li {
+	float: left;
+	list-style: none;
+	margin: 0 0 0 1em;
+	padding: 0;
 }
 
 div#footer {
@@ -188,6 +219,8 @@ div#footer {
 div#footer p {
 	font-size: 0.9em;
 }
+
+/* @end */
 
 div.post {
 	margin-bottom: 2em;

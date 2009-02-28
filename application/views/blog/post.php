@@ -1,4 +1,7 @@
-<p><?php echo html::anchor(FALSE, '&#171; all posts') ?></p>
+<div id="header" class="clear">
+	<p><?php echo html::anchor(FALSE, '&#171; all posts') ?></p>
+	<?php echo page::view('_templates/nav') ?>
+</div>
 
 <div class="post">
 	<h1><?php echo html::anchor('post/'.$post->slug, $post->title) ?></h1>

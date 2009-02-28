@@ -1,4 +1,7 @@
-/* @override http://new.samsoff.es/css/style.css?1 */
+/* @override 
+	http://new.samsoff.es/css/style.css?1
+	http://new.samsoff.es/css/style.css?2
+*/
 
 /* @group Reset */
 
@@ -172,15 +175,18 @@ li {
 div#wrapper {
 	background: #fff;
 	padding: 1em 2em;
-	margin: 0 auto 2em;
+	margin: 0 auto 1em;
 	width: 50em;
 }
 
 div#footer {
-	background: #fff;
-	padding: 1em;
-	margin: 0 auto 2em;
+	padding: 0 1em;
+	margin: 0 auto 1em;
 	width: 50em;
+}
+
+div#footer p {
+	font-size: 0.9em;
 }
 
 div.post {

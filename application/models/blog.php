@@ -44,4 +44,19 @@ class Blog_Model extends Model {
 		
 		return $result->result_array();
 	}
+	
+	public function post_comment($id, $post)
+	{
+		// Make sure we only insert the fields we are expecting
+		$data = array
+		(
+			'post_id' => $id,
+			'name' => $post['name'],
+			'email' => $post['email'],
+			'website' => $post['website'],
+			'content' => $post['content']
+		);
+		
+		return $this->db->insert('comments', $data);
+	}
 }

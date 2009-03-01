@@ -1,6 +1,6 @@
 <h2>Add A Comment</h2>
 
-<form id="comment-form" action="<?php echo url::site('post_comment') ?>" method="post">
+<form id="comment-form" action="<?php echo url::site(Router::$current_uri.'/post_comment') ?>" method="post">
 	<dl>
 		<dt><label for="comment-name">Your Name</label></dt>
 		<dd><input id="comment-name" name="name" type="text" class="text" /></dd>

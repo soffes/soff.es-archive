@@ -51,4 +51,70 @@ class Blog_Controller extends Page_Controller {
 		header('Content-type: text/xml');
 		echo page::view('blog/rss', $this->model->get_posts(1, 20));
 	}
+	
+	public function post_comment($slug = FALSE)
+	{
+		// Make sure there is a slug to post a comment to
+		if (!$slug)
+		{
+			url::redirect();
+		}
+		
+		// Make sure it's a valid slug
+		$model = new Blog_Model;
+		$comment = $model->get_post_by_slug($slug);
+		if ($comment == FALSE)
+		{
+			url::redirect();
+		}
+		
+		// Initalize a validation library to check data
+		$post = new Validation($this->input->post());
+		
+		// Setup rules
+		$post->pre_filter('trim');
+		$post->add_rules('email', 'required', 'email', 'length[1,200]');
+		$post->add_rules('name', 'required', 'length[1,200]');
+		$post->add_rules('website', 'url', 'length[1,200]');
+		$post->add_rules('content', 'required');
+		
+		// Validate
+		$valid = $post->validate();
+		if ($valid)
+		{
+			$success = 'true';
+			
+			// Insert into the database
+			$model->post_comment($comment->id, $post);
+			
+			
+			// If ajax, return results
+			if (request::is_ajax())
+			{
+				echo json_encode(compact('success'));
+			}
+			else
+			{
+				url::redirect('post/'.$slug);
+			}
+		}
+		
+		// There were errors in the form
+		else
+		{
+			$success = 'false';
+			
+			// If ajax, return results
+			if (request::is_ajax())
+			{
+				$errors = $post->errors();
+				echo json_encode(compact('success', 'errors'));
+			}
+			else
+			{
+				// TODO: Show nice error
+				print_r($post->errors());
+			}
+		}
+	}
 }

@@ -173,12 +173,17 @@ h4 {
 	color: #555;
 }
 
-ul {
+ul, ol {
 	margin: 0 0 2em 1.3em;
 }
 
-li {
+ul li {
 	list-style: disc;
+	margin-left: 1em;
+}
+
+ol, li {
+	list-style: decimal;
 	margin-left: 1em;
 }
 

@@ -251,6 +251,18 @@ div.pagination a.next {
 	float: right;
 }
 
+div.development {
+	background: #f8f28c;
+	border-bottom: 2px solid #f8e03f;
+	padding: 1em;
+	margin: 0 0 2em;
+	text-align: center;
+}
+
+div.development p {
+	margin: 0;
+}
+
 /* @group Form */
 
 form input, form textarea {

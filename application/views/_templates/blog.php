@@ -7,6 +7,11 @@
 </head>
 
 <body>
+<?php if (!IN_PRODUCTION) : ?>
+<div class="development">
+	<p>This is the development version of <a href="http://samsoff.es/">samsoff.es</a>. Check out the <a href="http://samsoff.es/">live version</a>, or feel free to browse my <a href="http://github.com/samsoffes/samsoff.es/">source code</a>.</p>
+</div>
+<?php endif ?>
 <div id="wrapper">
 <?php echo $content ?>
 </div>

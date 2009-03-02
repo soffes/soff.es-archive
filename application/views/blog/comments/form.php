@@ -10,5 +10,5 @@
 		<dd><input id="comment-website" name="website" type="text" class="text" /></dd>
 	</dl>
 	<p><textarea id="comment-content" name="content"></textarea></p>
-	<p><input type="submit" value="Post Your Comment" /></p>
+	<p><input type="submit" class="submit" value="Post Your Comment" /></p>
 </form>

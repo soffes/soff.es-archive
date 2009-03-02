@@ -226,6 +226,13 @@ div.post {
 	margin-bottom: 2em;
 }
 
+.loading {
+	background: url(/img/dots-white.gif) no-repeat left;
+	padding-left: 29px;
+	font-size: 0.9em;
+	color: #555;
+}
+
 /* @group Form */
 
 form input, form textarea {
@@ -265,6 +272,10 @@ form textarea {
 	height: 6em;
 }
 
+form input.submit {
+	margin-right: 15px;
+}
+
 /* @end */
 
 /* @group Posts */
@@ -299,13 +310,6 @@ div.comments ul > li {
 	list-style: none;
 	padding: 0;
 	margin: 0 0 2em;
-}
-
-div.comments div.loading {
-	background: url(/img/dots-white.gif) no-repeat left;
-	padding-left: 29px;
-	font-size: 0.9em;
-	color: #555;
 }
 
 /* @end */

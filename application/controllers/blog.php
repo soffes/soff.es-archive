@@ -41,6 +41,7 @@ class Blog_Controller extends Page_Controller {
 		
 		$this->page->addTitle($post->title);
 		$this->page->addJS('http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js');
+		$this->page->addJS('jquery.json-1.3.min');
 		$this->page->addJS('comments');
 		$this->page->display('blog/post', $data);
 	}
@@ -73,10 +74,16 @@ class Blog_Controller extends Page_Controller {
 		
 		// Setup rules
 		$post->pre_filter('trim');
-		$post->add_rules('email', 'required', 'email', 'length[1,200]');
 		$post->add_rules('name', 'required', 'length[1,200]');
+		$post->add_rules('email', 'required', 'email', 'length[1,200]');
 		$post->add_rules('website', 'url', 'length[1,200]');
 		$post->add_rules('content', 'required');
+		
+		// Convert website before it gets validated
+		if ($post->website != '' && strpos($post->website, 'http://') === FALSE && strpos($post->website, 'https://') == FALSE)
+		{
+			$post->website = 'http://'.$post->website;
+		}
 		
 		// Validate
 		$valid = $post->validate();
@@ -86,12 +93,14 @@ class Blog_Controller extends Page_Controller {
 			
 			// Insert into the database
 			$model->post_comment($comment->id, $post);
-			
-			
+	
 			// If ajax, return results
 			if (request::is_ajax())
 			{
-				echo json_encode(compact('success'));
+				$html = '<li><h3>'.($post->website ? html::anchor($post->website, $post->name) : $post->name).'<small>'.date('m/d/y').'</small></h3>'.markdown::to_html($post->content).'</li>';
+			
+				echo json_encode(compact('success', 'html'));
+				return;
 			}
 			else
 			{
@@ -109,6 +118,7 @@ class Blog_Controller extends Page_Controller {
 			{
 				$errors = $post->errors();
 				echo json_encode(compact('success', 'errors'));
+				return;
 			}
 			else
 			{

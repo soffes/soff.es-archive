@@ -14,3 +14,8 @@
 </div>
 
 <?php endforeach ?>
+
+<div class="pagination clear">
+	<?php echo (($prev) ? '<a href="'.url::site('page/'.($page - 1)).'" class="prev">&#171; previous page</a>' : '');
+			echo (($next) ? '<a href="'.url::site('page/'.($page + 1)).'" class="next">next page &#187;</a>' : ''); ?>
+</div>

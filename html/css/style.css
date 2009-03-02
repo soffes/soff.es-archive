@@ -233,6 +233,24 @@ div.post {
 	color: #555;
 }
 
+div.hd-video {
+	background: #ddd;
+	padding: 1.5em 0;
+	text-align: center;
+}
+
+div.pagination {
+	margin: 1em 0;
+}
+
+div.pagination a.prev {
+	float: left;
+}
+
+div.pagination a.next {
+	float: right;
+}
+
 /* @group Form */
 
 form input, form textarea {
@@ -310,6 +328,10 @@ div.comments ul > li {
 	list-style: none;
 	padding: 0;
 	margin: 0 0 2em;
+}
+
+div.comments ul > li div.content {
+	font-size: 0.9em;
 }
 
 /* @end */

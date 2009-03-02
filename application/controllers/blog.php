@@ -97,7 +97,7 @@ class Blog_Controller extends Page_Controller {
 			// If ajax, return results
 			if (request::is_ajax())
 			{
-				$html = '<li><h3>'.($post->website ? html::anchor($post->website, $post->name) : $post->name).'<small>'.date('m/d/y').'</small></h3>'.markdown::to_html($post->content).'</li>';
+				$html = '<li><h3>'.($post->website ? html::anchor($post->website, $post->name) : $post->name).'<small>'.date('m/d/y').'</small></h3><div class="content">'.markdown::to_html($post->content).'</div></li>';
 			
 				echo json_encode(compact('success', 'html'));
 				return;

@@ -19,7 +19,10 @@ class Blog_Model extends Model {
 			$posts = $result->result_array();
 		}
 		
-		return compact('total', 'posts');
+		$next = ($page + 1 <= ceil($total / $limit));
+		$prev = ($page - 1 > 0);
+		
+		return compact('total', 'next', 'prev', 'page', 'posts');
 	}
 	
 	public function get_post_by_slug($slug)

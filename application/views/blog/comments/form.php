@@ -10,5 +10,6 @@
 		<dd><input id="comment-website" name="website" type="text" class="text" /></dd>
 	</dl>
 	<p><textarea id="comment-content" name="content"></textarea></p>
+	<p style="font-size:0.8em">Markdown enabled. <a href="http://daringfireball.net/projects/markdown/basics" target="_blank">Learn how to write Markdown.</a></p>
 	<p><input type="submit" class="submit" value="Post Your Comment" /></p>
 </form>

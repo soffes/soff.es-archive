@@ -5,7 +5,7 @@
 
 <h1>Music</h1>
 
-<div id="music">
+<div id="music" class="clear">
 	<div id="music-art">
 		<img src="http://assets.samsoffes.com/images/the-experiment.png" alt="The Experiment" style="width:300px;height:300px;" />
 	</div>
@@ -20,10 +20,10 @@
 			<li>New Home <span><a href="http://soundcloud.com/samsoffes/new-home">Listen</a></span></li>
 		</ol>
 	<p>* still really, really rough</p>
-	<p>
-		<a class="podcast-link icon-link" href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=292395055" rel="external nofollow"><span>The Experiment Podcast</span>	</a><br />
-		<a class="soundcloud-link icon-link" href="http://soundcloud.com/samsoffes" rel="external nofollow"><span>SoundCloud Profile</span></a><br />
-		<a class="lastfm-link icon-link" href="http://www.last.fm/user/samsoffes" rel="external nofollow"><span>Last.fm Profile</span></a>
+	<ul class="links">
+		<li><a class="podcast-link icon-link" href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=292395055" rel="external nofollow"><span>The Experiment Podcast</span></a></li>
+		<li><a class="soundcloud-link icon-link" href="http://soundcloud.com/samsoffes" rel="external nofollow"><span>SoundCloud Profile</span></a></li>
+<?php /*		<li><a class="lastfm-link icon-link" href="http://www.last.fm/user/samsoffes" rel="external nofollow"><span>Last.fm Profile</span></a></li> */ ?>
 	</p>
 	</div>
 </div>

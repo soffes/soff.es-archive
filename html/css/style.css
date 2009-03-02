@@ -314,3 +314,67 @@ div.comments ul > li {
 
 /* @end */
 
+/* @group Music */
+
+div#music-art {
+	border: 10px solid #e7e7e7;
+	width: 300px;
+	height: 300px;
+	float: left;
+}
+
+div#music-about {
+	width: 405px;
+	margin-left: 1em;
+	line-height: 1.5em;
+	float: left;
+}
+
+div#music-about ol {
+	margin-bottom: 30px;
+}
+
+div#music ol li {
+	list-style: decimal;
+	font-size: 1.1em;
+	margin-bottom: 0.3em;
+	margin-left: 30px;
+}
+
+div#music ol li span {
+	font-size: 0.8em;
+	margin-left: 6px;
+}
+
+div#music-about p {
+	font-size: 0.8em;
+}
+
+div#music ul.links {
+	margin: 0;
+	font-size: 0.9em;
+}
+
+div#music ul.links li {
+	margin: 0 0 1em;
+	list-style: none;
+}
+
+a.podcast-link {
+	background: url(http://assets.samsoffes.com/img/podcast-30x30.png) no-repeat 2px 0;
+	padding: 0 0 0 40px;
+}
+
+a.soundcloud-link {
+	background: url(http://assets.samsoffes.com/img/soundcloud.png) no-repeat 0 5px;
+	padding: 0 0 0 40px;
+}
+
+div.soundcloud-player {
+	height: 81px;
+	margin: 2px 0;
+	background: #eee url(http://assets.samsoffes.com/img/indicator.gif) no-repeat center;
+	padding: 6px 10px 10px;
+}
+
+/* @end */

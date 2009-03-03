@@ -177,7 +177,7 @@ ul li {
 	margin-left: 1em;
 }
 
-ol, li {
+ol li {
 	list-style: decimal;
 	margin-left: 1em;
 }

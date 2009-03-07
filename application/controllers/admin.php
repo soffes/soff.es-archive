@@ -6,7 +6,14 @@ class Admin_Controller extends Page_Controller {
 	{
 		parent::__construct();
 
-		// TODO: Make sure they are logged in
+		$username = $this->input->server('PHP_AUTH_USER');
+		$password = $this->input->server('PHP_AUTH_PW');
+
+		if ($username != Kohana::config('blog.admin_username') || $password != Kohana::config('blog.admin_password'))
+		{
+			header('WWW-Authenticate: Basic realm="' . Kohana::config('config.site_domain') . '"');
+			exit;
+		}
 		
 		$this->model = new Blog_Model;
 		

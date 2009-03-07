@@ -37,6 +37,18 @@ class Blog_Model extends Model {
 		return $array[0];
 	}
 	
+	public function get_post_by_id($id)
+	{
+		$result = $this->db->query("SELECT id, title, content, slug, created FROM posts WHERE id = '$id';");
+		if (count($result) != 1)
+		{
+			return FALSE;
+		}
+		
+		$array = $result->result_array();
+		return $array[0];
+	}
+	
 	public function get_comments_by_post_id($id)
 	{
 		$result = $this->db->query("SELECT id, name, website, content, created FROM comments WHERE post_id = '$id' ORDER BY created ASC;");
@@ -61,5 +73,18 @@ class Blog_Model extends Model {
 		);
 		
 		return $this->db->insert('comments', $data);
+	}
+	
+	public function save_post($array)
+	{
+		if (isset($array['id']))
+		{
+			$id = $array['id'];
+			unset($array['id']);
+			return $this->db->update('posts', $array, compact('id'));
+		}
+		
+		$array['slug'] = strtolower(preg_replace("/[\s\.]/", '-', preg_replace("/[^a-zA-Z0-9\-\s\.]/", '', $array['title'])));
+		return $this->db->insert('posts', $array);
 	}
 }

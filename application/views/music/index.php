@@ -18,12 +18,14 @@
 			<li>Something I Wish I Had* <span><a href="http://soundcloud.com/samsoffes/something-i-wish-i-had">Listen</a></span></li>
 			<li>To Wait A Lifetime Intro <span><a href="http://soundcloud.com/samsoffes/to-wait-a-lifetime-intro">Listen</a></span></li>
 			<li>New Home <span><a href="http://soundcloud.com/samsoffes/new-home">Listen</a></span></li>
+			<li>The Rain <span><a href="http://soundcloud.com/samsoffes/the-rain-2">Listen</a></span></li>
+			<li>After The Rain <span><a href="http://soundcloud.com/samsoffes/after-the-rain-2">Listen</a></span></li>
 		</ol>
 	<p>* still really, really rough</p>
 	<ul class="links">
 		<li><a class="podcast-link icon-link" href="http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=292395055" rel="external nofollow"><span>The Experiment Podcast</span></a></li>
 		<li><a class="soundcloud-link icon-link" href="http://soundcloud.com/samsoffes" rel="external nofollow"><span>SoundCloud Profile</span></a></li>
-<?php /*		<li><a class="lastfm-link icon-link" href="http://www.last.fm/user/samsoffes" rel="external nofollow"><span>Last.fm Profile</span></a></li> */ ?>
+		<?php /*<li><a class="lastfm-link icon-link" href="http://www.last.fm/user/samsoffes" rel="external nofollow"><span>Last.fm Profile</span></a></li>*/ ?>
 	</p>
 	</div>
 </div>

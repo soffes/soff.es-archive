@@ -20,14 +20,14 @@ $config['title_seperator'] = ' - ';
  * by default. You will probably override this later in your controllers. See the docs for
  * how to make a template.
  */
-$config['template'] = '_templates/blank';
+$config['template'] = '_templates/blog';
 
 /**
  * Format output. none, compress, indent
  * The indent method uses DOMDocument which required valid XHTML to work. If you have a malformed
  * document, it will give you a PHP error, so beware.
  */
-$config['format_output'] = (IN_PRODUCTION ? 'compress' : 'none');
+$config['format_output'] = 'none';
 
 /**
  * Default cache behavior when adding a script. If this is set to ture, all scripts you add, will
@@ -59,4 +59,4 @@ $config['js_path'] = 'js/';
 /**
  * Version number to append to end of JS and CSS files to combat caching
  */
-$config['version'] = 1;
+$config['version'] = 3;

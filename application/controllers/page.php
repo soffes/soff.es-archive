@@ -18,5 +18,6 @@ abstract class Page_Controller extends Controller {
 		
 		// Defaults
 		$this->page->addCSS('style');
+		$this->page->addRSS(url::site('rss'), 'samsoff.es - Recent Posts');
 	}
 }

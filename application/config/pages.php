@@ -59,4 +59,4 @@ $config['js_path'] = 'js/';
 /**
  * Version number to append to end of JS and CSS files to combat caching
  */
-$config['version'] = 3;
+$config['version'] = 4;

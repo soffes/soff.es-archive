@@ -611,3 +611,644 @@ Processing MusicController#index (for 127.0.0.1 at 2009-03-21 12:48:41) [GET]
 Rendering template within layouts/music
 Rendering music/index
 Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 14:34:59) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 14:36:06) [GET]
+Rendering template within layouts/music
+Rendering music/index
+
+ActionView::TemplateError (undefined local variable or method `music_path' for #<ActionView::Base:0x17e1ad4>) on line #14 of app/views/layouts/music.html.erb:
+11: 		<p><a href="http://samsoff.es/">&#171; home</a></p>
+12: 		<ul class="clear">
+13: 			<li><%= link_to 'Blog', posts_path %></li>
+14: 			<li><%= link_to 'Music', music_path %></li>
+15: 			<li><a href="http://samsoff.es/about">About</a></li>
+16: 		</ul>
+17: 	</div>
+
+    app/views/layouts/music.html.erb:14
+    app/controllers/music_controller.rb:5:in `index'
+
+Rendered rescues/_trace (41.7ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 14:38:55) [GET]
+Rendering template within layouts/music
+Rendering music/index
+
+ActionView::TemplateError (music_url failed to generate from {:action=>"show", :controller=>"music"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["music", :id] - are they all satisfied?) on line #14 of app/views/layouts/music.html.erb:
+11: 		<p><a href="http://samsoff.es/">&#171; home</a></p>
+12: 		<ul class="clear">
+13: 			<li><%= link_to 'Blog', posts_path %></li>
+14: 			<li><%= link_to 'Music', music_path %></li>
+15: 			<li><a href="http://samsoff.es/about">About</a></li>
+16: 		</ul>
+17: 	</div>
+
+    (eval):16:in `music_path'
+    app/views/layouts/music.html.erb:14
+    app/controllers/music_controller.rb:5:in `index'
+
+Rendered rescues/_trace (86.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-21 14:39:33) [GET]
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.5ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:9)
+Completed in 24ms (View: 14, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 14:39:39) [GET]
+Rendering template within layouts/music
+Rendering music/index
+
+ActionView::TemplateError (music_url failed to generate from {:action=>"show", :controller=>"music"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["music", :id] - are they all satisfied?) on line #14 of app/views/layouts/music.html.erb:
+11: 		<p><a href="http://samsoff.es/">&#171; home</a></p>
+12: 		<ul class="clear">
+13: 			<li><%= link_to 'Blog', posts_path %></li>
+14: 			<li><%= link_to 'Music', music_path %></li>
+15: 			<li><a href="http://samsoff.es/about">About</a></li>
+16: 		</ul>
+17: 	</div>
+
+    (eval):16:in `music_path'
+    app/views/layouts/music.html.erb:14
+    app/controllers/music_controller.rb:5:in `index'
+
+Rendered rescues/_trace (43.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 14:45:01) [GET]
+Rendering template within layouts/music
+Rendering music/index
+
+ActionView::TemplateError (music_url failed to generate from {:action=>"show", :controller=>"music"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["music", :id] - are they all satisfied?) on line #14 of app/views/layouts/music.html.erb:
+11: 		<p><a href="http://samsoff.es/">&#171; home</a></p>
+12: 		<ul class="clear">
+13: 			<li><%= link_to 'Blog', posts_path %></li>
+14: 			<li><%= link_to 'Music', music_path %></li>
+15: 			<li><a href="http://samsoff.es/about">About</a></li>
+16: 		</ul>
+17: 	</div>
+
+    (eval):16:in `music_path'
+    app/views/layouts/music.html.erb:14
+    app/controllers/music_controller.rb:5:in `index'
+
+Rendered rescues/_trace (45.9ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 14:45:48) [GET]
+Rendering template within layouts/music
+Rendering music/index
+
+ActionView::TemplateError (music_url failed to generate from {:action=>"show", :controller=>"music"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["music", :id] - are they all satisfied?) on line #14 of app/views/layouts/music.html.erb:
+11: 		<p><a href="http://samsoff.es/">&#171; home</a></p>
+12: 		<ul class="clear">
+13: 			<li><%= link_to 'Blog', posts_path %></li>
+14: 			<li><%= link_to 'Music', music_path %></li>
+15: 			<li><a href="http://samsoff.es/about">About</a></li>
+16: 		</ul>
+17: 	</div>
+
+    (eval):16:in `music_path'
+    app/views/layouts/music.html.erb:14
+    app/controllers/music_controller.rb:5:in `index'
+
+Rendered rescues/_trace (96.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 14:45:49) [GET]
+Rendering template within layouts/music
+Rendering music/index
+
+ActionView::TemplateError (music_url failed to generate from {:action=>"show", :controller=>"music"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["music", :id] - are they all satisfied?) on line #14 of app/views/layouts/music.html.erb:
+11: 		<p><a href="http://samsoff.es/">&#171; home</a></p>
+12: 		<ul class="clear">
+13: 			<li><%= link_to 'Blog', posts_path %></li>
+14: 			<li><%= link_to 'Music', music_path %></li>
+15: 			<li><a href="http://samsoff.es/about">About</a></li>
+16: 		</ul>
+17: 	</div>
+
+    (eval):16:in `music_path'
+    app/views/layouts/music.html.erb:14
+    app/controllers/music_controller.rb:5:in `index'
+
+Rendered rescues/_trace (42.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+/!\ FAILSAFE /!\  Sat Mar 21 14:46:29 -0500 2009
+  Status: 500 Internal Server Error
+  undefined local variable or method `blog' for main:Object
+    /Users/samsoffes/src/samsoff.es/config/routes.rb:4
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/object/misc.rb:78:in `with_options'
+    /Users/samsoffes/src/samsoff.es/config/routes.rb:3
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:226:in `draw'
+    /Users/samsoffes/src/samsoff.es/config/routes.rb:1
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:145:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:145:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:145:in `load'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:286:in `load_routes!'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:286:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:286:in `load_routes!'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:266:in `load!'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:281:in `reload'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:59:in `reload_application'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:8:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-21 14:46:30) [GET]
+
+ActionController::RoutingError (No route matches "/music" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-21 14:46:31) [GET]
+
+ActionController::RoutingError (No route matches "/music" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 14:46:40) [GET]
+Rendering template within layouts/music
+Rendering music/index
+
+ActionView::TemplateError (music_url failed to generate from {:action=>"show", :controller=>"music"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["music", :id] - are they all satisfied?) on line #14 of app/views/layouts/music.html.erb:
+11: 		<p><a href="http://samsoff.es/">&#171; home</a></p>
+12: 		<ul class="clear">
+13: 			<li><%= link_to 'Blog', posts_path %></li>
+14: 			<li><%= link_to 'Music', music_path %></li>
+15: 			<li><a href="http://samsoff.es/about">About</a></li>
+16: 		</ul>
+17: 	</div>
+
+    (eval):16:in `music_path'
+    app/views/layouts/music.html.erb:14
+    app/controllers/music_controller.rb:5:in `index'
+
+Rendered rescues/_trace (41.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 14:46:41) [GET]
+Rendering template within layouts/music
+Rendering music/index
+
+ActionView::TemplateError (music_url failed to generate from {:action=>"show", :controller=>"music"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["music", :id] - are they all satisfied?) on line #14 of app/views/layouts/music.html.erb:
+11: 		<p><a href="http://samsoff.es/">&#171; home</a></p>
+12: 		<ul class="clear">
+13: 			<li><%= link_to 'Blog', posts_path %></li>
+14: 			<li><%= link_to 'Music', music_path %></li>
+15: 			<li><a href="http://samsoff.es/about">About</a></li>
+16: 		</ul>
+17: 	</div>
+
+    (eval):16:in `music_path'
+    app/views/layouts/music.html.erb:14
+    app/controllers/music_controller.rb:5:in `index'
+
+Rendered rescues/_trace (97.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MusicController#show (for 127.0.0.1 at 2009-03-21 14:46:47) [GET]
+  Parameters: {"id"=>"index"}
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing MusicController#show (for 127.0.0.1 at 2009-03-21 14:46:48) [GET]
+  Parameters: {"id"=>"index"}
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 14:46:54) [GET]
+Rendering template within layouts/music
+Rendering music/index
+
+ActionView::TemplateError (undefined local variable or method `music_path' for #<ActionView::Base:0x222f89c>) on line #14 of app/views/layouts/music.html.erb:
+11: 		<p><a href="http://samsoff.es/">&#171; home</a></p>
+12: 		<ul class="clear">
+13: 			<li><%= link_to 'Blog', posts_path %></li>
+14: 			<li><%= link_to 'Music', music_path %></li>
+15: 			<li><a href="http://samsoff.es/about">About</a></li>
+16: 		</ul>
+17: 	</div>
+
+    app/views/layouts/music.html.erb:14
+    app/controllers/music_controller.rb:5:in `index'
+
+Rendered rescues/_trace (42.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 14:46:55) [GET]
+Rendering template within layouts/music
+Rendering music/index
+
+ActionView::TemplateError (undefined local variable or method `music_path' for #<ActionView::Base:0x2382794>) on line #14 of app/views/layouts/music.html.erb:
+11: 		<p><a href="http://samsoff.es/">&#171; home</a></p>
+12: 		<ul class="clear">
+13: 			<li><%= link_to 'Blog', posts_path %></li>
+14: 			<li><%= link_to 'Music', music_path %></li>
+15: 			<li><a href="http://samsoff.es/about">About</a></li>
+16: 		</ul>
+17: 	</div>
+
+    app/views/layouts/music.html.erb:14
+    app/controllers/music_controller.rb:5:in `index'
+
+Rendered rescues/_trace (42.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 14:47:00) [GET]
+Rendering template within layouts/music
+Rendering music/index
+
+ActionView::TemplateError (undefined local variable or method `music_path' for #<ActionView::Base:0x23b9b90>) on line #14 of app/views/layouts/music.html.erb:
+11: 		<p><a href="http://samsoff.es/">&#171; home</a></p>
+12: 		<ul class="clear">
+13: 			<li><%= link_to 'Blog', posts_path %></li>
+14: 			<li><%= link_to 'Music', music_path %></li>
+15: 			<li><a href="http://samsoff.es/about">About</a></li>
+16: 		</ul>
+17: 	</div>
+
+    app/views/layouts/music.html.erb:14
+    app/controllers/music_controller.rb:5:in `index'
+
+Rendered rescues/_trace (90.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 14:47:02) [GET]
+Rendering template within layouts/music
+Rendering music/index
+
+ActionView::TemplateError (undefined local variable or method `music_path' for #<ActionView::Base:0x240ed98>) on line #14 of app/views/layouts/music.html.erb:
+11: 		<p><a href="http://samsoff.es/">&#171; home</a></p>
+12: 		<ul class="clear">
+13: 			<li><%= link_to 'Blog', posts_path %></li>
+14: 			<li><%= link_to 'Music', music_path %></li>
+15: 			<li><a href="http://samsoff.es/about">About</a></li>
+16: 		</ul>
+17: 	</div>
+
+    app/views/layouts/music.html.erb:14
+    app/controllers/music_controller.rb:5:in `index'
+
+Rendered rescues/_trace (94.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 14:47:13) [GET]
+Rendering template within layouts/music
+Rendering music/index
+
+ActionView::TemplateError (undefined local variable or method `music_path' for #<ActionView::Base:0x240cd40>) on line #14 of app/views/layouts/music.html.erb:
+11: 		<p><a href="http://samsoff.es/">&#171; home</a></p>
+12: 		<ul class="clear">
+13: 			<li><%= link_to 'Blog', posts_path %></li>
+14: 			<li><%= link_to 'Music', music_path %></li>
+15: 			<li><a href="http://samsoff.es/about">About</a></li>
+16: 		</ul>
+17: 	</div>
+
+    app/views/layouts/music.html.erb:14
+    app/controllers/music_controller.rb:5:in `index'
+
+Rendered rescues/_trace (95.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 14:47:13) [GET]
+Rendering template within layouts/music
+Rendering music/index
+
+ActionView::TemplateError (undefined local variable or method `music_path' for #<ActionView::Base:0x248f3e4>) on line #14 of app/views/layouts/music.html.erb:
+11: 		<p><a href="http://samsoff.es/">&#171; home</a></p>
+12: 		<ul class="clear">
+13: 			<li><%= link_to 'Blog', posts_path %></li>
+14: 			<li><%= link_to 'Music', music_path %></li>
+15: 			<li><a href="http://samsoff.es/about">About</a></li>
+16: 		</ul>
+17: 	</div>
+
+    app/views/layouts/music.html.erb:14
+    app/controllers/music_controller.rb:5:in `index'
+
+Rendered rescues/_trace (41.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 14:48:06) [GET]
+Rendering template within layouts/music
+Rendering music/index
+
+ActionView::TemplateError (music_url failed to generate from {:action=>"show", :controller=>"music"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["music", :id] - are they all satisfied?) on line #14 of app/views/layouts/music.html.erb:
+11: 		<p><a href="http://samsoff.es/">&#171; home</a></p>
+12: 		<ul class="clear">
+13: 			<li><%= link_to 'Blog', posts_path %></li>
+14: 			<li><%= link_to 'Music', music_path %></li>
+15: 			<li><a href="http://samsoff.es/about">About</a></li>
+16: 		</ul>
+17: 	</div>
+
+    (eval):16:in `music_path'
+    app/views/layouts/music.html.erb:14
+    app/controllers/music_controller.rb:5:in `index'
+
+Rendered rescues/_trace (94.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+/!\ FAILSAFE /!\  Sat Mar 21 14:48:55 -0500 2009
+  Status: 500 Internal Server Error
+  Illegal route: the :controller must be specified!
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/builder.rb:175:in `build'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:308:in `add_route'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:316:in `add_named_route'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:57:in `method_missing'
+    /Users/samsoffes/src/samsoff.es/config/routes.rb:3
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:226:in `draw'
+    /Users/samsoffes/src/samsoff.es/config/routes.rb:1
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:145:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:145:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:145:in `load'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:286:in `load_routes!'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:286:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:286:in `load_routes!'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:266:in `load!'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:281:in `reload'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:59:in `reload_application'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:8:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+    /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-21 14:48:56) [GET]
+
+ActionController::RoutingError (No route matches "/music" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-21 14:48:56) [GET]
+
+ActionController::RoutingError (No route matches "/music" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-21 14:48:58) [GET]
+
+ActionController::RoutingError (No route matches "/music" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 14:49:06) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 14:49:26) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 14:51:12) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-03-21 14:51:15) [GET]
+
+ActionView::MissingTemplate (Missing template about/index.erb in view path app/views):
+  app/controllers/about_controller.rb:5:in `index'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-03-21 14:51:56) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 14:52:01) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-21 14:52:02) [GET]
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.3ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:9)
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-21 14:52:42) [GET]
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (2.0ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-21 14:52:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (1.6ms)
+  [4;35;1mComment Load (0.5ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (25.3ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 70ms (View: 64, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-21 14:52:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (1.3ms)
+  [4;35;1mComment Load (0.5ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (2.3ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-21 14:53:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (1.4ms)
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (2.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 79ms (View: 73, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-21 14:53:20) [GET]
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (2.1ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-21 14:53:56) [GET]
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (2.1ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-21 14:53:58) [GET]
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (2.1ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 14:53:59) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-03-21 14:54:00) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-21 14:54:01) [GET]
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (2.1ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 63ms (View: 5, DB: 0) | 200 OK [http://localhost/posts]

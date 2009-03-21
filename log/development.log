@@ -573,3 +573,12 @@ Rendering posts/index
 Rendered posts/_post (3.7ms)
 DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:9)
 Completed in 92ms (View: 80, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-21 11:58:41) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.4ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:9)
+Completed in 42ms (View: 32, DB: 1) | 200 OK [http://localhost/posts]

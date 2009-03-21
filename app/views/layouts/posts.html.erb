@@ -1,19 +1,27 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Posts: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'scaffold' %>
-  <%= auto_discovery_link_tag :atom, formatted_posts_path(:atom) %>
-  <%= javascript_include_tag :all %>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>samsoff.es - About</title>
+<%= stylesheet_link_tag 'style' %>
+<%= auto_discovery_link_tag :atom, formatted_posts_path(:atom) %>
+<%= javascript_include_tag :all %>
 </head>
 <body>
-
-<p style="color: green"><%= flash[:notice] %></p>
-
-<%= yield %>
-
+<div id="wrapper">
+	<div id="header" class="clear">
+		<p><%= link_to '&#171; home', posts_path %></p>
+		<ul class="clear">
+			<li><%= link_to 'Blog', posts_path %></li>
+			<li><%= link_to 'Music', music_path %></li>
+			<li><%= link_to 'About', about_path %></li>
+		</ul>
+	</div>
+	<p style="color: green"><%= flash[:notice] %></p>
+	<%= yield %>
+</div>
+<div id="footer">
+	<p>Copyright <%= link_to 'Sam Soffes', posts_path %> 2005-2009. <a href="http://github.com/samsoffes/samsoff.es/">View source on GitHub</a>.</p>
+</div>
 </body>
 </html>

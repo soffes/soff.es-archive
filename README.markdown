@@ -1,7 +1,3 @@
-# samsoff.es
+# samsoff.es - Rails Branch
 
-This is [my new blog](http://samsoff.es) that uses markdown a ton. It's pretty sweet.
-
-You can see me deving on it at <http://dev.samsoff.es>.
-
-*Note:* I don't have a few config in git (for obvious security reasons), but you can see examples where they would be.
+This is my new blog that I'm playing with in Rails. I'm still a Rails newb.

@@ -582,3 +582,32 @@ Rendering posts/index
 Rendered posts/_post (3.4ms)
 DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:9)
 Completed in 42ms (View: 32, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 12:42:39) [GET]
+Rendering music/index
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 12:44:44) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 12:45:04) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 12:45:49) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 12:48:41) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/music]

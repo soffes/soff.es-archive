@@ -1,3 +1,2 @@
 .DS_Store
-application/config/database.php
-application/config/blog.php
+*.esproj

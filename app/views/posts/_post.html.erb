@@ -1,0 +1,7 @@
+<% div_for post do %>
+	<h2><%= link_to h(post.title), post %></h2>
+	<!-- <p class="meta">Posted on TODO.</p> -->
+	<div class="content">
+		<%= simple_format h(post.body) %>
+	</div>
+<% end %>

@@ -65,7 +65,8 @@ body * {
 }
 
 body, input, textarea {
-	font-family: "HelveticaNeue-Light","HelveticaNeue",Helvetica,Arial,sans-serif;
+	font-family: "HelveticaNeue-Light","HelveticaNeue","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
 }
 
 a {

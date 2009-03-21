@@ -1,4 +1,0 @@
-<?php defined('SYSPATH') OR die('No direct access allowed.');
-
-$config['admin_username'] = 'admin';
-$config['admin_password'] = '123456';

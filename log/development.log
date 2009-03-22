@@ -1252,3 +1252,66 @@ Rendering posts/index
 Rendered posts/_post (2.1ms)
 DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
 Completed in 63ms (View: 5, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-22 13:03:18) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.7ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/code/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 97ms (View: 59, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-22 13:03:25) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Completed in 56ms (View: 54, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-03-22 13:03:28) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Completed in 24ms (View: 22, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-22 13:03:32) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (2.1ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/code/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-22 13:03:34) [GET]
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (2.4ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/code/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 51ms (View: 5, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-22 13:03:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (2.0ms)
+  [4;36;1mComment Load (14.9ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (213.0ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/code/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 439ms (View: 419, DB: 15) | 200 OK [http://localhost/posts/1]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-22 13:03:44) [POST]
+  Parameters: {"commit"=>"Add Comment", "post_id"=>"1", "authenticity_token"=>"FUig4OnA4dO/5syl8yzOv70Gq9iEqJTrYJqOHYRkmyQ=", "comment"=>{"body"=>"does ajax still work?"}, "_"=>""}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mComment Create (0.4ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "body", "post_id", "created_at") VALUES('2009-03-22 18:03:44', 'does ajax still work?', 1, '2009-03-22 18:03:44')[0m
+Rendering comments/create
+Rendered comments/_comment (2.4ms)
+Completed in 16ms (View: 5, DB: 1) | 200 OK [http://localhost/posts/1/comments]

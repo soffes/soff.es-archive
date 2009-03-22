@@ -1254,11 +1254,16 @@ DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass for
 Completed in 63ms (View: 5, DB: 0) | 200 OK [http://localhost/posts]
 
 
+<<<<<<< HEAD:log/development.log
 Processing PostsController#index (for 127.0.0.1 at 2009-03-22 13:03:18) [GET]
+=======
+Processing PostsController#index (for 127.0.0.1 at 2009-03-21 15:12:13) [GET]
+>>>>>>> 57b975a639490f13254e3d89ad290922783dc954:log/development.log
   [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
 Rendering template within layouts/posts
 Rendering posts/index
 Rendered posts/_post (3.7ms)
+<<<<<<< HEAD:log/development.log
 DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/code/samsoff.es/app/views/layouts/posts.html.erb:7)
 Completed in 97ms (View: 59, DB: 1) | 200 OK [http://localhost/posts]
 
@@ -1276,10 +1281,81 @@ Completed in 24ms (View: 22, DB: 0) | 200 OK [http://localhost/about]
 
 
 Processing PostsController#index (for 127.0.0.1 at 2009-03-22 13:03:32) [GET]
+=======
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 109ms (View: 66, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 15:12:16) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-03-21 15:12:17) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 15:13:08) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-21 15:13:10) [GET]
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (2.3ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-03-21 15:13:13) [GET]
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-03-21 15:13:19) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-03-21 15:14:01) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"w+fUGghPoJwBGHKWd7Jgz1GfapOo3RSZmrmb7nDdKBI=", "post"=>{"body"=>"it was pretty easy to get this much done so far though.", "title"=>"I have a lot of work to do"}}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/posts]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-03-21 15:14:01) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"w+fUGghPoJwBGHKWd7Jgz1GfapOo3RSZmrmb7nDdKBI=", "post"=>{"body"=>"it was pretty easy to get this much done so far though.", "title"=>"I have a lot of work to do"}}
+  [4;36;1mPost Create (0.6ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "created_at") VALUES('2009-03-21 20:14:01', 'I have a lot of work to do', 'it was pretty easy to get this much done so far though.', '2009-03-21 20:14:01')[0m
+Redirected to http://localhost:3000/posts/2
+Completed in 99ms (DB: 1) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-21 15:14:01) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (1.7ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/posts/2]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-21 15:14:11) [GET]
+>>>>>>> 57b975a639490f13254e3d89ad290922783dc954:log/development.log
   [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
 Rendering template within layouts/posts
 Rendering posts/index
 Rendered posts/_post (2.1ms)
+<<<<<<< HEAD:log/development.log
 DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/code/samsoff.es/app/views/layouts/posts.html.erb:7)
 Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/posts]
 
@@ -1315,3 +1391,175 @@ Processing CommentsController#create (for 127.0.0.1 at 2009-03-22 13:03:44) [POS
 Rendering comments/create
 Rendered comments/_comment (2.4ms)
 Completed in 16ms (View: 5, DB: 1) | 200 OK [http://localhost/posts/1/comments]
+=======
+Rendered posts/_post (0.4ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-21 15:36:01) [GET]
+  [4;36;1mPost Load (0.9ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.9ms)
+Rendered posts/_post (0.5ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 64ms (View: 24, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-21 15:36:11) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (2.2ms)
+Rendered posts/_post (0.4ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-21 15:36:59) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (2.2ms)
+Rendered posts/_post (0.4ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 40ms (View: 35, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-21 15:37:36) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (2.4ms)
+Rendered posts/_post (0.4ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-21 15:37:36) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-21 15:37:40) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (2.3ms)
+Rendered posts/_post (0.4ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-21 15:37:40) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-21 15:37:41) [GET]
+  [4;35;1mPost Load (0.7ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (2.2ms)
+Rendered posts/_post (0.4ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-21 15:37:41) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-21 15:37:49) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-03-21 15:37:50) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-21 15:37:52) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (2.3ms)
+Rendered posts/_post (0.4ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-21 15:37:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (1.8ms)
+  [4;36;1mComment Load (0.6ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (73.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.4ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 134ms (View: 128, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-21 15:38:30) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (2.4ms)
+Rendered posts/_post (0.4ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-21 15:38:31) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (2.3ms)
+Rendered posts/_post (0.4ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-21 15:38:31) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-21 15:40:34) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (2.8ms)
+Rendered posts/_post (0.4ms)
+DEPRECATION WARNING: formatted_posts_path() has been deprecated. Please pass format to the standard posts_path method instead.. (called from _run_erb_app47views47layouts47posts46html46erb at /Users/samsoffes/src/samsoff.es/app/views/layouts/posts.html.erb:7)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-21 15:40:34) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+>>>>>>> 57b975a639490f13254e3d89ad290922783dc954:log/development.log

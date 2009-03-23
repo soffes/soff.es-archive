@@ -1,4 +1,4 @@
-<li id="comment-<%= comment.id %>">
+<li class="comment" id="comment_<%= comment.id %>">
   <h3><%= link_to_unless(comment.website == '', comment.name) do |name| name end %> <small><%= time_ago_in_words(comment.created_at) %> ago</small></h3>
   <div class="content"><%= Markdown.new(comment.body).to_html %></div>
 </li>

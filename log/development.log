@@ -5344,3 +5344,80 @@ Rendered comments/_comment (0.2ms)
 Rendered comments/_comment (0.2ms)
 Rendered comments/_comment (0.3ms)
 Completed in 24ms (View: 18, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 02:12:02) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (72.9ms)
+Completed in 93ms (View: 83, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 02:12:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.9ms)
+  [4;36;1mComment Load (1.6ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (1.4ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.4ms)
+Completed in 40ms (View: 32, DB: 2) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 02:15:00) [GET]
+  [4;35;1mPost Load (0.8ms)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.0ms)
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-23 02:15:01) [GET]
+Rendering template within layouts/music
+Rendering music/index
+
+ActionView::TemplateError (No expansion found for :defaults) on line #6 of app/views/layouts/music.html.erb:
+3: <head>
+4: <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+5: <title>samsoff.es - Music</title>
+6: <%= stylesheet_link_tag :defaults %>
+7: <%= javascript_include_tag :defaults %>
+8: </head>
+9: <body>
+
+    app/views/layouts/music.html.erb:6
+    app/controllers/music_controller.rb:5:in `index'
+
+Rendered rescues/_trace (43.6ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-23 02:15:11) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 02:15:11) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 02:15:19) [GET]
+  [4;36;1mPost Load (0.8ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.8ms)
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://localhost/posts]

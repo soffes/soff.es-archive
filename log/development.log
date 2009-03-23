@@ -5134,3 +5134,213 @@ ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:58:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (68.8ms)
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (1.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.3ms)
+Completed in 114ms (View: 99, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 01:58:07) [POST]
+  Parameters: {"post_id"=>"1", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "comment"=>{"name"=>"dfasdfs", "body"=>"aafsdfsadsfd", "website"=>"", "email"=>"asdfsadfafsd"}}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+
+ActiveRecord::RecordInvalid (Validation failed: Email is invalid):
+  app/controllers/comments_controller.rb:4:in `create'
+
+Rendered rescues/_trace (38.1ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (unprocessable_entity)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 01:58:14) [POST]
+  Parameters: {"post_id"=>"1", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "comment"=>{"name"=>"dfasdfs", "body"=>"aafsdfsadsfd", "website"=>"", "email"=>"sadf@asdf.com"}}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mComment Create (0.4ms)[0m   [0;1mINSERT INTO "comments" ("name", "updated_at", "body", "post_id", "website", "email", "created_at") VALUES('dfasdfs', '2009-03-23 06:58:14', 'aafsdfsadsfd', 1, '', 'sadf@asdf.com', '2009-03-23 06:58:14')[0m
+Rendering comments/create
+Rendered comments/_comment (2.3ms)
+Completed in 80ms (View: 5, DB: 1) | 200 OK [http://localhost/posts/1/comments]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:58:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.9ms)
+  [4;36;1mComment Load (0.7ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.7ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Completed in 24ms (View: 16, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:58:41) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:58:41) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 01:58:50) [POST]
+  Parameters: {"post_id"=>"1", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "comment"=>{"name"=>"dasdfas", "body"=>"sdjksdfhkjdfsakhj", "website"=>"", "email"=>"samadsf@sadf.com"}}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mComment Create (0.3ms)[0m   [0;1mINSERT INTO "comments" ("name", "updated_at", "body", "post_id", "website", "email", "created_at") VALUES('dasdfas', '2009-03-23 06:58:50', 'sdjksdfhkjdfsakhj', 1, '', 'samadsf@sadf.com', '2009-03-23 06:58:50')[0m
+Rendering comments/create
+Rendered comments/_comment (2.4ms)
+Completed in 18ms (View: 4, DB: 1) | 200 OK [http://localhost/posts/1/comments]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:59:02) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:59:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.2ms)
+  [4;36;1mComment Load (0.8ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Completed in 74ms (View: 68, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:59:15) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 02:01:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.2ms)
+  [4;36;1mComment Load (0.8ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Completed in 33ms (View: 27, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 02:01:08) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 02:01:09) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 02:01:22) [POST]
+  Parameters: {"post_id"=>"1", "authenticity_token"=>"KyMAxZDMoLb971sfkNxeEN6V1A6JGf3KwWzmWwPvOXw=", "comment"=>{"name"=>"dasfads", "body"=>"sadfhjkfadskhj", "website"=>"", "email"=>"dafs@asdmfds.com"}}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mComment Create (0.3ms)[0m   [0;1mINSERT INTO "comments" ("name", "updated_at", "body", "post_id", "website", "email", "created_at") VALUES('dasfads', '2009-03-23 07:01:22', 'sadfhjkfadskhj', 1, '', 'dafs@asdmfds.com', '2009-03-23 07:01:22')[0m
+Rendering comments/create
+Rendered comments/_comment (2.6ms)
+Completed in 25ms (View: 6, DB: 1) | 200 OK [http://localhost/posts/1/comments]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 02:03:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.6ms)
+  [4;36;1mComment Load (0.9ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 02:03:18) [POST]
+  Parameters: {"post_id"=>"1", "authenticity_token"=>"KyMAxZDMoLb971sfkNxeEN6V1A6JGf3KwWzmWwPvOXw=", "comment"=>{"name"=>"fsdadfs", "body"=>"asdffadsfasd", "website"=>"sdffadsdsaf", "email"=>"sa@afsd.con"}}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mComment Create (0.3ms)[0m   [0;1mINSERT INTO "comments" ("name", "updated_at", "body", "post_id", "website", "email", "created_at") VALUES('fsdadfs', '2009-03-23 07:03:18', 'asdffadsfasd', 1, 'sdffadsdsaf', 'sa@afsd.con', '2009-03-23 07:03:18')[0m
+Rendering comments/create
+Rendered comments/_comment (2.7ms)
+Completed in 19ms (View: 4, DB: 1) | 200 OK [http://localhost/posts/1/comments]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 02:04:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (5.0ms)
+  [4;36;1mComment Load (1.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.3ms)
+Completed in 26ms (View: 19, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 02:07:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.2ms)
+  [4;36;1mComment Load (0.9ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.3ms)
+Completed in 24ms (View: 18, DB: 1) | 200 OK [http://localhost/posts/1]

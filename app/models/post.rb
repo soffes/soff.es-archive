@@ -3,7 +3,11 @@ class Post < ActiveRecord::Base
 	validates_uniqueness_of :slug
 	has_many :comments
 	
-#	def slug
-#		return read_attribute(:title).downcase.gsub(/[^ a-zA-Z0-9]/, '').gsub(/\s/, '-')
-#	end
+  # def slug read_attribute(:title).downcase.gsub(/[^ a-zA-Z0-9]/, '').gsub(/\s/, '-') end
+
+  def self.search(search, page)
+    paginate :per_page => 5, :page =>page,
+    :conditions => ['title like ? OR body like ?', "%#{search}", "%#{search}"],
+    :order => 'created_at DESC'
+  end
 end

@@ -1,5 +1,5 @@
-<h1>samsoff.es</h1>
-
 <%= render :partial => @posts %>
 
 <%= link_to 'New post', new_post_path %>
+
+<%= will_paginate @posts %>

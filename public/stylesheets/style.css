@@ -152,6 +152,14 @@ h1 {
 	padding-top: 0.5em;
 }
 
+h1 a {
+	color: #000;
+}
+
+h1 a:hover {
+	color: #2e80d3;
+}
+
 h2 {
 	border-top: 4px solid #e0e0e0;
 	font-size: 1.5em;

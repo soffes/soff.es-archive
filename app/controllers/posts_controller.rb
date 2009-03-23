@@ -8,7 +8,7 @@ class PostsController < ApplicationController
 	# GET /posts.json
 	# GET /posts.atom
 	def index
-		@posts = Post.find(:all, :order => "created_at DESC")
+		@posts = Post.search(params[:search], params[:page])
 
 		respond_to do |format|
 			format.html # index.html.erb

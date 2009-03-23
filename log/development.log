@@ -2551,3 +2551,250 @@ Processing MusicController#index (for 127.0.0.1 at 2009-03-22 23:58:21) [GET]
 Rendering template within layouts/music
 Rendering music/index
 Completed in 43ms (View: 1, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 00:03:36) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (70.7ms)
+Rendered posts/_post (0.6ms)
+Completed in 94ms (View: 82, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:03:40) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.7ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Completed in 42ms (View: 36, DB: 0) | 200 OK [http://localhost/posts/2]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 00:04:26) [POST]
+  Parameters: {"post_id"=>"2", "authenticity_token"=>"eiA+alt7rivdQRVi23hWNt1jaBUIFcFBEDiwfZ15j2Q=", "comment"=>{"body"=>"testing?"}}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+  [4;36;1mComment Create (0.3ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "body", "post_id", "created_at") VALUES('2009-03-23 05:04:26', 'testing?', 2, '2009-03-23 05:04:26')[0m
+Rendering comments/create
+Rendered comments/_comment (0.8ms)
+Completed in 19ms (View: 8, DB: 1) | 200 OK [http://localhost/posts/2/comments]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 00:04:43) [GET]
+
+ActionController::RoutingError (No route matches "/%3Cscript%20type=%22text/javascript%22%20src=%22http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js%22%3E%3C/script%3E" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:05:33) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.5ms)
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Rendered comments/_comment (0.9ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/posts/2]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 00:05:43) [POST]
+  Parameters: {"post_id"=>"2", "authenticity_token"=>"eiA+alt7rivdQRVi23hWNt1jaBUIFcFBEDiwfZ15j2Q=", "comment"=>{"body"=>"jquery?"}}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+  [4;36;1mComment Create (0.3ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "body", "post_id", "created_at") VALUES('2009-03-23 05:05:43', 'jquery?', 2, '2009-03-23 05:05:43')[0m
+Rendering comments/create
+Rendered comments/_comment (2.1ms)
+Completed in 15ms (View: 3, DB: 1) | 200 OK [http://localhost/posts/2/comments]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 00:08:21) [GET]
+  [4;35;1mPost Load (0.9ms)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.1ms)
+Rendered posts/_post (0.5ms)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:08:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.1ms)
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 00:08:33) [POST]
+  Parameters: {"post_id"=>"1", "authenticity_token"=>"eiA+alt7rivdQRVi23hWNt1jaBUIFcFBEDiwfZ15j2Q=", "comment"=>{"body"=>"sweet ajax"}}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mComment Create (0.3ms)[0m   [0mINSERT INTO "comments" ("updated_at", "body", "post_id", "created_at") VALUES('2009-03-23 05:08:33', 'sweet ajax', 1, '2009-03-23 05:08:33')[0m
+Rendering comments/create
+Rendered comments/_comment (2.1ms)
+Completed in 15ms (View: 3, DB: 1) | 200 OK [http://localhost/posts/1/comments]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 00:08:44) [POST]
+  Parameters: {"post_id"=>"1", "authenticity_token"=>"eiA+alt7rivdQRVi23hWNt1jaBUIFcFBEDiwfZ15j2Q=", "comment"=>{"body"=>"i wish i could make it hilite though"}}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mComment Create (0.3ms)[0m   [0mINSERT INTO "comments" ("updated_at", "body", "post_id", "created_at") VALUES('2009-03-23 05:08:44', 'i wish i could make it hilite though', 1, '2009-03-23 05:08:44')[0m
+Rendering comments/create
+Rendered comments/_comment (2.4ms)
+Completed in 15ms (View: 4, DB: 0) | 200 OK [http://localhost/posts/1/comments]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 00:08:59) [GET]
+  [4;36;1mPost Load (0.9ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.3ms)
+Rendered posts/_post (0.5ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:09:08) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (4.1ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.4ms)
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/posts/2]
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-03-23 00:09:10) [GET]
+  Parameters: {"id"=>"2"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/posts/2/edit]
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-03-23 00:09:10) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/posts/2/edit]
+
+
+Processing PostsController#update (for 127.0.0.1 at 2009-03-23 00:09:21) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "post"=>{"body"=>"Many people transfer data to and from web services to the iPhone via JSON. This is a much better way than using XML. Parsing XML on the iPhone just plain sucks. It's overly complicated and super confusing. Currently the [YouVersion][] app, [Bible][], uses JSON to transfer everything back and forth from the server and it all works great.\r\n\r\nSo you're probably thinking, \"So, great I'll just keep doing that.\" I did too until I went to one of the Apple iPhone Tech Talks. I learned a ton about how to optomize iPhone apps. One of the big things they hit on was using plists to transfer data back and forth instead of JSON or XML.\r\n\r\nThe huge benefit to using plists over JSON is that you *don't have to parse them, they are 100% native*. You can initialize an `NSDictionary` or `NSArray` with just one method.\r\n\r\n    NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfURL:plistURL];\r\n    NSArray *array = [NSArray arrayWithContentsOfURL:plistURL];\r\n\r\nThis is a super simple and easy way to do this. I would recommend using `NSURLConnection` to pull down your plist file to the temp directory and the run `initWithContentsOfFile:` instead of using the `initWithContentsOfURL:`. `NSURLConnection` provides some great added features, like being asynchronous and handeling HTTP auth, etc.\r\n\r\nFeel free to grab the iPhone Plist Tutorial project source code on GitHub at [http://github.com/samsoffes/iphone-plist](http://github.com/samsoffes/iphone-plist). It's pretty straight forward. I tried to make it as simple as possible.\r\n\r\n### Now What?\r\nYou're probably thinking, \"Great, so how do I get my data into a plist?\" Well, all you have to do is google up a parser for your language. I started writing one for PHP because that is what I use. It takes a PHP array (associative or nonassociative) and converts it into a plist string. You can find it in the helpers folder in [this repo](http://github.com/lifechurch/core-module/).\r\n\r\n### Anyone Else Doing This?\r\nI wish. It would be great if more web services offered a plist version of their API. In the new YouVersion API, we will be offering a plist format. Hopefully as the iPhone grows in popularity, this will become more and more common.\r\n\r\nIf you don't really have a choice, at least use JSON. Here is [a great library for JSON](http://code.google.com/p/json-framework/) that I currently use in [Bible][]. The next version of [Bible][] will be all plist using the new [YouVersion][] API. I can't wait :)\r\n\r\n[YouVersion]: http://youversion.com/\r\n[Bible]: http://youversion.com/iphone\r\n", "title"=>"iPhone Plist Tutorial"}, "id"=>"2"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/posts/2]
+
+
+Processing PostsController#update (for 127.0.0.1 at 2009-03-23 00:09:21) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "post"=>{"body"=>"Many people transfer data to and from web services to the iPhone via JSON. This is a much better way than using XML. Parsing XML on the iPhone just plain sucks. It's overly complicated and super confusing. Currently the [YouVersion][] app, [Bible][], uses JSON to transfer everything back and forth from the server and it all works great.\r\n\r\nSo you're probably thinking, \"So, great I'll just keep doing that.\" I did too until I went to one of the Apple iPhone Tech Talks. I learned a ton about how to optomize iPhone apps. One of the big things they hit on was using plists to transfer data back and forth instead of JSON or XML.\r\n\r\nThe huge benefit to using plists over JSON is that you *don't have to parse them, they are 100% native*. You can initialize an `NSDictionary` or `NSArray` with just one method.\r\n\r\n    NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfURL:plistURL];\r\n    NSArray *array = [NSArray arrayWithContentsOfURL:plistURL];\r\n\r\nThis is a super simple and easy way to do this. I would recommend using `NSURLConnection` to pull down your plist file to the temp directory and the run `initWithContentsOfFile:` instead of using the `initWithContentsOfURL:`. `NSURLConnection` provides some great added features, like being asynchronous and handeling HTTP auth, etc.\r\n\r\nFeel free to grab the iPhone Plist Tutorial project source code on GitHub at [http://github.com/samsoffes/iphone-plist](http://github.com/samsoffes/iphone-plist). It's pretty straight forward. I tried to make it as simple as possible.\r\n\r\n### Now What?\r\nYou're probably thinking, \"Great, so how do I get my data into a plist?\" Well, all you have to do is google up a parser for your language. I started writing one for PHP because that is what I use. It takes a PHP array (associative or nonassociative) and converts it into a plist string. You can find it in the helpers folder in [this repo](http://github.com/lifechurch/core-module/).\r\n\r\n### Anyone Else Doing This?\r\nI wish. It would be great if more web services offered a plist version of their API. In the new YouVersion API, we will be offering a plist format. Hopefully as the iPhone grows in popularity, this will become more and more common.\r\n\r\nIf you don't really have a choice, at least use JSON. Here is [a great library for JSON](http://code.google.com/p/json-framework/) that I currently use in [Bible][]. The next version of [Bible][] will be all plist using the new [YouVersion][] API. I can't wait :)\r\n\r\n[YouVersion]: http://youversion.com/\r\n[Bible]: http://youversion.com/iphone\r\n", "title"=>"iPhone Plist Tutorial"}, "id"=>"2"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+  [4;35;1mPost Update (0.3ms)[0m   [0mUPDATE "posts" SET "body" = 'Many people transfer data to and from web services to the iPhone via JSON. This is a much better way than using XML. Parsing XML on the iPhone just plain sucks. It''s overly complicated and super confusing. Currently the [YouVersion][] app, [Bible][], uses JSON to transfer everything back and forth from the server and it all works great.
+
+So you''re probably thinking, "So, great I''ll just keep doing that." I did too until I went to one of the Apple iPhone Tech Talks. I learned a ton about how to optomize iPhone apps. One of the big things they hit on was using plists to transfer data back and forth instead of JSON or XML.
+
+The huge benefit to using plists over JSON is that you *don''t have to parse them, they are 100% native*. You can initialize an `NSDictionary` or `NSArray` with just one method.
+
+ NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfURL:plistURL];
+ NSArray *array = [NSArray arrayWithContentsOfURL:plistURL];
+
+This is a super simple and easy way to do this. I would recommend using `NSURLConnection` to pull down your plist file to the temp directory and the run `initWithContentsOfFile:` instead of using the `initWithContentsOfURL:`. `NSURLConnection` provides some great added features, like being asynchronous and handeling HTTP auth, etc.
+
+Feel free to grab the iPhone Plist Tutorial project source code on GitHub at [http://github.com/samsoffes/iphone-plist](http://github.com/samsoffes/iphone-plist). It''s pretty straight forward. I tried to make it as simple as possible.
+
+### Now What?
+You''re probably thinking, "Great, so how do I get my data into a plist?" Well, all you have to do is google up a parser for your language. I started writing one for PHP because that is what I use. It takes a PHP array (associative or nonassociative) and converts it into a plist string. You can find it in the helpers folder in [this repo](http://github.com/lifechurch/core-module/).
+
+### Anyone Else Doing This?
+I wish. It would be great if more web services offered a plist version of their API. In the new YouVersion API, we will be offering a plist format. Hopefully as the iPhone grows in popularity, this will become more and more common.
+
+If you don''t really have a choice, at least use JSON. Here is [a great library for JSON](http://code.google.com/p/json-framework/) that I currently use in [Bible][]. The next version of [Bible][] will be all plist using the new [YouVersion][] API. I can''t wait :)
+
+[YouVersion]: http://youversion.com/
+[Bible]: http://youversion.com/iphone
+', "updated_at" = '2009-03-23 05:09:21' WHERE "id" = 2[0m
+Redirected to http://localhost:3000/posts/2
+Completed in 9ms (DB: 1) | 302 Found [http://localhost/posts/2]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:09:21) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.5ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/posts/2]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 00:11:37) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (71.0ms)
+Rendered posts/_post (0.6ms)
+Completed in 93ms (View: 83, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:11:43) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.8ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.3ms)
+Completed in 30ms (View: 24, DB: 1) | 200 OK [http://localhost/posts/2]
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-03-23 00:11:46) [GET]
+  Parameters: {"id"=>"2"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/posts/2/edit]
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-03-23 00:11:46) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/posts/2/edit]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 00:11:53) [GET]
+  [4;36;1mPost Load (0.9ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.2ms)
+Rendered posts/_post (0.5ms)
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-23 00:12:13) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Completed in 66ms (View: 64, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-03-23 00:12:18) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 00:12:24) [GET]
+  [4;35;1mPost Load (0.9ms)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.1ms)
+Rendered posts/_post (0.5ms)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/posts]

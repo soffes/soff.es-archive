@@ -6,15 +6,23 @@
 	<%= link_to 'See All Posts', posts_path %>
 </p>
 
-<h2>Comments</h2>
-<div id="comments">
-	<%= render :partial => @post.comments %>
+<div class="comments">
+  <h2>Comments</h2>
+  <ul>
+    <%= render :partial => @post.comments %>
+  </ul>
 </div>
 
+<h2>Add A Comment</h2
 <% remote_form_for [@post, Comment.new] do |f| %>
-	<p>
-		<%= f.label :body, "New Comment" %><br />
-		<%= f.text_area :body %>
-	</p>
+	<dl>
+		<dt><%= f.label :name, "Your Name" %></dt>
+		<dd><%= f.text_field :name, :class => "text" %></dd>
+		<dt><%= f.label :email, "Your Email" %></dt>
+		<dd><%= f.text_field :email, :class => "text" %></dd>
+		<dt><%= f.label :website, "Your Website <small>optional</small>" %></dt>
+		<dd><%= f.text_field :website, :class => "text" %></dd>
+	</dl>
+	<p>	<%= f.text_area :body %></p>
 	<p><%= f.submit "Add Comment" %></p>
 <% end %>

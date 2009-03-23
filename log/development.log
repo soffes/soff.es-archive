@@ -3150,3 +3150,1987 @@ Processing MusicController#index (for 127.0.0.1 at 2009-03-23 00:32:51) [GET]
 Rendering template within layouts/music
 Rendering music/index
 Completed in 66ms (View: 64, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 00:36:34) [GET]
+  [4;36;1mPost Load (1.3ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.9ms)
+Rendered posts/_post (0.6ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/posts]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090321084040)
+Migrating to CreateComments (20090321090749)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("posts")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090321084040)
+Migrating to CreateComments (20090321090749)
+Migrating to Post (20090323054640)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090323054640')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("comments")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("posts")[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 00:46:56) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (71.2ms)
+Rendered posts/_post (0.7ms)
+Completed in 94ms (View: 83, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 00:47:41) [GET]
+  [4;35;1mPost Load (0.9ms)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+
+ActionView::TemplateError (undefined method `slug' for #<Post:0x24b173c>) on line #3 of app/views/posts/_post.html.erb:
+1: <% div_for post do %>
+2: 	<h2><%= link_to h(post.title), post %></h2>
+3: 	<p class="meta">Posted <%= time_ago_in_words(post.created_at) %> ago - <%= post.slug %></p>
+4: 	<div class="content">
+5: 		<%= Markdown.new(post.body).to_html %>
+6: 	</div>
+
+    app/views/posts/_post.html.erb:3
+    app/views/posts/_post.html.erb:1
+    app/views/posts/index.html.erb:3
+    app/controllers/posts_controller.rb:13:in `index'
+
+Rendered rescues/_trace (106.4ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 00:47:41) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090321084040)
+Migrating to CreateComments (20090321090749)
+Migrating to AddSlugToPost (20090323054956)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "posts" ADD "slug" varchar(255)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090323054956')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("posts")[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 00:50:18) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (70.4ms)
+Rendered posts/_post (0.6ms)
+Completed in 93ms (View: 82, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:51:02) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.9ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.3ms)
+Completed in 30ms (View: 25, DB: 1) | 200 OK [http://localhost/posts/2]
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-03-23 00:51:04) [GET]
+  Parameters: {"id"=>"2"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/posts/2/edit]
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-03-23 00:51:04) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/posts/2/edit]
+
+
+Processing PostsController#update (for 127.0.0.1 at 2009-03-23 00:51:12) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "post"=>{"slug"=>"iphone-plist-tutorial", "body"=>"Many people transfer data to and from web services to the iPhone via JSON. This is a much better way than using XML. Parsing XML on the iPhone just plain sucks. It's overly complicated and super confusing. Currently the [YouVersion][] app, [Bible][], uses JSON to transfer everything back and forth from the server and it all works great.\r\n\r\nSo you're probably thinking, \"So, great I'll just keep doing that.\" I did too until I went to one of the Apple iPhone Tech Talks. I learned a ton about how to optomize iPhone apps. One of the big things they hit on was using plists to transfer data back and forth instead of JSON or XML.\r\n\r\nThe huge benefit to using plists over JSON is that you *don't have to parse them, they are 100% native*. You can initialize an `NSDictionary` or `NSArray` with just one method.\r\n\r\n    NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfURL:plistURL];\r\n    NSArray *array = [NSArray arrayWithContentsOfURL:plistURL];\r\n\r\nThis is a super simple and easy way to do this. I would recommend using `NSURLConnection` to pull down your plist file to the temp directory and the run `initWithContentsOfFile:` instead of using the `initWithContentsOfURL:`. `NSURLConnection` provides some great added features, like being asynchronous and handeling HTTP auth, etc.\r\n\r\nFeel free to grab the iPhone Plist Tutorial project source code on GitHub at [http://github.com/samsoffes/iphone-plist](http://github.com/samsoffes/iphone-plist). It's pretty straight forward. I tried to make it as simple as possible.\r\n\r\n### Now What?\r\nYou're probably thinking, \"Great, so how do I get my data into a plist?\" Well, all you have to do is google up a parser for your language. I started writing one for PHP because that is what I use. It takes a PHP array (associative or nonassociative) and converts it into a plist string. You can find it in the helpers folder in [this repo](http://github.com/lifechurch/core-module/).\r\n\r\n### Anyone Else Doing This?\r\nI wish. It would be great if more web services offered a plist version of their API. In the new YouVersion API, we will be offering a plist format. Hopefully as the iPhone grows in popularity, this will become more and more common.\r\n\r\nIf you don't really have a choice, at least use JSON. Here is [a great library for JSON](http://code.google.com/p/json-framework/) that I currently use in [Bible][]. The next version of [Bible][] will be all plist using the new [YouVersion][] API. I can't wait :)\r\n\r\n[YouVersion]: http://youversion.com/\r\n[Bible]: http://youversion.com/iphone\r\n", "title"=>"iPhone Plist Tutorial"}, "id"=>"2"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/posts/2]
+
+
+Processing PostsController#update (for 127.0.0.1 at 2009-03-23 00:51:12) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "post"=>{"slug"=>"iphone-plist-tutorial", "body"=>"Many people transfer data to and from web services to the iPhone via JSON. This is a much better way than using XML. Parsing XML on the iPhone just plain sucks. It's overly complicated and super confusing. Currently the [YouVersion][] app, [Bible][], uses JSON to transfer everything back and forth from the server and it all works great.\r\n\r\nSo you're probably thinking, \"So, great I'll just keep doing that.\" I did too until I went to one of the Apple iPhone Tech Talks. I learned a ton about how to optomize iPhone apps. One of the big things they hit on was using plists to transfer data back and forth instead of JSON or XML.\r\n\r\nThe huge benefit to using plists over JSON is that you *don't have to parse them, they are 100% native*. You can initialize an `NSDictionary` or `NSArray` with just one method.\r\n\r\n    NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfURL:plistURL];\r\n    NSArray *array = [NSArray arrayWithContentsOfURL:plistURL];\r\n\r\nThis is a super simple and easy way to do this. I would recommend using `NSURLConnection` to pull down your plist file to the temp directory and the run `initWithContentsOfFile:` instead of using the `initWithContentsOfURL:`. `NSURLConnection` provides some great added features, like being asynchronous and handeling HTTP auth, etc.\r\n\r\nFeel free to grab the iPhone Plist Tutorial project source code on GitHub at [http://github.com/samsoffes/iphone-plist](http://github.com/samsoffes/iphone-plist). It's pretty straight forward. I tried to make it as simple as possible.\r\n\r\n### Now What?\r\nYou're probably thinking, \"Great, so how do I get my data into a plist?\" Well, all you have to do is google up a parser for your language. I started writing one for PHP because that is what I use. It takes a PHP array (associative or nonassociative) and converts it into a plist string. You can find it in the helpers folder in [this repo](http://github.com/lifechurch/core-module/).\r\n\r\n### Anyone Else Doing This?\r\nI wish. It would be great if more web services offered a plist version of their API. In the new YouVersion API, we will be offering a plist format. Hopefully as the iPhone grows in popularity, this will become more and more common.\r\n\r\nIf you don't really have a choice, at least use JSON. Here is [a great library for JSON](http://code.google.com/p/json-framework/) that I currently use in [Bible][]. The next version of [Bible][] will be all plist using the new [YouVersion][] API. I can't wait :)\r\n\r\n[YouVersion]: http://youversion.com/\r\n[Bible]: http://youversion.com/iphone\r\n", "title"=>"iPhone Plist Tutorial"}, "id"=>"2"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+  [4;35;1mPost Update (0.3ms)[0m   [0mUPDATE "posts" SET "updated_at" = '2009-03-23 05:51:12', "slug" = 'iphone-plist-tutorial' WHERE "id" = 2[0m
+Redirected to http://localhost:3000/posts/2
+Completed in 10ms (DB: 1) | 302 Found [http://localhost/posts/2]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:51:12) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.5ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Completed in 79ms (View: 12, DB: 1) | 200 OK [http://localhost/posts/2]
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-03-23 00:51:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/posts/2/edit]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 00:51:19) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.3ms)
+Rendered posts/_post (0.5ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:51:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.2ms)
+  [4;35;1mComment Load (0.7ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-03-23 00:51:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/posts/1/edit]
+
+
+Processing PostsController#update (for 127.0.0.1 at 2009-03-23 00:51:27) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "post"=>{"slug"=>"yay-rails", "body"=>"I can't wait to migrate all of my posts and comments yet again...", "title"=>"Yay Rails"}, "id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mPost Update (0.3ms)[0m   [0;1mUPDATE "posts" SET "updated_at" = '2009-03-23 05:51:27', "slug" = 'yay-rails' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/posts/1
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:51:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.4ms)
+  [4;36;1mComment Load (0.8ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Completed in 92ms (View: 86, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 00:51:28) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.6ms)
+Rendered posts/_post (0.5ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/posts]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090321084040)
+Migrating to CreateComments (20090321090749)
+Migrating to AddSlugToPost (20090323054956)
+Migrating to AddNameEmailWebsiteToPost (20090323055249)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "posts" ADD "name" varchar(255)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mALTER TABLE "posts" ADD "email" email[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "posts" ADD "website" url[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090323055249')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090321084040)
+Migrating to CreateComments (20090321090749)
+Migrating to AddSlugToPost (20090323054956)
+Migrating to AddNameEmailWebsiteToPost (20090323055249)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:53:22) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (70.1ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.3ms)
+Completed in 111ms (View: 99, DB: 1) | 200 OK [http://localhost/posts/2]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:55:42) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.8ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+
+ActionView::TemplateError (undefined method `text_filed' for #<ActionView::Helpers::FormBuilder:0x23eca90>) on line #17 of app/views/posts/show.html.erb:
+14: <% remote_form_for [@post, Comment.new] do |f| %>
+15: 	<dl>
+16: 		<dt><%= f.label :name, "Your Name" %></dt>
+17: 		<dd><%= f.text_filed :name %></dd>
+18: 	</dl>
+19: 	<p>	<%= f.text_area :body %></p>
+20: 	<p><%= f.submit "Add Comment" %></p>
+
+    app/views/posts/show.html.erb:17
+    app/views/posts/show.html.erb:14
+    app/controllers/posts_controller.rb:27:in `show'
+
+Rendered rescues/_trace (90.9ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 00:55:43) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:55:52) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.9ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+
+ActionView::TemplateError (undefined method `name' for #<Comment:0x22dfa08>) on line #17 of app/views/posts/show.html.erb:
+14: <% remote_form_for [@post, Comment.new] do |f| %>
+15: 	<dl>
+16: 		<dt><%= f.label :name, "Your Name" %></dt>
+17: 		<dd><%= f.text_field :name %></dd>
+18: 	</dl>
+19: 	<p>	<%= f.text_area :body %></p>
+20: 	<p><%= f.submit "Add Comment" %></p>
+
+    app/views/posts/show.html.erb:17
+    app/views/posts/show.html.erb:14
+    app/controllers/posts_controller.rb:27:in `show'
+
+Rendered rescues/_trace (44.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 00:55:52) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:55:53) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.6ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+
+ActionView::TemplateError (undefined method `name' for #<Comment:0x2280ecc>) on line #17 of app/views/posts/show.html.erb:
+14: <% remote_form_for [@post, Comment.new] do |f| %>
+15: 	<dl>
+16: 		<dt><%= f.label :name, "Your Name" %></dt>
+17: 		<dd><%= f.text_field :name %></dd>
+18: 	</dl>
+19: 	<p>	<%= f.text_area :body %></p>
+20: 	<p><%= f.submit "Add Comment" %></p>
+
+    app/views/posts/show.html.erb:17
+    app/views/posts/show.html.erb:14
+    app/controllers/posts_controller.rb:27:in `show'
+
+Rendered rescues/_trace (44.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 00:55:53) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090321084040)
+Migrating to CreateComments (20090321090749)
+Migrating to AddSlugToPost (20090323054956)
+Migrating to AddNameEmailWebsiteToPost (20090323055249)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:56:07) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (70.3ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.3ms)
+
+ActionView::TemplateError (undefined method `name' for #<Comment:0x24d5754>) on line #17 of app/views/posts/show.html.erb:
+14: <% remote_form_for [@post, Comment.new] do |f| %>
+15: 	<dl>
+16: 		<dt><%= f.label :name, "Your Name" %></dt>
+17: 		<dd><%= f.text_field :name %></dd>
+18: 	</dl>
+19: 	<p>	<%= f.text_area :body %></p>
+20: 	<p><%= f.submit "Add Comment" %></p>
+
+    app/views/posts/show.html.erb:17
+    app/views/posts/show.html.erb:14
+    app/controllers/posts_controller.rb:27:in `show'
+
+Rendered rescues/_trace (97.8ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 00:56:07) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090321084040)
+Migrating to CreateComments (20090321090749)
+Migrating to AddSlugToPost (20090323054956)
+Migrating to AddNameEmailWebsiteToPost (20090323055249)
+Migrating to RemoveNameEmailWebsiteFromPost (20090323055636)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090323055636')[0m
+Migrating to AddNameEmailWebsiteToComment (20090323055649)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "comments" ADD "name" varchar(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "comments" ADD "email" email[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mALTER TABLE "comments" ADD "website" url[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090323055649')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:56:59) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (69.6ms)
+  [4;35;1mComment Load (0.5ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.3ms)
+Completed in 110ms (View: 98, DB: 1) | 200 OK [http://localhost/posts/2]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:57:16) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.7ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/posts/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 00:57:16) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090321084040)
+Migrating to CreateComments (20090321090749)
+Migrating to AddSlugToPost (20090323054956)
+Migrating to AddNameEmailWebsiteToPost (20090323055249)
+Migrating to AddNameEmailWebsiteToComment (20090323055649)
+Migrating to RemoveNameEmailWebsiteFromPost (20090323055850)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090323055850')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePost (20090323060001)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090323060001')[0m
+Migrating to CreateComment (20090323060050)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090323060050')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:01:01) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (70.8ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.3ms)
+Completed in 111ms (View: 99, DB: 1) | 200 OK [http://localhost/posts/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:01:02) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePost (20090323060001)
+Migrating to CreateComment (20090323060050)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090323060539)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "slug" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090323060539')[0m
+Migrating to CreateComments (20090323060540)
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "post_id" integer, "name" varchar(255), "email" varchar(255), "website" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090323060540')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("posts")[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 01:06:50) [GET]
+  [4;36;1mPost Load (0.8ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-03-23 01:06:53) [GET]
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-03-23 01:06:53) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-03-23 01:07:15) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:07:16) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-03-23 01:08:20) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "post"=>{"slug"=>"iphone-plist-tutorial", "body"=>"Many people transfer data to and from web services to the iPhone via JSON. This is a much better way than using XML. Parsing XML on the iPhone just plain sucks. It's overly complicated and super confusing. Currently the [YouVersion][] app, [Bible][], uses JSON to transfer everything back and forth from the server and it all works great.\r\n\r\nSo you're probably thinking, \"So, great I'll just keep doing that.\" I did too until I went to one of the Apple iPhone Tech Talks. I learned a ton about how to optomize iPhone apps. One of the big things they hit on was using plists to transfer data back and forth instead of JSON or XML.\r\n\r\nThe huge benefit to using plists over JSON is that you *don't have to parse them, they are 100% native*. You can initialize an `NSDictionary` or `NSArray` with just one method.\r\n\r\n    NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfURL:plistURL];\r\n    NSArray *array = [NSArray arrayWithContentsOfURL:plistURL];\r\n\r\nThis is a super simple and easy way to do this. I would recommend using `NSURLConnection` to pull down your plist file to the temp directory and the run `initWithContentsOfFile:` instead of using the `initWithContentsOfURL:`. `NSURLConnection` provides some great added features, like being asynchronous and handeling HTTP auth, etc.\r\n\r\nFeel free to grab the iPhone Plist Tutorial project source code on GitHub at [http://github.com/samsoffes/iphone-plist](http://github.com/samsoffes/iphone-plist). It's pretty straight forward. I tried to make it as simple as possible.\r\n\r\n### Now What?\r\nYou're probably thinking, \"Great, so how do I get my data into a plist?\" Well, all you have to do is google up a parser for your language. I started writing one for PHP because that is what I use. It takes a PHP array (associative or nonassociative) and converts it into a plist string. You can find it in the helpers folder in [this repo](http://github.com/lifechurch/core-module/).\r\n\r\n### Anyone Else Doing This?\r\nI wish. It would be great if more web services offered a plist version of their API. In the new YouVersion API, we will be offering a plist format. Hopefully as the iPhone grows in popularity, this will become more and more common.\r\n\r\nIf you don't really have a choice, at least use JSON. Here is [a great library for JSON](http://code.google.com/p/json-framework/) that I currently use in [Bible][]. The next version of [Bible][] will be all plist using the new [YouVersion][] API. I can't wait :)\r\n\r\n[YouVersion]: http://youversion.com/\r\n[Bible]: http://youversion.com/iphone", "title"=>"iPhone Plist Tutorial"}}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/posts]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-03-23 01:08:20) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "post"=>{"slug"=>"iphone-plist-tutorial", "body"=>"Many people transfer data to and from web services to the iPhone via JSON. This is a much better way than using XML. Parsing XML on the iPhone just plain sucks. It's overly complicated and super confusing. Currently the [YouVersion][] app, [Bible][], uses JSON to transfer everything back and forth from the server and it all works great.\r\n\r\nSo you're probably thinking, \"So, great I'll just keep doing that.\" I did too until I went to one of the Apple iPhone Tech Talks. I learned a ton about how to optomize iPhone apps. One of the big things they hit on was using plists to transfer data back and forth instead of JSON or XML.\r\n\r\nThe huge benefit to using plists over JSON is that you *don't have to parse them, they are 100% native*. You can initialize an `NSDictionary` or `NSArray` with just one method.\r\n\r\n    NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfURL:plistURL];\r\n    NSArray *array = [NSArray arrayWithContentsOfURL:plistURL];\r\n\r\nThis is a super simple and easy way to do this. I would recommend using `NSURLConnection` to pull down your plist file to the temp directory and the run `initWithContentsOfFile:` instead of using the `initWithContentsOfURL:`. `NSURLConnection` provides some great added features, like being asynchronous and handeling HTTP auth, etc.\r\n\r\nFeel free to grab the iPhone Plist Tutorial project source code on GitHub at [http://github.com/samsoffes/iphone-plist](http://github.com/samsoffes/iphone-plist). It's pretty straight forward. I tried to make it as simple as possible.\r\n\r\n### Now What?\r\nYou're probably thinking, \"Great, so how do I get my data into a plist?\" Well, all you have to do is google up a parser for your language. I started writing one for PHP because that is what I use. It takes a PHP array (associative or nonassociative) and converts it into a plist string. You can find it in the helpers folder in [this repo](http://github.com/lifechurch/core-module/).\r\n\r\n### Anyone Else Doing This?\r\nI wish. It would be great if more web services offered a plist version of their API. In the new YouVersion API, we will be offering a plist format. Hopefully as the iPhone grows in popularity, this will become more and more common.\r\n\r\nIf you don't really have a choice, at least use JSON. Here is [a great library for JSON](http://code.google.com/p/json-framework/) that I currently use in [Bible][]. The next version of [Bible][] will be all plist using the new [YouVersion][] API. I can't wait :)\r\n\r\n[YouVersion]: http://youversion.com/\r\n[Bible]: http://youversion.com/iphone", "title"=>"iPhone Plist Tutorial"}}
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "created_at") VALUES('iphone-plist-tutorial', '2009-03-23 06:08:20', 'iPhone Plist Tutorial', 'Many people transfer data to and from web services to the iPhone via JSON. This is a much better way than using XML. Parsing XML on the iPhone just plain sucks. It''s overly complicated and super confusing. Currently the [YouVersion][] app, [Bible][], uses JSON to transfer everything back and forth from the server and it all works great.
+
+So you''re probably thinking, "So, great I''ll just keep doing that." I did too until I went to one of the Apple iPhone Tech Talks. I learned a ton about how to optomize iPhone apps. One of the big things they hit on was using plists to transfer data back and forth instead of JSON or XML.
+
+The huge benefit to using plists over JSON is that you *don''t have to parse them, they are 100% native*. You can initialize an `NSDictionary` or `NSArray` with just one method.
+
+ NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfURL:plistURL];
+ NSArray *array = [NSArray arrayWithContentsOfURL:plistURL];
+
+This is a super simple and easy way to do this. I would recommend using `NSURLConnection` to pull down your plist file to the temp directory and the run `initWithContentsOfFile:` instead of using the `initWithContentsOfURL:`. `NSURLConnection` provides some great added features, like being asynchronous and handeling HTTP auth, etc.
+
+Feel free to grab the iPhone Plist Tutorial project source code on GitHub at [http://github.com/samsoffes/iphone-plist](http://github.com/samsoffes/iphone-plist). It''s pretty straight forward. I tried to make it as simple as possible.
+
+### Now What?
+You''re probably thinking, "Great, so how do I get my data into a plist?" Well, all you have to do is google up a parser for your language. I started writing one for PHP because that is what I use. It takes a PHP array (associative or nonassociative) and converts it into a plist string. You can find it in the helpers folder in [this repo](http://github.com/lifechurch/core-module/).
+
+### Anyone Else Doing This?
+I wish. It would be great if more web services offered a plist version of their API. In the new YouVersion API, we will be offering a plist format. Hopefully as the iPhone grows in popularity, this will become more and more common.
+
+If you don''t really have a choice, at least use JSON. Here is [a great library for JSON](http://code.google.com/p/json-framework/) that I currently use in [Bible][]. The next version of [Bible][] will be all plist using the new [YouVersion][] API. I can''t wait :)
+
+[YouVersion]: http://youversion.com/
+[Bible]: http://youversion.com/iphone', '2009-03-23 06:08:20')[0m
+Redirected to http://localhost:3000/posts/1
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:08:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (30.3ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Completed in 50ms (View: 44, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 01:08:25) [GET]
+  [4;36;1mPost Load (0.8ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (5.0ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 01:09:38) [GET]
+  [4;35;1mPost Load (0.9ms)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (5.0ms)
+Completed in 77ms (View: 7, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:09:39) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:09:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.4ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:10:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.4ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:10:13) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 01:10:15) [POST]
+  Parameters: {"post_id"=>"1", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "comment"=>{"name"=>"", "body"=>"", "email"=>""}}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank, Body can't be blank, Email can't be blank):
+  app/controllers/comments_controller.rb:4:in `create'
+
+Rendered rescues/_trace (36.6ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (unprocessable_entity)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 01:10:21) [POST]
+  Parameters: {"post_id"=>"1", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "comment"=>{"name"=>"", "body"=>"", "email"=>""}}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank, Body can't be blank, Email can't be blank):
+  app/controllers/comments_controller.rb:4:in `create'
+
+Rendered rescues/_trace (38.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (unprocessable_entity)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 01:10:23) [POST]
+  Parameters: {"post_id"=>"1", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "comment"=>{"name"=>"", "body"=>"sadafddfs", "email"=>""}}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank, Email can't be blank):
+  app/controllers/comments_controller.rb:4:in `create'
+
+Rendered rescues/_trace (35.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (unprocessable_entity)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 01:10:26) [POST]
+  Parameters: {"post_id"=>"1", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "comment"=>{"name"=>"", "body"=>"sadafddfs", "email"=>"adfsafds"}}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank):
+  app/controllers/comments_controller.rb:4:in `create'
+
+Rendered rescues/_trace (93.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (unprocessable_entity)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:10:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.3ms)
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 01:10:46) [GET]
+  [4;36;1mPost Load (0.8ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.3ms)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:10:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.4ms)
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/posts/1]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090323060539)
+Migrating to CreateComments (20090323060540)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("posts")[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:11:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (68.9ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Completed in 106ms (View: 95, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:11:45) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 01:11:46) [POST]
+  Parameters: {"post_id"=>"1", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "comment"=>{"name"=>"", "body"=>"dsfdasf", "email"=>""}}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mComment Create (0.6ms)[0m   [0mINSERT INTO "comments" ("name", "updated_at", "body", "post_id", "website", "email", "created_at") VALUES('', '2009-03-23 06:11:46', 'dsfdasf', 1, NULL, '', '2009-03-23 06:11:46')[0m
+Rendering comments/create
+Rendered comments/_comment (0.8ms)
+Completed in 20ms (View: 7, DB: 1) | 200 OK [http://localhost/posts/1/comments]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:12:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (68.3ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (1.0ms)
+Completed in 109ms (View: 97, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:12:08) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 01:12:11) [POST]
+  Parameters: {"post_id"=>"1", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "comment"=>{"name"=>"", "body"=>"", "email"=>""}}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank, Body can't be blank, Email can't be blank):
+  app/controllers/comments_controller.rb:4:in `create'
+
+Rendered rescues/_trace (39.0ms)
+Rendered rescues/_request_and_response (58.0ms)
+Rendering rescues/layout (unprocessable_entity)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 01:12:16) [POST]
+  Parameters: {"post_id"=>"1", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "comment"=>{"name"=>"", "body"=>"asdf", "email"=>"asdf"}}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank):
+  app/controllers/comments_controller.rb:4:in `create'
+
+Rendered rescues/_trace (34.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (unprocessable_entity)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:12:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.4ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.4ms)
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 01:12:58) [POST]
+  Parameters: {"post_id"=>"1", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "comment"=>{"name"=>"", "body"=>"", "website"=>"", "email"=>""}}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+
+ActiveRecord::RecordInvalid (Validation failed: Name can't be blank, Body can't be blank, Email can't be blank):
+  app/controllers/comments_controller.rb:4:in `create'
+
+Rendered rescues/_trace (35.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (unprocessable_entity)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 01:13:02) [POST]
+  Parameters: {"post_id"=>"1", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "comment"=>{"name"=>"asdafds", "body"=>"asfds", "website"=>"", "email"=>"asfdas"}}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mComment Create (0.4ms)[0m   [0;1mINSERT INTO "comments" ("name", "updated_at", "body", "post_id", "website", "email", "created_at") VALUES('asdafds', '2009-03-23 06:13:02', 'asfds', 1, '', 'asfdas', '2009-03-23 06:13:02')[0m
+Rendering comments/create
+Rendered comments/_comment (2.3ms)
+Completed in 18ms (View: 5, DB: 1) | 200 OK [http://localhost/posts/1/comments]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:15:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (68.3ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.3ms)
+Completed in 109ms (View: 97, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:15:13) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 01:15:16) [GET]
+  [4;36;1mPost Load (0.8ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.6ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-03-23 01:15:18) [GET]
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-03-23 01:15:18) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-03-23 01:15:22) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "post"=>{"slug"=>"", "body"=>"", "title"=>""}}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/posts]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-03-23 01:15:22) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "post"=>{"slug"=>"", "body"=>"", "title"=>""}}
+  [4;35;1mPost Exists (0.1ms)[0m   [0mSELECT "posts".id FROM "posts" WHERE ("posts"."slug" = '') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 13ms (View: 3, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-03-23 01:15:29) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "post"=>{"slug"=>"iphone-plist-tutorial", "body"=>"sadfafds", "title"=>"sadffdas"}}
+  [4;36;1mPost Exists (0.2ms)[0m   [0;1mSELECT "posts".id FROM "posts" WHERE ("posts"."slug" = 'iphone-plist-tutorial') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 12ms (View: 3, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 01:15:36) [GET]
+  [4;35;1mPost Load (0.8ms)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.3ms)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:15:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.4ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:18:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.4ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (1.2ms)
+Rendered comments/_comment (0.3ms)
+Completed in 24ms (View: 18, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:18:39) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:19:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.4ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:19:13) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:19:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.5ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:19:43) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:20:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.4ms)
+  [4;35;1mComment Load (0.5ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.3ms)
+Completed in 75ms (View: 69, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:20:10) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:20:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.4ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+
+ActionView::TemplateError (undefined method `li_for' for #<ActionView::Base:0x2442814>) on line #1 of app/views/comments/_comment.html.erb:
+1: <% li_for comment do %>
+2: 	<h3><a href="<%= comment.website %>"><%= comment.name %></a> <small><%= time_ago_in_words(comment.created_at) %> ago</small></h3>
+3: 	<div class="content"><%= Markdown.new(comment.body).to_html %></div>
+4: <% end %>
+
+    app/views/comments/_comment.html.erb:1
+    app/views/posts/show.html.erb:12
+    app/controllers/posts_controller.rb:27:in `show'
+
+Rendered rescues/_trace (96.7ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:20:48) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:21:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.6ms)
+  [4;35;1mComment Load (0.5ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.2ms)
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:21:07) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:22:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.4ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+
+ActionView::TemplateError (wrong number of arguments (1 for 0)) on line #2 of app/views/comments/_comment.html.erb:
+1: <li id="comment-<%= comment.id %>">
+2:   <h3><%= link_to comment.website comment.name %> <small><%= time_ago_in_words(comment.created_at) %> ago</small></h3>
+3:   <div class="content"><%= Markdown.new(comment.body).to_html %></div>
+4: </li>
+
+    app/views/comments/_comment.html.erb:2:in `website'
+    app/views/comments/_comment.html.erb:2
+    app/views/posts/show.html.erb:12
+    app/controllers/posts_controller.rb:27:in `show'
+
+Rendered rescues/_trace (102.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:22:12) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:22:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.4ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.2ms)
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:22:33) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:22:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.5ms)
+  [4;35;1mComment Load (0.5ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (1.1ms)
+Rendered comments/_comment (0.2ms)
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:22:52) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 01:22:59) [POST]
+  Parameters: {"post_id"=>"1", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "comment"=>{"name"=>"dfasfds", "body"=>"asfdafds", "website"=>"", "email"=>"fadsfds"}}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+
+ActiveRecord::RecordInvalid (Validation failed: Email is invalid):
+  app/controllers/comments_controller.rb:4:in `create'
+
+Rendered rescues/_trace (34.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (unprocessable_entity)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:23:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.3ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.2ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 01:23:18) [POST]
+  Parameters: {"post_id"=>"1", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "comment"=>{"name"=>"My Name", "body"=>"TESting?", "website"=>"", "email"=>"me@email.com"}}
+  [4;35;1mPost Load (59.5ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mComment Create (0.4ms)[0m   [0;1mINSERT INTO "comments" ("name", "updated_at", "body", "post_id", "website", "email", "created_at") VALUES('My Name', '2009-03-23 06:23:18', 'TESting?', 1, '', 'me@email.com', '2009-03-23 06:23:18')[0m
+Rendering comments/create
+Rendered comments/_comment (2.4ms)
+Completed in 78ms (View: 5, DB: 60) | 200 OK [http://localhost/posts/1/comments]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:23:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.4ms)
+  [4;36;1mComment Load (0.6ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:26:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.4ms)
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:26:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.5ms)
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:26:46) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:26:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.4ms)
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Completed in 77ms (View: 13, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:27:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.3ms)
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+ERROR: compiling _run_erb_app47views47comments47_comment46html46erb_locals_comment_comment_counter_object RAISED compile error
+/Users/samsoffes/code/samsoff.es/app/views/comments/_comment.html.erb:4: syntax error, unexpected ',', expecting ')'
+      link_to_unless(comment.website.nil?, comment.name), {} do |name|
+                                                         ^
+/Users/samsoffes/code/samsoff.es/app/views/comments/_comment.html.erb:6: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47comments47_comment46html46erb_locals_comment_comment_counter_object(local_assigns)
+            old_output_buffer = output_buffer;object = local_assigns[:object];comment_counter = local_assigns[:comment_counter];comment = local_assigns[:comment];;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<li id=\"comment-"; @output_buffer.concat(( comment.id ).to_s); @output_buffer.concat "\">\n"
+@output_buffer.concat "  <h3>\n"
+@output_buffer.concat "    "; @output_buffer.concat((
+      link_to_unless(comment.website.nil?, comment.name), {} do |name|
+        name
+      end
+    ).to_s); @output_buffer.concat " <small>"; @output_buffer.concat(( time_ago_in_words(comment.created_at) ).to_s); @output_buffer.concat " ago</small></h3>\n"
+@output_buffer.concat "  <div class=\"content\">"; @output_buffer.concat(( Markdown.new(comment.body).to_html ).to_s); @output_buffer.concat "</div>\n"
+@output_buffer.concat "</li>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/samsoffes/code/samsoff.es/app/views/comments/_comment.html.erb:13:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable_partial.rb:20:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable_partial.rb:19:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/partials.rb:221:in `render_partial_collection'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/associations/association_collection.rb:364:in `method_missing'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/associations/association_proxy.rb:219:in `method_missing'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/associations/association_proxy.rb:219:in `map'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/associations/association_proxy.rb:219:in `send'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/associations/association_proxy.rb:219:in `method_missing'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/associations/association_collection.rb:364:in `method_missing'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/partials.rb:216:in `render_partial_collection'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/partials.rb:195:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:262:in `render'
+/Users/samsoffes/code/samsoff.es/app/views/posts/show.html.erb:12:in `_run_erb_app47views47posts47show46html46erb'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:34:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:34:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:301:in `with_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:30:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:943:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/samsoffes/code/samsoff.es/app/controllers/posts_controller.rb:27:in `show'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/samsoffes/code/samsoff.es/app/views/comments/_comment.html.erb:4: syntax error, unexpected ',', expecting ')'
+      link_to_unless(comment.website.nil?, comment.name), {} do |name|
+                                                         ^
+/Users/samsoffes/code/samsoff.es/app/views/comments/_comment.html.erb:6: syntax error, unexpected kEND, expecting ')') on line #4 of app/views/comments/_comment.html.erb:
+1: <li id="comment-<%= comment.id %>">
+2:   <h3>
+3:     <%=
+4:       link_to_unless(comment.website.nil?, comment.name), {} do |name|
+5:         name
+6:       end
+7:     %> <small><%= time_ago_in_words(comment.created_at) %> ago</small></h3>
+
+    app/views/comments/_comment.html.erb:13:in `compile!'
+    app/views/posts/show.html.erb:12
+    app/controllers/posts_controller.rb:27:in `show'
+
+Rendered rescues/_trace (103.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:27:36) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:29:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.4ms)
+  [4;36;1mComment Load (0.6ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+ERROR: compiling _run_erb_app47views47comments47_comment46html46erb_locals_comment_comment_counter_object RAISED compile error
+/Users/samsoffes/code/samsoff.es/app/views/comments/_comment.html.erb:4: syntax error, unexpected ',', expecting ')'
+      link_to_unless(comment.website.nil?, comment.name), { } do |name|
+                                                         ^
+/Users/samsoffes/code/samsoff.es/app/views/comments/_comment.html.erb:6: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47comments47_comment46html46erb_locals_comment_comment_counter_object(local_assigns)
+            old_output_buffer = output_buffer;object = local_assigns[:object];comment_counter = local_assigns[:comment_counter];comment = local_assigns[:comment];;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<li id=\"comment-"; @output_buffer.concat(( comment.id ).to_s); @output_buffer.concat "\">\n"
+@output_buffer.concat "  <h3>\n"
+@output_buffer.concat "    "; @output_buffer.concat((
+      link_to_unless(comment.website.nil?, comment.name), { } do |name|
+        name
+      end
+    ).to_s); @output_buffer.concat " <small>"; @output_buffer.concat(( time_ago_in_words(comment.created_at) ).to_s); @output_buffer.concat " ago</small></h3>\n"
+@output_buffer.concat "  <div class=\"content\">"; @output_buffer.concat(( Markdown.new(comment.body).to_html ).to_s); @output_buffer.concat "</div>\n"
+@output_buffer.concat "</li>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/samsoffes/code/samsoff.es/app/views/comments/_comment.html.erb:13:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable_partial.rb:20:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable_partial.rb:19:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/partials.rb:221:in `render_partial_collection'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/associations/association_collection.rb:364:in `method_missing'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/associations/association_proxy.rb:219:in `method_missing'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/associations/association_proxy.rb:219:in `map'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/associations/association_proxy.rb:219:in `send'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/associations/association_proxy.rb:219:in `method_missing'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/associations/association_collection.rb:364:in `method_missing'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/partials.rb:216:in `render_partial_collection'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/partials.rb:195:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:262:in `render'
+/Users/samsoffes/code/samsoff.es/app/views/posts/show.html.erb:12:in `_run_erb_app47views47posts47show46html46erb'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:34:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:34:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:301:in `with_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:30:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:943:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/samsoffes/code/samsoff.es/app/controllers/posts_controller.rb:27:in `show'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/samsoffes/code/samsoff.es/app/views/comments/_comment.html.erb:4: syntax error, unexpected ',', expecting ')'
+      link_to_unless(comment.website.nil?, comment.name), { } do |name|
+                                                         ^
+/Users/samsoffes/code/samsoff.es/app/views/comments/_comment.html.erb:6: syntax error, unexpected kEND, expecting ')') on line #4 of app/views/comments/_comment.html.erb:
+1: <li id="comment-<%= comment.id %>">
+2:   <h3>
+3:     <%=
+4:       link_to_unless(comment.website.nil?, comment.name), { } do |name|
+5:         name
+6:       end
+7:     %> <small><%= time_ago_in_words(comment.created_at) %> ago</small></h3>
+
+    app/views/comments/_comment.html.erb:13:in `compile!'
+    app/views/posts/show.html.erb:12
+    app/controllers/posts_controller.rb:27:in `show'
+
+Rendered rescues/_trace (103.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:29:12) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:29:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.3ms)
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+ERROR: compiling _run_erb_app47views47comments47_comment46html46erb_locals_comment_comment_counter_object RAISED compile error
+/Users/samsoffes/code/samsoff.es/app/views/comments/_comment.html.erb:4: syntax error, unexpected ',', expecting ')'
+      link_to_unless(comment.website.nil?, comment.name), do |name|
+                                                         ^
+/Users/samsoffes/code/samsoff.es/app/views/comments/_comment.html.erb:5: void value expression
+/Users/samsoffes/code/samsoff.es/app/views/comments/_comment.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')'
+Function body:           def _run_erb_app47views47comments47_comment46html46erb_locals_comment_comment_counter_object(local_assigns)
+            old_output_buffer = output_buffer;object = local_assigns[:object];comment_counter = local_assigns[:comment_counter];comment = local_assigns[:comment];;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<li id=\"comment-"; @output_buffer.concat(( comment.id ).to_s); @output_buffer.concat "\">\n"
+@output_buffer.concat "  <h3>\n"
+@output_buffer.concat "    "; @output_buffer.concat((
+      link_to_unless(comment.website.nil?, comment.name), do |name|
+        return name
+      end
+    ).to_s); @output_buffer.concat " <small>"; @output_buffer.concat(( time_ago_in_words(comment.created_at) ).to_s); @output_buffer.concat " ago</small></h3>\n"
+@output_buffer.concat "  <div class=\"content\">"; @output_buffer.concat(( Markdown.new(comment.body).to_html ).to_s); @output_buffer.concat "</div>\n"
+@output_buffer.concat "</li>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/samsoffes/code/samsoff.es/app/views/comments/_comment.html.erb:13:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable_partial.rb:20:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable_partial.rb:19:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/partials.rb:221:in `render_partial_collection'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/associations/association_collection.rb:364:in `method_missing'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/associations/association_proxy.rb:219:in `method_missing'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/associations/association_proxy.rb:219:in `map'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/associations/association_proxy.rb:219:in `send'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/associations/association_proxy.rb:219:in `method_missing'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/associations/association_collection.rb:364:in `method_missing'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/partials.rb:216:in `render_partial_collection'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/partials.rb:195:in `render_partial'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:262:in `render'
+/Users/samsoffes/code/samsoff.es/app/views/posts/show.html.erb:12:in `_run_erb_app47views47posts47show46html46erb'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:34:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:34:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:301:in `with_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:30:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:943:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/samsoffes/code/samsoff.es/app/controllers/posts_controller.rb:27:in `show'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/samsoffes/code/samsoff.es/app/views/comments/_comment.html.erb:4: syntax error, unexpected ',', expecting ')'
+      link_to_unless(comment.website.nil?, comment.name), do |name|
+                                                         ^
+/Users/samsoffes/code/samsoff.es/app/views/comments/_comment.html.erb:5: void value expression
+/Users/samsoffes/code/samsoff.es/app/views/comments/_comment.html.erb:5: syntax error, unexpected tIDENTIFIER, expecting ')') on line #4 of app/views/comments/_comment.html.erb:
+1: <li id="comment-<%= comment.id %>">
+2:   <h3>
+3:     <%=
+4:       link_to_unless(comment.website.nil?, comment.name), do |name|
+5:         return name
+6:       end
+7:     %> <small><%= time_ago_in_words(comment.created_at) %> ago</small></h3>
+
+    app/views/comments/_comment.html.erb:13:in `compile!'
+    app/views/posts/show.html.erb:12
+    app/controllers/posts_controller.rb:27:in `show'
+
+Rendered rescues/_trace (98.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:29:29) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:29:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.5ms)
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.7ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:29:33) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:29:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.7ms)
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (1.1ms)
+Rendered comments/_comment (0.1ms)
+Rendered comments/_comment (0.1ms)
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:29:55) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:30:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.4ms)
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (1.1ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:30:24) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 01:30:51) [POST]
+  Parameters: {"post_id"=>"1", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "comment"=>{"name"=>"i have a website", "body"=>"yes i do", "website"=>"http://sam@samsoff.es", "email"=>"sam@samsoff.es"}}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mComment Create (0.3ms)[0m   [0;1mINSERT INTO "comments" ("name", "updated_at", "body", "post_id", "website", "email", "created_at") VALUES('i have a website', '2009-03-23 06:30:51', 'yes i do', 1, 'http://sam@samsoff.es', 'sam@samsoff.es', '2009-03-23 06:30:51')[0m
+Rendering comments/create
+Rendered comments/_comment (2.8ms)
+Completed in 17ms (View: 4, DB: 1) | 200 OK [http://localhost/posts/1/comments]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:30:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.5ms)
+  [4;36;1mComment Load (0.7ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.3ms)
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:31:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.4ms)
+  [4;36;1mComment Load (0.7ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.3ms)
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:31:22) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:31:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.5ms)
+  [4;36;1mComment Load (0.6ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.3ms)
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:31:24) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 01:31:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (61.3ms)
+  [4;36;1mComment Load (0.7ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Completed in 77ms (View: 71, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 01:31:25) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

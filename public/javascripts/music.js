@@ -34,5 +34,5 @@ $(function() {
 		$(this).click(listenButtonClicked);
 	}
 
-	$('ol#tracks li a').click(listenButtonClicked);
+	$('.tracks li a').click(listenButtonClicked);
 });

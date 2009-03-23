@@ -1,3 +1,5 @@
+require 'rdiscount'
+
 class PostsController < ApplicationController
 	before_filter :authenticate, :except => [:index, :show]
 
@@ -6,7 +8,7 @@ class PostsController < ApplicationController
 	# GET /posts.json
 	# GET /posts.atom
 	def index
-		@posts = Post.all
+		@posts = Post.find(:all, :order => "created_at DESC")
 
 		respond_to do |format|
 			format.html # index.html.erb

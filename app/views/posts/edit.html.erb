@@ -1,19 +1,22 @@
 <h1>Editing post</h1>
 
 <% form_for(@post) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
+	<%= f.error_messages %>
+	<p>
+		<%= f.label :title %><br />
+		<%= f.text_field :title, :class => 'text' %>
+	</p>
+	<p>
+		<%= f.label :slug %><br />
+		<%= f.text_field :slug, :class => 'text' %>
+	</p>
+	<p>
+		<%= f.label :body %><br />
+		<%= f.text_area :body %>
+	</p>
+	<p>
+		<%= f.submit 'Update' %>
+	</p>
 <% end %>
 
 <%= link_to 'Show', @post %> |

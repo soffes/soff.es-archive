@@ -2798,3 +2798,355 @@ Rendering posts/index
 Rendered posts/_post (4.1ms)
 Rendered posts/_post (0.5ms)
 Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/posts]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090321084040)
+Migrating to CreateComments (20090321090749)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("posts")[0m
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:18:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (68.7ms)
+  [4;35;1mComment Load (0.7ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Completed in 111ms (View: 99, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:22:39) [GET]
+  Parameters: {"id"=>"1"}
+
+SyntaxError (/Users/samsoffes/code/samsoff.es/app/models/post.rb:6: syntax error, unexpected tSTRING_BEG, expecting kEND
+		slug = read_attribute(:brand).gsub /![a-zA-Z0-9\-]/ '-'
+		                                                     ^
+/Users/samsoffes/code/samsoff.es/app/models/post.rb:7: syntax error, unexpected tSTRING_BEG, expecting kEND
+		slug = slug.gsub /\-+/ '-'
+		                        ^):
+  app/controllers/posts_controller.rb:25:in `show'
+
+Rendered rescues/_trace (36.7ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 00:22:40) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:23:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.gsub) on line #3 of app/views/posts/_post.html.erb:
+1: <% div_for post do %>
+2: 	<h2><%= link_to h(post.title), post %></h2>
+3: 	<p class="meta">Posted <%= time_ago_in_words(post.created_at) %> ago - <%= post.slug %></p>
+4: 	<div class="content">
+5: 		<%= Markdown.new(post.body).to_html %>
+6: 	</div>
+
+    app/models/post.rb:6:in `slug'
+    app/views/posts/_post.html.erb:3
+    app/views/posts/_post.html.erb:1
+    app/views/posts/show.html.erb:1
+    app/controllers/posts_controller.rb:27:in `show'
+
+Rendered rescues/_trace (103.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 00:23:05) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:23:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.2ms)
+  [4;36;1mComment Load (0.7ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 00:23:15) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:24:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+
+ActionView::TemplateError (undefined method `lower' for "Yay Rails":String) on line #3 of app/views/posts/_post.html.erb:
+1: <% div_for post do %>
+2: 	<h2><%= link_to h(post.title), post %></h2>
+3: 	<p class="meta">Posted <%= time_ago_in_words(post.created_at) %> ago - <%= post.slug %></p>
+4: 	<div class="content">
+5: 		<%= Markdown.new(post.body).to_html %>
+6: 	</div>
+
+    app/models/post.rb:6:in `slug'
+    app/views/posts/_post.html.erb:3
+    app/views/posts/_post.html.erb:1
+    app/views/posts/show.html.erb:1
+    app/controllers/posts_controller.rb:27:in `show'
+
+Rendered rescues/_trace (49.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 00:24:25) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:24:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+
+ActionView::TemplateError (undefined method `lower' for "Yay Rails":String) on line #3 of app/views/posts/_post.html.erb:
+1: <% div_for post do %>
+2: 	<h2><%= link_to h(post.title), post %></h2>
+3: 	<p class="meta">Posted <%= time_ago_in_words(post.created_at) %> ago - <%= post.slug %></p>
+4: 	<div class="content">
+5: 		<%= Markdown.new(post.body).to_html %>
+6: 	</div>
+
+    app/models/post.rb:6:in `slug'
+    app/views/posts/_post.html.erb:3
+    app/views/posts/_post.html.erb:1
+    app/views/posts/show.html.erb:1
+    app/controllers/posts_controller.rb:27:in `show'
+
+Rendered rescues/_trace (50.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 00:24:27) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:26:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.3ms)
+  [4;36;1mComment Load (0.8ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 00:26:51) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:30:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.1ms)
+  [4;36;1mComment Load (0.7ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/posts/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 00:30:08) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 00:31:17) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.5ms)
+Rendered posts/_post (0.5ms)
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:31:18) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.3ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Completed in 77ms (View: 71, DB: 1) | 200 OK [http://localhost/posts/2]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:32:37) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.3ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+
+ActionView::TemplateError (undefined local variable or method `music_path' for #<ActionView::Base:0x24766f0>) on line #17 of app/views/layouts/posts.html.erb:
+14: 		<p><%= link_to '&#171; home', posts_path %></p>
+15: 		<ul class="clear">
+16: 			<li><%= link_to 'Blog', posts_path %></li>
+17: 			<li><%= link_to 'Music', music_path %></li>
+18: 			<li><%= link_to 'About', about_path %></li>
+19: 		</ul>
+20: 	</div>
+
+    app/views/layouts/posts.html.erb:17
+    app/controllers/posts_controller.rb:27:in `show'
+
+Rendered rescues/_trace (91.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 00:32:37) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:32:38) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.3ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+
+ActionView::TemplateError (undefined local variable or method `music_path' for #<ActionView::Base:0x240b530>) on line #17 of app/views/layouts/posts.html.erb:
+14: 		<p><%= link_to '&#171; home', posts_path %></p>
+15: 		<ul class="clear">
+16: 			<li><%= link_to 'Blog', posts_path %></li>
+17: 			<li><%= link_to 'Music', music_path %></li>
+18: 			<li><%= link_to 'About', about_path %></li>
+19: 		</ul>
+20: 	</div>
+
+    app/views/layouts/posts.html.erb:17
+    app/controllers/posts_controller.rb:27:in `show'
+
+Rendered rescues/_trace (91.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 00:32:38) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 00:32:49) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.2ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/posts/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 00:32:49) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-03-23 00:32:51) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Completed in 66ms (View: 64, DB: 0) | 200 OK [http://localhost/music]

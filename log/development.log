@@ -5421,3 +5421,295 @@ Rendering template within layouts/posts
 Rendering posts/index
 Rendered posts/_post (4.8ms)
 Completed in 11ms (View: 7, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-03-23 02:16:48) [GET]
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 3ms (View: 3, DB: 0) | 401 Unauthorized [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-03-23 02:16:48) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 69ms (View: 58, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-03-23 02:17:00) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "post"=>{"slug"=>"3-easy-steps-to-optimize-web-apps-for-iphone", "body"=>"So I recent improved how my blog looks and works on iPhone in just a few lines of code.  The iPhone web browser is awesome, but for large websites, it is really hard to read something without panning around vertically and then scrolling horizontally. Solving these issues will make your site way more useable on Mobile Safari.\r\n\r\n*   *Add an iPhone specific stylesheet.* Something you will probably want to do is make your site narrower. The wider your layout is, the smaller everything has to be. It is much easier to scroll just vertically than vertically and horizontally. Something else to watch out for is mixing font sizes between px and em. You'll probally get some weird scalling issues if you mix units. You might also watch out for positioning issues due to Mobile Safari's scaling.\r\n\r\n    You might also want to adjust your font sizes a bit. I know I had to make my footer a tad smaller. In your case, you might want to make important things like navigation larger and easier to tap. Feel free to check out my iPhone specific stylesheet at [http://samsoffes.com/css/iphone.css](http://samsoffes.com/css/iphone.css).\r\n\r\n*   *Add a viewport meta tag.* This will tell Mobile Safari how to intelligently scale to fit your page. It's super easy to do and it will help a lot. My iPhone stylesheet makes my site 320px wide so I set my viewport to 320 to give a new bit of padding around my main content area. Here's the code:\r\n\r\n        <meta name=\"viewport\" content=\"width=320\" />\r\n\r\n    Remember if you have something that is wider than your viewport, it will automatically expand, so be sure to resize it in your iPhone specific stylesheet.\r\n\r\n*   *Add a homescreen icon.* When a user adds your website to their homescreen, you want it have a facny icon. You can easily do this by putting a 57px x 57px png named `apple-touch-icon.png` at the root of your website. For example mine is at [http://samsoffes.com/apple-touch-icon.png](http://samsoffes.com/apple-touch-icon.png). You can also put it at a different location with this link tag:\r\n\r\n        <link rel=\"apple-touch-icon\" href=\"custom-icon.png\" />\r\n\r\nDoing these three simple things will make your web app way more useable on the iPhone. You can do most of this in about 10 minutes like I did. If your layout is overlly complex and can't be made narrower and simplier easily, then you'll have a lot more work than 10 minutes of course. Have at it!\r\n\r\nO, and don't forget a [favicon.ico](http://en.wikipedia.org/wiki/Favicon) for your desktop users.", "title"=>"3 Easy Steps to Optimize Web Apps for iPhone"}}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/posts]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-03-23 02:17:00) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "post"=>{"slug"=>"3-easy-steps-to-optimize-web-apps-for-iphone", "body"=>"So I recent improved how my blog looks and works on iPhone in just a few lines of code.  The iPhone web browser is awesome, but for large websites, it is really hard to read something without panning around vertically and then scrolling horizontally. Solving these issues will make your site way more useable on Mobile Safari.\r\n\r\n*   *Add an iPhone specific stylesheet.* Something you will probably want to do is make your site narrower. The wider your layout is, the smaller everything has to be. It is much easier to scroll just vertically than vertically and horizontally. Something else to watch out for is mixing font sizes between px and em. You'll probally get some weird scalling issues if you mix units. You might also watch out for positioning issues due to Mobile Safari's scaling.\r\n\r\n    You might also want to adjust your font sizes a bit. I know I had to make my footer a tad smaller. In your case, you might want to make important things like navigation larger and easier to tap. Feel free to check out my iPhone specific stylesheet at [http://samsoffes.com/css/iphone.css](http://samsoffes.com/css/iphone.css).\r\n\r\n*   *Add a viewport meta tag.* This will tell Mobile Safari how to intelligently scale to fit your page. It's super easy to do and it will help a lot. My iPhone stylesheet makes my site 320px wide so I set my viewport to 320 to give a new bit of padding around my main content area. Here's the code:\r\n\r\n        <meta name=\"viewport\" content=\"width=320\" />\r\n\r\n    Remember if you have something that is wider than your viewport, it will automatically expand, so be sure to resize it in your iPhone specific stylesheet.\r\n\r\n*   *Add a homescreen icon.* When a user adds your website to their homescreen, you want it have a facny icon. You can easily do this by putting a 57px x 57px png named `apple-touch-icon.png` at the root of your website. For example mine is at [http://samsoffes.com/apple-touch-icon.png](http://samsoffes.com/apple-touch-icon.png). You can also put it at a different location with this link tag:\r\n\r\n        <link rel=\"apple-touch-icon\" href=\"custom-icon.png\" />\r\n\r\nDoing these three simple things will make your web app way more useable on the iPhone. You can do most of this in about 10 minutes like I did. If your layout is overlly complex and can't be made narrower and simplier easily, then you'll have a lot more work than 10 minutes of course. Have at it!\r\n\r\nO, and don't forget a [favicon.ico](http://en.wikipedia.org/wiki/Favicon) for your desktop users.", "title"=>"3 Easy Steps to Optimize Web Apps for iPhone"}}
+  [4;36;1mPost Exists (0.1ms)[0m   [0;1mSELECT "posts".id FROM "posts" WHERE ("posts"."slug" = '3-easy-steps-to-optimize-web-apps-for-iphone') LIMIT 1[0m
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "created_at") VALUES('3-easy-steps-to-optimize-web-apps-for-iphone', '2009-03-23 07:17:00', '3 Easy Steps to Optimize Web Apps for iPhone', 'So I recent improved how my blog looks and works on iPhone in just a few lines of code. The iPhone web browser is awesome, but for large websites, it is really hard to read something without panning around vertically and then scrolling horizontally. Solving these issues will make your site way more useable on Mobile Safari.
+
+* *Add an iPhone specific stylesheet.* Something you will probably want to do is make your site narrower. The wider your layout is, the smaller everything has to be. It is much easier to scroll just vertically than vertically and horizontally. Something else to watch out for is mixing font sizes between px and em. You''ll probally get some weird scalling issues if you mix units. You might also watch out for positioning issues due to Mobile Safari''s scaling.
+
+ You might also want to adjust your font sizes a bit. I know I had to make my footer a tad smaller. In your case, you might want to make important things like navigation larger and easier to tap. Feel free to check out my iPhone specific stylesheet at [http://samsoffes.com/css/iphone.css](http://samsoffes.com/css/iphone.css).
+
+* *Add a viewport meta tag.* This will tell Mobile Safari how to intelligently scale to fit your page. It''s super easy to do and it will help a lot. My iPhone stylesheet makes my site 320px wide so I set my viewport to 320 to give a new bit of padding around my main content area. Here''s the code:
+
+ <meta name="viewport" content="width=320" />
+
+ Remember if you have something that is wider than your viewport, it will automatically expand, so be sure to resize it in your iPhone specific stylesheet.
+
+* *Add a homescreen icon.* When a user adds your website to their homescreen, you want it have a facny icon. You can easily do this by putting a 57px x 57px png named `apple-touch-icon.png` at the root of your website. For example mine is at [http://samsoffes.com/apple-touch-icon.png](http://samsoffes.com/apple-touch-icon.png). You can also put it at a different location with this link tag:
+
+ <link rel="apple-touch-icon" href="custom-icon.png" />
+
+Doing these three simple things will make your web app way more useable on the iPhone. You can do most of this in about 10 minutes like I did. If your layout is overlly complex and can''t be made narrower and simplier easily, then you''ll have a lot more work than 10 minutes of course. Have at it!
+
+O, and don''t forget a [favicon.ico](http://en.wikipedia.org/wiki/Favicon) for your desktop users.', '2009-03-23 07:17:00')[0m
+Redirected to http://localhost:3000/posts/2
+Completed in 17ms (DB: 0) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 02:17:00) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (28.7ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Completed in 48ms (View: 42, DB: 0) | 200 OK [http://localhost/posts/2]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-03-23 02:17:23) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-03-23 02:17:37) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "post"=>{"slug"=>"video-why-i-love-remember-the-milk", "body"=>"<div class=\"hd-video\"><object width=\"720\" height=\"405\"><param name=\"allowfullscreen\" value=\"true\" /><param name=\"allowscriptaccess\" value=\"always\" /><param name=\"movie\" value=\"http://vimeo.com/moogaloop.swf?clip_id=2480690&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=00A6E5&amp;fullscreen=1\" /><embed src=\"http://vimeo.com/moogaloop.swf?clip_id=2480690&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=00A6E5&amp;fullscreen=1\" type=\"application/x-shockwave-flash\" allowfullscreen=\"true\" allowscriptaccess=\"always\" width=\"720\" height=\"405\"></embed></object></div>", "title"=>"Video: Why I Love Remember the Milk"}}
+  [4;36;1mPost Exists (0.1ms)[0m   [0;1mSELECT "posts".id FROM "posts" WHERE ("posts"."slug" = 'video-why-i-love-remember-the-milk') LIMIT 1[0m
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "created_at") VALUES('video-why-i-love-remember-the-milk', '2009-03-23 07:17:37', 'Video: Why I Love Remember the Milk', '<div class="hd-video"><object width="720" height="405"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=2480690&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=00A6E5&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=2480690&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=00A6E5&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="720" height="405"></embed></object></div>', '2009-03-23 07:17:37')[0m
+Redirected to http://localhost:3000/posts/3
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 02:17:37) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.4ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 3) [0m
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/posts/3]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 02:18:01) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (5.2ms)
+  [4;35;1mComment Load (0.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 3) [0m
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/posts/3]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 02:18:01) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 02:18:24) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.3ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 3) [0m
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/posts/3]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 02:18:25) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 02:18:29) [GET]
+  [4;36;1mPost Load (1.5ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.3ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (1.1ms)
+Completed in 16ms (View: 10, DB: 2) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-03-23 02:18:49) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-03-23 02:18:59) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "post"=>{"slug"=>"i-am-addicted-to-redoing-my-blog", "body"=>"It is sad how much I redo my blog. I usually redo it more than I actually blog. Then I get it going and then get an idea for a new one and stop on the old one. So here is my new attempt at my blog. I think I am switching off [Tumblr](http://tumblr.com) as much as I love it. I'll leave my old one up at [samsoffes.tumblr.com](http://samsoffes.tumblr.com/) incase you're still interested.\r\n\r\nI still need to write some stuff to do rss and such. Hopefully I'll get to that real soon. Sorry for breaking your feed readers again.\r\n\r\nEnjoy the new look. I doubt it will be around long.", "title"=>"I am Addicted to Redoing my Blo"}}
+  [4;35;1mPost Exists (0.1ms)[0m   [0mSELECT "posts".id FROM "posts" WHERE ("posts"."slug" = 'i-am-addicted-to-redoing-my-blog') LIMIT 1[0m
+  [4;36;1mPost Create (0.3ms)[0m   [0;1mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "created_at") VALUES('i-am-addicted-to-redoing-my-blog', '2009-03-23 07:18:59', 'I am Addicted to Redoing my Blo', 'It is sad how much I redo my blog. I usually redo it more than I actually blog. Then I get it going and then get an idea for a new one and stop on the old one. So here is my new attempt at my blog. I think I am switching off [Tumblr](http://tumblr.com) as much as I love it. I''ll leave my old one up at [samsoffes.tumblr.com](http://samsoffes.tumblr.com/) incase you''re still interested.
+
+I still need to write some stuff to do rss and such. Hopefully I''ll get to that real soon. Sorry for breaking your feed readers again.
+
+Enjoy the new look. I doubt it will be around long.', '2009-03-23 07:18:59')[0m
+Redirected to http://localhost:3000/posts/4
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 02:18:59) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.0ms)
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 4) [0m
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/posts/4]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 02:19:02) [GET]
+  [4;35;1mPost Load (1.1ms)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.8ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:00:18) [GET]
+  [4;36;1mPost Load (1.3ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (69.7ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 90ms (View: 84, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:03:04) [GET]
+  [4;36;1mPost Load (1.7ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (31.6ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (1.0ms)
+Rendered posts/_post (0.6ms)
+Completed in 54ms (View: 47, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:03:04) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 03:03:11) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.5ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 4) [0m
+Completed in 28ms (View: 22, DB: 0) | 200 OK [http://localhost/posts/4]
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-03-23 03:03:13) [GET]
+  Parameters: {"id"=>"4"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/posts/4/edit]
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-03-23 03:03:13) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/posts/4/edit]
+
+
+Processing PostsController#update (for 127.0.0.1 at 2009-03-23 03:03:18) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "post"=>{"slug"=>"i-am-addicted-to-redoing-my-blog", "body"=>"It is sad how much I redo my blog. I usually redo it more than I actually blog. Then I get it going and then get an idea for a new one and stop on the old one. So here is my new attempt at my blog. I think I am switching off [Tumblr](http://tumblr.com) as much as I love it. I'll leave my old one up at [samsoffes.tumblr.com](http://samsoffes.tumblr.com/) incase you're still interested.\r\n\r\nI still need to write some stuff to do rss and such. Hopefully I'll get to that real soon. Sorry for breaking your feed readers again.\r\n\r\nEnjoy the new look. I doubt it will be around long.", "title"=>"I am Addicted to Redoing my Blog"}, "id"=>"4"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/posts/4]
+
+
+Processing PostsController#update (for 127.0.0.1 at 2009-03-23 03:03:18) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "post"=>{"slug"=>"i-am-addicted-to-redoing-my-blog", "body"=>"It is sad how much I redo my blog. I usually redo it more than I actually blog. Then I get it going and then get an idea for a new one and stop on the old one. So here is my new attempt at my blog. I think I am switching off [Tumblr](http://tumblr.com) as much as I love it. I'll leave my old one up at [samsoffes.tumblr.com](http://samsoffes.tumblr.com/) incase you're still interested.\r\n\r\nI still need to write some stuff to do rss and such. Hopefully I'll get to that real soon. Sorry for breaking your feed readers again.\r\n\r\nEnjoy the new look. I doubt it will be around long.", "title"=>"I am Addicted to Redoing my Blog"}, "id"=>"4"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+  [4;35;1mPost Exists (0.1ms)[0m   [0mSELECT "posts".id FROM "posts" WHERE ("posts"."slug" = 'i-am-addicted-to-redoing-my-blog' AND "posts".id <> 4) LIMIT 1[0m
+  [4;36;1mPost Update (0.2ms)[0m   [0;1mUPDATE "posts" SET "title" = 'I am Addicted to Redoing my Blog', "updated_at" = '2009-03-23 08:03:18' WHERE "id" = 4[0m
+Redirected to http://localhost:3000/posts/4
+Completed in 9ms (DB: 1) | 302 Found [http://localhost/posts/4]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 03:03:18) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.6ms)
+  [4;36;1mComment Load (0.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 4) [0m
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/posts/4]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 03:03:19) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.1ms)
+  [4;36;1mComment Load (0.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 4) [0m
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/posts/4]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:03:20) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.0ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 03:03:25) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.4ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 4) [0m
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/posts/4]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 03:03:41) [POST]
+  Parameters: {"post_id"=>"4", "authenticity_token"=>"A9N/+KjVomsx91I5gFSeaRYi64OjA54/oYgvrkvJSRA=", "comment"=>{"name"=>"Sam Soffes", "body"=>"I sure am. This is pathetic.", "website"=>"http://samsoff.es", "email"=>"sam@samsoff.es"}}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+  [4;35;1mComment Create (0.3ms)[0m   [0mINSERT INTO "comments" ("name", "updated_at", "body", "post_id", "website", "email", "created_at") VALUES('Sam Soffes', '2009-03-23 08:03:41', 'I sure am. This is pathetic.', 4, 'http://samsoff.es', 'sam@samsoff.es', '2009-03-23 08:03:41')[0m
+Rendering comments/create
+Rendered comments/_comment (1.4ms)
+Completed in 22ms (View: 9, DB: 1) | 200 OK [http://localhost/posts/4/comments]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:03:52) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.8ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/posts]

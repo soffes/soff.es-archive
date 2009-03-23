@@ -1,8 +1,8 @@
 <%= render :partial => @post %>
 
 <p>
-	<%= link_to 'Edit', edit_post_path(@post) %>
-	<%= link_to 'Destroy', @post, :method => :delete, :confirm => "Are you sure?" %>
+	<%= link_to 'Edit', edit_post_path(@post) %> | 
+	<%= link_to 'Destroy', @post, :method => :delete, :confirm => "Are you sure?" %> | 
 	<%= link_to 'See All Posts', posts_path %>
 </p>
 

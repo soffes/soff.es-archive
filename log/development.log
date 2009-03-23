@@ -5713,3 +5713,1329 @@ Rendered posts/_post (0.5ms)
 Rendered posts/_post (0.6ms)
 Rendered posts/_post (0.6ms)
 Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:21:31) [GET]
+  [4;36;1mPost Load (1.3ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (31.4ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 52ms (View: 47, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:21:39) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3 OFFSET 0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.2ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:21:40) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:21:41) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mPost Load (0.9ms)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3 OFFSET 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (5.3ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/posts?page=2]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:21:44) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.4ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.9ms)
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/posts?page=1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:21:44) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.8ms)
+Rendered posts/_post (0.9ms)
+Rendered posts/_post (0.7ms)
+Completed in 64ms (View: 32, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index to atom (for 127.0.0.1 at 2009-03-23 03:21:48) [GET]
+  [4;36;1mPost Load (0.9ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3 OFFSET 0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+Rendering posts/index
+Completed in 92ms (View: 86, DB: 1) | 200 OK [http://localhost/posts.atom]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:27:00) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mPost Load (1.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (31.8ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 51ms (View: 45, DB: 1) | 200 OK [http://localhost/posts?page=1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:27:01) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:27:09) [GET]
+  Parameters: {"search"=>"blog", "page"=>"1"}
+  [4;35;1mPost Load (0.9ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%blog' OR body like '%blog') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.0ms)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/posts?page=1&search=blog]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:27:13) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.0ms)
+Rendered posts/_post (0.8ms)
+Rendered posts/_post (1.0ms)
+Rendered posts/_post (0.8ms)
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/posts?page=1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:27:23) [GET]
+  Parameters: {"search"=>"enjoy", "page"=>"1"}
+  [4;35;1mPost Load (0.7ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%enjoy' OR body like '%enjoy') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/posts?page=1&search=enjoy]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:27:25) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mPost Load (1.6ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.8ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 14ms (View: 8, DB: 2) | 200 OK [http://localhost/posts?page=1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:27:43) [GET]
+  Parameters: {"search"=>"iphone", "page"=>"1"}
+  [4;35;1mPost Load (0.9ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%iphone' OR body like '%iphone') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/posts?page=1&search=iphone]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-03-23 03:33:14) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:33:33) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.8ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 03:33:34) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.6ms)
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 4) [0m
+Rendered comments/_comment (1.3ms)
+
+ActionView::TemplateError (Missing template posts/_form.erb in view path app/views) on line #18 of app/views/posts/show.html.erb:
+15: 
+16: <h2>Add A Comment</h2
+17: <% remote_form_for [@post, Comment.new] do |f| %>
+18:   <%= render :partial => f %>
+19: 	<p><%= f.submit "Add Comment" %></p>
+20: <% end %>
+
+    app/views/posts/show.html.erb:18
+    app/views/posts/show.html.erb:17
+    app/controllers/posts_controller.rb:27:in `show'
+
+Rendered rescues/_trace (43.6ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 03:33:52) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.2ms)
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 4) [0m
+Rendered comments/_comment (0.4ms)
+
+ActionView::TemplateError (Missing template comments/__form.erb in view path app/views) on line #18 of app/views/posts/show.html.erb:
+15: 
+16: <h2>Add A Comment</h2
+17: <% remote_form_for [@post, Comment.new] do |f| %>
+18:   <%= render :partial => 'comments/_form' %>
+19: 	<p><%= f.submit "Add Comment" %></p>
+20: <% end %>
+
+    app/views/posts/show.html.erb:18
+    app/views/posts/show.html.erb:17
+    app/controllers/posts_controller.rb:27:in `show'
+
+Rendered rescues/_trace (39.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:33:52) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 03:33:56) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.0ms)
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 4) [0m
+Rendered comments/_comment (0.4ms)
+
+ActionView::TemplateError (undefined local variable or method `f' for #<ActionView::Base:0x24be798>) on line #2 of app/views/comments/_form.html.erb:
+1: <dl>
+2: 	<dt><%= f.label :name, "Your Name" %></dt>
+3: 	<dd><%= f.text_field :name, :class => "text" %></dd>
+4: 	<dt><%= f.label :email, "Your Email" %></dt>
+5: 	<dd><%= f.text_field :email, :class => "text" %></dd>
+
+    app/views/comments/_form.html.erb:2
+    app/views/posts/show.html.erb:18
+    app/views/posts/show.html.erb:17
+    app/controllers/posts_controller.rb:27:in `show'
+
+Rendered rescues/_trace (85.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:33:56) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 03:34:10) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+ERROR: compiling _run_erb_app47views47posts47show46html46erb RAISED compile error
+/Users/samsoffes/code/samsoff.es/app/views/posts/show.html.erb:18: syntax error, unexpected ')', expecting tASSOC
+@output_buffer.concat "  "; @output_buffer.concat(( render :partial => 'comments/form', f ).to_s); @output_buffer.concat "\n"
+                                                                                           ^
+Function body:           def _run_erb_app47views47posts47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat(( render :partial => @post ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( link_to 'Edit', edit_post_path(@post) ).to_s); @output_buffer.concat " | \n"
+@output_buffer.concat "\t"; @output_buffer.concat(( link_to 'Destroy', @post, :method => :delete, :confirm => "Are you sure?" ).to_s); @output_buffer.concat " | \n"
+@output_buffer.concat "\t"; @output_buffer.concat(( link_to 'See All Posts', posts_path ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<div class=\"comments\">\n"
+@output_buffer.concat "  <h2>Comments</h2>\n"
+@output_buffer.concat "  <ul id=\"comments\">\n"
+@output_buffer.concat "    "; @output_buffer.concat(( render :partial => @post.comments ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </ul>\n"
+@output_buffer.concat "</div>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<h2>Add A Comment</h2\n"
+ remote_form_for [@post, Comment.new] do |f| ; @output_buffer.concat "\n"
+@output_buffer.concat "  "; @output_buffer.concat(( render :partial => 'comments/form', f ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t<p>"; @output_buffer.concat(( f.submit "Add Comment" ).to_s); @output_buffer.concat "</p>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/samsoffes/code/samsoff.es/app/views/posts/show.html.erb:24:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:943:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/samsoffes/code/samsoff.es/app/controllers/posts_controller.rb:27:in `show'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/samsoffes/code/samsoff.es/app/views/posts/show.html.erb:18: syntax error, unexpected ')', expecting tASSOC
+@output_buffer.concat "  "; @output_buffer.concat(( render :partial => 'comments/form', f ).to_s); @output_buffer.concat "\n"
+                                                                                           ^) on line #18 of app/views/posts/show.html.erb:
+15: 
+16: <h2>Add A Comment</h2
+17: <% remote_form_for [@post, Comment.new] do |f| %>
+18:   <%= render :partial => 'comments/form', f %>
+19: 	<p><%= f.submit "Add Comment" %></p>
+20: <% end %>
+
+    app/views/posts/show.html.erb:24:in `compile!'
+    app/controllers/posts_controller.rb:27:in `show'
+
+Rendered rescues/_trace (90.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:34:10) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 03:35:09) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.4ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 4) [0m
+Rendered comments/_comment (0.4ms)
+
+ActionView::TemplateError (undefined method `[]' for #<ActionView::Helpers::FormBuilder:0x2334198>) on line #18 of app/views/posts/show.html.erb:
+15: 
+16: <h2>Add A Comment</h2
+17: <% remote_form_for [@post, Comment.new] do |f| %>
+18:   <%= render :partial => 'comments/form', :locals => f %>
+19: 	<p><%= f.submit "Add Comment" %></p>
+20: <% end %>
+
+    app/views/posts/show.html.erb:18
+    app/views/posts/show.html.erb:17
+    app/controllers/posts_controller.rb:27:in `show'
+
+Rendered rescues/_trace (42.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:35:09) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 03:35:33) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.1ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 4) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_form (1.2ms)
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/posts/4]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:35:33) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 03:36:45) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.2ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 4) [0m
+Rendered comments/_comment (0.5ms)
+Completed in 20ms (View: 15, DB: 0) | 200 OK [http://localhost/posts/4]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:36:45) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 03:36:47) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.1ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 4) [0m
+Rendered comments/_comment (0.6ms)
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/4]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:36:48) [GET]
+  [4;36;1mPost Load (1.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.7ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:38:42) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.8ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+ERROR: compiling _run_erb_app47views47layouts47posts46html46erb RAISED compile error
+/Users/samsoffes/code/samsoff.es/app/views/layouts/posts.html.erb:20: syntax error, unexpected '.'
+@output_buffer.concat "\t\t  "; @output_buffer.concat(( .text_field :search ).to_s); @output_buffer.concat "\n"
+                                                         ^
+Function body:           def _run_erb_app47views47layouts47posts46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n"
+@output_buffer.concat "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n"
+@output_buffer.concat "<head>\n"
+@output_buffer.concat "<meta http-equiv=\"Content-Type\" content=\"text/html;charset=UTF-8\" />\n"
+@output_buffer.concat "<title>samsoff.es</title>\n"
+@output_buffer.concat(( stylesheet_link_tag 'style' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat(( auto_discovery_link_tag :atom, posts_path(:atom) ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat(( javascript_include_tag :defaults ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</head>\n"
+@output_buffer.concat "<body>\n"
+@output_buffer.concat "<div id=\"wrapper\">\n"
+@output_buffer.concat "\t<div id=\"header\" class=\"clear\">\n"
+@output_buffer.concat "\t\t<ul class=\"clear\">\n"
+@output_buffer.concat "\t\t\t<li>"; @output_buffer.concat(( link_to 'Blog', posts_path ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t<li>"; @output_buffer.concat(( link_to 'Music', music_path ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t<li>"; @output_buffer.concat(( link_to 'About', about_path ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t</ul>\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "\t\t";  form_for Post do |f| ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t  "; @output_buffer.concat(( .text_field :search ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\t</div>\n"
+@output_buffer.concat "\t<p style=\"color: green\">"; @output_buffer.concat(( flash[:notice] ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</div>\n"
+@output_buffer.concat "<div id=\"footer\">\n"
+@output_buffer.concat "\t<p>Copyright "; @output_buffer.concat(( link_to 'Sam Soffes', posts_path ).to_s); @output_buffer.concat " 2005-2009. <a href=\"http://github.com/samsoffes/samsoff.es/tree/rails\">View source on GitHub</a>.</p>\n"
+@output_buffer.concat "</div>\n"
+@output_buffer.concat "</body>\n"
+@output_buffer.concat "</html>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/samsoffes/code/samsoff.es/app/views/layouts/posts.html.erb:34:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:347:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:943:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/samsoffes/code/samsoff.es/app/controllers/posts_controller.rb:13:in `index'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/samsoffes/code/samsoff.es/app/views/layouts/posts.html.erb:20: syntax error, unexpected '.'
+@output_buffer.concat "\t\t  "; @output_buffer.concat(( .text_field :search ).to_s); @output_buffer.concat "\n"
+                                                         ^) on line #20 of app/views/layouts/posts.html.erb:
+17: 		</ul>
+18: 		
+19: 		<% form_for Post do |f| %>
+20: 		  <%= .text_field :search %>
+21:     <% end %>
+22: 	</div>
+23: 	<p style="color: green"><%= flash[:notice] %></p>
+
+    app/views/layouts/posts.html.erb:34:in `compile!'
+    app/controllers/posts_controller.rb:13:in `index'
+
+Rendered rescues/_trace (34.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:38:42) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:38:48) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.8ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+
+ActionView::TemplateError (wrong number of arguments (1 for 2)) on line #20 of app/views/layouts/posts.html.erb:
+17: 		</ul>
+18: 		
+19: 		<% form_for Post do |f| %>
+20: 		  <%= text_field :search %>
+21:     <% end %>
+22: 	</div>
+23: 	<p style="color: green"><%= flash[:notice] %></p>
+
+    app/views/layouts/posts.html.erb:20:in `text_field'
+    app/views/layouts/posts.html.erb:20
+    app/views/layouts/posts.html.erb:19
+    app/controllers/posts_controller.rb:13:in `index'
+
+Rendered rescues/_trace (38.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:38:48) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:38:52) [GET]
+  [4;35;1mPost Load (1.5ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.6ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.7ms)
+
+ActionView::TemplateError (wrong number of arguments (0 for 2)) on line #20 of app/views/layouts/posts.html.erb:
+17: 		</ul>
+18: 		
+19: 		<% form_for Post do |f| %>
+20: 		  <%= f.text_field :search %>
+21:     <% end %>
+22: 	</div>
+23: 	<p style="color: green"><%= flash[:notice] %></p>
+
+    app/views/layouts/posts.html.erb:20
+    app/views/layouts/posts.html.erb:19
+    app/controllers/posts_controller.rb:13:in `index'
+
+Rendered rescues/_trace (43.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:38:52) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:38:55) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.9ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.8ms)
+
+ActionView::TemplateError (wrong number of arguments (0 for 2)) on line #20 of app/views/layouts/posts.html.erb:
+17: 		</ul>
+18: 		
+19: 		<% form_for Post do |f| %>
+20: 		  <%= f.text_field :search %>
+21:     <% end %>
+22: 	</div>
+23: 	<p style="color: green"><%= flash[:notice] %></p>
+
+    app/views/layouts/posts.html.erb:20
+    app/views/layouts/posts.html.erb:19
+    app/controllers/posts_controller.rb:13:in `index'
+
+Rendered rescues/_trace (41.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:38:55) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:39:35) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.9ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+
+ActionView::TemplateError (wrong number of arguments (0 for 2)) on line #20 of app/views/layouts/posts.html.erb:
+17: 		</ul>
+18: 		
+19: 		<% form_for Post do |f| %>
+20: 		  <%= f.text_field :search %>
+21:     <% end %>
+22: 	</div>
+23: 	<p style="color: green"><%= flash[:notice] %></p>
+
+    app/views/layouts/posts.html.erb:20
+    app/views/layouts/posts.html.erb:19
+    app/controllers/posts_controller.rb:13:in `index'
+
+Rendered rescues/_trace (94.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:39:35) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:39:43) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.9ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+
+ActionView::TemplateError (undefined method `merge' for :search:Symbol) on line #20 of app/views/layouts/posts.html.erb:
+17: 		</ul>
+18: 		
+19: 		<% form_for Post do |f| %>
+20: 		  <%= f.text_field Post, :search %>
+21:     <% end %>
+22: 	</div>
+23: 	<p style="color: green"><%= flash[:notice] %></p>
+
+    app/views/layouts/posts.html.erb:20
+    app/views/layouts/posts.html.erb:19
+    app/controllers/posts_controller.rb:13:in `index'
+
+Rendered rescues/_trace (89.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:39:43) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:41:27) [GET]
+  [4;35;1mPost Load (1.5ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.1ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (1.2ms)
+Rendered posts/_post (0.9ms)
+Completed in 19ms (View: 13, DB: 2) | 200 OK [http://localhost/posts]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:41:27) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:41:48) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.9ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (1.0ms)
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:41:59) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.9ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.6ms)
+Completed in 68ms (View: 63, DB: 1) | 200 OK [http://localhost/posts?]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:42:10) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.9ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (1.2ms)
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://localhost/posts?]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:42:10) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:42:12) [GET]
+  Parameters: {"search"=>"iphone"}
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%iphone' OR body like '%iphone') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.9ms)
+Rendered posts/_post (0.7ms)
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/posts?search=iphone]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:42:19) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.5ms)
+Rendered posts/_post (0.8ms)
+Rendered posts/_post (1.0ms)
+Rendered posts/_post (0.6ms)
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:42:54) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.8ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:42:55) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:42:58) [GET]
+  Parameters: {"search"=>"iphone"}
+  [4;36;1mPost Load (0.9ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%iphone' OR body like '%iphone') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.0ms)
+Rendered posts/_post (0.6ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/posts?search=iphone]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:44:04) [GET]
+  Parameters: {"search"=>"iphone"}
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%iphone' OR body like '%iphone') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.1ms)
+Rendered posts/_post (0.8ms)
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/posts?search=iphone]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:44:05) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:44:07) [GET]
+  Parameters: {"search"=>"iphone"}
+  [4;36;1mPost Load (0.9ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%iphone' OR body like '%iphone') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.9ms)
+Rendered posts/_post (0.6ms)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/posts?search=iphone]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:44:07) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:44:16) [GET]
+  Parameters: {"search"=>"iphone"}
+  [4;35;1mPost Load (1.5ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%iphone' OR body like '%iphone') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (5.0ms)
+Rendered posts/_post (1.2ms)
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/posts?search=iphone]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:44:16) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:44:29) [GET]
+  Parameters: {"search"=>"iphone"}
+  [4;36;1mPost Load (0.9ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%iphone' OR body like '%iphone') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.8ms)
+Rendered posts/_post (0.6ms)
+Completed in 11ms (View: 6, DB: 1) | 200 OK [http://localhost/posts?search=iphone]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:44:29) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:45:22) [GET]
+  Parameters: {"search"=>"iphone"}
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%iphone' OR body like '%iphone') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (5.3ms)
+Rendered posts/_post (0.6ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/posts?search=iphone]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:45:23) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:45:42) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.9ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:47:56) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.9ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:47:56) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:47:58) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (5.2ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:47:58) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:48:45) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.0ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (1.0ms)
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:48:46) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:48:47) [GET]
+  [4;36;1mPost Load (1.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.7ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 14ms (View: 7, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:48:47) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:48:53) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:50:04) [GET]
+  [4;35;1mPost Load (1.2ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.1ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:50:04) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:51:20) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.9ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 68ms (View: 8, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:51:21) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:51:22) [GET]
+  [4;35;1mPost Load (1.1ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.7ms)
+Rendered posts/_post (0.9ms)
+Rendered posts/_post (1.0ms)
+Rendered posts/_post (0.8ms)
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:51:22) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index to atom (for 127.0.0.1 at 2009-03-23 03:51:50) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering posts/index
+Completed in 31ms (View: 26, DB: 1) | 200 OK [http://localhost/posts.atom]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:53:53) [GET]
+  [4;35;1mPost Load (1.1ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (5.1ms)
+Rendered posts/_post (0.8ms)
+Rendered posts/_post (0.8ms)
+Rendered posts/_post (0.9ms)
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:53:53) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:53:55) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.9ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.7ms)
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:53:56) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:54:05) [GET]
+  [4;35;1mPost Load (1.2ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.8ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:55:06) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.8ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:55:10) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.1ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:55:10) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:55:10) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:55:12) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.1ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:55:12) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:55:21) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.7ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.6ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:55:22) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 03:56:01) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (62.5ms)
+Rendered posts/_post (0.9ms)
+Rendered posts/_post (1.0ms)
+Rendered posts/_post (0.6ms)
+Completed in 72ms (View: 67, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 03:56:01) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

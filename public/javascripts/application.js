@@ -2,6 +2,15 @@ var swfobject=function(){var b="undefined",Q="object",n="Shockwave Flash",p="Sho
 
 $(function() {
 	
+	// Header search field
+	if (jQuery.browser.safari == true) {
+		var header_search = $('input#header_search').get(0);
+		header_search.type = 'search';
+		header_search.setAttribute('placeholder', 'Search samsoff.es');
+		header_search.setAttribute('autosave', 'com.samsoffes.header_search');
+		header_search.setAttribute('results', '5');
+	}
+	
 	function listenButtonClicked(e) {
 		
 		e.preventDefault();

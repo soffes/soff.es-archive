@@ -15,14 +15,14 @@
 
 <h2>Add A Comment</h2
 <% remote_form_for [@post, Comment.new] do |f| %>
-	<dl>
-		<dt><%= f.label :name, "Your Name" %></dt>
-		<dd><%= f.text_field :name, :class => "text" %></dd>
-		<dt><%= f.label :email, "Your Email" %></dt>
-		<dd><%= f.text_field :email, :class => "text" %></dd>
-		<dt><%= f.label :website, "Your Website <small>optional</small>" %></dt>
-		<dd><%= f.text_field :website, :class => "text" %></dd>
-	</dl>
-	<p>	<%= f.text_area :body %></p>
-	<p><%= f.submit "Add Comment" %></p>
+  <dl>
+  	<dt><%= f.label :name, "Your Name" %></dt>
+  	<dd><%= f.text_field :name, :class => "text" %></dd>
+  	<dt><%= f.label :email, "Your Email" %></dt>
+  	<dd><%= f.text_field :email, :class => "text" %></dd>
+  	<dt><%= f.label :website, "Your Website <small>optional</small>" %></dt>
+  	<dd><%= f.text_field :website, :class => "text" %></dd>
+  </dl>
+  <p>	<%= f.text_area :body %></p>
+	<p><%= f.submit "Post Comment" %></p>
 <% end %>

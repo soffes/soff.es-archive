@@ -1,11 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
-	# TODO: figure out how to route posts correctly
+  map.home '', :controller => 'posts', :action => 'index'
 	map.resources :posts, :has_many => :comments
+	map.post_slug 'post/:slug', :controller => 'posts', :action => 'show'
 	
 	# Static pages
 	map.music 'music', :controller => 'music'
 	map.about 'about', :controller => 'about'
 
-	map.connect ':controller/:action/:id', :controller => 'posts'
-	map.connect ':controller/:action/:id.:format'
+	#map.connect ':controller/:action/:id'
+	#map.connect ':controller/:action/:id.:format'
 end

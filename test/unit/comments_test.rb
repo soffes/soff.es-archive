@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CommentTest < ActiveSupport::TestCase
+class CommentsTest < ActiveSupport::TestCase
   # Replace this with your real tests.
   test "the truth" do
     assert true

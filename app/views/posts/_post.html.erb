@@ -1,7 +1,7 @@
 <% div_for post do %>
-	<h2><%= link_to h(post.title), post %></h2>
+	<h2><%= link_to h(post.title), post_slug_url(post.slug) %></h2>
 	<p class="meta">Posted <%= time_ago_in_words(post.created_at) %> ago</p>
 	<div class="content">
-		<%= Markdown.new(post.body).to_html %>
+		<%= markdown post.body %>
 	</div>
 <% end %>

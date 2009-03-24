@@ -7039,3 +7039,964 @@ ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 18:06:39) [GET]
+  [4;36;1mPost Load (1.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (29.3ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 67ms (View: 61, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index to atom (for 127.0.0.1 at 2009-03-23 18:30:52) [GET]
+  [4;35;1mPost Load (1.2ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering posts/index
+Completed in 32ms (View: 26, DB: 1) | 200 OK [http://localhost/posts.atom]
+
+
+Processing PostsController#index to atom (for 127.0.0.1 at 2009-03-23 19:00:52) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering posts/index
+Completed in 98ms (View: 92, DB: 1) | 200 OK [http://localhost/posts.atom]
+
+
+Processing PostsController#index to atom (for 127.0.0.1 at 2009-03-23 19:30:54) [GET]
+  [4;35;1mPost Load (1.5ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering posts/index
+Completed in 13ms (View: 7, DB: 2) | 200 OK [http://localhost/posts.atom]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 20:24:40) [GET]
+  [4;36;1mPost Load (1.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (30.3ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.7ms)
+Completed in 51ms (View: 45, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 20:41:17) [GET]
+  [4;36;1mPost Load (1.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (30.4ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.6ms)
+Completed in 51ms (View: 45, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 20:41:18) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-03-23 20:41:42) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-03-23 20:42:06) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Completed in 55ms (View: 54, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 20:42:06) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 20:42:06) [GET]
+  [4;35;1mPost Load (1.1ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.2ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.7ms)
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 20:42:08) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.7ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 4) [0m
+Rendered comments/_comment (1.3ms)
+Completed in 51ms (View: 46, DB: 1) | 200 OK [http://localhost/posts/4]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 20:42:11) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.2ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.7ms)
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 21:48:54) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (30.7ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 4) [0m
+Rendered comments/_comment (1.3ms)
+Completed in 68ms (View: 61, DB: 1) | 200 OK [http://localhost/posts/4]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 21:49:02) [GET]
+  [4;36;1mPost Load (1.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.7ms)
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 21:49:08) [GET]
+  Parameters: {"slug"=>"1"}
+
+ActiveRecord::RecordNotFound (Couldn't find Post without an ID):
+  app/controllers/posts_controller.rb:25:in `show'
+
+Rendered rescues/_trace (30.2ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 21:49:16) [GET]
+  Parameters: {"slug"=>"iphone-plist-tutorial"}
+
+ActiveRecord::RecordNotFound (Couldn't find Post without an ID):
+  app/controllers/posts_controller.rb:25:in `show'
+
+Rendered rescues/_trace (30.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 21:51:00) [GET]
+  Parameters: {"slug"=>"iphone-plist-tutorial"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'iphone-plist-tutorial') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.6ms)
+  [4;36;1mComment Load (0.8ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Completed in 82ms (View: 75, DB: 1) | 200 OK [http://localhost/post/iphone-plist-tutorial]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 21:51:01) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 21:51:40) [GET]
+  Parameters: {"slug"=>"iphone-plist-tutorial"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'iphone-plist-tutorial') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.7ms)
+  [4;36;1mComment Load (0.7ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://localhost/post/iphone-plist-tutorial]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 21:51:40) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 21:51:43) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+
+ActionView::TemplateError (post_slug_url failed to generate from {:action=>"show", :controller=>"posts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["post", :slug] - are they all satisfied?) on line #2 of app/views/posts/_post.html.erb:
+1: <% div_for post do %>
+2: 	<h2><%= link_to h(post.title), post_slug_path %></h2>
+3: 	<p class="meta">Posted <%= time_ago_in_words(post.created_at) %> ago</p>
+4: 	<div class="content">
+5: 		<%= Markdown.new(post.body).to_html %>
+
+    (eval):20:in `post_slug_path'
+    app/views/posts/_post.html.erb:2
+    app/views/posts/_post.html.erb:1
+    app/views/posts/index.html.erb:1
+    app/controllers/posts_controller.rb:13:in `index'
+
+Rendered rescues/_trace (52.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 21:52:10) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+
+ActionView::TemplateError (post_slug_url failed to generate from {:action=>"show", :controller=>"posts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["post", :slug] - are they all satisfied?) on line #2 of app/views/posts/_post.html.erb:
+1: <% div_for post do %>
+2: 	<h2><%= link_to h(post.title), post_slug_path %></h2>
+3: 	<p class="meta">Posted <%= time_ago_in_words(post.created_at) %> ago</p>
+4: 	<div class="content">
+5: 		<%= Markdown.new(post.body).to_html %>
+
+    (eval):20:in `post_slug_path'
+    app/views/posts/_post.html.erb:2
+    app/views/posts/_post.html.erb:1
+    app/views/posts/index.html.erb:1
+    app/controllers/posts_controller.rb:13:in `index'
+
+Rendered rescues/_trace (103.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 21:52:10) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 21:52:10) [GET]
+  Parameters: {"slug"=>"iphone-plist-tutorial"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'iphone-plist-tutorial') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.3ms)
+  [4;36;1mComment Load (1.1ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Completed in 24ms (View: 17, DB: 1) | 200 OK [http://localhost/post/iphone-plist-tutorial]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 21:52:11) [GET]
+  Parameters: {"slug"=>"iphone-plist-tutorial"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'iphone-plist-tutorial') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.6ms)
+  [4;36;1mComment Load (0.8ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.3ms)
+Completed in 23ms (View: 16, DB: 1) | 200 OK [http://localhost/post/iphone-plist-tutorial]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 21:52:11) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 21:52:13) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+
+ActionView::TemplateError (post_slug_url failed to generate from {:action=>"show", :controller=>"posts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["post", :slug] - are they all satisfied?) on line #2 of app/views/posts/_post.html.erb:
+1: <% div_for post do %>
+2: 	<h2><%= link_to h(post.title), post_slug_path %></h2>
+3: 	<p class="meta">Posted <%= time_ago_in_words(post.created_at) %> ago</p>
+4: 	<div class="content">
+5: 		<%= Markdown.new(post.body).to_html %>
+
+    (eval):20:in `post_slug_path'
+    app/views/posts/_post.html.erb:2
+    app/views/posts/_post.html.erb:1
+    app/views/posts/index.html.erb:1
+    app/controllers/posts_controller.rb:13:in `index'
+
+Rendered rescues/_trace (103.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 21:52:15) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+
+ActionView::TemplateError (post_slug_url failed to generate from {:action=>"show", :controller=>"posts"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["post", :slug] - are they all satisfied?) on line #2 of app/views/posts/_post.html.erb:
+1: <% div_for post do %>
+2: 	<h2><%= link_to h(post.title), post_slug_path %></h2>
+3: 	<p class="meta">Posted <%= time_ago_in_words(post.created_at) %> ago</p>
+4: 	<div class="content">
+5: 		<%= Markdown.new(post.body).to_html %>
+
+    (eval):20:in `post_slug_path'
+    app/views/posts/_post.html.erb:2
+    app/views/posts/_post.html.erb:1
+    app/views/posts/index.html.erb:1
+    app/controllers/posts_controller.rb:13:in `index'
+
+Rendered rescues/_trace (102.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 21:52:15) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 21:52:27) [GET]
+  [4;35;1mPost Load (1.1ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+
+ActionView::TemplateError (undefined local variable or method `post_slug' for #<ActionView::Base:0x238ef08>) on line #2 of app/views/posts/_post.html.erb:
+1: <% div_for post do %>
+2: 	<h2><%= link_to h(post.title), post_slug %></h2>
+3: 	<p class="meta">Posted <%= time_ago_in_words(post.created_at) %> ago</p>
+4: 	<div class="content">
+5: 		<%= Markdown.new(post.body).to_html %>
+
+    app/views/posts/_post.html.erb:2
+    app/views/posts/_post.html.erb:1
+    app/views/posts/index.html.erb:1
+    app/controllers/posts_controller.rb:13:in `index'
+
+Rendered rescues/_trace (48.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 21:52:27) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 21:52:31) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.4ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.7ms)
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 21:52:31) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index to atom (for 127.0.0.1 at 2009-03-23 22:01:01) [GET]
+  [4;35;1mPost Load (1.3ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering posts/index
+Completed in 85ms (View: 27, DB: 1) | 200 OK [http://localhost/posts.atom]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090323060539)
+Migrating to CreateComments (20090323060540)
+Migrating to AddRequestColumnsToComments (20090324015130)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090323060539)
+Migrating to CreateComments (20090323060540)
+Migrating to AddRequestColumnsToComments (20090324015130)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "comments" ADD "user_ip" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "comments" ADD "user_agent" varchar(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "comments" ADD "referrer" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "comments" ADD "approved" boolean DEFAULT 'f' NOT NULL[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090323060539)
+Migrating to CreateComments (20090323060540)
+Migrating to AddRequestColumnsToComments (20090324015130)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mALTER TABLE "comments" ADD "user_ip" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "comments" ADD "user_agent" varchar(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "comments" ADD "referrer" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "comments" ADD "approved" boolean DEFAULT 'f' NOT NULL[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090323060539)
+Migrating to CreateComments (20090323060540)
+Migrating to AddRequestColumnsToComments (20090324015130)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "comments" ADD "user_ip" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "comments" ADD "user_agent" varchar(255)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mALTER TABLE "comments" ADD "referrer" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "comments" ADD "approved" boolean DEFAULT 'f' NOT NULL[0m
+  [4;35;1mComment Update (0.3ms)[0m   [0mUPDATE "comments" SET approved=1 [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090324015130')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("posts")[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 22:39:05) [GET]
+  [4;36;1mPost Load (1.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (30.3ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 51ms (View: 45, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 22:39:07) [GET]
+  [4;35;1mPost Load (1.1ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.0ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.6ms)
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 22:39:07) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 22:39:10) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.9ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 4) [0m
+Rendered comments/_comment (1.6ms)
+Completed in 87ms (View: 81, DB: 1) | 200 OK [http://localhost/posts/4]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 22:39:12) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (4.1ms)
+  [4;35;1mComment Load (0.5ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 4) [0m
+Rendered comments/_comment (0.6ms)
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/posts/4]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 22:39:12) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 22:41:39) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.8ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 4) [0m
+Rendered comments/_comment (0.9ms)
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://localhost/posts/4]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 22:41:59) [POST]
+  Parameters: {"post_id"=>"4", "authenticity_token"=>"PHdu02I4x702Sxvvier9FjjRCn1y1AxKtSH0CfidrpQ=", "comment"=>{"name"=>"Sam Soffes", "body"=>"Testing comments with spam protection.\n\nI wonder if it emails me...", "website"=>"http://samsoff.es", "email"=>"sam@samsoff.es"}}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("name", "updated_at", "body", "referrer", "post_id", "website", "approved", "user_agent", "user_ip", "email", "created_at") VALUES('Sam Soffes', '2009-03-24 03:41:59', 'Testing comments with spam protection.
+
+I wonder if it emails me...', 'http://localhost:3000/posts/4', 4, 'http://samsoff.es', 't', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_6; en-us) AppleWebKit/528.16 (KHTML, like Gecko) Version/4.0 Safari/528.16', '127.0.0.1', 'sam@samsoff.es', '2009-03-24 03:41:59')[0m
+
+NameError (uninitialized constant CommentsController::UserMailer):
+  app/controllers/comments_controller.rb:8:in `create'
+
+Rendered rescues/_trace (29.6ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 22:42:27) [POST]
+  Parameters: {"post_id"=>"4", "authenticity_token"=>"PHdu02I4x702Sxvvier9FjjRCn1y1AxKtSH0CfidrpQ=", "comment"=>{"name"=>"Sam Soffes", "body"=>"Testing comments with spam protection.\n\nI wonder if it emails me...", "website"=>"http://samsoff.es", "email"=>"sam@samsoff.es"}}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("name", "updated_at", "body", "referrer", "post_id", "website", "approved", "user_agent", "user_ip", "email", "created_at") VALUES('Sam Soffes', '2009-03-24 03:42:27', 'Testing comments with spam protection.
+
+I wonder if it emails me...', 'http://localhost:3000/posts/4', 4, 'http://samsoff.es', 't', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_6; en-us) AppleWebKit/528.16 (KHTML, like Gecko) Version/4.0 Safari/528.16', '127.0.0.1', 'sam@samsoff.es', '2009-03-24 03:42:27')[0m
+
+ActionView::TemplateError (uninitialized constant ActionView::Helpers::TextHelper::BlueCloth) on line #3 of app/views/comments_mailer/new_comment.rhtml:
+1: <%= @comment.name %> posted a comment:
+2: 
+3: <%= markdown @comment.body %>
+
+    app/views/comments_mailer/new_comment.rhtml:3:in `_run_rhtml_app47views47comments_mailer47new_comment46rhtml'
+    app/controllers/comments_controller.rb:8:in `create'
+
+Rendered rescues/_trace (34.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-03-23 22:47:10) [POST]
+  Parameters: {"post_id"=>"4", "authenticity_token"=>"PHdu02I4x702Sxvvier9FjjRCn1y1AxKtSH0CfidrpQ=", "comment"=>{"name"=>"Sam Soffes", "body"=>"Testing comments with spam protection.\n\nI wonder if it emails me...", "website"=>"http://samsoff.es", "email"=>"sam@samsoff.es"}}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("name", "updated_at", "body", "referrer", "post_id", "website", "approved", "user_agent", "user_ip", "email", "created_at") VALUES('Sam Soffes', '2009-03-24 03:47:11', 'Testing comments with spam protection.
+
+I wonder if it emails me...', 'http://localhost:3000/posts/4', 4, 'http://samsoff.es', 't', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_6; en-us) AppleWebKit/528.16 (KHTML, like Gecko) Version/4.0 Safari/528.16', '127.0.0.1', 'sam@samsoff.es', '2009-03-24 03:47:11')[0m
+Rendering comments/create
+Rendered comments/_comment (3.2ms)
+Completed in 635ms (View: 6, DB: 1) | 200 OK [http://localhost/posts/4/comments]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 22:47:25) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.2ms)
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 4) [0m
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://localhost/posts/4]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 22:47:57) [GET]
+
+ActionController::RoutingError (No route matches "/comments/destroy/10" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 22:48:07) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.5ms)
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 4) [0m
+Rendered comments/_comment (0.5ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.4ms)
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/posts/4]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 22:51:57) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.5ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.7ms)
+Completed in 35ms (View: 29, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 22:53:49) [GET]
+  [4;35;1mPost Load (1.1ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.7ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (1.1ms)
+Rendered posts/_post (0.7ms)
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 22:54:16) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.3ms)
+  [4;35;1mComment Load (0.7ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 4) [0m
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/posts/4]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 22:55:19) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.3ms)
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 4) [0m
+Rendered comments/_comment (0.6ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Completed in 84ms (View: 79, DB: 1) | 200 OK [http://localhost/posts/4]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 22:55:19) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 22:55:46) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.3ms)
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 4) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.4ms)
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://localhost/posts/4]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 22:55:46) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 22:56:11) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 4) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.3ms)
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 4) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Completed in 23ms (View: 17, DB: 1) | 200 OK [http://localhost/posts/4]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 22:56:12) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 22:58:04) [GET]
+  [4;36;1mPost Load (1.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.0ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index to atom (for 127.0.0.1 at 2009-03-23 23:01:04) [GET]
+  [4;35;1mPost Load (1.1ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%' OR body like '%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering posts/index
+Completed in 32ms (View: 26, DB: 1) | 200 OK [http://localhost/posts.atom]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 23:09:08) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (5.8ms)
+Rendered posts/_post (0.8ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.8ms)
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 23:09:13) [GET]
+  Parameters: {"search"=>"iphone"}
+  [4;35;1mPost Load (0.9ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%iphone%' OR body like '%iphone%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.1ms)
+Rendered posts/_post (0.6ms)
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/posts?search=iphone]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 23:10:29) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.5ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Completed in 78ms (View: 73, DB: 0) | 200 OK [http://localhost/posts/2]
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-03-23 23:10:31) [GET]
+  Parameters: {"id"=>"2"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/posts/2/edit]
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-03-23 23:10:35) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/posts/2/edit]
+
+
+Processing PostsController#update (for 127.0.0.1 at 2009-03-23 23:11:07) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"8Aeyl6CyBoYK/9WNpR8u4vB0ij7PBfLqJjy764R5wOE=", "post"=>{"slug"=>"3-easy-steps-to-optimize-web-apps-for-iphone", "body"=>"So I recent improved how my blog looks and works on iPhone in just a few lines of code.  The iPhone web browser is awesome, but for large websites, it is really hard to read something without panning around vertically and then scrolling horizontally. Solving these issues will make your site way more useable on Mobile Safari.\r\n\r\n1. *Add an iPhone specific stylesheet.* Something you will probably want to do is make your site narrower. The wider your layout is, the smaller everything has to be. It is much easier to scroll just vertically than vertically and horizontally. Something else to watch out for is mixing font sizes between px and em. You'll probally get some weird scalling issues if you mix units. You might also watch out for positioning issues due to Mobile Safari's scaling.\r\n\r\n    You might also want to adjust your font sizes a bit. I know I had to make my footer a tad smaller. In your case, you might want to make important things like navigation larger and easier to tap. Feel free to check out my iPhone specific stylesheet at [http://samsoffes.com/css/iphone.css](http://samsoffes.com/css/iphone.css).\r\n\r\n2. *Add a viewport meta tag.* This will tell Mobile Safari how to intelligently scale to fit your page. It's super easy to do and it will help a lot. My iPhone stylesheet makes my site 320px wide so I set my viewport to 320 to give a new bit of padding around my main content area. Here's the code:\r\n\r\n        <meta name=\"viewport\" content=\"width=320\" />\r\n\r\n    Remember if you have something that is wider than your viewport, it will automatically expand, so be sure to resize it in your iPhone specific stylesheet.\r\n\r\n3. *Add a homescreen icon.* When a user adds your website to their homescreen, you want it have a facny icon. You can easily do this by putting a 57px x 57px png named `apple-touch-icon.png` at the root of your website. For example mine is at [http://samsoffes.com/apple-touch-icon.png](http://samsoffes.com/apple-touch-icon.png). You can also put it at a different location with this link tag:\r\n\r\n        <link rel=\"apple-touch-icon\" href=\"custom-icon.png\" />\r\n\r\nDoing these three simple things will make your web app way more useable on the iPhone. You can do most of this in about 10 minutes like I did. If your layout is overlly complex and can't be made narrower and simplier easily, then you'll have a lot more work than 10 minutes of course. Have at it!\r\n\r\nO, and don't forget a [favicon.ico](http://en.wikipedia.org/wiki/Favicon) for your desktop users.", "title"=>"3 Easy Steps to Optimize Web Apps for iPhone"}, "id"=>"2"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/posts/2]
+
+
+Processing PostsController#update (for 127.0.0.1 at 2009-03-23 23:11:07) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"8Aeyl6CyBoYK/9WNpR8u4vB0ij7PBfLqJjy764R5wOE=", "post"=>{"slug"=>"3-easy-steps-to-optimize-web-apps-for-iphone", "body"=>"So I recent improved how my blog looks and works on iPhone in just a few lines of code.  The iPhone web browser is awesome, but for large websites, it is really hard to read something without panning around vertically and then scrolling horizontally. Solving these issues will make your site way more useable on Mobile Safari.\r\n\r\n1. *Add an iPhone specific stylesheet.* Something you will probably want to do is make your site narrower. The wider your layout is, the smaller everything has to be. It is much easier to scroll just vertically than vertically and horizontally. Something else to watch out for is mixing font sizes between px and em. You'll probally get some weird scalling issues if you mix units. You might also watch out for positioning issues due to Mobile Safari's scaling.\r\n\r\n    You might also want to adjust your font sizes a bit. I know I had to make my footer a tad smaller. In your case, you might want to make important things like navigation larger and easier to tap. Feel free to check out my iPhone specific stylesheet at [http://samsoffes.com/css/iphone.css](http://samsoffes.com/css/iphone.css).\r\n\r\n2. *Add a viewport meta tag.* This will tell Mobile Safari how to intelligently scale to fit your page. It's super easy to do and it will help a lot. My iPhone stylesheet makes my site 320px wide so I set my viewport to 320 to give a new bit of padding around my main content area. Here's the code:\r\n\r\n        <meta name=\"viewport\" content=\"width=320\" />\r\n\r\n    Remember if you have something that is wider than your viewport, it will automatically expand, so be sure to resize it in your iPhone specific stylesheet.\r\n\r\n3. *Add a homescreen icon.* When a user adds your website to their homescreen, you want it have a facny icon. You can easily do this by putting a 57px x 57px png named `apple-touch-icon.png` at the root of your website. For example mine is at [http://samsoffes.com/apple-touch-icon.png](http://samsoffes.com/apple-touch-icon.png). You can also put it at a different location with this link tag:\r\n\r\n        <link rel=\"apple-touch-icon\" href=\"custom-icon.png\" />\r\n\r\nDoing these three simple things will make your web app way more useable on the iPhone. You can do most of this in about 10 minutes like I did. If your layout is overlly complex and can't be made narrower and simplier easily, then you'll have a lot more work than 10 minutes of course. Have at it!\r\n\r\nO, and don't forget a [favicon.ico](http://en.wikipedia.org/wiki/Favicon) for your desktop users.", "title"=>"3 Easy Steps to Optimize Web Apps for iPhone"}, "id"=>"2"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+  [4;36;1mPost Exists (0.1ms)[0m   [0;1mSELECT "posts".id FROM "posts" WHERE ("posts"."slug" = '3-easy-steps-to-optimize-web-apps-for-iphone' AND "posts".id <> 2) LIMIT 1[0m
+  [4;35;1mPost Update (0.3ms)[0m   [0mUPDATE "posts" SET "body" = 'So I recent improved how my blog looks and works on iPhone in just a few lines of code. The iPhone web browser is awesome, but for large websites, it is really hard to read something without panning around vertically and then scrolling horizontally. Solving these issues will make your site way more useable on Mobile Safari.
+
+1. *Add an iPhone specific stylesheet.* Something you will probably want to do is make your site narrower. The wider your layout is, the smaller everything has to be. It is much easier to scroll just vertically than vertically and horizontally. Something else to watch out for is mixing font sizes between px and em. You''ll probally get some weird scalling issues if you mix units. You might also watch out for positioning issues due to Mobile Safari''s scaling.
+
+ You might also want to adjust your font sizes a bit. I know I had to make my footer a tad smaller. In your case, you might want to make important things like navigation larger and easier to tap. Feel free to check out my iPhone specific stylesheet at [http://samsoffes.com/css/iphone.css](http://samsoffes.com/css/iphone.css).
+
+2. *Add a viewport meta tag.* This will tell Mobile Safari how to intelligently scale to fit your page. It''s super easy to do and it will help a lot. My iPhone stylesheet makes my site 320px wide so I set my viewport to 320 to give a new bit of padding around my main content area. Here''s the code:
+
+ <meta name="viewport" content="width=320" />
+
+ Remember if you have something that is wider than your viewport, it will automatically expand, so be sure to resize it in your iPhone specific stylesheet.
+
+3. *Add a homescreen icon.* When a user adds your website to their homescreen, you want it have a facny icon. You can easily do this by putting a 57px x 57px png named `apple-touch-icon.png` at the root of your website. For example mine is at [http://samsoffes.com/apple-touch-icon.png](http://samsoffes.com/apple-touch-icon.png). You can also put it at a different location with this link tag:
+
+ <link rel="apple-touch-icon" href="custom-icon.png" />
+
+Doing these three simple things will make your web app way more useable on the iPhone. You can do most of this in about 10 minutes like I did. If your layout is overlly complex and can''t be made narrower and simplier easily, then you''ll have a lot more work than 10 minutes of course. Have at it!
+
+O, and don''t forget a [favicon.ico](http://en.wikipedia.org/wiki/Favicon) for your desktop users.', "updated_at" = '2009-03-24 04:11:07' WHERE "id" = 2[0m
+Redirected to http://localhost:3000/posts/2
+Completed in 10ms (DB: 1) | 302 Found [http://localhost/posts/2]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 23:11:07) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.9ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/2]
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-03-23 23:11:12) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/posts/2/edit]
+
+
+Processing PostsController#update (for 127.0.0.1 at 2009-03-23 23:11:16) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"8Aeyl6CyBoYK/9WNpR8u4vB0ij7PBfLqJjy764R5wOE=", "post"=>{"slug"=>"3-easy-steps-to-optimize-web-apps-for-iphone", "body"=>"So I recent improved how my blog looks and works on iPhone in just a few lines of code.  The iPhone web browser is awesome, but for large websites, it is really hard to read something without panning around vertically and then scrolling horizontally. Solving these issues will make your site way more useable on Mobile Safari.\r\n\r\n1. *Add an iPhone specific stylesheet.* Something you will probably want to do is make your site narrower. The wider your layout is, the smaller everything has to be. It is much easier to scroll just vertically than vertically and horizontally. Something else to watch out for is mixing font sizes between px and em. You'll probally get some weird scalling issues if you mix units. You might also watch out for positioning issues due to Mobile Safari's scaling.\r\n\r\n    You might also want to adjust your font sizes a bit. I know I had to make my footer a tad smaller. In your case, you might want to make important things like navigation larger and easier to tap. Feel free to check out my iPhone specific stylesheet at [http://samsoffes.com/css/iphone.css](http://samsoffes.com/css/iphone.css).\r\n\r\n2. *Add a viewport meta tag.* This will tell Mobile Safari how to intelligently scale to fit your page. It's super easy to do and it will help a lot. My iPhone stylesheet makes my site 320px wide so I set my viewport to 320 to give a new bit of padding around my main content area. Here's the code:\r\n\r\n        <meta name=\"viewport\" content=\"width=320\" />\r\n\r\n    Remember if you have something that is wider than your viewport, it will automatically expand, so be sure to resize it in your iPhone specific stylesheet.\r\n\r\n3. *Add a homescreen icon.* When a user adds your website to their homescreen, you want it have a facny icon. You can easily do this by putting a 57px x 57px png named `apple-touch-icon.png` at the root of your website. For example mine is at [http://samsoffes.com/apple-touch-icon.png](http://samsoffes.com/apple-touch-icon.png). You can also put it at a different location with this link tag:\r\n\r\n        <link rel=\"apple-touch-icon\" href=\"custom-icon.png\" />\r\n\r\nDoing these three simple things will make your web app way more useable on the iPhone. You can do most of this in about 10 minutes like I did. If your layout is overlly complex and can't be made narrower and simplier easily, then you'll have a lot more work than 10 minutes of course. Have at it!\r\n\r\nOh, and don't forget a [favicon.ico](http://en.wikipedia.org/wiki/Favicon) for your desktop users.", "title"=>"3 Easy Steps to Optimize Web Apps for iPhone"}, "id"=>"2"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+  [4;36;1mPost Exists (0.1ms)[0m   [0;1mSELECT "posts".id FROM "posts" WHERE ("posts"."slug" = '3-easy-steps-to-optimize-web-apps-for-iphone' AND "posts".id <> 2) LIMIT 1[0m
+  [4;35;1mPost Update (0.3ms)[0m   [0mUPDATE "posts" SET "body" = 'So I recent improved how my blog looks and works on iPhone in just a few lines of code. The iPhone web browser is awesome, but for large websites, it is really hard to read something without panning around vertically and then scrolling horizontally. Solving these issues will make your site way more useable on Mobile Safari.
+
+1. *Add an iPhone specific stylesheet.* Something you will probably want to do is make your site narrower. The wider your layout is, the smaller everything has to be. It is much easier to scroll just vertically than vertically and horizontally. Something else to watch out for is mixing font sizes between px and em. You''ll probally get some weird scalling issues if you mix units. You might also watch out for positioning issues due to Mobile Safari''s scaling.
+
+ You might also want to adjust your font sizes a bit. I know I had to make my footer a tad smaller. In your case, you might want to make important things like navigation larger and easier to tap. Feel free to check out my iPhone specific stylesheet at [http://samsoffes.com/css/iphone.css](http://samsoffes.com/css/iphone.css).
+
+2. *Add a viewport meta tag.* This will tell Mobile Safari how to intelligently scale to fit your page. It''s super easy to do and it will help a lot. My iPhone stylesheet makes my site 320px wide so I set my viewport to 320 to give a new bit of padding around my main content area. Here''s the code:
+
+ <meta name="viewport" content="width=320" />
+
+ Remember if you have something that is wider than your viewport, it will automatically expand, so be sure to resize it in your iPhone specific stylesheet.
+
+3. *Add a homescreen icon.* When a user adds your website to their homescreen, you want it have a facny icon. You can easily do this by putting a 57px x 57px png named `apple-touch-icon.png` at the root of your website. For example mine is at [http://samsoffes.com/apple-touch-icon.png](http://samsoffes.com/apple-touch-icon.png). You can also put it at a different location with this link tag:
+
+ <link rel="apple-touch-icon" href="custom-icon.png" />
+
+Doing these three simple things will make your web app way more useable on the iPhone. You can do most of this in about 10 minutes like I did. If your layout is overlly complex and can''t be made narrower and simplier easily, then you''ll have a lot more work than 10 minutes of course. Have at it!
+
+Oh, and don''t forget a [favicon.ico](http://en.wikipedia.org/wiki/Favicon) for your desktop users.', "updated_at" = '2009-03-24 04:11:17' WHERE "id" = 2[0m
+Redirected to http://localhost:3000/posts/2
+Completed in 73ms (DB: 1) | 302 Found [http://localhost/posts/2]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 23:11:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.6ms)
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 2) [0m
+Completed in 18ms (View: 13, DB: 0) | 200 OK [http://localhost/posts/2]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 23:11:50) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.0ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (0.6ms)
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index to atom (for 127.0.0.1 at 2009-03-23 23:31:06) [GET]
+  [4;35;1mPost Load (1.1ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering posts/index
+Completed in 12ms (View: 7, DB: 1) | 200 OK [http://localhost/posts.atom]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 23:43:55) [GET]
+  [4;36;1mPost Load (1.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+
+ActionView::TemplateError (undefined method `post_slug' for #<ActionView::Base:0x227c304>) on line #2 of app/views/posts/_post.html.erb:
+1: <% div_for post do %>
+2: 	<h2><%= link_to h(post.title), post_slug(post.slug) %></h2>
+3: 	<p class="meta">Posted <%= time_ago_in_words(post.created_at) %> ago</p>
+4: 	<div class="content">
+5: 		<%= markdown post.body %>
+
+    app/views/posts/_post.html.erb:2
+    app/views/posts/_post.html.erb:1
+    app/views/posts/index.html.erb:1
+    app/controllers/posts_controller.rb:11:in `index'
+
+Rendered rescues/_trace (46.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 23:43:55) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-03-23 23:44:16) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.5ms)
+Rendered posts/_post (0.4ms)
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.5ms)
+Completed in 70ms (View: 65, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-03-23 23:44:16) [GET]
+
+ActionController::RoutingError (No route matches "/favicon.ico" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-03-23 23:48:48) [GET]
+  Parameters: {"slug"=>"i-am-addicted-to-redoing-my-blog"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'i-am-addicted-to-redoing-my-blog') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.7ms)
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 4) [0m
+Rendered comments/_comment (0.4ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.3ms)
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/post/i-am-addicted-to-redoing-my-blog]

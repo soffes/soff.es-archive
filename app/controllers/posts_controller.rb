@@ -1,5 +1,3 @@
-require 'rdiscount'
-
 class PostsController < ApplicationController
 	before_filter :authenticate, :except => [:index, :show]
 
@@ -22,7 +20,12 @@ class PostsController < ApplicationController
 	# GET /posts/1.xml
 	# GET /posts/1.json
 	def show
-		@post = Post.find(params[:id])
+	  if params[:slug]
+	    @post = Post.find_by_slug(params[:slug])
+	    raise ActiveRecord::RecordNotFound, 'Post not found' if @post.nil?
+	  else
+	    @post = Post.find(params[:id])
+	  end
 
 		respond_to do |format|
 			format.html # show.html.erb

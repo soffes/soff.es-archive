@@ -10,7 +10,7 @@
 	<div id="header" class="clear">
 		<p><%= link_to '&#171; home', posts_path %></p>
 		<ul class="clear">
-			<li><%= link_to 'Blog', posts_path %></li>
+			<li><%= link_to 'Blog', home_path %></li>
 			<li><%= link_to 'Music', music_path %></li>
 			<li><%= link_to 'About', about_path %></li>
 		</ul>
@@ -18,7 +18,7 @@
 	<%= yield %>
 </div>
 <div id="footer">
-	<p>Copyright <%= link_to 'Sam Soffes', posts_path %> 2005-2009. <a href="http://github.com/samsoffes/samsoff.es/tree/rails">View source on GitHub</a>.</p>
+	<p>Copyright <%= link_to 'Sam Soffes', home_path %> 2005-2009. <a href="http://github.com/samsoffes/samsoff.es/tree/rails">View source on GitHub</a>.</p>
 </div>
 </body>
 </html>

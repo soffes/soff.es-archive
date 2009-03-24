@@ -1,3 +1,7 @@
-# Methods added to this helper will be available to all templates in the application.
+require 'rdiscount'
+
 module ApplicationHelper
+  def markdown(str)
+    Markdown.new(str).to_html
+  end
 end

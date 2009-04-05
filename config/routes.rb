@@ -3,7 +3,7 @@ ActionController::Routing::Routes.draw do |map|
 	map.resources :posts, :has_many => :comments
 	map.connect 'page/:page',
     :controller => 'posts',
-    :action => 'page',
+    :action => 'index',
     :requirements => { :page => /\d+/},
     :page => nil
 	map.post_slug 'post/:slug', :controller => 'posts', :action => 'show'

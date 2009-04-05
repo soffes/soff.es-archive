@@ -13,4 +13,7 @@ Rails::Initializer.run do |config|
   
   # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
   config.time_zone = 'Central Time (US & Canada)'
+  
+  # Load sweepers
+  config.load_paths << "#{RAILS_ROOT}/app/sweepers"
 end

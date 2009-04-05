@@ -1,6 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
   map.home '', :controller => 'posts', :action => 'index'
 	map.resources :posts, :has_many => :comments
+	map.connect 'page/:page',
+      :controller => 'posts',
+      :action => 'page',
+      :requirements => { :page => /\d+/},
+      :page => nil
 	map.post_slug 'post/:slug', :controller => 'posts', :action => 'show'
 	
 	# Static pages

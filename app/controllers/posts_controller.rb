@@ -4,12 +4,7 @@ class PostsController < ApplicationController
 	cache_sweeper :post_sweeper, :only => [:create, :update, :destroy]
 
 	def index
-    @posts = Post.search(nil, 1)
-	  render :action => 'page'
-	end
-	
-	def page
-	  @posts = Post.search(nil, params[:page])
+    @posts = Post.search(nil, params[:page])
 	end
 	
 	def show

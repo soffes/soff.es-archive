@@ -61,8 +61,10 @@ class PostsController < ApplicationController
 	private
 	
 	def authenticate
-		authenticate_or_request_with_http_basic do |name, password|
-			name == "admin"  && password == "passw0rd"
-		end
+	  if APP_CONFIG['preform_authentication']
+  		authenticate_or_request_with_http_basic do |name, password|
+  			name == APP_CONFIG['username']  && password == APP_CONFIG['password']
+  		end
+  	end
 	end
 end

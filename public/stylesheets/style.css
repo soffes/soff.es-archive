@@ -167,6 +167,11 @@ h2 {
 	padding-top: 0.5em;
 }
 
+h2 span {
+	font-size: 0.9em;
+	color: #999;
+}
+
 h3 {
 	font-size: 1.3em;
 	margin-bottom: 0.2em;

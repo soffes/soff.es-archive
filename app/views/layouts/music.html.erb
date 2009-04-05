@@ -9,13 +9,13 @@
 <body>
 <div id="wrapper">
 	<div id="header" class="clear">
-		<p><%= link_to '&#171; home', home_path %></p>
 		<ul class="clear">
 			<li><%= link_to 'Blog', home_path %></li>
 			<li><%= link_to 'Music', music_path %></li>
 			<li><%= link_to 'About', about_path %></li>
 		</ul>
 	</div>
+	<p style="color: green"><%= flash[:notice] %></p>
 	<%= yield %>
 </div>
 <div id="footer">

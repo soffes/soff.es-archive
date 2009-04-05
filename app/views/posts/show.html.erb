@@ -7,13 +7,17 @@
 </p>
 
 <div class="comments">
-  <h2>Comments</h2>
+  <h2>Comments <span><%= @post.comments.count %></span></h2>
+  <% if @post.comments.count == 0 %>
+  <p>No comments. Add one below.</p>
+  <% else %>
   <ul id="comments">
     <%= render :partial => @post.comments %>
   </ul>
+  <% end %>
 </div>
 
-<h2>Add A Comment</h2
+<h2>Add A Comment</h2>
 <% remote_form_for [@post, Comment.new] do |f| %>
   <dl>
   	<dt><%= f.label :name, "Your Name" %></dt>

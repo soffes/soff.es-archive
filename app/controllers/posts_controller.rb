@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-	before_filter :authenticate, :except => [:index, :show]
+	before_filter :authenticate, :except => [:index, :show, :page]
 	caches_page :index, :page, :show, :new
 	cache_sweeper :post_sweeper, :only => [:create, :update, :destroy]
 

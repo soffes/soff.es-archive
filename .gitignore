@@ -1,4 +1,4 @@
 .DS_Store
 *.esproj
-config/database.yml
+config/*.yml
 tmp

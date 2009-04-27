@@ -9,8 +9,8 @@ class CommentsController < ApplicationController
 		  if @comment.approved?
 		    
 		    # Clear cache of post's page
-		    expire_page :controller => 'posts', :action => 'show', :id => @comment.post.id
-		    expire_page :controller => 'posts', :action => 'show', :slug => @comment.post.slug
+		    #expire_page :controller => 'posts', :action => 'show', :id => @comment.post.id
+		    #expire_page :controller => 'posts', :action => 'show', :slug => @comment.post.slug
 		    
 		    #CommentsMailer.deliver_new_comment(@comment)
 		    flash.now[:notice] = "Thanks for the comment."

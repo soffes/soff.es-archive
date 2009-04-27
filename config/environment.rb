@@ -10,6 +10,7 @@ Rails::Initializer.run do |config|
   # Gem dependencies
   config.gem 'mislav-will_paginate', :version => '~> 2.2.3', :lib => 'will_paginate', :source => 'http://gems.github.com'
   config.gem 'rtomayko-rdiscount', :version => '~> 1.3.4', :lib => 'rdiscount', :source => 'http://gems.github.com'
+  config.gem 'passenger'
   
   # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
   config.time_zone = 'Central Time (US & Canada)'

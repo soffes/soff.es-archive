@@ -6,7 +6,7 @@ ActionController::Routing::Routes.draw do |map|
 #    :action => 'index',
 #    :requirements => { :page => /\d+/},
 #    :page => nil
-#	map.post_slug 'post/:slug', :controller => 'posts', :action => 'show'
+	map.post_slug 'post/:slug', :controller => 'posts', :action => 'show'
 	
 	# Static pages
 	map.music 'music', :controller => 'music'

@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 	before_filter :authenticate, :except => [:index, :show, :page]
-	caches_page :index, :page, :show, :new
-	cache_sweeper :post_sweeper, :only => [:create, :update, :destroy]
+	#caches_page :index, :page, :show, :new
+	#cache_sweeper :post_sweeper, :only => [:create, :update, :destroy]
 
 	def index
     @posts = Post.search(nil, params[:page])

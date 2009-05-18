@@ -1,0 +1,272 @@
+@import shared.sass
+
+// General
+body
+	background: #f7f7f7
+	
+body *
+	line-height: 1.4em
+
+body, input, textarea
+	font-family= !HelveticaNeueLight
+	font-weight: 300
+
+a
+	color: #2e80d3
+	text-decoration: none
+
+a:hover
+	text-decoration: underline
+
+strong
+	font-weight: bold
+
+em
+	background-color: #fffeca
+	padding: 0 0.2e
+
+abbr
+	border-bottom: 1px dashed
+	cursor: help
+
+p
+	line-height: 1.5em
+	margin: 0 0 1em
+
+blockquote
+	border-left: 5px solid #ddd
+	color: #555
+	margin: 0 0 2em
+	padding-left: 0.6em
+
+small
+	font-size: 0.8em
+	color: #999
+	margin-left: 0.2em
+	a
+		color: #444
+	a:hover
+		color: #2e80d3
+
+pre
+	background-color: #f8f8ff
+	border: 1px solid #dedede
+	color:#444
+	font-size: 0.9em
+	line-height: 1.5em
+	margin: 0 0 2em
+	overflow: auto
+	padding: 0.5em
+	code
+		background-color: #f8f8ff
+		border: medium none
+		font-size: 1em
+		padding: 0
+
+code
+	background-color: #f8f8ff
+	border: 1px solid #dedede
+	color: #444
+	font-size: 0.9em
+	padding: 0 0.2em
+
+h1
+	border-top: 4px solid #aaa
+	font-size: 1.9em
+	margin-bottom: 0.5em
+	padding-top: 0.5em
+	a
+		color: #000
+	a:hover
+		color: #2e80d3
+
+h2
+	border-top: 4px solid #e0e0e0
+	font-size: 1.5em
+	margin-bottom: 0.5em
+	padding-top: 0.5em
+	span
+		font-size: 0.9em
+		color: #999
+h3
+	font-size: 1.3em
+	margin-bottom: 0.2em
+
+h4
+	font-size: 0.9em
+	color: #555
+
+ul, ol
+	margin: 0 0 2em 1.3em
+	li
+		margin-left: 1em
+
+ul li
+	list-style: disc
+
+ol li
+	list-style: decimal
+
+// Layout
+
+div#wrapper
+	background: #fff
+	padding: 1em 2em
+	margin: 0 auto 1em
+	width: 50em
+
+div#header
+	p
+		float: left
+	ul
+		float: right
+		margin: 0
+		padding: 0
+	li
+		float: left
+		list-style: none
+		margin: 0 0 0 1em
+		padding: 0
+
+div#footer
+	padding: 0 1em
+	margin: 0 auto 1em
+	width: 50em
+	p
+		font-size: 0.9em
+
+div.post
+	margin-bottom: 2em
+
+.loading
+	background: url(/img/dots-white.gif) no-repeat left
+	padding-left: 29px
+	font-size: 0.9em
+	color: #555
+
+div.hd-video
+	background: #ddd
+	padding: 1.5em 0
+	text-align: center
+
+div.pagination
+	margin: 1em 0
+	a.prev
+		float: left
+	a.next
+		float: right
+
+div.development
+	background: #f8f28c
+	border-bottom: 2px solid #f8e03f
+	padding: 1em
+	margin: 0 0 2em
+	text-align: center
+	p
+		margin: 0
+
+// Form
+form
+	input, textarea
+		font-size: 1em
+	dl
+		margin-bottom: 1em
+	dd
+		margin-bottom: 1em
+	input.text, textarea
+		background-color: #fff
+		border-color: #666 #ccc #ccc
+		border-style: solid
+		border-width: 1px
+		color: #000
+		padding: 2px
+		margin: 1px
+	input.text:focus, textarea:focus
+		border: 2px solid #6694e3
+		outline: 0
+		margin: 0
+	input.text
+		width: 12em
+	textarea
+		width: 24em
+		height: 6em
+	input.submit
+		margin-right: 15px
+
+// Posts
+div.post
+	> h1
+		margin-bottom: 0
+	p.meta
+		color: #999
+		font-size: 0.9em
+		margin-bottom: 0.7em
+		a
+			color: #999
+
+// Comments
+
+div.comments
+	h2.no-comments
+		color: #aaa
+	ul
+		margin: 0
+		> li
+			list-style: none
+			padding: 0
+			margin: 0 0 2em
+			div.content
+				font-size: 0.9em
+
+// Music
+div#music-art
+	border: 10px solid #e7e7e7
+	width: 300px
+	height: 300px
+	float: left
+
+div#music-about
+	width: 426px
+	margin-left: 1em
+	line-height: 1.5em
+	float: left
+	ol
+		margin-bottom: 30px
+	p
+		font-size: 0.8em
+
+div#music 
+	li
+		font-size: 1.1em
+		margin-bottom: 0.3em
+		margin-left: 30px
+	ol li
+		list-style: decimal
+	ul li
+		list-style: disc
+	li span
+		font-size: 0.8em
+		margin-left: 6px
+	ul.links
+		margin: 0
+		font-size: 0.9em
+	ul.links li
+		margin: 0 0 1em
+		list-style: none
+
+a.podcast-link
+	background: url(http://assets.samsoffes.com/img/podcast-30x30.png) no-repeat 2px 0
+	padding: 0 0 0 40px
+	text-decoration: none
+
+a.soundcloud-link
+	background: url(http://assets.samsoffes.com/img/soundcloud.png) no-repeat 0 5px
+	padding: 0 0 0 40px
+	text-decoration: none
+
+div.soundcloud-player
+	height: 81px
+	margin: 2px 0
+	background: #eee url(http://assets.samsoffes.com/img/indicator.gif) no-repeat center
+	padding: 6px 10px 10px
+	width: 355px

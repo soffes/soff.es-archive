@@ -2,3 +2,5 @@
 *.esproj
 config/*.yml
 tmp
+.sass-cache
+

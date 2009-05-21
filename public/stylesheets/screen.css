@@ -60,7 +60,13 @@ div.pagination a:hover {
   color: #fff;
 }
 div.pagination a.next_page, div.pagination a.prev_page {
-  border-color: transparent;
+  border: 0;
+}
+div.pagination a.next_page:hover, div.pagination a.prev_page:hover {
+  background: none;
+  border: 0;
+  text-decoration: underline;
+  color: #2e80d3;
 }
 div.pagination span {
   border: 1px solid #dddddd;

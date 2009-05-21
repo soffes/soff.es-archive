@@ -30,7 +30,12 @@ div.pagination
 		border-color= !linkColor
 		color: #fff
 	a.next_page, a.prev_page
-		border-color: transparent
+		border: 0
+	a.next_page:hover, a.prev_page:hover
+		background: none
+		border: 0
+		text-decoration: underline
+		color= !linkColor
 	span
 		+paginationBorder()
 	span.disabled

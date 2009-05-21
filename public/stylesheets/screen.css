@@ -59,6 +59,9 @@ div.pagination a:hover {
   border-color: #2e80d3;
   color: #fff;
 }
+div.pagination a.next_page, div.pagination a.prev_page {
+  border-color: transparent;
+}
 div.pagination span {
   border: 1px solid #dddddd;
 }

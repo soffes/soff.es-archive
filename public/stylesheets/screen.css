@@ -243,7 +243,7 @@ div.post {
 }
 
 .loading {
-  background: url(/img/dots-white.gif) no-repeat left;
+  background: url(http://assets.samsoffes.com/img/dots-white.gif) no-repeat left;
   padding-left: 29px;
   font-size: 0.9em;
   color: #555;
@@ -397,7 +397,7 @@ a.soundcloud-link {
 div.soundcloud-player {
   height: 81px;
   margin: 2px 0;
-  background: #eee url(http://assets.samsoffes.com/img/indicator.gif) no-repeat center;
+  background: url(http://assets.samsoffes.com/img/indicator.gif) #eeeeee no-repeat center;
   padding: 6px 10px 10px;
   width: 355px;
 }

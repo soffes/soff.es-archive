@@ -1,3 +1,4 @@
+/* line 3, ../../app/stylesheets/_reset.sass */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;
   padding: 0;
@@ -10,34 +11,41 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
 }
 
+/* line 14, ../../app/stylesheets/_reset.sass */
 body {
   line-height: 1;
   color: black;
   background: white;
 }
 
+/* line 19, ../../app/stylesheets/_reset.sass */
 ol, ul {
   list-style: none;
 }
 
+/* line 22, ../../app/stylesheets/_reset.sass */
 table {
   border-collapse: separate;
   border-spacing: 0;
 }
 
+/* line 26, ../../app/stylesheets/_reset.sass */
 caption, th, td {
   text-align: left;
   font-weight: normal;
 }
 
+/* line 30, ../../app/stylesheets/_reset.sass */
 blockquote:before, blockquote:after, q:before, q:after {
   content: "";
 }
 
+/* line 33, ../../app/stylesheets/_reset.sass */
 blockquote, q {
   quotes: "" "";
 }
 
+/* line 10, ../../app/stylesheets/_shared.sass */
 .clear:after {
   clear: both;
   content: " ";
@@ -46,47 +54,87 @@ blockquote, q {
   zoom: 1;
 }
 
+/* line 25, ../../app/stylesheets/_shared.sass */
+div.pagination a, div.pagination span {
+  padding: 2px 6px;
+  margin-right: 0.2em;
+}
+/* line 28, ../../app/stylesheets/_shared.sass */
+div.pagination a {
+  border: 1px solid #50a2f5;
+}
+/* line 30, ../../app/stylesheets/_shared.sass */
+div.pagination a:hover {
+  text-decoration: none;
+  background: #2e80d3;
+  border-color: #2e80d3;
+  color: #fff;
+}
+/* line 35, ../../app/stylesheets/_shared.sass */
+div.pagination span {
+  border: 1px solid #eeeeee;
+}
+/* line 37, ../../app/stylesheets/_shared.sass */
+div.pagination span.disabled {
+  color: #cccccc;
+}
+/* line 39, ../../app/stylesheets/_shared.sass */
+div.pagination span.current {
+  color: #666666;
+  border: 1px solid #888888;
+}
+
+/* line 4, ../../app/stylesheets/screen.sass */
 body {
   background: #f7f7f7;
 }
 
+/* line 7, ../../app/stylesheets/screen.sass */
 body * {
   line-height: 1.4em;
 }
 
+/* line 10, ../../app/stylesheets/screen.sass */
 body, input, textarea {
   font-family: HelveticaNeue-Light, HelveticaNeue, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
 
+/* line 14, ../../app/stylesheets/screen.sass */
 a {
   color: #2e80d3;
   text-decoration: none;
 }
 
+/* line 18, ../../app/stylesheets/screen.sass */
 a:hover {
   text-decoration: underline;
 }
 
+/* line 21, ../../app/stylesheets/screen.sass */
 strong {
   font-weight: bold;
 }
 
+/* line 24, ../../app/stylesheets/screen.sass */
 em {
   background-color: #fffeca;
   padding: 0 0.2e;
 }
 
+/* line 28, ../../app/stylesheets/screen.sass */
 abbr {
   border-bottom: 1px dashed;
   cursor: help;
 }
 
+/* line 32, ../../app/stylesheets/screen.sass */
 p {
   line-height: 1.5em;
   margin: 0 0 1em;
 }
 
+/* line 36, ../../app/stylesheets/screen.sass */
 blockquote {
   border-left: 5px solid #ddd;
   color: #555;
@@ -94,18 +142,22 @@ blockquote {
   padding-left: 0.6em;
 }
 
+/* line 42, ../../app/stylesheets/screen.sass */
 small {
   font-size: 0.8em;
   color: #999;
   margin-left: 0.2em;
 }
+/* line 46, ../../app/stylesheets/screen.sass */
 small a {
   color: #444;
 }
+/* line 48, ../../app/stylesheets/screen.sass */
 small a:hover {
   color: #2e80d3;
 }
 
+/* line 51, ../../app/stylesheets/screen.sass */
 pre {
   background-color: #f8f8ff;
   border: 1px solid #dedede;
@@ -115,6 +167,7 @@ pre {
   overflow: auto;
   padding: 0.5em;
 }
+/* line 60, ../../app/stylesheets/screen.sass */
 pre code {
   background-color: #f8f8ff;
   border: medium none;
@@ -122,6 +175,7 @@ pre code {
   padding: 0;
 }
 
+/* line 66, ../../app/stylesheets/screen.sass */
 code {
   background-color: #f8f8ff;
   border: 1px solid #dedede;
@@ -130,55 +184,67 @@ code {
   padding: 0 0.2em;
 }
 
+/* line 73, ../../app/stylesheets/screen.sass */
 h1 {
   border-top: 4px solid #aaa;
   font-size: 1.9em;
   margin-bottom: 0.5em;
   padding-top: 0.5em;
 }
+/* line 78, ../../app/stylesheets/screen.sass */
 h1 a {
   color: #000;
 }
+/* line 80, ../../app/stylesheets/screen.sass */
 h1 a:hover {
   color: #2e80d3;
 }
 
+/* line 83, ../../app/stylesheets/screen.sass */
 h2 {
   border-top: 4px solid #e0e0e0;
   font-size: 1.5em;
   margin-bottom: 0.5em;
   padding-top: 0.5em;
 }
+/* line 88, ../../app/stylesheets/screen.sass */
 h2 span {
   font-size: 0.9em;
   color: #999;
 }
 
+/* line 91, ../../app/stylesheets/screen.sass */
 h3 {
   font-size: 1.3em;
   margin-bottom: 0.2em;
 }
 
+/* line 95, ../../app/stylesheets/screen.sass */
 h4 {
   font-size: 0.9em;
   color: #555;
 }
 
+/* line 99, ../../app/stylesheets/screen.sass */
 ul, ol {
   margin: 0 0 2em 1.3em;
 }
+/* line 101, ../../app/stylesheets/screen.sass */
 ul li, ol li {
   margin-left: 1em;
 }
 
+/* line 104, ../../app/stylesheets/screen.sass */
 ul li {
   list-style: disc;
 }
 
+/* line 107, ../../app/stylesheets/screen.sass */
 ol li {
   list-style: decimal;
 }
 
+/* line 112, ../../app/stylesheets/screen.sass */
 div#wrapper {
   background: #fff;
   padding: 1em 2em;
@@ -186,14 +252,17 @@ div#wrapper {
   width: 40em;
 }
 
+/* line 119, ../../app/stylesheets/screen.sass */
 div#header p {
   float: left;
 }
+/* line 121, ../../app/stylesheets/screen.sass */
 div#header ul {
   float: right;
   margin: 0;
   padding: 0;
 }
+/* line 125, ../../app/stylesheets/screen.sass */
 div#header li {
   float: left;
   list-style: none;
@@ -201,19 +270,23 @@ div#header li {
   padding: 0;
 }
 
+/* line 131, ../../app/stylesheets/screen.sass */
 div#footer {
   padding: 0 1em;
   margin: 0 auto 1em;
-  width: 50em;
+  width: 40em;
 }
+/* line 135, ../../app/stylesheets/screen.sass */
 div#footer p {
   font-size: 0.9em;
 }
 
+/* line 138, ../../app/stylesheets/screen.sass */
 div.post {
   margin-bottom: 2em;
 }
 
+/* line 141, ../../app/stylesheets/screen.sass */
 .loading {
   background: url(/img/dots-white.gif) no-repeat left;
   padding-left: 29px;
@@ -221,22 +294,27 @@ div.post {
   color: #555;
 }
 
+/* line 147, ../../app/stylesheets/screen.sass */
 div.hd-video {
   background: #ddd;
   padding: 1.5em 0;
   text-align: center;
 }
 
+/* line 152, ../../app/stylesheets/screen.sass */
 div.pagination {
   margin: 1em 0;
 }
+/* line 154, ../../app/stylesheets/screen.sass */
 div.pagination a.prev {
   float: left;
 }
+/* line 156, ../../app/stylesheets/screen.sass */
 div.pagination a.next {
   float: right;
 }
 
+/* line 159, ../../app/stylesheets/screen.sass */
 div.development {
   background: #f8f28c;
   border-bottom: 2px solid #f8e03f;
@@ -244,19 +322,24 @@ div.development {
   margin: 0 0 2em;
   text-align: center;
 }
+/* line 165, ../../app/stylesheets/screen.sass */
 div.development p {
   margin: 0;
 }
 
+/* line 170, ../../app/stylesheets/screen.sass */
 form input, form textarea {
   font-size: 1em;
 }
+/* line 172, ../../app/stylesheets/screen.sass */
 form dl {
   margin-bottom: 1em;
 }
+/* line 174, ../../app/stylesheets/screen.sass */
 form dd {
   margin-bottom: 1em;
 }
+/* line 176, ../../app/stylesheets/screen.sass */
 form input.text, form textarea {
   background-color: #fff;
   border-color: #666 #ccc #ccc;
@@ -266,105 +349,130 @@ form input.text, form textarea {
   padding: 2px;
   margin: 1px;
 }
+/* line 184, ../../app/stylesheets/screen.sass */
 form input.text:focus, form textarea:focus {
   border: 2px solid #6694e3;
   outline: 0;
   margin: 0;
 }
+/* line 188, ../../app/stylesheets/screen.sass */
 form input.text {
   width: 12em;
 }
+/* line 190, ../../app/stylesheets/screen.sass */
 form textarea {
   width: 24em;
   height: 6em;
 }
+/* line 193, ../../app/stylesheets/screen.sass */
 form input.submit {
   margin-right: 15px;
 }
 
+/* line 198, ../../app/stylesheets/screen.sass */
 div.post > h1 {
   margin-bottom: 0;
 }
+/* line 200, ../../app/stylesheets/screen.sass */
 div.post p.meta {
   color: #999;
   font-size: 0.9em;
   margin-bottom: 0.7em;
 }
+/* line 204, ../../app/stylesheets/screen.sass */
 div.post p.meta a {
   color: #999;
 }
 
+/* line 210, ../../app/stylesheets/screen.sass */
 div.comments h2.no-comments {
   color: #aaa;
 }
+/* line 212, ../../app/stylesheets/screen.sass */
 div.comments ul {
   margin: 0;
 }
+/* line 214, ../../app/stylesheets/screen.sass */
 div.comments ul > li {
   list-style: none;
   padding: 0;
   margin: 0 0 2em;
 }
+/* line 218, ../../app/stylesheets/screen.sass */
 div.comments ul > li div.content {
   font-size: 0.9em;
 }
 
+/* line 222, ../../app/stylesheets/screen.sass */
 div#music-art {
   border: 10px solid #e7e7e7;
   width: 300px;
   height: 300px;
   float: left;
+  margin-right: 1em;
 }
 
+/* line 229, ../../app/stylesheets/screen.sass */
 div#music-about {
-  width: 426px;
   margin-left: 1em;
   line-height: 1.5em;
+  width: 288px;
   float: left;
 }
+/* line 234, ../../app/stylesheets/screen.sass */
 div#music-about ol {
   margin-bottom: 30px;
 }
+/* line 236, ../../app/stylesheets/screen.sass */
 div#music-about p {
   font-size: 0.8em;
 }
 
+/* line 240, ../../app/stylesheets/screen.sass */
 div#music li {
   font-size: 1.1em;
   margin-bottom: 0.3em;
   margin-left: 30px;
 }
+/* line 244, ../../app/stylesheets/screen.sass */
 div#music ol li {
   list-style: decimal;
 }
+/* line 246, ../../app/stylesheets/screen.sass */
 div#music ul li {
   list-style: disc;
 }
+/* line 248, ../../app/stylesheets/screen.sass */
 div#music li span {
   font-size: 0.8em;
   margin-left: 6px;
 }
+/* line 251, ../../app/stylesheets/screen.sass */
 div#music ul.links {
   margin: 0;
   font-size: 0.9em;
 }
+/* line 254, ../../app/stylesheets/screen.sass */
 div#music ul.links li {
   margin: 0 0 1em;
   list-style: none;
 }
 
+/* line 258, ../../app/stylesheets/screen.sass */
 a.podcast-link {
   background: url(http://assets.samsoffes.com/img/podcast-30x30.png) no-repeat 2px 0;
   padding: 0 0 0 40px;
   text-decoration: none;
 }
 
+/* line 263, ../../app/stylesheets/screen.sass */
 a.soundcloud-link {
   background: url(http://assets.samsoffes.com/img/soundcloud.png) no-repeat 0 5px;
   padding: 0 0 0 40px;
   text-decoration: none;
 }
 
+/* line 268, ../../app/stylesheets/screen.sass */
 div.soundcloud-player {
   height: 81px;
   margin: 2px 0;

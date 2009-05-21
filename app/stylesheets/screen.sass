@@ -12,7 +12,7 @@ body, input, textarea
 	font-weight: 300
 
 a
-	color: #2e80d3
+	color= !linkColor
 	text-decoration: none
 
 a:hover
@@ -113,7 +113,7 @@ div#wrapper
 	background: #fff
 	padding: 1em 2em
 	margin: 0 auto 1em
-	width: 40em
+	width= !width
 
 div#header
 	p
@@ -131,7 +131,7 @@ div#header
 div#footer
 	padding: 0 1em
 	margin: 0 auto 1em
-	width: 50em
+	width= !width
 	p
 		font-size: 0.9em
 
@@ -224,11 +224,12 @@ div#music-art
 	width: 300px
 	height: 300px
 	float: left
+	margin-right: 1em
 
 div#music-about
-	width: 426px
 	margin-left: 1em
 	line-height: 1.5em
+	width: 288px
 	float: left
 	ol
 		margin-bottom: 30px

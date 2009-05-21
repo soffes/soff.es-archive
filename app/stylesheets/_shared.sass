@@ -1,12 +1,42 @@
 // My simple reset
 @import reset.sass
 
-// Easy clear
+// Variables
+!HelveticaNeueLight = "HelveticaNeue-Light","HelveticaNeue","Helvetica Neue Light","Helvetica Neue","Helvetica","Arial","sans-serif"
+!width = 40em
+!linkColor = #2e80d3
+
+// Clear
 .clear:after
 	clear: both
 	content: " "
 	display: block
 	height: 0
 	zoom: 1
-	
-!HelveticaNeueLight = "HelveticaNeue-Light","HelveticaNeue","Helvetica Neue Light","Helvetica Neue","Helvetica","Arial","sans-serif"
+
+// Pagination
+!paginationDisabledColor = #ccc
+!paginationCurrentColor = (!paginationDisabledColor - #666)
+
+=paginationBorder(!color, !colorDifference = #222)
+	border= 1px "solid" (!color + !colorDifference)
+
+div.pagination
+	a, span
+		padding: 2px 6px
+		margin-right: 0.2em
+	a
+		+paginationBorder(!linkColor)
+	a:hover
+		text-decoration: none
+		background= !linkColor
+		border-color= !linkColor
+		color: #fff
+	span
+		+paginationBorder(!paginationDisabledColor)
+	span.disabled
+		color= !paginationDisabledColor
+	span.current
+		color= !paginationCurrentColor
+		+paginationBorder(!paginationCurrentColor)
+		

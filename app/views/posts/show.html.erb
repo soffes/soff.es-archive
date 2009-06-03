@@ -7,7 +7,7 @@
 </p> -->
 
 <div class="comments">
-  <h2>Comments <span><%= @post.comments.count %></span></h2>
+  <h2>Comments <span><%= @approved_comments.count %></span></h2>
   <% if @post.comments.count == 0 %>
   <p>No comments. Add one below.</p>
   <% else %>

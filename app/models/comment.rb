@@ -8,6 +8,10 @@ class Comment < ActiveRecord::Base
 	  find(:all, :conditions => 'approved=1', :order => 'created_at')
 	end
 	
+	def self.approved_by_post(post)
+	  Comment.find(:all, :conditions => ["approved = ? AND post_id = ?", true, post.id], :order => 'created_at')
+	end
+	
 	def request=(request)
 	  self.user_ip    = request.remote_ip
 	  self.user_agent = request.env['HTTP_USER_AGENT']

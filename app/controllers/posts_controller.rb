@@ -19,6 +19,7 @@ class PostsController < ApplicationController
 	  else
 	    @post = Post.find(params[:id])
 	  end
+	  @approved_comments = Comment.approved_by_post(@post)
 	end
 
 	def new

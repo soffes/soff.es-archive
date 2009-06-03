@@ -234,6 +234,22 @@ div#header li {
   margin: 0 0 0 1em;
   padding: 0;
 }
+div#header li a {
+  background: transparent no-repeat top left;
+  padding-left: 22px;
+}
+div#header li.blog a {
+  background-image: url(http://assets.samsoffes.com/img/blog.png);
+  color: #d57015;
+}
+div#header li.music a {
+  background-image: url(http://assets.samsoffes.com/img/music.png);
+  color: #121212;
+}
+div#header li.about a {
+  background-image: url(http://assets.samsoffes.com/img/about.png);
+  color: #276abd;
+}
 
 div#footer {
   padding: 0 1em;

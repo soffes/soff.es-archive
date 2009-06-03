@@ -46,6 +46,40 @@ blockquote, q {
   zoom: 1;
 }
 
+div.pagination a, div.pagination span {
+  padding: 2px 6px;
+  margin-right: 0.2em;
+}
+div.pagination a {
+  border: 1px solid #dddddd;
+}
+div.pagination a:hover {
+  text-decoration: none;
+  background: #2e80d3;
+  border-color: #2e80d3;
+  color: #fff;
+}
+div.pagination a.next_page, div.pagination a.prev_page {
+  border: 0;
+}
+div.pagination a.next_page:hover, div.pagination a.prev_page:hover {
+  background: none;
+  border: 0;
+  text-decoration: underline;
+  color: #2e80d3;
+}
+div.pagination span {
+  border: 1px solid #dddddd;
+}
+div.pagination span.disabled {
+  color: #ccc;
+  border-color: transparent;
+}
+div.pagination span.current {
+  color: #333;
+  border: 1px solid #999999;
+}
+
 body {
   background: #f7f7f7;
 }
@@ -183,7 +217,7 @@ div#wrapper {
   background: #fff;
   padding: 1em 2em;
   margin: 0 auto 1em;
-  width: 50em;
+  width: 40em;
 }
 
 div#header p {
@@ -204,7 +238,7 @@ div#header li {
 div#footer {
   padding: 0 1em;
   margin: 0 auto 1em;
-  width: 50em;
+  width: 40em;
 }
 div#footer p {
   font-size: 0.9em;
@@ -215,7 +249,7 @@ div.post {
 }
 
 .loading {
-  background: url(/img/dots-white.gif) no-repeat left;
+  background: url(http://assets.samsoffes.com/img/dots-white.gif) no-repeat left;
   padding-left: 29px;
   font-size: 0.9em;
   color: #555;
@@ -314,12 +348,13 @@ div#music-art {
   width: 300px;
   height: 300px;
   float: left;
+  margin-right: 1em;
 }
 
 div#music-about {
-  width: 426px;
   margin-left: 1em;
   line-height: 1.5em;
+  width: 288px;
   float: left;
 }
 div#music-about ol {
@@ -368,7 +403,7 @@ a.soundcloud-link {
 div.soundcloud-player {
   height: 81px;
   margin: 2px 0;
-  background: #eee url(http://assets.samsoffes.com/img/indicator.gif) no-repeat center;
+  background: url(http://assets.samsoffes.com/img/indicator.gif) #eeeeee no-repeat center;
   padding: 6px 10px 10px;
   width: 355px;
 }

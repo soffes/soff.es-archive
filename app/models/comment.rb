@@ -4,6 +4,10 @@ class Comment < ActiveRecord::Base
 	validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create
 	before_create :check_for_spam
 	
+	def self.approved
+	  find(:all, :conditions => 'approved=1', :order => 'created_at')
+	end
+	
 	def request=(request)
 	  self.user_ip    = request.remote_ip
 	  self.user_agent = request.env['HTTP_USER_AGENT']

@@ -220,12 +220,18 @@ div#wrapper {
   width: 40em;
 }
 
-div#header p {
+div#header {
+  margin-bottom: 1.25em;
+}
+div#header h1 {
   float: left;
+  border: 0;
+  padding: 0;
+  margin: 0;
 }
 div#header ul {
   float: right;
-  margin: 0;
+  margin: 1em 0 0;
   padding: 0;
 }
 div#header li {

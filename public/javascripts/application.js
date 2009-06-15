@@ -8,11 +8,4 @@ $(function() {
 		header_search.setAttribute('autosave', 'com.samsoffes.header_search');
 		header_search.setAttribute('results', '5');
 	}
-	
-	// Comment form
-	$('form#new_comment').submit(function() {
-		var form = $(this);
-		$.post(form.attr('action')+'.js', form.serialize(), null, 'script');
-		return false;
-	});
 });

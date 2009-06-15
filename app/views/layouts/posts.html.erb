@@ -5,7 +5,7 @@
 <title><%= (@post ? " #{h(@post.title)} - " : '') %>samsoff.es</title>
 <%= stylesheet_link_tag 'screen' %>
 <%= auto_discovery_link_tag :atom, posts_path(:atom) %>
-<%= javascript_include_tag :my_defaults %>
+<%= javascript_include_tag :jquery, :jquery_ui, "jquery.timer", "posts" %>
 <%= yield(:head) %>
 </head>
 <body>

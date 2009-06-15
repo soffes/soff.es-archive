@@ -107,8 +107,18 @@ ul li
 ol li
 	list-style: decimal
 
-// Layout
+// Flashes
+div.flash
+	border: 1px solid
+	font-size: 0.95em
+	padding: 0.75em 1em
+	margin-bottom: 1em
 
+div.flash.notice
+	background-color: #d4ffd4
+	border-color: #78d478
+
+// Layout
 div#wrapper
 	background: #fff
 	padding: 1em 2em
@@ -165,22 +175,6 @@ div.hd-video
 	padding: 1.5em 0
 	text-align: center
 
-div.pagination
-	margin: 1em 0
-	a.prev
-		float: left
-	a.next
-		float: right
-
-div.development
-	background: #f8f28c
-	border-bottom: 2px solid #f8e03f
-	padding: 1em
-	margin: 0 0 2em
-	text-align: center
-	p
-		margin: 0
-
 // Form
 form
 	input, textarea
@@ -201,6 +195,11 @@ form
 		border: 2px solid #6694e3
 		outline: 0
 		margin: 0
+	input.text.error, textarea.error
+		background-color: #fdeeee
+		border-color: #dc4747 #f59e9e #f59e9e
+	input.text.error:focus, textarea.error:focus
+		border-color: #dc4747
 	input.text
 		width: 12em
 	textarea
@@ -221,7 +220,6 @@ div.post
 			color: #999
 
 // Comments
-
 div#comments_container
 	h2.no-comments
 		color: #aaa

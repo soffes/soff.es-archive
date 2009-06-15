@@ -1,14 +1,56 @@
 $(function() {
 	
-	// Flash
-	$('form#new_comment').before('<div id="flash_notice"><%= escape_javascript(flash.delete(:notice)) %></div>');
+<% if @comment.errors.empty? && @status == "success" %>
 	
+	// Flash
+	var flash = $('<div class="flash notice"><%= escape_javascript(flash.delete(:notice)) %></div>');
+	$('form#new_comment').before(flash);
+	$.timer(5000, function (timer) {
+		flash.slideUp('fast', function () {
+			flash.remove();
+		});
+		timer.stop();
+	});
+
 	// Update count
 	$('h2#comment_count').html('<%= escape_javascript(pluralize(@comment.post.approved_comments.count, 'Comment')) %>');
 
 	// Update list
-	$('ul#comments').append('<%= escape_javascript(render(:partial => "comments/comment", :locals => { :comment => @comment })) %>');
+	var li = $('<%= escape_javascript(render(:partial => "comments/comment", :locals => { :comment => @comment })) %>');
+	$('ul#comments').append(li);
+	li.effect('highlight', {}, 3000);
 	
 	// Reset form
-	$('form#new_comment')[0].reset();
+	var form = $('form#new comment')[0];
+	form.reset();
+	$('input, textarea', form).removeClass('error');
+	
+<% elsif @status == 'spam' %>
+	
+	// Flash
+	var flash = $('<div class="flash error"><%= escape_javascript(flash.delete(:error)) %></div>');
+	$('form#new_comment').before(flash);
+	$.timer(5000, function (timer) {
+		flash.slideUp('fast', function () {
+			flash.remove();
+		});
+		timer.stop();
+	});
+	
+	// Reset form
+	var form = $('form#new comment')[0];
+	form.reset();
+	form.find('input, textarea').removeClass('error');
+	
+<% else %>
+	
+	// Display errors
+	var errors = <%= @comment.errors.to_json -%>;
+	$.each(errors, function (i, val) {
+		var form = $('form#new comment')[0];
+		$('#comment_'+val[0]).addClass('error');
+	});
+	
+<% end %>
+
 });

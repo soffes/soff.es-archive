@@ -213,6 +213,18 @@ ol li {
   list-style: decimal;
 }
 
+div.flash {
+  border: 1px solid;
+  font-size: 0.95em;
+  padding: 0.75em 1em;
+  margin-bottom: 1em;
+}
+
+div.flash.notice {
+  background-color: #d4ffd4;
+  border-color: #78d478;
+}
+
 div#wrapper {
   background: #fff;
   padding: 1em 2em;
@@ -283,27 +295,6 @@ div.hd-video {
   text-align: center;
 }
 
-div.pagination {
-  margin: 1em 0;
-}
-div.pagination a.prev {
-  float: left;
-}
-div.pagination a.next {
-  float: right;
-}
-
-div.development {
-  background: #f8f28c;
-  border-bottom: 2px solid #f8e03f;
-  padding: 1em;
-  margin: 0 0 2em;
-  text-align: center;
-}
-div.development p {
-  margin: 0;
-}
-
 form input, form textarea {
   font-size: 1em;
 }
@@ -326,6 +317,13 @@ form input.text:focus, form textarea:focus {
   border: 2px solid #6694e3;
   outline: 0;
   margin: 0;
+}
+form input.text.error, form textarea.error {
+  background-color: #fdeeee;
+  border-color: #dc4747 #f59e9e #f59e9e;
+}
+form input.text.error:focus, form textarea.error:focus {
+  border-color: #dc4747;
 }
 form input.text {
   width: 12em;

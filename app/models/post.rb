@@ -10,6 +10,10 @@ class Post < ActiveRecord::Base
 #    read_attribute(:title).downcase.gsub(/[^ a-zA-Z0-9]/, '').gsub(/\s/, '-')
 #  end
 
+  def approved_comments
+    Comment.approved_by_post(self)
+  end
+
   def self.search(search, page)
     paginate :page => page,
       :conditions => ['title like ? OR body like ?', "%#{search}%", "%#{search}%"],

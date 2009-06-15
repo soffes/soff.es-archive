@@ -1,0 +1,14 @@
+$(function() {
+	
+	// Flash
+	$('form#new_comment').before('<div id="flash_notice"><%= escape_javascript(flash.delete(:notice)) %></div>');
+	
+	// Update count
+	$('h2#comment_count').html('<%= escape_javascript(pluralize(@comment.post.approved_comments.count, 'Comment')) %>');
+
+	// Update list
+	$('ul#comments').append('<%= escape_javascript(render(:partial => "comments/comment", :locals => { :comment => @comment })) %>');
+	
+	// Reset form
+	$('form#new_comment')[0].reset();
+});

@@ -344,18 +344,18 @@ div.post p.meta a {
   color: #999;
 }
 
-div.comments h2.no-comments {
+div#comments_container h2.no-comments {
   color: #aaa;
 }
-div.comments ul {
+div#comments_container ul {
   margin: 0;
 }
-div.comments ul > li {
+div#comments_container ul > li {
   list-style: none;
   padding: 0;
   margin: 0 0 2em;
 }
-div.comments ul > li div.content {
+div#comments_container ul > li div.content {
   font-size: 0.9em;
 }
 
@@ -421,5 +421,5 @@ div.soundcloud-player {
   margin: 2px 0;
   background: url(http://assets.samsoffes.com/img/indicator.gif) #eeeeee no-repeat center;
   padding: 6px 10px 10px;
-  width: 355px;
+  width: 225px;
 }

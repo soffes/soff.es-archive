@@ -6,28 +6,28 @@
 	<%= link_to 'See All Posts', posts_path %>
 </p> -->
 
-<div class="comments">
-  <h2>Comments <span><%= @approved_comments.size %></span></h2>
-  <% if @approved_comments.size == 0 %>
-  <p>No comments. Add one below.</p>
+<div id="comments_container">
+  <h2 id="comment_count"><%= pluralize(@post.approved_comments.count, 'Comment') %></h2>
+  <% if @post.approved_comments.count == 0 %>
+  <p id="no comments">No comments. Add one below.</p>
   <% else %>
   <ul id="comments">
-    <%= render :partial => @approved_comments %>
+    <%= render :partial => @post.approved_comments %>
   </ul>
   <% end %>
 </div>
 
 <h2>Add A Comment</h2>
-<% remote_form_for [@post, Comment.new] do |f| %>
+<% form_for [@post, Comment.new] do |f| %>
   <dl>
   	<dt><%= f.label :name, "Your Name" %></dt>
-  	<dd><%= f.text_field :name, :class => "text" %></dd>
+  	<dd><%= f.text_field :name, :class => "text", :tabindex => 1 %></dd>
   	<dt><%= f.label :email, "Your Email" %></dt>
-  	<dd><%= f.text_field :email, :class => "text" %></dd>
+  	<dd><%= f.text_field :email, :class => "text", :tabindex => 2 %></dd>
   	<dt><%= f.label :website, "Your Website <small>optional</small>" %></dt>
-  	<dd><%= f.text_field :website, :class => "text" %></dd>
+  	<dd><%= f.text_field :website, :class => "text", :tabindex => 3 %></dd>
   </dl>
-  <p>	<%= f.text_area :body %></p>
+  <p>	<%= f.text_area :body, :tabindex => 4 %></p>
   <p style="font-size:0.8em">Markdown enabled. <a href="http://daringfireball.net/projects/markdown/basics" target="_blank">Learn how to write Markdown.</a></p>
-	<p><%= f.submit "Post Comment" %></p>
+	<p><%= f.submit "Post Comment", :tabindex => 5 %></p>
 <% end %>

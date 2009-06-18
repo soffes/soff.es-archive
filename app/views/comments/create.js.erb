@@ -15,15 +15,15 @@ $(function() {
 	// Update count
 	$('h2#comment_count').html('<%= escape_javascript(pluralize(@comment.post.approved_comments.count, 'Comment')) %>');
 
-	// Update list
-	var li = $('<%= escape_javascript(render(:partial => "comments/comment", :locals => { :comment => @comment })) %>');
-	$('ul#comments').append(li);
-	li.effect('highlight', {}, 3000);
-	
 	// Reset form
 	var form = $('form#new comment')[0];
 	form.reset();
 	$('input, textarea', form).removeClass('error');
+
+	// Update list
+	var li = $('<%= escape_javascript(render(:partial => "comments/comment", :locals => { :comment => @comment })) %>');
+	$('ul#comments').append(li);
+	li.effect('highlight', {}, 3000);
 	
 <% elsif @status == 'spam' %>
 	

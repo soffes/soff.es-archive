@@ -1,10 +1,18 @@
 $(function() {
 	
+	var form = $('form#new_comment');
+	
+	function resetForm() {
+		var elements = $('input.text, textarea', form[0]);
+		elements.removeClass('error');
+		elements.val('');
+	}
+	
 <% if @comment.errors.empty? && @status == "success" %>
 	
 	// Flash
 	var flash = $('<div class="flash notice"><%= escape_javascript(flash.delete(:notice)) %></div>');
-	$('form#new_comment').before(flash);
+	form.before(flash);
 	$.timer(5000, function (timer) {
 		flash.slideUp('fast', function () {
 			flash.remove();
@@ -16,20 +24,18 @@ $(function() {
 	$('h2#comment_count').html('<%= escape_javascript(pluralize(@comment.post.approved_comments.count, 'Comment')) %>');
 
 	// Reset form
-	var form = $('form#new comment')[0];
-	form.reset();
-	$('input, textarea', form).removeClass('error');
+	resetForm();
 
 	// Update list
-	var li = $('<%= escape_javascript(render(:partial => "comments/comment", :locals => { :comment => @comment })) %>');
-	$('ul#comments').append(li);
-	li.effect('highlight', {}, 3000);
+	var commentsList = $('ul#comments');
+	commentsList.append('<%= escape_javascript(render(:partial => "comments/comment", :locals => { :comment => @comment })) %>');
+	commentsList.find('li:last').effect('highlight', {}, 3000);
 	
 <% elsif @status == 'spam' %>
 	
 	// Flash
 	var flash = $('<div class="flash error"><%= escape_javascript(flash.delete(:error)) %></div>');
-	$('form#new_comment').before(flash);
+	form.before(flash);
 	$.timer(5000, function (timer) {
 		flash.slideUp('fast', function () {
 			flash.remove();
@@ -38,19 +44,18 @@ $(function() {
 	});
 	
 	// Reset form
-	var form = $('form#new comment')[0];
-	form.reset();
-	form.find('input, textarea').removeClass('error');
+	resetForm();
 	
 <% else %>
 	
 	// Display errors
 	var errors = <%= @comment.errors.to_json -%>;
 	$.each(errors, function (i, val) {
-		var form = $('form#new comment')[0];
 		$('#comment_'+val[0]).addClass('error');
 	});
 	
 <% end %>
 
+	form.find('input.submit').removeAttr('disabled');
+	form.find('span.loader').removeClass('loading');
 });

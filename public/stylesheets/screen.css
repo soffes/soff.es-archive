@@ -227,56 +227,56 @@ div.flash.notice {
   border-color: #78d478;
 }
 
-div#wrapper {
+#wrapper {
   background: #fff;
   padding: 1em 2em;
   margin: 0 auto 1em;
   width: 40em;
 }
 
-div#header {
+#header {
   margin-bottom: 1.25em;
 }
-div#header h1 {
+#header h1 {
   float: left;
   border: 0;
   padding: 0;
   margin: 0;
 }
-div#header ul {
+#header ul {
   float: right;
   margin: 1em 0 0;
   padding: 0;
 }
-div#header li {
+#header li {
   float: left;
   list-style: none;
   margin: 0 0 0 1em;
   padding: 0;
 }
-div#header li a {
+#header li a {
   background: transparent no-repeat top left;
   padding-left: 22px;
 }
-div#header li.blog a {
+#header .blog a {
   background-image: url(http://assets.samsoffes.com/img/blog.png);
   color: #d57015;
 }
-div#header li.music a {
+#header .music a {
   background-image: url(http://assets.samsoffes.com/img/music.png);
   color: #121212;
 }
-div#header li.about a {
+#header .about a {
   background-image: url(http://assets.samsoffes.com/img/about.png);
   color: #276abd;
 }
 
-div#footer {
+#footer {
   padding: 0 1em;
   margin: 0 auto 1em;
   width: 40em;
 }
-div#footer p {
+#footer p {
   font-size: 0.9em;
 }
 
@@ -338,34 +338,34 @@ form input.submit {
   margin-right: 15px;
 }
 
-div.post > h1 {
+.post > h1 {
   margin-bottom: 0;
 }
-div.post p.meta {
+.post .meta {
   color: #999;
   font-size: 0.9em;
   margin-bottom: 0.7em;
 }
-div.post p.meta a {
+.post .meta a {
   color: #999;
 }
 
-div#comments_container h2.no-comments {
+#comments_container h2.no-comments {
   color: #aaa;
 }
-div#comments_container ul {
+#comments_container ul {
   margin: 0;
 }
-div#comments_container ul > li {
+#comments_container ul > li {
   list-style: none;
   padding: 0;
   margin: 0 0 2em;
 }
-div#comments_container ul > li div.content {
+#comments_container ul > li div.content {
   font-size: 0.9em;
 }
 
-div#music-art {
+#music-art {
   border: 10px solid #e7e7e7;
   width: 300px;
   height: 300px;
@@ -373,39 +373,39 @@ div#music-art {
   margin-right: 1em;
 }
 
-div#music-about {
+#music-about {
   margin-left: 1em;
   line-height: 1.5em;
   width: 288px;
   float: left;
 }
-div#music-about ol {
+#music-about ol {
   margin-bottom: 30px;
 }
-div#music-about p {
+#music-about p {
   font-size: 0.8em;
 }
 
-div#music li {
+#music li {
   font-size: 1.1em;
   margin-bottom: 0.3em;
   margin-left: 30px;
 }
-div#music ol li {
+#music ol li {
   list-style: decimal;
 }
-div#music ul li {
+#music ul li {
   list-style: disc;
 }
-div#music li span {
+#music li span {
   font-size: 0.8em;
   margin-left: 6px;
 }
-div#music ul.links {
+#music .links {
   margin: 0;
   font-size: 0.9em;
 }
-div#music ul.links li {
+#music .links li {
   margin: 0 0 1em;
   list-style: none;
 }

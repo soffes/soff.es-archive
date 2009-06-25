@@ -4,7 +4,6 @@
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 <title>Music - samsoff.es</title>
 <%= stylesheet_link_tag 'screen' %>
-<%= javascript_include_tag :jquery, 'music' %>
 <%= yield(:head) %>
 </head>
 <body>
@@ -13,5 +12,6 @@
 	<%= yield %>
 </div>
 <%= render :partial => 'shared/footer' %>
+<%= javascript_include_tag :jquery, 'music' %>
 </body>
 </html>

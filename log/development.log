@@ -1,0 +1,15 @@
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-07-18 16:32:25) [GET]
+  [4;36;1mPost Load (2.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (79.1ms)
+Rendered posts/_post (1.4ms)
+Rendered posts/_post (0.9ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.7ms)
+Rendered shared/_header (7.4ms)
+Rendered shared/_footer (1.0ms)
+Completed in 200ms (View: 191, DB: 3) | 200 OK [http://localhost/]

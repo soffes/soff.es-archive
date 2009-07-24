@@ -259,15 +259,15 @@ div.flash.notice {
   padding-left: 22px;
 }
 #header .blog a {
-  background-image: url(http://assets.samsoffes.com/img/blog.png);
+  background-image: url('http://assets.samsoffes.com/img/blog.png');
   color: #d57015;
 }
 #header .music a {
-  background-image: url(http://assets.samsoffes.com/img/music.png);
+  background-image: url('http://assets.samsoffes.com/img/music.png');
   color: #121212;
 }
 #header .about a {
-  background-image: url(http://assets.samsoffes.com/img/about.png);
+  background-image: url('http://assets.samsoffes.com/img/about.png');
   color: #276abd;
 }
 
@@ -285,7 +285,7 @@ div.post {
 }
 
 .loading {
-  background: url(http://assets.samsoffes.com/img/dots-white.gif) no-repeat left;
+  background: url('http://assets.samsoffes.com/img/dots-white.gif') no-repeat left;
   padding-left: 29px;
   font-size: 0.9em;
   color: #555;
@@ -372,6 +372,10 @@ form input.submit {
   float: left;
   margin-right: 1em;
 }
+#music-art img {
+  width: 300px;
+  height: 300px;
+}
 
 #music-about {
   margin-left: 1em;
@@ -411,13 +415,13 @@ form input.submit {
 }
 
 a.podcast-link {
-  background: url(http://assets.samsoffes.com/img/podcast-30x30.png) no-repeat 2px 0;
+  background: url('http://assets.samsoffes.com/img/podcast-30x30.png') no-repeat 2px 0;
   padding: 0 0 0 40px;
   text-decoration: none;
 }
 
 a.soundcloud-link {
-  background: url(http://assets.samsoffes.com/img/soundcloud.png) no-repeat 0 5px;
+  background: url('http://assets.samsoffes.com/img/soundcloud.png') no-repeat 0 5px;
   padding: 0 0 0 40px;
   text-decoration: none;
 }
@@ -425,7 +429,7 @@ a.soundcloud-link {
 div.soundcloud-player {
   height: 81px;
   margin: 2px 0;
-  background: url(http://assets.samsoffes.com/img/indicator.gif) #eeeeee no-repeat center;
+  background: url('http://assets.samsoffes.com/img/indicator.gif') #eeeeee no-repeat center;
   padding: 6px 10px 10px;
   width: 225px;
 }

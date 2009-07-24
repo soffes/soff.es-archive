@@ -7,8 +7,8 @@
 </p> -->
 
 <div id="comments_container">
-  <h2 id="comment_count"><%= pluralize(@post.approved_comments.count, 'Comment') %></h2>
-  <% if @post.approved_comments.count == 0 %>
+  <h2 id="comment_count"><%= pluralize(@post.approved_comments.length, 'Comment') %></h2>
+  <% if @post.approved_comments.length == 0 %>
   <p id="no comments">No comments. Add one below.</p>
   <% else %>
   <ul id="comments">

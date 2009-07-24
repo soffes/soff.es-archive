@@ -2223,3 +2223,765 @@ ActionController::RoutingError (No route matches "/stylesheets/iphone.css" with 
   passenger (2.2.4) lib/phusion_passenger/abstract_server.rb:195:in `start_synchronously'
 
 Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-07-24 11:57:26) [GET]
+  [4;36;1mPost Load (49.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (110.6ms)
+Rendered posts/_post (0.8ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (1.0ms)
+Rendered posts/_post (0.7ms)
+Rendered shared/_head (0.8ms)
+Rendered shared/_header (66.3ms)
+Rendered shared/_footer (1.0ms)
+Completed in 420ms (View: 363, DB: 49) | 200 OK [http://localhost/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-07-24 11:57:28) [GET]
+  Parameters: {"slug"=>"mobilelex-2009"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'mobilelex-2009') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.9ms)
+  [4;35;1mComment Load (1.2ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+
+ActionView::TemplateError (undefined method `count' for []:Array) on line #10 of app/views/posts/show.html.erb:
+7: </p> -->
+8: 
+9: <div id="comments_container">
+10:   <h2 id="comment_count"><%= pluralize(@post.approved_comments.count, 'Comment') %></h2>
+11:   <% if @post.approved_comments.count == 0 %>
+12:   <p id="no comments">No comments. Add one below.</p>
+13:   <% else %>
+
+    app/views/posts/show.html.erb:10
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    /Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.8/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (43.2ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-07-24 12:01:11) [GET]
+  Parameters: {"slug"=>"mobilelex-2009"}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'mobilelex-2009') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (35.2ms)
+  [4;35;1mComment Load (0.8ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+
+ActionView::TemplateError (undefined method `count' for []:Array) on line #10 of app/views/posts/show.html.erb:
+7: </p> -->
+8: 
+9: <div id="comments_container">
+10:   <h2 id="comment_count"><%= pluralize(@post.approved_comments.count, 'Comment') %></h2>
+11:   <% if @post.approved_comments.length == 0 %>
+12:   <p id="no comments">No comments. Add one below.</p>
+13:   <% else %>
+
+    app/views/posts/show.html.erb:10
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    /Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.8/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (37.5ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-07-24 12:01:16) [GET]
+  Parameters: {"slug"=>"mobilelex-2009"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'mobilelex-2009') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.6ms)
+  [4;35;1mComment Load (0.7ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+
+ActionView::TemplateError (undefined method `count' for []:Array) on line #10 of app/views/posts/show.html.erb:
+7: </p> -->
+8: 
+9: <div id="comments_container">
+10:   <h2 id="comment_count"><%= pluralize(@post.approved_comments.count, 'Comment') %></h2>
+11:   <% if @post.approved_comments.length == 0 %>
+12:   <p id="no comments">No comments. Add one below.</p>
+13:   <% else %>
+
+    app/views/posts/show.html.erb:10
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    /Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.8/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (99.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-07-24 12:01:28) [GET]
+  Parameters: {"slug"=>"mobilelex-2009"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'mobilelex-2009') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.4ms)
+  [4;35;1mComment Load (0.7ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+Rendered shared/_head (0.7ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_footer (0.9ms)
+Completed in 33ms (View: 27, DB: 1) | 200 OK [http://localhost/post/mobilelex-2009]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-07-24 12:01:32) [GET]
+  [4;35;1mPost Load (1.6ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (4.2ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.9ms)
+Rendered posts/_post (0.7ms)
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.1ms)
+Completed in 22ms (View: 14, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-07-24 12:01:37) [GET]
+  Parameters: {"slug"=>"web-services-with-cocoa-surprise"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'web-services-with-cocoa-surprise') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.5ms)
+  [4;36;1mComment Load (2.2ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 10) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 10) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 10) ORDER BY created_at[0m
+Rendered comments/_comment (25.0ms)
+Rendered comments/_comment (0.3ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered comments/_comment (0.2ms)
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.1ms)
+Rendered shared/_footer (0.1ms)
+Completed in 50ms (View: 42, DB: 2) | 200 OK [http://localhost/post/web-services-with-cocoa-surprise]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-07-24 12:02:14) [GET]
+  [4;36;1mPost Load (1.8ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (33.8ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (1.0ms)
+Rendered posts/_post (0.7ms)
+Rendered shared/_head (0.8ms)
+Rendered shared/_header (1.3ms)
+Rendered shared/_footer (0.9ms)
+Completed in 121ms (View: 112, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:02:17) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.1ms)
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:02:34) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (18.5ms)
+Rendered shared/_footer (0.2ms)
+Completed in 22ms (View: 20, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:03:10) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.7ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:03:30) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:03:56) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:04:05) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:04:18) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:04:26) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:04:31) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:05:23) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:05:32) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.2ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:05:46) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:06:11) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.2ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:06:17) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:06:57) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:07:02) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (53.1ms)
+Rendered shared/_footer (0.1ms)
+Completed in 56ms (View: 55, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:07:29) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:08:02) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:08:39) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:08:43) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.2ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:09:04) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:09:14) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:09:23) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:09:50) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:09:56) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:10:01) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.6ms)
+Rendered shared/_header (0.4ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:10:07) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.2ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:10:11) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:10:27) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-07-24 12:11:19) [GET]
+Rendering template within layouts/about
+Rendering about/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-07-24 12:11:53) [GET]
+  [4;36;1mPost Load (1.8ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (3.9ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.6ms)
+Rendered posts/_post (1.2ms)
+Rendered posts/_post (1.4ms)
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.2ms)
+Completed in 20ms (View: 12, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-07-24 12:11:56) [GET]
+  Parameters: {"slug"=>"mobilelex-2009"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'mobilelex-2009') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (4.0ms)
+  [4;35;1mComment Load (0.7ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.1ms)
+Rendered shared/_footer (0.2ms)
+Completed in 35ms (View: 28, DB: 1) | 200 OK [http://localhost/post/mobilelex-2009]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-07-24 12:12:36) [GET]
+  Parameters: {"slug"=>"mobilelex-2009"}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'mobilelex-2009') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.7ms)
+  [4;36;1mComment Load (0.7ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.1ms)
+Rendered shared/_footer (0.2ms)
+Completed in 22ms (View: 15, DB: 1) | 200 OK [http://localhost/post/mobilelex-2009]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-07-24 12:12:49) [GET]
+  Parameters: {"slug"=>"mobilelex-2009"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'mobilelex-2009') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.7ms)
+  [4;35;1mComment Load (0.7ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.1ms)
+Rendered shared/_footer (0.2ms)
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/post/mobilelex-2009]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-07-24 12:13:07) [GET]
+  Parameters: {"slug"=>"mobilelex-2009"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'mobilelex-2009') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.5ms)
+  [4;36;1mComment Load (0.7ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.1ms)
+Rendered shared/_footer (0.2ms)
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/post/mobilelex-2009]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-07-24 12:13:18) [GET]
+  Parameters: {"slug"=>"mobilelex-2009"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'mobilelex-2009') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.7ms)
+  [4;35;1mComment Load (0.8ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.1ms)
+Rendered shared/_footer (0.2ms)
+Completed in 22ms (View: 15, DB: 1) | 200 OK [http://localhost/post/mobilelex-2009]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-07-24 12:13:29) [GET]
+  Parameters: {"slug"=>"mobilelex-2009"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'mobilelex-2009') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.9ms)
+  [4;36;1mComment Load (0.7ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.1ms)
+Rendered shared/_footer (0.2ms)
+Completed in 78ms (View: 72, DB: 1) | 200 OK [http://localhost/post/mobilelex-2009]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-07-24 12:13:43) [GET]
+  [4;36;1mPost Load (1.6ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (5.0ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (0.7ms)
+Rendered posts/_post (1.1ms)
+Rendered posts/_post (0.7ms)
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.1ms)
+Completed in 22ms (View: 12, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-07-24 12:13:44) [GET]
+  Parameters: {"slug"=>"mobilelex-2009"}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'mobilelex-2009') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.6ms)
+  [4;35;1mComment Load (0.7ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.1ms)
+Rendered shared/_footer (0.1ms)
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/post/mobilelex-2009]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-07-24 12:14:14) [GET]
+  Parameters: {"slug"=>"mobilelex-2009"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'mobilelex-2009') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.7ms)
+  [4;36;1mComment Load (0.7ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.1ms)
+Rendered shared/_footer (0.2ms)
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/post/mobilelex-2009]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-07-24 12:15:35) [GET]
+  Parameters: {"slug"=>"mobilelex-2009"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'mobilelex-2009') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.5ms)
+  [4;35;1mComment Load (0.7ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.1ms)
+Rendered shared/_footer (1.2ms)
+Completed in 24ms (View: 17, DB: 1) | 200 OK [http://localhost/post/mobilelex-2009]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-07-24 12:16:07) [GET]
+  Parameters: {"slug"=>"mobilelex-2009"}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'mobilelex-2009') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.8ms)
+  [4;36;1mComment Load (0.8ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.2ms)
+Completed in 80ms (View: 73, DB: 1) | 200 OK [http://localhost/post/mobilelex-2009]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-07-24 12:16:41) [GET]
+  Parameters: {"slug"=>"mobilelex-2009"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'mobilelex-2009') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (3.8ms)
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 14) ORDER BY created_at[0m
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.1ms)
+Rendered shared/_footer (1.2ms)
+Completed in 25ms (View: 18, DB: 1) | 200 OK [http://localhost/post/mobilelex-2009]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-07-24 12:16:55) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-07-24 12:17:38) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-07-24 12:17:56) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-07-24 12:18:01) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.1ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-07-24 12:20:28) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-07-24 12:20:31) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-07-24 12:20:58) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.4ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-07-24 12:21:35) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-07-24 12:21:57) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-07-24 12:22:30) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-07-24 12:23:16) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-07-24 12:23:28) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Rendered shared/_head (0.4ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-07-24 12:23:33) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-07-24 12:24:12) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-07-24 12:24:49) [GET]
+Rendering template within layouts/music
+Rendering music/index
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.4ms)
+Rendered shared/_footer (0.3ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/music]

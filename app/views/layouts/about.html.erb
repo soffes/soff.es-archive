@@ -3,16 +3,14 @@
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <title>About - samsoff.es</title>
-<%= stylesheet_link_tag 'screen' %>
-<%= yield(:head) %>
-<link href="http://feeds.feedburner.com/samsoffes/blog" rel="alternate" title="samsoff.es" type="application/atom+xml" />
-<link href="http://feeds.feedburner.com/samsoffes/the-experiment" rel="alternate" title="The Experiment Podcast" type="application/atom+xml" />
+<%= render :partial => "shared/head" -%>
+<%= yield(:head) -%>
 </head>
 <body>
 <div id="wrapper">
-	<%= render :partial => 'shared/header' %>
+	<%= render :partial => "shared/header" %>
 	<%= yield %>
 </div>
-<%= render :partial => 'shared/footer' %>
+<%= render :partial => "shared/footer" %>
 </body>
 </html>

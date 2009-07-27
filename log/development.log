@@ -2985,3 +2985,19 @@ Rendered shared/_head (0.3ms)
 Rendered shared/_header (0.4ms)
 Rendered shared/_footer (0.3ms)
 Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-07-27 12:36:07) [GET]
+  [4;36;1mPost Load (99.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (545.7ms)
+Rendered posts/_post (4.3ms)
+Rendered posts/_post (14.1ms)
+Rendered posts/_post (56.4ms)
+Rendered posts/_post (16.2ms)
+Rendered shared/_head (20.4ms)
+Rendered shared/_header (58.6ms)
+Rendered shared/_footer (10.6ms)
+Completed in 936ms (View: 829, DB: 100) | 200 OK [http://localhost/]

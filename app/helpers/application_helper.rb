@@ -1,7 +1,7 @@
-require 'rdiscount'
+require 'maruku'
 
 module ApplicationHelper
-  def markdown(str)
-    Markdown.new(str).to_html
-  end
+  def markdown(text)
+    text.blank? ? "" : Maruku.new(text).to_html
+  end  
 end

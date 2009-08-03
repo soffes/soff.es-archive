@@ -17,5 +17,5 @@ Rails::Initializer.run do |config|
   config.time_zone = "Central Time (US & Canada)"
   
   # Load sweepers
-  config.load_paths << "#{RAILS_ROOT}/app/sweepers"
+  #config.load_paths << "#{RAILS_ROOT}/app/sweepers"
 end

@@ -3001,3 +3001,691 @@ Rendered shared/_head (20.4ms)
 Rendered shared/_header (58.6ms)
 Rendered shared/_footer (10.6ms)
 Completed in 936ms (View: 829, DB: 100) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-07-28 14:50:30) [GET]
+  [4;36;1mPost Load (22.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (443.7ms)
+Rendered posts/_post (4.2ms)
+Rendered posts/_post (13.5ms)
+Rendered posts/_post (52.4ms)
+Rendered posts/_post (14.8ms)
+Rendered shared/_head (13.5ms)
+Rendered shared/_header (57.6ms)
+Rendered shared/_footer (11.9ms)
+Completed in 736ms (View: 707, DB: 22) | 200 OK [http://localhost/]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-07-28 14:50:34) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.1ms)
+Rendered shared/_footer (0.1ms)
+Completed in 29ms (View: 24, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-07-28 15:08:45) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"WjVMSl6kYVpaukLGFNNKlgHytuqYTIsQNQZWCoWX/jY=", "post"=>{"slug"=>"old-people-vs-the-other-side", "body"=>"Watching different people use software is fascinating to me. My mind works a lot differently than Average-Joe's does when it comes to using software so seeing how people interact with software is really intriguing to me.\r\n\r\n### The Post Office Lady\r\nI was just at the post office and this old lady in front of me was trying to buy a shipping label for her package. This is a very easy thing to do. There are lots of instructions, big buttons, and even instructional videos to help you if you want.\r\n\r\nAfter two tries she gave up and went to go stand in the super long line to get someone to help her. (Why are the lines always stupid long in post offices? It was 2:30 in the afternoon. Why is there a line?)\r\n\r\nShe put her card into the machine when she started and then pulled it out when it told her to swipe it. It gave her a message saying please swipe it again, but I guess she thought that she had to start over and left. The other time, the machine wanted her to input the dimensions of her package and she couldn't figure out that there was a third dimension (height) to her package even thought the instructions were quite clear on the screen (there was even a picture of the box with arrows).\r\n\r\n### Why?\r\nMy guess as to why she had such problems with the system are that she has a preconceived idea of how the machine worked and when it didn't work the way she expected she figured it was broken or she wasn't smart enough to use it. That, or she just didn't understand the instructions for whatever reason, although they were very straight forward.\r\n\r\nIt is interesting to me that no matter how well you design software to be useable, some people will not be able to use it. As a developer, I don't know what to do to solve this problem. I want everyone to be able to use my software. Granted, no old people are going to use Countdown Maker, but regardless, I want them to be super easy to use.\r\n\r\n### The Other Side\r\nThe other side of all of this is [OmniFocus](http://www.omnigroup.com/applications/omnifocus). OmniFocus is unlike any other app I've used. The table view in it is completely custom and doesn't behave like I'd expect, they don't use any real world metaphors for their UI, and if you didn't understand GTD principals, you would be 100% confused (as I was). \r\n\r\nThe only way I was able to use this app was to watch their screen casts. After watching their screen casts, I know exactly how to use the app and I felt like a pro. This was very interesting to me as a developer. They threw out almost everything and started over. They wanted you to forget how to use software and do it their way.\r\n\r\nI don't this this is the solution by any means, but it was very interesting to me. (I use [The Hit List](http://www.potionfactory.com/thehitlist/) anyway. It's pretty.)\r\n\r\n### Now what?\r\nWell I intend to keep making software so the old lady can use it, or at least try. If she really wanted to get her package shipped, I think she could have done it. Everything she need was spelled out for her. If I am making a pro app (think Photoshop or Final Cut) then I would go more the other side approach. I want to optimize the software for people that know how to use it instead of teaching people to use it.\r\n\r\n*I think the sweet spot is finding a balance of these two.* Make the stuff people wouldn't understand more out of the way and make everything on the surface feel easy so the user can choose which path to take.", "title"=>"Old People vs The Other Side"}}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT "posts".id FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+  [4;35;1mPost Create (0.5ms)[0m   [0mINSERT INTO "posts" ("slug", "updated_at", "title", "body", "created_at") VALUES('old-people-vs-the-other-side', '2009-07-28 20:08:45', 'Old People vs The Other Side', 'Watching different people use software is fascinating to me. My mind works a lot differently than Average-Joe''s does when it comes to using software so seeing how people interact with software is really intriguing to me.
+
+### The Post Office Lady
+I was just at the post office and this old lady in front of me was trying to buy a shipping label for her package. This is a very easy thing to do. There are lots of instructions, big buttons, and even instructional videos to help you if you want.
+
+After two tries she gave up and went to go stand in the super long line to get someone to help her. (Why are the lines always stupid long in post offices? It was 2:30 in the afternoon. Why is there a line?)
+
+She put her card into the machine when she started and then pulled it out when it told her to swipe it. It gave her a message saying please swipe it again, but I guess she thought that she had to start over and left. The other time, the machine wanted her to input the dimensions of her package and she couldn''t figure out that there was a third dimension (height) to her package even thought the instructions were quite clear on the screen (there was even a picture of the box with arrows).
+
+### Why?
+My guess as to why she had such problems with the system are that she has a preconceived idea of how the machine worked and when it didn''t work the way she expected she figured it was broken or she wasn''t smart enough to use it. That, or she just didn''t understand the instructions for whatever reason, although they were very straight forward.
+
+It is interesting to me that no matter how well you design software to be useable, some people will not be able to use it. As a developer, I don''t know what to do to solve this problem. I want everyone to be able to use my software. Granted, no old people are going to use Countdown Maker, but regardless, I want them to be super easy to use.
+
+### The Other Side
+The other side of all of this is [OmniFocus](http://www.omnigroup.com/applications/omnifocus). OmniFocus is unlike any other app I''ve used. The table view in it is completely custom and doesn''t behave like I''d expect, they don''t use any real world metaphors for their UI, and if you didn''t understand GTD principals, you would be 100% confused (as I was). 
+
+The only way I was able to use this app was to watch their screen casts. After watching their screen casts, I know exactly how to use the app and I felt like a pro. This was very interesting to me as a developer. They threw out almost everything and started over. They wanted you to forget how to use software and do it their way.
+
+I don''t this this is the solution by any means, but it was very interesting to me. (I use [The Hit List](http://www.potionfactory.com/thehitlist/) anyway. It''s pretty.)
+
+### Now what?
+Well I intend to keep making software so the old lady can use it, or at least try. If she really wanted to get her package shipped, I think she could have done it. Everything she need was spelled out for her. If I am making a pro app (think Photoshop or Final Cut) then I would go more the other side approach. I want to optimize the software for people that know how to use it instead of teaching people to use it.
+
+*I think the sweet spot is finding a balance of these two.* Make the stuff people wouldn''t understand more out of the way and make everything on the surface feel easy so the user can choose which path to take.', '2009-07-28 20:08:45')[0m
+Redirected to http://localhost:3000/posts/15
+Completed in 358ms (DB: 1) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-07-28 15:08:45) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (89.7ms)
+  [4;35;1mComment Load (1.2ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 177ms (View: 170, DB: 1) | 200 OK [http://localhost/posts/15]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-07-28 15:08:54) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (23.6ms)
+  [4;36;1mComment Load (0.7ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.1ms)
+Rendered shared/_footer (0.1ms)
+Completed in 41ms (View: 35, DB: 1) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-07-28 15:08:56) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (23.7ms)
+  [4;35;1mComment Load (0.7ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 41ms (View: 34, DB: 1) | 200 OK [http://localhost/posts/15]
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-07-28 15:08:58) [GET]
+  Parameters: {"id"=>"15"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.1ms)
+Rendered shared/_footer (0.1ms)
+Completed in 31ms (View: 26, DB: 0) | 200 OK [http://localhost/posts/15/edit]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-03 14:14:06) [GET]
+  [4;36;1mPost Load (13.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (531.2ms)
+Rendered posts/_post (12.3ms)
+Rendered posts/_post (4.2ms)
+Rendered posts/_post (12.9ms)
+Rendered posts/_post (55.7ms)
+Rendered shared/_head (13.5ms)
+Rendered shared/_header (62.4ms)
+Rendered shared/_footer (18.4ms)
+Completed in 790ms (View: 751, DB: 14) | 200 OK [http://localhost/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-03 14:14:08) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (24.1ms)
+  [4;35;1mComment Load (14.7ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.1ms)
+Rendered shared/_footer (0.1ms)
+Completed in 172ms (View: 152, DB: 15) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing CommentsController#create to js (for 127.0.0.1 at 2009-08-03 14:14:24) [POST]
+  Parameters: {"comment"=>{"name"=>"Sam Soffes", "body"=>"Test comment!", "website"=>"http://samsoff.es", "email"=>"sam@samsoff.es"}, "post_id"=>"15", "authenticity_token"=>"+23oQfmqyMlex6Qn+cImXlD6qjscRcE/Dom9gsYwdqM="}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+  [4;36;1mComment Create (0.5ms)[0m   [0;1mINSERT INTO "comments" ("name", "referrer", "created_at", "body", "updated_at", "post_id", "approved", "website", "user_ip", "user_agent", "email") VALUES('Sam Soffes', 'http://localhost:3000/post/old-people-vs-the-other-side', '2009-08-03 19:14:25', 'Test comment!', '2009-08-03 19:14:25', 15, 't', 'http://samsoff.es', '127.0.0.1', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6; en-us) AppleWebKit/531.4 (KHTML, like Gecko) Version/4.0.3 Safari/531.4', 'sam@samsoff.es')[0m
+
+ActionView::TemplateError (undefined method `name' for "Comment: Test comment!":String) on line #1 of app/views/comments_mailer/new_comment.rhtml:
+1: <%= @comment.name %> posted a comment:
+2: 
+3: <%= markdown @comment.body %>
+
+    app/views/comments_mailer/new_comment.rhtml:1:in `_run_rhtml_app47views47comments_mailer47new_comment46rhtml'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/comments_controller.rb:16:in `create'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    /Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.8/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (101.8ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-03 14:15:45) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (22.9ms)
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (27.3ms)
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.1ms)
+Rendered shared/_footer (0.1ms)
+Completed in 68ms (View: 61, DB: 1) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing CommentsController#create to js (for 127.0.0.1 at 2009-08-03 14:16:00) [POST]
+  Parameters: {"comment"=>{"name"=>"Sam Soffes", "body"=>"Another test comment", "website"=>"http://samsoff.es", "email"=>"sam@samsoff.es"}, "post_id"=>"15", "authenticity_token"=>"+23oQfmqyMlex6Qn+cImXlD6qjscRcE/Dom9gsYwdqM="}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+  [4;36;1mComment Create (0.4ms)[0m   [0;1mINSERT INTO "comments" ("name", "referrer", "created_at", "body", "updated_at", "post_id", "approved", "website", "user_ip", "user_agent", "email") VALUES('Sam Soffes', 'http://localhost:3000/post/old-people-vs-the-other-side', '2009-08-03 19:16:00', 'Another test comment', '2009-08-03 19:16:00', 15, 't', 'http://samsoff.es', '127.0.0.1', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6; en-us) AppleWebKit/531.4 (KHTML, like Gecko) Version/4.0.3 Safari/531.4', 'sam@samsoff.es')[0m
+
+ActionView::TemplateError (uninitialized constant ActionView::Helpers::TextHelper::Markdown) on line #3 of app/views/comments_mailer/new_comment.rhtml:
+1: <%= @comment.name %> posted a comment:
+2: 
+3: <%= markdown @comment.body %>
+
+    app/views/comments_mailer/new_comment.rhtml:3:in `_run_rhtml_app47views47comments_mailer47new_comment46rhtml'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/comments_controller.rb:16:in `create'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    /Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.8/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (104.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-03 14:16:51) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (399.5ms)
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (4.2ms)
+Rendered comments/_comment (0.8ms)
+Rendered shared/_head (0.7ms)
+Rendered shared/_header (0.8ms)
+Rendered shared/_footer (0.7ms)
+Completed in 511ms (View: 504, DB: 1) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing CommentsController#create to js (for 127.0.0.1 at 2009-08-03 14:17:05) [POST]
+  Parameters: {"comment"=>{"name"=>"Sam Soffes", "body"=>"Testing again", "website"=>"http://samsoff.es", "email"=>"sam@samsoff.es"}, "post_id"=>"15", "authenticity_token"=>"+23oQfmqyMlex6Qn+cImXlD6qjscRcE/Dom9gsYwdqM="}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+  [4;35;1mComment Create (0.5ms)[0m   [0mINSERT INTO "comments" ("name", "referrer", "created_at", "body", "updated_at", "post_id", "approved", "website", "user_ip", "user_agent", "email") VALUES('Sam Soffes', 'http://localhost:3000/post/old-people-vs-the-other-side', '2009-08-03 19:17:05', 'Testing again', '2009-08-03 19:17:05', 15, 't', 'http://samsoff.es', '127.0.0.1', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6; en-us) AppleWebKit/531.4 (KHTML, like Gecko) Version/4.0.3 Safari/531.4', 'sam@samsoff.es')[0m
+
+ActionView::TemplateError (uninitialized constant ActionView::Helpers::TextHelper::Markdown) on line #3 of app/views/comments_mailer/new_comment.html.erb:
+1: <%= @comment.name %> posted a comment:.
+2: 
+3: <%= markdown @comment.body %>
+
+    app/views/comments_mailer/new_comment.html.erb:3
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/comments_controller.rb:16:in `create'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    /Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.8/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (102.8ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-03 14:17:33) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (23.7ms)
+  [4;35;1mComment Load (0.7ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (4.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.1ms)
+Rendered shared/_footer (0.1ms)
+Completed in 46ms (View: 40, DB: 1) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing CommentsController#create to js (for 127.0.0.1 at 2009-08-03 14:17:50) [POST]
+  Parameters: {"comment"=>{"name"=>"Sam Soffes", "body"=>"asdjkhfadjhk", "website"=>"", "email"=>"sam@samsoff.es"}, "post_id"=>"15", "authenticity_token"=>"+23oQfmqyMlex6Qn+cImXlD6qjscRcE/Dom9gsYwdqM="}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("name", "referrer", "created_at", "body", "updated_at", "post_id", "approved", "website", "user_ip", "user_agent", "email") VALUES('Sam Soffes', 'http://localhost:3000/post/old-people-vs-the-other-side', '2009-08-03 19:17:50', 'asdjkhfadjhk', '2009-08-03 19:17:50', 15, 'f', '', '127.0.0.1', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6; en-us) AppleWebKit/531.4 (KHTML, like Gecko) Version/4.0.3 Safari/531.4', 'sam@samsoff.es')[0m
+Rendering comments/create
+Completed in 168ms (View: 27, DB: 1) | 200 OK [http://localhost/posts/15/comments.js]
+
+
+Processing CommentsController#create to js (for 127.0.0.1 at 2009-08-03 14:18:12) [POST]
+  Parameters: {"comment"=>{"name"=>"Sam Soffes", "body"=>"testing again!222", "website"=>"http://samsoff.es", "email"=>"sam@samsoff.es"}, "post_id"=>"15", "authenticity_token"=>"+23oQfmqyMlex6Qn+cImXlD6qjscRcE/Dom9gsYwdqM="}
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("name", "referrer", "created_at", "body", "updated_at", "post_id", "approved", "website", "user_ip", "user_agent", "email") VALUES('Sam Soffes', 'http://localhost:3000/post/old-people-vs-the-other-side', '2009-08-03 19:18:12', 'testing again!222', '2009-08-03 19:18:12', 15, 't', 'http://samsoff.es', '127.0.0.1', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6; en-us) AppleWebKit/531.4 (KHTML, like Gecko) Version/4.0.3 Safari/531.4', 'sam@samsoff.es')[0m
+
+ActionView::TemplateError (undefined local variable or method `comment' for #<ActionView::Base:0x1036134e8>) on line #1 of app/views/comments_mailer/new_comment.html.erb:
+1: <%= comment.name %> posted a comment:.
+2: 
+3: <%= markdown comment.body %>
+
+    app/views/comments_mailer/new_comment.html.erb:1
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/comments_controller.rb:16:in `create'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    /Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.8/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (36.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-03 14:21:51) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (24.0ms)
+  [4;35;1mComment Load (0.8ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (72.0ms)
+Rendered comments/_comment (1.1ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 116ms (View: 109, DB: 1) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing CommentsController#create to js (for 127.0.0.1 at 2009-08-03 14:34:31) [POST]
+  Parameters: {"comment"=>{"name"=>"Sam Soffes", "body"=>"testing 3", "website"=>"", "email"=>"sam@samsoff.es"}, "post_id"=>"15", "authenticity_token"=>"+23oQfmqyMlex6Qn+cImXlD6qjscRcE/Dom9gsYwdqM="}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+  [4;35;1mComment Create (0.5ms)[0m   [0mINSERT INTO "comments" ("name", "referrer", "created_at", "body", "updated_at", "post_id", "approved", "website", "user_ip", "user_agent", "email") VALUES('Sam Soffes', 'http://localhost:3000/post/old-people-vs-the-other-side', '2009-08-03 19:34:31', 'testing 3', '2009-08-03 19:34:31', 15, 't', '', '127.0.0.1', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6; en-us) AppleWebKit/531.4 (KHTML, like Gecko) Version/4.0.3 Safari/531.4', 'sam@samsoff.es')[0m
+
+ActionView::TemplateError (uninitialized constant ActionView::Helpers::TextHelper::Markdown) on line #3 of app/views/comments_mailer/new_comment.erb:
+1: <%= @comment.name %> posted a comment:
+2: 
+3: <%= markdown @comment.body %>
+
+    app/views/comments_mailer/new_comment.erb:3
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/comments_controller.rb:16:in `create'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    /Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.8/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (39.4ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-03 14:35:26) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (400.0ms)
+  [4;35;1mComment Load (0.9ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (4.5ms)
+Rendered comments/_comment (1.3ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (1.1ms)
+Rendered comments/_comment (1.1ms)
+Rendered shared/_head (0.8ms)
+Rendered shared/_header (0.8ms)
+Rendered shared/_footer (0.9ms)
+Completed in 579ms (View: 572, DB: 1) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing CommentsController#create to js (for 127.0.0.1 at 2009-08-03 14:35:33) [POST]
+  Parameters: {"comment"=>{"name"=>"Sam Soffes", "body"=>"testing 4", "website"=>"", "email"=>"sam@samsoff.es"}, "post_id"=>"15", "authenticity_token"=>"+23oQfmqyMlex6Qn+cImXlD6qjscRcE/Dom9gsYwdqM="}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+  [4;35;1mComment Create (0.5ms)[0m   [0mINSERT INTO "comments" ("name", "referrer", "created_at", "body", "updated_at", "post_id", "approved", "website", "user_ip", "user_agent", "email") VALUES('Sam Soffes', 'http://localhost:3000/post/old-people-vs-the-other-side', '2009-08-03 19:35:33', 'testing 4', '2009-08-03 19:35:33', 15, 't', '', '127.0.0.1', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6; en-us) AppleWebKit/531.4 (KHTML, like Gecko) Version/4.0.3 Safari/531.4', 'sam@samsoff.es')[0m
+
+ActionView::TemplateError (undefined method `markdown' for ApplicationHelper:Module) on line #3 of app/views/comments_mailer/new_comment.erb:
+1: <%= @comment.name %> posted a comment:
+2: 
+3: <%= ApplicationHelper.markdown @comment.body %>
+
+    app/views/comments_mailer/new_comment.erb:3
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/comments_controller.rb:16:in `create'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    /Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.8/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (37.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-03 14:38:29) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (402.8ms)
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (4.4ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered shared/_head (0.8ms)
+Rendered shared/_header (0.9ms)
+Rendered shared/_footer (0.8ms)
+Completed in 522ms (View: 515, DB: 1) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing CommentsController#create to js (for 127.0.0.1 at 2009-08-03 14:38:34) [POST]
+  Parameters: {"comment"=>{"name"=>"Sam Soffes", "body"=>"testnig 5", "website"=>"", "email"=>"sam@samsoff.es"}, "post_id"=>"15", "authenticity_token"=>"+23oQfmqyMlex6Qn+cImXlD6qjscRcE/Dom9gsYwdqM="}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+  [4;35;1mComment Create (0.5ms)[0m   [0mINSERT INTO "comments" ("name", "referrer", "created_at", "body", "updated_at", "post_id", "approved", "website", "user_ip", "user_agent", "email") VALUES('Sam Soffes', 'http://localhost:3000/post/old-people-vs-the-other-side', '2009-08-03 19:38:34', 'testnig 5', '2009-08-03 19:38:34', 15, 't', '', '127.0.0.1', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6; en-us) AppleWebKit/531.4 (KHTML, like Gecko) Version/4.0.3 Safari/531.4', 'sam@samsoff.es')[0m
+Sent mail to sam@samsoff.es
+
+From: no-reply@samsoff.es
+To: sam@samsoff.es
+Subject: New Comment from Sam Soffes
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Sam Soffes posted a comment:
+
+<p>testnig 5</p>
+
+Net::SMTPAuthenticationError (530 5.7.0 Must issue a STARTTLS command first. f42sm713043rvb.5
+):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/net/smtp.rb:948:in `check_auth_continue'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/net/smtp.rb:740:in `auth_login'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/net/smtp.rb:921:in `critical'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/net/smtp.rb:739:in `auth_login'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/net/smtp.rb:725:in `send'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/net/smtp.rb:725:in `authenticate'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/net/smtp.rb:566:in `do_start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/net/smtp.rb:525:in `start'
+  app/controllers/comments_controller.rb:16:in `create'
+  haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  /Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.8/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (102.9ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-03 14:40:13) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (405.4ms)
+  [4;35;1mComment Load (1.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (4.4ms)
+Rendered comments/_comment (1.1ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.4ms)
+Rendered shared/_head (0.8ms)
+Rendered shared/_header (0.9ms)
+Rendered shared/_footer (0.8ms)
+Completed in 528ms (View: 521, DB: 1) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing CommentsController#create to js (for 127.0.0.1 at 2009-08-03 14:40:19) [POST]
+  Parameters: {"comment"=>{"name"=>"Sam Soffes", "body"=>"testing 6", "website"=>"", "email"=>"sam@samsoff.es"}, "post_id"=>"15", "authenticity_token"=>"+23oQfmqyMlex6Qn+cImXlD6qjscRcE/Dom9gsYwdqM="}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+  [4;35;1mComment Create (0.5ms)[0m   [0mINSERT INTO "comments" ("name", "referrer", "created_at", "body", "updated_at", "post_id", "approved", "website", "user_ip", "user_agent", "email") VALUES('Sam Soffes', 'http://localhost:3000/post/old-people-vs-the-other-side', '2009-08-03 19:40:20', 'testing 6', '2009-08-03 19:40:20', 15, 't', '', '127.0.0.1', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6; en-us) AppleWebKit/531.4 (KHTML, like Gecko) Version/4.0.3 Safari/531.4', 'sam@samsoff.es')[0m
+Sent mail to sam@samsoff.es
+
+From: no-reply@samsoff.es
+To: sam@samsoff.es
+Subject: New Comment from Sam Soffes
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Sam Soffes posted a comment:
+
+<p>testing 6</p>
+
+Net::SMTPAuthenticationError (530 5.7.0 Must issue a STARTTLS command first. f42sm617064rvb.25
+):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/net/smtp.rb:942:in `check_auth_response'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/net/smtp.rb:733:in `auth_plain'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/net/smtp.rb:725:in `send'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/net/smtp.rb:725:in `authenticate'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/net/smtp.rb:566:in `do_start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/net/smtp.rb:525:in `start'
+  app/controllers/comments_controller.rb:16:in `create'
+  haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  /Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.8/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (99.8ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-03 14:43:08) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (400.9ms)
+  [4;35;1mComment Load (1.2ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (4.4ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (1.5ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered shared/_head (0.7ms)
+Rendered shared/_header (0.8ms)
+Rendered shared/_footer (1.3ms)
+Completed in 523ms (View: 515, DB: 1) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing CommentsController#create to js (for 127.0.0.1 at 2009-08-03 14:43:14) [POST]
+  Parameters: {"comment"=>{"name"=>"Sam Soffes", "body"=>"testing 7", "website"=>"", "email"=>"sam@samsoff.es"}, "post_id"=>"15", "authenticity_token"=>"+23oQfmqyMlex6Qn+cImXlD6qjscRcE/Dom9gsYwdqM="}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+  [4;35;1mComment Create (0.5ms)[0m   [0mINSERT INTO "comments" ("name", "referrer", "created_at", "body", "updated_at", "post_id", "approved", "website", "user_ip", "user_agent", "email") VALUES('Sam Soffes', 'http://localhost:3000/post/old-people-vs-the-other-side', '2009-08-03 19:43:14', 'testing 7', '2009-08-03 19:43:14', 15, 't', '', '127.0.0.1', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6; en-us) AppleWebKit/531.4 (KHTML, like Gecko) Version/4.0.3 Safari/531.4', 'sam@samsoff.es')[0m
+Sent mail to sam@samsoff.es
+
+From: no-reply@samsoff.es
+To: sam@samsoff.es
+Subject: New Comment from Sam Soffes
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Sam Soffes posted a comment:
+
+<p>testing 7</p>
+
+Net::SMTPAuthenticationError (530 5.7.0 Must issue a STARTTLS command first. j28sm11556863waf.32
+):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/net/smtp.rb:942:in `check_auth_response'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/net/smtp.rb:733:in `auth_plain'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/net/smtp.rb:725:in `send'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/net/smtp.rb:725:in `authenticate'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/net/smtp.rb:566:in `do_start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/net/smtp.rb:525:in `start'
+  app/controllers/comments_controller.rb:16:in `create'
+  haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+  /Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.8/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (98.3ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-03 14:47:13) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (401.1ms)
+  [4;35;1mComment Load (1.3ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (4.7ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (1.2ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (1.7ms)
+Rendered comments/_comment (1.1ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered shared/_head (0.9ms)
+Rendered shared/_header (0.8ms)
+Rendered shared/_footer (0.9ms)
+Completed in 528ms (View: 521, DB: 2) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing CommentsController#create to js (for 127.0.0.1 at 2009-08-03 14:47:21) [POST]
+  Parameters: {"comment"=>{"name"=>"Sam Soffes", "body"=>"test 8", "website"=>"", "email"=>"sam@samsoff.es"}, "post_id"=>"15", "authenticity_token"=>"+23oQfmqyMlex6Qn+cImXlD6qjscRcE/Dom9gsYwdqM="}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+  [4;35;1mComment Create (0.5ms)[0m   [0mINSERT INTO "comments" ("name", "referrer", "created_at", "body", "updated_at", "post_id", "approved", "website", "user_ip", "user_agent", "email") VALUES('Sam Soffes', 'http://localhost:3000/post/old-people-vs-the-other-side', '2009-08-03 19:47:21', 'test 8', '2009-08-03 19:47:21', 15, 't', '', '127.0.0.1', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6; en-us) AppleWebKit/531.4 (KHTML, like Gecko) Version/4.0.3 Safari/531.4', 'sam@samsoff.es')[0m
+Sent mail to sam@samsoff.es
+
+From: no-reply@samsoff.es
+To: sam@samsoff.es
+Subject: New Comment from Sam Soffes
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Sam Soffes posted a comment:
+
+<p>test 8</p>
+Rendering comments/create
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+  [4;35;1mComment Load (1.2ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (3.1ms)
+Completed in 3767ms (View: 8, DB: 2) | 200 OK [http://localhost/posts/15/comments.js]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-03 14:49:20) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (393.8ms)
+  [4;35;1mComment Load (1.4ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (4.9ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.4ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered shared/_head (0.8ms)
+Rendered shared/_header (0.8ms)
+Rendered shared/_footer (0.8ms)
+Completed in 521ms (View: 513, DB: 2) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing CommentsController#create to js (for 127.0.0.1 at 2009-08-03 14:49:29) [POST]
+  Parameters: {"comment"=>{"name"=>"Sam Soffes", "body"=>"test 9", "website"=>"", "email"=>"sam@samsoff.es"}, "post_id"=>"15", "authenticity_token"=>"+23oQfmqyMlex6Qn+cImXlD6qjscRcE/Dom9gsYwdqM="}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+  [4;35;1mComment Create (0.5ms)[0m   [0mINSERT INTO "comments" ("name", "referrer", "created_at", "body", "updated_at", "post_id", "approved", "website", "user_ip", "user_agent", "email") VALUES('Sam Soffes', 'http://localhost:3000/post/old-people-vs-the-other-side', '2009-08-03 19:49:29', 'test 9', '2009-08-03 19:49:29', 15, 't', '', '127.0.0.1', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6; en-us) AppleWebKit/531.4 (KHTML, like Gecko) Version/4.0.3 Safari/531.4', 'sam@samsoff.es')[0m
+Sent mail to sam@samsoff.es
+
+From: no-reply@samsoff.es
+To: sam@samsoff.es
+Subject: New Comment from Sam Soffes
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Sam Soffes posted a comment:
+
+<p>test 9</p>
+Rendering comments/create
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+  [4;35;1mComment Load (1.4ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (65.9ms)
+Completed in 2684ms (View: 72, DB: 2) | 200 OK [http://localhost/posts/15/comments.js]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-03 15:00:11) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (482.7ms)
+Rendered posts/_post (13.8ms)
+Rendered posts/_post (4.1ms)
+Rendered posts/_post (12.9ms)
+Rendered posts/_post (53.5ms)
+Rendered shared/_head (0.8ms)
+Rendered shared/_header (1.2ms)
+Rendered shared/_footer (0.9ms)
+Completed in 599ms (View: 592, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-03 15:00:13) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (94.8ms)
+  [4;35;1mComment Load (1.5ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (4.5ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.3ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 142ms (View: 134, DB: 2) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing CommentsController#create to js (for 127.0.0.1 at 2009-08-03 15:00:21) [POST]
+  Parameters: {"comment"=>{"name"=>"Sam Soffes", "body"=>"test 10", "website"=>"", "email"=>"sam@samsoff.es"}, "post_id"=>"15", "authenticity_token"=>"+23oQfmqyMlex6Qn+cImXlD6qjscRcE/Dom9gsYwdqM="}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+  [4;35;1mComment Create (0.5ms)[0m   [0mINSERT INTO "comments" ("name", "referrer", "created_at", "body", "updated_at", "post_id", "approved", "website", "user_ip", "user_agent", "email") VALUES('Sam Soffes', 'http://localhost:3000/post/old-people-vs-the-other-side', '2009-08-03 20:00:21', 'test 10', '2009-08-03 20:00:21', 15, 't', '', '127.0.0.1', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6; en-us) AppleWebKit/531.4 (KHTML, like Gecko) Version/4.0.3 Safari/531.4', 'sam@samsoff.es')[0m
+Sent mail to sam@samsoff.es
+
+From: no-reply@samsoff.es
+To: sam@samsoff.es
+Subject: New Comment from Sam Soffes
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Sam Soffes posted a comment:
+
+<p>test 10</p>
+Rendering comments/create
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+  [4;35;1mComment Load (1.5ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (68.4ms)
+Completed in 3633ms (View: 250, DB: 2) | 200 OK [http://localhost/posts/15/comments.js]

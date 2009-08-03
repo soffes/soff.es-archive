@@ -1,0 +1,3 @@
+<%= @comment.name %> posted a comment:
+
+<%= @comment.body.blank? ? "" : Maruku.new(@comment.body).to_html %>

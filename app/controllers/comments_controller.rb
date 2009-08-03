@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
 		    #expire_page :controller => 'posts', :action => 'show', :id => @comment.post.id
 		    #expire_page :controller => 'posts', :action => 'show', :slug => @comment.post.slug
 		    
-		    #CommentsMailer.deliver_new_comment(@comment)
+		    CommentsMailer.deliver_new_comment(@comment)
 		    flash.now[:notice] = "Thanks for the comment. You are awesome."
 		    @status = "success"
 		    respond_to do |format|

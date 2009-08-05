@@ -167,10 +167,13 @@ div.post
 	margin-bottom: 2em
 
 .loading
+	display: block
 	background= image_url("dots-white.gif") "no-repeat" "left"
 	padding-left: 29px
 	font-size: 0.9em
 	color: #555
+	width: 21px
+	height: 5px
 
 div.hd-video
 	background: #ddd
@@ -233,6 +236,13 @@ form
 			margin: 0 0 2em
 			div.content
 				font-size: 0.9em
+
+#new_comment
+	input.submit
+		float: left
+	.loading
+		float: left
+		margin-top: 10px
 
 // Music
 #music-art

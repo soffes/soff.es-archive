@@ -3689,3 +3689,645 @@ Rendering comments/create
   [4;35;1mComment Load (1.5ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
 Rendered comments/_comment (68.4ms)
 Completed in 3633ms (View: 250, DB: 2) | 200 OK [http://localhost/posts/15/comments.js]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-04 11:01:56) [GET]
+  [4;36;1mPost Load (28.7ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (559.6ms)
+Rendered posts/_post (13.6ms)
+Rendered posts/_post (4.3ms)
+Rendered posts/_post (13.5ms)
+Rendered posts/_post (57.8ms)
+Rendered shared/_head (13.8ms)
+Rendered shared/_header (42.9ms)
+Rendered shared/_footer (15.5ms)
+Completed in 855ms (View: 818, DB: 29) | 200 OK [http://localhost/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-04 11:01:59) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (24.5ms)
+  [4;35;1mComment Load (18.5ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (5.1ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (1.4ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.2ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 225ms (View: 200, DB: 19) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-08-04 11:02:03) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-04 11:06:21) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (98.3ms)
+Rendered posts/_post (17.8ms)
+Rendered posts/_post (4.6ms)
+Rendered posts/_post (15.7ms)
+Rendered posts/_post (66.2ms)
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.3ms)
+Rendered shared/_footer (0.2ms)
+Completed in 216ms (View: 208, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-08-04 11:06:25) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.1ms)
+Rendered shared/_footer (0.1ms)
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-04 19:26:35) [GET]
+  [4;36;1mPost Load (21.7ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (513.8ms)
+Rendered posts/_post (13.8ms)
+Rendered posts/_post (4.4ms)
+Rendered posts/_post (13.7ms)
+Rendered posts/_post (58.9ms)
+Rendered shared/_head (0.9ms)
+Rendered shared/_header (30.2ms)
+Rendered shared/_footer (0.9ms)
+Completed in 730ms (View: 701, DB: 22) | 200 OK [http://localhost/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-04 19:26:40) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (25.0ms)
+  [4;35;1mComment Load (31.2ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (4.5ms)
+Rendered comments/_comment (1.1ms)
+Rendered comments/_comment (1.1ms)
+Rendered comments/_comment (1.2ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 210ms (View: 172, DB: 31) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing CommentsController#create to js (for 127.0.0.1 at 2009-08-04 19:26:52) [POST]
+  Parameters: {"comment"=>{"name"=>"Sam", "body"=>"test 11", "website"=>"", "email"=>"sam@samsoff.es"}, "post_id"=>"15", "authenticity_token"=>"5tsabavul6aThr3fpadDEvd03uMUquYiknAotyGOfs4="}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+  [4;35;1mComment Create (0.5ms)[0m   [0mINSERT INTO "comments" ("name", "referrer", "created_at", "body", "updated_at", "post_id", "approved", "website", "user_ip", "user_agent", "email") VALUES('Sam', 'http://localhost:3000/post/old-people-vs-the-other-side', '2009-08-05 00:26:52', 'test 11', '2009-08-05 00:26:52', 15, 't', '', '127.0.0.1', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.1.2) Gecko/20090729 Firefox/3.5.2', 'sam@samsoff.es')[0m
+Sent mail to sam@samsoff.es
+
+From: no-reply@samsoff.es
+To: sam@samsoff.es
+Subject: New Comment from Sam
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Sam posted a comment:
+
+<p>test 11</p>
+Rendering comments/create
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+  [4;35;1mComment Load (1.6ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (3.3ms)
+Completed in 3420ms (View: 32, DB: 3) | 200 OK [http://localhost/posts/15/comments.js]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-04 19:27:16) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (25.5ms)
+  [4;35;1mComment Load (1.7ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (3.8ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (1.5ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.0ms)
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 64ms (View: 57, DB: 2) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-04 19:27:17) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (93.0ms)
+  [4;35;1mComment Load (1.7ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (4.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (1.3ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (1.0ms)
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 129ms (View: 122, DB: 2) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-04 19:27:20) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (24.0ms)
+  [4;35;1mComment Load (1.7ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (4.1ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (1.4ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.3ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.0ms)
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 127ms (View: 120, DB: 2) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-04 19:27:22) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (24.9ms)
+  [4;35;1mComment Load (1.6ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (4.5ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (1.3ms)
+Rendered comments/_comment (0.9ms)
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 61ms (View: 53, DB: 2) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing CommentsController#create to js (for 127.0.0.1 at 2009-08-04 19:27:31) [POST]
+  Parameters: {"comment"=>{"name"=>"Sam", "body"=>"test 12", "website"=>"", "email"=>"sam@samsoff.es"}, "post_id"=>"15", "authenticity_token"=>"5tsabavul6aThr3fpadDEvd03uMUquYiknAotyGOfs4="}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+  [4;35;1mComment Create (0.5ms)[0m   [0mINSERT INTO "comments" ("name", "referrer", "created_at", "body", "updated_at", "post_id", "approved", "website", "user_ip", "user_agent", "email") VALUES('Sam', 'http://localhost:3000/post/old-people-vs-the-other-side', '2009-08-05 00:27:31', 'test 12', '2009-08-05 00:27:31', 15, 't', '', '127.0.0.1', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.1.2) Gecko/20090729 Firefox/3.5.2', 'sam@samsoff.es')[0m
+Sent mail to sam@samsoff.es
+
+From: no-reply@samsoff.es
+To: sam@samsoff.es
+Subject: New Comment from Sam
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Sam posted a comment:
+
+<p>test 12</p>
+Rendering comments/create
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+  [4;35;1mComment Load (1.6ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (2.7ms)
+Completed in 2232ms (View: 6, DB: 3) | 200 OK [http://localhost/posts/15/comments.js]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-04 19:27:44) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (24.9ms)
+Rendered posts/_post (13.6ms)
+Rendered posts/_post (4.2ms)
+Rendered posts/_post (13.5ms)
+Rendered posts/_post (56.4ms)
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 126ms (View: 118, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-04 19:27:48) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (94.8ms)
+  [4;35;1mComment Load (1.6ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (3.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.3ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.2ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.1ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered shared/_head (0.3ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 131ms (View: 124, DB: 2) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing CommentsController#create to js (for 127.0.0.1 at 2009-08-04 19:27:57) [POST]
+  Parameters: {"comment"=>{"name"=>"Sam Soffes", "body"=>"test 13", "website"=>"", "email"=>"sam@samsoff.es"}, "post_id"=>"15", "authenticity_token"=>"pYL/fGJaIYLoebn2xjvLA9skwQsMsHDKKhtpL6V+Nso="}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+  [4;35;1mComment Create (0.5ms)[0m   [0mINSERT INTO "comments" ("name", "referrer", "created_at", "body", "updated_at", "post_id", "approved", "website", "user_ip", "user_agent", "email") VALUES('Sam Soffes', 'http://localhost:3000/post/old-people-vs-the-other-side', '2009-08-05 00:27:57', 'test 13', '2009-08-05 00:27:57', 15, 't', '', '127.0.0.1', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6; en-us) AppleWebKit/531.5 (KHTML, like Gecko) Version/4.0.3 Safari/531.7', 'sam@samsoff.es')[0m
+Sent mail to sam@samsoff.es
+
+From: no-reply@samsoff.es
+To: sam@samsoff.es
+Subject: New Comment from Sam Soffes
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Sam Soffes posted a comment:
+
+<p>test 13</p>
+Rendering comments/create
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+  [4;35;1mComment Load (1.8ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (2.8ms)
+Completed in 2526ms (View: 6, DB: 3) | 200 OK [http://localhost/posts/15/comments.js]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-04 19:30:47) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (489.7ms)
+  [4;35;1mComment Load (2.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (5.0ms)
+Rendered comments/_comment (1.1ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (1.1ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered shared/_head (0.7ms)
+Rendered shared/_header (0.9ms)
+Rendered shared/_footer (0.8ms)
+Completed in 560ms (View: 551, DB: 2) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-04 19:31:18) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (24.6ms)
+  [4;35;1mComment Load (2.4ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (3.9ms)
+Rendered comments/_comment (1.4ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (1.1ms)
+Rendered comments/_comment (1.2ms)
+Rendered comments/_comment (1.1ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.2ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 67ms (View: 57, DB: 3) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing CommentsController#create to js (for 127.0.0.1 at 2009-08-04 19:31:26) [POST]
+  Parameters: {"comment"=>{"name"=>"Sam Soffes", "body"=>"test 14", "website"=>"", "email"=>"sam@samsoff.es"}, "post_id"=>"15", "authenticity_token"=>"pYL/fGJaIYLoebn2xjvLA9skwQsMsHDKKhtpL6V+Nso="}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+  [4;35;1mComment Create (0.5ms)[0m   [0mINSERT INTO "comments" ("name", "referrer", "created_at", "body", "updated_at", "post_id", "approved", "website", "user_ip", "user_agent", "email") VALUES('Sam Soffes', 'http://localhost:3000/post/old-people-vs-the-other-side', '2009-08-05 00:31:27', 'test 14', '2009-08-05 00:31:27', 15, 't', '', '127.0.0.1', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6; en-us) AppleWebKit/531.5 (KHTML, like Gecko) Version/4.0.3 Safari/531.7', 'sam@samsoff.es')[0m
+Sent mail to sam@samsoff.es
+
+From: no-reply@samsoff.es
+To: sam@samsoff.es
+Subject: New Comment from Sam Soffes
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Sam Soffes posted a comment:
+
+<p>test 14</p>
+Rendering comments/create
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 15) [0m
+  [4;35;1mComment Load (2.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (4.0ms)
+Completed in 2818ms (View: 10, DB: 3) | 200 OK [http://localhost/posts/15/comments.js]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-04 19:32:11) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (50.5ms)
+  [4;35;1mComment Load (1.9ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (3.8ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.6ms)
+Rendered comments/_comment (1.2ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.0ms)
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 90ms (View: 82, DB: 2) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-04 19:32:13) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (30.3ms)
+  [4;35;1mComment Load (3.8ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (4.6ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (1.1ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (1.1ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.9ms)
+Rendered shared/_head (0.9ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 75ms (View: 63, DB: 4) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-04 19:34:19) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (24.3ms)
+  [4;35;1mComment Load (2.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (4.5ms)
+Rendered comments/_comment (1.2ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (1.6ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (1.4ms)
+Rendered comments/_comment (1.3ms)
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 138ms (View: 129, DB: 2) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-04 19:35:08) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (23.8ms)
+  [4;35;1mComment Load (1.9ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (4.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (1.8ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (66.3ms)
+Rendered comments/_comment (1.3ms)
+Rendered comments/_comment (1.1ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 129ms (View: 121, DB: 2) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-04 19:35:50) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (24.2ms)
+  [4;35;1mComment Load (2.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (4.2ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (73.3ms)
+Rendered comments/_comment (1.2ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.4ms)
+Rendered comments/_comment (1.1ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 137ms (View: 128, DB: 2) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-04 19:36:12) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (23.9ms)
+  [4;35;1mComment Load (2.1ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (3.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (1.2ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (1.2ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 63ms (View: 55, DB: 2) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-04 19:36:14) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/posts
+Rendering posts/show
+Rendered posts/_post (24.9ms)
+  [4;35;1mComment Load (2.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (4.9ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (1.5ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (1.0ms)
+Rendered shared/_head (0.2ms)
+Rendered shared/_header (0.2ms)
+Rendered shared/_footer (0.1ms)
+Completed in 66ms (View: 58, DB: 2) | 200 OK [http://localhost/post/old-people-vs-the-other-side]

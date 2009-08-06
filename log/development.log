@@ -4331,3 +4331,393 @@ Rendered shared/_head (0.2ms)
 Rendered shared/_header (0.2ms)
 Rendered shared/_footer (0.1ms)
 Completed in 66ms (View: 58, DB: 2) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-06 11:52:10) [GET]
+  [4;36;1mPost Load (29.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (584.2ms)
+Rendered posts/_post (12.9ms)
+Rendered posts/_post (4.4ms)
+Rendered posts/_post (12.9ms)
+Rendered posts/_post (123.2ms)
+Rendered shared/_head (18.8ms)
+Rendered shared/_header (52.2ms)
+Rendered shared/_footer (16.6ms)
+Completed in 910ms (View: 874, DB: 29) | 200 OK [http://localhost/]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-06 11:52:13) [GET]
+Rendering template within layouts/application
+Rendering music/index
+
+ActionView::TemplateError (undefined method `title' for #<ActionView::Base:0x10356a320>) on line #1 of app/views/music/index.html.erb:
+1: <% title "Music" %>
+2: <% head javascript_include_tag :jquery, 'music' %>
+3: 
+4: <h2>Music</h2>
+
+    app/views/music/index.html.erb:1
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    /Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.8/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (40.4ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-06 11:56:36) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (480.9ms)
+Rendered posts/_post (13.4ms)
+Rendered posts/_post (4.9ms)
+Rendered posts/_post (13.6ms)
+Rendered posts/_post (56.8ms)
+Rendered shared/_head (0.8ms)
+Rendered shared/_header (1.5ms)
+Rendered shared/_footer (0.9ms)
+Completed in 602ms (View: 594, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-06 11:57:00) [GET]
+Rendering template within layouts/application
+Rendering music/index
+ERROR: compiling _run_erb_app47views47layouts47application46html46erb RAISED compile error
+/Users/samsoffes/code/samsoffes/samsoff.es/app/views/layouts/application.html.erb:5: syntax error, unexpected ';', expecting ')'
+...itle) || "samsoff.es" ).to_s); @output_buffer.concat "</titl...
+                              ^
+Function body:           def _run_erb_app47views47layouts47application46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\" />\n<title>"
+
+
+
+; @output_buffer.concat(( h(yield(:title) || "samsoff.es" ).to_s); @output_buffer.concat "</title>\n"
+; @output_buffer.concat(( render :partial => "shared/head" ).to_s)
+@output_buffer.concat(( yield(:head) ).to_s)
+@output_buffer.concat "</head>\n<body>\n<div id=\"wrapper\">\n\t"
+
+
+; @output_buffer.concat(( render :partial => "shared/header" ).to_s); @output_buffer.concat "\n\t"
+; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n</div>\n"
+
+; @output_buffer.concat(( render :partial => "shared/footer" ).to_s); @output_buffer.concat "\n</body>\n</html>\n"
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/samsoffes/code/samsoffes/samsoff.es/app/views/layouts/application.html.erb:20:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:260:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.2/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:347:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:257:in `render_without_haml'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.2/lib/haml/helpers/action_view_mods.rb:13:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1246:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:941:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1322:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1328:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:606:in `sass_old_process'
+/Library/Ruby/Gems/1.8/gems/haml-2.2.2/lib/sass/plugin/rails.rb:19:in `process_without_compass'
+/Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.8/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:434:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/samsoffes/code/samsoffes/samsoff.es/app/views/layouts/application.html.erb:5: syntax error, unexpected ';', expecting ')'
+...itle) || "samsoff.es" ).to_s); @output_buffer.concat "</titl...
+                              ^) on line #5 of app/views/layouts/application.html.erb:
+2: <html lang="en">
+3: <head>
+4: <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+5: <title><%= h(yield(:title) || "samsoff.es" %></title>
+6: <%= render :partial => "shared/head" -%>
+7: <%= yield(:head) -%>
+8: </head>
+
+    app/views/layouts/application.html.erb:20:in `compile!'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    /Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.8/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (39.8ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-06 11:59:50) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-06 11:59:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-08-06 12:00:03) [GET]
+Rendering template within layouts/application
+Rendering about/index
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-06 12:00:05) [GET]
+  [4;36;1mPost Load (1.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Rendered posts/_post (482.2ms)
+Rendered posts/_post (13.0ms)
+Rendered posts/_post (69.9ms)
+Rendered posts/_post (13.4ms)
+Rendered posts/_post (55.3ms)
+
+ActionView::TemplateError (Missing template shared/_head.erb in view path app/views) on line #6 of app/views/layouts/posts.html.erb:
+3: <head>
+4: <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+5: <title><%= (@post ? " #{h(@post.title)} - " : '') %>samsoff.es</title>
+6: <%= render :partial => "shared/head" -%>
+7: <%= yield(:head) -%>
+8: </head>
+9: <body>
+
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/views/layouts/posts.html.erb:6
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/posts_controller.rb:9:in `index'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    /Library/Ruby/Gems/1.8/gems/chriseppstein-compass-0.8.8/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (48.5ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-06 12:01:06) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (24.3ms)
+Rendered posts/_post (13.0ms)
+Rendered posts/_post (4.2ms)
+Rendered posts/_post (13.6ms)
+Rendered posts/_post (56.9ms)
+Completed in 197ms (View: 116, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-06 12:01:08) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (22.9ms)
+  [4;35;1mComment Load (19.9ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (4.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.4ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.4ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.2ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Completed in 224ms (View: 198, DB: 20) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-06 12:01:08) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-06 12:01:08) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ui.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-06 12:01:11) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (24.0ms)
+Rendered posts/_post (13.0ms)
+Rendered posts/_post (4.1ms)
+Rendered posts/_post (79.7ms)
+Rendered posts/_post (56.5ms)
+Completed in 188ms (View: 181, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-06 12:01:13) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (22.5ms)
+  [4;35;1mComment Load (1.9ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (3.6ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.2ms)
+Rendered comments/_comment (0.8ms)
+Completed in 59ms (View: 51, DB: 2) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-06 12:01:13) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery_ui.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-06 12:01:13) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-06 12:03:26) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (24.8ms)
+Rendered posts/_post (12.7ms)
+Rendered posts/_post (4.0ms)
+Rendered posts/_post (13.1ms)
+Rendered posts/_post (54.1ms)
+Completed in 120ms (View: 113, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-06 12:03:31) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (23.4ms)
+  [4;35;1mComment Load (2.3ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (3.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.2ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (1.1ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Completed in 129ms (View: 54, DB: 3) | 200 OK [http://localhost/post/old-people-vs-the-other-side]

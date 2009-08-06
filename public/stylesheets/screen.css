@@ -451,7 +451,7 @@ form input.submit {
 /* line 243, ../../app/stylesheets/screen.sass */
 #new_comment .loading {
   float: left;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 /* line 248, ../../app/stylesheets/screen.sass */

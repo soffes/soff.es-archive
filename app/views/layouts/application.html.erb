@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title><%= h(yield(:title) || "samsoff.es") %></title>
+<%= stylesheet_link_tag "screen" %>
+<% if request.user_agent.include?("iPhone") %>
+<%= stylesheet_link_tag "iphone" %>
+<meta name="viewport" content="width=320, user-scalable=no" />
+<% end -%>
+<link href="http://feeds.feedburner.com/samsoffes/blog" rel="alternate" title="samsoff.es" type="application/atom+xml" />
+<link href="http://feeds.feedburner.com/samsoffes/the-experiment" rel="alternate" title="The Experiment Podcast" type="application/atom+xml" />
+<%= yield(:head) -%>
+</head>
+<body>
+<div id="wrapper">
+	<div id="header" class="clear">
+		<h1><%= link_to 'samsoff.es', home_path %></h1>
+		<ul class="clear">
+			<li class="blog"><%= link_to 'Blog', home_path %></li>
+			<li class="music"><%= link_to 'Music', music_path %></li>
+			<li class="about"><%= link_to 'About', about_path %></li>
+		</ul>
+	</div>
+	<% if flash[:notice] %>
+	<div class="flash notice"><%= h flash.delete(:notice) %></div>
+	<% end %>
+	<% if flash[:error] %>
+	<div class="flash error"><%= h flash.delete(:error) %></div>
+	<% end %>
+	<%= yield %>
+</div>
+<div id="footer">
+	<p class="clear">
+	    <span>Copyright <%= link_to 'Sam Soffes', home_path %> 2005-2009.</span>
+	    <span><a href="http://github.com/samsoffes/samsoff.es" target="_blank" rel="external nofollow">View source on GitHub</a>.</span>
+  </p>
+</div>
+<% if ENV['RAILS_ENV'] == 'production' %>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5609322-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<% end %>
+<% if request.user_agent.include?("iPhone") %>
+<%= javascript_include_tag "iphone" %>
+<% end -%>
+</body>
+</html>

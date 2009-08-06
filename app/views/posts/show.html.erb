@@ -1,3 +1,6 @@
+<% title (@post ? " #{h(@post.title)} - " : '') + "samsoff.es" %>
+<% javascript :jquery, :jquery_ui, "jquery.timer", "posts" %>
+
 <%= render :partial => @post %>
 
 <!-- <p>

@@ -4721,3 +4721,95 @@ Rendered comments/_comment (0.8ms)
 Rendered comments/_comment (0.8ms)
 Rendered comments/_comment (0.8ms)
 Completed in 129ms (View: 54, DB: 3) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-06 12:07:58) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (473.5ms)
+Rendered posts/_post (13.4ms)
+Rendered posts/_post (4.0ms)
+Rendered posts/_post (12.7ms)
+Rendered posts/_post (54.3ms)
+Completed in 581ms (View: 573, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-06 12:08:01) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (96.5ms)
+Rendered posts/_post (13.5ms)
+Rendered posts/_post (4.4ms)
+Rendered posts/_post (15.6ms)
+Rendered posts/_post (58.6ms)
+Completed in 199ms (View: 192, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-06 12:08:05) [GET]
+  Parameters: {"slug"=>"old-people-vs-the-other-side"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'old-people-vs-the-other-side') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (22.2ms)
+  [4;35;1mComment Load (1.8ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE (approved = 't' AND post_id = 15) ORDER BY created_at[0m
+Rendered comments/_comment (4.3ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (68.3ms)
+Rendered comments/_comment (1.0ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (0.8ms)
+Rendered comments/_comment (1.3ms)
+Rendered comments/_comment (0.9ms)
+Rendered comments/_comment (0.8ms)
+Completed in 139ms (View: 132, DB: 2) | 200 OK [http://localhost/post/old-people-vs-the-other-side]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-06 12:08:10) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (24.6ms)
+Rendered posts/_post (13.4ms)
+Rendered posts/_post (4.0ms)
+Rendered posts/_post (13.2ms)
+Rendered posts/_post (55.5ms)
+Completed in 122ms (View: 115, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-08-06 12:08:12) [GET]
+Rendering template within layouts/application
+Rendering about/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-06 12:08:13) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-06 12:08:15) [GET]
+  [4;36;1mPost Load (1.6ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (25.5ms)
+Rendered posts/_post (13.3ms)
+Rendered posts/_post (4.5ms)
+Rendered posts/_post (13.3ms)
+Rendered posts/_post (56.0ms)
+Completed in 124ms (View: 116, DB: 2) | 200 OK [http://localhost/]

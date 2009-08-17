@@ -1,15 +1,41 @@
-@import shared.sass
+@import reset.sass
+
+// Variables
+!HelveticaNeue = "HelveticaNeue,'Helvetica Neue',Helvetica,Arial,sans-serif"
+!HelveticaNeueLight = "HelveticaNeue-Light,HelveticaNeue,'Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,sans-serif"
+!width = 640px
+!linkColor = #2e80d3
+!lightBlueColor = #01b0f0
+!blueColor = #1267da
+!pinkColor = #ff358b
+!blogColor = #e16f09
+!musicColor = #121212
+!aboutColor = #276abd
+!subHeaderColor1 = #2f2f2f
+!subHeaderColor2 = #34778f
+
+=shadow()
+	text-shadow: #fff 0 1px 0
+
+// Clear
+.clear:after
+	clear: both
+	content: " "
+	display: block
+	height: 0
+	zoom: 1
 
 // General
 body
-	background: #f7f7f7
+	background= #ededed image_url("bgrd.png")
+	font-size: 16px
 	
 body *
 	line-height: 1.4em
 
 body, input, textarea
-	font-family= !HelveticaNeueLight
-	font-weight: 300
+	font-family= !HelveticaNeue
+	color: #222
 
 a
 	color= !linkColor
@@ -73,23 +99,25 @@ code
 	padding: 0 0.2em
 
 h1
-	border-top: 4px solid #aaa
 	font-size: 1.9em
 	margin-bottom: 0.5em
 	padding-top: 0.5em
 	a
-		color: #000
-	a:hover
-		color= !linkColor
+		color= !lightBlueColor
+		span
+			color= !pinkColor
 
+//	border-top: 4px solid #e0e0e0
 h2
-	border-top: 4px solid #e0e0e0
 	font-size: 1.5em
+	font-weight: bold
 	margin-bottom: 0.5em
 	padding-top: 0.5em
 	span
 		font-size: 0.9em
 		color: #999
+	a
+		color= !blueColor
 h3
 	font-size: 1.3em
 	margin-bottom: 0.2em
@@ -121,50 +149,68 @@ div.flash.notice
 	border-color: #78d478
 
 // Layout
-#wrapper
-	background: #fff
-	padding: 1em 2em
+div.wrapper
+	+shadow()
+	padding: 1em 32px
 	margin: 0 auto 1em
 	width= !width
 
 #header
-	margin-bottom: 1.25em
-	h1
+	margin: 2em 0 3em
+	line-height: 1em
+	div
 		float: left
+	h1
 		border: 0
 		padding: 0
 		margin: 0
-	ul
-		float: right
-		margin: 1em 0 0
+		font-size: 46px
+	h2
+		font-family= !HelveticaNeueLight
+		font-size: 17px
+		font-weight: 300
+		margin: -7px 0 0
 		padding: 0
+		a
+			color= !subHeaderColor1
+		a.music
+			color= !subHeaderColor2
+	ul
+		background= image_url("nav-shadow.png") "no-repeat bottom center"
+		float: right
+		font-size: 18px
+		margin: 30px 0 0
+		padding: 0 0 20px
+		text-transform: lowercase
 	li
 		float: left
 		list-style: none
-		margin: 0 0 0 1em
+		margin: 0 0 0 1.7em
 		padding: 0
 		a
-			background: transparent no-repeat top left
+			background: transparent no-repeat 0 3px
 			padding-left: 22px
 	.blog a
 		background-image= image_url("blog.png")
-		color: #d57015
+		color= !blogColor
 	.music a
 		background-image= image_url("music.png")
-		color: #121212
+		color= !musicColor
 	.about a
 		background-image= image_url("about.png")
-		color: #276abd
+		color= !aboutColor
+	li:first-child
+		margin-left: 0
 
 #footer
-	padding: 0 1em
-	margin: 0 auto 1em
-	width= !width
-	p
-		font-size: 0.9em
-
-div.post
-	margin-bottom: 2em
+	color: #aaa
+	margin: 0 auto 2em
+	padding: 0
+	font-size: 0.85em
+	a
+		color: #aaa
+	a:hover
+		color= !linkColor
 
 .loading
 	display: block
@@ -215,14 +261,18 @@ form
 
 // Posts
 .post
+	background= image_url("dash.png") "no-repeat bottom center"
+	padding-bottom: 2em
+	margin-bottom: 2em
 	> h1
 		margin-bottom: 0
 	.meta
-		color: #999
-		font-size: 0.9em
+		color= !lightBlueColor
 		margin-bottom: 0.7em
 		a
 			color: #999
+	h2
+		margin-bottom: 0
 
 // Comments
 #comments_container
@@ -238,6 +288,13 @@ form
 				font-size: 0.9em
 
 #new_comment
+	background: #fff
+	padding: 20px
+	h2
+		margin-top: 0
+		padding-top: 0
+	p:last-child
+		margin-bottom: 0
 	input.submit
 		float: left
 	.loading
@@ -246,7 +303,7 @@ form
 
 // Music
 #music-art
-	border: 10px solid #e7e7e7
+	border: 10px solid #fff
 	width: 300px
 	height: 300px
 	float: left
@@ -281,22 +338,47 @@ form
 		margin: 0
 		font-size: 0.9em
 	.links li
-		margin: 0 0 1em
+		float: left
+		margin: 0 1.2em 0 0
 		list-style: none
-
-a.podcast-link
-	background= image_url("podcast-30x30.png") "no-repeat" 2px 0
-	padding: 0 0 0 40px
-	text-decoration: none
-
-a.soundcloud-link
-	background= image_url("soundcloud.png") "no-repeat" 0 5px
-	padding: 0 0 0 40px
-	text-decoration: none
+		font-size: 0.9em
 
 div.soundcloud-player
 	height: 81px
 	margin: 2px 0
-	background= image_url("indicator.gif") #eee "no-repeat" "center"
-	padding: 6px 10px 10px
+	background= image_url("dots-white.gif") #fff "no-repeat center"
+	padding: 10px
 	width: 225px
+
+// Pagination
+=paginationBorder(!color = #ccc)
+	border= 1px "solid" !color
+
+div.pagination
+	a, span
+		padding: 2px 6px
+		margin-right: 0.2em
+	a
+		+paginationBorder()
+	a:hover
+		text-decoration: none
+		background= !linkColor
+		border-color= !linkColor
+		color: #fff
+		text-shadow: none
+	a.next_page, a.prev_page
+		border: 0
+	a.next_page:hover, a.prev_page:hover
+		background: none
+		border: 0
+		text-decoration: underline
+		color= !linkColor
+	span
+		+paginationBorder()
+	span.disabled
+		color: #ccc
+		border-color: transparent
+	span.current
+		background: #ddd
+		color: #333
+		+paginationBorder(#999)

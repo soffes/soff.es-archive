@@ -7123,3 +7123,46 @@ Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:46:55) [GET]
 Rendering template within layouts/application
 Rendering music/index
 Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:48:30) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 25ms (View: 20, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:48:55) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:49:16) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-17 01:49:19) [GET]
+  [4;36;1mPost Load (1.9ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (940.6ms)
+Rendered posts/_post (34.1ms)
+Rendered posts/_post (88.8ms)
+Rendered posts/_post (34.4ms)
+Rendered posts/_post (145.0ms)
+Completed in 1279ms (View: 1262, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:49:59) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:50:00) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/music]

@@ -451,7 +451,7 @@ div.pagination a, div.pagination span {
   margin-right: 0.2em; }
 /* line 361, ../../app/stylesheets/screen.sass */
 div.pagination a {
-  border: 1px solid #cccccc; }
+  border: 2px solid white; }
 /* line 363, ../../app/stylesheets/screen.sass */
 div.pagination a:hover {
   text-decoration: none;
@@ -470,13 +470,13 @@ div.pagination a.next_page:hover, div.pagination a.prev_page:hover {
   color: #2e80d3; }
 /* line 376, ../../app/stylesheets/screen.sass */
 div.pagination span {
-  border: 1px solid #cccccc; }
+  border: 2px solid white; }
 /* line 378, ../../app/stylesheets/screen.sass */
 div.pagination span.disabled {
   color: #ccc;
   border-color: transparent; }
 /* line 381, ../../app/stylesheets/screen.sass */
 div.pagination span.current {
-  background: #ddd;
+  background: #eee;
   color: #333;
-  border: 1px solid #999999; }
+  border: 2px solid #bbbbbb; }

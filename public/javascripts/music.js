@@ -26,7 +26,9 @@ $(function() {
 	function closeButtonClicked(e) {
 		e.preventDefault();
 	
-		$('div', $(this).parent().get(0)).remove();
+		var player = $('div', $(this).parent('li').get(0));
+		player.hide();
+		player.remove();
 	
 		$(this).html('Listen');
 		$(this).unbind('click');

@@ -6618,3 +6618,120 @@ Rendered posts/_post (67.8ms)
 Rendered posts/_post (36.2ms)
 Rendered posts/_post (10.8ms)
 Completed in 141ms (View: 121, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-17 00:27:14) [GET]
+  [4;36;1mPost Load (2.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (1046.8ms)
+Rendered posts/_post (37.4ms)
+Rendered posts/_post (10.9ms)
+Rendered posts/_post (38.5ms)
+Rendered posts/_post (163.6ms)
+Completed in 1437ms (View: 1418, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-17 00:27:28) [GET]
+  [4;36;1mPost Load (1.7ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (67.8ms)
+Rendered posts/_post (37.0ms)
+Rendered posts/_post (10.4ms)
+Rendered posts/_post (127.6ms)
+Rendered posts/_post (172.7ms)
+Completed in 442ms (View: 422, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-17 00:27:28) [GET]
+  [4;36;1mPost Load (1.9ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (70.6ms)
+Rendered posts/_post (46.1ms)
+Rendered posts/_post (19.1ms)
+Rendered posts/_post (45.8ms)
+Rendered posts/_post (196.4ms)
+Completed in 404ms (View: 385, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-17 00:28:01) [GET]
+  [4;36;1mPost Load (2.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (69.3ms)
+Rendered posts/_post (37.1ms)
+Rendered posts/_post (11.6ms)
+Rendered posts/_post (126.9ms)
+Rendered posts/_post (165.6ms)
+Completed in 438ms (View: 418, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-17 00:28:16) [GET]
+  [4;36;1mPost Load (1.9ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (162.1ms)
+Rendered posts/_post (38.8ms)
+Rendered posts/_post (10.9ms)
+Rendered posts/_post (37.4ms)
+Rendered posts/_post (164.2ms)
+Completed in 440ms (View: 420, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-17 00:28:37) [GET]
+  [4;36;1mPost Load (1.9ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (68.4ms)
+Rendered posts/_post (37.6ms)
+Rendered posts/_post (10.3ms)
+Rendered posts/_post (37.9ms)
+Rendered posts/_post (162.1ms)
+Completed in 342ms (View: 323, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-17 00:28:47) [GET]
+  [4;36;1mPost Load (1.8ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (68.9ms)
+Rendered posts/_post (37.5ms)
+Rendered posts/_post (10.9ms)
+Rendered posts/_post (37.6ms)
+Rendered posts/_post (165.2ms)
+Completed in 347ms (View: 327, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-17 00:28:55) [GET]
+  [4;36;1mPost Load (1.8ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (68.8ms)
+Rendered posts/_post (36.7ms)
+Rendered posts/_post (10.6ms)
+Rendered posts/_post (37.7ms)
+Rendered posts/_post (164.9ms)
+Completed in 432ms (View: 412, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-17 00:29:07) [GET]
+  [4;36;1mPost Load (1.9ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (159.8ms)
+Rendered posts/_post (37.2ms)
+Rendered posts/_post (10.8ms)
+Rendered posts/_post (38.6ms)
+Rendered posts/_post (174.0ms)
+Completed in 446ms (View: 427, DB: 2) | 200 OK [http://localhost/]

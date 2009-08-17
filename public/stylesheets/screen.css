@@ -48,7 +48,7 @@ blockquote, q {
 
 /* line 29, ../../app/stylesheets/screen.sass */
 body {
-  background: #ededed url('/images/bgrd.png?1250483330');
+  background: #ededed url('/images/bgrd.png?1250486773');
   font-size: 16px; }
 
 /* line 33, ../../app/stylesheets/screen.sass */
@@ -58,7 +58,7 @@ body * {
 /* line 36, ../../app/stylesheets/screen.sass */
 body, input, textarea {
   font-family: HelveticaNeue,'Helvetica Neue',Helvetica,Arial,sans-serif;
-  color: #222; }
+  color: #333; }
 
 /* line 40, ../../app/stylesheets/screen.sass */
 a {
@@ -113,6 +113,7 @@ small {
 pre {
   background-color: #f8f8ff;
   border: 1px solid #dedede;
+  color: #444;
   font-size: 0.9em;
   line-height: 1.5em;
   margin: 0 0 2em;
@@ -451,7 +452,7 @@ div.pagination a, div.pagination span {
   margin-right: 0.2em; }
 /* line 361, ../../app/stylesheets/screen.sass */
 div.pagination a {
-  border: 2px solid white; }
+  border: 2px solid #bbbbbb; }
 /* line 363, ../../app/stylesheets/screen.sass */
 div.pagination a:hover {
   text-decoration: none;
@@ -470,7 +471,7 @@ div.pagination a.next_page:hover, div.pagination a.prev_page:hover {
   color: #2e80d3; }
 /* line 376, ../../app/stylesheets/screen.sass */
 div.pagination span {
-  border: 2px solid white; }
+  border: 2px solid #bbbbbb; }
 /* line 378, ../../app/stylesheets/screen.sass */
 div.pagination span.disabled {
   color: #ccc;
@@ -479,4 +480,4 @@ div.pagination span.disabled {
 div.pagination span.current {
   background: #eee;
   color: #333;
-  border: 2px solid #bbbbbb; }
+  border: 2px solid white; }

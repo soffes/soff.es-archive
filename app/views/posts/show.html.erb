@@ -20,8 +20,8 @@
   <% end %>
 </div>
 
-<h2>Add A Comment</h2>
 <% form_for [@post, Comment.new] do |f| %>
+  <h2>Add A Comment</h2>
   <dl>
   	<dt><%= f.label :name, "Your Name" %></dt>
   	<dd><%= f.text_field :name, :class => "text", :tabindex => 1 %></dd>

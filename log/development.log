@@ -7166,3 +7166,52 @@ Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:50:00) [GET]
 Rendering template within layouts/application
 Rendering music/index
 Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-17 02:01:07) [GET]
+  [4;36;1mPost Load (2.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (1069.0ms)
+Rendered posts/_post (36.1ms)
+Rendered posts/_post (11.6ms)
+Rendered posts/_post (38.2ms)
+Rendered posts/_post (170.7ms)
+Completed in 1374ms (View: 1355, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 02:01:10) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 18ms (View: 14, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 02:01:41) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 02:03:11) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 02:03:23) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 02:03:30) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 02:04:11) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/music]

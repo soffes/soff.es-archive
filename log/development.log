@@ -6800,3 +6800,326 @@ Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:21:50) [GET]
 Rendering template within layouts/application
 Rendering music/index
 Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-17 01:28:31) [GET]
+  [4;36;1mPost Load (1.9ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (1020.1ms)
+Rendered posts/_post (34.8ms)
+Rendered posts/_post (9.9ms)
+Rendered posts/_post (35.1ms)
+Rendered posts/_post (149.9ms)
+Completed in 1296ms (View: 1278, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:28:34) [GET]
+Rendering template within layouts/application
+Rendering music/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+) on line #1 of app/views/music/index.html.erb:
+1: <% title "Music" %>
+2: <% javascript :jquery, 'music' %>
+3: 
+4: <div id="music">
+
+    app/helpers/layout_helper.rb:7:in `title'
+    app/views/music/index.html.erb:1
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    /usr/local/lib/ruby/gems/1.8/gems/chriseppstein-compass-0.8.8/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (170.4ms)
+Rendered rescues/_request_and_response (2.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:29:00) [GET]
+Rendering template within layouts/application
+Rendering music/index
+
+ActionView::TemplateError (can't convert nil into String) on line #1 of app/views/music/index.html.erb:
+1: <% title "Music" %>
+2: <% javascript :jquery, 'music' %>
+3: 
+4: <div id="music">
+
+    app/helpers/layout_helper.rb:7:in `+'
+    app/helpers/layout_helper.rb:7:in `title'
+    app/views/music/index.html.erb:1
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.2) lib/sass/plugin/rails.rb:19:in `process_without_compass'
+    /usr/local/lib/ruby/gems/1.8/gems/chriseppstein-compass-0.8.8/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+
+Rendered rescues/_trace (81.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:29:08) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:29:32) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:29:39) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2009-08-17 01:30:03) [GET]
+
+NoMethodError (undefined method `title' for ApplicationController:Class):
+  app/controllers/application_controller.rb:7
+  app/controllers/music_controller.rb:1
+
+Rendered rescues/_trace (67.6ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2009-08-17 01:30:22) [GET]
+
+NoMethodError (undefined method `title' for LayoutHelper:Module):
+  app/controllers/application_controller.rb:7
+  app/controllers/music_controller.rb:1
+
+Rendered rescues/_trace (66.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:30:59) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:31:07) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:31:08) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:32:09) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-17 01:32:11) [GET]
+  [4;36;1mPost Load (1.7ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (63.3ms)
+Rendered posts/_post (34.0ms)
+Rendered posts/_post (9.6ms)
+Rendered posts/_post (35.9ms)
+Rendered posts/_post (149.5ms)
+Completed in 393ms (View: 376, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:32:13) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:33:19) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:34:37) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:34:56) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:34:58) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:36:17) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:36:50) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:37:01) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:37:14) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:37:40) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:37:45) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:38:13) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:38:49) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:39:25) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:39:35) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:39:49) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:39:56) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:40:01) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:40:43) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:41:30) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:41:39) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:41:57) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:42:02) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:42:57) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:43:17) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:43:30) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:43:37) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:44:16) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:46:28) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:46:41) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:46:55) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/music]

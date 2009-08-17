@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
 	has_many :comments
 	
 	cattr_reader :per_page
-	@@per_page = 5
+	@@per_page = 3
 	
 #  def slug 
 #    read_attribute(:title).downcase.gsub(/[^ a-zA-Z0-9]/, '').gsub(/\s/, '-')

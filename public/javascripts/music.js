@@ -12,7 +12,7 @@ $(function() {
 		
 		$(this).parent().append('<div class="soundcloud-player"><div id="'+id+'"></div></div>');
 		
-		swfobject.embedSWF('http://player.soundcloud.com/player.swf?track='+track+'&amp;show_comments=true&amp;auto_play=false&amp;show_playcount=true&amp;show_artwork=true&amp;color=3741ae', id, '225', '81', '9.0.0', '/swf/expressInstall.swf', false, {
+		swfobject.embedSWF('http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fsoundcloud.com%2Fsamsoffes%2F'+track+'&show_comments=false&auto_play=true&color=01b0f0', id, '225', '81', '9.0.0', '/swf/expressInstall.swf', false, {
 			'wmode': 'transparent',
 			'allowscriptaccess': 'always'
 		});

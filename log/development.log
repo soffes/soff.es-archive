@@ -6735,3 +6735,68 @@ Rendered posts/_post (10.8ms)
 Rendered posts/_post (38.6ms)
 Rendered posts/_post (174.0ms)
 Completed in 446ms (View: 427, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-17 01:17:49) [GET]
+  [4;36;1mPost Load (1.9ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (1050.8ms)
+Rendered posts/_post (33.7ms)
+Rendered posts/_post (9.6ms)
+Rendered posts/_post (33.8ms)
+Rendered posts/_post (145.7ms)
+Completed in 1380ms (View: 1362, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:17:52) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:19:27) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-17 01:19:29) [GET]
+
+ActionController::RoutingError (No route matches "/http%3A%2F%2Fsoundcloud.com%2Fsamsoffes%2Fsomething-i-found&amp;show_comments=true&amp;auto_play=true&amp;color=01b0f0" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-17 01:19:34) [GET]
+
+ActionController::RoutingError (No route matches "/http%3A%2F%2Fsoundcloud.com%2Fsamsoffes%2Fsomething-i-found&amp;show_comments=true&amp;auto_play=true&amp;color=01b0f0" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:19:52) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:21:10) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:21:34) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-08-17 01:21:50) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/music]

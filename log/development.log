@@ -7529,3 +7529,29 @@ Processing MusicController#index (for 127.0.0.1 at 2009-08-20 16:14:39) [GET]
 Rendering template within layouts/application
 Rendering music/index
 Completed in 216ms (View: 212, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-24 14:32:07) [GET]
+  [4;36;1mPost Load (4.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (1105.5ms)
+Rendered posts/_post (38.7ms)
+Rendered posts/_post (11.2ms)
+Rendered posts/_post (39.5ms)
+Rendered posts/_post (171.0ms)
+Completed in 1548ms (View: 1502, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-24 14:32:20) [GET]
+  [4;36;1mPost Load (2.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (69.1ms)
+Rendered posts/_post (37.1ms)
+Rendered posts/_post (106.9ms)
+Rendered posts/_post (38.5ms)
+Rendered posts/_post (163.9ms)
+Completed in 442ms (View: 422, DB: 2) | 200 OK [http://frustrates.local/]

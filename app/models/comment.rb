@@ -9,7 +9,7 @@ class Comment < ActiveRecord::Base
 	end
 	
 	def self.approved_by_post(post)
-	  Comment.find(:all, :conditions => ["approved = ? AND post_id = ?", true, post.id], :order => 'created_at')
+	  Comment.find(:all, :conditions => { :approved => true, :post_id => post.id }, :order => 'created_at')
 	end
 	
 	def request=(request)

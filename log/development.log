@@ -7555,3 +7555,142 @@ Rendered posts/_post (106.9ms)
 Rendered posts/_post (38.5ms)
 Rendered posts/_post (163.9ms)
 Completed in 442ms (View: 422, DB: 2) | 200 OK [http://frustrates.local/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-26 13:39:31) [GET]
+  [4;36;1mPost Load (41.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (1198.4ms)
+Rendered posts/_post (48.3ms)
+Rendered posts/_post (12.5ms)
+Rendered posts/_post (44.6ms)
+Rendered posts/_post (174.8ms)
+Completed in 1773ms (View: 1689, DB: 41) | 200 OK [http://localhost/]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-08-26 13:40:14) [GET]
+Rendering template within layouts/application
+Rendering posts/new
+Completed in 49ms (View: 35, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-26 13:45:40) [GET]
+  [4;36;1mPost Load (94.5ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (100.6ms)
+Rendered posts/_post (39.5ms)
+Rendered posts/_post (11.1ms)
+Rendered posts/_post (38.9ms)
+Rendered posts/_post (173.0ms)
+Completed in 490ms (View: 378, DB: 95) | 200 OK [http://localhost/]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-08-26 13:50:45) [POST]
+  Parameters: {"commit"=>"Create", "post"=>{"slug"=>"moving-to-dallas", "body"=>"I'm moving to Dallas. For real. I know I've said I'm moving here and there over the past few months, but I already have a place to live and such in Dallas.\r\n\r\n### Why\r\n\r\nI started working for [Tasteful Works][] a few weeks ago. [Tasteful Works][] develops iPhone, Android, Rails, and Mac apps (I only work on iPhone, Mac, and Rails there). It's good times. I am running all of my freelance through there now, so if you want to hire me, [contact Tasteful Works](mailto:hireus@tastefulworks.com). It's all the same rates as when I was doing it on my own just faster because we have more people.\r\n\r\n### So Dallas?\r\n\r\nI'm moving to Dallas because that is where all of the [Tasteful Works][] guys are. I'm pretty excited about it, but sad about leaving all of my friends, [my band](http://hollowtheband.com), and [my house](http://www.flickr.com/photos/samsoffes/sets/72157616644807946/).\r\n\r\nI am going to have a [sweet loft](http://loftsatlascolinas.com/) in Las Colinas on the lake. I'm really excited about it. It's got high ceilings and exposed duct work. Awesome. I move in on October 1. Crazy.\r\n\r\nThis new time in my life is really excited and scary. You'd think I'd have moving to a town where I don't know anyone except the people I work with would be easy after doing it once before. I'm optimistic about it, but still a little nervous. Selling or renting my house here in Edmond is going to be stressful.\r\n\r\nI'm ready for what's next. Bring it on!\r\n\r\n[Tasteful Works]: http://tastefulworks.com\r\n", "title"=>"Moving to Dallas"}, "authenticity_token"=>"aW7Td7ZZgWkS+10c8Wwhh5jhM7VSEN3PEMqIHcgU9po="}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT "posts".id FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+  [4;35;1mPost Create (13.8ms)[0m   [0mINSERT INTO "posts" ("slug", "created_at", "title", "body", "updated_at") VALUES('moving-to-dallas', '2009-08-26 18:50:45', 'Moving to Dallas', 'I''m moving to Dallas. For real. I know I''ve said I''m moving here and there over the past few months, but I already have a place to live and such in Dallas.
+
+### Why
+
+I started working for [Tasteful Works][] a few weeks ago. [Tasteful Works][] develops iPhone, Android, Rails, and Mac apps (I only work on iPhone, Mac, and Rails there). It''s good times. I am running all of my freelance through there now, so if you want to hire me, [contact Tasteful Works](mailto:hireus@tastefulworks.com). It''s all the same rates as when I was doing it on my own just faster because we have more people.
+
+### So Dallas?
+
+I''m moving to Dallas because that is where all of the [Tasteful Works][] guys are. I''m pretty excited about it, but sad about leaving all of my friends, [my band](http://hollowtheband.com), and [my house](http://www.flickr.com/photos/samsoffes/sets/72157616644807946/).
+
+I am going to have a [sweet loft](http://loftsatlascolinas.com/) in Las Colinas on the lake. I''m really excited about it. It''s got high ceilings and exposed duct work. Awesome. I move in on October 1. Crazy.
+
+This new time in my life is really excited and scary. You''d think I''d have moving to a town where I don''t know anyone except the people I work with would be easy after doing it once before. I''m optimistic about it, but still a little nervous. Selling or renting my house here in Edmond is going to be stressful.
+
+I''m ready for what''s next. Bring it on!
+
+[Tasteful Works]: http://tastefulworks.com
+', '2009-08-26 18:50:45')[0m
+Redirected to http://localhost:3000/posts/16
+Completed in 175ms (DB: 14) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-26 13:50:45) [GET]
+  Parameters: {"id"=>"16"}
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 16) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (48.1ms)
+  [4;35;1mComment Load (18.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."approved" = 't' AND "comments"."post_id" = 16) ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."approved" = 't' AND "comments"."post_id" = 16) ORDER BY created_at[0m
+Completed in 374ms (View: 340, DB: 19) | 200 OK [http://localhost/posts/16]
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2009-08-26 13:51:17) [GET]
+  Parameters: {"id"=>"16"}
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 16) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Completed in 55ms (View: 39, DB: 1) | 200 OK [http://localhost/posts/16/edit]
+
+
+Processing PostsController#update (for 127.0.0.1 at 2009-08-26 13:51:19) [PUT]
+  Parameters: {"commit"=>"Update", "post"=>{"slug"=>"moving-to-dallas", "body"=>"I'm moving to Dallas. For real. I know I've said I'm moving here and there over the past few months, but I already have a place to live and such in Dallas so it's official this time.\r\n\r\n### Why\r\n\r\nI started working for [Tasteful Works][] a few weeks ago. [Tasteful Works][] develops iPhone, Android, Rails, and Mac apps (I only work on iPhone, Mac, and Rails there). It's good times. I am running all of my freelance through there now, so if you want to hire me, [contact Tasteful Works](mailto:hireus@tastefulworks.com). It's all the same rates as when I was doing it on my own just faster because we have more people.\r\n\r\n### So Dallas?\r\n\r\nI'm moving to Dallas because that is where all of the [Tasteful Works][] guys are. I'm pretty excited about it, but sad about leaving all of my friends, [my band](http://hollowtheband.com), and [my house](http://www.flickr.com/photos/samsoffes/sets/72157616644807946/).\r\n\r\nI am going to have a [sweet loft](http://loftsatlascolinas.com/) in Las Colinas on the lake. I'm really excited about it. It's got high ceilings and exposed duct work. Awesome. I move in on October 1. Crazy.\r\n\r\nThis new time in my life is really excited and scary. You'd think I'd have moving to a town where I don't know anyone except the people I work with would be easy after doing it once before. I'm optimistic about it, but still a little nervous. Selling or renting my house here in Edmond is going to be stressful.\r\n\r\nI'm ready for what's next. Bring it on!\r\n\r\n[Tasteful Works]: http://tastefulworks.com\r\n", "title"=>"Moving to Dallas"}, "authenticity_token"=>"aW7Td7ZZgWkS+10c8Wwhh5jhM7VSEN3PEMqIHcgU9po=", "id"=>"16"}
+  [4;36;1mPost Load (0.7ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 16) [0m
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT "posts".id FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas' AND "posts".id <> 16) LIMIT 1[0m
+  [4;36;1mPost Update (0.4ms)[0m   [0;1mUPDATE "posts" SET "updated_at" = '2009-08-26 18:51:19', "body" = 'I''m moving to Dallas. For real. I know I''ve said I''m moving here and there over the past few months, but I already have a place to live and such in Dallas so it''s official this time.
+
+### Why
+
+I started working for [Tasteful Works][] a few weeks ago. [Tasteful Works][] develops iPhone, Android, Rails, and Mac apps (I only work on iPhone, Mac, and Rails there). It''s good times. I am running all of my freelance through there now, so if you want to hire me, [contact Tasteful Works](mailto:hireus@tastefulworks.com). It''s all the same rates as when I was doing it on my own just faster because we have more people.
+
+### So Dallas?
+
+I''m moving to Dallas because that is where all of the [Tasteful Works][] guys are. I''m pretty excited about it, but sad about leaving all of my friends, [my band](http://hollowtheband.com), and [my house](http://www.flickr.com/photos/samsoffes/sets/72157616644807946/).
+
+I am going to have a [sweet loft](http://loftsatlascolinas.com/) in Las Colinas on the lake. I''m really excited about it. It''s got high ceilings and exposed duct work. Awesome. I move in on October 1. Crazy.
+
+This new time in my life is really excited and scary. You''d think I''d have moving to a town where I don''t know anyone except the people I work with would be easy after doing it once before. I''m optimistic about it, but still a little nervous. Selling or renting my house here in Edmond is going to be stressful.
+
+I''m ready for what''s next. Bring it on!
+
+[Tasteful Works]: http://tastefulworks.com
+' WHERE "id" = 16[0m
+Redirected to http://localhost:3000/posts/16
+Completed in 28ms (DB: 1) | 302 Found [http://localhost/posts/16]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-08-26 13:51:19) [GET]
+  Parameters: {"id"=>"16"}
+  [4;35;1mPost Load (0.7ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 16) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (57.2ms)
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."approved" = 't' AND "comments"."post_id" = 16) ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."approved" = 't' AND "comments"."post_id" = 16) ORDER BY created_at[0m
+Completed in 192ms (View: 173, DB: 1) | 200 OK [http://localhost/posts/16]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-26 14:42:25) [GET]
+  [4;36;1mPost Load (2.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (1594.8ms)
+Rendered posts/_post (150.2ms)
+Rendered posts/_post (57.2ms)
+Rendered posts/_post (11.3ms)
+Rendered posts/_post (40.4ms)
+Completed in 2018ms (View: 1997, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-08-26 14:42:43) [GET]
+  [4;36;1mPost Load (3.5ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (60.6ms)
+Rendered posts/_post (67.2ms)
+Rendered posts/_post (79.2ms)
+Rendered posts/_post (31.9ms)
+Rendered posts/_post (192.4ms)
+Completed in 488ms (View: 460, DB: 4) | 200 OK [http://localhost/]

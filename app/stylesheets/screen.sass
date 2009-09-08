@@ -1,3 +1,4 @@
+@import reset.sass
 @import shared.sass
 
 =shadow()
@@ -105,6 +106,7 @@ h2
 		color: #999
 	a
 		color= !blueColor
+
 h3
 	font-size: 1.3em
 	margin-bottom: 0.2em
@@ -143,7 +145,7 @@ div.wrapper
 	margin: 0 auto 1em
 	width= !width
 
-#header
+div#header
 	margin: 2em 0 3em
 	line-height: 1em
 	div
@@ -190,7 +192,7 @@ div.wrapper
 	li:first-child
 		margin-left: 0
 
-#footer
+div#footer
 	color: #aaa
 	margin: 0 auto 2em
 	padding: 0
@@ -248,7 +250,7 @@ form
 		margin-right: 15px
 
 // Posts
-.post
+div.post
 	background= image_url("dash.png") "no-repeat bottom center"
 	padding-bottom: 2em
 	margin-bottom: 2em
@@ -263,7 +265,7 @@ form
 		margin-bottom: 0
 
 // Comments
-#comments_container
+div#comments_container
 	h2.no-comments
 		color: #aaa
 	ul
@@ -275,7 +277,7 @@ form
 			div.content
 				font-size: 0.9em
 
-#new_comment
+form#new_comment
 	background: #fff
 	padding: 20px
 	h2
@@ -290,7 +292,7 @@ form
 		margin-top: 10px
 
 // Music
-#music-art
+div#music-art
 	width: 300px
 	float: left
 	margin-right: 35px
@@ -310,7 +312,7 @@ form
 	div
 		padding-left: 10px
 
-#music-about
+div#music-about
 	margin-left: 1em
 	line-height: 1.5em
 	width: 289px
@@ -318,7 +320,7 @@ form
 	p
 		font-size: 0.8em
 
-#music
+div}#music
 	h2:first-child
 		margin-top: 0
 		padding-top: 0

@@ -7694,3 +7694,832 @@ Rendered posts/_post (79.2ms)
 Rendered posts/_post (31.9ms)
 Rendered posts/_post (192.4ms)
 Completed in 488ms (View: 460, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-05 00:12:50) [GET]
+  [4;36;1mPost Load (5.7ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (568.1ms)
+Rendered posts/_post (23.8ms)
+Rendered posts/_post (14.5ms)
+Rendered posts/_post (4.5ms)
+Rendered posts/_post (83.2ms)
+Completed in 796ms (View: 782, DB: 6) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-05 00:13:00) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (19.8ms)
+Rendered posts/_post (24.1ms)
+Rendered posts/_post (15.2ms)
+Rendered posts/_post (4.7ms)
+Rendered posts/_post (14.6ms)
+Completed in 90ms (View: 82, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-05 00:13:01) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (18.2ms)
+  [4;35;1mComment Load (1.9ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 147ms (View: 139, DB: 2) | 200 OK [http://localhost/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-05 00:14:25) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (491.6ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 533ms (View: 526, DB: 1) | 200 OK [http://localhost/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-05 00:14:32) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (18.5ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 39ms (View: 32, DB: 1) | 200 OK [http://localhost/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-05 00:14:54) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (493.5ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 535ms (View: 528, DB: 1) | 200 OK [http://localhost/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-05 00:17:32) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (18.9ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 38ms (View: 31, DB: 1) | 200 OK [http://localhost/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-05 00:17:38) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (20.1ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 40ms (View: 33, DB: 1) | 200 OK [http://localhost/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-05 00:17:59) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (89.3ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 109ms (View: 102, DB: 1) | 200 OK [http://localhost/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-05 00:18:13) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (18.0ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 37ms (View: 31, DB: 1) | 200 OK [http://localhost/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-05 00:18:21) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (19.0ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 39ms (View: 32, DB: 1) | 200 OK [http://localhost/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-05 00:19:11) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (17.9ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 37ms (View: 30, DB: 1) | 200 OK [http://localhost/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-05 00:19:25) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (17.7ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 37ms (View: 30, DB: 1) | 200 OK [http://localhost/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-05 00:19:41) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (19.1ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 38ms (View: 31, DB: 1) | 200 OK [http://localhost/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-05 00:19:55) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (18.7ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 38ms (View: 31, DB: 1) | 200 OK [http://localhost/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-05 00:22:25) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (19.1ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 39ms (View: 32, DB: 1) | 200 OK [http://localhost/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-05 00:22:38) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (18.9ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 38ms (View: 31, DB: 1) | 200 OK [http://localhost/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-05 00:22:42) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (18.5ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 108ms (View: 101, DB: 1) | 200 OK [http://localhost/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-05 00:22:44) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (18.7ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 37ms (View: 31, DB: 1) | 200 OK [http://localhost/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-05 00:22:51) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (19.9ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 40ms (View: 33, DB: 1) | 200 OK [http://localhost/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-05 00:22:58) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (18.9ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 40ms (View: 32, DB: 1) | 200 OK [http://localhost/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-05 00:23:03) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (22.3ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 43ms (View: 36, DB: 1) | 200 OK [http://localhost/post/moving-to-dallas]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-05 00:23:04) [GET]
+  [4;35;1mPost Load (1.1ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (20.0ms)
+Rendered posts/_post (23.7ms)
+Rendered posts/_post (14.5ms)
+Rendered posts/_post (4.4ms)
+Rendered posts/_post (15.1ms)
+Completed in 91ms (View: 84, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-05 00:41:29) [GET]
+  [4;36;1mPost Load (1.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (573.2ms)
+Rendered posts/_post (24.1ms)
+Rendered posts/_post (14.9ms)
+Rendered posts/_post (4.6ms)
+Rendered posts/_post (86.8ms)
+Completed in 729ms (View: 721, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-09-05 01:15:53) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 33ms (View: 31, DB: 0) | 200 OK [http://localhost/music]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-05 01:41:43) [GET]
+  [4;36;1mPost Load (1.5ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (42.1ms)
+Rendered posts/_post (23.6ms)
+Rendered posts/_post (14.6ms)
+Rendered posts/_post (4.7ms)
+Rendered posts/_post (14.5ms)
+Completed in 410ms (View: 399, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-09-06 22:29:08) [GET]
+Rendering template within layouts/application
+Rendering about/index
+Completed in 147ms (View: 144, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-06 22:41:38) [GET]
+  [4;36;1mPost Load (84.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (11.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (1676.9ms)
+Rendered posts/_post (25.8ms)
+Rendered posts/_post (15.7ms)
+Rendered posts/_post (4.6ms)
+Rendered posts/_post (16.1ms)
+Completed in 2237ms (View: 1949, DB: 95) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-08 02:14:55) [GET]
+  [4;36;1mPost Load (6.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (568.6ms)
+Rendered posts/_post (23.6ms)
+Rendered posts/_post (14.7ms)
+Rendered posts/_post (4.3ms)
+Rendered posts/_post (14.7ms)
+Completed in 1088ms (View: 1069, DB: 6) | 200 OK [http://samsoffes.local/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-08 09:47:18) [GET]
+  [4;36;1mPost Load (16.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (629.9ms)
+Rendered posts/_post (24.3ms)
+Rendered posts/_post (15.6ms)
+Rendered posts/_post (4.5ms)
+Rendered posts/_post (14.8ms)
+Completed in 1199ms (View: 1169, DB: 17) | 200 OK [http://samsoffes.local/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-08 09:47:26) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (19.5ms)
+Rendered posts/_post (25.2ms)
+Rendered posts/_post (15.1ms)
+Rendered posts/_post (5.1ms)
+Rendered posts/_post (84.6ms)
+Completed in 161ms (View: 153, DB: 1) | 200 OK [http://samsoffes.local/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-08 09:48:36) [GET]
+  [4;36;1mPost Load (1.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (27.7ms)
+Rendered posts/_post (28.7ms)
+Rendered posts/_post (19.4ms)
+Rendered posts/_post (5.8ms)
+Rendered posts/_post (15.3ms)
+Completed in 116ms (View: 105, DB: 2) | 200 OK [http://samsoffes.local/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-08 09:49:29) [GET]
+  [4;36;1mPost Load (10.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (20.8ms)
+Rendered posts/_post (24.9ms)
+Rendered posts/_post (83.7ms)
+Rendered posts/_post (4.6ms)
+Rendered posts/_post (16.1ms)
+Completed in 183ms (View: 167, DB: 10) | 200 OK [http://samsoffes.local/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-08 09:50:28) [GET]
+  [4;36;1mPost Load (10.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (19.7ms)
+Rendered posts/_post (23.9ms)
+Rendered posts/_post (16.5ms)
+Rendered posts/_post (4.7ms)
+Rendered posts/_post (15.1ms)
+Completed in 120ms (View: 103, DB: 10) | 200 OK [http://samsoffes.local/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-08 09:50:35) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (90.0ms)
+Rendered posts/_post (24.5ms)
+Rendered posts/_post (14.5ms)
+Rendered posts/_post (4.6ms)
+Rendered posts/_post (14.6ms)
+Completed in 161ms (View: 153, DB: 1) | 200 OK [http://samsoffes.local/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-08 09:51:13) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (19.0ms)
+Rendered posts/_post (24.4ms)
+Rendered posts/_post (14.7ms)
+Rendered posts/_post (4.3ms)
+Rendered posts/_post (14.7ms)
+Completed in 88ms (View: 81, DB: 1) | 200 OK [http://samsoffes.local/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-08 09:51:14) [GET]
+  [4;36;1mPost Load (67.9ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (19.4ms)
+Rendered posts/_post (25.4ms)
+Rendered posts/_post (15.2ms)
+Rendered posts/_post (4.5ms)
+Rendered posts/_post (16.0ms)
+Completed in 159ms (View: 84, DB: 68) | 200 OK [http://samsoffes.local/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-08 09:51:19) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (20.2ms)
+Rendered posts/_post (24.4ms)
+Rendered posts/_post (14.7ms)
+Rendered posts/_post (4.9ms)
+Rendered posts/_post (15.4ms)
+Completed in 91ms (View: 83, DB: 1) | 200 OK [http://samsoffes.local/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-08 09:51:20) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (23.0ms)
+Rendered posts/_post (27.3ms)
+Rendered posts/_post (16.6ms)
+Rendered posts/_post (5.0ms)
+Rendered posts/_post (15.4ms)
+Completed in 99ms (View: 91, DB: 1) | 200 OK [http://samsoffes.local/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-08 09:51:25) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (19.4ms)
+Rendered posts/_post (26.0ms)
+Rendered posts/_post (14.0ms)
+Rendered posts/_post (4.3ms)
+Rendered posts/_post (88.1ms)
+Completed in 164ms (View: 156, DB: 1) | 200 OK [http://samsoffes.local/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-08 09:52:36) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (103.7ms)
+Rendered posts/_post (26.2ms)
+Rendered posts/_post (15.7ms)
+Rendered posts/_post (5.9ms)
+Rendered posts/_post (14.7ms)
+Completed in 182ms (View: 174, DB: 1) | 200 OK [http://samsoffes.local/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-08 09:52:53) [GET]
+  [4;36;1mPost Load (1.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (21.5ms)
+Rendered posts/_post (25.0ms)
+Rendered posts/_post (88.6ms)
+Rendered posts/_post (4.5ms)
+Rendered posts/_post (16.1ms)
+Completed in 174ms (View: 163, DB: 2) | 200 OK [http://samsoffes.local/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-08 09:53:41) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (19.3ms)
+Rendered posts/_post (24.5ms)
+Rendered posts/_post (14.7ms)
+Rendered posts/_post (4.5ms)
+Rendered posts/_post (17.3ms)
+Completed in 95ms (View: 87, DB: 1) | 200 OK [http://samsoffes.local/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-08 09:53:49) [GET]
+  [4;36;1mPost Load (1.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (92.0ms)
+Rendered posts/_post (25.3ms)
+Rendered posts/_post (15.4ms)
+Rendered posts/_post (4.6ms)
+Rendered posts/_post (15.0ms)
+Completed in 164ms (View: 156, DB: 1) | 200 OK [http://samsoffes.local/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-08 09:53:58) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (21.3ms)
+Rendered posts/_post (27.3ms)
+Rendered posts/_post (15.9ms)
+Rendered posts/_post (4.6ms)
+Rendered posts/_post (14.3ms)
+Completed in 96ms (View: 87, DB: 2) | 200 OK [http://samsoffes.local/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-08 09:54:05) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (20.2ms)
+Rendered posts/_post (25.1ms)
+Rendered posts/_post (14.4ms)
+Rendered posts/_post (4.6ms)
+Rendered posts/_post (15.8ms)
+Completed in 166ms (View: 84, DB: 1) | 200 OK [http://samsoffes.local/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-08 09:54:24) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (19.1ms)
+  [4;35;1mComment Load (1.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 330ms (View: 322, DB: 2) | 200 OK [http://samsoffes.local/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-08 09:54:46) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (18.1ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 106ms (View: 31, DB: 1) | 200 OK [http://samsoffes.local/post/moving-to-dallas]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-08 09:55:26) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (19.4ms)
+Rendered posts/_post (23.7ms)
+Rendered posts/_post (14.5ms)
+Rendered posts/_post (4.8ms)
+Rendered posts/_post (14.9ms)
+Completed in 88ms (View: 81, DB: 1) | 200 OK [http://samsoffes.local/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-08 09:55:30) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (89.0ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 109ms (View: 102, DB: 1) | 200 OK [http://samsoffes.local/post/moving-to-dallas]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-08 10:00:04) [GET]
+  [4;35;1mPost Load (18.0ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (38.1ms)
+Rendered posts/_post (26.3ms)
+Rendered posts/_post (14.1ms)
+Rendered posts/_post (4.3ms)
+Rendered posts/_post (14.6ms)
+Completed in 127ms (View: 102, DB: 18) | 200 OK [http://samsoffes.local/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-08 10:00:32) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (18.0ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 111ms (View: 104, DB: 1) | 200 OK [http://samsoffes.local/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-08 10:00:42) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (19.5ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 39ms (View: 33, DB: 1) | 200 OK [http://samsoffes.local/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-08 10:00:56) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (18.6ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 39ms (View: 33, DB: 1) | 200 OK [http://samsoffes.local/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-08 10:01:49) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (17.8ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 108ms (View: 102, DB: 1) | 200 OK [http://samsoffes.local/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-08 10:02:06) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (18.8ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 40ms (View: 33, DB: 1) | 200 OK [http://samsoffes.local/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-08 10:02:55) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (18.2ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 38ms (View: 31, DB: 1) | 200 OK [http://samsoffes.local/post/moving-to-dallas]
+
+
+Processing MusicController#index (for 127.0.0.1 at 2009-09-08 10:03:18) [GET]
+Rendering template within layouts/application
+Rendering music/index
+Completed in 25ms (View: 24, DB: 0) | 200 OK [http://samsoffes.local/music]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-08 10:03:21) [GET]
+  [4;35;1mPost Load (1.2ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (19.9ms)
+Rendered posts/_post (25.7ms)
+Rendered posts/_post (14.6ms)
+Rendered posts/_post (4.7ms)
+Rendered posts/_post (15.1ms)
+Completed in 91ms (View: 84, DB: 1) | 200 OK [http://samsoffes.local/]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-08 10:03:22) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (18.3ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 37ms (View: 30, DB: 1) | 200 OK [http://samsoffes.local/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-08 10:03:29) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (19.3ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 109ms (View: 33, DB: 1) | 200 OK [http://samsoffes.local/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-08 10:03:39) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (17.9ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 39ms (View: 32, DB: 1) | 200 OK [http://samsoffes.local/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-08 10:04:06) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (19.4ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 38ms (View: 32, DB: 1) | 200 OK [http://samsoffes.local/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-08 10:04:18) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (17.9ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 38ms (View: 32, DB: 1) | 200 OK [http://samsoffes.local/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-08 10:04:36) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (17.4ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 40ms (View: 33, DB: 1) | 200 OK [http://samsoffes.local/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-08 10:04:46) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (17.7ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 36ms (View: 30, DB: 1) | 200 OK [http://samsoffes.local/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-08 10:04:57) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (19.0ms)
+  [4;35;1mComment Load (1.1ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 40ms (View: 32, DB: 1) | 200 OK [http://samsoffes.local/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-08 10:05:06) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (17.9ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 39ms (View: 33, DB: 1) | 200 OK [http://samsoffes.local/post/moving-to-dallas]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-09-08 10:05:17) [GET]
+  Parameters: {"slug"=>"moving-to-dallas"}
+  [4;36;1mPost Load (0.8ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."slug" = 'moving-to-dallas') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (17.3ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments"."post_id" = 16 AND "comments"."approved" = 't') ORDER BY created_at[0m
+Completed in 105ms (View: 98, DB: 1) | 200 OK [http://samsoffes.local/post/moving-to-dallas]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-09-08 10:05:41) [GET]
+Rendering template within layouts/application
+Rendering about/index
+Completed in 23ms (View: 21, DB: 0) | 200 OK [http://samsoffes.local/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-09-08 10:06:04) [GET]
+Rendering template within layouts/application
+Rendering about/index
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://samsoffes.local/about]
+
+
+Processing AboutController#index (for 127.0.0.1 at 2009-09-08 10:06:22) [GET]
+Rendering template within layouts/application
+Rendering about/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://samsoffes.local/about]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-09-08 10:06:35) [GET]
+  [4;35;1mPost Load (1.2ms)[0m   [0mSELECT * FROM "posts" WHERE (title like '%%' OR body like '%%') ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" WHERE (title like '%%' OR body like '%%') [0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (18.6ms)
+Rendered posts/_post (24.0ms)
+Rendered posts/_post (15.1ms)
+Rendered posts/_post (72.6ms)
+Rendered posts/_post (15.1ms)
+Completed in 157ms (View: 150, DB: 1) | 200 OK [http://samsoffes.local/]

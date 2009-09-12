@@ -8,6 +8,7 @@
 // old link color #2e80d3
 !linkBorderColor = #cfdae5
 !linkHoverColor= #92abc1
+!orangeColor = #f05b35
 !lightBlueColor = #01b0f0
 !blueColor = #1267da
 !pinkColor = #ff358b
@@ -109,8 +110,9 @@ code
 h1
   font-size: 68px
   margin: 50px 0
+  color= !orangeColor
   a
-    color: #f05b35
+    color= !orangeColor
     border: 0
   a:hover
     border: 0
@@ -133,18 +135,6 @@ h3
 h4
   font-size: 0.9em
   color: #555
-
-div.post  
-  ul, ol
-    margin: 0 0 2em 0.5em
-    li
-      margin-left: 1em
-
-  ul li
-    list-style: disc
-
-  ol li
-    list-style: decimal
 
 // Flashes
 div.flash
@@ -282,18 +272,21 @@ div.post
   margin-bottom: 2em
   > h1
     margin-bottom: 0
-  div.title
-    h2
-      float: left
-      margin-bottom: 12px
-    p.meta
-      float: left
-      color= !lightBlueColor
-      font-size: 14px
-      margin: 13px 0 0 10px
-      text-transform: lowercase
-      a
-        color: #999
+  h2
+    margin-bottom: 12px
+  p.meta
+    color= !lightBlueColor
+    margin-bottom: 12px
+  ul, ol
+    margin: 0 0 2em 0.5em
+    li
+      margin-left: 1em
+
+  ul li
+    list-style: disc
+
+  ol li
+    list-style: decimal
 
 // Comments
 div#comments_container

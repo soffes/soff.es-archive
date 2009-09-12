@@ -8,20 +8,28 @@
     <meta name="viewport" content="width=320, user-scalable=no" />
     <link href="http://feeds.feedburner.com/samsoffes/blog" rel="alternate" title="samsoff.es" type="application/atom+xml" />
     <link href="http://feeds.feedburner.com/samsoffes/the-experiment" rel="alternate" title="The Experiment Podcast" type="application/atom+xml" />
+    <%= javascript_include_tag "cufon" %>
+    <%= javascript_include_tag "Bistro_Script_400.font" %>
+    <%= javascript_include_tag "Nilland_400-Nilland_700.font" %>
+    <script type="text/javascript">
+      Cufon.replace('h1, ul.contact span', { fontFamily: 'Bistro Script' });
+      Cufon.replace('h2, div#header li a', { fontFamily: 'Nilland' });
+    </script>
     <%= yield(:head) -%>
   </head>
   <body>
+    <div id="border"></div>
     <div class="wrapper">
     	<div id="header" class="clear">
-    	  <div>
-    		  <h1><%= link_to 'sam<span>soff.es</span>', root_path %></h1>
-    		  <h2><a href="http://iturndreamsintosoftware.com">i make software</a> <%= link_to '(and music)', music_path, { :class => "music" } %></h2>
-    		</div>
-    		<ul class="clear">
-    			<li class="blog"><%= link_to "Blog", root_path %></li>
-    			<li class="music"><%= link_to "Music", music_path %></li>
-    			<li class="about"><%= link_to "About", about_path %></li>
-    		</ul>
+    		<h1><%= link_to 'sam<span>soff.es</span>', root_path %></h1>
+    		<div>
+      		<ul class="clear">
+      			<li class="blog"><%= link_to "Blog", root_path %></li>
+      			<li class="music"><%= link_to "Music", music_path %></li>
+      			<li class="about"><%= link_to "About", about_path %></li>
+      		</ul>
+      		<!--<h3><a href="http://iturndreamsintosoftware.com">i make software</a> <%= link_to '(and music)', music_path, { :class => "music" } %></h3>-->
+      	</div>
     	</div>
     	<% if flash[:notice] %>
     	<div class="flash notice"><%= h flash.delete(:notice) %></div>

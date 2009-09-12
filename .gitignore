@@ -3,4 +3,4 @@
 config/*.yml
 tmp
 .sass-cache
-
+log/*.log

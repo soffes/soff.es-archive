@@ -1,380 +1,435 @@
 @import reset.sass
-@import shared.sass
+
+// Variables
+!HelveticaNeue = "HelveticaNeue,'Helvetica Neue',Helvetica,Arial,sans-serif"
+!HelveticaNeueLight = "HelveticaNeue-Light,HelveticaNeue,'Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,sans-serif"
+!width = 640px
+!linkColor = #455b75
+// old link color #2e80d3
+!linkBorderColor = #cfdae5
+!linkHoverColor= #92abc1
+!lightBlueColor = #01b0f0
+!blueColor = #1267da
+!pinkColor = #ff358b
+!blogColor = #e16f09
+!musicColor = #121212
+!aboutColor = #276abd
+!subHeaderColor1 = #2f2f2f
+!subHeaderColor2 = #34778f
 
 =shadow()
-	text-shadow: #fff 0 1px 0
+  text-shadow: #fff 0 1px 0
 
-// Clear
+// Easy clear
 .clear:after
-	clear: both
-	content: " "
-	display: block
-	height: 0
-	zoom: 1
+  clear: both
+  content: " "
+  display: block
+  height: 0
+  zoom: 1
 
 // General
 body
-	background= #ededed image_url("bgrd.png")
-	font-size: 16px
-	
+  background= #f4f4f3
+  color: #455b75
+  font:
+    size: 17px
+    weight: 300
+
 body *
-	line-height: 1.4em
+  line-height: 1.4em
 
 body, input, textarea
-	font-family= !HelveticaNeue
-	color: #333
+  font-family= !HelveticaNeueLight
+  color: #333
 
 a
-	color= !linkColor
-	text-decoration: none
+  border-bottom= 1px "dotted" !linkBorderColor
+  color= !linkColor
+  text-decoration: none
 
 a:hover
-	text-decoration: underline
+  border-bottom: 1px solid
+  color= !linkHoverColor
 
 strong
-	font-weight: bold
+  font-weight: bold
 
 em
-	background-color: #fffeca
-	padding: 0 0.2em
+  background-color: #fffeca
+  padding: 0 0.2em
 
 abbr
-	border-bottom: 1px dashed
-	cursor: help
+  border-bottom: 1px dashed
+  cursor: help
 
 p
-	line-height: 1.5em
-	margin: 0 0 1em
+  line-height: 1.5em
+  margin: 0 0 1em
 
 blockquote
-	border-left: 5px solid #ddd
-	color: #555
-	margin: 0 0 1em
-	padding-left: 1em
-	font-family: Baskerville, Palatino, Georgia, serif
-	font-size: 1.2em
+  border-left: 5px solid #ddd
+  color: #555
+  margin: 0 0 1em
+  padding-left: 1em
+  font-family: Baskerville, Palatino, Georgia, serif
+  font-size: 1.2em
 
 small
-	font-size: 0.8em
-	color: #999
-	margin-left: 0.2em
-	a
-		color: #444
-	a:hover
-		color: #2e80d3
+  font-size: 0.8em
+  color: #999
+  margin-left: 0.2em
+  a
+    color: #444
+  a:hover
+    color: #2e80d3
 
 pre
-	background-color: #f8f8ff
-	border: 1px solid #dedede
-	color: #444
-	font-size: 0.9em
-	line-height: 1.5em
-	margin: 0 0 2em
-	overflow: auto
-	padding: 0.5em
-	code
-		background-color: #f8f8ff
-		border: medium none
-		font-size: 1em
-		padding: 0
+  background-color: #f8f8ff
+  border: 1px solid #dedede
+  color: #444
+  font-size: 0.9em
+  line-height: 1.5em
+  margin: 0 0 2em
+  overflow: auto
+  padding: 0.5em
+  code
+    background-color: #f8f8ff
+    border: medium none
+    font-size: 1em
+    padding: 0
 
 code
-	background-color: #f8f8ff
-	border: 1px solid #dedede
-	color: #444
-	font-size: 0.9em
-	padding: 0 0.2em
+  background-color: #f8f8ff
+  border: 1px solid #dedede
+  color: #444
+  font-size: 0.9em
+  padding: 0 0.2em
 
 h1
-	font-size: 1.9em
-	margin-bottom: 0.5em
-	padding-top: 0.5em
-	a
-		color= !lightBlueColor
-		span
-			color= !pinkColor
+  font-size: 68px
+  margin: 50px 0
+  a
+    color: #f05b35
+    border: 0
+  a:hover
+    border: 0
 
-//	border-top: 4px solid #e0e0e0
 h2
-	font-size: 1.5em
-	font-weight: bold
-	margin-bottom: 0.5em
-	padding-top: 0.5em
-	color= !blueColor
-	span
-		font-size: 0.9em
-		color: #999
-	a
-		color= !blueColor
+  background= image_url("lightning.png") "no-repeat 0 17px"
+  color: #445b75
+  font:
+    size: 26px
+    weight: bold
+  padding-left: 40px
+  text-transform: lowercase
+  margin-bottom: 4px
 
 h3
-	font-size: 1.3em
-	margin-bottom: 0.2em
-	color= !pinkColor
+  font-size: 1.3em
+  margin-bottom: 0.2em
+  color= !pinkColor
 
 h4
-	font-size: 0.9em
-	color: #555
+  font-size: 0.9em
+  color: #555
 
-ul, ol
-	margin: 0 0 2em 0.5em
-	li
-		margin-left: 1em
+div.post  
+  ul, ol
+    margin: 0 0 2em 0.5em
+    li
+      margin-left: 1em
 
-ul li
-	list-style: disc
+  ul li
+    list-style: disc
 
-ol li
-	list-style: decimal
+  ol li
+    list-style: decimal
 
 // Flashes
 div.flash
-	border: 1px solid
-	font-size: 0.95em
-	padding: 0.75em 1em
-	margin-bottom: 1em
+  border: 1px solid
+  font-size: 0.95em
+  padding: 0.75em 1em
+  margin-bottom: 1em
 
 div.flash.notice
-	background-color: #d4ffd4
-	border-color: #78d478
+  background-color: #d4ffd4
+  border-color: #78d478
 
 // Layout
 div.wrapper
-	+shadow()
-	padding: 1em 32px
-	margin: 0 auto 1em
-	width= !width
+  +shadow()
+  width: 640px
+  margin: 0 auto 30px
+
+div#border
+  margin-top: 20px
+  border-top: 1px dashed #c0d4e7
 
 div#header
-	margin: 2em 0 3em
-	line-height: 1em
-	div
-		float: left
-	h1
-		border: 0
-		padding: 0
-		margin: 0
-		font-size: 46px
-	h2
-		font-family= !HelveticaNeueLight
-		font-size: 17px
-		font-weight: 300
-		margin: -7px 0 0
-		padding: 0
-		a
-			color= !subHeaderColor1
-		a.music
-			color= !subHeaderColor2
-	ul
-		background= image_url("nav-shadow.png") "no-repeat bottom center"
-		float: right
-		font-size: 18px
-		margin: 30px 0 0
-		padding: 0 0 20px
-		text-transform: lowercase
-	li
-		float: left
-		list-style: none
-		margin: 0 0 0 1.7em
-		padding: 0
-		a
-			background: transparent no-repeat 0 3px
-			padding-left: 22px
-	.blog a
-		background-image= image_url("blog.png")
-		color= !blogColor
-	.music a
-		background-image= image_url("music.png")
-		color= !musicColor
-	.about a
-		background-image= image_url("about.png")
-		color= !aboutColor
-	li:first-child
-		margin-left: 0
+  margin: 10px 0 3em
+  line-height: 1em
+  h1
+    float: left
+    border: 0
+    padding: 0
+    margin: 0
+  div
+    float: right
+  ul
+    font-size: 19px
+    margin: 50px 0 0
+    text-transform: lowercase
+    li
+      float: left
+      list-style: none
+      margin: 0 0 0 1.7em
+      padding: 0
+      a
+        background: transparent no-repeat 0 5px
+        padding-left: 22px
+        border: 0
+    .blog a
+      background-image= image_url("blog.png")
+      color= !blogColor
+    .music a
+      background-image= image_url("music.png")
+      color= !musicColor
+    .about a
+      background-image= image_url("about.png")
+      color= !aboutColor
+    li:first-child
+      margin-left: 0
+  h3
+    font-family= !HelveticaNeueLight
+    font-size: 15px
+    font-weight: 300
+    margin: 15px 0 0
+    text-align: center
+    padding: 0
+    opacity: 0.7
+    a
+      color= !subHeaderColor1
+      border: 0
+    a.music
+      color= !subHeaderColor2
+    a:hover
+      border-bottom: 1px solid
 
 div#footer
-	color: #aaa
-	margin: 0 auto 2em
-	padding: 0
-	font-size: 0.85em
-	a
-		color: #aaa
-	a:hover
-		color= !linkColor
+  color: #aaa
+  margin: 0 auto 2em
+  padding: 0
+  font-size: 0.85em
+  text-align: center
+  a
+    color: #aaa
+  a:hover
+    color= !linkHoverColor
 
 .loading
-	display: block
-	background= image_url("dots-white.gif") "no-repeat" "left"
-	padding-left: 29px
-	font-size: 0.9em
-	color: #555
-	width: 21px
-	height: 5px
+  display: block
+  background= image_url("dots-white.gif") "no-repeat" "left"
+  padding-left: 29px
+  font-size: 0.9em
+  color: #555
+  width: 21px
+  height: 5px
 
 div.hd-video
-	background: #ddd
-	padding: 1.5em 0
-	text-align: center
+  background: #ddd
+  padding: 1.5em 0
+  text-align: center
 
 // Form
 form
-	input, textarea
-		font-size: 1em
-	dl
-		margin-bottom: 1em
-	dd
-		margin-bottom: 1em
-	input.text, textarea
-		background-color: #fff
-		border-color: #666 #ccc #ccc
-		border-style: solid
-		border-width: 1px
-		color: #000
-		padding: 2px
-		margin: 1px
-	input.text:focus, textarea:focus
-		border: 2px solid #6694e3
-		outline: 0
-		margin: 0
-	input.text.error, textarea.error
-		background-color: #fdeeee
-		border-color: #dc4747 #f59e9e #f59e9e
-	input.text.error:focus, textarea.error:focus
-		border-color: #dc4747
-	input.text
-		width: 12em
-	textarea
-		width: 24em
-		height: 6em
-	input.submit
-		margin-right: 15px
+  input, textarea
+    font-size: 1em
+  dl
+    margin-bottom: 1em
+  dd
+    margin-bottom: 1em
+  input.text, textarea
+    background-color: #fff
+    border-color: #666 #ccc #ccc
+    border-style: solid
+    border-width: 1px
+    color: #000
+    padding: 2px
+    margin: 1px
+  input.text:focus, textarea:focus
+    border: 2px solid #6694e3
+    outline: 0
+    margin: 0
+  input.text.error, textarea.error
+    background-color: #fdeeee
+    border-color: #dc4747 #f59e9e #f59e9e
+  input.text.error:focus, textarea.error:focus
+    border-color: #dc4747
+  input.text
+    width: 12em
+  textarea
+    width: 24em
+    height: 6em
+  input.submit
+    margin-right: 15px
 
 // Posts
 div.post
-	background= image_url("dash.png") "no-repeat bottom center"
-	padding-bottom: 2em
-	margin-bottom: 2em
-	> h1
-		margin-bottom: 0
-	.meta
-		color= !lightBlueColor
-		margin-bottom: 0.7em
-		a
-			color: #999
-	h2
-		margin-bottom: 0
+  background= image_url("dash.png") "no-repeat bottom center"
+  padding-bottom: 2em
+  margin-bottom: 2em
+  > h1
+    margin-bottom: 0
+  div.title
+    h2
+      float: left
+      margin-bottom: 12px
+    p.meta
+      float: left
+      color= !lightBlueColor
+      font-size: 14px
+      margin: 13px 0 0 10px
+      text-transform: lowercase
+      a
+        color: #999
 
 // Comments
 div#comments_container
-	h2.no-comments
-		color: #aaa
-	ul
-		margin: 0
-		> li
-			list-style: none
-			padding: 0
-			margin: 0 0 2em
-			div.content
-				font-size: 0.9em
+  h2.no-comments
+    color: #aaa
+  ul
+    margin: 0
+    > li
+      list-style: none
+      padding: 0
+      margin: 0 0 2em
+      div.content
+        font-size: 0.9em
 
 form#new_comment
-	background: #fff
-	padding: 20px
-	h2
-		margin-top: 0
-		padding-top: 0
-	p:last-child
-		margin-bottom: 0
-	input.submit
-		float: left
-	.loading
-		float: left
-		margin-top: 10px
+  background: #fff
+  padding: 20px
+  h2
+    margin-top: 0
+    padding-top: 0
+  p:last-child
+    margin-bottom: 0
+  input.submit
+    float: left
+  .loading
+    float: left
+    margin-top: 10px
 
 // Music
 div#music-art
-	width: 300px
-	float: left
-	margin-right: 35px
-	font-size: 0.9em
-	color: #555
-	a.album-art
-		border: 10px solid #fff
-		display: block
-		width: 300px
-		height: 300px
-		margin-bottom: 1em
-	a.album-art:hover
-		border-color= !linkColor
-	img
-		width: 300px
-		height: 300px
-	div
-		padding-left: 10px
+  width: 300px
+  float: left
+  margin-right: 35px
+  font-size: 0.9em
+  color: #555
+  a.album-art
+    border: 10px solid #fff
+    display: block
+    width: 300px
+    height: 300px
+    margin-bottom: 1em
+  a.album-art:hover
+    border-color= !linkColor
+  img
+    width: 300px
+    height: 300px
+  div
+    padding-left: 10px
 
 div#music-about
-	margin-left: 1em
-	line-height: 1.5em
-	width: 289px
-	float: left
-	p
-		font-size: 0.8em
+  margin-left: 20px
+  line-height: 1.5em
+  width: 285px
+  float: left
+  p
+    font-size: 0.8em
 
-div}#music
-	h2:first-child
-		margin-top: 0
-		padding-top: 0
-	ol
-		margin-bottom: 1em
-	li
-		font-size: 1.1em
-		margin-bottom: 0.3em
-		margin-left: 30px
-	ol li
-		list-style: decimal
-	ul li
-		list-style: disc
-	li a
-		font-size: 0.8em
-		margin-left: 6px
+div#music
+  h2:first-child
+    margin-top: 0
+    padding-top: 0
+  ol
+    margin-bottom: 1em
+  li
+    font-size: 1.1em
+    margin-bottom: 0.3em
+    margin-left: 30px
+  ol li
+    list-style: decimal
+  ul li
+    list-style: disc
+  li a
+    font-size: 0.8em
+    margin-left: 6px
 
 div.soundcloud-player
-	height: 101px
-	margin: 2px 0
-	background= image_url("dots-white.gif") #fff "no-repeat center"
-	width: 245px
-	> div
-		padding: 10px
+  height: 101px
+  margin: 2px 0
+  background= image_url("dots-white.gif") #fff "no-repeat center"
+  width: 245px
+  > div:first-child
+    padding: 10px
+
+// About
+ul.contact
+  color: #7e8c9c
+  font-size: 15px
+  margin-bottom: 0.5em
+  a
+    color: #7e8c9c
+    border: 0
+  a:hover
+    border-bottom: 1px solid
+  li
+    float: left
+    width: 33%
+    text-align: center
+    span
+      font-size: 22px
+      text-transform: lowercase
+      position: relative
+      top: -1px
+
+ul.contact.two li
+  width: 49%
 
 // Pagination
 =paginationBorder(!color = #bbb)
-	border= 2px "solid" !color
+  border= 2px "solid" !color
 
 div.pagination
-	a, span
-		padding: 2px 6px
-		margin-right: 0.2em
-	a
-		+paginationBorder()
-	a:hover
-		text-decoration: none
-		background= !linkColor
-		border-color= !linkColor
-		color: #fff
-		text-shadow: none
-	a.next_page, a.prev_page
-		border: 0
-	a.next_page:hover, a.prev_page:hover
-		background: none
-		border: 0
-		text-decoration: underline
-		color= !linkColor
-	span
-		+paginationBorder()
-	span.disabled
-		color: #ccc
-		border-color: transparent
-	span.current
-		background: #eee
-		color: #333
-		+paginationBorder(#fff)
+  text-align: center
+  a, span
+    padding: 2px 6px
+    margin-right: 0.2em
+  a
+    +paginationBorder()
+  a:hover
+    text-decoration: none
+    background= !linkColor
+    border-color= !linkColor
+    color: #fff
+    text-shadow: none
+  a.next_page, a.prev_page
+    border: 0
+  a.next_page:hover, a.prev_page:hover
+    background: none
+    border: 0
+    text-decoration: underline
+    color= !linkColor
+  span
+    +paginationBorder()
+  span.disabled
+    color: #ccc
+    border-color: transparent
+  span.current
+    background: #eee
+    color: #333
+    +paginationBorder(#fff)

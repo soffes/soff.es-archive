@@ -20,13 +20,11 @@
       <div id="header" class="clear">
         <h1><%= link_to "Sam Soffes", root_url, :rel => "home" %></h1>
         <h2>Developer, Designer, Musician</h2>
-        <div>
-          <ul class="clear">
-            <li class="blog"><%= link_to "Blog", blog_url %></li>
-            <li class="music"><%= link_to "Music", music_url %></li>
-            <li class="about"><%= link_to "About", about_url %></li>
-          </ul>
-        </div>
+        <ul>
+          <li class="blog"><%= link_to "Blog", blog_url %></li>
+          <li class="music"><%= link_to "Music", music_url %></li>
+          <li class="about"><%= link_to "About", about_url %></li>
+        </ul>
       </div>
       <%- flash.each do |name, msg| -%>
         <%= content_tag :div, msg, :class => "flash #{name}" %>

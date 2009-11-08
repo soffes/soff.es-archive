@@ -4,4 +4,4 @@ config/*.yml
 tmp
 .sass-cache
 log/*.log
-db/*.db
+db/*.sqlite3

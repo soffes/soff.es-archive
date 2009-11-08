@@ -1,0 +1,55 @@
+/* line 1, ../../app/stylesheets/iphone.sass */
+body {
+  width: 320px;
+  font-size: 0.9em; }
+
+/* line 5, ../../app/stylesheets/iphone.sass */
+div.wrapper {
+  width: 280px;
+  padding: 0 20px 1em; }
+
+/* line 9, ../../app/stylesheets/iphone.sass */
+div#header {
+  margin: 1em 0; }
+  /* line 11, ../../app/stylesheets/iphone.sass */
+  div#header h1 {
+    float: none;
+    margin: 0; }
+  /* line 14, ../../app/stylesheets/iphone.sass */
+  div#header ul {
+    float: none;
+    margin: 0; }
+    /* line 17, ../../app/stylesheets/iphone.sass */
+    div#header ul li {
+      width: 93px;
+      margin: 1em 0 0; }
+
+/* line 21, ../../app/stylesheets/iphone.sass */
+div#footer p span {
+  float: left; }
+
+/* line 25, ../../app/stylesheets/iphone.sass */
+form input.text, form textarea {
+  width: 16em; }
+
+/* line 28, ../../app/stylesheets/iphone.sass */
+div#music-art, div#music-about {
+  float: none; }
+
+/* line 31, ../../app/stylesheets/iphone.sass */
+div#music-art {
+  width: 260px;
+  height: 260px;
+  margin-bottom: 1em; }
+  /* line 35, ../../app/stylesheets/iphone.sass */
+  div#music-art img {
+    width: 260px;
+    height: 260px; }
+
+/* line 39, ../../app/stylesheets/iphone.sass */
+div#music-about {
+  margin-left: 0; }
+
+/* line 42, ../../app/stylesheets/iphone.sass */
+ul.tracks li span {
+  display: none; }

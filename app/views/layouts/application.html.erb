@@ -1,22 +1,47 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title><%= h(yield(:title) || "Untitled") %></title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>samsoff.es<%=h(yield(:title)) ? " - "+h(yield(:title)) : "" %></title>
+    <%= feed_tag "samsoff.es", "http://feeds.feedburner.com/samsoffes/blog" %>
+    <%= feed_tag "The Experiment", "http://feeds.feedburner.com/samsoffes/the-experiment" %>
     <%= stylesheet_link_tag 'application' %>
-    <%= yield(:head) %>
+    <%- if iphone? -%>
+    <%= stylesheet_link_tag "iphone.css", :media => "only screen and (max-device-width: 480px)" %>
+    <meta name="viewport" content="width=320, user-scalable=no" />
+    <%- end -%>
+    <%= javascript_include_tag "application" %>
+    <%= yield(:head) %>    
   </head>
   <body>
-    <div id="container">
+    <div id="border"></div>
+    <div class="wrapper">
+      <div id="header" class="clear">
+        <h1><a href="/">sam<span>soff.es</span></a></h1>
+        <div>
+          <ul class="clear">
+            <li class="blog"><a href="/">Blog</a></li>
+            <li class="music"><a href="/music.html">Music</a></li>
+            <li class="about"><a href="/about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+            
       <%- flash.each do |name, msg| -%>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+        <%= content_tag :div, msg, :class => "flash #{name}" %>
       <%- end -%>
-      
-      <%- if show_title? -%>
-        <h1><%=h yield(:title) %></h1>
-      <%- end -%>
-      
       <%= yield %>
+
     </div>
-  </body>
+    <div id="footer" class="wrapper">
+      <p class="clear">
+          <span>Copyright <a href="/">Sam Soffes</a> 2005-2009.</span>
+          <span><a href="http://github.com/samsoffes/samsoff.es" target="_blank" rel="external nofollow">View source on GitHub</a>.</span>
+      </p>
+    </div>
+    <%- if iphone? -%>
+    <%= javascript_include_tag "iphone" %>
+    <%- end -%>
+    <%= google_analytics "UA-5609322-1" %>
+   </body>
 </html>

@@ -1,0 +1,32 @@
+=paginationBorder(!color = #bbb)
+  border= 2px "solid" !color
+
+div.pagination
+  text-align: center
+  a, span
+    padding: 2px 6px
+    margin-right: 0.2em
+  a
+    +paginationBorder()
+  a:hover
+    text-decoration: none
+    background= !linkColor
+    border-color= !linkColor
+    color: #fff
+    text-shadow: none
+  a.next_page, a.prev_page
+    border: 0
+  a.next_page:hover, a.prev_page:hover
+    background: none
+    border: 0
+    text-decoration: underline
+    color= !linkColor
+  span
+    +paginationBorder()
+  span.disabled
+    color: #ccc
+    border-color: transparent
+  span.current
+    background: #eee
+    color: #333
+    +paginationBorder(#fff)

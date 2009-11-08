@@ -17,14 +17,14 @@ class Post < ActiveRecord::Base
     Comment.approved_by_post(self)
   end
   
-  def self.search(search = nil, page = 1)
+  def self.search(search = nil, page = 1, limit = @@per_page)
     conditions = nil
     if search
       sanitized = self.class.sanitize(search)
       conditions = "title LIKE #{sanitized} OR content LIKE #{sanitized}"
     end
     
-    paginate :page => page, :conditions => conditions, :order => "created_at DESC"
+    paginate :page => page, :conditions => conditions, :order => "created_at DESC", :per_page => limit
   end
   
   def to_param

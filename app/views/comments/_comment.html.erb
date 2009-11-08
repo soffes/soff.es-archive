@@ -1,4 +1,0 @@
-<li class="comment" id="comment_<%= comment.id %>">
-  <h3><%= comment.website == '' ? comment.name : "<a href=\"#{comment.website}\">#{comment.name}</a>" %> <small><%= time_ago_in_words(comment.created_at) %> ago</small></h3>
-  <div class="content"><%= markdown comment.body %></div>
-</li>

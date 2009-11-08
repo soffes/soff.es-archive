@@ -1,10 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :categories
-
 
   # Blog
-  map.resources :posts, :as => "post", :has_many => :comments
+  map.resources :posts, :has_many => :comments
   map.blog "blog", :controller => "posts"
+  map.resources :categories
   
   # Static Pages
   map.root :controller => "home"

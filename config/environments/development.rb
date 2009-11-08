@@ -15,3 +15,6 @@ config.action_controller.perform_caching             = false
 
 # Don't care if the mailer can't send
 config.action_mailer.raise_delivery_errors = false
+
+config.gem "haml", :version => ">= 2.2.12", :source => "http://gemcutter.org"
+config.gem "compass", :version => ">= 0.8.17", :source => "http://gemcutter.org"

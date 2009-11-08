@@ -107,13 +107,11 @@ h1
     border: 0
 
 h2
-  background= image_url("lightning.png") "no-repeat 0 17px"
   color: #445b75
   font:
     size: 26px
     weight: bold
     family= !Nilland
-  padding-left: 40px
   text-transform: lowercase
   margin-bottom: 4px
 
@@ -280,6 +278,9 @@ form#new_comment
   .loading
     float: left
     margin-top: 10px
+
+// Pagination
+@import partials/pagination.sass
 
 // Music
 div#music-art

@@ -9,8 +9,10 @@
     <%- if iphone? -%>
     <%= stylesheet_link_tag "iphone.css", :media => "only screen and (max-device-width: 480px)" %>
     <meta name="viewport" content="width=320, user-scalable=no" />
+    <%- else -%>
+    <meta name="viewport" content="width=640" />
     <%- end -%>
-    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "application" -%>
     <%= yield(:head) %>    
   </head>
   <body>
@@ -38,7 +40,7 @@
       </p>
     </div>
     <%- if iphone? -%>
-    <%= javascript_include_tag "iphone" %>
+    <%= javascript_include_tag "iphone" -%>
     <%- end -%>
     <%= google_analytics "UA-5609322-1" %>
    </body>

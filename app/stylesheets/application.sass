@@ -8,14 +8,14 @@
 // General
 body
   background: #fff
-  font-size: 15px
+  font-size: 17px
 
 body *
   line-height: 1.6em
 
 body, input, textarea
   color= !textColor
-  font-family= !Helvetica
+  font-family= !HelveticaNeueLight
   font-weight: 300
 
 a
@@ -269,6 +269,7 @@ div.post
 
 // Comments
 div#comments_container
+  margin-bottom: 2em
   h2.no-comments
     color: #aaa
   ul
@@ -281,14 +282,15 @@ div#comments_container
         font-size: 0.9em
 
 form#new_comment
-  background: #fff
+  background= !lightBrownColor
+  border-top= 1px "solid" !lightGrayColor
   padding: 20px
   h2
     margin-top: 0
     padding-top: 0
   p:last-child
     margin-bottom: 0
-  input.submit
+  input[type=submit]
     float: left
   .loading
     float: left

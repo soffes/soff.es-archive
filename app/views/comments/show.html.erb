@@ -1,0 +1,40 @@
+<% title "Comment" %>
+
+<p>
+  <strong>Post:</strong>
+  <%=h @comment.post_id %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%=h @comment.name %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%=h @comment.email %>
+</p>
+<p>
+  <strong>Site Url:</strong>
+  <%=h @comment.site_url %>
+</p>
+<p>
+  <strong>Content:</strong>
+  <%=h @comment.content %>
+</p>
+<p>
+  <strong>User Ip:</strong>
+  <%=h @comment.user_ip %>
+</p>
+<p>
+  <strong>User Agent:</strong>
+  <%=h @comment.user_agent %>
+</p>
+<p>
+  <strong>Referrer:</strong>
+  <%=h @comment.referrer %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_comment_path(@comment) %> |
+  <%= link_to "Destroy", @comment, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", comments_path %>
+</p>

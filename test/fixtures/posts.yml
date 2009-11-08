@@ -1,0 +1,9 @@
+one:
+  title: MyString
+  body: MyText
+  active: false
+
+two:
+  title: MyString
+  body: MyText
+  active: false

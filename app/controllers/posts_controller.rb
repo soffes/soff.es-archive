@@ -1,7 +1,10 @@
 class PostsController < ApplicationController
   
   def index
-    @posts = Post.search(nil, params[:page])
+    respond_to do |format|
+      format.html { @posts = Post.search(nil, params[:page]) }
+      format.rss { @posts = Post.search(nil, params[:page], 20) }
+    end
   end
   
   def show

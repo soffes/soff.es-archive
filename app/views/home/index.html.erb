@@ -2,29 +2,43 @@
 
 <div class="two-columns left" style="margin-bottom:2em">
   <div>
-    <div class="post home">
-      <h2><%= link_to "Recent Post: Moving to Dallas", blog_url %></h2>
-      <p class="meta"><%= link_to "Posted 10 days ago", blog_url %></p>
-      <p>I'm moving to Dallas. For real. I know I've said I'm moving here and there over the past few months, but I already have a place to live and such in Dallas so it's official this time...<br /><%= link_to "Read post &#187;", blog_url %></p>
+    <% div_for @recent_post, :class => "post home" do %>
+      <div class="title clear">
+        <h2><%= link_to h(@recent_post.title), @recent_post %></h2>
+        <p class="meta">
+          Posted <%= link_to "#{time_ago_in_words(@recent_post.created_at)} ago", @recent_post %>
+          <%- if @recent_post.category_id -%>
+          in <%= link_to @recent_post.category.name, @recent_post.category %>
+          <%- end -%>
+          </p>
       </div>
+    	<div class="content">
+    		<%= markdown @recent_post.content_excerpt %>
+    		<p class="more"><%= link_to "Read more &#187;", @recent_post %>
+    	</div>
+    <% end %>
   </div>
   <div>
     <h3>About Me</h3>
-    <p>My name is Sam Soffes. I create amazing iPhone, Mac, and web software (or anything you could ever imagine) at Tasteful Works.<br /><%= link_to "Read more &#187;", about_url %></p>
+    <p>My name is Sam Soffes. I create amazing iPhone, Mac, and web software (or anything you could ever imagine) at Tasteful Works.</p>
+    <p class="more"><%= link_to "Read more &#187;", about_url %></p>
   </div>
 </div>
 
 <div class="three-columns">
   <div>
     <h3>Recent Music</h3>
-    <p>I released a song a couple of weeks ago. I've been kinda busy, but I really wanted to get some feels out.<br /><%= link_to "Listen &#187;", music_url %></p>
+    <p>I released a song a couple of weeks ago. I've been kinda busy, but I really wanted to get some feels out.</p>
+    <p class="more"><%= link_to "Listen &#187;", music_url %></p>
   </div>
   <div>
     <h3>Recent Code</h3>
-    <p>Lately I've been working on my blog a lot. I moved it back to Rails so I can play with it.<br /><%= link_to "Read post &#187;", blog_url %></p>
+    <p>Lately I've been working on my blog a lot. I moved it back to Rails so I can play with it.</p>
+    <p class="more"><%= link_to "Read post &#187;", blog_url %></p>
   </div>
   <div>
     <h3>Current Project</h3>
-    <p>I'm currently working on some fun little holiday apps at Tasteful Works.<br /><%= link_to "Read post &#187;", blog_url %></p>
+    <p>I'm currently working on some fun little holiday apps at Tasteful Works.</p>
+    <p class="more"><%= link_to "Read post &#187;", blog_url %></p>
   </div>
 </div>

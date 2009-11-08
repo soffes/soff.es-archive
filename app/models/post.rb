@@ -1,11 +1,15 @@
 class Post < ActiveRecord::Base
-  attr_accessible :title, :content, :category_id, :active
-  attr_readonly :permalink
+
+  attr_accessible :title, :content, :permalink, :category_id, :active
+  cattr_reader :per_page
+  
   has_many :comments, :dependent => :destroy
   belongs_to :category
-  validates_presence_of :title, :content
-  before_create :set_permalink
-  cattr_reader :per_page
+  
+  validates_presence_of :title, :content, :permalink
+  validates_uniqueness_of :permalink  
+  
+  before_validation :generate_permalink
 
   @@per_page = 3
 
@@ -27,10 +31,14 @@ class Post < ActiveRecord::Base
     permalink
   end
   
+  def content_excerpt
+    content.split("\n\n").first
+  end
+  
   protected
   
-  def set_permalink
-    self.permalink = title.downcase.gsub('\'', '').gsub(/[^0-9a-z]+/, ' ').strip.gsub(/\s+/, '-') if title && !permalink
+  def generate_permalink
+    self.permalink = title.downcase.gsub('\'', '').gsub(/[^0-9a-z]+/, ' ').strip.gsub(/\s+/, '-')
   end
 
 end

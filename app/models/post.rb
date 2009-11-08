@@ -31,10 +31,6 @@ class Post < ActiveRecord::Base
     permalink
   end
   
-  def content_excerpt
-    content.split("\n\n").first
-  end
-  
   protected
   
   def generate_permalink

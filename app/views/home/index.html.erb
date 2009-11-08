@@ -13,32 +13,28 @@
           </p>
       </div>
     	<div class="content">
-    		<%= markdown @recent_post.content_excerpt %>
-    		<p class="more"><%= link_to "Read more &#187;", @recent_post %>
+    		<%= markdown(@recent_post.content).split('</p>').first %>
+    		<br /><%= link_to "Read more &#187;", @recent_post, :class => "more" %></p>
     	</div>
     <% end %>
   </div>
   <div>
     <h3>About Me</h3>
-    <p>My name is Sam Soffes. I create amazing iPhone, Mac, and web software (or anything you could ever imagine) at Tasteful Works.</p>
-    <p class="more"><%= link_to "Read more &#187;", about_url %></p>
+    <p>My name is Sam Soffes. I create amazing iPhone, Mac, and web software (or anything you could ever imagine) at Tasteful Works.<br /><%= link_to "Read more &#187;", about_url, :class => "more" %></p>
   </div>
 </div>
 
 <div class="three-columns">
   <div>
     <h3>Recent Music</h3>
-    <p>I released a song a couple of weeks ago. I've been kinda busy, but I really wanted to get some feels out.</p>
-    <p class="more"><%= link_to "Listen &#187;", music_url %></p>
+    <p>I released a song a couple of weeks ago. I've been kinda busy, but I really wanted to get some feels out.<br /><%= link_to "Listen &#187;", music_url, :class => "more" %></p>
   </div>
   <div>
     <h3>Recent Code</h3>
-    <p>Lately I've been working on my blog a lot. I moved it back to Rails so I can play with it.</p>
-    <p class="more"><%= link_to "Read post &#187;", blog_url %></p>
+    <p>Lately I've been working on my blog a lot. I moved it back to Rails so I can play with it.<br /><%= link_to "Read post &#187;", blog_url, :class => "more" %></p>
   </div>
   <div>
     <h3>Current Project</h3>
-    <p>I'm currently working on some fun little holiday apps at Tasteful Works.</p>
-    <p class="more"><%= link_to "Read post &#187;", blog_url %></p>
+    <p>I'm currently working on some fun little holiday apps at Tasteful Works.<br /><%= link_to "Read post &#187;", blog_url, :class => "more" %></p>
   </div>
 </div>

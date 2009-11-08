@@ -7,7 +7,7 @@ module ApplicationHelper
   end
   
   def iphone?
-    request.user_agent.include?("iPhone")
+    false #request ? request.user_agent.include?("iPhone") : false
   end
 
 end

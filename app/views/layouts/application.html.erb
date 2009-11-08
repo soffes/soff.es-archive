@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <title>samsoff.es<%=h(yield(:title)) ? " - "+h(yield(:title)) : "" %></title>
+    <title>Sam Soffes<%=yield(:title) ? " - "+h(yield(:title)) : "" %></title>
     <%= feed_tag "samsoff.es", "http://feeds.feedburner.com/samsoffes/blog" %>
     <%= feed_tag "The Experiment", "http://feeds.feedburner.com/samsoffes/the-experiment" %>
     <%= stylesheet_link_tag 'application' %>
@@ -16,10 +16,10 @@
     <%= yield(:head) %>    
   </head>
   <body>
-    <div id="border"></div>
     <div class="wrapper">
       <div id="header" class="clear">
-        <h1><%= link_to "sam<span>soff.es</span>", root_url, :rel => "home" %></h1>
+        <h1><%= link_to "Sam Soffes", root_url, :rel => "home" %></h1>
+        <h2>Developer, Designer, Musician</h2>
         <div>
           <ul class="clear">
             <li class="blog"><%= link_to "Blog", blog_url %></li>

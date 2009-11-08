@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   end
   
   def show
-    @post = params[:slug] ? Post.find_by_slug(params[:slug]) : Post.find(params[:id])
+    @post = Post.find_by_permalink(params[:id])
   end
   
   def new

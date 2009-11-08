@@ -1,8 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :categories
+
 
   # Blog
-  map.resources :posts, :has_many => :comments
-  map.post_slug "post/:slug", :controller => "posts", :action => "show"
+  map.resources :posts, :as => "post", :has_many => :comments
   map.blog "blog", :controller => "posts"
   
   # Static Pages

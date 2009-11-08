@@ -1,10 +1,10 @@
 class Post < ActiveRecord::Base
-
-  attr_accessible :title, :content, :slug, :active
-
+  attr_accessible :title, :content, :category_id, :active
+  attr_readonly :permalink
   has_many :comments, :dependent => :destroy
-  validates_presence_of :title, :content, :slug
-  validates_uniqueness_of :slug
+  belongs_to :category
+  validates_presence_of :title, :content
+  before_create :set_permalink
   cattr_reader :per_page
 
   @@per_page = 3
@@ -21,6 +21,16 @@ class Post < ActiveRecord::Base
     end
     
     paginate :page => page, :conditions => conditions, :order => "created_at DESC"
+  end
+  
+  def to_param
+    permalink
+  end
+  
+  protected
+  
+  def set_permalink
+    self.permalink = title.downcase.gsub(/[^0-9a-z]+/, ' ').strip.gsub(/\s+/, '-') if title && !permalink
   end
 
 end

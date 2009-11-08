@@ -1,7 +1,5 @@
 class Comment < ActiveRecord::Base
-
   attr_accessible :post_id, :name, :email, :site_url, :content, :user_ip, :user_agent, :referrer
-
   belongs_to :post
   validates_presence_of :name, :content, :post_id
   named_scope :recent, :order => "created_at DESC"

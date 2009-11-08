@@ -1,7 +1,12 @@
 <% div_for post, :class => "post" do %>
   <div class="title clear">
-    <h2><%= link_to h(post.title), post_slug_url(post.slug) %></h2>
-    <p class="meta"><%= link_to "Posted #{time_ago_in_words(post.created_at)} ago", post_slug_url(post.slug) %></p>
+    <h2><%= link_to h(post.title), post %></h2>
+    <p class="meta">
+      Posted <%= link_to "#{time_ago_in_words(post.created_at)} ago", post %>
+      <%- if post.category_id -%>
+      in <%= link_to post.category.name, post.category %>
+      <%- end -%>
+      </p>
   </div>
 	<div class="content">
 		<%= markdown post.content %>

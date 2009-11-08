@@ -13,6 +13,14 @@ class Comment < ActiveRecord::Base
     self.referrer   = request.env['HTTP_REFERER']
   end
   
+  def self.approved
+	  find(:all, :conditions => 'approved = 1', :order => 'created_at')
+	end
+
+	def self.approved_by_post(post)
+	  Comment.find(:all, :conditions => { :approved => true, :post_id => post.id }, :order => 'created_at')
+	end
+  
   private
 
   def add_protocol_to_site_url

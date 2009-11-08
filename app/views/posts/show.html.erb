@@ -1,3 +1,31 @@
 <% title @post.title %>
-
+<% javascript :jquery, "posts" %>
+ 
 <%= render :partial => @post %>
+
+<div id="comments_container">
+  <%- if @post.approved_comments.length == 0 -%>
+  <h2 id="comment_count">No Comments</h2>
+  <p id="no comments">Be awesome and add the first comment. I will read it. Really.</p>
+  <%- else -%>
+  <h2 id="comment_count"><%= pluralize(@post.approved_comments.length, 'Comment') %></h2>
+  <ul id="comments">
+    <%= render :partial => @post.approved_comments %>
+  </ul>
+  <%- end -%>
+</div>
+ 
+<% form_for [@post, Comment.new] do |f| %>
+  <h2>Add A Comment</h2>
+  <dl>
+  	<dt><%= f.label :name, "Your Name" %></dt>
+  	<dd><%= f.text_field :name, :tabindex => 1 %></dd>
+  	<dt><%= f.label :email, "Your Email" %></dt>
+  	<dd><%= f.text_field :email, :tabindex => 2 %></dd>
+  	<dt><%= f.label :site_url, "Your Website <small>optional</small>" %></dt>
+  	<dd><%= f.text_field :site_url, :tabindex => 3 %></dd>
+  </dl>
+  <p><%= f.text_area :content, :tabindex => 4 %></p>
+  <p style="font-size:0.8em">Markdown enabled. <a href="http://daringfireball.net/projects/markdown/basics" target="_blank">Learn how to write Markdown.</a></p>
+	<p class="clear"><%= f.submit "Post Comment", :tabindex => 5 %> <span class="loader"></span></p>
+<% end %>

@@ -30,7 +30,7 @@ class Post < ActiveRecord::Base
   protected
   
   def set_permalink
-    self.permalink = title.downcase.gsub(/[^0-9a-z]+/, ' ').strip.gsub(/\s+/, '-') if title && !permalink
+    self.permalink = title.downcase.gsub('\'', '').gsub(/[^0-9a-z]+/, ' ').strip.gsub(/\s+/, '-') if title && !permalink
   end
 
 end

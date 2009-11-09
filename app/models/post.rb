@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
 
-  attr_accessible :title, :content, :permalink, :category_id, :active
+  attr_accessible :title, :content, :category_id, :active
   cattr_reader :per_page
   
   has_many :comments, :dependent => :destroy
@@ -8,8 +8,8 @@ class Post < ActiveRecord::Base
   
   validates_presence_of :title, :content, :permalink
   validates_uniqueness_of :permalink  
-  
-  before_validation :generate_permalink
+
+  before_validation_on_create :generate_permalink
 
   @@per_page = 3
 

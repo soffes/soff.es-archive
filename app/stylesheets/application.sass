@@ -20,6 +20,10 @@ body, input, textarea
 
 a
   color= !linkColor
+  text-decoration: none
+
+a:hover
+  text-decoration: underline
 
 strong
   font-weight: bold
@@ -136,6 +140,10 @@ div.two-columns:after, div.three-columns:after
 div#header
   margin: 40px 0 60px
   line-height: 1em
+  height: 64px
+  > div
+    float: left
+    width: 245px
   h1
     margin: 0 0 10px
     width: 245px
@@ -158,7 +166,7 @@ div#header
   ul
     float: right
     font-size: 17px
-    margin: 30px 0 0
+    margin: 11px 0 0
     text-transform: lowercase
     li
       float: left
@@ -166,7 +174,7 @@ div#header
       margin: 0 0 0 1.7em
       padding: 0
       a
-        background: transparent no-repeat 0 5px
+        background: transparent no-repeat 0 2px
         padding-left: 22px
         border: 0
     .blog a
@@ -175,9 +183,11 @@ div#header
     .music a
       background-image= image_url("music.png")
       color= !musicColor
+      padding-left: 19px
     .about a
       background-image= image_url("about.png")
       color= !aboutColor
+      padding-left: 20px
     li:first-child
       margin-left: 0
   h3
@@ -207,10 +217,8 @@ div#footer
   text-align: center
   a
     color: #aaa
-    text-decoration: none
   a:hover
     color= !linkColor
-    text-decoration: underline
 
 // Home
 div.post.home
@@ -222,9 +230,6 @@ div.post.home
 
 a.more
   font-size: 0.9em
-  text-decoration: none
-a.more:hover
-  text-decoration: underline
 
 // Posts
 div.post
@@ -234,9 +239,6 @@ div.post
     margin-bottom: 0
     a
       color= !greenColor
-      text-decoration: none
-    a:hover
-      text-decoration: underline
   p.meta
     color= !darkBrownColor
     margin-bottom: 12px
@@ -245,9 +247,6 @@ div.post
     margin-bottom: 0.3em
     a
       color= !darkBrownColor
-      text-decoration: none
-    a:hover
-      text-decoration: underline
   ul, ol
     margin: 0 0 2em 0.5em
     li

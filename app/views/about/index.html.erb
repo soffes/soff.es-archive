@@ -1,5 +1,4 @@
 <%- title "About" -%>
-<%- stylesheet "about" -%>
 
 <h2>What I Do</h2>
 <p>My name is Sam Soffes. I create amazing iPhone, Mac, and web software (or anything you could ever imagine) at <a href="http://tastefulworks.com/" rel="external nofollow">Tasteful Works</a>.</p>
@@ -8,14 +7,11 @@
 <p>I founded <a href="http://trimonix.com/" rel="external nofollow">Trimonix</a> a few years ago and released a <a href="http://trimonix.com/countdown-maker" rel="external nofollow">Mac app</a> (and a <a href="http://trimonix.com/mistletoed" rel="external nofollow">fun little iPhone app</a>). I  used to write <a href="http://youversion.com/iphone" rel="external nofollow">iPhone apps</a> and <a href="http://youversion.com/" rel="external nofollow">large scale web applications</a> at <a href="http://lifechurch.tv/" rel="external nofollow">LifeChurch.tv</a>.
 
 <h2>Contact Me</h2>
-<p>The best way to get in touch with me is email, but here are some alternatives. If you want me to turn your dreams into software, email <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%68%69%72%65%75%73@%74%61%73%74%65%66%75%6c%77%6f%72%6b%73.%63%6f%6d">hireus@tastefulworks.com</a> and we'll get you taken care of.</p>
+<p>The best way to get in touch with me is email, but here are some alternatives. If you want me to turn your dreams into software, email <%= mail_to "hireus@tastefulworks.com", nil, :encode => "hex" %> and we'll get you taken care of.</p>
 
-<ul class="contact clear">
-  <li><span>Read:</span> <a href="http://samsoff.es/">http://samsoff.es</a></li>
-  <li><span>Email:</span> <a href="&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#115;&#97;m&#x40;s&#97;&#x6d;&#x73;&#x6f;f&#x66;&#x2e;&#101;s">&#115;&#97;m&#x40;s&#97;&#x6d;&#x73;&#x6f;f&#x66;&#x2e;&#101;s</a></li>
-  <li><span>Call:</span> <a href="tel:+1-405-935-3653">(415) 935-3653</a></li>
-</ul>
-<ul class="contact two clear">
+<ul class="contact">
+  <li><span>Email:</span> <%= mail_to "sam@samsoff.es", nil, :encode => "hex" %></li>
+  <li><span>Call:</span> <a href="tel:+1-415-935-3653">(415) 935-3653</a></li>
   <li><span>Tweet:</span> <a href="http://twitter.com/samsoffes" rel="external nofollow">samsoffes</a></li>
     <li><span>IM:</span> <a href="gtalk:chat?jid=samsoffes@gmail.com">samsoffes@gmail.com</a></li>
 </ul>

@@ -14,6 +14,9 @@ module NavigationHelpers
     when /path "(.*)"/
       $1
       
+    when /list of posts/
+      posts_path
+      
     when /the show page for (.+)/
       polymorphic_path(model($1))
     

@@ -10,6 +10,9 @@ Feature: Manage Posts
       | Sequence     | Sequence is a game my mom enjoys. |
     When I go to the list of posts
     Then I should see "Connect Four"
+    And I should see "Connect Four is a fun game."
+    And I should see "Sequence"
+    And I should see "Sequence is a game my mom enjoys."
 
   Scenario: Show post
     Given a post exists with title: "Pizza", content: "I enjoy pickles."

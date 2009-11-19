@@ -5,3 +5,4 @@ tmp
 .sass-cache
 log/*.log
 db/*.sqlite3
+public/stylesheets

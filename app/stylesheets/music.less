@@ -1,0 +1,84 @@
+// Shared
+@import "partials/shared";
+
+// Music
+div#music-art {
+  width: 300px;
+  float: left;
+  margin-right: 35px;
+  font-size: 0.9em;
+  color: #555;
+
+  a.album-art {
+    border:	10px solid @lightBrownColor;
+    display: block;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 1em;
+	}
+	
+  a.album-art:hover {
+    border-color: @linkColor;
+	}
+	
+  img {
+    width: 300px;
+    height: 300px;
+	}
+	
+  div {
+    padding-left: 10px;
+	}
+}
+
+div#music-about {
+  margin-left: 20px;
+  line-height: 1.5em;
+  width: 285px;
+  float: left;
+
+  p {
+    font-size: 0.8em;
+	}
+}
+
+div#music {
+  h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+	}
+	
+  ol {
+    margin-bottom: 1em;
+	}
+	
+  li {
+    font-size: 1.1em;
+    margin-bottom: 0.3em;
+    margin-left: 30px;
+	}
+	
+  ol li {
+    list-style: decimal;
+	}
+	
+  ul li {
+    list-style: disc;
+	}
+	
+  li a {
+    font-size: 0.8em;
+    margin-left: 6px;
+	}
+}
+
+div.soundcloud-player {
+  height: 101px;
+  margin: 2px 0;
+  background: url(/images/dots-white.gif) @lightBrownColor no-repeat center;
+  width: 245px;
+
+  > div:first-child {
+    padding: 10px;
+	}
+}

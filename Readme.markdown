@@ -7,10 +7,12 @@ My current blog is still at <http://samsoff.es>. You can see this version at <ht
 ### Goals for new version
 
 * Use [Heroku](http://heroku.com) for hosting
-* Use [Cucumber](http://cukes.info/) for integration testing
+* Use [Cucumber](http://cukes.info) for integration testing
+* Use [RSpec](http://rspec.info) for unit testing
 * New design
 * Cleaner backend
 * Categories
 * New homepage
-* Integrate podcast into app
+* Integrate music podcast into app
+* Create podcast for screencasts
 * Support old URLs and move to new restful URLs

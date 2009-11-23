@@ -14,5 +14,11 @@ My current blog is still at <http://samsoff.es>. You can see this version at <ht
 * Categories
 * New homepage
 * Integrate music podcast into app
+* Move music to [the sky is blue](http://blue.samsoff.es)
+* Implement custom music player
 * Create podcast for screencasts
 * Support old URLs and move to new restful URLs
+* Show recent social activity
+    * [Twitter](http://twitter.com/samsoffes) - most recent tweet
+    * [Last.fm](http://last.fm/user/samsoffes) - most listened to band for this week
+    * [Flickr](http://www.flickr.com/photos/samsoffes) - recent photos

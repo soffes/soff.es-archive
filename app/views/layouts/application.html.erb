@@ -9,15 +9,15 @@
   <body>
     <div class="wrapper">
       <div id="sidebar">
-        <h1><%= link_to "Sam Soffes", root_url, :rel => "home" %></h1>
+        <h1><%= link_to "Sam <span>Soffes</span>", root_url, :rel => "home" %></h1>
         <h2>I write software and make music.</h2>
-        <p>Hello. My name is Sam. I work at Tasteful Works making beautiful iPhone, web, and Mac applications. I occasionally write music and post it at the sky is blue. This is my blog. Enjoy.</p>
+        <p>Hello. My name is Sam. I work at <a href="http://tastefulworks.com" rel="external">Tasteful Works</a> making beautiful iPhone, web, and Mac applications. I occasionally write music and post it at <a href="http://blue.samsoff.es" rel="external">the sky is blue</a>. This is my blog. Enjoy.</p>
         <ul id="nav">
-          <li><%= link_to "Home <span>beautiful beginnings</span>", root_url %></li>
-          <li>Blog random ramblings</li>
-          <li>Music audible anthems</li>
-          <li>Portfolio professional pieces</li>
-          <li>About personal particulars</li>
+          <li><%= link_to "<span>Home</span> beautiful beginnings", root_url %></li>
+          <li><span>Blog</span> random ramblings</li>
+          <li><span>Music</span> audible anthems</li>
+          <li><span>Portfolio</span> professional pieces</li>
+          <li><span>About</span> personal particulars</li>
         </ul>
       </div>
       <div id="content">

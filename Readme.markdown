@@ -18,6 +18,7 @@ My current blog is still at <http://samsoff.es>. You can see this version at <ht
 * Move music to [the sky is blue](http://blue.samsoff.es)
 * Create podcast for screencasts
 * Support old URLs and move to new restful URLs
+* Implement [CanCan](http://github.com/ryanb/cancan) for admin permissions
 * Show recent social activity
     * [Twitter](http://twitter.com/samsoffes) - most recent tweet
     * [Last.fm](http://last.fm/user/samsoffes) - most listened to band for this week

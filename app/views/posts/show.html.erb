@@ -1,22 +1,4 @@
-<p>
-  <b>Title:</b>
-  <%=h @post.title %>
-</p>
-
-<p>
-  <b>Permalink:</b>
-  <%=h @post.permalink %>
-</p>
-
-<p>
-  <b>Body:</b>
-  <%=h @post.body %>
-</p>
-
-<p>
-  <b>Published at:</b>
-  <%=h @post.published_at %>
-</p>
+<%= render :partial => @post %>
 
 
 <%= link_to 'Edit', edit_post_path(@post) %> |

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>Sam Soffes<%=yield(:title) ? " - "+h(yield(:title)) : "" %></title>
+    <%= stylesheet_link_tag 'application' %>
+    <%= yield(:head) %>    
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="sidebar">
+        <h1><%= link_to "Sam Soffes", root_url, :rel => "home" %></h1>
+        <h2>I write software and make music.</h2>
+        <ul id="nav">
+          <li><%= link_to "Home <span>beautiful beginnings</span>", root_url %></li>
+          <li>Blog random ramblings</li>
+          <li>Music audible anthems</li>
+          <li>Portfolio professional pieces</li>
+          <li>About personal particulars</li>
+        </ul>
+      </div>
+      <div id="content">
+        <%- flash.each do |name, msg| -%>
+          <%= content_tag :div, msg, :class => "flash #{name}" %>
+        <%- end -%>
+        <%= yield %>
+        <div id="footer" class="wrapper">
+          &copy; 2009 <%= link_to "Sam Soffes", root_url, :rel => "home" %>.
+          <a href="http://github.com/samsoffes/samsoff.es" rel="external nofollow">View source on GitHub</a>.
+        </div>
+      </div>
+    </div>
+    <%= google_analytics "UA-5609322-1" %>
+   </body>
+</html>

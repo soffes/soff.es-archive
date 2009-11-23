@@ -9,16 +9,21 @@ My current blog is still at <http://samsoff.es>. You can see this version at <ht
 * Use [Heroku](http://heroku.com) for hosting
 * Use [Cucumber](http://cukes.info) for integration testing
 * Use [RSpec](http://rspec.info) for unit testing
+* Use something like [Jammit](http://github.com/documentcloud/jammit) or [Heroku Asset Packager](http://github.com/amasses/heroku_asset_packager) for assets
 * New design
 * Cleaner backend
 * Categories
 * New homepage
 * Integrate music podcast into app
 * Move music to [the sky is blue](http://blue.samsoff.es)
-* Implement custom music player
 * Create podcast for screencasts
 * Support old URLs and move to new restful URLs
 * Show recent social activity
     * [Twitter](http://twitter.com/samsoffes) - most recent tweet
     * [Last.fm](http://last.fm/user/samsoffes) - most listened to band for this week
     * [Flickr](http://www.flickr.com/photos/samsoffes) - recent photos
+
+### Dream goals
+
+* Use [Cappuccino](http://cappuccino.org) for admin
+* Implement custom music player

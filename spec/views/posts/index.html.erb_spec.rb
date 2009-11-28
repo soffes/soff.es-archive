@@ -18,10 +18,10 @@ describe "/posts/index.html.erb" do
     ]
   end
 
-  it "renders a list of posts" do
-    render
-    response.should have_tag("tr>td", "value for title".to_s, 2)
-    response.should have_tag("tr>td", "value for permalink".to_s, 2)
-    response.should have_tag("tr>td", "value for body".to_s, 2)
-  end
+  # it "renders a list of posts" do
+  #   render
+  #   response.should have_tag("tr>td", "value for title".to_s, 2)
+  #   response.should have_tag("tr>td", "value for permalink".to_s, 2)
+  #   response.should have_tag("tr>td", "value for body".to_s, 2)
+  # end
 end

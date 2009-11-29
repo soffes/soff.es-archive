@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  database: samsoffes_development
+  encoding: utf8
+  username: samsoffes
+  password:
+  host: localhost
+
+production:
+  adapter: postgresql
+  database: samsoffes_production
+  encoding: utf8
+  username: samsoffes
+  password:
+  host: localhost
+  
+test: &TEST
+  adapter: postgresql
+  database: samsoffes_test
+  encoding: utf8
+  username: samsoffes
+  password:
+  host: localhost
+
+cucumber:
+  <<: *TEST

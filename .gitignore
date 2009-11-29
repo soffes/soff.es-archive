@@ -1,6 +1,5 @@
 .DS_Store
 *.esproj
-config/*.yml
 tmp
 .sass-cache
 log/*.log

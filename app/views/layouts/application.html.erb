@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>Sam Soffes<%=yield(:title) ? " - "+h(yield(:title)) : "" %></title>
+    <%= stylesheet_link_tag 'application' %>
+    <%= yield(:head) %>    
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="sidebar">
+        <h1><%= link_to "Sam <span>Soffes</span>", root_url, :rel => "home" %></h1>
+        <h2>I write software and make music.</h2>
+        <p>Hello. My name is Sam. I work at <a href="http://tastefulworks.com" rel="external">Tasteful Works</a> making beautiful iPhone, web, and Mac applications. I occasionally write music and post it at <a href="http://blue.samsoff.es" rel="external">the sky is blue</a>. This is my blog. Enjoy.</p>
+        <ul id="nav">
+          <li><%= link_to "<span>Home</span> beautiful beginnings", root_url %></li>
+          <li><span>Blog</span> random ramblings</li>
+          <li><span>Music</span> audible anthems</li>
+          <li><span>Portfolio</span> professional pieces</li>
+          <li><span>About</span> personal particulars</li>
+        </ul>
+      </div>
+      <div id="content">
+        <%- flash.each do |name, msg| -%>
+          <%= content_tag :div, msg, :class => "flash #{name}" %>
+        <%- end -%>
+        <%= yield %>
+        <div id="footer" class="wrapper">
+          &copy; 2009 <%= link_to "Sam Soffes", root_url, :rel => "home" %>.
+          <a href="http://github.com/samsoffes/samsoff.es" rel="external nofollow">View source on GitHub</a>.
+        </div>
+      </div>
+    </div>
+    <%= google_analytics "UA-5609322-1" %>
+   </body>
+</html>

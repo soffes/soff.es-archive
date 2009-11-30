@@ -12,7 +12,7 @@ My current blog is still at <http://samsoff.es>. You can see this version at <ht
 * Use something like [Jammit](http://github.com/documentcloud/jammit) or [Heroku Asset Packager](http://github.com/amasses/heroku_asset_packager) for assets
 * New design
 * Cleaner backend
-* Categories
+* Tags with [virtual attributes](http://railscasts.com/episodes/167-more-on-virtual-attributes)
 * New homepage
 * Integrate music podcast into app
 * Move music to [the sky is blue](http://blue.samsoff.es)

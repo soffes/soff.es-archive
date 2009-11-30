@@ -1,0 +1,25 @@
+<% title "Posts" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Permalink</th>
+    <th>Body</th>
+    <th>Type</th>
+    <th>Published At</th>
+  </tr>
+  <% for post in @posts %>
+    <tr>
+      <td><%=h post.title %></td>
+      <td><%=h post.permalink %></td>
+      <td><%=h post.body %></td>
+      <td><%=h post.type %></td>
+      <td><%=h post.published_at %></td>
+      <td><%= link_to "Show", post %></td>
+      <td><%= link_to "Edit", edit_post_path(post) %></td>
+      <td><%= link_to "Destroy", post, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Post", new_post_path %></p>

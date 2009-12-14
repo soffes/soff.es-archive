@@ -1,7 +1,6 @@
 *~
 *.swp
 .DS_Store
-server/
 pkg/
 bench/
 *cache*/
@@ -9,7 +8,6 @@ log/*
 tmp/*
 db/*.sqlite3
 *.sql
-_site/
 vendor/bundler_gems/*
 !vendor/bundler_gems/cache/
 bin/

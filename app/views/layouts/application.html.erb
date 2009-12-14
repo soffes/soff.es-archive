@@ -21,6 +21,7 @@
         </ul>
       </div>
       <div id="content">
+        <p><strong>Note: This is a massive work in progress. Pretty much everything is broken or incomplete.</strong></p>
         <%- flash.each do |name, msg| -%>
           <%= content_tag :div, msg, :class => "flash #{name}" %>
         <%- end -%>

@@ -1,5 +1,7 @@
 # samsoff.es
 
+**Note: This is a massive work in progress. Pretty much everything is broken or incomplete.**
+
 This is my new blog I am rewriting in Rails. I [moved my blog to Jekyll](http://samsoff.es/post/new-blog-on-github-and-jekyll/) a few weeks ago and really missed playing with a Rails app, so I'm moving it back and starting from scratch.
 
 My current blog is still at <http://samsoff.es>. You can see this version at <http://samsoffes.heroku.com> until I make it live.

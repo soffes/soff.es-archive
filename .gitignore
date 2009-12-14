@@ -8,6 +8,4 @@ log/*
 tmp/*
 db/*.sqlite3
 *.sql
-vendor/bundler_gems/*
-!vendor/bundler_gems/cache/
 bin/

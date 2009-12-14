@@ -18,3 +18,7 @@ only :test do
   gem "pickle", "0.1.23"
   gem "factory_girl", "1.2.3"
 end
+
+only [:staging, :production] do
+  gem "rack-cache", "0.5.2", :require_as => "rack/cache"
+end

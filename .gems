@@ -1,4 +1,0 @@
-rdiscount --version '>= 1.3.5' --source http://gemcutter.org
-will_paginate --version '>= 2.3.11' --source http://gemcutter.org
-refraction --version '>= 0.1.0' --source http://gemcutter.org
-less --version '>= 1.2.12' --source http://gemcutter.org

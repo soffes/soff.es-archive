@@ -3,7 +3,6 @@
 .DS_Store
 pkg/
 bench/
-*cache*/
 log/*
 tmp/*
 db/*.sqlite3

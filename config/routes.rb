@@ -4,5 +4,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :posts
   map.resources :tags
+  
+  map.blog "blog", :controller => "posts"
 
 end

@@ -9,17 +9,17 @@ Refraction.configure do |req|
   end
  
   # Post permalink
-  if req.path =~ /post\/?/
+  if req.path =~ /^\/post\/?/
     req.permanent! "/posts/#{$1}"
   end
  
   # Post permalink
-  if req.path =~ /post\/(.*)/
+  if req.path =~ /^\/post\/(.*)/
     req.permanent! "/posts/#{$1}"
   end
   
   # Home
-  if req.path =~ /home\/?/
+  if req.path =~ /^\/home\/?/
     req.permanent! "/"
   end
   
@@ -34,7 +34,7 @@ Refraction.configure do |req|
   end
   
   # Podcast
-  if req.path =~ /the-experiment\/?/
+  if req.path =~ /^\/the-experiment\/?/
     req.permanent! "http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=292395055"
   end
   

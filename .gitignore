@@ -8,3 +8,4 @@ tmp/*
 db/*.sqlite3
 *.sql
 bin/
+vendor/bundler_gems

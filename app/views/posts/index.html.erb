@@ -1,6 +1,6 @@
 <% title "Blog" %>
 
-<%- if @posts && @posts.count > 0 -%>
+<%- if @posts && @posts.length > 0 -%>
 <%= render :partial => @posts %>
 <%- else -%>
 <p>Nothing to see here. Move along.</p>

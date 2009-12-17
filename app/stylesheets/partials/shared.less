@@ -1,15 +1,25 @@
 // Fonts
-@Helvetica: Helvetica,Arial,sans-serif;
-@HelveticaNeue: HelveticaNeue,'Helvetica Neue',Helvetica,Arial,sans-serif;
-@HelveticaNeueLight: HelveticaNeue-Light,HelveticaNeue,'Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,sans-serif;
-@LucidaGrande: 'Lucida Grande','Lucida Sans Unicode',Arial,Verdana,sans-serif;
+@helvetica: Helvetica,Arial,sans-serif;
+@helvetica-neue: HelveticaNeue,'Helvetica Neue',Helvetica,Arial,sans-serif;
+@helvetica-neue-light: HelveticaNeue-Light,HelveticaNeue,'Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,sans-serif;
+@lucida-grande: 'Lucida Grande','Lucida Sans Unicode',Arial,Verdana,sans-serif;
+@nilland: NillandRegular,HelveticaNeue,'Helvetica Neue',Helvetica,Arial,sans-serif;
+@bistro-script: BistroScriptRegular,'Marker Felt',HelveticaNeue,'Helvetica Neue',Helvetica,Arial,sans-serif;
 
 // Colors
 @text-color: #333;
-@light-blue-color: #349de6;
-@link-color: #0082dd;
-@light-gray-color: #868686;
-@light-yellow-color: #fffeca;
+@link-color: #455b75;
+@link-border-color: #cfdae5;
+@link-hover-color: #92abc1;
+@orange-color: #f05b35;
+@light-blue-color: #01b0f0;
+@blue-color: #1267da;
+@pink-color: #ff358b;
+@blog-color: #e16f09;
+@music-color: #121212;
+@about-color: #276abd;
+@sub-header-color-one: #2f2f2f;
+@sub-header-color-two: #34778f;
 
 // Mix-ins
 .clear-after() {
@@ -18,4 +28,8 @@
   display: block;
   height: 0;
   zoom: 1;
+}
+
+.shadow(@size: 1px) {
+  text-shadow: 0 @size 0 rgba(255, 255, 255, 0.8);
 }

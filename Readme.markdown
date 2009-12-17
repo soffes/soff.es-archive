@@ -10,18 +10,17 @@ My current blog is still at <http://samsoff.es>. You can see this version at <ht
 
 I'm very proud to be using the new [Bundler](http://github.com/wycats/bundler) (which you need to install if you haven't already). I'm also using Postgres. If you don't have it already, you'll need to install it. I wrote [a blog post on how to install Nginx and Postgres](http://samsoff.es/post/running-rails-local-development-with-nginx-postgres-and-passenger-with-homebrew/) that might be helpful. You can skip over the Nginx parts if you want.
 
-Run the following queries to setup the database and user in Postgres:
+Run the following queries to setup the user in Postgres:
 
     $ psql postgres
     # CREATE USER samsoffes SUPERUSER;
-    # CREATE DATABASE samsoffes_development OWNER samsoffes;
-    # CREATE DATABASE samsoffes_test OWNER samsoffes;
     # \q
 
-Now all you need to do to get going, all you need to is bundle and migrate:
+Now all you need to do to get going, all you need to is bundle and setup the database:
 
     $ gem bundle
-    $ rake db:migrate
+    $ rake db:create
+    $ rake db:schema:load
 
 If you have issues getting it up and running, [send me an email](mailto:sam@samsoff.es).
 

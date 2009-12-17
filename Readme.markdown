@@ -24,6 +24,10 @@ Now all you need to do to get going, all you need to is bundle and setup the dat
 
 If you have issues getting it up and running, [send me an email](mailto:sam@samsoff.es).
 
+### Admin
+
+The default credentials for the admin area are `username` and `password`. These are obviously different on production or if you have environment variables for `ADMIN_USERNAME` and `ADMIN_PASSWORD`.
+
 ## Goals for new version
 
 * Use [Heroku](http://heroku.com) for hosting

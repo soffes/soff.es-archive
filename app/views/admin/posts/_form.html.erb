@@ -1,0 +1,24 @@
+<% form_for [:admin, @post] do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :permalink %><br />
+    <%= f.text_field :permalink %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.label :type %><br />
+    <%= f.text_field :type %>
+  </p>
+  <p>
+    <%= f.label :published_at %><br />
+    <%= f.datetime_select :published_at %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

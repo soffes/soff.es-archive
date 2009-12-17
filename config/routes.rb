@@ -1,13 +1,15 @@
 ActionController::Routing::Routes.draw do |map|
 
   map.root :controller => "home"
-
-  map.resources :posts
+  map.resources :posts, :only => [:index, :show]
   map.resources :tags
-  
   map.blog "blog", :controller => "posts"
   map.about "about", :controller => "about"
   map.music "music", :controller => "music"
   map.stats "stats", :controller => "stats"
+  
+  # Admin
+  map.resources :posts, :controller => "admin/posts", :path_prefix => "admin", :name_prefix => "admin_"
+  map.resources :tags, :controller => "admin/tags", :path_prefix => "admin", :name_prefix => "admin_"
 
 end

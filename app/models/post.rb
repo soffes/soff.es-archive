@@ -10,6 +10,10 @@ class Post < ActiveRecord::Base
   def tag_names
     @tag_names || tags.map(&:name).join(' ')
   end
+  
+  def to_param
+    self.permalink
+  end
 
   private
 

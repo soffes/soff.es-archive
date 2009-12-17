@@ -5,7 +5,8 @@ source "http://gemcutter.org"
  
 gem "rails", "2.3.5"
 gem "rack",  "1.0.1"
- 
+gem "postgres"
+
 gem "rdiscount", "1.5.5"
 gem "less", "1.2.12"
 gem "will_paginate", "2.3.11"

@@ -23,4 +23,5 @@ only [:staging, :production] do
   gem "rack-cache", "0.5.2", :require_as => "rack/cache"
 end
 
-disable_system_gems
+# Commented out to eliminate postgres issues
+# disable_system_gems

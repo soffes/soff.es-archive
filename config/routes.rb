@@ -8,5 +8,6 @@ ActionController::Routing::Routes.draw do |map|
   map.blog "blog", :controller => "posts"
   map.about "about", :controller => "about"
   map.music "music", :controller => "music"
+  map.stats "stats", :controller => "stats"
 
 end

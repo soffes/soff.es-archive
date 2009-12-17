@@ -13,7 +13,7 @@
     <div id="border"></div>
     <div class="wrapper">
     	<div id="header" class="clear">
-    		<h1><%= link_to "Sam <span>Soffes</span>", root_url, :rel => "home" %></h1>
+    		<h1><%= link_to "samsoff.es", root_url, :title => "Sam Soffes", :rel => "home" %></h1>
     		<div>
       		<ul class="clear">
       			<li class="blog"><%= link_to "Blog", blog_url %></li>
@@ -29,8 +29,8 @@
     </div>
     <div id="footer" class="wrapper">
     	<p class="clear">
-    	    <span>Copyright <a href="/">Sam Soffes</a> 2005-2009.</span>
-    	    <span><a href="http://github.com/samsoffes/samsoffes.github.com" target="_blank" rel="external nofollow">View source on GitHub</a>.</span>
+    	    <span>Copyright <%= link_to "Sam Soffes", root_url, :rel => "home" %> 2005-2009.</span>
+    	    <span><a href="http://github.com/samsoffes/samsoff.es" target="_blank" rel="external nofollow">View source on GitHub</a>. <%#See some <%= link_to "cool stats", stats_url >.%></span>
       </p>
     </div>
     <%= google_analytics "UA-5609322-1" %>

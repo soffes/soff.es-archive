@@ -3,6 +3,7 @@ class Post < ActiveRecord::Base
   
   has_many :taggings, :dependent => :destroy
   has_many :tags, :through => :taggings
+  has_many :comments
   validates_presence_of :title, :permalink, :body
   attr_writer :tag_names
   after_save :assign_tags

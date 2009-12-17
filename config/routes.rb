@@ -11,6 +11,7 @@ ActionController::Routing::Routes.draw do |map|
   map.stats "stats", :controller => "stats"
   
   # Admin
+  map.admin "admin", :controller => "admin"
   map.resources :posts, :controller => "admin/posts", :path_prefix => "admin", :name_prefix => "admin_"
   map.resources :comments, :controller => "admin/comments", :path_prefix => "admin", :name_prefix => "admin_"
   map.resources :tags, :controller => "admin/tags", :path_prefix => "admin", :name_prefix => "admin_"

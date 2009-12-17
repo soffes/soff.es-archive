@@ -2,6 +2,10 @@ class AdminController < ApplicationController
   
   before_filter :authenticate
 
+  def index
+    redirect_to admin_posts_url
+  end
+
   protected
 
   def authenticate

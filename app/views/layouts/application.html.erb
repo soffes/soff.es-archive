@@ -4,7 +4,8 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <title>Sam Soffes<%=yield(:title) ? " - "+h(yield(:title)) : "" %></title>
     <%= stylesheet_link_tag 'application' %>
-    <%= yield(:head) %>    
+    <%= yield(:head) %>
+    <link href="<%= rss_url %>" rel="alternate" title="samsoff.es" type="application/atom+xml" />
   </head>
   <body>
     <div class="wrapper">

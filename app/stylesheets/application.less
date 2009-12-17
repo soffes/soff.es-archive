@@ -3,7 +3,7 @@
  
 // Easy clear
 .clear:after {
-  .clearAfter();
+  .clear-after();
 }
  
 // General
@@ -45,8 +45,7 @@ abbr {
   cursor: help;
 }
  
-p {
-  line-height: 1.5em;
+p, ol, ul {
   margin: 0 0 1em;
 }
  
@@ -254,4 +253,71 @@ div.post {
  
 // Form
 @import "partials/form";
- 
+
+// About
+ul.social-media {
+  height: 24px;
+  
+  li {
+    width: 24px;
+    height: 24px;
+    margin: 0 4px 0 0;
+    float: left;
+  }
+  
+  a {
+    text-indent: -9009em;
+    display: block;
+    width: 24px;
+    height: 24px;
+    text-decoration: none;
+  }
+  
+  a.delicious {
+    background-image: url(/images/delicious-24x24.png);
+  }
+  
+  a.email {
+    background-image: url(/images/email-24x24.png);
+  }
+  
+  a.facebook {
+    background-image: url(/images/facebook-24x24.png);
+  }
+  
+  a.feed {
+    background-image: url(/images/feed-24x24.png);
+  }
+  
+  a.flickr {
+    background-image: url(/images/flickr-24x24.png);
+  }
+  
+  a.google {
+    background-image: url(/images/google-24x24.png);
+  }
+  
+  a.lastfm {
+    background-image: url(/images/lastfm-24x24.png);
+  }
+  
+  a.linkedin {
+    background-image: url(/images/linkedin-24x24.png);
+  }
+  
+  a.twitter {
+    background-image: url(/images/twitter-24x24.png);
+  }
+  
+  a.vimeo {
+    background-image: url(/images/vimeo-24x24.png);
+  }
+  
+  a.youtube {
+    background-image: url(/images/youtube-24x24.png);
+  }
+}
+
+ul.social-media:after {
+  .clear-after();
+}

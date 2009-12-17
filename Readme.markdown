@@ -26,7 +26,7 @@ If you have issues getting it up and running, [send me an email](mailto:sam@sams
 
 ### Admin
 
-The default credentials for the admin area are `username` and `password`. These are obviously different on production or if you have environment variables for `ADMIN_USERNAME` and `ADMIN_PASSWORD`.
+The default credentials for the admin area are `admin` and `passw0rd`. These are obviously different on production or if you have environment variables for `ADMIN_USERNAME` and `ADMIN_PASSWORD`.
 
 ## Goals for new version
 

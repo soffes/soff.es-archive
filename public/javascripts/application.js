@@ -1,9 +1,5 @@
-//
-//  application.js
-//
 //  This would be a lot easier with jQuery, but I'm trying 
-//  to keep things quick
-//
+//  to keep things quick and small
 
 function addLoadEvent(func) {
   var oldonload = window.onload;
@@ -47,14 +43,6 @@ function showNoFlashMessageForVideos() {
 // Pop out of frames (I'm looking at you Denver Airport)
 if (top.frames.length != 0) {
   top.location=self.document.location;
-}
-
-// Scroll down on iPhone
-addEventListener('load', function() {
-	setTimeout(hideAddressBar, 0);
-}, false);
-function hideAddressBar() {
-	window.scrollTo(0, 1);
 }
 
 // On DOM load, update videos if no flash

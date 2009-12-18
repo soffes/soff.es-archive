@@ -3,9 +3,8 @@
   <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <title>Sam Soffes<%=yield(:title) ? " - "+h(yield(:title)) : "" %></title>
-    <%= stylesheet_link_tag "application", :cache => true %>
-    <%= javascript_include_tag "application", :cache => true %>
-    <%= javascript_include_tag "iphone", :cache => true %>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application" %>
     <%= yield(:head) %><link href="<%= blog_feed_url %>" rel="alternate" title="samsoff.es" type="application/atom+xml" />
     <link href="<%= podcast_feed_url %>" rel="alternate" title="The Experiment Podcast" type="application/rss+xml" />
     <meta name="viewport" content="width=320, user-scalable=no" />

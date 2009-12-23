@@ -1,6 +1,6 @@
 @import "shared";
  
-.paginationBorder(@color: #ddd) {
+.pagination_border(@color: #ddd) {
   border: 2px solid @color;
 }
  
@@ -13,14 +13,14 @@ div.pagination {
   }
   
   a {
-    .paginationBorder();
+    .pagination_border();
     text-decoration: none;
   }
   
   a:hover {
     text-decoration: none;
-    background: @link-color;
-    border-color: @link-color;
+    background: @link_color;
+    border-color: @link_color;
     color: #fff;
     text-shadow: none;
   }
@@ -33,11 +33,11 @@ div.pagination {
     background: none;
     border: 0;
     text-decoration: underline;
-    color: @link-color;
+    color: @link_color;
   }
   
   span {
-    .paginationBorder();
+    .pagination_border();
   }
   
   span.disabled {
@@ -48,6 +48,6 @@ div.pagination {
   span.current {
     background: #eee;
     color: #333;
-    .paginationBorder(#eee);
+    .pagination_border(#eee);
   }
 }

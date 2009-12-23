@@ -3,7 +3,7 @@
  
 // Easy clear
 .clear:after {
-  .clear-after();
+  .clear_after();
 }
 
 // Fonts
@@ -31,19 +31,19 @@ body * {
 }
 
 body, input, textarea {
-  font-family: @helvetica-neue-light;
-  color: @text-color;
+  font-family: @helvetica_neue_light;
+  color: @text_color;
 }
 
 a { 
-  border-bottom: 1px dotted @link-border-color;
-  color: @link-color;
+  border-bottom: 1px dotted @link_border_color;
+  color: @link_color;
   text-decoration: none;
 }
 
 a:hover {
   border-bottom: 1px solid;
-  color: @link-hover-color;
+  color: @link_hover_color;
 }
 
 strong {
@@ -117,18 +117,18 @@ code {
 }
 
 h1 {
-  font-family: @bistro-script;
+  font-family: @bistro_script;
   font-size: 68px;
   margin: 50px 0;
-  color: @orange-color;
+  color: @orange_color;
   
   a {
-    color: @orange-color;
+    color: @orange_color;
     border: 0;
   }
   
   a:hover {
-    color: @orange-color;
+    color: @orange_color;
     border: 0;
   }
 }
@@ -146,7 +146,7 @@ h2 {
 h3 {
   font-size: 1.3em;
   margin-bottom: 0.2em;
-  color: @pink-color;
+  color: @pink_color;
 }
 
 h4 {
@@ -211,17 +211,17 @@ div#header {
       
     .blog a {
       background-image: url(/images/blog.png);
-      color: @blog-color;
+      color: @blog_color;
     }
     
     .music a {
       background-image: url(/images/music.png);
-      color: @music-color;
+      color: @music_color;
     }
     
     .about a {
       background-image: url(/images/about.png);
-      color: @about-color;
+      color: @about_color;
     }
     
     li:first-child {
@@ -247,7 +247,7 @@ div#header {
   }
   
   h3 {
-    font-family: @helvetica-neue-light;
+    font-family: @helvetica_neue_light;
     font-size: 15px;
     font-weight: 300;
     margin: 15px 0 0;
@@ -256,12 +256,12 @@ div#header {
     opacity: 0.7;
     
     a {
-      color: @sub-header-color-one;
+      color: @sub_header_color_one;
       border: 0;
     }
     
     a.music {
-      color: @sub-header-color-two;
+      color: @sub_header_color_two;
     }
     
     a:hover {
@@ -282,7 +282,7 @@ div#footer {
   }
   
   a:hover {
-    color: @link-hover-color;
+    color: @link_hover_color;
   }
 }
 
@@ -306,7 +306,7 @@ div.hd-video {
 @import "partials/form";
 
 // Posts
-div.post {
+.post {
   background: url(/images/dash.png) no-repeat bottom center;
   padding-bottom: 2em;
   margin-bottom: 2em;
@@ -320,7 +320,7 @@ div.post {
   }
   
   p.meta {
-    color: @light-blue-color;
+    color: @light_blue_color;
     margin-bottom: 12px;
   }
   
@@ -355,6 +355,14 @@ div.post {
   
   div.video.wide.youtube {
     height: 372px;
+  }
+  
+  ul.actions {
+    
+  }
+  
+  ul.actions:after {
+    .clear_after();
   }
 }
 
@@ -444,7 +452,7 @@ div#music-art {
   }
   
   a.album-art:hover {
-    border-color: @link-color;
+    border-color: @link_color;
   }
   
   img {
@@ -530,7 +538,7 @@ ul.contact {
     text-align: center;
 
     span {
-      font-family: @bistro-script;
+      font-family: @bistro_script;
       font-size: 20px;
       text-transform: lowercase;
       position: relative;
@@ -615,5 +623,5 @@ ul.social-media {
 }
 
 ul.social-media:after {
-  .clear-after();
+  .clear_after();
 }

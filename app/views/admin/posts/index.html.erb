@@ -1,25 +1,17 @@
 <% title "Posts" %>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Permalink</th>
-    <th>Body</th>
-    <th>Type</th>
-    <th>Published At</th>
-  </tr>
-  <% for post in @posts %>
-    <tr>
-      <td><%=h post.title %></td>
-      <td><%=h post.permalink %></td>
-      <td><%=h post.body %></td>
-      <td><%=h post.type %></td>
-      <td><%=h post.published_at %></td>
-      <td><%= link_to "Show", [:admin, post] %></td>
-      <td><%= link_to "Edit", edit_admin_post_path(post) %></td>
-      <td><%= link_to "Destroy", [:admin, post], :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-  <% end %>
-</table>
+<ol>
+<% for post in @posts %>
+  <li class="post">
+    <h2><%= post.title %></h2>
+    <p class="meta">posted <%= time_ago_in_words post.published_at %> ago</p>
+    <ul class="actions">
+      <li><%= link_to "Show", [:admin, post] %></li>
+      <li><%= link_to "Edit", edit_admin_post_path(post) %></li>
+      <li><%= link_to "Destroy", [:admin, post], :confirm => 'Are you sure?', :method => :delete %></li>
+    </ul>
+  </li>
+<% end %>
+</ul>
 
 <p><%= link_to "New Post", new_admin_post_path %></p>

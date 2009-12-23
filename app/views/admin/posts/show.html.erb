@@ -1,28 +1,17 @@
-<% title "Post" %>
+<% title "#{@post.title}" %>
 
-<p>
-  <strong>Title:</strong>
-  <%=h @post.title %>
-</p>
-<p>
-  <strong>Permalink:</strong>
-  <%=h @post.permalink %>
-</p>
-<p>
-  <strong>Body:</strong>
-  <%=h @post.body %>
-</p>
-<p>
-  <strong>Type:</strong>
-  <%=h @post.type %>
-</p>
-<p>
-  <strong>Published At:</strong>
-  <%=h @post.published_at %>
-</p>
-
-<p>
-  <%= link_to "Edit", edit_admin_post_path(@post) %> |
-  <%= link_to "Destroy", [:admin, @post], :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", admin_posts_path %>
-</p>
+<div class="post">
+  <h2><%= link_to @post.title, [:admin, @post] %></h2>
+  <p class="meta<%= @post.unpublished? ? " unpublished" : "" %>">
+    posted <%= @post.published_time_in_words %>
+    <span>
+      <%= link_to "Show", [:admin, @post] %>
+      <%= link_to "Edit", edit_admin_post_path(@post) %>
+      <%= link_to "Destroy", [:admin, @post], :confirm => 'Are you sure?', :method => :delete %>
+      <%- if @post.published? -%>
+      <%= link_to "Published", @post %>
+      <%- end -%>
+    </span>
+  </p>
+  <%= @post.to_html %>
+</div>

@@ -12,12 +12,8 @@
     <%= f.label :body %><br />
     <%= f.text_area :body %>
   </p>
-  <p>
-    <%= f.label :type %><br />
-    <%= f.text_field :type %>
-  </p>
-  <p>
-    <%= f.label :published_at %><br />
+  <p<%= @post.published? ? " class=\"published\"" : "" %>>
+    <%= f.label :published_at, "Published" %> <%= @post.published_time_in_words %><br />
     <%= f.datetime_select :published_at %>
   </p>
   <p><%= f.submit "Submit" %></p>

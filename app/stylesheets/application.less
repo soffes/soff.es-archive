@@ -51,7 +51,7 @@ strong {
 }
 
 em {
-  background-color: #fffeca;
+  background-color: @light_yellow_color;
   padding: 0 0.2em;
 }
 
@@ -170,7 +170,7 @@ div.flash.notice {
 // Layout
 div.wrapper {
   .shadow();
-  width: 640px;
+  width: @width;
   margin: 0 auto 30px;
 }
 
@@ -234,7 +234,7 @@ div#header {
     position: absolute;
     bottom: -24px;
     right: 0;
-    background: #fffeca;
+    background: @light_yellow_color;
     padding: 0 1em 4px 0;
     
     li  {
@@ -322,6 +322,15 @@ div.hd-video {
   p.meta {
     color: @light_blue_color;
     margin-bottom: 12px;
+    
+    span a {
+      font-size: 0.9em;
+      margin-left: 0.7em;
+    }
+  }
+  
+  p.meta.unpublished {
+    color: red;
   }
   
   ul, ol {
@@ -356,13 +365,18 @@ div.hd-video {
   div.video.wide.youtube {
     height: 372px;
   }
+}
+
+form.edit_post {
   
-  ul.actions {
-    
+  textarea {
+    width: @width - 8px;
+    height: 200px;
   }
   
-  ul.actions:after {
-    .clear_after();
+  p.published {
+    background: @light_yellow_color;
+    padding: 10px;
   }
 }
 

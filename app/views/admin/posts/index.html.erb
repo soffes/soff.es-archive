@@ -3,13 +3,19 @@
 <ol>
 <% for post in @posts %>
   <li class="post">
-    <h2><%= post.title %></h2>
-    <p class="meta">posted <%= time_ago_in_words post.published_at %> ago</p>
-    <ul class="actions">
-      <li><%= link_to "Show", [:admin, post] %></li>
-      <li><%= link_to "Edit", edit_admin_post_path(post) %></li>
-      <li><%= link_to "Destroy", [:admin, post], :confirm => 'Are you sure?', :method => :delete %></li>
-    </ul>
+    <h2><%= link_to post.title, [:admin, post] %></h2>
+    <p class="meta<%= post.unpublished? ? " unpublished" : "" %>">
+      posted <%= post.published_time_in_words %>
+      <span>
+        <%= link_to "Show", [:admin, post] %>
+        <%= link_to "Edit", edit_admin_post_path(post) %>
+        <%= link_to "Destroy", [:admin, post], :confirm => 'Are you sure?', :method => :delete %>
+        <%- if post.published? -%>
+        <%= link_to "Published", post %>
+        <%- end -%>
+      </span>
+    </p>
+    <%= post.excerpt %>
   </li>
 <% end %>
 </ul>

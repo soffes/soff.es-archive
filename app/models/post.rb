@@ -1,5 +1,7 @@
+require 'rdiscount'
+
 class Post < ActiveRecord::Base
-  attr_accessible :title, :permalink, :body, :type, :published_at
+  attr_accessible :title, :permalink, :body, :published_at
   
   has_many :taggings, :dependent => :destroy
   has_many :tags, :through => :taggings
@@ -8,12 +10,40 @@ class Post < ActiveRecord::Base
   attr_writer :tag_names
   after_save :assign_tags
 
+  # This could be dangerous. There is a better way.
+  include ActionView::Helpers::DateHelper
+
   def tag_names
     @tag_names || tags.map(&:name).join(' ')
   end
   
   def to_param
     self.permalink
+  end
+  
+  def to_html
+    body.blank? ? "" : RDiscount.new(body).to_html
+  end
+  
+  def excerpt
+    to_html.split("</p>").first+"</p>"
+  end
+  
+  def published?
+    published_at < Time.now
+  end
+  
+  def unpublished?
+    !published?
+  end
+  
+  def published_time_in_words
+    words = time_ago_in_words(published_at)
+    if published?
+      "#{words} ago"
+    else
+      "in #{words}"
+    end
   end
 
   private

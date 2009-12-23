@@ -26,7 +26,7 @@ class Admin::PostsController < AdminController
   end
   
   def update
-    @post = Post.find(params[:id])
+    @post = Post.find_by_permalink(params[:id])
     if @post.update_attributes(params[:post])
       flash[:notice] = "Successfully updated post."
       redirect_to [:admin, @post]

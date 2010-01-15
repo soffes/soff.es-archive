@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>samsoff.es - Pure Awesomeness</title>
+    <link href="http://feeds.feedburner.com/samsoffes/blog" rel="alternate" title="samsoff.es" type="application/atom+xml" />
+    <link href="http://feeds.feedburner.com/samsoffes/the-experiment" rel="alternate" title="The Experiment Podcast" type="application/atom+xml" />
+    <link href="/stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/iphone.css" media="only screen and (max-device-width: 480px)" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/pygments.css" media="screen" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=320, user-scalable=no" />
+  </head>
+  <body>
+    <div id="border"></div>
+    <div class="wrapper">
+    	<div id="header" class="clear">
+    		<h1><a href="/">sam<span>soff.es</span></a></h1>
+    		<div>
+      		<ul class="clear">
+      			<li class="blog"><a href="/">Blog</a></li>
+      			<li class="music"><a href="/music">Music</a></li>
+      			<li class="about"><a href="/about">About</a></li>
+      		</ul>
+      	</div>
+    	</div>
+    	    	
+      
+
+<div class="post">
+  <div class="title">
+    <h2><a href="/post/app-store-rejection">App Store Rejection</a></h2>
+    <p class="meta">Posted 03 Jan 2010</p>
+  </div>
+  <div class="content">
+    <p>December was a month of rejection for me. The <a href="http://itunes.apple.com/us/app/x3watch/id337170101?mt=8">X3watch app</a> another of my client's apps, and <a href="http://lifechurch.tv">LifeChurch.tv</a>'s <a href="http://youversion.com/iphone">Bible app</a> (which I wrote most of but am no longer a part of) got rejected.</p>
+
+<h3>What Changed</h3>
+
+<p><em>Apple changed the rules recently</em>, which is fine. They change the App Store every month or so. Normally, you just click accept to the new terms and go about your business. Do you ever read EULAs? I don't. Basically the same thing.</p>
+
+<p>The important change to note (that they obviously didn't highlight, but expected you to read the massive terms in legal speak) was their new policy on undocumented APIs. Before, <em>private APIs</em> were not allowed and <em>undocumented APIs</em> were just frowned upon but still allowed.</p>
+
+<h4>The Difference Between Private and Undocumented</h4>
+
+<p>Private APIs are basically anything in a Private Framework (found in <code>/System/Library/PrivateFrameworks</code> on the device) like <a href="http://samsoff.es/post/parsing-json-with-the-iphones-private-json-framework/"><code>JSON.framework</code></a> or <code>XMPP.framework</code>. Undocumented APIs are APIs found in one of the public frameworks (found in <code>/System/Library/Frameworks</code> on the device) that are not in the header files or documentations. (You go about finding this with a neat tool called <a href="http://www.codethecode.com/projects/class-dump/">class-dump</a>).</p>
+
+<h3>Why Apple Did This</h3>
+
+<p>Apple's rules for the App Store are intended to keep the apps in it good and the garbage out (one could argue to make developers lives horribly, but I'll leave that to your judgement). The reason for an API being undocumented is that Apple could change it whenever they want because they haven't taken the time to really finalize it. This means that an update could break your app because they changed something. They don't want apps that will randomly break on updates in the store, I get that.</p>
+
+<h3>Why I Care So Much</h3>
+
+<p>I understand Apple's reasoning for this, but I don't like it. There are a lot of things that many apps rely on that are undocumented. Even worse, Apple will let <a href="http://daringfireball.net/2008/11/google_mobile_uses_private_iphone_apis">certain apps use undocumented APIs</a> which is so unfair. <em>We just want consistency Apple.</em></p>
+
+<p>All of the apps that I mentioned earlier that got rejected, got rejected for <code>UIWebView</code> (the view that shows Safari-like content in an app) undocumented APIs. <a href="http://youversion.com/iphone">Bible</a> was using undocumented methods for scrolling. Without the use of these undocumented APIs, the ability to scroll the webview without the user is impossible. <a href="http://itunes.apple.com/us/app/x3watch/id337170101?mt=8">X3watch</a> got rejected for the same thing undocumented API (as well their keywords). My other client's app got rejected for disabling the scrolling of a webview with an undocumented API. So frustrating.</p>
+
+<h3>One Warning</h3>
+
+<p>I contacted my friends at <a href="http://lifechurch.tv">LifeChurch.tv</a> when the <a href="http://itunes.apple.com/us/app/x3watch/id337170101?mt=8">X3watch</a> app got rejected, because I remembered using very similar undocumented APIs in <a href="http://youversion.com/iphone">Bible</a> when I was still working on it. They informed me that they were rejected for using the undocumented APIs that I mentioned earlier. A few minutes later, they received an approval email saying their app had been approved and that they needed to take out the undocumented APIs before submitting another update or it would not be allowed into the store.</p>
+
+<p>I guess it's kinda cool that Apple gives you a little grace if you were already in the store. My client and the <a href="http://itunes.apple.com/us/app/x3watch/id337170101?mt=8">X3watch app</a> weren't already in the store, so they were just rejected.</p>
+
+<h3>Thoughts To Apple</h3>
+
+<p>Apple, a lot of developers rely on undocumented APIs. We understand why you won't allow them. We are just ask that you start documenting popular ones. I know a lot of people really want so see the scrolling and <code>UIScroller</code> in <code>UIWebView</code> documented, methods in <code>UIApplication</code> for airplane mode prompts, and many others. Please start an effort to documented these methods. Any effort to try to more clearly communicate App Store policy changes like this besides having us read the massive agreement would also be very welcome.</p>
+
+  </div>
+</div>
+
+
+
+<div class="post">
+  <div class="title">
+    <h2><a href="/post/running-rails-local-development-with-nginx-postgres-and-passenger-with-homebrew">Running Rails Local Development with Nginx, Postgres, and Passenger with Homebrew</a></h2>
+    <p class="meta">Posted 29 Nov 2009</p>
+  </div>
+  <div class="content">
+    <p>Lately I have been playing with <a href="http://github.com/mxcl/homebrew">Homebrew</a>, an awesome package manager for Mac OS X. I really like not having to worry about dependencies and such when installing. The "rarely sudo" mentality is also pretty great.</p>
+
+<p>When I noticed the <a href="http://nginx.net">Nginx</a> (a sweet open source web server that is way better than Apache) had a <code>--with-passenger</code> option (which is also way awesome), I figured I'd give it a shot. I was using the built-in Apache with <a href="http://modrails.com">Passenger</a> <a href="http://github.com/alloy/passengerpane">Preference Pane</a>, which was pretty cool, but I really like Nginx, so I switched. I also really wanted to start using <a href="http://postgresql.org">PostgreSQL</a> instead of SQLite since all of my stuff is hosted on <a href="http://heroku.com">Heroku</a> and that's what they're running. (I do plan on writing a Preference Pane for doing for this setup eventually.)</p>
+
+<p>Here are the steps to get all of this going. I tried to keep it as simple and clear as possible with lots of examples. It looks like a lot, but it's really quite simple.</p>
+
+<h3>Installation</h3>
+
+<ol>
+<li><p><a href="http://github.com/mxcl/homebrew#readme">Install Homebrew</a> and follow <a href="http://wiki.github.com/mxcl/homebrew/cpan-ruby-gems-and-python-disttools">the steps in the wiki about not sudoing when installing RubyGems</a>.</p></li>
+<li><p>Install the <a href="http://modrails.com">Passenger</a> gem</p>
+
+<pre><code>$ gem install passenger
+</code></pre>
+
+<p>I also had to install the <code>fastthread</code> gem to get Passenger to play nice later. You might not have to do this. If you need to, all you have to do is <code>gem install fastthread</code>.</p></li>
+<li><p>Install <a href="http://nginx.net">Nginx</a> with the <a href="http://modrails.com">Passenger</a> module</p>
+
+<pre><code>$ brew install nginx --with-passenger
+</code></pre>
+
+<blockquote><p>You can start Nginx with <code>sudo nginx</code> and stop it with <code>sudo nginx -s stop</code>.</p></blockquote></li>
+<li><p>Install <a href="http://postgresql.org">PostgreSQL</a></p>
+
+<pre><code>$ brew install postgresql
+</code></pre>
+
+<p>After the installation completes, there will be instructions on how to initialize the database, start the server, start the server at login, and install the postgres gem. Do all of this.</p></li>
+</ol>
+
+
+<h3>Server Configuration</h3>
+
+<ol>
+<li><p>Modify your Nginx configuration for Passenger. It will be located at <code>/usr/local/Cellar/nginx/0.7.62/conf/nginx.conf</code> (obviously you will need to replace the version number with whatever version you installed). Here is what mine looks like.</p>
+
+<p><script src="http://gist.github.com/245177.js?file=nginx.conf"></script></p>
+
+<p>There are a few things to note:</p>
+
+<ol>
+<li><p>I run it as my user (<code>staff</code> is my group). You don't have to do this, but I like to have the processes running as me. (If there are more of me, I'm more productive, right?) You'll need to comment this line out or change to your user.</p></li>
+<li><p>I am pointing the <code>passenger_root</code> directive to the passenger root. This will change with whatever version of Passenger you have installed. You can get the current path by running <code>passenger-config --root</code> (you'll probably need to do this since the version is in the path).</p></li>
+<li><p>I also have <code>passenger_ruby</code> set to <code>gem_ruby</code>. I had a horrible time getting Passenger to see my custom <code>GEM_PATH</code> (that I setup by following the <a href="http://wiki.github.com/mxcl/homebrew/cpan-ruby-gems-and-python-disttools">Homebrew wiki</a>). I created this little shell script to fix the environment variables. It would be great if Passenger had a way to do this. I know you can in the Apache version, but I couldn't figure it out for Nginx. Here is what my <code>gem_ruby</code> looks like:</p>
+
+<p><script src="http://gist.github.com/245177.js?file=gem_ruby.sh"></script></p></li>
+</ol>
+</li>
+<li><p>I like to keep all of my virtual hosts in separate files in the <code>conf</code> directory and then include them into <code>nginx.conf</code>, but you can do it however you want. Here is what <code>samsoffes.conf</code> looks like:</p>
+
+<p><script src="http://gist.github.com/245177.js?file=samsoffes.conf"></script></p></li>
+<li><p>You will need to edit your <code>/etc/hosts</code> for any virtual hosts you add. Mine looks like this:</p>
+
+<p><script src="http://gist.github.com/245177.js?file=hosts"></script></p></li>
+</ol>
+
+
+<h3>Database Configuration</h3>
+
+<ol>
+<li><p>If you haven't already, edit your application's <code>database.yml</code> file to use PostgreSQL. Here is an example:</p>
+
+<p><script src="http://gist.github.com/245177.js?file=database.yml"></script></p>
+
+<p>Notice that the username is <code>samsoffes</code> and not <code>root</code>. Using the <code>root</code> user is considered bad practice by most. (We'll create that user in the next step.)</p></li>
+<li><p>Enter the PostgreSQL prompt to create your user and databases:</p>
+
+<pre><code>$ psql  postgres
+# CREATE USER samsoffes SUPERUSER;
+# CREATE DATABASE samsoffes_development OWNER samsoffes;
+# CREATE DATABASE samsoffes_test OWNER samsoffes;
+# \q
+</code></pre>
+
+<p>Note: you need to make your user a superuser for your tests to run correctly. More on this <a href="http://blogs.law.harvard.edu/djcp/2009/01/rails-22-postgres-and-testing/comment-page-1/">here</a>.</p></li>
+</ol>
+
+
+<h3>Let's get started already!</h3>
+
+<p>So, to review, you have just installed and configured Nginx, Passenger, and PostgreSQL. Now, all you have to do is type <code>sudo nginx</code> to start Nginx and point your browser to your virtual host (so for me it would be <code>http://samsoffes.local</code>). That's it! You're done!</p>
+
+<p>Before, I found myself typing <code>sudo apachectl restart</code> a lot to reload my application. Now, you would run <code>sudo nginx -s reload</code> to reload the server configuration and restart the app. (You can of course do the <code>touch tmp/restart.txt</code> method as well.)</p>
+
+<p>That probably seemed a bit tedious, but now all you have to do is create a virtual host in Nginx, add it your your hosts file, and create your database. I really like developing locally like this. <a href="http://github.com/mxcl/homebrew">Homebrew</a> makes this entire process <em>very easy</em>.</p>
+
+<p>If you have any issues, feel free to <a href="mailto:sam@samsoff.es">send me an email</a> and I'll see what I can do. (I really need to get comments going on here don't I)</p>
+
+  </div>
+</div>
+
+
+
+<div class="post">
+  <div class="title">
+    <h2><a href="/post/screencast-reuse-code-across-iphone-applications-with-a-static-library-and-git">Screencast: Reuse Code Across iPhone Applications with a Static Library and Git</a></h2>
+    <p class="meta">Posted 19 Nov 2009</p>
+  </div>
+  <div class="content">
+    <p>A few of my friends have recently asked me how to share code between their applications. Here's a screencast walking you through how I solve this problem. It works really well for me. I hope this is useful to you.</p>
+
+<div class="video vimeo"><object width="620" height="465"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=7699801&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=f05b35&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=7699801&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=0&amp;show_portrait=0&amp;color=f05b35&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="620" height="465"></embed></object></div>
+
+
+<p>You can get my terminal shortcuts from my <a href="http://github.com/samsoffes/dotfiles">dot files repo</a> on GitHub. You can also find the <a href="http://github.com/samsoffes/iphone-library-test-app">test app</a> and <a href="http://github.com/samsoffes/iphone-library-test-library">test library</a> on GitHub.</p>
+
+<p>The <a href="http://www.kernel.org/pub/software/scm/git/docs/git-submodule.html">git submodule documentation</a> might also be useful to you if you're new to working with submodules. If that's a little hard to understand (I know it is for me), just try googling it. There's a lot of good resources on submodules.</p>
+
+  </div>
+</div>
+
+
+
+<p class="archive">
+  <img src="/images/lightning.png" alt="" /> 
+  <a href="/archive.html">View older posts</a> 
+  <img src="/images/lightning.png" alt="" />
+</p>
+
+
+    </div>
+    <div id="footer" class="wrapper">
+    	<p class="clear">
+    	    <span>Copyright <a href="/">Sam Soffes</a> 2005-2009.</span>
+    	    <span><a href="http://github.com/samsoffes/samsoffes.github.com" target="_blank" rel="external nofollow">View source on GitHub</a>.</span>
+      </p>
+    </div>
+    <script src="/javascripts/application.js" type="text/javascript"></script>
+    <script type="text/javascript">var gaJsHost=(("https:"==document.location.protocol)?"https://ssl.":"http://www.");document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">try{var pageTracker=_gat._getTracker("UA-5609322-1");pageTracker._trackPageview();}catch(err){}</script>
+    <script type="text/javascript">_qoptions={qacct:"p-1crX9oZZZMDA6"};</script><script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script><noscript><img src="http://pixel.quantserve.com/pixel/p-1crX9oZZZMDA6.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/></noscript>
+  </body>
+</html>

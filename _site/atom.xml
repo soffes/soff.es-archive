@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <title>samsoff.es</title>
+ <link href="http://samsoff.es/atom.xml" rel="self"/>
+ <updated>2010-01-14T23:34:45-06:00</updated>
+ <id>http://samsoff.es/</id>
+ <author>
+   <name>Sam Soffes</name>
+   <email>sam@samsoff.es</email>
+ </author>
+ 
+ <entry>
+   <id>http://samsoff.es/post/app-store-rejection</id>
+   <link href="http://samsoff.es/post/app-store-rejection"/>
+   <title>App Store Rejection</title>
+   <author>
+     <name>Sam Soffes</name>
+     <email>sam@samsoff.es</email>
+   </author>
+   <content type="html">&lt;p&gt;December was a month of rejection for me. The &lt;a href=&quot;http://itunes.apple.com/us/app/x3watch/id337170101?mt=8&quot;&gt;X3watch app&lt;/a&gt; another of my client's apps, and &lt;a href=&quot;http://lifechurch.tv&quot;&gt;LifeChurch.tv&lt;/a&gt;'s &lt;a href=&quot;http://youversion.com/iphone&quot;&gt;Bible app&lt;/a&gt; (which I wrote most of but am no longer a part of) got rejected.&lt;/p&gt;
+
+&lt;h3&gt;What Changed&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Apple changed the rules recently&lt;/em&gt;, which is fine. They change the App Store every month or so. Normally, you just click accept to the new terms and go about your business. Do you ever read EULAs? I don't. Basically the same thing.&lt;/p&gt;
+
+&lt;p&gt;The important change to note (that they obviously didn't highlight, but expected you to read the massive terms in legal speak) was their new policy on undocumented APIs. Before, &lt;em&gt;private APIs&lt;/em&gt; were not allowed and &lt;em&gt;undocumented APIs&lt;/em&gt; were just frowned upon but still allowed.&lt;/p&gt;
+
+&lt;h4&gt;The Difference Between Private and Undocumented&lt;/h4&gt;
+
+&lt;p&gt;Private APIs are basically anything in a Private Framework (found in &lt;code&gt;/System/Library/PrivateFrameworks&lt;/code&gt; on the device) like &lt;a href=&quot;http://samsoff.es/post/parsing-json-with-the-iphones-private-json-framework/&quot;&gt;&lt;code&gt;JSON.framework&lt;/code&gt;&lt;/a&gt; or &lt;code&gt;XMPP.framework&lt;/code&gt;. Undocumented APIs are APIs found in one of the public frameworks (found in &lt;code&gt;/System/Library/Frameworks&lt;/code&gt; on the device) that are not in the header files or documentations. (You go about finding this with a neat tool called &lt;a href=&quot;http://www.codethecode.com/projects/class-dump/&quot;&gt;class-dump&lt;/a&gt;).&lt;/p&gt;
+
+&lt;h3&gt;Why Apple Did This&lt;/h3&gt;
+
+&lt;p&gt;Apple's rules for the App Store are intended to keep the apps in it good and the garbage out (one could argue to make developers lives horribly, but I'll leave that to your judgement). The reason for an API being undocumented is that Apple could change it whenever they want because they haven't taken the time to really finalize it. This means that an update could break your app because they changed something. They don't want apps that will randomly break on updates in the store, I get that.&lt;/p&gt;
+
+&lt;h3&gt;Why I Care So Much&lt;/h3&gt;
+
+&lt;p&gt;I understand Apple's reasoning for this, but I don't like it. There are a lot of things that many apps rely on that are undocumented. Even worse, Apple will let &lt;a href=&quot;http://daringfireball.net/2008/11/google_mobile_uses_private_iphone_apis&quot;&gt;certain apps use undocumented APIs&lt;/a&gt; which is so unfair. &lt;em&gt;We just want consistency Apple.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;All of the apps that I mentioned earlier that got rejected, got rejected for &lt;code&gt;UIWebView&lt;/code&gt; (the view that shows Safari-like content in an app) undocumented APIs. &lt;a href=&quot;http://youversion.com/iphone&quot;&gt;Bible&lt;/a&gt; was using undocumented methods for scrolling. Without the use of these undocumented APIs, the ability to scroll the webview without the user is impossible. &lt;a href=&quot;http://itunes.apple.com/us/app/x3watch/id337170101?mt=8&quot;&gt;X3watch&lt;/a&gt; got rejected for the same thing undocumented API (as well their keywords). My other client's app got rejected for disabling the scrolling of a webview with an undocumented API. So frustrating.&lt;/p&gt;
+
+&lt;h3&gt;One Warning&lt;/h3&gt;
+
+&lt;p&gt;I contacted my friends at &lt;a href=&quot;http://lifechurch.tv&quot;&gt;LifeChurch.tv&lt;/a&gt; when the &lt;a href=&quot;http://itunes.apple.com/us/app/x3watch/id337170101?mt=8&quot;&gt;X3watch&lt;/a&gt; app got rejected, because I remembered using very similar undocumented APIs in &lt;a href=&quot;http://youversion.com/iphone&quot;&gt;Bible&lt;/a&gt; when I was still working on it. They informed me that they were rejected for using the undocumented APIs that I mentioned earlier. A few minutes later, they received an approval email saying their app had been approved and that they needed to take out the undocumented APIs before submitting another update or it would not be allowed into the store.&lt;/p&gt;
+
+&lt;p&gt;I guess it's kinda cool that Apple gives you a little grace if you were already in the store. My client and the &lt;a href=&quot;http://itunes.apple.com/us/app/x3watch/id337170101?mt=8&quot;&gt;X3watch app&lt;/a&gt; weren't already in the store, so they were just rejected.&lt;/p&gt;
+
+&lt;h3&gt;Thoughts To Apple&lt;/h3&gt;
+
+&lt;p&gt;Apple, a lot of developers rely on undocumented APIs. We understand why you won't allow them. We are just ask that you start documenting popular ones. I know a lot of people really want so see the scrolling and &lt;code&gt;UIScroller&lt;/code&gt; in &lt;code&gt;UIWebView&lt;/code&gt; documented, methods in &lt;code&gt;UIApplication&lt;/code&gt; for airplane mode prompts, and many others. Please start an effort to documented these methods. Any effort to try to more clearly communicate App Store policy changes like this besides having us read the massive agreement would also be very welcome.&lt;/p&gt;
+</content>
+   <updated>2010-01-03T00:00:00-06:00</updated>
+ </entry>
+ 
+ <entry>
+   <id>http://samsoff.es/post/running-rails-local-development-with-nginx-postgres-and-passenger-with-homebrew</id>
+   <link href="http://samsoff.es/post/running-rails-local-development-with-nginx-postgres-and-passenger-with-homebrew"/>
+   <title>Running Rails Local Development with Nginx, Postgres, and Passenger with Homebrew</title>
+   <author>
+     <name>Sam Soffes</name>
+     <email>sam@samsoff.es</email>
+   </author>
+   <content type="html">&lt;p&gt;Lately I have been playing with &lt;a href=&quot;http://github.com/mxcl/homebrew&quot;&gt;Homebrew&lt;/a&gt;, an awesome package manager for Mac OS X. I really like not having to worry about dependencies and such when installing. The &quot;rarely sudo&quot; mentality is also pretty great.&lt;/p&gt;
+
+&lt;p&gt;When I noticed the &lt;a href=&quot;http://nginx.net&quot;&gt;Nginx&lt;/a&gt; (a sweet open source web server that is way better than Apache) had a &lt;code&gt;--with-passenger&lt;/code&gt; option (which is also way awesome), I figured I'd give it a shot. I was using the built-in Apache with &lt;a href=&quot;http://modrails.com&quot;&gt;Passenger&lt;/a&gt; &lt;a href=&quot;http://github.com/alloy/passengerpane&quot;&gt;Preference Pane&lt;/a&gt;, which was pretty cool, but I really like Nginx, so I switched. I also really wanted to start using &lt;a href=&quot;http://postgresql.org&quot;&gt;PostgreSQL&lt;/a&gt; instead of SQLite since all of my stuff is hosted on &lt;a href=&quot;http://heroku.com&quot;&gt;Heroku&lt;/a&gt; and that's what they're running. (I do plan on writing a Preference Pane for doing for this setup eventually.)&lt;/p&gt;
+
+&lt;p&gt;Here are the steps to get all of this going. I tried to keep it as simple and clear as possible with lots of examples. It looks like a lot, but it's really quite simple.&lt;/p&gt;
+
+&lt;h3&gt;Installation&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://github.com/mxcl/homebrew#readme&quot;&gt;Install Homebrew&lt;/a&gt; and follow &lt;a href=&quot;http://wiki.github.com/mxcl/homebrew/cpan-ruby-gems-and-python-disttools&quot;&gt;the steps in the wiki about not sudoing when installing RubyGems&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Install the &lt;a href=&quot;http://modrails.com&quot;&gt;Passenger&lt;/a&gt; gem&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gem install passenger
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I also had to install the &lt;code&gt;fastthread&lt;/code&gt; gem to get Passenger to play nice later. You might not have to do this. If you need to, all you have to do is &lt;code&gt;gem install fastthread&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Install &lt;a href=&quot;http://nginx.net&quot;&gt;Nginx&lt;/a&gt; with the &lt;a href=&quot;http://modrails.com&quot;&gt;Passenger&lt;/a&gt; module&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ brew install nginx --with-passenger
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;&lt;p&gt;You can start Nginx with &lt;code&gt;sudo nginx&lt;/code&gt; and stop it with &lt;code&gt;sudo nginx -s stop&lt;/code&gt;.&lt;/p&gt;&lt;/blockquote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Install &lt;a href=&quot;http://postgresql.org&quot;&gt;PostgreSQL&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ brew install postgresql
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After the installation completes, there will be instructions on how to initialize the database, start the server, start the server at login, and install the postgres gem. Do all of this.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h3&gt;Server Configuration&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Modify your Nginx configuration for Passenger. It will be located at &lt;code&gt;/usr/local/Cellar/nginx/0.7.62/conf/nginx.conf&lt;/code&gt; (obviously you will need to replace the version number with whatever version you installed). Here is what mine looks like.&lt;/p&gt;
+
+&lt;p&gt;&lt;script src=&quot;http://gist.github.com/245177.js?file=nginx.conf&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;There are a few things to note:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;I run it as my user (&lt;code&gt;staff&lt;/code&gt; is my group). You don't have to do this, but I like to have the processes running as me. (If there are more of me, I'm more productive, right?) You'll need to comment this line out or change to your user.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I am pointing the &lt;code&gt;passenger_root&lt;/code&gt; directive to the passenger root. This will change with whatever version of Passenger you have installed. You can get the current path by running &lt;code&gt;passenger-config --root&lt;/code&gt; (you'll probably need to do this since the version is in the path).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I also have &lt;code&gt;passenger_ruby&lt;/code&gt; set to &lt;code&gt;gem_ruby&lt;/code&gt;. I had a horrible time getting Passenger to see my custom &lt;code&gt;GEM_PATH&lt;/code&gt; (that I setup by following the &lt;a href=&quot;http://wiki.github.com/mxcl/homebrew/cpan-ruby-gems-and-python-disttools&quot;&gt;Homebrew wiki&lt;/a&gt;). I created this little shell script to fix the environment variables. It would be great if Passenger had a way to do this. I know you can in the Apache version, but I couldn't figure it out for Nginx. Here is what my &lt;code&gt;gem_ruby&lt;/code&gt; looks like:&lt;/p&gt;
+
+&lt;p&gt;&lt;script src=&quot;http://gist.github.com/245177.js?file=gem_ruby.sh&quot;&gt;&lt;/script&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I like to keep all of my virtual hosts in separate files in the &lt;code&gt;conf&lt;/code&gt; directory and then include them into &lt;code&gt;nginx.conf&lt;/code&gt;, but you can do it however you want. Here is what &lt;code&gt;samsoffes.conf&lt;/code&gt; looks like:&lt;/p&gt;
+
+&lt;p&gt;&lt;script src=&quot;http://gist.github.com/245177.js?file=samsoffes.conf&quot;&gt;&lt;/script&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;You will need to edit your &lt;code&gt;/etc/hosts&lt;/code&gt; for any virtual hosts you add. Mine looks like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;script src=&quot;http://gist.github.com/245177.js?file=hosts&quot;&gt;&lt;/script&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h3&gt;Database Configuration&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;If you haven't already, edit your application's &lt;code&gt;database.yml&lt;/code&gt; file to use PostgreSQL. Here is an example:&lt;/p&gt;
+
+&lt;p&gt;&lt;script src=&quot;http://gist.github.com/245177.js?file=database.yml&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Notice that the username is &lt;code&gt;samsoffes&lt;/code&gt; and not &lt;code&gt;root&lt;/code&gt;. Using the &lt;code&gt;root&lt;/code&gt; user is considered bad practice by most. (We'll create that user in the next step.)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Enter the PostgreSQL prompt to create your user and databases:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ psql  postgres
+# CREATE USER samsoffes SUPERUSER;
+# CREATE DATABASE samsoffes_development OWNER samsoffes;
+# CREATE DATABASE samsoffes_test OWNER samsoffes;
+# \q
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note: you need to make your user a superuser for your tests to run correctly. More on this &lt;a href=&quot;http://blogs.law.harvard.edu/djcp/2009/01/rails-22-postgres-and-testing/comment-page-1/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h3&gt;Let's get started already!&lt;/h3&gt;
+
+&lt;p&gt;So, to review, you have just installed and configured Nginx, Passenger, and PostgreSQL. Now, all you have to do is type &lt;code&gt;sudo nginx&lt;/code&gt; to start Nginx and point your browser to your virtual host (so for me it would be &lt;code&gt;http://samsoffes.local&lt;/code&gt;). That's it! You're done!&lt;/p&gt;
+
+&lt;p&gt;Before, I found myself typing &lt;code&gt;sudo apachectl restart&lt;/code&gt; a lot to reload my application. Now, you would run &lt;code&gt;sudo nginx -s reload&lt;/code&gt; to reload the server configuration and restart the app. (You can of course do the &lt;code&gt;touch tmp/restart.txt&lt;/code&gt; method as well.)&lt;/p&gt;
+
+&lt;p&gt;That probably seemed a bit tedious, but now all you have to do is create a virtual host in Nginx, add it your your hosts file, and create your database. I really like developing locally like this. &lt;a href=&quot;http://github.com/mxcl/homebrew&quot;&gt;Homebrew&lt;/a&gt; makes this entire process &lt;em&gt;very easy&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you have any issues, feel free to &lt;a href=&quot;mailto:sam@samsoff.es&quot;&gt;send me an email&lt;/a&gt; and I'll see what I can do. (I really need to get comments going on here don't I)&lt;/p&gt;
+</content>
+   <updated>2009-11-29T00:00:00-06:00</updated>
+ </entry>
+ 
+ <entry>
+   <id>http://samsoff.es/post/screencast-reuse-code-across-iphone-applications-with-a-static-library-and-git</id>
+   <link href="http://samsoff.es/post/screencast-reuse-code-across-iphone-applications-with-a-static-library-and-git"/>
+   <title>Screencast: Reuse Code Across iPhone Applications with a Static Library and Git</title>
+   <author>
+     <name>Sam Soffes</name>
+     <email>sam@samsoff.es</email>
+   </author>
+   <content type="html">&lt;p&gt;A few of my friends have recently asked me how to share code between their applications. Here's a screencast walking you through how I solve this problem. It works really well for me. I hope this is useful to you.&lt;/p&gt;
+
+&lt;div class=&quot;video vimeo&quot;&gt;&lt;object width=&quot;620&quot; height=&quot;465&quot;&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;param name=&quot;movie&quot; value=&quot;http://vimeo.com/moogaloop.swf?clip_id=7699801&amp;amp;server=vimeo.com&amp;amp;show_title=1&amp;amp;show_byline=0&amp;amp;show_portrait=0&amp;amp;color=f05b35&amp;amp;fullscreen=1&quot; /&gt;&lt;embed src=&quot;http://vimeo.com/moogaloop.swf?clip_id=7699801&amp;amp;server=vimeo.com&amp;amp;show_title=1&amp;amp;show_byline=0&amp;amp;show_portrait=0&amp;amp;color=f05b35&amp;amp;fullscreen=1&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; width=&quot;620&quot; height=&quot;465&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You can get my terminal shortcuts from my &lt;a href=&quot;http://github.com/samsoffes/dotfiles&quot;&gt;dot files repo&lt;/a&gt; on GitHub. You can also find the &lt;a href=&quot;http://github.com/samsoffes/iphone-library-test-app&quot;&gt;test app&lt;/a&gt; and &lt;a href=&quot;http://github.com/samsoffes/iphone-library-test-library&quot;&gt;test library&lt;/a&gt; on GitHub.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;http://www.kernel.org/pub/software/scm/git/docs/git-submodule.html&quot;&gt;git submodule documentation&lt;/a&gt; might also be useful to you if you're new to working with submodules. If that's a little hard to understand (I know it is for me), just try googling it. There's a lot of good resources on submodules.&lt;/p&gt;
+</content>
+   <updated>2009-11-19T00:00:00-06:00</updated>
+ </entry>
+ 
+ <entry>
+   <id>http://samsoff.es/post/app-store-approval-process</id>
+   <link href="http://samsoff.es/post/app-store-approval-process"/>
+   <title>App Store Approval Process</title>
+   <author>
+     <name>Sam Soffes</name>
+     <email>sam@samsoff.es</email>
+   </author>
+   <content type="html">&lt;p&gt;So &lt;a href=&quot;http://www.joelcomm.com/&quot;&gt;Joel Comm&lt;/a&gt; (funny story, he offered me a job awhile back, anyway) who most notably made &lt;a href=&quot;http://itunes.apple.com/us/app/ifart-mobile-1-fart-machine-updated/id293760823?mt=8&quot;&gt;iFart&lt;/a&gt; released &lt;a href=&quot;http://www.youtube.com/watch?v=kDAb64GwFbo&quot;&gt;a video&lt;/a&gt; (watch below) today begging Steve Jobs to let his new app into the App Store.&lt;/p&gt;
+
+&lt;div class=&quot;video youtube wide&quot;&gt;&lt;object width=&quot;620&quot; height=&quot;372&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.youtube.com/v/kDAb64GwFbo&amp;amp;hl=en_US&amp;amp;fs=1&amp;amp;rel=0&amp;amp;hd=1&quot;&gt;&lt;/param&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;&gt;&lt;/param&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot;&gt;&lt;/param&gt;&lt;embed src=&quot;http://www.youtube.com/v/kDAb64GwFbo&amp;amp;hl=en_US&amp;amp;fs=1&amp;amp;rel=0&amp;amp;hd=1&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;620&quot; height=&quot;372&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Like the other apps from his company, the don't do much besides play an entertaining sound. Apple rejected the app because it &quot;contains minimal user functionality&quot;. He goes on to show many other apps that also just play a sound.&lt;/p&gt;
+
+&lt;p&gt;Here's my take on the whole thing. If Joel or anyone else wants to release a bunch of fun little sound, fine. Personally, I think they are dumb and wouldn't pay for one, but a lot of people have enjoyed iFart and other similar apps, so more power to them. (By the way &lt;a href=&quot;http://infomediainc.com/&quot;&gt;Joel's company&lt;/a&gt; also makes other kinds of apps like &lt;a href=&quot;http://www.ivotemobile.com/&quot;&gt;this&lt;/a&gt;, &lt;a href=&quot;http://www.gamedock.com/&quot;&gt;this&lt;/a&gt;, and &lt;a href=&quot;http://mobilesyndicationsolutions.com/&quot;&gt;this&lt;/a&gt;. Cool stuff.) My big issue with all of this is the same as Joel's: &lt;em&gt;consistency&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Apple, please be consistent.&lt;/strong&gt; As a developer that has submitted several apps to the App Store, and experienced this frustration many times before, I really wish they would publish a set of rules and stick to them.&lt;/p&gt;
+
+&lt;h3&gt;Joe Hewitt&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://joehewitt.com/&quot;&gt;Joe Hewitt&lt;/a&gt; was the developer of the Facebook app. He &lt;a href=&quot;http://twitter.com/joehewitt/status/5631765190&quot;&gt;tweeted&lt;/a&gt; that he was no longer going to work on it &lt;a href=&quot;http://www.techcrunch.com/2009/11/11/joe-hewitt-developer-of-facebooks-massively-popular-iphone-app-quits-the-project/&quot;&gt;because of his frustration with the App Store&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;My decision to stop iPhone development has had everything to do with Apple’s policies.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;I understand that Joe and everyone else in the community is frustrated with the process, but I don't like just walking away from iPhone development and the fabulous platform Apple has built is the answer.&lt;/p&gt;
+
+&lt;p&gt;As for Joe specifically, I don't understand why he is complaining so much. His app, Facebook, gets approved in days with special attention from Apple. Many, like myself, have waited over a month for an app to get approved.&lt;/p&gt;
+
+&lt;p&gt;Sure there are limitations for everyone, including Joe. Getting feedback from Apple in a day or two on what is wrong with your app would make the whole process a lot less painful. It's so frustrating to wait weeks only to find out they didn't like your app's description.&lt;/p&gt;
+</content>
+   <updated>2009-11-18T00:00:00-06:00</updated>
+ </entry>
+ 
+ <entry>
+   <id>http://samsoff.es/post/customize-uikit-with-method-swizzling</id>
+   <link href="http://samsoff.es/post/customize-uikit-with-method-swizzling"/>
+   <title>Customize UIKit with Method Swizzling</title>
+   <author>
+     <name>Sam Soffes</name>
+     <email>sam@samsoff.es</email>
+   </author>
+   <content type="html">&lt;p&gt;Have you ever wanted to override some functionality in UIKit that was in a hard to reach place? A lot of applications on the App Store have custom &lt;code&gt;UINavigationBar&lt;/code&gt;'s. I really wanted to do this one of &lt;a href=&quot;http://tastefulworks.com&quot;&gt;my company&lt;/a&gt;'s upcoming apps.&lt;/p&gt;
+
+&lt;p&gt;A popular solution for this creating a category and overriding the method you want to change in it. For this the example, we'll make a &lt;code&gt;UINavigationBar&lt;/code&gt; green instead (obviously you could do something cool here instead). The category way would look something like this:&lt;/p&gt;
+
+&lt;p&gt;Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -l c -f html&lt;/p&gt;
+
+&lt;p&gt;This approach works very well, but there are two issues with it: overriding methods with a category is an Objective-C no no and if you need to call the default implementation, you can't.&lt;/p&gt;
+
+&lt;p&gt;In my app, I wanted to change most of the navigation bars in all of the navigation controllers. I am using a &lt;code&gt;UIImagePickerController&lt;/code&gt; in part of the app and it was customized to. I really wanted to keep it the translucent style instead of the style for the rest of my app.&lt;/p&gt;
+
+&lt;p&gt;I decided any &lt;code&gt;UINavigationBar&lt;/code&gt; with &lt;code&gt;UIBarStyleDefault&lt;/code&gt; as its style, I want to override and everything else leave alone. There is no way to do this with the category approach. You can't call &lt;code&gt;[self drawRect:rect]&lt;/code&gt; because it would infinitely call itself since you replaced it with the method you are calling it from.&lt;/p&gt;
+
+&lt;h3&gt;Method swizzling&lt;/h3&gt;
+
+&lt;p&gt;After some googling and some help from #macdev on Freenode, I changed my solution to use method swizzling. &lt;a href=&quot;http://www.cocoadev.com/index.pl?MethodSwizzling&quot;&gt;Method swizzling&lt;/a&gt;, in short, is switching methods at runtime. So you can say for &lt;code&gt;UINavigationBar&lt;/code&gt; don't use the standard &lt;code&gt;drawRect:&lt;/code&gt;, but instead swap it with a different one. (This is kinda confusing, but hang in there. It's not that hard.)&lt;/p&gt;
+
+&lt;p&gt;I updated my category to look like this:&lt;/p&gt;
+
+&lt;p&gt;Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -l c -f html&lt;/p&gt;
+
+&lt;p&gt;I then updated &lt;code&gt;main.m&lt;/code&gt; to look like this:&lt;/p&gt;
+
+&lt;p&gt;Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -l c -f html&lt;/p&gt;
+
+&lt;p&gt;So this kinda hurt my head when I was first looking at all of this. In &lt;code&gt;main.m&lt;/code&gt;, before the application starts, I swizzle the &lt;code&gt;UINavigationBar&lt;/code&gt; methods. &lt;code&gt;method_exchangeImplementations()&lt;/code&gt; switches my &lt;code&gt;drawRectCustomBackground:&lt;/code&gt; with &lt;code&gt;drawRect:&lt;/code&gt; in
+&lt;code&gt;UINavigationBar&lt;/code&gt;. When I call the default implementation in &lt;code&gt;drawRectCustomBackground:&lt;/code&gt;, it looks like I'm calling the same method, but I am actually calling the default implementation because it swapped them.&lt;/p&gt;
+
+&lt;p&gt;This is pretty crazy and a little confusing (especially with someone new to Objective-C), but really powerful. You can use this approach to customize a lot of things Apple didn't intend for you to mess with. Go out and make something cool!&lt;/p&gt;
+</content>
+   <updated>2009-11-12T00:00:00-06:00</updated>
+ </entry>
+ 
+ <entry>
+   <id>http://samsoff.es/post/i-released-an-iphone-push-notification-gem</id>
+   <link href="http://samsoff.es/post/i-released-an-iphone-push-notification-gem"/>
+   <title>I Released an iPhone Push Notification Gem</title>
+   <author>
+     <name>Sam Soffes</name>
+     <email>sam@samsoff.es</email>
+   </author>
+   <content type="html">&lt;p&gt;I forked a Rails plugin for sending push notifications with Rails awhile back for a client project. I've had a few people fork and add cool little fixes.&lt;/p&gt;
+
+&lt;p&gt;I've been wanting to play with &lt;a href=&quot;http://gemcutter.org&quot;&gt;GemCutter&lt;/a&gt; for awhile now. How hard could it be to release a Rails plugin as a gem, right? I sat down and rewatched a &lt;a href=&quot;http://railscasts.com/episodes/183-gemcutter-jeweler&quot;&gt;Railscast&lt;/a&gt; on how to build a gems with &lt;a href=&quot;http://github.com/technicalpickles/jeweler&quot;&gt;Jeweler&lt;/a&gt; and push it to &lt;a href=&quot;http://gemcutter.org&quot;&gt;GemCutter&lt;/a&gt;. It turns out, that was the easy part. &lt;a href=&quot;http://gemcutter.org&quot;&gt;GemCutter&lt;/a&gt; and &lt;a href=&quot;http://github.com/technicalpickles/jeweler&quot;&gt;Jeweler&lt;/a&gt; made it so easy to publish my plugin as gem.&lt;/p&gt;
+
+&lt;p&gt;So I know this is very backwards, but &lt;em&gt;after&lt;/em&gt; it was on &lt;a href=&quot;http://gemcutter.org&quot;&gt;GemCutter&lt;/a&gt; I tested it my new gem. (Yes, many smacks on the hand for not writing test. I'm still learning all of that.) It turns out, that it was completely broken. I started to try and fix things, but ended up doing a complete rewrite.&lt;/p&gt;
+
+&lt;p&gt;Before, it would add the model in the plugin to your search path and then you would have to run a custom rake task in the plugin to add the table and migrate the database for the model. This always felt a little dirty, so I abstracted it all out. Now you can do:&lt;/p&gt;
+
+&lt;p&gt;Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -l ruby -f html&lt;/p&gt;
+
+&lt;p&gt;Pretty cool, right? Now sending is as easy as&lt;/p&gt;
+
+&lt;p&gt;Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -l ruby -f html&lt;/p&gt;
+
+&lt;p&gt;(&lt;code&gt;d&lt;/code&gt; being an instance of &lt;code&gt;Device&lt;/code&gt; of course). You can read the &lt;a href=&quot;http://github.com/samsoffes/apple_push_notification&quot;&gt;full readme on GitHub&lt;/a&gt;. (Yes, another smack on the hand for no RDoc.)&lt;/p&gt;
+
+&lt;p&gt;Anyway, my code is probably very bad, as I'm pretty new to Ruby and Rails. I was very proud of myself for figuring it out. &lt;em&gt;&lt;a href=&quot;http://github.com/samsoffes/apple_push_notification&quot;&gt;Check out the gem&lt;/a&gt;&lt;/em&gt; and let me know if you find it useful or stupid.&lt;/p&gt;
+</content>
+   <updated>2009-11-10T00:00:00-06:00</updated>
+ </entry>
+ 
+ <entry>
+   <id>http://samsoff.es/post/easy-deployment-with-heroku</id>
+   <link href="http://samsoff.es/post/easy-deployment-with-heroku"/>
+   <title>Easy Deployment with Heroku</title>
+   <author>
+     <name>Sam Soffes</name>
+     <email>sam@samsoff.es</email>
+   </author>
+   <content type="html">
+
+&lt;div class=&quot;video vimeo&quot;&gt;&lt;object width=&quot;620&quot; height=&quot;465&quot;&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;param name=&quot;movie&quot; value=&quot;http://vimeo.com/moogaloop.swf?clip_id=7465783&amp;amp;server=vimeo.com&amp;amp;show_title=1&amp;amp;show_byline=0&amp;amp;show_portrait=0&amp;amp;color=f05b35&amp;amp;fullscreen=1&quot; /&gt;&lt;embed src=&quot;http://vimeo.com/moogaloop.swf?clip_id=7465783&amp;amp;server=vimeo.com&amp;amp;show_title=1&amp;amp;show_byline=0&amp;amp;show_portrait=0&amp;amp;color=f05b35&amp;amp;fullscreen=1&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; width=&quot;620&quot; height=&quot;465&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;/div&gt;
+
+
+&lt;p&gt;I put together &lt;a href=&quot;http://vimeo.com/7465783&quot;&gt;a quick screencast&lt;/a&gt; that shows the power of &lt;a href=&quot;http://heroku.com/&quot;&gt;Heroku&lt;/a&gt; and how easy it is to deploy your app in literally seconds. I've started moving all of my little sites there. &lt;a href=&quot;http://tastefulworks.com&quot;&gt;My company&lt;/a&gt; is even going to try a few of our new apps on there to see how we like it for bigger things.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://heroku.com/&quot;&gt;Heroku&lt;/a&gt; is worth checking out even if you're happy with your current host. Their &lt;a href=&quot;http://heroku.com/how/architecture&quot;&gt;architecture&lt;/a&gt; is really impressive and the &lt;a href=&quot;http://addons.heroku.com/&quot;&gt;add-ons&lt;/a&gt; are really cool.&lt;/p&gt;
+
+&lt;h3&gt;Gem Gotcha&lt;/h3&gt;
+
+&lt;p&gt;At first my app gave me an error saying it couldn't load gems. I thought I needed to unpack my gems, but &lt;a href=&quot;http://twitter.com/heroku/status/5485647467&quot;&gt;Heroku replied to me on Twitter&lt;/a&gt; and provided a really good alternative to unpacking!&lt;/p&gt;
+</content>
+   <updated>2009-11-05T00:00:00-06:00</updated>
+ </entry>
+ 
+ <entry>
+   <id>http://samsoff.es/post/iphone-json-benchmarks</id>
+   <link href="http://samsoff.es/post/iphone-json-benchmarks"/>
+   <title>iPhone JSON Benchmarks</title>
+   <author>
+     <name>Sam Soffes</name>
+     <email>sam@samsoff.es</email>
+   </author>
+   <content type="html">&lt;p&gt;Yesterday I wrote &lt;a href=&quot;http://samsoff.es/post/parsing-json-with-the-iphones-private-json-framework&quot;&gt;a post on parsing JSON with Apple's private framework&lt;/a&gt;. I thought it might be worth benchmarking &lt;a href=&quot;http://code.google.com/p/touchcode/&quot;&gt;TouchJSON&lt;/a&gt;, &lt;a href=&quot;http://code.google.com/p/json-framework/&quot;&gt;JSON Framework&lt;/a&gt;, and &lt;a href=&quot;http://samsoff.es/post/parsing-json-with-the-iphones-private-json-framework&quot;&gt;Apple JSON&lt;/a&gt; (what I'm calling the private framework). &lt;em&gt;My results were very interesting.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://samsoff.es/images/posts/iphone-json-benchmarks.png&quot; alt=&quot;JSON Benchmarks&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I know I &lt;a href=&quot;http://samsoff.es/post/web-services-with-cocoa-surprise/&quot;&gt;posted awhile ago that TouchJSON was really fast&lt;/a&gt;, but I guess I got my numbers mixed up. This time I ran each test 100 times and took the average. These are the numbers from &lt;a href=&quot;http://code.google.com/p/touchcode/&quot;&gt;TouchJSON&lt;/a&gt; &lt;a href=&quot;http://code.google.com/p/touchcode/downloads/list&quot;&gt;1.0.6&lt;/a&gt; and &lt;a href=&quot;http://code.google.com/p/json-framework/&quot;&gt;JSON Framework&lt;/a&gt; &lt;a href=&quot;http://code.google.com/p/json-framework/downloads/list&quot;&gt;2.2.2&lt;/a&gt; running on my iPhone 3GS compiled for iPhone OS 3.1. &lt;a href=&quot;http://github.com/samsoffes/json-benchmarks&quot;&gt;You can get the code on GitHub&lt;/a&gt; and see for yourself.&lt;/p&gt;
+
+&lt;p&gt;In conclusion, &lt;em&gt;it looks like &lt;a href=&quot;http://code.google.com/p/json-framework/&quot;&gt;JSON Framework&lt;/a&gt; is the one to use&lt;/em&gt;, since you probably shouldn't use &lt;a href=&quot;http://samsoff.es/post/parsing-json-with-the-iphones-private-json-framework&quot;&gt;Apple JSON&lt;/a&gt; in a shipping app. &lt;a href=&quot;http://code.google.com/p/json-framework/&quot;&gt;JSON Framework&lt;/a&gt; was always my favorite for the clean, category-style interface. I only tested &lt;a href=&quot;http://samsoff.es/post/parsing-json-with-the-iphones-private-json-framework&quot;&gt;Apple JSON&lt;/a&gt; to see how the other implementations compared to it.&lt;/p&gt;
+</content>
+   <updated>2009-11-04T00:00:00-06:00</updated>
+ </entry>
+ 
+ <entry>
+   <id>http://samsoff.es/post/parsing-json-with-the-iphones-private-json-framework</id>
+   <link href="http://samsoff.es/post/parsing-json-with-the-iphones-private-json-framework"/>
+   <title>Parsing JSON with the iPhone's Private JSON Framework</title>
+   <author>
+     <name>Sam Soffes</name>
+     <email>sam@samsoff.es</email>
+   </author>
+   <content type="html">&lt;p&gt;So my post on &lt;a href=&quot;http://samsoff.es/post/web-services-with-cocoa-surprise/&quot;&gt;Cocoa web services&lt;/a&gt; got a lot of attention when &lt;a href=&quot;http://daringfireball.net/linked/2009/10/29/soffes-json-plist&quot;&gt;Gruber linked me&lt;/a&gt; the other day. This started a conversation on &lt;a href=&quot;http://twitter.com/samsoffes&quot;&gt;Twitter&lt;/a&gt; and basically ended up landing on using binary property lists over JSON for size and parsing, but that's for another blog post.&lt;/p&gt;
+
+&lt;p&gt;All of this got me thinking about how Apple does their JSON parsing, since they are obviously using JSON in several of the built in apps. I happened to notice that there was a &lt;code&gt;JSON.framework&lt;/code&gt; in the Private Frameworks folder this evening. I tried &lt;a href=&quot;http://www.codethecode.com/projects/class-dump/&quot;&gt;class-dump&lt;/a&gt;ing it and it surprising worked! (Most of the other private frameworks I tried to class-dump didn't produce any results.)&lt;/p&gt;
+
+&lt;p&gt;I figured what the heck, might as well try it. It turns out that it was really easy to implement. I posted a &lt;a href=&quot;http://github.com/samsoffes/private-json-test&quot;&gt;sample project demonstrating this on GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It really sucks that this is private. It works really well. I wish Apple would open this up. I know a lot of people would benefit from it. I've heard that if you link against any private frameworks in your app, it will automatically get rejected. I haven't been brave enough to test this yet.&lt;/p&gt;
+
+&lt;p&gt;Anyway, it's kinda a cool discovery. &lt;em&gt;&lt;a href=&quot;http://github.com/samsoffes/private-json-test&quot;&gt;Check out my sample project on GitHub&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+</content>
+   <updated>2009-11-03T00:00:00-06:00</updated>
+ </entry>
+ 
+ <entry>
+   <id>http://samsoff.es/post/iphone-push-development-issues</id>
+   <link href="http://samsoff.es/post/iphone-push-development-issues"/>
+   <title>iPhone Push Development Issues</title>
+   <author>
+     <name>Sam Soffes</name>
+     <email>sam@samsoff.es</email>
+   </author>
+   <content type="html">&lt;p&gt;To the wayward googler, if you are getting this error:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Failed to register for remote notificaitons. Error: Error Domain=NSCocoaErrorDomain Code=3000 UserInfo=0x2782a0 &quot;no valid 'aps-environment' entitlement string found for application&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You need to make sure that your provisioning profile has the app id of the app you have setup push for. Double check that you are actually building with it.&lt;/p&gt;
+
+&lt;p&gt;If it still doesn't work, you probably created the provisioning profile before you enabled push on that app id. Modify it (just uncheck and recheck a box to enabled the save button) and save, then download and reinstall. You'll need to delete the old one so you don't get it confused with the new one. If that doesn't work, double check everything and try clean building.&lt;/p&gt;
+</content>
+   <updated>2009-10-21T00:00:00-05:00</updated>
+ </entry>
+ 
+</feed>

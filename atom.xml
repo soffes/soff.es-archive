@@ -1,0 +1,27 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <title>samsoff.es</title>
+ <link href="http://samsoff.es/atom.xml" rel="self"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>http://samsoff.es/</id>
+ <author>
+   <name>Sam Soffes</name>
+   <email>sam@samsoff.es</email>
+ </author>
+ {% for post in site.posts limit:10 %}
+ <entry>
+   <id>http://samsoff.es{{ post.id }}</id>
+   <link href="http://samsoff.es{{ post.url }}"/>
+   <title>{{ post.title }}</title>
+   <author>
+     <name>Sam Soffes</name>
+     <email>sam@samsoff.es</email>
+   </author>
+   <content type="html">{{ post.content | xml_escape }}</content>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+ </entry>
+ {% endfor %}
+</feed>

@@ -1,0 +1,391 @@
+@import partials/reset.sass
+@import partials/shared.sass
+
+// Fonts
+@font-face
+  font-family: 'NillandRegular'
+  src: url('/fonts/Nilland.eot')
+  src: local('Nilland Regular'), local('Nilland'), url('/fonts/Nilland.woff') format('woff'), url('/fonts/Nilland.ttf') format('truetype'), url('/fonts/Nilland.svg#Nilland') format('svg')
+
+@font-face
+  font-family: 'BistroScriptRegular'
+  src: url('/fonts/BistroScript.eot')
+  src: local('Bistro Script Regular'), local('BistroScript'), url('/fonts/BistroScript.woff') format('woff'), url('/fonts/BistroScript.ttf') format('truetype'), url('/fonts/BistroScript.svg#BistroScript') format('svg')
+
+// Easy clear
+.clear:after
+  +clearAfter()
+
+// General
+body
+  background: #f4f4f3
+  font:
+    size: 17px
+    weight: 300
+
+body *
+  line-height: 1.4em
+
+body, input, textarea
+  font-family= !HelveticaNeueLight
+  color= !textColor
+
+a
+  border-bottom= 1px "dotted" !linkBorderColor
+  color= !linkColor
+  text-decoration: none
+
+a:hover
+  border-bottom: 1px solid
+  color= !linkHoverColor
+
+strong
+  font-weight: bold
+
+em
+  background-color: #fffeca
+  padding: 0 0.2em
+
+abbr
+  border-bottom: 1px dashed
+  cursor: help
+
+p
+  line-height: 1.5em
+  margin: 0 0 1em
+
+blockquote
+  border-left: 5px solid #ddd
+  color: #888
+  margin: 0 0 1em
+  padding-left: 1em
+  a
+    color: #888
+
+small
+  font-size: 0.8em
+  color: #999
+  margin-left: 0.2em
+  a
+    color: #444
+  a:hover
+    color: #2e80d3
+
+pre
+  background-color: #f8f8ff
+  border: 1px solid #dedede
+  color: #444
+  font-family: "Bitstream Vera Sans Mono", Courier, monospace
+  font-size: 0.8em
+  line-height: 1.5em
+  margin: 0 0 2em
+  overflow: auto
+  padding: 0.5em
+  code
+    background-color: #f8f8ff
+    border: medium none
+    font-size: 1em
+    padding: 0
+
+code
+  background-color: #f8f8ff
+  border: 1px solid #dedede
+  color: #444
+  padding: 0 0.2em
+  font-family: "Bitstream Vera Sans Mono", Courier, monospace
+  font-size: 0.8em
+
+h1
+  font-family= !BistroScript
+  font-size: 68px
+  margin: 50px 0
+  color= !orangeColor
+  a
+    color= !orangeColor
+    border: 0
+  a:hover
+    color= !orangeColor
+    border: 0
+
+h2
+  background= image_url("lightning.png") "no-repeat 0 17px"
+  color: #445b75
+  font:
+    size: 26px
+    family= !Nilland
+  padding-left: 40px
+  text-transform: lowercase
+  margin-bottom: 4px
+
+h3
+  font-size: 1.3em
+  margin-bottom: 0.2em
+  color= !pinkColor
+
+h4
+  font-weight: bold
+  color: #555
+  margin-bottom: 0.2em
+
+// Flashes
+div.flash
+  border: 1px solid
+  font-size: 0.95em
+  padding: 0.75em 1em
+  margin-bottom: 1em
+
+div.flash.notice
+  background-color: #d4ffd4
+  border-color: #78d478
+
+// Layout
+div.wrapper
+  +shadow()
+  width: 640px
+  margin: 0 auto 30px
+
+div#border
+  margin-top: 20px
+  border-top: 1px dashed #c0d4e7
+
+div#header
+  margin: 10px 0 3em
+  line-height: 1em
+  h1
+    float: left
+    border: 0
+    padding: 0
+    margin: 0
+  div
+    float: right
+  ul
+    font-size: 19px
+    margin: 50px 0 0
+    text-transform: lowercase
+    li
+      float: left
+      list-style: none
+      margin: 0 0 0 1.7em
+      padding: 0
+      a
+        font-family= !Nilland
+        background: transparent no-repeat 0 5px
+        padding-left: 22px
+        border: 0
+    .blog a
+      background-image= image_url("blog.png")
+      color= !blogColor
+    .music a
+      background-image= image_url("music.png")
+      color= !musicColor
+    .about a
+      background-image= image_url("about.png")
+      color= !aboutColor
+    li:first-child
+      margin-left: 0
+  h3
+    font-family= !HelveticaNeueLight
+    font-size: 15px
+    font-weight: 300
+    margin: 15px 0 0
+    text-align: center
+    padding: 0
+    opacity: 0.7
+    a
+      color= !subHeaderColor1
+      border: 0
+    a.music
+      color= !subHeaderColor2
+    a:hover
+      border-bottom: 1px solid
+
+div#footer
+  color: #aaa
+  margin: 0 auto 2em
+  padding: 0
+  font-size: 0.85em
+  text-align: center
+  a
+    color: #aaa
+  a:hover
+    color= !linkHoverColor
+
+.loading
+  display: block
+  background= image_url("dots-white.gif") "no-repeat" "left"
+  padding-left: 29px
+  font-size: 0.9em
+  color: #555
+  width: 21px
+  height: 5px
+
+div.hd-video
+  background: #ddd
+  padding: 1.5em 0
+  text-align: center
+
+// Form
+@import partials/form
+
+// Posts
+div.post
+  background= image_url("dash.png") "no-repeat bottom center"
+  padding-bottom: 2em
+  margin-bottom: 2em
+  > h1
+    margin-bottom: 0
+  h2
+    margin-bottom: 12px
+  p.meta
+    color= !lightBlueColor
+    margin-bottom: 10px
+  ul, ol
+    margin: 0 0 2em 0.5em
+    li
+      margin-left: 1em
+
+  ul li
+    list-style: disc
+
+  ol li
+    list-style: decimal
+    ol li
+      list-style: lower-alpha
+  div.video
+    background: #fff
+    padding: 10px
+    text-align: center
+    margin-bottom: 1em
+    width: 620px
+    height: 465px
+  div.video.wide.youtube
+    height: 372px
+
+// Comments
+div#comments_container
+  h2.no-comments
+    color: #aaa
+  ul
+    margin: 0
+    > li
+      list-style: none
+      padding: 0
+      margin: 0 0 2em
+      div.content
+        font-size: 0.9em
+
+form#new_comment
+  background: #fff
+  padding: 20px
+  h2
+    margin-top: 0
+    padding-top: 0
+  p:last-child
+    margin-bottom: 0
+  input.submit
+    float: left
+  .loading
+    float: left
+    margin-top: 10px
+
+// Music
+div#music-art
+  width: 300px
+  float: left
+  margin-right: 35px
+  font-size: 0.9em
+  color: #555
+  a.album-art
+    border: 10px solid #fff
+    display: block
+    width: 300px
+    height: 300px
+    margin-bottom: 1em
+  a.album-art:hover
+    border-color= !linkColor
+  img
+    width: 300px
+    height: 300px
+  div
+    padding-left: 10px
+
+div#music-about
+  margin-left: 20px
+  line-height: 1.5em
+  width: 285px
+  float: left
+  p
+    font-size: 0.8em
+
+div#music
+  h2:first-child
+    margin-top: 0
+    padding-top: 0
+  ol
+    margin-bottom: 1em
+  li
+    font-size: 1.1em
+    margin-bottom: 0.3em
+    margin-left: 30px
+  ol li
+    list-style: decimal
+  ul li
+    list-style: disc
+  li a
+    font-size: 0.8em
+    margin-left: 6px
+
+div.soundcloud-player
+  height: 101px
+  margin: 2px 0
+  background= image_url("dots-white.gif") #fff "no-repeat center"
+  width: 245px
+  > div:first-child
+    padding: 10px
+
+// About
+ul.contact
+  color: #7e8c9c
+  font-size: 15px
+  margin-bottom: 0.5em
+  a
+    color: #7e8c9c
+    border: 0
+  a:hover
+    border-bottom: 1px solid
+  li
+    float: left
+    width: 33%
+    text-align: center
+    span
+      font-family= !BistroScript
+      font-size: 20px
+      text-transform: lowercase
+      position: relative
+      top: -1px
+
+ul.contact.two li
+  width: 49%
+
+// Archive
+p.archive
+  font-family= !Nilland
+  text-align: center
+  text-transform: lowercase
+  a, a:hover
+    border: 0
+
+ul.archive
+  margin: 1em 0 0 2em
+  li
+    color= !linkColor
+    list-style: disc
+    margin-bottom: 1em
+    span
+      font-size: 0.9em
+      color= !linkHoverColor
+
+// Gist
+div.content .gist
+  .gist-file .gist-meta
+    font-size: 0.65em

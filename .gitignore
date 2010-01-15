@@ -1,12 +1,3 @@
-*~
-*.swp
 .DS_Store
-pkg/
-bench/
-log/*
-tmp/*
-db/*.sqlite3
-*.sql
-bin/
-vendor/bundler_gems
-less
+_site
+.sass-cache

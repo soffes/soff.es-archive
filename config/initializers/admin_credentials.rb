@@ -1,2 +1,0 @@
-ENV['ADMIN_USERNAME'] = "admin" unless ENV['ADMIN_USERNAME']
-ENV['ADMIN_PASSWORD'] = "passw0rd" unless ENV['ADMIN_PASSWORD']

@@ -1,0 +1,14 @@
+---
+layout: default
+title: Pure Awesomeness
+---
+{% for page in site.posts limit:3 %}
+{% assign body = page.content %}
+{% include post.html %}
+{% endfor %}
+
+<p class="archive">
+  <img src="/images/lightning.png" alt="" /> 
+  <a href="/archive.html">View older posts</a> 
+  <img src="/images/lightning.png" alt="" />
+</p>

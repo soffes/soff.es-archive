@@ -1,54 +1,28 @@
 # samsoff.es
 
-**Note: This is a massive work in progress. Pretty much everything is broken or incomplete.**
+This is my blog. You can read it at <http://samsoff.es>.
 
-This is my new blog I am rewriting in Rails. I [moved my blog to Jekyll](http://samsoff.es/post/new-blog-on-github-and-jekyll/) a few weeks ago and really missed playing with a Rails app, so I'm moving it back and starting from scratch.
+It's running on [Jekyll][] (blog-aware, static site generator) and [Markdown](http://daringfireball.net/projects/markdown).
 
-My current blog is still at <http://samsoff.es>. You can see this version at <http://new.samsoff.es> until I make it live.
+I used a lot of ideas from [Tom Preston-Werner](http://github.com/mojombo/mojombo.github.com), [Tom Ward](http://github.com/tomafro/tomafro.net), and [Alex Payne](http://github.com/al3x/al3x.github.com).
 
-## Running Locally
+Feel free to use anything here except my posts without asking.
 
-I'm very proud to be using the new [Bundler](http://github.com/wycats/bundler) (which you need to install if you haven't already). I'm also using Postgres. If you don't have it already, you'll need to install it. I wrote [a blog post on how to install Nginx and Postgres](http://samsoff.es/post/running-rails-local-development-with-nginx-postgres-and-passenger-with-homebrew/) that might be helpful. You can skip over the Nginx parts if you want.
+### Running Locally
 
-Run the following queries to setup the user in Postgres:
+Be sure you have all of the gems required by running
 
-    $ psql postgres
-    # CREATE USER samsoffes SUPERUSER;
-    # \q
+    sudo rake gems:install
 
-Now all you need to do to get going, all you need to is bundle and setup the database:
+To start the server, run
 
-    $ gem bundle
-    $ rake db:create
-    $ rake db:schema:load
+    rake server
 
-If you have issues getting it up and running, [send me an email](mailto:sam@samsoff.es).
+This will start the server at <http://localhost:4000/>.
 
-### Admin
+You will probably want to [Compass][] in watch mode as well. Run this command to have [Compass][] watch the sass directory.
 
-The default credentials for the admin area are `admin` and `passw0rd`. These are obviously different on production or if you have environment variables for `ADMIN_USERNAME` and `ADMIN_PASSWORD`.
+    rake compass:watch
 
-## Goals for new version
-
-* Use [Heroku](http://heroku.com) for hosting
-* Use [Cucumber](http://cukes.info) for integration testing
-* Use [RSpec](http://rspec.info) for unit testing
-* Use something like [Jammit](http://github.com/documentcloud/jammit) or [Heroku Asset Packager](http://github.com/amasses/heroku_asset_packager) for assets
-* Use [Bundler](http://github.com/wycats/bundler) for gem awesomeness
-* Cleaner backend
-* Tags with [virtual attributes](http://railscasts.com/episodes/167-more-on-virtual-attributes)
-* New homepage
-* Integrate music podcast into app
-* Move music to [the sky is blue](http://blue.samsoff.es)
-* Create podcast for screencasts
-* Support old URLs and move to new restful URLs
-* Implement [CanCan](http://github.com/ryanb/cancan) for admin permissions
-* Show recent social activity
-    * [Twitter](http://twitter.com/samsoffes) - most recent tweet
-    * [Last.fm](http://last.fm/user/samsoffes) - most listened to band for this week
-    * [Flickr](http://www.flickr.com/photos/samsoffes) - recent photos
-
-### Dream goals
-
-* Use [Cappuccino](http://cappuccino.org) for admin
-* Implement custom music player
+[Jekyll]: http://github.com/mojombo/jekyll
+[Compass]: http://compass-style.org/

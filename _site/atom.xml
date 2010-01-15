@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  <title>samsoff.es</title>
  <link href="http://samsoff.es/atom.xml" rel="self"/>
- <updated>2010-01-15T00:04:27-06:00</updated>
+ <updated>2010-01-15T00:06:07-06:00</updated>
  <id>http://samsoff.es/</id>
  <author>
    <name>Sam Soffes</name>
@@ -234,7 +234,7 @@
 
 &lt;p&gt;A popular solution for this creating a category and overriding the method you want to change in it. For this the example, we'll make a &lt;code&gt;UINavigationBar&lt;/code&gt; green instead (obviously you could do something cool here instead). The category way would look something like this:&lt;/p&gt;
 
-&lt;p&gt;Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -l c -f html&lt;/p&gt;
+&lt;p&gt;Liquid error: Resource temporarily unavailable - fork(2)&lt;/p&gt;
 
 &lt;p&gt;This approach works very well, but there are two issues with it: overriding methods with a category is an Objective-C no no and if you need to call the default implementation, you can't.&lt;/p&gt;
 
@@ -248,11 +248,11 @@
 
 &lt;p&gt;I updated my category to look like this:&lt;/p&gt;
 
-&lt;p&gt;Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -l c -f html&lt;/p&gt;
+&lt;p&gt;Liquid error: Resource temporarily unavailable - fork(2)&lt;/p&gt;
 
 &lt;p&gt;I then updated &lt;code&gt;main.m&lt;/code&gt; to look like this:&lt;/p&gt;
 
-&lt;p&gt;Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -l c -f html&lt;/p&gt;
+&lt;p&gt;Liquid error: Resource temporarily unavailable - fork(2)&lt;/p&gt;
 
 &lt;p&gt;So this kinda hurt my head when I was first looking at all of this. In &lt;code&gt;main.m&lt;/code&gt;, before the application starts, I swizzle the &lt;code&gt;UINavigationBar&lt;/code&gt; methods. &lt;code&gt;method_exchangeImplementations()&lt;/code&gt; switches my &lt;code&gt;drawRectCustomBackground:&lt;/code&gt; with &lt;code&gt;drawRect:&lt;/code&gt; in
 &lt;code&gt;UINavigationBar&lt;/code&gt;. When I call the default implementation in &lt;code&gt;drawRectCustomBackground:&lt;/code&gt;, it looks like I'm calling the same method, but I am actually calling the default implementation because it swapped them.&lt;/p&gt;
@@ -278,11 +278,11 @@
 
 &lt;p&gt;Before, it would add the model in the plugin to your search path and then you would have to run a custom rake task in the plugin to add the table and migrate the database for the model. This always felt a little dirty, so I abstracted it all out. Now you can do:&lt;/p&gt;
 
-&lt;p&gt;Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -l ruby -f html&lt;/p&gt;
+&lt;p&gt;Liquid error: Resource temporarily unavailable - fork(2)&lt;/p&gt;
 
 &lt;p&gt;Pretty cool, right? Now sending is as easy as&lt;/p&gt;
 
-&lt;p&gt;Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -l ruby -f html&lt;/p&gt;
+&lt;p&gt;Liquid error: Resource temporarily unavailable - fork(2)&lt;/p&gt;
 
 &lt;p&gt;(&lt;code&gt;d&lt;/code&gt; being an instance of &lt;code&gt;Device&lt;/code&gt; of course). You can read the &lt;a href=&quot;http://github.com/samsoffes/apple_push_notification&quot;&gt;full readme on GitHub&lt;/a&gt;. (Yes, another smack on the hand for no RDoc.)&lt;/p&gt;
 

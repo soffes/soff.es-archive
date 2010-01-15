@@ -35,7 +35,7 @@
 
 <p>A popular solution for this creating a category and overriding the method you want to change in it. For this the example, we'll make a <code>UINavigationBar</code> green instead (obviously you could do something cool here instead). The category way would look something like this:</p>
 
-<p>Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -l c -f html</p>
+<p>Liquid error: Resource temporarily unavailable - fork(2)</p>
 
 <p>This approach works very well, but there are two issues with it: overriding methods with a category is an Objective-C no no and if you need to call the default implementation, you can't.</p>
 
@@ -49,11 +49,11 @@
 
 <p>I updated my category to look like this:</p>
 
-<p>Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -l c -f html</p>
+<p>Liquid error: Resource temporarily unavailable - fork(2)</p>
 
 <p>I then updated <code>main.m</code> to look like this:</p>
 
-<p>Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -l c -f html</p>
+<p>Liquid error: Resource temporarily unavailable - fork(2)</p>
 
 <p>So this kinda hurt my head when I was first looking at all of this. In <code>main.m</code>, before the application starts, I swizzle the <code>UINavigationBar</code> methods. <code>method_exchangeImplementations()</code> switches my <code>drawRectCustomBackground:</code> with <code>drawRect:</code> in
 <code>UINavigationBar</code>. When I call the default implementation in <code>drawRectCustomBackground:</code>, it looks like I'm calling the same method, but I am actually calling the default implementation because it swapped them.</p>

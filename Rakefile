@@ -7,7 +7,9 @@ namespace :gems do
       "rdiscount --version >= 1.5.5",
       "jekyll --version >= 0.5.4",
       "haml --version >= 2.2.9",
-      "compass --version 0.8.17"
+      "compass --version 0.8.17",
+      "sinatra",
+      "shotgun"
     ]
     dependencies.each do |dependency|
       command = "gem install #{dependency} --source http://gemcutter.org -q"
@@ -26,9 +28,10 @@ end
 
 desc "Start local server"
 task :server do
-  system "jekyll --server --auto"
+  system "shotgun masquerade.rb"
 end
 
+desc "Clean and rebuild the Jekyll site"
 task :clean do
   system "rm -rf _site && jekyll"
 end

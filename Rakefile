@@ -28,3 +28,7 @@ desc "Start local server"
 task :server do
   system "jekyll --server --auto"
 end
+
+task :clean do
+  system "rm -rf _site && jekyll"
+end

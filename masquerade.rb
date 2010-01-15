@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'sinatra'
  
-set :public, Proc.new { File.join(root, "_site") }
+set :public, File.dirname(__FILE__) + '/_site'
  
 # This before filter ensures that your pages are only ever served 
 # once (per deploy) by Sinatra, and then by Varnish after that
@@ -17,18 +17,14 @@ get '/' do
   File.read('_site/index.html')
 end
 
-get '/music.html' do
-  redirect('/music')
+get %r{/post/([a-zA-Z\-_]+)/?} do
+  File.read("_site/post/#{params[:captures].first}/index.html") or not_found
 end
 
-get '/music' do
-  File.read('_site/music_.html')
+get %r{/(music|about).html} do
+  redirect("/#{params[:captures].first}")
 end
 
-get '/about.html' do
-  redirect('/about')
-end
-
-get '/about' do
-  File.read('_site/about_.html')
+get %r{/(music|about)/?} do
+  File.read("_site/#{params[:captures].first}_.html")
 end

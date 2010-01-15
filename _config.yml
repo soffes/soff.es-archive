@@ -3,3 +3,7 @@ markdown: rdiscount
 pygments: true
 exclude:
   - config.rb
+  - compass.rb
+  - Readme.markdown
+  - masquerade.rb
+  - config.ru

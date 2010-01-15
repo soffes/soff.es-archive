@@ -2,12 +2,29 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  <title>samsoff.es</title>
  <link href="http://samsoff.es/atom.xml" rel="self"/>
- <updated>2010-01-14T23:34:45-06:00</updated>
+ <updated>2010-01-14T23:45:14-06:00</updated>
  <id>http://samsoff.es/</id>
  <author>
    <name>Sam Soffes</name>
    <email>sam@samsoff.es</email>
  </author>
+ 
+ <entry>
+   <id>http://samsoff.es/post/moved-to-heroku</id>
+   <link href="http://samsoff.es/post/moved-to-heroku"/>
+   <title>Moved To Heroku</title>
+   <author>
+     <name>Sam Soffes</name>
+     <email>sam@samsoff.es</email>
+   </author>
+   <content type="html">&lt;p&gt;I posted a &lt;a href=&quot;/post/easy-deployment-with-heroku&quot;&gt;screencast on Heroku&lt;/a&gt; a few months ago. Since then, &lt;a href=&quot;http://tastefulworks.com&quot;&gt;my company&lt;/a&gt; has moved all of their stuff to &lt;a href=&quot;http://heroku.com&quot;&gt;Heroku&lt;/a&gt;. It has been working really great for us.&lt;/p&gt;
+
+&lt;p&gt;I've had my blog &lt;a href=&quot;/post/new-blog-on-github-and-jekyll&quot;&gt;on GitHub pages&lt;/a&gt; for awhile. I recently came across a &lt;a href=&quot;http://jstorimer.com/2009/12/29/jekyll-on-heroku.html&quot;&gt;good article&lt;/a&gt; on running &lt;a href=&quot;http://github.com/mojombo/jekyll&quot;&gt;Jekyll&lt;/a&gt; from the &lt;a href=&quot;http://ruby5.envylabs.com/episodes/42-episode-40-january-8-2010&quot;&gt;Ruby5 podcast&lt;/a&gt;. It was really easy to get setup. So far, I'm a fan of my new setup.&lt;/p&gt;
+
+&lt;p&gt;I'm still working on my &lt;a href=&quot;http://github.com/samsoffes/samsoff.es/tree/rails3&quot;&gt;Rails 3 version of my blog&lt;/a&gt; when I have time. Lately, I've been playing a lot of music and occasionally dabbling with &lt;a href=&quot;http://markdownr.com&quot;&gt;Markdownr.com&lt;/a&gt; due to a recent spike in traffic (&lt;a href=&quot;http://twitter.com/defunkt/status/7491983993&quot;&gt;thanks to @defunkt&lt;/a&gt;).&lt;/p&gt;
+</content>
+   <updated>2010-01-14T00:00:00-06:00</updated>
+ </entry>
  
  <entry>
    <id>http://samsoff.es/post/app-store-rejection</id>
@@ -336,26 +353,6 @@
 &lt;p&gt;Anyway, it's kinda a cool discovery. &lt;em&gt;&lt;a href=&quot;http://github.com/samsoffes/private-json-test&quot;&gt;Check out my sample project on GitHub&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
 </content>
    <updated>2009-11-03T00:00:00-06:00</updated>
- </entry>
- 
- <entry>
-   <id>http://samsoff.es/post/iphone-push-development-issues</id>
-   <link href="http://samsoff.es/post/iphone-push-development-issues"/>
-   <title>iPhone Push Development Issues</title>
-   <author>
-     <name>Sam Soffes</name>
-     <email>sam@samsoff.es</email>
-   </author>
-   <content type="html">&lt;p&gt;To the wayward googler, if you are getting this error:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Failed to register for remote notificaitons. Error: Error Domain=NSCocoaErrorDomain Code=3000 UserInfo=0x2782a0 &quot;no valid 'aps-environment' entitlement string found for application&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You need to make sure that your provisioning profile has the app id of the app you have setup push for. Double check that you are actually building with it.&lt;/p&gt;
-
-&lt;p&gt;If it still doesn't work, you probably created the provisioning profile before you enabled push on that app id. Modify it (just uncheck and recheck a box to enabled the save button) and save, then download and reinstall. You'll need to delete the old one so you don't get it confused with the new one. If that doesn't work, double check everything and try clean building.&lt;/p&gt;
-</content>
-   <updated>2009-10-21T00:00:00-05:00</updated>
  </entry>
  
 </feed>

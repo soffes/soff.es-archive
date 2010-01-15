@@ -14,6 +14,11 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>http://samsoff.es/post/moved-to-heroku</loc>
+    <lastmod>2010-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>http://samsoff.es/post/app-store-rejection</loc>
     <lastmod>2010-01-03</lastmod>
     <changefreq>monthly</changefreq>

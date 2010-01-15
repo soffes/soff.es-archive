@@ -10,25 +10,25 @@ before do
 end
 
 not_found do
-  File.read('_site/404.html')
+  File.read('_site/four-oh-four.html')
 end
 
 get '/' do
   File.read('_site/index.html')
 end
 
-# get '/music.html' do
-#   redirect('/music')
-# end
-# 
-# get '/music' do
-#   File.read('_site/music_.html')
-# end
-# 
-# get '/about.html' do
-#   redirect('/about')
-# end
-# 
-# get '/about' do
-#   File.read('_site/about_.html')
-# end
+get '/music.html' do
+  redirect('/music')
+end
+
+get '/music' do
+  File.read('_site/music_.html')
+end
+
+get '/about.html' do
+  redirect('/about')
+end
+
+get '/about' do
+  File.read('_site/about_.html')
+end

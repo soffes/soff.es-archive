@@ -30,6 +30,31 @@
 
 <div class="post">
   <div class="title">
+    <h2><a href="/post/trying-to-teach-web-development">Trying to Teach Web Development</a></h2>
+    <p class="meta">Posted 25 Jan 2010</p>
+  </div>
+  <div class="content">
+    <p>Lately I've been trying to teach <a href="http://twitter.com/haileyjayne">an awesome friend</a> front-end web development. It's so hard to even know where to begin.</p>
+
+<h3>The good ole days</h3>
+
+<p>I started writing HTML when I was 10 years old. Back then, it was easy. We were writing our tags in all caps (HOW AWFUL), not closing tags if we didn't feel like it, frames were regarded as professional, and the animated gif was cool (<a href="http://sammcd.com">some</a> would say <a href="http://assets.samsoff.es/posts/trying-to-teach-web-development/it-isnt.gif">it still is</a>).</p>
+
+<p>I remember when Javascript became popular and <a href="http://javascriptkit.com">JavascriptKit.com</a> was the place to get copy and paste scripts for your site. I can remember when CSS started to become popular and when table layouts finally died out. It was easy to pick stuff. The technologies evolved at the rate that I learned them (which was awesome).</p>
+
+<p>Trying to start from scratch today is pretty difficult. Things are a lot easier than they used to be (especially if you're using frameworks and such), but there is so much knowledge that you need to acquire before you can be a useful web developer.</p>
+
+<h3>It's possible</h3>
+
+<p>After a few hours typing HTML and CSS, she started to pick it up. I told her to reference <a href="http://w3schools.com">W3Schools</a> and the mighty <a href="http://google.com">Google</a>. I'm pretty confident that with today's resources and some perseverance, it's possible to get started pretty quickly.</p>
+
+  </div>
+</div>
+
+
+
+<div class="post">
+  <div class="title">
     <h2><a href="/post/moved-to-heroku">Moved To Heroku</a></h2>
     <p class="meta">Posted 14 Jan 2010</p>
   </div>
@@ -82,105 +107,6 @@
 <h3>Thoughts To Apple</h3>
 
 <p>Apple, a lot of developers rely on undocumented APIs. We understand why you won't allow them. We are just ask that you start documenting popular ones. I know a lot of people really want so see the scrolling and <code>UIScroller</code> in <code>UIWebView</code> documented, methods in <code>UIApplication</code> for airplane mode prompts, and many others. Please start an effort to documented these methods. Any effort to try to more clearly communicate App Store policy changes like this besides having us read the massive agreement would also be very welcome.</p>
-
-  </div>
-</div>
-
-
-
-<div class="post">
-  <div class="title">
-    <h2><a href="/post/running-rails-local-development-with-nginx-postgres-and-passenger-with-homebrew">Running Rails Local Development with Nginx, Postgres, and Passenger with Homebrew</a></h2>
-    <p class="meta">Posted 29 Nov 2009</p>
-  </div>
-  <div class="content">
-    <p>Lately I have been playing with <a href="http://github.com/mxcl/homebrew">Homebrew</a>, an awesome package manager for Mac OS X. I really like not having to worry about dependencies and such when installing. The "rarely sudo" mentality is also pretty great.</p>
-
-<p>When I noticed the <a href="http://nginx.net">Nginx</a> (a sweet open source web server that is way better than Apache) had a <code>--with-passenger</code> option (which is also way awesome), I figured I'd give it a shot. I was using the built-in Apache with <a href="http://modrails.com">Passenger</a> <a href="http://github.com/alloy/passengerpane">Preference Pane</a>, which was pretty cool, but I really like Nginx, so I switched. I also really wanted to start using <a href="http://postgresql.org">PostgreSQL</a> instead of SQLite since all of my stuff is hosted on <a href="http://heroku.com">Heroku</a> and that's what they're running. (I do plan on writing a Preference Pane for doing for this setup eventually.)</p>
-
-<p>Here are the steps to get all of this going. I tried to keep it as simple and clear as possible with lots of examples. It looks like a lot, but it's really quite simple.</p>
-
-<h3>Installation</h3>
-
-<ol>
-<li><p><a href="http://github.com/mxcl/homebrew#readme">Install Homebrew</a> and follow <a href="http://wiki.github.com/mxcl/homebrew/cpan-ruby-gems-and-python-disttools">the steps in the wiki about not sudoing when installing RubyGems</a>.</p></li>
-<li><p>Install the <a href="http://modrails.com">Passenger</a> gem</p>
-
-<pre><code>$ gem install passenger
-</code></pre>
-
-<p>I also had to install the <code>fastthread</code> gem to get Passenger to play nice later. You might not have to do this. If you need to, all you have to do is <code>gem install fastthread</code>.</p></li>
-<li><p>Install <a href="http://nginx.net">Nginx</a> with the <a href="http://modrails.com">Passenger</a> module</p>
-
-<pre><code>$ brew install nginx --with-passenger
-</code></pre>
-
-<blockquote><p>You can start Nginx with <code>sudo nginx</code> and stop it with <code>sudo nginx -s stop</code>.</p></blockquote></li>
-<li><p>Install <a href="http://postgresql.org">PostgreSQL</a></p>
-
-<pre><code>$ brew install postgresql
-</code></pre>
-
-<p>After the installation completes, there will be instructions on how to initialize the database, start the server, start the server at login, and install the postgres gem. Do all of this.</p></li>
-</ol>
-
-
-<h3>Server Configuration</h3>
-
-<ol>
-<li><p>Modify your Nginx configuration for Passenger. It will be located at <code>/usr/local/Cellar/nginx/0.7.62/conf/nginx.conf</code> (obviously you will need to replace the version number with whatever version you installed). Here is what mine looks like.</p>
-
-<p><script src="http://gist.github.com/245177.js?file=nginx.conf"></script></p>
-
-<p>There are a few things to note:</p>
-
-<ol>
-<li><p>I run it as my user (<code>staff</code> is my group). You don't have to do this, but I like to have the processes running as me. (If there are more of me, I'm more productive, right?) You'll need to comment this line out or change to your user.</p></li>
-<li><p>I am pointing the <code>passenger_root</code> directive to the passenger root. This will change with whatever version of Passenger you have installed. You can get the current path by running <code>passenger-config --root</code> (you'll probably need to do this since the version is in the path).</p></li>
-<li><p>I also have <code>passenger_ruby</code> set to <code>gem_ruby</code>. I had a horrible time getting Passenger to see my custom <code>GEM_PATH</code> (that I setup by following the <a href="http://wiki.github.com/mxcl/homebrew/cpan-ruby-gems-and-python-disttools">Homebrew wiki</a>). I created this little shell script to fix the environment variables. It would be great if Passenger had a way to do this. I know you can in the Apache version, but I couldn't figure it out for Nginx. Here is what my <code>gem_ruby</code> looks like:</p>
-
-<p><script src="http://gist.github.com/245177.js?file=gem_ruby.sh"></script></p></li>
-</ol>
-</li>
-<li><p>I like to keep all of my virtual hosts in separate files in the <code>conf</code> directory and then include them into <code>nginx.conf</code>, but you can do it however you want. Here is what <code>samsoffes.conf</code> looks like:</p>
-
-<p><script src="http://gist.github.com/245177.js?file=samsoffes.conf"></script></p></li>
-<li><p>You will need to edit your <code>/etc/hosts</code> for any virtual hosts you add. Mine looks like this:</p>
-
-<p><script src="http://gist.github.com/245177.js?file=hosts"></script></p></li>
-</ol>
-
-
-<h3>Database Configuration</h3>
-
-<ol>
-<li><p>If you haven't already, edit your application's <code>database.yml</code> file to use PostgreSQL. Here is an example:</p>
-
-<p><script src="http://gist.github.com/245177.js?file=database.yml"></script></p>
-
-<p>Notice that the username is <code>samsoffes</code> and not <code>root</code>. Using the <code>root</code> user is considered bad practice by most. (We'll create that user in the next step.)</p></li>
-<li><p>Enter the PostgreSQL prompt to create your user and databases:</p>
-
-<pre><code>$ psql  postgres
-# CREATE USER samsoffes SUPERUSER;
-# CREATE DATABASE samsoffes_development OWNER samsoffes;
-# CREATE DATABASE samsoffes_test OWNER samsoffes;
-# \q
-</code></pre>
-
-<p>Note: you need to make your user a superuser for your tests to run correctly. More on this <a href="http://blogs.law.harvard.edu/djcp/2009/01/rails-22-postgres-and-testing/comment-page-1/">here</a>.</p></li>
-</ol>
-
-
-<h3>Let's get started already!</h3>
-
-<p>So, to review, you have just installed and configured Nginx, Passenger, and PostgreSQL. Now, all you have to do is type <code>sudo nginx</code> to start Nginx and point your browser to your virtual host (so for me it would be <code>http://samsoffes.local</code>). That's it! You're done!</p>
-
-<p>Before, I found myself typing <code>sudo apachectl restart</code> a lot to reload my application. Now, you would run <code>sudo nginx -s reload</code> to reload the server configuration and restart the app. (You can of course do the <code>touch tmp/restart.txt</code> method as well.)</p>
-
-<p>That probably seemed a bit tedious, but now all you have to do is create a virtual host in Nginx, add it your your hosts file, and create your database. I really like developing locally like this. <a href="http://github.com/mxcl/homebrew">Homebrew</a> makes this entire process <em>very easy</em>.</p>
-
-<p>If you have any issues, feel free to <a href="mailto:sam@samsoff.es">send me an email</a> and I'll see what I can do. (I really need to get comments going on here don't I)</p>
 
   </div>
 </div>

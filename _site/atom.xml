@@ -2,12 +2,37 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  <title>samsoff.es</title>
  <link href="http://samsoff.es/atom.xml" rel="self"/>
- <updated>2010-01-26T00:13:49-06:00</updated>
+ <updated>2010-01-26T00:21:05-06:00</updated>
  <id>http://samsoff.es/</id>
  <author>
    <name>Sam Soffes</name>
    <email>sam@samsoff.es</email>
  </author>
+ 
+ <entry>
+   <id>http://samsoff.es/post/trying-to-teach-web-development</id>
+   <link href="http://samsoff.es/post/trying-to-teach-web-development"/>
+   <title>Trying to Teach Web Development</title>
+   <author>
+     <name>Sam Soffes</name>
+     <email>sam@samsoff.es</email>
+   </author>
+   <content type="html">&lt;p&gt;Lately I've been trying to teach &lt;a href=&quot;http://twitter.com/haileyjayne&quot;&gt;an awesome friend&lt;/a&gt; front-end web development. It's so hard to even know where to begin.&lt;/p&gt;
+
+&lt;h3&gt;The good ole days&lt;/h3&gt;
+
+&lt;p&gt;I started writing HTML when I was 10 years old. Back then, it was easy. We were writing our tags in all caps (HOW AWFUL), not closing tags if we didn't feel like it, frames were regarded as professional, and the animated gif was cool (&lt;a href=&quot;http://sammcd.com&quot;&gt;some&lt;/a&gt; would say &lt;a href=&quot;http://assets.samsoff.es/posts/trying-to-teach-web-development/it-isnt.gif&quot;&gt;it still is&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;I remember when Javascript became popular and &lt;a href=&quot;http://javascriptkit.com&quot;&gt;JavascriptKit.com&lt;/a&gt; was the place to get copy and paste scripts for your site. I can remember when CSS started to become popular and when table layouts finally died out. It was easy to pick stuff. The technologies evolved at the rate that I learned them (which was awesome).&lt;/p&gt;
+
+&lt;p&gt;Trying to start from scratch today is pretty difficult. Things are a lot easier than they used to be (especially if you're using frameworks and such), but there is so much knowledge that you need to acquire before you can be a useful web developer.&lt;/p&gt;
+
+&lt;h3&gt;It's possible&lt;/h3&gt;
+
+&lt;p&gt;After a few hours typing HTML and CSS, she started to pick it up. I told her to reference &lt;a href=&quot;http://w3schools.com&quot;&gt;W3Schools&lt;/a&gt; and the mighty &lt;a href=&quot;http://google.com&quot;&gt;Google&lt;/a&gt;. I'm pretty confident that with today's resources and some perseverance, it's possible to get started pretty quickly.&lt;/p&gt;
+</content>
+   <updated>2010-01-25T00:00:00-06:00</updated>
+ </entry>
  
  <entry>
    <id>http://samsoff.es/post/moved-to-heroku</id>
@@ -332,27 +357,6 @@
 &lt;p&gt;In conclusion, &lt;em&gt;it looks like &lt;a href=&quot;http://code.google.com/p/json-framework/&quot;&gt;JSON Framework&lt;/a&gt; is the one to use&lt;/em&gt;, since you probably shouldn't use &lt;a href=&quot;http://samsoff.es/post/parsing-json-with-the-iphones-private-json-framework&quot;&gt;Apple JSON&lt;/a&gt; in a shipping app. &lt;a href=&quot;http://code.google.com/p/json-framework/&quot;&gt;JSON Framework&lt;/a&gt; was always my favorite for the clean, category-style interface. I only tested &lt;a href=&quot;http://samsoff.es/post/parsing-json-with-the-iphones-private-json-framework&quot;&gt;Apple JSON&lt;/a&gt; to see how the other implementations compared to it.&lt;/p&gt;
 </content>
    <updated>2009-11-04T00:00:00-06:00</updated>
- </entry>
- 
- <entry>
-   <id>http://samsoff.es/post/parsing-json-with-the-iphones-private-json-framework</id>
-   <link href="http://samsoff.es/post/parsing-json-with-the-iphones-private-json-framework"/>
-   <title>Parsing JSON with the iPhone's Private JSON Framework</title>
-   <author>
-     <name>Sam Soffes</name>
-     <email>sam@samsoff.es</email>
-   </author>
-   <content type="html">&lt;p&gt;So my post on &lt;a href=&quot;http://samsoff.es/post/web-services-with-cocoa-surprise/&quot;&gt;Cocoa web services&lt;/a&gt; got a lot of attention when &lt;a href=&quot;http://daringfireball.net/linked/2009/10/29/soffes-json-plist&quot;&gt;Gruber linked me&lt;/a&gt; the other day. This started a conversation on &lt;a href=&quot;http://twitter.com/samsoffes&quot;&gt;Twitter&lt;/a&gt; and basically ended up landing on using binary property lists over JSON for size and parsing, but that's for another blog post.&lt;/p&gt;
-
-&lt;p&gt;All of this got me thinking about how Apple does their JSON parsing, since they are obviously using JSON in several of the built in apps. I happened to notice that there was a &lt;code&gt;JSON.framework&lt;/code&gt; in the Private Frameworks folder this evening. I tried &lt;a href=&quot;http://www.codethecode.com/projects/class-dump/&quot;&gt;class-dump&lt;/a&gt;ing it and it surprising worked! (Most of the other private frameworks I tried to class-dump didn't produce any results.)&lt;/p&gt;
-
-&lt;p&gt;I figured what the heck, might as well try it. It turns out that it was really easy to implement. I posted a &lt;a href=&quot;http://github.com/samsoffes/private-json-test&quot;&gt;sample project demonstrating this on GitHub&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;It really sucks that this is private. It works really well. I wish Apple would open this up. I know a lot of people would benefit from it. I've heard that if you link against any private frameworks in your app, it will automatically get rejected. I haven't been brave enough to test this yet.&lt;/p&gt;
-
-&lt;p&gt;Anyway, it's kinda a cool discovery. &lt;em&gt;&lt;a href=&quot;http://github.com/samsoffes/private-json-test&quot;&gt;Check out my sample project on GitHub&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
-</content>
-   <updated>2009-11-03T00:00:00-06:00</updated>
  </entry>
  
 </feed>

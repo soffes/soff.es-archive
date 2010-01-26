@@ -14,6 +14,11 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>http://samsoff.es/post/trying-to-teach-web-development</loc>
+    <lastmod>2010-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>http://samsoff.es/post/moved-to-heroku</loc>
     <lastmod>2010-01-14</lastmod>
     <changefreq>monthly</changefreq>

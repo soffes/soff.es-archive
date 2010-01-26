@@ -32,6 +32,6 @@ task :server do
 end
 
 desc "Clean and rebuild the Jekyll site"
-task :clean do
+task :build do
   system "rm -rf _site && jekyll"
 end

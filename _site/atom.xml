@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  <title>samsoff.es</title>
  <link href="http://samsoff.es/atom.xml" rel="self"/>
- <updated>2010-01-25T21:35:27-06:00</updated>
+ <updated>2010-01-26T00:13:49-06:00</updated>
  <id>http://samsoff.es/</id>
  <author>
    <name>Sam Soffes</name>
@@ -325,7 +325,7 @@
    </author>
    <content type="html">&lt;p&gt;Yesterday I wrote &lt;a href=&quot;http://samsoff.es/post/parsing-json-with-the-iphones-private-json-framework&quot;&gt;a post on parsing JSON with Apple's private framework&lt;/a&gt;. I thought it might be worth benchmarking &lt;a href=&quot;http://code.google.com/p/touchcode/&quot;&gt;TouchJSON&lt;/a&gt;, &lt;a href=&quot;http://code.google.com/p/json-framework/&quot;&gt;JSON Framework&lt;/a&gt;, and &lt;a href=&quot;http://samsoff.es/post/parsing-json-with-the-iphones-private-json-framework&quot;&gt;Apple JSON&lt;/a&gt; (what I'm calling the private framework). &lt;em&gt;My results were very interesting.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://samsoff.es/images/posts/iphone-json-benchmarks.png&quot; alt=&quot;JSON Benchmarks&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://assets.samsoff.es/posts/iphone-json-benchmarks/iphone-json-benchmarks.png&quot; alt=&quot;JSON Benchmarks&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I know I &lt;a href=&quot;http://samsoff.es/post/web-services-with-cocoa-surprise/&quot;&gt;posted awhile ago that TouchJSON was really fast&lt;/a&gt;, but I guess I got my numbers mixed up. This time I ran each test 100 times and took the average. These are the numbers from &lt;a href=&quot;http://code.google.com/p/touchcode/&quot;&gt;TouchJSON&lt;/a&gt; &lt;a href=&quot;http://code.google.com/p/touchcode/downloads/list&quot;&gt;1.0.6&lt;/a&gt; and &lt;a href=&quot;http://code.google.com/p/json-framework/&quot;&gt;JSON Framework&lt;/a&gt; &lt;a href=&quot;http://code.google.com/p/json-framework/downloads/list&quot;&gt;2.2.2&lt;/a&gt; running on my iPhone 3GS compiled for iPhone OS 3.1. &lt;a href=&quot;http://github.com/samsoffes/json-benchmarks&quot;&gt;You can get the code on GitHub&lt;/a&gt; and see for yourself.&lt;/p&gt;
 

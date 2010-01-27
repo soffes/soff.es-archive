@@ -4,10 +4,10 @@ namespace :gems do
   desc "Install necessary gems"
   task :install do
     dependencies = [
-      "rdiscount --version >= 1.5.5",
-      "jekyll --version >= 0.5.4",
-      "haml --version >= 2.2.9",
-      "compass --version 0.8.17",
+      "rdiscount --version '>= 1.5.5'",
+      "jekyll --version '>= 0.5.4'",
+      "haml --version '>= 2.2.9'",
+      "compass --version '>= 0.8.17'",
       "sinatra",
       "shotgun"
     ]

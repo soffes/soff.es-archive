@@ -12,7 +12,7 @@ namespace :gems do
       "shotgun"
     ]
     dependencies.each do |dependency|
-      command = "gem install #{dependency} --source http://gemcutter.org -q"
+      command = "gem install #{dependency} --source http://gemcutter.org"
       puts command
       system command
     end

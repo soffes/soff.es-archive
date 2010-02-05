@@ -8,7 +8,7 @@ I used a lot of ideas from [Tom Preston-Werner](http://github.com/mojombo/mojomb
 
 Feel free to use anything here except my posts without asking.
 
-### Running Locally
+## Running Locally
 
 Be sure you have all of the gems required by running
 
@@ -18,11 +18,11 @@ To start, run `rake jekyll:auto` in one tab, and `rake server` in another.
 
 This will start the server at <http://localhost:9393/>.
 
-You will probably want to [Compass][] in watch mode as well. Run this command to have [Compass][] watch the sass directory.
+You will probably want to [Compass][] in watch mode as well. Run this command to have [Compass][] watch the sass directory. You'll need to restart the server each time you change a sass file though (which sucks, I know).
 
     rake compass:watch
 
-Running `rake build` will remove the [Jekyll][] cache and rebuild it.
+Running `rake jekyll` will remove the [Jekyll][] cache and rebuild it. You can read [Rakefile](http://github.com/samsoffes/samsoff.es/blob/master/Rakefile) for more information.
 
 [Jekyll]: http://github.com/mojombo/jekyll
 [Sinatra]: http://sinatrarb.com

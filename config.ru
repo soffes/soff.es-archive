@@ -1,2 +1,2 @@
-require 'masquerade'
-run Sinatra::Application
+require 'samsoffes'
+run SamSoffes

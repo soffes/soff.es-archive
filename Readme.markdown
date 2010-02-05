@@ -12,7 +12,7 @@ Feel free to use anything here except my posts without asking.
 
 Be sure you have all of the gems required by running
 
-    sudo rake gems:install
+    bundle pack
 
 To start, run `jekyll --auto` in one tab, and `rake server` in another.
 
@@ -21,6 +21,8 @@ This will start the server at <http://localhost:9393/>.
 You will probably want to [Compass][] in watch mode as well. Run this command to have [Compass][] watch the sass directory.
 
     rake compass:watch
+
+Running `rake build` will remove the [Jekyll][] cache and rebuild it.
 
 [Jekyll]: http://github.com/mojombo/jekyll
 [Sinatra]: http://sinatrarb.com

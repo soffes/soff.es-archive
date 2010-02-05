@@ -1,2 +1,6 @@
 .DS_Store
 .sass-cache
+.bundle
+bin
+vendor/cache
+vendor/gems

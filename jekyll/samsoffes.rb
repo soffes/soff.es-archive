@@ -2,10 +2,8 @@
 require File.expand_path(File.join(File.dirname(__FILE__), 'vendor', 'gems', 'environment'))
 Bundler.require_env
 
-JEKYLL_ROOT = "jekyll/_site"
-
 class SamSoffes < Sinatra::Default
-  set :public, JEKYLL_ROOT
+  set :public, File.dirname(__FILE__) + '/_site'
  
   # This before filter ensures that your pages are only ever served 
   # once (per deploy) by Sinatra, and then by Varnish after that
@@ -14,15 +12,15 @@ class SamSoffes < Sinatra::Default
   end
 
   not_found do
-    File.read("#{JEKYLL_ROOT}/four-oh-four.html")
+    File.read('_site/four-oh-four.html')
   end
 
   get '/' do
-    File.read("#{JEKYLL_ROOT}/index.html")
+    File.read('_site/index.html')
   end
 
   get %r{/post/([a-zA-Z\-_]+)/?} do
-    File.read("#{JEKYLL_ROOT}/post/#{params[:captures].first}/index.html") or not_found
+    File.read("_site/post/#{params[:captures].first}/index.html") or not_found
   end
 
   get %r{/(music|about).html} do
@@ -30,6 +28,6 @@ class SamSoffes < Sinatra::Default
   end
 
   get %r{/(music|about)/?} do
-    File.read("#{JEKYLL_ROOT}/#{params[:captures].first}_.html")
+    File.read("_site/#{params[:captures].first}_.html")
   end
 end

@@ -1,0 +1,2 @@
+require 'samsoffes'
+run SamSoffes

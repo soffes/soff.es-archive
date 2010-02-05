@@ -1,0 +1,33 @@
+namespace :compass do
+  desc "Clean Compass output"
+  task :clean do
+    system "rm -rf jekyll/stylesheets/*"
+  end
+  
+  desc "Start Compass watching the SASS directory"
+  task :watch do
+    system "compass -w -c _config/compass.rb"
+  end
+end
+
+desc "Start local server"
+task :server do
+  system "shotgun config.ru"
+end
+
+namespace :jekyll do
+  desc "Clean Jekyll site"
+  task :clean do
+    system "rm -rf _site"
+  end
+  
+  desc "Clean and rebuild the Jekyll site"
+  task :rebuild do
+    system "rm -rf _site && jekyll jekyll"
+  end
+
+  desc "Clean site and start watching"
+  task :auto do
+    system "rm -rf _site && jekyll jekyll --auto"
+  end
+end

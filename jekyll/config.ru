@@ -1,2 +1,0 @@
-require 'samsoffes'
-run SamSoffes

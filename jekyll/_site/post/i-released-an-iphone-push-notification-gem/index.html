@@ -41,11 +41,19 @@
 
 <p>Before, it would add the model in the plugin to your search path and then you would have to run a custom rake task in the plugin to add the table and migrate the database for the model. This always felt a little dirty, so I abstracted it all out. Now you can do:</p>
 
-<p>Liquid error: No such file or directory - pygmentize -l ruby -O encoding=utf-8 -f html</p>
+<div class="highlight"><pre><code class="ruby"><span class="k">class</span> <span class="nc">Device</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+    <span class="n">acts_as_pushable</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
 
 <p>Pretty cool, right? Now sending is as easy as</p>
 
-<p>Liquid error: No such file or directory - pygmentize -l ruby -O encoding=utf-8 -f html</p>
+<div class="highlight"><pre><code class="ruby"><span class="n">d</span><span class="o">.</span><span class="n">send_notification</span> <span class="ss">:alert</span> <span class="o">=&gt;</span> <span class="s2">&quot;Hello world!&quot;</span>
+</code></pre>
+</div>
+
 
 <p>(<code>d</code> being an instance of <code>Device</code> of course). You can read the <a href="http://github.com/samsoffes/apple_push_notification">full readme on GitHub</a>. (Yes, another smack on the hand for no RDoc.)</p>
 

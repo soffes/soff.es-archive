@@ -39,18 +39,25 @@
 <li><p><em>Add an iPhone specific stylesheet.</em> Something you will probably want to do is make your site narrower. The wider your layout is, the smaller everything has to be. It is much easier to scroll just vertically than vertically and horizontally. Something else to watch out for is mixing font sizes between px and em. You'll probally get some weird scalling issues if you mix units. You might also watch out for positioning issues due to Mobile Safari's scaling.</p>
 
 <p>You might also want to adjust your font sizes a bit. I know I had to make my footer a tad smaller. In your case, you might want to make important things like navigation larger and easier to tap. Feel free to check out my iPhone specific stylesheet at <a href="http://samsoffes.com/css/iphone.css">http://samsoffes.com/css/iphone.css</a>.</p></li>
-<li><p><em>Add a viewport meta tag.</em> This will tell Mobile Safari how to intelligently scale to fit your page. It's super easy to do and it will help a lot. My iPhone stylesheet makes my site 320px wide so I set my viewport to 320 to give a new bit of padding around my main content area. Here's the code:
-  Liquid error: No such file or directory - pygmentize -l html -O encoding=utf-8 -f html</p></li>
+<li><p><em>Add a viewport meta tag.</em> This will tell Mobile Safari how to intelligently scale to fit your page. It's super easy to do and it will help a lot. My iPhone stylesheet makes my site 320px wide so I set my viewport to 320 to give a new bit of padding around my main content area. Here's the code:</p></li>
 </ul>
+
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=320&quot;</span> <span class="nt">/&gt;</span>
+</code></pre>
+</div>
 
 
 <p>Remember if you have something that is wider than your viewport, it will automatically expand, so be sure to resize it in your iPhone specific stylesheet.</p>
 
 <ul>
-<li><p><em>Add a homescreen icon.</em> When a user adds your website to their homescreen, you want it have a facny icon. You can easily do this by putting a 57px x 57px png named <code>apple-touch-icon.png</code> at the root of your website. For example mine is at <a href="http://samsoffes.com/apple-touch-icon.png">http://samsoffes.com/apple-touch-icon.png</a>. You can also put it at a different location with this link tag:</p>
-
-<p>Liquid error: No such file or directory - pygmentize -l html -O encoding=utf-8 -f html</p></li>
+<li><em>Add a homescreen icon.</em> When a user adds your website to their homescreen, you want it have a facny icon. You can easily do this by putting a 57px x 57px png named <code>apple-touch-icon.png</code> at the root of your website. For example mine is at <a href="http://samsoffes.com/apple-touch-icon.png">http://samsoffes.com/apple-touch-icon.png</a>. You can also put it at a different location with this link tag:</li>
 </ul>
+
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;apple-touch-icon&quot;</span> <span class="na">href=</span><span class="s">&quot;custom-icon.png&quot;</span> <span class="nt">/&gt;</span>
+</code></pre>
+</div>
 
 
 <p>Doing these three simple things will make your web app way more useable on the iPhone. You can do most of this in about 10 minutes like I did. If your layout is overlly complex and can't be made narrower and simplier easily, then you'll have a lot more work than 10 minutes of course. Have at it!</p>

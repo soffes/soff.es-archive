@@ -37,16 +37,13 @@ I updated my category to look like this:
 
 {% highlight c %}
 @interface UINavigationBar (CustomBackground)
-
 - (void)drawRectCustomBackground:(CGRect)rect;
-
 @end
 
 
 @implementation UINavigationBar (CustomBackground)
 
 - (void)drawRectCustomBackground:(CGRect)rect {
-
 	if (self.barStyle == UIBarStyleDefault) {
 	    [[UIColor greenColor] set];
         CGRect fillRect = CGRectMake(0.0, 0.0, self.frame.size.width, self.frame.size.height);

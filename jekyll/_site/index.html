@@ -46,10 +46,12 @@ You will need to revise your application to read only within your directory cont
 
 <p>They think that I'm using some private API and going outside of the application sandbox to see if Safari is enabled. This made me laugh. I'm just being really clever. Here's the code to see if Safari is enabled:</p>
 
-<pre><code>+ (BOOL)hasSafariEnabled {
-    return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"http://xxxchurch.com"]];
-}
+<div class="highlight"><pre><code class="c"><span class="o">+</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">hasSafariEnabled</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">[[</span><span class="n">UIApplication</span> <span class="n">sharedApplication</span><span class="p">]</span> <span class="n">canOpenURL</span><span class="o">:</span><span class="p">[</span><span class="n">NSURL</span> <span class="n">URLWithString</span><span class="o">:</span><span class="err">@</span><span class="s">&quot;http://xxxchurch.com&quot;</span><span class="p">]];</span>
+<span class="p">}</span>
 </code></pre>
+</div>
+
 
 <p>I sent them an email with this code explaining I didn't break any rules. They never replied, but we got an approval email 2 days later. Silly Apple.</p>
 

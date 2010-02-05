@@ -39,7 +39,7 @@
 
 <p>The huge benefit to using plists over JSON is that you <em>don't have to parse them, they are 100% native</em>. You can initialize an <code>NSDictionary</code> or <code>NSArray</code> with just one method.</p>
 
-<p>Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -l c -f html</p>
+<p>Liquid error: No such file or directory - pygmentize -l c -O encoding=utf-8 -f html</p>
 
 <p>This is a super simple and easy way to do this. I would recommend using <code>NSURLConnection</code> to pull down your plist file to the temp directory and the run <code>initWithContentsOfFile:</code> instead of using the <code>initWithContentsOfURL:</code>. <code>NSURLConnection</code> provides some great added features, like being asynchronous and handeling HTTP auth, etc.</p>
 

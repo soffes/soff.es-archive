@@ -2,12 +2,42 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  <title>samsoff.es</title>
  <link href="http://samsoff.es/atom.xml" rel="self"/>
- <updated>2010-01-26T00:21:05-06:00</updated>
+ <updated>2010-02-04T21:15:03-06:00</updated>
  <id>http://samsoff.es/</id>
  <author>
    <name>Sam Soffes</name>
    <email>sam@samsoff.es</email>
  </author>
+ 
+ <entry>
+   <id>http://samsoff.es/post/rejected-for-cleverness</id>
+   <link href="http://samsoff.es/post/rejected-for-cleverness"/>
+   <title>Rejected for Cleverness</title>
+   <author>
+     <name>Sam Soffes</name>
+     <email>sam@samsoff.es</email>
+   </author>
+   <content type="html">&lt;p&gt;The latest &lt;a href=&quot;http://x3watch.com/&quot;&gt;X3watch iPhone app&lt;/a&gt; update got rejected. Here some of the highlights from the rejection email:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;We have reviewed your application and have found that it is accessing and displaying the contents of the iPhone OS filesystem outside of your designated container area.  The iPhone Developer Program License Agreement provides specific guidelines about this behavior in section 3.2(e).&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;!-- silly markdown --&gt;
+
+
+&lt;blockquote&gt;&lt;p&gt;There is no public method for obtaining the device's restriction settings.
+You will need to revise your application to read only within your directory container and resubmit your binary to iTunes Connect in order for your application to be reconsidered for the App Store.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;They think that I'm using some private API and going outside of the application sandbox to see if Safari is enabled. This made me laugh. I'm just being really clever. Here's the code to see if Safari is enabled:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+ (BOOL)hasSafariEnabled {
+    return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@&quot;http://xxxchurch.com&quot;]];
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I sent them an email with this code explaining I didn't break any rules. They never replied, but we got an approval email 2 days later. Silly Apple.&lt;/p&gt;
+</content>
+   <updated>2010-02-04T00:00:00-06:00</updated>
+ </entry>
  
  <entry>
    <id>http://samsoff.es/post/trying-to-teach-web-development</id>
@@ -259,7 +289,7 @@
 
 &lt;p&gt;A popular solution for this creating a category and overriding the method you want to change in it. For this the example, we'll make a &lt;code&gt;UINavigationBar&lt;/code&gt; green instead (obviously you could do something cool here instead). The category way would look something like this:&lt;/p&gt;
 
-&lt;p&gt;Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -l c -f html&lt;/p&gt;
+&lt;p&gt;Liquid error: No such file or directory - pygmentize -l c -O encoding=utf-8 -f html&lt;/p&gt;
 
 &lt;p&gt;This approach works very well, but there are two issues with it: overriding methods with a category is an Objective-C no no and if you need to call the default implementation, you can't.&lt;/p&gt;
 
@@ -273,11 +303,11 @@
 
 &lt;p&gt;I updated my category to look like this:&lt;/p&gt;
 
-&lt;p&gt;Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -l c -f html&lt;/p&gt;
+&lt;p&gt;Liquid error: No such file or directory - pygmentize -l c -O encoding=utf-8 -f html&lt;/p&gt;
 
 &lt;p&gt;I then updated &lt;code&gt;main.m&lt;/code&gt; to look like this:&lt;/p&gt;
 
-&lt;p&gt;Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -l c -f html&lt;/p&gt;
+&lt;p&gt;Liquid error: No such file or directory - pygmentize -l c -O encoding=utf-8 -f html&lt;/p&gt;
 
 &lt;p&gt;So this kinda hurt my head when I was first looking at all of this. In &lt;code&gt;main.m&lt;/code&gt;, before the application starts, I swizzle the &lt;code&gt;UINavigationBar&lt;/code&gt; methods. &lt;code&gt;method_exchangeImplementations()&lt;/code&gt; switches my &lt;code&gt;drawRectCustomBackground:&lt;/code&gt; with &lt;code&gt;drawRect:&lt;/code&gt; in
 &lt;code&gt;UINavigationBar&lt;/code&gt;. When I call the default implementation in &lt;code&gt;drawRectCustomBackground:&lt;/code&gt;, it looks like I'm calling the same method, but I am actually calling the default implementation because it swapped them.&lt;/p&gt;
@@ -303,11 +333,11 @@
 
 &lt;p&gt;Before, it would add the model in the plugin to your search path and then you would have to run a custom rake task in the plugin to add the table and migrate the database for the model. This always felt a little dirty, so I abstracted it all out. Now you can do:&lt;/p&gt;
 
-&lt;p&gt;Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -l ruby -f html&lt;/p&gt;
+&lt;p&gt;Liquid error: No such file or directory - pygmentize -l ruby -O encoding=utf-8 -f html&lt;/p&gt;
 
 &lt;p&gt;Pretty cool, right? Now sending is as easy as&lt;/p&gt;
 
-&lt;p&gt;Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -l ruby -f html&lt;/p&gt;
+&lt;p&gt;Liquid error: No such file or directory - pygmentize -l ruby -O encoding=utf-8 -f html&lt;/p&gt;
 
 &lt;p&gt;(&lt;code&gt;d&lt;/code&gt; being an instance of &lt;code&gt;Device&lt;/code&gt; of course). You can read the &lt;a href=&quot;http://github.com/samsoffes/apple_push_notification&quot;&gt;full readme on GitHub&lt;/a&gt;. (Yes, another smack on the hand for no RDoc.)&lt;/p&gt;
 
@@ -324,9 +354,7 @@
      <name>Sam Soffes</name>
      <email>sam@samsoff.es</email>
    </author>
-   <content type="html">
-
-&lt;div class=&quot;video vimeo&quot;&gt;&lt;object width=&quot;620&quot; height=&quot;465&quot;&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;param name=&quot;movie&quot; value=&quot;http://vimeo.com/moogaloop.swf?clip_id=7465783&amp;amp;server=vimeo.com&amp;amp;show_title=1&amp;amp;show_byline=0&amp;amp;show_portrait=0&amp;amp;color=f05b35&amp;amp;fullscreen=1&quot; /&gt;&lt;embed src=&quot;http://vimeo.com/moogaloop.swf?clip_id=7465783&amp;amp;server=vimeo.com&amp;amp;show_title=1&amp;amp;show_byline=0&amp;amp;show_portrait=0&amp;amp;color=f05b35&amp;amp;fullscreen=1&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; width=&quot;620&quot; height=&quot;465&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;/div&gt;
+   <content type="html">&lt;div class=&quot;video vimeo&quot;&gt;&lt;object width=&quot;620&quot; height=&quot;465&quot;&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;param name=&quot;movie&quot; value=&quot;http://vimeo.com/moogaloop.swf?clip_id=7465783&amp;amp;server=vimeo.com&amp;amp;show_title=1&amp;amp;show_byline=0&amp;amp;show_portrait=0&amp;amp;color=f05b35&amp;amp;fullscreen=1&quot; /&gt;&lt;embed src=&quot;http://vimeo.com/moogaloop.swf?clip_id=7465783&amp;amp;server=vimeo.com&amp;amp;show_title=1&amp;amp;show_byline=0&amp;amp;show_portrait=0&amp;amp;color=f05b35&amp;amp;fullscreen=1&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; width=&quot;620&quot; height=&quot;465&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;/div&gt;
 
 
 &lt;p&gt;I put together &lt;a href=&quot;http://vimeo.com/7465783&quot;&gt;a quick screencast&lt;/a&gt; that shows the power of &lt;a href=&quot;http://heroku.com/&quot;&gt;Heroku&lt;/a&gt; and how easy it is to deploy your app in literally seconds. I've started moving all of my little sites there. &lt;a href=&quot;http://tastefulworks.com&quot;&gt;My company&lt;/a&gt; is even going to try a few of our new apps on there to see how we like it for bigger things.&lt;/p&gt;
@@ -338,25 +366,6 @@
 &lt;p&gt;At first my app gave me an error saying it couldn't load gems. I thought I needed to unpack my gems, but &lt;a href=&quot;http://twitter.com/heroku/status/5485647467&quot;&gt;Heroku replied to me on Twitter&lt;/a&gt; and provided a really good alternative to unpacking!&lt;/p&gt;
 </content>
    <updated>2009-11-05T00:00:00-06:00</updated>
- </entry>
- 
- <entry>
-   <id>http://samsoff.es/post/iphone-json-benchmarks</id>
-   <link href="http://samsoff.es/post/iphone-json-benchmarks"/>
-   <title>iPhone JSON Benchmarks</title>
-   <author>
-     <name>Sam Soffes</name>
-     <email>sam@samsoff.es</email>
-   </author>
-   <content type="html">&lt;p&gt;Yesterday I wrote &lt;a href=&quot;http://samsoff.es/post/parsing-json-with-the-iphones-private-json-framework&quot;&gt;a post on parsing JSON with Apple's private framework&lt;/a&gt;. I thought it might be worth benchmarking &lt;a href=&quot;http://code.google.com/p/touchcode/&quot;&gt;TouchJSON&lt;/a&gt;, &lt;a href=&quot;http://code.google.com/p/json-framework/&quot;&gt;JSON Framework&lt;/a&gt;, and &lt;a href=&quot;http://samsoff.es/post/parsing-json-with-the-iphones-private-json-framework&quot;&gt;Apple JSON&lt;/a&gt; (what I'm calling the private framework). &lt;em&gt;My results were very interesting.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://assets.samsoff.es/posts/iphone-json-benchmarks/iphone-json-benchmarks.png&quot; alt=&quot;JSON Benchmarks&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I know I &lt;a href=&quot;http://samsoff.es/post/web-services-with-cocoa-surprise/&quot;&gt;posted awhile ago that TouchJSON was really fast&lt;/a&gt;, but I guess I got my numbers mixed up. This time I ran each test 100 times and took the average. These are the numbers from &lt;a href=&quot;http://code.google.com/p/touchcode/&quot;&gt;TouchJSON&lt;/a&gt; &lt;a href=&quot;http://code.google.com/p/touchcode/downloads/list&quot;&gt;1.0.6&lt;/a&gt; and &lt;a href=&quot;http://code.google.com/p/json-framework/&quot;&gt;JSON Framework&lt;/a&gt; &lt;a href=&quot;http://code.google.com/p/json-framework/downloads/list&quot;&gt;2.2.2&lt;/a&gt; running on my iPhone 3GS compiled for iPhone OS 3.1. &lt;a href=&quot;http://github.com/samsoffes/json-benchmarks&quot;&gt;You can get the code on GitHub&lt;/a&gt; and see for yourself.&lt;/p&gt;
-
-&lt;p&gt;In conclusion, &lt;em&gt;it looks like &lt;a href=&quot;http://code.google.com/p/json-framework/&quot;&gt;JSON Framework&lt;/a&gt; is the one to use&lt;/em&gt;, since you probably shouldn't use &lt;a href=&quot;http://samsoff.es/post/parsing-json-with-the-iphones-private-json-framework&quot;&gt;Apple JSON&lt;/a&gt; in a shipping app. &lt;a href=&quot;http://code.google.com/p/json-framework/&quot;&gt;JSON Framework&lt;/a&gt; was always my favorite for the clean, category-style interface. I only tested &lt;a href=&quot;http://samsoff.es/post/parsing-json-with-the-iphones-private-json-framework&quot;&gt;Apple JSON&lt;/a&gt; to see how the other implementations compared to it.&lt;/p&gt;
-</content>
-   <updated>2009-11-04T00:00:00-06:00</updated>
  </entry>
  
 </feed>

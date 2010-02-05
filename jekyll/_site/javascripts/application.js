@@ -46,16 +46,16 @@ function showNoFlashMessageForVideos() {
 
 // Pop out of frames (I'm looking at you Denver Airport)
 if (top.frames.length != 0) {
-  top.location=self.document.location;
+  top.location = self.document.location;
 }
 
 // Scroll down on iPhone
+function hideAddressBar() {
+	window.scrollTo(0, 0);
+}
 addEventListener('load', function() {
 	setTimeout(hideAddressBar, 0);
 }, false);
-function hideAddressBar() {
-	window.scrollTo(0, 1);
-}
 
 // On DOM load, update videos if no flash
 addLoadEvent(showNoFlashMessageForVideos);

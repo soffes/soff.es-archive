@@ -26,5 +26,7 @@ I wish. It would be great if more web services offered a plist version of their 
 
 If you don't really have a choice, at least use JSON. Here is [a great library for JSON](http://code.google.com/p/json-framework/) that I currently use in [Bible][]. The next version of [Bible][] will be all plist using the new [YouVersion][] API. I can't wait :)
 
+**Update:** I have discovered since writing this that JSON is a better way to go. You can [read my post about this](http://samsoff.es/post/web-services-with-cocoa-surprise). I no longer work on [YouVersion][], but I know they never released their API to the public (after I spent forever documenting it) and dropped plist support as well.
+
 [YouVersion]: http://youversion.com/
 [Bible]: http://youversion.com/iphone

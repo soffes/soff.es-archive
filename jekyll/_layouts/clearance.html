@@ -2,12 +2,16 @@
 <html lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <title>samsoff.es - Music Podcast and Years</title>
+    <title>samsoff.es{% if page.title %} - {% endif %}{{ page.title }}</title>{% if page.description %}
+    <meta name="description" content="{{ page.description }}"/>{% endif %}
     <link href="http://feeds.feedburner.com/samsoffes/blog" rel="alternate" title="samsoff.es" type="application/atom+xml" />
     <link href="http://feeds.feedburner.com/samsoffes/the-experiment" rel="alternate" title="The Experiment Podcast" type="application/atom+xml" />
     <link href="/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/clearance.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="/stylesheets/iphone.css" media="only screen and (max-device-width: 480px)" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=320, user-scalable=no" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+    <script src="/javascripts/jquery.fancybox-1.3.0.pack.js"></script>
     <script src="/javascripts/application.js"></script>
     <script>var _gaq=_gaq || [];_gaq.push(['_setAccount','UA-5609322-1']);_gaq.push(['_trackPageview']);(function(){var ga=document.createElement('script');ga.async=true;ga.src=('https:'==document.location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);})();</script>
   </head>
@@ -25,21 +29,7 @@
       	</div>
     	</div>
     	    	
-      
-<div class="post">
-  <div class="title">
-    <h2><a href="/post/music-podcast-and-years">Music Podcast and Years</a></h2>
-    <p class="meta">Posted 21 Sep 2008</p>
-  </div>
-  <div class="content">
-    <p>So <a href="http://twitter.com/Aadom">@aadom</a> on <a href="http://twitter.com/samsoffes">Twitter</a> said it would be a good idea to podcast all of my music for <a href="http://samsoff.es/music">The Experiment</a>. I thought that sounded like a good plan, so I did. You can check out the <a href="http://feeds2.feedburner.com/samsoffes/the-experiment">podcast feed</a> or the <a href="http://samsoff.es/music">music area</a> to subscribe.</p>
-
-<p>I also put up a new song I've been working on for years up tonight called <em>Years</em>. This is the song that I play when I pick up a random guitar in a guitar store or I'm just bored sitting around my apartment picking away mindlessly. I think it's turning out nicely so far. I'm digging the piano a lot. <a href="http://samsoff.es/music">Give it a listen</a>.</p>
-
-  </div>
-</div>
-
-
+      {{ content }}
 
     </div>
     <div id="footer" class="wrapper">

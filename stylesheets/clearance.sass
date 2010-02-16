@@ -1,0 +1,42 @@
+@import partials/shared.sass
+@import fancybox.sass
+
+div#fancybox-wrap a, div#fancybox-wrap a:hover, ul.clearance li li a, ul.clearance li li a:hover
+  border-bottom: 0
+
+ul.clearance li ul:after
+  +clearAfter()
+
+ul.clearance > li
+  background= image_url("dash.png") "no-repeat bottom center"
+  padding-bottom: 2em
+  margin-bottom: 2em
+  li
+    float: left
+    margin-right: 10px
+    a
+      border: 5px solid #fff
+      box-shadow: 1px 1px 1px #ddd
+      -moz-box-shadow: 1px 1px 1px #ddd
+      -webkit-box-shadow: 1px 1px 1px #ddd
+      -moz-border-radius: 3px
+      -webkit-border-radius: 3px
+      display: block
+      width: 125px
+      height: 83px
+    img
+      width: 125px
+      height: 83px
+
+div.alert
+  background: #fff
+  padding: 20px
+  box-shadow: 1px 1px 1px #ddd
+  -moz-box-shadow: 1px 1px 1px #ddd
+  -webkit-box-shadow: 1px 1px 1px #ddd
+  -moz-border-radius: 5px
+  -webkit-border-radius: 5px
+  text-shadow: none
+  border: 1px solid #fff
+  background: #ffffe6
+  border-color: #ff9

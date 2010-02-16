@@ -25,11 +25,11 @@ class SamSoffes < Sinatra::Default
     File.read("#{JEKYLL_ROOT}/post/#{params[:captures].first}/index.html") or not_found
   end
 
-  get %r{/(music|about).html} do
+  get %r{/(music|about|clearance).html} do
     redirect("/#{params[:captures].first}")
   end
 
-  get %r{/(music|about)/?} do
+  get %r{/(music|about|clearance)/?} do
     File.read("#{JEKYLL_ROOT}/#{params[:captures].first}_.html")
   end
 end

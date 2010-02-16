@@ -1,7 +1,7 @@
 @import partials/shared.sass
 @import fancybox.sass
 
-div#fancybox-wrap a, div#fancybox-wrap a:hover, ul.clearance li li a, ul.clearance li li a:hover
+div#fancybox-wrap a, div#fancybox-wrap a:hover
   border-bottom: 0
 
 ul.clearance li ul:after
@@ -14,7 +14,7 @@ ul.clearance > li
   li
     float: left
     margin-right: 10px
-    a
+    a, a:hover
       border: 5px solid #fff
       box-shadow: 1px 1px 1px #ddd
       -moz-box-shadow: 1px 1px 1px #ddd
@@ -24,6 +24,9 @@ ul.clearance > li
       display: block
       width: 125px
       height: 83px
+    a:hover
+      -moz-box-shadow: 1px 1px 1px #bbb
+      -webkit-box-shadow: 1px 1px 1px #bbb
     img
       width: 125px
       height: 83px

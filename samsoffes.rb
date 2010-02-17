@@ -8,6 +8,8 @@ rescue LoadError
   require "bundler"
   Bundler.setup
 end
+
+# Sinatra
 require "sinatra"
 
 JEKYLL_ROOT = "jekyll/_site"

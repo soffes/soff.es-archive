@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.order('created_at DESC')
+    @posts = Post.paginate :page => (params[:page] || 1), :order => 'created_at DESC'
 
     respond_to do |format|
       format.html

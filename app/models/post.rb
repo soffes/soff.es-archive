@@ -1,12 +1,13 @@
 class Post < ActiveRecord::Base
-  attr_accessible :title, :permalink, :body, :published_at
-  
   has_many :comments, :dependent => :destroy
   has_many :taggings, :dependent => :destroy
   has_many :tags, :through => :taggings
   validates_presence_of :title, :content
   attr_writer :tag_names
   after_save :assign_tags
+
+  @@per_page = 3
+  cattr_reader :per_page
 
   # This could be dangerous. There is a better way.
   include ActionView::Helpers::DateHelper

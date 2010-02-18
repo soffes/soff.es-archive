@@ -11,7 +11,7 @@ SamSoffes::Application.routes.draw do |map|
   match "/blog", :to => "posts#index", :as => "blog"
   match "/post/:permalink", :to => redirect { |params| "/posts/#{params[:permalink]}" }
   match "/archive", :to => redirect { |params| "/posts" }
-  resources :posts, :only => [:show]
-  resources :tags, :only => [:index, :show]
+  resources :posts #, :only => [:show]
+  resources :tags #, :only => [:index, :show]
 
 end

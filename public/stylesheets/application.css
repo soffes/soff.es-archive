@@ -163,14 +163,15 @@ code {
 }
 
 h2 {
-  background: url('http://assets.samsoff.es/images/lightning.png') no-repeat 0 center;
+  background: url('http://assets.samsoff.es/images/lightning.png') no-repeat 0 0.5em;
   color: #445b75;
   font-family: NillandRegular,HelveticaNeue,'Helvetica Neue',Helvetica,Arial,sans-serif;
   font-size: 26px;
   font-weight: 300;
   padding-left: 40px;
   text-transform: lowercase;
-  margin-bottom: 4px
+  margin-bottom: 4px;
+  line-height: 1.1em;
 }
 
 h3 {
@@ -458,6 +459,78 @@ ul.contact li span {
 
 ul.contact.two li {
   width: 49%;
+}
+
+/* @end */
+
+/* @group Pagination */
+
+div.pagination {
+	text-align: center;
+	margin: 2em 0 1em;
+}
+
+div.pagination a {
+	padding: 2px 6px;
+	margin-right: 0.2em;
+}
+
+div.pagination span {
+	padding: 2px 6px;
+	margin-right: 0.2em;
+}
+
+div.pagination a {
+	border: 2px solid #ddd;
+	text-decoration: none;
+}
+
+div.pagination a:hover {
+	text-decoration: none;
+	background: #2e80d3;
+	border-color: #2e80d3;
+	color: #fff;
+	text-shadow: none;
+}
+
+div.pagination a.next_page {
+	border: 0;
+}
+
+div.pagination a.prev_page {
+	border: 0;
+}
+
+div.pagination a.next_page:hover {
+	background: none;
+	border: 0;
+	text-decoration: underline;
+	color: #2e80d3;
+}
+
+div.pagination a.prev_page:hover {
+	background: none;
+	border: 0;
+	text-decoration: underline;
+	color: #2e80d3;
+}
+
+div.pagination span {
+	border: 2px solid #ddd;
+}
+
+div.pagination span.gap {
+	border: 0;
+	padding: 2px;
+}
+
+div.pagination span.disabled {
+	color: #aaa;
+	border-color: transparent;
+}
+
+div.pagination em {
+  padding: 4px 8px;
 }
 
 /* @end */

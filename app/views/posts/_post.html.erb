@@ -3,5 +3,5 @@
     <h2><%= link_to post.title, post %></h2>
     <p>Posted <time datetime="<%= post.created_at.as_json %>"><%= time_ago_in_words post.created_at %> ago</time><%= raw post_tags_html(post) %></p>
   </header>
-  <%= raw markdown(post.content) %>
+  <%= raw post.to_html %>
 </article>

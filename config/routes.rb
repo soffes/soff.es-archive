@@ -1,10 +1,17 @@
-SamSoffes::Application.routes.draw do |map|
-  resources :tags
+require 'sam_soffes/render_directly'
 
-  match "/", :to => "home#index", :as => "root"
-  match "/blog", :to => "home#index", :as => "blog"
-  match "/music", :to => "home#index", :as => "music"
-  match "/about", :to => "home#index", :as => "about"
-  resources :posts
+SamSoffes::Application.routes.draw do |map|
+  extend GenericActions::Render
+  
+  match "/", :to => render("pages/home"), :as => "root"
+  match "/music", :to => render("pages/music"), :as => "music"
+  match "/about", :to => render("pages/about"), :as => "about"
+  match "/clearance", :to => render("pages/clearance"), :as => "clearance"
+  
+  match "/blog", :to => "posts#index", :as => "blog"
+  match "/post/:permalink", :to => redirect { |params| "/posts/#{params[:permalink]}" }
+  match "/archive", :to => redirect { |params| "/posts" }
+  resources :posts, :only => [:show]
+  resources :tags, :only => [:index, :show]
 
 end

@@ -344,3 +344,120 @@ a.tag:before {
 }
 
 /* @end */
+
+/* @group Music */
+
+div#music-art {
+  width: 300px;
+  float: left;
+  margin-right: 35px;
+  font-size: 0.9em;
+  color: #555
+}
+
+div#music-art a.album-art {
+  border: 10px solid #fff;
+  display: block;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 1em
+}
+
+div#music-art a.album-art:hover {
+  border-color: #455b75
+}
+
+div#music-art img {
+  width: 300px;
+  height: 300px
+}
+
+div#music-art div {
+  padding-left: 10px
+}
+
+div#music-about {
+  margin-left: 20px;
+  line-height: 1.5em;
+  width: 285px;
+  float: left
+}
+
+div#music-about p {
+  font-size: 0.8em
+}
+
+div#music h2:first-child {
+  margin-top: 0;
+  padding-top: 0
+}
+
+div#music ol {
+  margin-bottom: 1em
+}
+
+div#music li {
+  font-size: 1.1em;
+  margin-bottom: 0.3em;
+  margin-left: 30px
+}
+
+div#music ol li {
+  list-style: decimal
+}
+
+div#music ul li {
+  list-style: disc
+}
+
+div#music li a {
+  font-size: 0.8em;
+  margin-left: 6px
+}
+
+div.soundcloud-player {
+  height: 101px;
+  margin: 2px 0;
+  background: url('http://assets.samsoff.es/images/dots-white.gif') white no-repeat center;
+  width: 245px
+}
+
+div.soundcloud-player > div:first-child {
+  padding: 10px
+}
+
+/* @end */
+
+/* @group Contact */
+
+ul.contact {
+  color: #7e8c9c;
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+  width: 100%;
+}
+
+ul.contact a {
+  color: #7e8c9c;
+}
+
+ul.contact a:hover {
+  border-bottom: 1px solid
+}
+
+ul.contact li {
+  float: left;
+  width: 33%;
+  text-align: center;
+}
+
+ul.contact li span {
+  text-transform: lowercase;
+  color: #999;
+}
+
+ul.contact.two li {
+  width: 49%;
+}
+
+/* @end */

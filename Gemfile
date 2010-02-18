@@ -4,6 +4,7 @@ source :gemcutter
 gem "rails", :git => "git://github.com/rails/rails.git"
 
 gem "pg"
+gem "rdiscount", "1.5.8"
 
 group :test do
   gem "rspec", "2.0.0.a6"

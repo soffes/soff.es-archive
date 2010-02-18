@@ -5,6 +5,7 @@ class Post < ActiveRecord::Base
   validates_presence_of :title, :content
   attr_writer :tag_names
   after_save :assign_tags
+  named_scope :published, where("published_at < ?", Time.now)
 
   @@per_page = 3
   cattr_reader :per_page
@@ -16,9 +17,9 @@ class Post < ActiveRecord::Base
     @tag_names || tags.map(&:name).join(' ')
   end
   
-  # def to_param
-  #   self.permalink
-  # end
+  def to_param
+    self.permalink
+  end
 
   def to_html
     content.blank? ? "" : RDiscount.new(content).to_html
@@ -28,22 +29,23 @@ class Post < ActiveRecord::Base
     to_html.split("</p>").first+"</p>"
   end
   
-  # def published?
-  #   published_at < Time.now
-  # end
-  # 
-  # def unpublished?
-  #   !published?
-  # end
-  # 
-  # def published_time_in_words
-  #   words = time_ago_in_words(published_at)
-  #   if published?
-  #     "#{words} ago"
-  #   else
-  #     "in #{words}"
-  #   end
-  # end
+  def published?
+    published_at < Time.now
+  end
+  
+  def unpublished?
+    !published?
+  end
+  
+  def published_time_in_words
+    return "not published" unless published?
+    words = time_ago_in_words(published_at)
+    if published?
+      "#{words} ago"
+    else
+      "in #{words}"
+    end
+  end
 
   private
 

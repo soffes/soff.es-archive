@@ -9,13 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100218030354) do
+ActiveRecord::Schema.define(:version => 20100218084146) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "permalink",    :limit => 128
+    t.datetime "published_at"
   end
 
   create_table "taggings", :force => true do |t|

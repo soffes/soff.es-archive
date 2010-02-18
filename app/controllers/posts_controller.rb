@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.paginate :page => (params[:page] || 1), :order => 'created_at DESC'
+    @posts = Post.published.paginate :page => (params[:page] || 1), :include => :tags, :order => 'created_at DESC'
 
     respond_to do |format|
       format.html
@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.published.where(:permalink => params[:id]).first
 
     respond_to do |format|
       format.html

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=680" />
+  <title>Sam Soffes</title>
+  <%= stylesheet_link_tag "application" %>
+</head>
+<body>
+  <header>
+    <h1><%= link_to "Sam Soffes", root_url, :rel => "home" %></h1>
+    <nav>
+      <ul>
+        <li class="blog"><%= link_to "Blog", blog_url %></li>
+        <li class="music"><%= link_to "Music", music_url %></li>
+        <li class="about"><%= link_to "About", about_url %></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <%= yield %>
+  </section>
+  <footer>
+  	<p>&copy 2010 <%= link_to "Sam Soffes", root_url, :rel => "home" %>. <a href="http://github.com/samsoffes/samsoff.es" target="_blank" rel="external nofollow">View source on GitHub</a>.</p>
+  </footer>
+</body>
+</html>

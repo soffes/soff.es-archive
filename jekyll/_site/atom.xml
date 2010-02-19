@@ -2,12 +2,29 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  <title>samsoff.es</title>
  <link href="http://samsoff.es/atom.xml" rel="self"/>
- <updated>2010-02-17T11:08:18-06:00</updated>
+ <updated>2010-02-19T17:01:43-06:00</updated>
  <id>http://samsoff.es/</id>
  <author>
    <name>Sam Soffes</name>
    <email>sam@samsoff.es</email>
  </author>
+ 
+ <entry>
+   <id>http://samsoff.es/post/what-i-do</id>
+   <link href="http://samsoff.es/post/what-i-do"/>
+   <title>What I Do</title>
+   <author>
+     <name>Sam Soffes</name>
+     <email>sam@samsoff.es</email>
+   </author>
+   <content type="html">&lt;p&gt;People as me a lot what I do. I generally say &quot;I write software&quot; and get a blank look. I think I'm going to start saying:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;I type a lot and make stuff happen.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;That sounds cool, right?&lt;/p&gt;
+</content>
+   <updated>2010-02-19T00:00:00-06:00</updated>
+ </entry>
  
  <entry>
    <id>http://samsoff.es/post/rejected-for-cleverness</id>
@@ -409,28 +426,6 @@ You will need to revise your application to read only within your directory cont
 &lt;p&gt;Anyway, my code is probably very bad, as I'm pretty new to Ruby and Rails. I was very proud of myself for figuring it out. &lt;em&gt;&lt;a href=&quot;http://github.com/samsoffes/apple_push_notification&quot;&gt;Check out the gem&lt;/a&gt;&lt;/em&gt; and let me know if you find it useful or stupid.&lt;/p&gt;
 </content>
    <updated>2009-11-10T00:00:00-06:00</updated>
- </entry>
- 
- <entry>
-   <id>http://samsoff.es/post/easy-deployment-with-heroku</id>
-   <link href="http://samsoff.es/post/easy-deployment-with-heroku"/>
-   <title>Easy Deployment with Heroku</title>
-   <author>
-     <name>Sam Soffes</name>
-     <email>sam@samsoff.es</email>
-   </author>
-   <content type="html">&lt;div class=&quot;video vimeo&quot;&gt;&lt;object width=&quot;620&quot; height=&quot;465&quot;&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot; /&gt;&lt;param name=&quot;allowscriptaccess&quot; value=&quot;always&quot; /&gt;&lt;param name=&quot;movie&quot; value=&quot;http://vimeo.com/moogaloop.swf?clip_id=7465783&amp;amp;server=vimeo.com&amp;amp;show_title=1&amp;amp;show_byline=0&amp;amp;show_portrait=0&amp;amp;color=f05b35&amp;amp;fullscreen=1&quot; /&gt;&lt;embed src=&quot;http://vimeo.com/moogaloop.swf?clip_id=7465783&amp;amp;server=vimeo.com&amp;amp;show_title=1&amp;amp;show_byline=0&amp;amp;show_portrait=0&amp;amp;color=f05b35&amp;amp;fullscreen=1&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; allowscriptaccess=&quot;always&quot; width=&quot;620&quot; height=&quot;465&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;/div&gt;
-
-
-&lt;p&gt;I put together &lt;a href=&quot;http://vimeo.com/7465783&quot;&gt;a quick screencast&lt;/a&gt; that shows the power of &lt;a href=&quot;http://heroku.com/&quot;&gt;Heroku&lt;/a&gt; and how easy it is to deploy your app in literally seconds. I've started moving all of my little sites there. &lt;a href=&quot;http://tastefulworks.com&quot;&gt;My company&lt;/a&gt; is even going to try a few of our new apps on there to see how we like it for bigger things.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://heroku.com/&quot;&gt;Heroku&lt;/a&gt; is worth checking out even if you're happy with your current host. Their &lt;a href=&quot;http://heroku.com/how/architecture&quot;&gt;architecture&lt;/a&gt; is really impressive and the &lt;a href=&quot;http://addons.heroku.com/&quot;&gt;add-ons&lt;/a&gt; are really cool.&lt;/p&gt;
-
-&lt;h3&gt;Gem Gotcha&lt;/h3&gt;
-
-&lt;p&gt;At first my app gave me an error saying it couldn't load gems. I thought I needed to unpack my gems, but &lt;a href=&quot;http://twitter.com/heroku/status/5485647467&quot;&gt;Heroku replied to me on Twitter&lt;/a&gt; and provided a really good alternative to unpacking!&lt;/p&gt;
-</content>
-   <updated>2009-11-05T00:00:00-06:00</updated>
  </entry>
  
 </feed>

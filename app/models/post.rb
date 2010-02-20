@@ -1,5 +1,8 @@
 class Post < ActiveRecord::Base
 
+  # This seems dangerous. There has to be a better way.
+  include ActionView::Helpers::DateHelper
+
   has_many :comments, :dependent => :destroy
   has_many :taggings, :dependent => :destroy
   has_many :tags, :through => :taggings
@@ -9,12 +12,10 @@ class Post < ActiveRecord::Base
   after_save :assign_tags
 
   scope :published, where("published_at < ?", Time.now)
-
-  @@per_page = 3
-  cattr_reader :per_page
-
-  # This seems dangerous. There has to be a better way.
-  include ActionView::Helpers::DateHelper
+  
+  def self.per_page
+    3
+  end
 
   def tag_names
     @tag_names || tags.map(&:name).join(' ')
@@ -29,11 +30,12 @@ class Post < ActiveRecord::Base
   end
   
   def excerpt
+    # TODO: Fix for <blockquote>
     to_html.split("</p>").first+"</p>"
   end
   
   def published?
-    published_at < Time.now
+    published_at && published_at < Time.now
   end
   
   def unpublished?

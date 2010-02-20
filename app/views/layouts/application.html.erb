@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=680" />
-  <title><%= h("Sam Soffes"+(yield(:title) && !yield(:title).empty? ? " - "+yield(:title) : "")) %></title>
+  <title><%= "Sam Soffes"+(yield(:title) && !yield(:title).empty? ? " - "+yield(:title) : "") %></title>
   <%= stylesheet_link_tag "application" %>
   <%= yield(:head) %>
   <%= raw google_analytics("UA-5609322-1") %>
@@ -14,10 +14,11 @@
     <nav>
       <ul>
         <li class="blog"><%= link_to "Blog", root_url %></li>
-        <li class="music"><%= link_to "Music", music_url %></li>
-        <li class="about"><%= link_to "About", about_url %></li>
+        <li class="music"><%= link_to "Music", music_url(:controller => nil) %></li>
+        <li class="about"><%= link_to "About", about_url(:controller => nil) %></li>
       </ul>
     </nav>
+    <%= yield :admin_nav %>
   </header>
   <section>
     <%= yield %>

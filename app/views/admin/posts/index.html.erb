@@ -1,0 +1,12 @@
+<% title "Posts" %>
+
+<%- if @posts && @posts.length > 0 -%>
+<%= render @posts %>
+<div class="pagination">
+    <%= will_paginate @posts %>
+</div>
+<%- else -%>
+<p>Nothing to see here. Move along.</p>
+<%- end -%>
+
+<p><%= link_to "New Post", new_admin_post_path %></p>

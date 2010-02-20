@@ -1,0 +1,12 @@
+<% title "Tag" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @tag.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_tag_path(@tag) %> |
+  <%= link_to "Destroy", @tag, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", tags_path %>
+</p>

@@ -1,2 +1,7 @@
-<%- title @post.title -%>
+<%- title (@post ? @post.title : "Post Not Found") -%>
+
+<%- if @post -%>
 <%= render @post %>
+<%- else -%>
+<p>Nothing to see here. Move along.</p>
+<%- end -%>

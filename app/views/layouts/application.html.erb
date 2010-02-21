@@ -4,6 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=680" />
   <title><%= "Sam Soffes"+(yield(:title) && !yield(:title).empty? ? " - "+yield(:title) : "") %></title>
+  <link href="http://feeds.feedburner.com/samsoffes/blog" rel="alternate" title="samsoff.es" type="application/atom+xml" />
+  <link href="http://feeds.feedburner.com/samsoffes/the-experiment" rel="alternate" title="The Experiment Podcast" type="application/atom+xml" />
   <%= stylesheet_link_tag "application" %>
   <%= yield(:head) %>
   <%= raw google_analytics("UA-5609322-1") %>

@@ -5,8 +5,8 @@ SamSoffes::Application.routes.draw do |map|
   
   # Blog
   match "/" => "posts#index", :as => "root"
-  resources :posts #, :only => [:show]
-  resources :tags #, :only => [:index, :show]
+  resources :posts, :only => [:index, :show]
+  resources :tags, :only => [:index, :show]
   
   # Static pages
   match "/music" => render("pages/music"), :as => "music"
@@ -15,6 +15,7 @@ SamSoffes::Application.routes.draw do |map|
   
   # Redirects
   match "/blog" => redirect { |params| "/" }, :as => "blog"
+  match "/posts" => redirect { |params| "/" }
   match "/post/:permalink" => redirect { |params| "/posts/#{params[:permalink]}" }
   match "/archive(.:format)" => redirect { |params| "/posts" }
   match "/music(.:format)" => redirect { |params| "/music" }

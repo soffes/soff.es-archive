@@ -19,6 +19,7 @@ SamSoffes::Application.routes.draw do |map|
   match "/archive(.:format)" => redirect { |params| "/posts" }
   match "/music(.:format)" => redirect { |params| "/music" }
   match "/about(.:format)" => redirect { |params| "/about" }
+  match "/source" => redirect { |params| "http://github.com/samsoffes/samsoff.es" }
   
   # Admin
   namespace :admin do

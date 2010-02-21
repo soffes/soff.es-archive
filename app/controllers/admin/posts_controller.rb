@@ -4,7 +4,7 @@ class Admin::PostsController < AdminController
   end
   
   def show
-    @post = Post.published.where(:permalink => params[:id]).first
+    @post = Post.where(:permalink => params[:id]).first
   end
   
   def new

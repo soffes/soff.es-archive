@@ -1,5 +1,20 @@
 <% title "#{@post.title}" %>
 
-<%= render @post %>
+<article>
+  <header>
+    <h2><%= link_to @post.title, [:admin, @post] %></h2>
+    <p>Posted <% if @post.published_at %><time datetime="<%= @post.created_at.as_json %>"><%= @post.published_time_in_words %></time><% end %><%= raw post_tags_html(@post) %></p>
+    <p>
+      <%= link_to "Show", [:admin, @post], :class => "show" %>
+      <%= link_to "Edit", edit_admin_post_path(@post), :class => "edit" %>
+      <%= link_to "Destroy", [:admin, @post], :confirm => 'Are you sure?', :method => :delete, :class => "destroy" %>
+      <%- if @post.published? -%>
+      <%= link_to "Published", @post, :class => "published" %>
+      <%- end -%>
+    </p>
+  </header>
+  <%= raw @post.to_html %>
+</article>
+
 
 <p><%= link_to "New Post", new_admin_post_path %></p>

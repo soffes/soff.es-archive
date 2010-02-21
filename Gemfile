@@ -1,7 +1,7 @@
 source :gemcutter
 
 # Edge Rails
-gem "rails", :git => "git://github.com/rails/rails.git"
+gem "rails", "3.0.0.beta"
 
 gem "pg"
 gem "rdiscount", "1.5.8"

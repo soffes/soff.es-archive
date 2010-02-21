@@ -12,7 +12,7 @@ class TagsController < ApplicationController
 
   def show
     @tag = Tag.where(:name => params[:id]).first
-    @posts = @tag.posts.paginate :page => (params[:page] || 1), :include => :tags, :order => 'created_at DESC'
+    @posts = @tag.posts.published.paginated(params[:page])
 
     respond_to do |format|
       format.html

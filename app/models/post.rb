@@ -16,6 +16,10 @@ class Post < ActiveRecord::Base
   def self.per_page
     3
   end
+  
+  def self.paginated page = 1
+    paginate :page => (page), :include => :tags, :order => 'created_at DESC', :per_page => per_page
+  end
 
   def tag_names
     @tag_names || tags.map(&:name).join(' ')

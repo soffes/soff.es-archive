@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.published.paginate :page => (params[:page] || 1), :include => :tags, :order => 'created_at DESC', :per_page => Post.per_page
+    @posts = Post.published.paginated(params[:page])
 
     respond_to do |format|
       format.html

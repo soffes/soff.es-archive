@@ -6,7 +6,7 @@ Bundler.require :default, Rails.env
 module SamSoffes
   class Application < Rails::Application
 
-    # config.time_zone = 'Central Time (US & Canada)'
+    config.time_zone = 'Central Time (US & Canada)'
 
     config.generators do |g|
       g.orm             :active_record

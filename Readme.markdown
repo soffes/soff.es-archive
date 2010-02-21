@@ -2,8 +2,6 @@
 
 This is my new blog in Rails 3 on Ruby 1.9.1. I [moved my blog to Jekyll](http://samsoff.es/post/new-blog-on-github-and-jekyll/) a few months ago and really missed playing with a Rails app, so I'm moving it back and starting from scratch.
 
-My current blog is still at <http://samsoff.es>. You can see this version at <http://new.samsoff.es> until I make it live.
-
 ## Running Locally
 
 Get the source (obviously) and switch the this branch

@@ -473,14 +473,6 @@ div.pagination {
 div.pagination a {
 	padding: 2px 6px;
 	margin-right: 0.2em;
-}
-
-div.pagination span {
-	padding: 2px 6px;
-	margin-right: 0.2em;
-}
-
-div.pagination a {
 	border: 2px solid #ddd;
 	text-decoration: none;
 }
@@ -493,22 +485,11 @@ div.pagination a:hover {
 	text-shadow: none;
 }
 
-div.pagination a.next_page {
+div.pagination a.next_page, div.pagination a.previous_page {
 	border: 0;
 }
 
-div.pagination a.prev_page {
-	border: 0;
-}
-
-div.pagination a.next_page:hover {
-	background: none;
-	border: 0;
-	text-decoration: underline;
-	color: #2e80d3;
-}
-
-div.pagination a.prev_page:hover {
+div.pagination a.next_page:hover, div.pagination a.previous_page:hover {
 	background: none;
 	border: 0;
 	text-decoration: underline;
@@ -516,6 +497,8 @@ div.pagination a.prev_page:hover {
 }
 
 div.pagination span {
+	padding: 2px 6px;
+	margin-right: 0.2em;
 	border: 2px solid #ddd;
 }
 
@@ -534,7 +517,6 @@ div.pagination em {
 }
 
 /* @end */
-
 
 
 /* @group Form */

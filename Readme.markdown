@@ -40,6 +40,7 @@ The default credentials for the admin area are `admin` and `passw0rd`. These are
 
 ### Future Goals
 
+* Automatically annotate Google Analytics when a new blog post is published
 * New homepage
 * Integrate music podcast into app
 * Move music to [the sky is blue](http://blue.samsoff.es)

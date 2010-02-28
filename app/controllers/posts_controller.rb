@@ -2,7 +2,6 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.published.paginated(params[:page])
-    debugger
 
     respond_to do |format|
       format.html

@@ -30,7 +30,8 @@ class Post < ActiveRecord::Base
   end
 
   def to_html
-    content.blank? ? "" : RDiscount.new(content).to_html
+    html = content.blank? ? "" : RDiscount.new(content).to_html
+    html.gsub(/\{\{gist: ([0-9]+)\}\}/, '<script src="http://gist.github.com/\1.js"></script>')
   end
   
   def excerpt

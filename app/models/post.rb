@@ -31,7 +31,7 @@ class Post < ActiveRecord::Base
 
   def to_html
     html = content.blank? ? "" : RDiscount.new(content).to_html
-    html.gsub(/\{\{gist: ([0-9]+)(?:, ([a-zA-Z0-9\.]+))?\}\}/, '<script src="http://gist.github.com/\1.js?file=\2"></script>')
+    html.gsub(/\{\{gist: ([0-9]+)(?:,\s?([a-zA-Z0-9\._\+]+))?\}\}/, '<script src="http://gist.github.com/\1.js?file=\2"></script>')
   end
   
   def excerpt

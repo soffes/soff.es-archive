@@ -1,4 +1,8 @@
 <%- title "About" -%>
+<%- for album in @albums -%>
+<p><%= link_to (album[:image_url] ? image_tag(album[:image_url], :alt => album[:name]) : album[:name]), album[:url] %> by <%= album[:artist_name] %></p>
+<%- end -%>
+
 <h2>What I Do</h2>
 
 <p>My name is Sam Soffes. I create amazing iPhone, Mac, and web software (or anything you could ever imagine) at <a href="http://tastefulworks.com/">Tasteful Works</a>.</p>
@@ -18,7 +22,6 @@
   <li><span>Email:</span> <a href="&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#115;&#97;m&#x40;s&#97;&#x6d;&#x73;&#x6f;f&#x66;&#x2e;&#101;s">&#115;&#97;m&#x40;s&#97;&#x6d;&#x73;&#x6f;f&#x66;&#x2e;&#101;s</a></li>
   <li><span>Call:</span> <a href="tel:+1-415-935-3653">(415) 935-3653</a></li>
 </ul>
-
 
 <ul class="contact two clearfix">
   <li><span>Tweet:</span> <a href="http://twitter.com/samsoffes" rel="external nofollow">samsoffes</a></li>

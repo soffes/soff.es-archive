@@ -8,9 +8,11 @@ SamSoffes::Application.routes.draw do |map|
   resources :posts, :only => [:index, :show]
   resources :tags, :only => [:index, :show]
   
+  # About
+  match "/about" => "about#index", :as => "about"
+  
   # Static pages
   match "/music" => render("pages/music"), :as => "music"
-  match "/about" => render("pages/about"), :as => "about"
   match "/clearance" => render("pages/clearance"), :as => "clearance"
   
   # Redirects

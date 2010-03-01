@@ -16,7 +16,11 @@ SamSoffes::Application.configure do
   # config.logger = SyslogLogger.new
 
   # Use a different cache store in production
-  # config.cache_store = :mem_cache_store
+  if ENV['MEMCACHE_SERVERS']
+    memcache_config = ENV['MEMCACHE_SERVERS'].split(',')
+    memcache_config << {:namespace => ENV['MEMCACHE_NAMESPACE']}
+    config.cache_store = :mem_cache_store, memcache_config
+  end
 
   # Disable Rails's static asset server
   # In production, Apache or nginx will already do this
@@ -30,4 +34,5 @@ SamSoffes::Application.configure do
 
   # Enable threaded mode
   # config.threadsafe!
+  
 end

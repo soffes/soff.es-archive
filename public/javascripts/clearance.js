@@ -8,11 +8,14 @@ $(function() {
 		}
 	}
   $("a[rel=backpack]").fancybox(options);
-  $("a[rel=mixwizard]").fancybox(options);
-  $("a[rel=bell]").fancybox(options);
-  $("a[rel=amp]").fancybox(options);
-  $("a[rel=oxygen8]").fancybox(options);
-  $("a[rel=crybaby]").fancybox(options);
+  $("a[rel=d40]").fancybox(options);
   $("a[rel=gretch]").fancybox(options);
-  $("a[rel=eeepc]").fancybox(options);
+  $("a[rel=speakers]").fancybox(options);
+  $("a[rel=bluray]").fancybox(options);
+  $("a[rel=fcb1010]").fancybox(options);
+  $("a[rel=virtualizer]").fancybox(options);
+  $("a[rel=case]").fancybox(options);
+  $("a[rel=crybaby]").fancybox(options);
+  $("a[rel=amp]").fancybox(options);
+  $("a[rel=bell]").fancybox(options);
 });

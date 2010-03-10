@@ -1,12 +1,18 @@
 require 'sam_soffes/render_directly'
 
+class NotPreferredHost
+  def self.matches?(request)
+    Rails.logger.info "REQUEST: #{request.inspect}"
+    request.host != PREFERRED_HOST
+  end
+end
+
 SamSoffes::Application.routes.draw do |map|
   extend GenericActions::Render
   
-  # Rewrite samsoffes.com URLs
-  # This could be cleaner, but it works for now
-  constraints :host => /(?:www\.)?samsoffes\.com/ do
-    match "/:path" => redirect { |params| "http://samsoff.es/#{params[:path]}" }
+  # Rewrite no preferred hosts
+  constraints(NotPreferredHost) do
+    match "/:path" => redirect { |params| "http://#{PREFERRED_HOST}/#{params[:path]}" }
   end
   
   # Blog

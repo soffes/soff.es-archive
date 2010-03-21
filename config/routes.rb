@@ -2,8 +2,7 @@ require 'sam_soffes/render_directly'
 
 class NotPreferredHost
   def self.matches?(request)
-    Rails.logger.info "REQUEST HOST: #{request.host}"
-    request.host != PREFERRED_HOST && Rails.env == "production"
+    Rails.env == "production" && request.host != PREFERRED_HOST
   end
 end
 

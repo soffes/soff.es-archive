@@ -1,5 +1,3 @@
-require 'sam_soffes/render_directly'
-
 class NotPreferredHost
   def self.matches?(request)
     Rails.env == "production" && request.host != PREFERRED_HOST
@@ -7,7 +5,6 @@ class NotPreferredHost
 end
 
 SamSoffes::Application.routes.draw do |map|
-  extend GenericActions::Render
   
   # Rewrite no preferred hosts
   constraints(NotPreferredHost) do
@@ -23,8 +20,9 @@ SamSoffes::Application.routes.draw do |map|
   match "/about" => "about#index", :as => "about"
   
   # Static pages
-  match "/music" => render("pages/music"), :as => "music"
-  match "/clearance" => render("pages/clearance"), :as => "clearance"
+  match "/music" => "pages#music", :as => "music"
+  match "/clearance" => "pages#clearance", :as => "clearance"
+  match "/mobilex" => "pages#mobilex", :as => "mobilex"
   
   # Redirects
   match "/blog" => redirect { |params| "/" }, :as => "blog"

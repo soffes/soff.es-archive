@@ -1,11 +1,9 @@
+@import partials/shared
+
 /* @group Clearance */
 
 ul.clearance li ul:after
-  clear: both
-  content: " "
-  display: block
-  height: 0
-  zoom: 1
+  +clearAfter()
 
 ul.clearance > li
   background: url('http://assets.samsoff.es/images/dash.png') no-repeat bottom center
@@ -34,26 +32,6 @@ ul.clearance > li li a:hover
 ul.clearance > li li img
   width: 125px
   height: 83px
-
-/* @end */
-
-/* @group Alert */
-
-div.alert
-  background: #fff
-  padding: 20px
-  box-shadow: 1px 1px 1px #ddd
-  -moz-box-shadow: 1px 1px 1px #ddd
-  -webkit-box-shadow: 1px 1px 1px #ddd
-  -moz-border-radius: 5px
-  -webkit-border-radius: 5px
-  text-shadow: none
-  border: 1px solid #fff
-  background: #ffffe6
-  border-color: #ff9
-
-div.alert p:last-child
-  margin-bottom: 0
 
 /* @end */
 

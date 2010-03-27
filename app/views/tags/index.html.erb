@@ -1,23 +1,5 @@
-<h1>Listing tags</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<%- title "Tags" -%>
 <% @tags.each do |tag| %>
-  <tr>
-    <td><%= tag.name %></td>
-    <td><%= link_to 'Show', tag %></td>
-    <td><%= link_to 'Edit', edit_tag_path(tag) %></td>
-    <td><%= link_to 'Destroy', tag, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<%= link_to tag.name, tag, :class => "tag-bubble" %>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New tag', new_tag_path %>
+<hr />

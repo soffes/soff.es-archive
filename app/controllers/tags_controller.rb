@@ -11,8 +11,15 @@ class TagsController < ApplicationController
   end
 
   def show
-    @tag = Tag.where(:name => params[:id]).first
-    @posts = @tag.posts.published.paginated(params[:page])
+    # Find tag
+    @tag = Tag.where(:name => params[:id].downcase).first
+    redirect_to tags_url and return unless @tag
+
+    # Redirect to tag if case doesn't match
+    redirect_to @tag and return unless @tag.name == params[:id]
+    
+    # Get posts for tag
+    @posts = @tag.posts.published.paginated(params[:page]) if @tag
 
     respond_to do |format|
       format.html

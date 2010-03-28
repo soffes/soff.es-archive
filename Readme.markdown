@@ -4,11 +4,10 @@ This is my new blog in Rails 3. I [moved my blog to Jekyll](http://samsoff.es/po
 
 ## Running Locally
 
-Get the source (obviously) and switch the this branch
+Get the source (obviously)
 
     $ git clone git://github.com/samsoffes/samsoff.es.git
     $ cd samsoff.es
-    $ git checkout -b rails3 origin/rails3
 
 I'm also using Postgres and Nginx (with Passenger) locally. If you don't have it already, you'll need to install Postgres. I wrote [a blog post on how to install Nginx and Postgres](http://samsoff.es/post/running-rails-local-development-with-nginx-postgres-and-passenger-with-homebrew/) that might be helpful. You can skip over the Nginx parts if you want.
 
@@ -30,22 +29,12 @@ If you have issues getting it up and running, [send me an email](mailto:sam@sams
 
 The default credentials for the admin area are `admin` and `passw0rd`. These are obviously different on production or if you have environment variables for `ADMIN_USERNAME` and `ADMIN_PASSWORD`.
 
-## Goals for new version
-
-* Use [Heroku](http://heroku.com) for hosting
-* Use [Cucumber](http://cukes.info) for integration testing
-* Use [RSpec](http://rspec.info) for unit testing
-* Use something like [Jammit](http://github.com/documentcloud/jammit) or [Heroku Asset Packager](http://github.com/amasses/heroku_asset_packager) for assets
-* Tags with [virtual attributes](http://railscasts.com/episodes/167-more-on-virtual-attributes)
-
 ### Future Goals
 
 * Automatically annotate Google Analytics when a new blog post is published
 * New homepage
 * Integrate music podcast into app
-* Move music to [the sky is blue](http://blue.samsoff.es)
 * Create podcast for screencasts
-* Support old URLs and move to new restful URLs
 * Implement [CanCan](http://github.com/ryanb/cancan) for admin permissions
 * Show recent social activity
     * [Twitter](http://twitter.com/samsoffes) - most recent tweet

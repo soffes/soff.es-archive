@@ -1,0 +1,20 @@
+<%- title "Pure Awesomeness" -%>
+
+<article>
+  <header>
+    <h2><%= link_to @post.title, @post %></h2>
+    <p>Posted <% if @post.published_at %><time datetime="<%= @post.created_at.as_json %>"><%= @post.published_time_in_words %></time><% end %><%= post_tags_html(@post) %></p>
+  </header>
+  <%= @post.excerpt %>
+  <p class="more"><%= link_to "Keep reading &raquo;".html_safe, @post %></p>
+</article>
+
+
+<%- if @albums && @albums.length > 0 -%>
+<h3>Albums I've been enjoying this week</h3>
+<ul class="albums">
+<%- for album in @albums -%>
+  <li><%= link_to (album[:image_url] ? image_tag(album[:image_url], :alt => album[:name]) : "#{album[:name]} by #{album[:artist_name]}"), album[:url], :title => "#{album[:name]} by #{album[:artist_name]}" %></li>
+<%- end -%>
+</ul>
+<%- end -%>

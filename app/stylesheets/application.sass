@@ -1,8 +1,7 @@
 @import compass/reset
 @import partials/shared
 
-/* @group HTML5 */
-
+// HTML5
 section, header, footer, nav, article, aside, figure
   display: block
   width: 100%
@@ -10,19 +9,13 @@ section, header, footer, nav, article, aside, figure
 mark, time, meter, progress
   display: inline
 
-/* @end */
-
-/* @group Fonts */
-
+// Fonts
 @font-face
   font-family: 'NillandRegular'
   src: url('http://assets.samsoff.es/fonts/Nilland.eot')
   src: local('Nilland Regular'), local('Nilland'), url('http://assets.samsoff.es/fonts/Nilland.woff') format('woff'), url('http://assets.samsoff.es/fonts/Nilland.ttf') format('truetype'), url('http://assets.samsoff.es/fonts/Nilland.svg#Nilland') format('svg')
 
-/* @end */
-
-/* @group Clear-fix */
-
+// Clear-fix
 .clearfix:after
   content: "."
   display: block
@@ -40,10 +33,7 @@ html[xmlns] .clearfix
 * html .clearfix
   height: 1%
 
-/* @end */
-
-/* @group Tags */
-
+// Tags
 html
   background: #f4f4f3
   font-size: 17px
@@ -57,23 +47,23 @@ body
   line-height: 1.4em
 
 html, input, textarea
-  font-family: HelveticaNeue-Light, HelveticaNeue, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-family= !helvetica_neue_light
   color: #333
 
 a
-  border-bottom: 1px dotted #cfdae5
-  color: #455b75
+  border-bottom= 1px "dotted" !link_border_color
+  color= !link_color
   text-decoration: none
 
 a:hover
   border-bottom: 1px solid
-  color: #92abc1
+  color= !link_hover_color
 
 strong
   font-weight: bold
 
 em
-  background-color: #fffeca
+  background-color: !highligh_color
   padding: 0 0.2em
 
 abbr
@@ -85,7 +75,7 @@ p
   margin: 0 0 1em
 
 hr
-  background: url('http://assets.samsoff.es/images/dash.png') no-repeat bottom center
+  background= image_url("dash.png") "no-repeat bottom center"
   padding-bottom: 2em
   margin-bottom: 2em
   border: 0
@@ -95,24 +85,21 @@ blockquote
   color: #888
   margin: 0 0 1em
   padding-left: 1em
-
-blockquote a
-  color: #888
+  a
+    color: #888
 
 small
   font-size: 0.8em
   color: #999
   margin-left: 0.2em
-
-small a
-  color: #444
-
-small a:hover
-  color: #2e80d3
+  a
+    color: #444
+  a:hover
+    color: #2e80d3
 
 pre
-  background-color: #f8f8ff
-  border: 1px solid #dedede
+  background-color= !code_background_color
+  border= 1px "solid" !code_border_color
   color: #444
   font-family: "Bitstream Vera Sans Mono", Courier, monospace
   font-size: 0.8em
@@ -120,25 +107,24 @@ pre
   margin: 0 0 2em
   overflow: auto
   padding: 0.5em
-
-pre code
-  background-color: #f8f8ff
-  border: medium none
-  font-size: 1em
-  padding: 0
+  code
+    background-color= !code_background_color
+    border: medium none
+    font-size: 1em
+    padding: 0
 
 code
-  background-color: #f8f8ff
-  border: 1px solid #dedede
+  background-color= !code_background_color
+  border= 1px "solid" !code_border_color
   color: #444
   padding: 0 0.2em
   font-family: "Bitstream Vera Sans Mono", Courier, monospace
   font-size: 0.8em
 
 h2
-  background: url('http://assets.samsoff.es/images/lightning.png') no-repeat 0 0.5em
-  color: #445b75
-  font-family: NillandRegular,HelveticaNeue,'Helvetica Neue',Helvetica,Arial,sans-serif
+  background= image_url("lightning.png") "no-repeat" 0 0.5em
+  color= !link_color
+  font-family= !nilland
   font-size: 26px
   font-weight: 300
   padding-left: 40px
@@ -157,140 +143,113 @@ h4
   color: #555
   margin-bottom: 0.2em
 
-/* @end */
-
-/* @group Header */
-
+// Header
 body > header
   width: 100%
   margin: 10px 0 4em
   line-height: 1em
+  h1
+    color= !orange_color
+    font-size: 2em
+    margin: 1em 0 0.5em
+    a
+      border: 0
+      display: block
+      width: 190px
+      height: 73px
+      text-indent: -9009em
+      background= image_url("logo.png") "no-repeat"
+    a:hover
+      color= !orange_color
+      border: 0
+  ul
+    font-size: 19px
+    text-transform: lowercase
+  li
+    display: inline
+    list-style: none
+    margin: 0 0 0 1.7em
+    padding: 0
+    a
+      font-family= !nilland
+      background: transparent no-repeat 0 center
+      padding-left: 22px
+      border: 0
+  li.blog a
+    background-image= image_url("blog.png")
+    color= !blog_color
+  li.music a
+    background-image= image_url("music.png")
+    color= !music_color
+  li.about a
+    background-image= image_url("about.png")
+    color= !about_color
+  li:first-child
+    margin-left: 0
 
-body > header h1
-  color: #f05b35
-  font-size: 2em
-  margin: 1em 0 0.5em
-
-body > header h1 a
-  border: 0
-  display: block
-  width: 190px
-  height: 73px
-  text-indent: -9009em
-  background: url(http://assets.samsoff.es/images/logo.png) no-repeat
-
-body > header h1 a:hover
-  color: #f05b35
-  border: 0
-
-body > header ul
-  font-size: 19px
-  text-transform: lowercase
-
-body > header li
-  display: inline
-  list-style: none
-  margin: 0 0 0 1.7em
-  padding: 0
-
-body > header li a
-  font-family: NillandRegular,HelveticaNeue,'Helvetica Neue',Helvetica,Arial,sans-serif
-  background: transparent no-repeat 0 center
-  padding-left: 22px
-  border: 0
-
-body > header li.blog a
-  background-image: url('http://assets.samsoff.es/images/blog.png')
-  color: #e16f09
-
-body > header li.music a
-  background-image: url('http://assets.samsoff.es/images/music.png')
-  color: #121212
-
-body > header li.about a
-  background-image: url('http://assets.samsoff.es/images/about.png')
-  color: #276abd
-
-body > header li:first-child
-  margin-left: 0
-
-/* @end */
-
-/* @group Footer */
-
+// Footer
 body > footer
   color: #aaa
   margin: 0 auto 2em
   padding: 0
   font-size: 0.85em
   text-align: center
+  a
+    color: #aaa
+  a:hover
+    color: #92abc1
 
-body > footer a
-  color: #aaa
-
-body > footer a:hover
-  color: #92abc1
-
-/* @end */
-
-/* @group Post */
-
+// Post
 body > section > article
-  background: url('http://assets.samsoff.es/images/dash.png') no-repeat bottom center
+  background= image_url("dash.png") "no-repeat bottom center"
   padding-bottom: 2em
   margin-bottom: 2em
+  h2
+    margin-bottom: 0.5em
+  header
+    p
+      color: #bbb
+      font-size: 0.9em
+      margin-bottom: 10px
+    time
+      color: #01b0f0
+  ul, ol
+    margin: 0 0 2em 0.5em
+  ul li, ol li
+    margin-left: 1em
+  ul li
+    list-style: disc
+  ol li
+    list-style: decimal
+  ol li ol li
+    list-style: lower-alpha
+  div.video
+    background: #fff
+    padding: 10px
+    text-align: center
+    margin-bottom: 1em
+    width: 620px
+    height: 465px
+  div.video.wide.youtube
+    height: 372px
 
-body > section > article h2
-  margin-bottom: 0.5em
+// Gist
+div.gist div.gist-file div.gist-meta
+  padding: 0.5em
+  font-size: 0.6em
+  line-height: 1em
 
-body > section > article > header p
-  color: #bbb
-  font-size: 0.9em
-  margin-bottom: 10px
-
-body > section > article > header time
-  color: #01b0f0
-
-body > section > article ul, body > section > article ol
-  margin: 0 0 2em 0.5em
-
-body > section > article ul li, body > section > article ol li
-  margin-left: 1em
-
-body > section > article ul li
-  list-style: disc
-
-body > section > article ol li
-  list-style: decimal
-
-body > section > article ol li ol li
-  list-style: lower-alpha
-
-body > section > article div.video
-  background: #fff
-  padding: 10px
-  text-align: center
-  margin-bottom: 1em
-  width: 620px
-  height: 465px
-
-body > section > article div.video.wide.youtube
-  height: 372px
-
-/* @end */
-
-/* @group Tags */
-
+// Tags
 a.tag
-  color: #01b0f0
+  color= !light_blue_color
 
 a.tag:before
   content: '#'
 
 a.tag-bubble
   color: #fff
-  background-color: #01b0f0
-  border: 1px solid #01b0f0
+  background-color= !light_blue_color
+  border= 1px "solid" !light_blue_color
   text-shadow: none
   -moz-box-shadow: 1px 1px 1px #ddd
   -webkit-box-shadow: 1px 1px 1px #ddd
@@ -304,218 +263,7 @@ a.tag-bubble:hover
   background-color: #ff358b
   border-color: #ff358b
 
-/* @end */
-
-/* @group Music */
-
-div#music-art
-  width: 300px
-  float: left
-  margin-right: 35px
-  font-size: 0.9em
-  color: #555
-
-div#music-art a.album-art
-  border: 10px solid #fff
-  display: block
-  width: 300px
-  height: 300px
-  margin-bottom: 1em
-
-div#music-art a.album-art:hover
-  border-color: #455b75
-
-div#music-art img
-  width: 300px
-  height: 300px
-
-div#music-art div
-  padding-left: 10px
-
-div#music-about
-  margin-left: 20px
-  line-height: 1.5em
-  width: 285px
-  float: left
-
-div#music-about p
-  font-size: 0.8em
-
-div#music h2:first-child
-  margin-top: 0
-  padding-top: 0
-
-div#music ol
-  margin-bottom: 1em
-
-div#music li
-  font-size: 1.1em
-  margin-bottom: 0.3em
-  margin-left: 30px
-
-div#music ol li
-  list-style: decimal
-
-div#music ul li
-  list-style: disc
-
-div#music li a
-  font-size: 0.8em
-  margin-left: 6px
-
-div.soundcloud-player
-  height: 101px
-  margin: 2px 0
-  background: url('http://assets.samsoff.es/images/dots-white.gif') white no-repeat center
-  width: 245px
-
-div.soundcloud-player > div:first-child
-  padding: 10px
-
-/* @end */
-
-/* @group Contact */
-
-ul.contact
-  color: #7e8c9c
-  font-size: 0.9em
-  margin-bottom: 0.5em
-  width: 100%
-
-ul.contact a
-  color: #7e8c9c
-
-ul.contact a:hover
-  border-bottom: 1px solid
-
-ul.contact li
-  float: left
-  width: 33%
-  text-align: center
-
-ul.contact li span
-  text-transform: lowercase
-  color: #999
-
-ul.contact.two
-  margin-bottom: 2em
-  li
-    width: 49%
-
-/* @end */
-
-/* @group Pagination */
-
-div.pagination
-  text-align: center
-  margin: 2em 0
-
-div.pagination a
-  padding: 2px 6px
-  margin-right: 0.2em
-  border: 2px solid #ddd
-  text-decoration: none
-
-div.pagination a:hover
-  text-decoration: none
-  background: #2e80d3
-  border-color: #2e80d3
-  color: #fff
-  text-shadow: none
-
-div.pagination a.next_page, div.pagination a.previous_page
-  border: 0
-
-div.pagination a.next_page:hover, div.pagination a.previous_page:hover
-  background: none
-  border: 0
-  text-decoration: underline
-  color: #2e80d3
-
-div.pagination span
-  padding: 2px 6px
-  margin-right: 0.2em
-  border: 2px solid #ddd
-
-div.pagination span.gap
-  border: 0
-  padding: 2px
-
-div.pagination span.disabled
-  color: #aaa
-  border-color: transparent
-
-div.pagination em
-  padding: 4px 8px
-
-/* @end */
-
-/* @group Form */
-
-input, textarea
-  font-size: 1em
-
-form dl
-  margin-bottom: 1em
-
-form dd
-  margin-bottom: 1em
-
-input[type=text], input[type=password], textarea
-  background-color: #fff
-  border-color: #666 #ccc #ccc
-  border-style: solid
-  border-width: 1px
-  color: #000
-  padding: 2px
-  margin: 1px
-
-input[type=text]:focus, input[type=password]:focus, textarea:focus
-  border: 2px solid #6694e3
-  outline: 0
-  margin: 0
-
-input[type=text].error, input[type=password].error, textarea.error
-  background-color: #fdeeee
-  border-color: #dc4747 #f59e9e #f59e9e
-
-input[type=text].error:focus, input[type=password].error:focus, textarea.error:focus
-  border-color: #dc4747
-
-input[type=text], input[type=password]
-  width: 16em
-
-textarea
-  width: 24em
-  height: 6em
-
-input[type=submit]
-  margin-right: 15px
-
-/* @end */
-
-div.gist div.gist-file div.gist-meta
-  padding: 0.5em
-  font-size: 0.6em
-  line-height: 1em
-
-ul.albums
-  margin: 0.4em 0 2em
-  li
-    display: inline
-    width: 64px
-    height: 64px
-    margin-right: 12px
-  li:last-child
-    margin-right: 0
-  img
-    width: 64px
-    height: 64px
-  a
-    border: 0
-
-/* @group Alert */
-
+// Alert
 div.alert
   background: #fff
   padding: 20px
@@ -532,33 +280,11 @@ div.alert
 div.alert p:last-child
   margin-bottom: 0
 
-/* @end */
+// Shared partials
+@import partials/form
+@import partials/pagination
 
-/* @group Slides */
-
-ul.download-slides
-  padding: 0
-  margin: 0 0 1em
-  height: 64px
-  li
-    float: left
-    margin: 0 0 0 -9px
-    padding: 0
-    list-style: none
-    width: 64px
-    height: 64px
-  a
-    display: block
-    width: 64px
-    height: 64px
-    text-indent: -9009em
-    border: 0
-  a.pdf
-    background: url(http://assets.samsoff.es/images/pdf-64.png) no-repeat
-  a.keynote
-    background: url(http://assets.samsoff.es/images/keynote-64.png) no-repeat
-
-ul.download-slides:after
-  +clearAfter()
-
-/* @end */
+// Pages
+@import partials/home
+@import partials/about
+@import partials/music

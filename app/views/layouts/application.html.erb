@@ -10,14 +10,14 @@
   <%= stylesheet_link_tag "application" %>
   <%= stylesheet_link_tag "iphone", :media => "only screen and (max-device-width: 480px)" %>
   <%= yield(:head) %>
-  <%= raw google_analytics("UA-5609322-1") %>
+  <%= google_analytics("UA-5609322-1") %>
 </head>
 <body>
   <header>
     <h1><%= link_to "Sam Soffes", root_url, :rel => "home" %></h1>
     <nav>
       <ul>
-        <li class="blog"><%= link_to "Blog", root_url %></li>
+        <li class="blog"><%= link_to "Blog", blog_url %></li>
         <li class="music"><%= link_to "Music", music_url %></li>
         <li class="about"><%= link_to "About", about_url %></li>
       </ul>

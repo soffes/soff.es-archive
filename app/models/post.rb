@@ -11,14 +11,14 @@ class Post < ActiveRecord::Base
   attr_writer :tag_names
   after_save :assign_tags
 
-  scope :published, lambda { where("published_at < ?", Time.zone.now) }
+  scope :published, lambda { where("published_at < ?", Time.zone.now).order('created_at DESC') }
   
   def self.per_page
     3
   end
   
   def self.paginated page = 1
-    paginate :page => (page), :include => :tags, :order => 'created_at DESC', :per_page => per_page
+    paginate :page => (page), :include => :tags, :per_page => per_page
   end
 
   def tag_names
@@ -31,12 +31,12 @@ class Post < ActiveRecord::Base
 
   def to_html
     html = content.blank? ? "" : RDiscount.new(content).to_html
-    html.gsub(/\{\{gist: ([0-9]+)(?:,\s?([a-zA-Z0-9\._\+]+))?\}\}/, '<script src="http://gist.github.com/\1.js?file=\2"></script>')
+    html.gsub(/\{\{gist: ([0-9]+)(?:,\s?([a-zA-Z0-9\._\+]+))?\}\}/, '<script src="http://gist.github.com/\1.js?file=\2"></script>').html_safe
   end
   
   def excerpt
     # TODO: Fix for <blockquote>
-    to_html.split("</p>").first+"</p>"
+    to_html.split("</p>").first+"</p>".html_safe
   end
   
   def published?

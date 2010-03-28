@@ -7,6 +7,6 @@ module PostsHelper
     tags.each do |tag|
       links << link_to(tag.name, tag, :class => "tag")
     end
-    " in "+links.to_sentence
+    (" in "+links.to_sentence).html_safe
   end
 end

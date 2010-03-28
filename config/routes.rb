@@ -11,27 +11,27 @@ SamSoffes::Application.routes.draw do |map|
     match "/:path" => redirect { |params| "http://#{PREFERRED_HOST}/#{params[:path]}" }
   end
   
+  # Redirects
+  match "/posts" => redirect { |params| "/blog" }
+  match "/post/:permalink" => redirect { |params| "/posts/#{params[:permalink]}" }
+  match "/archive.:format" => redirect { |params| "/blog" }
+  match "/music.:format" => redirect { |params| "/music" }
+  match "/about.:format" => redirect { |params| "/about" }
+  match "/source" => redirect { |params| "http://github.com/samsoffes/samsoff.es" }
+  
+  # Root
+  match "/" => "home#index", :as => "root"
+    
   # Blog
-  match "/" => "posts#index", :as => "root"
+  match "/blog" => "posts#index", :as => "blog"
   resources :posts, :only => [:index, :show]
   resources :tags, :only => [:index, :show]
   
-  # About
-  match "/about" => "about#index", :as => "about"
-  
   # Static pages
+  match "/about" => "pages#about", :as => "about"
   match "/music" => "pages#music", :as => "music"
   match "/clearance" => "pages#clearance", :as => "clearance"
   match "/mobilex" => "pages#mobilex", :as => "mobilex"
-  
-  # Redirects
-  match "/blog" => redirect { |params| "/" }, :as => "blog"
-  match "/posts" => redirect { |params| "/" }
-  match "/post/:permalink" => redirect { |params| "/posts/#{params[:permalink]}" }
-  match "/archive(.:format)" => redirect { |params| "/posts" }
-  match "/music(.:format)" => redirect { |params| "/music" }
-  match "/about(.:format)" => redirect { |params| "/about" }
-  match "/source" => redirect { |params| "http://github.com/samsoffes/samsoff.es" }
   
   # Admin
   namespace :admin do

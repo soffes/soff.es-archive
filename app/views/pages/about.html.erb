@@ -24,13 +24,3 @@
   <li><span>Tweet:</span> <a href="http://twitter.com/samsoffes" rel="external nofollow">samsoffes</a></li>
     <li><span>Google Talk:</span> <a href="gtalk:chat?jid=samsoffes@gmail.com">samsoffes@gmail.com</a></li>
 </ul>
-
-<%- if @albums && @albums.length > 0 -%>
-<h3>Albums I've been enjoying this week</h3>
-<ul class="albums">
-<%- for album in @albums -%>
-  <li><%= link_to (album[:image_url] ? image_tag(album[:image_url], :alt => album[:name]) : "#{album[:name]} by #{album[:artist_name]}"), album[:url], :title => "#{album[:name]} by #{album[:artist_name]}" %></li>
-<%- end -%>
-</ul>
-<%- end -%>
-

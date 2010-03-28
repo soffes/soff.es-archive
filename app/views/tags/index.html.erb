@@ -1,5 +1,7 @@
 <%- title "Tags" -%>
+<div class="tags clearfix">
 <% @tags.each do |tag| %>
-<%= link_to tag.name, tag, :class => "tag-bubble" %>
+  <%= link_to "#{tag.name} (#{tag.taggings.length})", tag %>
 <% end %>
+</div>
 <hr />

@@ -136,7 +136,7 @@ h3
   font-size: 1.3em
   font-weight: 300
   margin-bottom: 0.2em
-  color: #ff358b
+  color= !pink_color
 
 h4
   font-weight: bold
@@ -242,26 +242,20 @@ div.gist div.gist-file div.gist-meta
 // Tags
 a.tag
   color= !light_blue_color
+  word-wrap: nowrap
 
 a.tag:before
   content: '#'
-
-a.tag-bubble
-  color: #fff
-  background-color= !light_blue_color
-  border= 1px "solid" !light_blue_color
-  text-shadow: none
-  -moz-box-shadow: 1px 1px 1px #ddd
-  -webkit-box-shadow: 1px 1px 1px #ddd
-  -moz-border-radius: 3px
-  -webkit-border-radius: 5px
-  padding: 2px 4px
-  margin: 5px
-  line-height: 2em
-
-a.tag-bubble:hover
-  background-color: #ff358b
-  border-color: #ff358b
+  
+div.tags
+  text-align: center
+  a
+    text-shadow: none
+    margin: 5px
+    word-wrap: nowrap
+    line-height: 2em
+  a:hover
+    color= !pink_color
 
 // Alert
 div.alert

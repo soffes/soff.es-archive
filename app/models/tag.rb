@@ -6,4 +6,9 @@ class Tag < ActiveRecord::Base
     name
   end
   
+  def name=(string)
+    write_attribute :name, string.downcase
+    string.downcase
+  end
+  
 end

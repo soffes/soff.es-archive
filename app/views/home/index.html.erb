@@ -1,6 +1,6 @@
 <%- title "Pure Awesomeness" -%>
 
-<div id="home">
+<div id="home" class="clearfix">
   <article>
     <header>
       <h2><%= link_to @post.title, @post %></h2>
@@ -9,10 +9,15 @@
     <%= @post.excerpt %>
     <p class="more"><%= link_to "Keep reading &raquo;".html_safe, @post %></p>
   </article>
-  <ul class="favorite posts">
-    <li><a href="#">How to syn
-  </ul>
-
+  <div class="favorite-posts">
+    <h3>Popular Blog Posts</h3>
+    <ul>
+      <li><a href="#">How to Sync iTunes with Dropbox in 3 Steps</a></li>
+      <li><a href="#">iPhone Plist Tutorial</a></li>
+      <li><a href="#">Running Rails Local Development with Nginx, Postgres, and Passenger with Homebrew</a></li>
+    </ul>
+  </div>
+</div>
 
 <%- if @albums && @albums.length > 0 -%>
 <h3>Albums I've been enjoying this week</h3>

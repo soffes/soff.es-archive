@@ -1,7 +1,7 @@
 <%- title "Tags" -%>
 <div class="tags clearfix">
-<% @tags.each do |tag| %>
-  <%= link_to "#{tag.name} (#{tag.taggings.length})", tag %>
+<% tag_cloud @tags, %w(nube1 nube2 nube3 nube4 nube5) do |tag, css_class| %>
+  <%= link_to tag.name, tag, :class => css_class %>
 <% end %>
 </div>
 <hr />

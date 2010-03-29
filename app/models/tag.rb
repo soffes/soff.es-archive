@@ -11,4 +11,8 @@ class Tag < ActiveRecord::Base
     string.downcase
   end
   
+  def count
+    posts.length
+  end
+  
 end

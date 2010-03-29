@@ -9,12 +9,14 @@
     <%= @post.excerpt %>
     <p class="more"><%= link_to "Keep reading &raquo;".html_safe, @post %></p>
   </article>
-  <div class="favorite-posts">
-    <h3>Popular Blog Posts</h3>
+  <div class="sidebar">
+    <h3>Hello</h3>
+    <p>My name is Sam. I write software and make music. This is my blog. Enjoy.</p>
+    
+    <h3>Random Stuff</h3>
     <ul>
-      <li><a href="#">How to Sync iTunes with Dropbox in 3 Steps</a></li>
-      <li><a href="#">iPhone Plist Tutorial</a></li>
-      <li><a href="#">Running Rails Local Development with Nginx, Postgres, and Passenger with Homebrew</a></li>
+      <li><%= link_to "Clearance", clearance_url %></li>
+      <li><%= link_to "MobileX Slides", mobilex_url %></li>
     </ul>
   </div>
 </div>

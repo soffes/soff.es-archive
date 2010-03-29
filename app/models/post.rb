@@ -11,7 +11,7 @@ class Post < ActiveRecord::Base
   attr_writer :tag_names
   after_save :assign_tags
 
-  scope :published, lambda { where("published_at < ?", Time.zone.now).order('created_at DESC') }
+  scope :published, lambda { where('published_at < ?', Time.zone.now).order('created_at DESC') }
   
   def self.per_page
     3
@@ -30,7 +30,7 @@ class Post < ActiveRecord::Base
   end
 
   def to_html
-    html = content.blank? ? "" : RDiscount.new(content).to_html
+    html = content.blank? ? '' : RDiscount.new(content).to_html
     html.gsub(/\{\{gist: ([0-9]+)(?:,\s?([a-zA-Z0-9\._\+]+))?\}\}/, '<script src="http://gist.github.com/\1.js?file=\2"></script>').html_safe
   end
   
@@ -48,7 +48,7 @@ class Post < ActiveRecord::Base
   end
   
   def published_time_in_words
-    return "not published" unless published?
+    return 'not published' unless published?
     words = time_ago_in_words(published_at)
     if published?
       "#{words} ago"

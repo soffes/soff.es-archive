@@ -17,10 +17,11 @@ ul.download-slides
     height: 64px
     text-indent: -9009em
     border: 0
+    background-repeat: no-repeat
   a.pdf
-    background: url(http://assets.samsoff.es/images/pdf-64.png) no-repeat
+    background-image= image_url("pdf-64.png")
   a.keynote
-    background: url(http://assets.samsoff.es/images/keynote-64.png) no-repeat
+    background-image= image_url("keynote-64.png")
 
 ul.download-slides:after
   +clearAfter()

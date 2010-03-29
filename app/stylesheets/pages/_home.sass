@@ -2,13 +2,19 @@ div#home
   section
     float: left
     width: 400px
-    margin-right: 40px
+    margin: 0 40px 0 0
+    > article
+      background: 0
+      padding-bottom: 0
+      margin-bottom: 0
   div.sidebar
     float: left
     width: 200px
     ul
       padding-left: 1em
       margin-bottom: 2em
+    ul:last-child
+      margin-bottom: 0
     li
       list-style: disc
       color= !link_color

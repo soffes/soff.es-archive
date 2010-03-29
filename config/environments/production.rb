@@ -16,11 +16,7 @@ SamSoffes::Application.configure do
   # config.logger = SyslogLogger.new
 
   # Use a different cache store in production
-  if ENV['MEMCACHE_SERVERS']
-    memcache_config = ENV['MEMCACHE_SERVERS'].split(',')
-    memcache_config << {:namespace => ENV['MEMCACHE_NAMESPACE']}
-    config.cache_store = :mem_cache_store, memcache_config
-  end
+  config.cache_store = :mem_cache_store, Memcached::Rails.new
 
   # Disable Rails's static asset server
   # In production, Apache or nginx will already do this

@@ -29,11 +29,7 @@ namespace :lastfm do
       end
     end
     
-    if CACHE.class == Hash
-      CACHE["lastfm_weekly_album_chart"] = albums
-    else
-      CACHE.set("lastfm_weekly_album_chart", albums, 7.day)
-    end
+    Rails.cache.write("lastfm_weekly_album_chart", albums)
     puts "Successfully cached #{albums.length} albums"
   end
 end

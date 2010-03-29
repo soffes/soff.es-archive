@@ -25,7 +25,7 @@
 <h3>Albums I've been enjoying this week</h3>
 <ul class="albums">
 <%- for album in @albums -%>
-  <li><%= link_to (album[:image_url] ? image_tag(album[:image_url], :alt => album[:name]) : "#{album[:name]} by #{album[:artist_name]}"), album[:url], :title => "#{album[:name]} by #{album[:artist_name]}" %></li>
+  <li><%= link_to (album[:image_url] ? image_tag(album[:image_url], :alt => album[:name]) : "#{album[:name]} by #{album[:artist_name]}"), album[:url], :title => "#{album[:name]} by #{album[:artist_name]}", :rel => "external nofollow" %></li>
 <%- end -%>
 </ul>
 <%- end -%>

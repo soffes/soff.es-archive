@@ -1,14 +1,16 @@
 <%- title "Pure Awesomeness" -%>
 
 <div id="home" class="clearfix">
-  <article>
-    <header>
-      <h2><%= link_to @post.title, @post %></h2>
-      <p>Posted <% if @post.published_at %><time datetime="<%= @post.created_at.as_json %>"><%= @post.published_time_in_words %></time><% end %><%= post_tags_html(@post) %></p>
-    </header>
-    <%= @post.excerpt %>
-    <p class="more"><%= link_to "Keep reading &raquo;".html_safe, @post %></p>
-  </article>
+  <section>
+    <article>
+      <header>
+        <h2><%= link_to @post.title, @post %></h2>
+        <p>Posted <% if @post.published_at %><time datetime="<%= @post.created_at.as_json %>"><%= @post.published_time_in_words %></time><% end %><%= post_tags_html(@post) %></p>
+      </header>
+      <%= @post.excerpt %>
+      <p class="more"><%= link_to "Keep reading &raquo;".html_safe, @post %></p>
+    </article>
+  </section>
   <div class="sidebar">
     <h3>Hello</h3>
     <p>My name is Sam. I write software and make music. This is my blog. Enjoy.</p>

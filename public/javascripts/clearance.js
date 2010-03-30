@@ -10,7 +10,6 @@ $(function() {
   $("a[rel=desk]").fancybox(options);
   $("a[rel=gretch]").fancybox(options);
   $("a[rel=bluray]").fancybox(options);
-  $("a[rel=fcb1010]").fancybox(options);
   $("a[rel=virtualizer]").fancybox(options);
   $("a[rel=case]").fancybox(options);
   $("a[rel=crybaby]").fancybox(options);

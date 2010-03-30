@@ -24,12 +24,16 @@
 </div>
 
 <hr />
-
 <%- if @albums && @albums.length > 0 -%>
 <h3>Albums I've been enjoying this week</h3>
-<ul class="albums">
+<ul class="albums clearfix">
 <%- for album in @albums -%>
-  <li><%= link_to (album[:image_url] ? image_tag(album[:image_url], :alt => album[:name]) : "#{album[:name]} by #{album[:artist_name]}"), album[:url], :title => "#{album[:name]} by #{album[:artist_name]}", :rel => "external nofollow" %></li>
+  <li>
+    <%= link_to("#{album[:name]} by #{album[:artist_name]}", album[:url], :title => "#{album[:name]} by #{album[:artist_name]}", :rel => "external nofollow") %>
+    <%- if album[:image_url] -%>
+    <%= image_tag(album[:image_url], :alt => album[:name]) %>
+    <%- end -%>
+  </li>
 <%- end -%>
 </ul>
 <%- end -%>

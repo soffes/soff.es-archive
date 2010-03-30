@@ -2,13 +2,13 @@ namespace :lastfm do
   task :update => :environment do
     require 'net/http'
     require 'rexml/document'
-    
+
+    limit = 12 # number of albums to get
     albums = []
     top_albums_url = "http://ws.audioscrobbler.com/2.0/?method=user.getweeklyalbumchart&user=#{LAST_FM_USERNAME}&api_key=#{LAST_FM_API_KEY}"
     albums_xml = REXML::Document.new(Net::HTTP.get_response(URI.parse(top_albums_url)).body)
     albums_xml.elements.each('lfm/weeklyalbumchart/album') do |album|
-      if albums.length < 8
-        
+      if albums.length < limit        
         album_name = album.elements['name'].text
         artist_name = album.elements['artist'].text
         image_url = nil
@@ -17,7 +17,7 @@ namespace :lastfm do
           album_art_url = "http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=#{LAST_FM_API_KEY}&artist=#{CGI.escape(artist_name)}&album=#{CGI.escape(album_name)}"
           
           album_art_xml = REXML::Document.new(Net::HTTP.get_response(URI.parse(album_art_url)).body)
-          image_url = album_art_xml.elements['lfm/album/image[@size="medium"]'].text
+          image_url = album_art_xml.elements['lfm/album/image[@size="large"]'].text
         end
 
         albums << {

@@ -30,14 +30,25 @@ p.more
 ul.albums
   margin: 0.4em 0 2em
   li
-    display: inline
-    width: 64px
-    height: 64px
-    margin-right: 12px
-  li:last-child
-    margin-right: 0
-  img
-    width: 64px
-    height: 64px
+    float: left
+    margin: 0 10px 10px 0
+    position: relative
+    background= image_url("vinyl_insert.gif") "no-repeat"
   a
     border: 0
+    display: block
+    float: left
+    position: relative
+    left: -2px
+    overflow: hidden
+    text-indent: -9009em
+    z-index: 1
+    width: 96px
+    height: 76px
+    background= image_url("vinyl.png") "no-repeat"
+  img
+    width: 72px
+    height: 72px
+    position: absolute
+    left: 0
+    top: 1px

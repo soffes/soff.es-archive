@@ -2,7 +2,11 @@
 <html>
 <head>
   <meta charset="utf-8" />
+  <%- if is_iphone? -%>
   <meta name="viewport" content="width=320, user-scalable=no" />
+  <%- else -%>
+  <meta name="viewport" content="width=740" />
+  <%- end -%>
   <title><%= "Sam Soffes"+(yield(:title) && !yield(:title).empty? ? " - "+yield(:title) : "") %></title>
   <link href="http://feeds.feedburner.com/samsoffes/blog" rel="alternate" title="samsoff.es" type="application/atom+xml" />
   <link href="http://feeds.feedburner.com/samsoffes/the-experiment" rel="alternate" title="The Experiment Podcast" type="application/atom+xml" />

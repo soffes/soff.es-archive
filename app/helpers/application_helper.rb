@@ -1,4 +1,9 @@
 module ApplicationHelper
+  def is_iphone?
+    user_agent = request.env["HTTP_USER_AGENT"]
+    user_agent[/iPhone/] && !user_agent[/iPad/]
+  end
+  
   def podcast_url
     "http://itunes.apple.com/podcast/the-experiment/id292395055"
   end

@@ -3,7 +3,7 @@ namespace :lastfm do
     require 'net/http'
     require 'rexml/document'
 
-    limit = 12 # number of albums to get
+    limit = 6 # number of albums to get
     albums = []
     top_albums_url = "http://ws.audioscrobbler.com/2.0/?method=user.getweeklyalbumchart&user=#{LAST_FM_USERNAME}&api_key=#{LAST_FM_API_KEY}"
     albums_xml = REXML::Document.new(Net::HTTP.get_response(URI.parse(top_albums_url)).body)

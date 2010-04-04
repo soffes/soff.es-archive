@@ -42,7 +42,6 @@ html
 body
   background: #f4f4f3
   text-shadow: #fff 0 1px 0
-  width: 640px
   margin: 0 auto 30px
   line-height: 1.4em
 
@@ -143,25 +142,35 @@ h4
   color: #555
   margin-bottom: 0.2em
 
+// Wrapper
+div.wrapper, body > header, body > section, body > footer
+  width= !width
+  margin: 0 auto
+
 // Header
 body > header
-  width: 100%
-  margin: 10px 0 4em
+  margin-top: 10px
+  margin-bottom: 2em
   line-height: 1em
   h1
     color= !orange_color
     font-size: 2em
     margin: 1em 0 0.5em
+    float: left
     a
       border: 0
       display: block
-      width: 190px
-      height: 73px
+      width: 237px
+      height: 90px
       text-indent: -9009em
       background= image_url("logo.png") "no-repeat"
     a:hover
       color= !orange_color
       border: 0
+  nav
+    float: right
+    width: 280px
+    padding-top: 80px
   ul
     font-size: 19px
     text-transform: lowercase
@@ -187,10 +196,13 @@ body > header
   li:first-child
     margin-left: 0
 
+body > header:after
+  +clearAfter()
+
 // Footer
 body > footer
   color: #aaa
-  margin: 0 auto 2em
+  margin-bottom: 2em
   padding: 0
   font-size: 0.85em
   text-align: center

@@ -1,39 +1,44 @@
 <%- title "Pure Awesomeness" -%>
 
-<div id="home" class="clearfix">
-  <section>
-    <article>
-      <header>
-        <h2><%= link_to @post.title, @post %></h2>
-        <p>Posted <% if @post.published_at %><time datetime="<%= @post.created_at.as_json %>"><%= @post.published_time_in_words %></time><% end %><%= post_tags_html(@post) %></p>
-      </header>
-      <%= @post.excerpt %>
-      <p class="more"><%= link_to "Keep reading &raquo;".html_safe, @post %></p>
-    </article>
-  </section>
-  <div class="sidebar">
-    <h3>Hello</h3>
-    <p>My name is Sam. I write software and make music. This is my blog. Enjoy.</p>
+<section>
+  <div id="home">
+    <section>
+      <article>
+        <header>
+          <h2><%= link_to @post.title, @post %></h2>
+          <p>Posted <% if @post.published_at %><time datetime="<%= @post.created_at.as_json %>"><%= @post.published_time_in_words %></time><% end %><%= post_tags_html(@post) %></p>
+        </header>
+        <%= @post.excerpt %>
+        <p class="more"><%= link_to "Keep reading &raquo;".html_safe, @post %></p>
+      </article>
+    </section>
+    <div class="sidebar">
+      <h3>Hello</h3>
+      <p>My name is Sam. I write software and make music. This is my blog. Enjoy.</p>
     
-    <h3>Random Stuff</h3>
+      <h3>Random Stuff</h3>
+      <ul>
+        <li><%= link_to "Clearance", clearance_url %></li>
+        <li><%= link_to "MobileX Slides", mobilex_url %></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<%- if @albums && @albums.length > 0 -%>
+<div class="albums">
+  <div>
+    <h3>Albums I've been enjoying this week</h3>
     <ul>
-      <li><%= link_to "Clearance", clearance_url %></li>
-      <li><%= link_to "MobileX Slides", mobilex_url %></li>
+    <%- for album in @albums -%>
+      <li>
+        <%= link_to("#{album[:name]} by #{album[:artist_name]}", album[:url], :title => "#{album[:name]} by #{album[:artist_name]}", :rel => "external nofollow") %>
+        <%- if album[:image_url] -%>
+        <%= image_tag(album[:image_url], :alt => album[:name]) %>
+        <%- end -%>
+      </li>
+    <%- end -%>
     </ul>
   </div>
 </div>
-
-<hr />
-<%- if @albums && @albums.length > 0 -%>
-<h3>Albums I've been enjoying this week</h3>
-<ul class="albums clearfix">
-<%- for album in @albums -%>
-  <li>
-    <%= link_to("#{album[:name]} by #{album[:artist_name]}", album[:url], :title => "#{album[:name]} by #{album[:artist_name]}", :rel => "external nofollow") %>
-    <%- if album[:image_url] -%>
-    <%= image_tag(album[:image_url], :alt => album[:name]) %>
-    <%- end -%>
-  </li>
-<%- end -%>
-</ul>
 <%- end -%>

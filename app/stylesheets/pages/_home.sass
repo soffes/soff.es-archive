@@ -19,6 +19,9 @@ div#home
       list-style: disc
       color= !link_color
 
+div#home:after
+  +clearAfter()
+
 p.more
   margin-top: -1em
   font-size: 0.9em
@@ -27,28 +30,44 @@ p.more
   a:hover
     color: #92abc1
 
-ul.albums
-  margin: 0.4em 0 2em
-  li
-    float: left
-    margin: 0 10px 10px 0
-    position: relative
-    background= image_url("vinyl_insert.gif") "no-repeat"
-  a
-    border: 0
-    display: block
-    float: left
-    position: relative
-    left: -2px
-    overflow: hidden
-    text-indent: -9009em
-    z-index: 1
-    width: 96px
-    height: 76px
-    background= image_url("vinyl.png") "no-repeat"
-  img
-    width: 72px
-    height: 72px
-    position: absolute
-    left: 0
-    top: 1px
+div.albums
+  background= image_url("albums-teeth.png") "repeat-x"
+  width: 100%
+  height: 192px
+  margin: 3em 0 2em
+  > div
+    width= !width
+    margin: 0 auto
+    padding-top: 40px
+  h3
+    color: #c6994d
+    font-family= !helvetica
+    font-size: 20px
+    margin-bottom: 0.5em
+  ul
+    margin: 0.4em 0 2em
+    li
+      float: left
+      margin: 0 10px 10px 0
+      position: relative
+      background= image_url("vinyl_insert.gif") "no-repeat"
+    a
+      border: 0
+      display: block
+      float: left
+      position: relative
+      left: -2px
+      overflow: hidden
+      text-indent: -9009em
+      z-index: 1
+      width: 96px
+      height: 76px
+      background= image_url("vinyl.png") "no-repeat"
+    img
+      width: 72px
+      height: 72px
+      position: absolute
+      left: 0
+      top: 1px
+  ul:after
+    +clearAfter()

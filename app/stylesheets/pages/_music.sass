@@ -46,8 +46,10 @@ div#music
 div.soundcloud-player
   height: 101px
   margin: 2px 0
-  background: url('http://assets.samsoff.es/images/dots-white.gif') white no-repeat center
+  background= image_url("dots-white.gif") "white no-repeat center"
   width: 245px
+  -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2)
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2)
 
 div.soundcloud-player > div:first-child
   padding: 10px

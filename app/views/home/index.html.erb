@@ -8,8 +8,7 @@
           <h2><%= link_to @post.title, @post %></h2>
           <p>Posted <% if @post.published_at %><time datetime="<%= @post.created_at.as_json %>"><%= @post.published_time_in_words %></time><% end %><%= post_tags_html(@post) %></p>
         </header>
-        <%= @post.excerpt %>
-        <p class="more"><%= link_to "Keep reading &raquo;".html_safe, @post %></p>
+        <%= @post.excerpt.gsub('</p>', " #{link_to("Keep reading &raquo;".html_safe, blog_url, :class => "more")}</p>".html_safe) %>
       </article>
     </section>
     <div class="sidebar">

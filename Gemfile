@@ -6,6 +6,7 @@ gem "rdiscount", "1.6.3"
 gem "will_paginate", "3.0.pre"
 gem "compass", "0.10.0.rc1"
 gem "memcached", "0.19.2"
+gem "rack-obama", "0.1.1"
 
 group :development do
   gem "system_timer", "1.0"

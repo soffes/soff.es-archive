@@ -1,15 +1,55 @@
+// Layout
 html
   width: 320px
   font-size: 0.9em
-
-body
+  
+div.wrapper, body > header, body > section, body > footer
   width: 280px
-  padding: 0 20px
 
+// Tags
+h2
+  font-size: 22px
+
+//pre, code
+//  font-size: 1em
+//  overflow: hidden
+
+// Header
 body > header
-  margin: 1em 0 3em
+  margin: 1em auto 3em
+  h1
+    float: none
+  nav
+    float: none
+    padding-top: 0
 
+// Home
+div#home
+  section, div.sidebar
+    float: none
+    width: auto
+  div.sidebar
+    background= image_url("dash.png") "no-repeat bottom center"
+    padding-bottom: 2em
+    margin-bottom: 2em
 
+// Music and About
+div#music-art, div#about-photo
+  float: none
+  margin: 0 auto 2em
+  width: 280px
+  a.photo, img
+    width: 260px
+    height: 260px
+
+div#music-about, div#about-text
+  float: none
+
+// Music
+ul.tracks li span
+  display: none
+
+// Blog
 div.post div.video
   width: 240px
 
@@ -18,25 +58,7 @@ div.post div.video embed,div.post div.video object
 
 div.post div.video,div.post div.video.wide.youtube
   height: 2.8em
-
-div#music-art,div#music-about
-  float: none
-
-div#music-art
-  width: 260px
-  height: 260px
-  margin-bottom: 1em
-
-div#music-art img
-  width: 260px
-  height: 260px
-
-div#music-about
-  margin-left: 0
-
-ul.tracks li span
-  display: none
-
+  
 div.pagination
   line-height: 2em
 

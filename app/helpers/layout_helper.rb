@@ -15,4 +15,8 @@ module LayoutHelper
     # This helper should be called at end of the <head> tag
     "<script>var _gaq=_gaq || [];_gaq.push(['_setAccount','#{account}']);_gaq.push(['_trackPageview']);(function(){var ga=document.createElement('script');ga.async=true;ga.src=('https:'==document.location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);})();</script>".html_safe if (always || Rails.env.to_sym == :production)
   end
+  
+  def twitter_anywhere(api_key)
+    "<script src=\"http://platform.twitter.com/anywhere.js?id=#{api_key}&v=1\"></script><script type=\"text/javascript\">twttr.anywhere(function(twitter){twitter.hovercards({infer:true});});</script>".html_safe
+  end
 end

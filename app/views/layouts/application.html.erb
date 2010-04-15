@@ -14,7 +14,8 @@
   <%= stylesheet_link_tag "application" %>
   <%= stylesheet_link_tag "iphone", :media => "only screen and (max-device-width: 480px)" %>
   <%= yield(:head) %>
-  <%= google_analytics("UA-5609322-1") %>
+  <%= twitter_anywhere(TWITTER_ANYWHERE_API_KEY) %>
+  <%= google_analytics(GOOGLE_ANALYTICS_KEY) %>
 </head>
 <body>
   <header>

@@ -7,8 +7,9 @@ $(function() {
 		    return '<span id="fancybox-title-over">Image ' +  (currentIndex + 1) + ' / ' + currentArray.length + '</span>';
 		}
 	}
+	
+  $("a[rel=bamboo]").fancybox(options);
   $("a[rel=desk]").fancybox(options);
-  $("a[rel=gretch]").fancybox(options);
   $("a[rel=bluray]").fancybox(options);
   $("a[rel=virtualizer]").fancybox(options);
   $("a[rel=case]").fancybox(options);

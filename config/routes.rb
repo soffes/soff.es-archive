@@ -18,6 +18,7 @@ SamSoffes::Application.routes.draw do |map|
   match "/music.:format" => redirect { |params| "/music" }
   match "/about.:format" => redirect { |params| "/about" }
   match "/source" => redirect { |params| "http://github.com/samsoffes/samsoff.es" }
+  match "/mobilex" => redirect { |params| "/talks" }
   
   # Root
   match "/" => "home#index", :as => "root"
@@ -31,7 +32,7 @@ SamSoffes::Application.routes.draw do |map|
   match "/about" => "pages#about", :as => "about"
   match "/music" => "pages#music", :as => "music"
   match "/clearance" => "pages#clearance", :as => "clearance"
-  match "/mobilex" => "pages#mobilex", :as => "mobilex"
+  match "/talks" => "pages#talks", :as => "talks"
   
   # Admin
   namespace :admin do

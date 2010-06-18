@@ -9,10 +9,11 @@
       <h3>Random Stuff</h3>
       <ul>
         <li><%= link_to "Clearance", clearance_url %></li>
-        <li><%= link_to "MobileX Slides", mobilex_url %></li>
+        <li><%= link_to "Talks", talks_url %></li>
       </ul>
     </div>
     <section>
+    <%- if @post -%>
       <article>
         <header>
           <h2><%= link_to @post.title, @post %></h2>
@@ -20,6 +21,9 @@
         </header>
         <%= @post.excerpt.gsub('</p>', " #{link_to("Keep reading &raquo;".html_safe, blog_url, :class => "more")}</p>".html_safe) %>
       </article>
+    <%- else -%>
+      <p>Nothing to see here. Move along.</p>
+    <%- end -%>
     </section>
   </div>
 </section>

@@ -11,9 +11,10 @@ mark, time, meter, progress
 
 // Fonts
 @font-face
-  font-family: 'NillandRegular'
-  src: url('http://assets.samsoff.es/fonts/Nilland.eot')
-  src: local('Nilland Regular'), local('Nilland'), url('http://assets.samsoff.es/fonts/Nilland.woff') format('woff'), url('http://assets.samsoff.es/fonts/Nilland.ttf') format('truetype'), url('http://assets.samsoff.es/fonts/Nilland.svg#Nilland') format('svg')
+  font-family: "NillandRegular"
+  src: url("http://assets.samsoff.es/fonts/Nilland.eot")
+  src: local("Nilland Regular"), local("Nilland"), url("http://assets.samsoff.es/fonts/Nilland.woff") format("woff"), url("http://assets.samsoff.es/fonts/Nilland.ttf") format("truetype"), url("http://assets.samsoff.es/fonts/Nilland.svg#Nilland") format("svg")
+
 
 // Clear-fix
 .clearfix:after
@@ -23,13 +24,13 @@ mark, time, meter, progress
   visibility: hidden
   line-height: 0
   height: 0
- 
+
 .clearfix
   display: inline-block
- 
+
 html[xmlns] .clearfix
   display: block
- 
+
 * html .clearfix
   height: 1%
 
@@ -38,32 +39,32 @@ html
   background: #f4f4f3
   font-size: 17px
   font-weight: 300
-  text-shadow: rgba(0,0,0,0.01) 0 0 0
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 0
 
 body
   background: #f4f4f3
-  text-shadow: #fff 0 1px 0
+  text-shadow: white 0 1px 0
   margin: 0 auto 30px
   line-height: 1.4em
 
 html, input, textarea
-  font-family= !helvetica_neue_light
+  font-family: $helvetica_neue_light
   color: #333
 
 a
-  border-bottom= 1px "dotted" !link_border_color
-  color= !link_color
+  border-bottom: 1px dotted $link_border_color
+  color: $link_color
   text-decoration: none
 
 a:hover
   border-bottom: 1px solid
-  color= !link_hover_color
+  color: $link_hover_color
 
 strong
   font-weight: bold
 
 em
-  background-color: !highligh_color
+  background-color: $highligh_color
   padding: 0 0.2em
 
 abbr
@@ -74,7 +75,7 @@ p
   margin: 0 0 1em
 
 hr
-  background= image_url("dash.png") "no-repeat bottom center"
+  background: image_url('dash.png') no-repeat bottom center
   padding-bottom: 2em
   margin-bottom: 2em
   border: 0
@@ -97,8 +98,8 @@ small
     color: #2e80d3
 
 pre
-  background-color= !code_background_color
-  border= 1px "solid" !code_border_color
+  background-color: $code_background_color
+  border: 1px solid $code_border_color
   color: #444
   font-family: "Bitstream Vera Sans Mono", Courier, monospace
   font-size: 0.8em
@@ -107,23 +108,23 @@ pre
   overflow: auto
   padding: 0.5em
   code
-    background-color= !code_background_color
+    background-color: $code_background_color
     border: medium none
     font-size: 1em
     padding: 0
 
 code
-  background-color= !code_background_color
-  border= 1px "solid" !code_border_color
+  background-color: $code_background_color
+  border: 1px solid $code_border_color
   color: #444
   padding: 0 0.2em
   font-family: "Bitstream Vera Sans Mono", Courier, monospace
   font-size: 0.8em
 
 h2
-  background= image_url("lightning.png") "no-repeat" 0 0.5em
-  color= !link_color
-  font-family= !nilland
+  background: image_url('lightning.png') no-repeat 0 0.5em
+  color: $link_color
+  font-family: $nilland
   font-size: 26px
   font-weight: 300
   padding-left: 40px
@@ -135,7 +136,7 @@ h3
   font-size: 1.3em
   font-weight: 300
   margin-bottom: 0.4em
-  color= !pink_color
+  color: $pink_color
 
 h4
   font-weight: bold
@@ -144,7 +145,7 @@ h4
 
 // Wrapper
 div.wrapper, body > header, body > section, body > footer
-  width= !width
+  width: $width
   margin: 0 auto
 
 // Header
@@ -153,7 +154,7 @@ body > header
   margin-bottom: 2em
   line-height: 1em
   h1
-    color= !orange_color
+    color: $orange_color
     font-size: 2em
     margin: 1em 0 0.5em
     float: left
@@ -163,9 +164,9 @@ body > header
       width: 237px
       height: 90px
       text-indent: -9009em
-      background= image_url("logo.png") "no-repeat"
+      background: image_url('logo.png') no-repeat
     a:hover
-      color= !orange_color
+      color: $orange_color
       border: 0
   nav
     float: right
@@ -180,24 +181,24 @@ body > header
     margin: 0 0 0 1.7em
     padding: 0
     a
-      font-family= !nilland
+      font-family: $nilland
       background: transparent no-repeat 0 center
       padding-left: 22px
       border: 0
   li.blog a
-    background-image= image_url("blog.png")
-    color= !blog_color
+    background-image: image_url('blog.png')
+    color: $blog_color
   li.music a
-    background-image= image_url("music.png")
-    color= !music_color
+    background-image: image_url('music.png')
+    color: $music_color
   li.about a
-    background-image= image_url("about.png")
-    color= !about_color
+    background-image: image_url('about.png')
+    color: $about_color
   li:first-child
     margin-left: 0
 
 body > header:after
-  +clearAfter()
+  +clearAfter
 
 // Footer
 body > footer
@@ -213,7 +214,7 @@ body > footer
 
 // Post
 section > article
-  background= image_url("dash.png") "no-repeat bottom center"
+  background: image_url('dash.png') no-repeat bottom center
   padding-bottom: 2em
   margin-bottom: 2em
   h2
@@ -236,7 +237,7 @@ section > article
   ol li ol li
     list-style: lower-alpha
   div.video
-    background: #fff
+    background: white
     padding: 10px
     text-align: center
     margin-bottom: 1em
@@ -259,12 +260,12 @@ div.gist div.gist-file div.gist-meta
 
 // Tags
 a.tag
-  color= !light_blue_color
+  color: $light_blue_color
   word-wrap: nowrap
 
 a.tag:before
-  content: '#'
-  
+  content: "#"
+
 div.tags
   text-align: center
   a
@@ -273,9 +274,9 @@ div.tags
     word-wrap: nowrap
     line-height: 2em
   a:hover
-    color= !pink_color
+    color: $pink_color
   .nube1
-    font-size: 1.0em
+    font-size: 1em
   .nube2
     font-size: 1.2em
   .nube3
@@ -285,11 +286,11 @@ div.tags
   .nube5
     font-size: 1.8em
   .nube6
-    font-size: 2.0em
+    font-size: 2em
 
 // Alert
 div.alert
-  background: #fff
+  background: white
   padding: 20px
   box-shadow: 1px 1px 1px #ddd
   -moz-box-shadow: 1px 1px 1px #ddd
@@ -297,9 +298,9 @@ div.alert
   -moz-border-radius: 5px
   -webkit-border-radius: 5px
   text-shadow: none
-  border: 1px solid #fff
+  border: 1px solid white
   background: #ffffe6
-  border-color: #ff9
+  border-color: #ffff99
 
 div.alert p:last-child
   margin-bottom: 0
@@ -315,4 +316,4 @@ div.alert p:last-child
 
 // Misc
 a.twitter-username:before
-  content: '@'
+  content: "@"

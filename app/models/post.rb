@@ -11,7 +11,9 @@ class Post < ActiveRecord::Base
   attr_writer :tag_names
   after_save :assign_tags
 
-  scope :published, lambda { where('published_at < ?', Time.zone.now).order('created_at DESC') }
+  def self.published
+    where('published_at < ?', Time.zone.now).order('published_at DESC')
+  end
   
   def self.per_page
     3

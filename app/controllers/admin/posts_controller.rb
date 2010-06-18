@@ -1,6 +1,6 @@
 class Admin::PostsController < AdminController
   def index
-    @posts = Post.paginated(params[:page])
+    @posts = Post.paginated(params[:page])order('created_at DESC')
   end
   
   def show

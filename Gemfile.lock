@@ -4,10 +4,6 @@ dependencies:
     group: 
     - :default
     version: = 0.10.2
-  system_timer: 
-    group: 
-    - :default
-    version: = 1.0
   rails: 
     group: 
     - :default
@@ -16,6 +12,10 @@ dependencies:
     group: 
     - :default
     version: = 0.9.0
+  memcache-client: 
+    group: 
+    - :production
+    version: ">= 0"
   rspec: 
     group: 
     - :test
@@ -24,10 +24,6 @@ dependencies:
     group: 
     - :test
     version: = 2.0.0.beta.15
-  memcached: 
-    group: 
-    - :default
-    version: = 0.19.9
   will_paginate: 
     group: 
     - :default
@@ -36,6 +32,12 @@ dependencies:
     group: 
     - :default
     version: = 1.6.5
+  memcached-northscale: 
+    group: 
+    - :production
+    version: ">= 0"
+    require: 
+    - memcached
 specs: 
 - rake: 
     version: 0.8.7
@@ -85,8 +87,10 @@ specs:
     version: 0.10.2
 - diff-lcs: 
     version: 1.1.2
-- memcached: 
-    version: 0.19.9
+- memcache-client: 
+    version: 1.8.5
+- memcached-northscale: 
+    version: 0.19.5.3
 - nokogiri: 
     version: 1.4.2
 - pg: 
@@ -111,11 +115,9 @@ specs:
     version: 0.7.1
 - rspec-rails: 
     version: 2.0.0.beta.15
-- system_timer: 
-    version: "1.0"
 - will_paginate: 
     version: 3.0.pre
-hash: cd0ae0042c3b6f0560e787f85e5aabba8ae42011
+hash: e4796295b07b8fe6589c75abdc3b757eb4920b32
 sources: 
 - Rubygems: 
     uri: http://rubygems.org

@@ -4,14 +4,18 @@ dependencies:
     group: 
     - :default
     version: = 0.10.2
-  pg: 
+  system_timer: 
     group: 
     - :default
-    version: = 0.9.0
+    version: = 1.0
   rails: 
     group: 
     - :default
     version: = 3.0.0.beta4
+  pg: 
+    group: 
+    - :default
+    version: = 0.9.0
   rspec: 
     group: 
     - :test
@@ -107,9 +111,11 @@ specs:
     version: 0.7.1
 - rspec-rails: 
     version: 2.0.0.beta.15
+- system_timer: 
+    version: "1.0"
 - will_paginate: 
     version: 3.0.pre
-hash: 4b44df1f36b804d72c772c1c83b49b9b26027d8c
+hash: cd0ae0042c3b6f0560e787f85e5aabba8ae42011
 sources: 
 - Rubygems: 
     uri: http://rubygems.org

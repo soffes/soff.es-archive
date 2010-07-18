@@ -6,4 +6,9 @@ class HomeController < ApplicationController
     @albums = @albums[0..1] if is_iphone?
   end
   
+  def source
+    path = params[:code_path] ? "/tree/master/#{params[:code_path]}" : ""
+    redirect_to_url "http://github.com/samsoffes/samsoff.es#{path}" and return
+  end
+  
 end

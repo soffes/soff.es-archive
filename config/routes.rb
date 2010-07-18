@@ -17,11 +17,11 @@ SamSoffes::Application.routes.draw do |map|
   match "/archive.:format" => redirect { |params| "/blog" }
   match "/music.:format" => redirect { |params| "/music" }
   match "/about.:format" => redirect { |params| "/about" }
-  match "/source" => redirect { |params| "http://github.com/samsoffes/samsoff.es" }
   match "/mobilex" => redirect { |params| "/talks" }
   
   # Root
   match "/" => "home#index", :as => "root"
+  match "/source(/:code_path)" => "home#source"
     
   # Blog
   match "/blog" => "posts#index", :as => "blog"

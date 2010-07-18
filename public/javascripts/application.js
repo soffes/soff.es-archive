@@ -75,7 +75,7 @@ function showNoFlashMessageForVideos() {
       }
     }
     
-    // All other flash
+    // All other videos
     else {
       video.innerHTML = disabledMessage;
     }

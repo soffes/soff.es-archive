@@ -18,10 +18,11 @@ SamSoffes::Application.routes.draw do |map|
   match "/music.:format" => redirect { |params| "/music" }
   match "/about.:format" => redirect { |params| "/about" }
   match "/mobilex" => redirect { |params| "/talks" }
+  match "/hello-internet" => redirect { |params| "/tags/hello-internet" }
   
   # Root
   match "/" => "home#index", :as => "root"
-  match "/source(/:code_path)" => "home#source"
+  match "/source(/:code_path)" => "home#source", :constraints => {:code_path => /[a-zA-Z0-9_\.\/]+/}
     
   # Blog
   match "/blog" => "posts#index", :as => "blog"

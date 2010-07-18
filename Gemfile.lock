@@ -14,7 +14,7 @@ dependencies:
     version: = 0.9.0
   memcache-client: 
     group: 
-    - :production
+    - :default
     version: ">= 0"
   rspec: 
     group: 
@@ -34,7 +34,7 @@ dependencies:
     version: = 1.6.5
   memcached-northscale: 
     group: 
-    - :production
+    - :default
     version: ">= 0"
     require: 
     - memcached
@@ -117,7 +117,7 @@ specs:
     version: 2.0.0.beta.17
 - will_paginate: 
     version: 3.0.pre
-hash: 1c05359350b67e4807a0121db5f7ba7237c23d8f
+hash: 4637966d5fbd066d8d5a59497f767a1baede95b1
 sources: 
 - Rubygems: 
     uri: http://rubygems.org

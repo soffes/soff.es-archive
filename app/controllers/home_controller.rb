@@ -8,7 +8,7 @@ class HomeController < ApplicationController
   
   def source
     path = params[:code_path] ? "/tree/master/#{params[:code_path]}" : ""
-    redirect_to_url "http://github.com/samsoffes/samsoff.es#{path}" and return
+    redirect_to "http://github.com/samsoffes/samsoff.es#{path}" and return
   end
   
 end

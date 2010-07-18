@@ -5,11 +5,8 @@ gem "pg", "0.9.0"
 gem "rdiscount", "1.6.5"
 gem "will_paginate", "3.0.pre"
 gem "compass", "0.10.2"
-
-group :production do
-  gem "memcache-client"
-  gem 'memcached-northscale', :require => 'memcached'
-end
+gem "memcache-client"
+gem 'memcached-northscale', :require => 'memcached'
 
 group :test do
   gem "rspec", "2.0.0.beta.17"

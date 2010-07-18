@@ -19,11 +19,11 @@ dependencies:
   rspec: 
     group: 
     - :test
-    version: = 2.0.0.beta.15
+    version: = 2.0.0.beta.17
   rspec-rails: 
     group: 
     - :test
-    version: = 2.0.0.beta.15
+    version: = 2.0.0.beta.17
   will_paginate: 
     group: 
     - :default
@@ -56,7 +56,7 @@ specs:
 - rack: 
     version: 1.1.0
 - rack-mount: 
-    version: 0.6.6
+    version: 0.6.9
 - rack-test: 
     version: 0.5.4
 - tzinfo: 
@@ -96,7 +96,7 @@ specs:
 - pg: 
     version: 0.9.0
 - thor: 
-    version: 0.13.7
+    version: 0.13.8
 - railties: 
     version: 3.0.0.beta4
 - rails: 
@@ -104,20 +104,20 @@ specs:
 - rdiscount: 
     version: 1.6.5
 - rspec-core: 
-    version: 2.0.0.beta.15
+    version: 2.0.0.beta.17
 - rspec-expectations: 
-    version: 2.0.0.beta.15
+    version: 2.0.0.beta.17
 - rspec-mocks: 
-    version: 2.0.0.beta.15
+    version: 2.0.0.beta.17
 - rspec: 
-    version: 2.0.0.beta.15
+    version: 2.0.0.beta.17
 - webrat: 
     version: 0.7.1
 - rspec-rails: 
-    version: 2.0.0.beta.15
+    version: 2.0.0.beta.17
 - will_paginate: 
     version: 3.0.pre
-hash: e4796295b07b8fe6589c75abdc3b757eb4920b32
+hash: 1c05359350b67e4807a0121db5f7ba7237c23d8f
 sources: 
 - Rubygems: 
     uri: http://rubygems.org

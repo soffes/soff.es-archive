@@ -12,6 +12,6 @@ group :production do
 end
 
 group :test do
-  gem "rspec", "2.0.0.beta.15"
-  gem "rspec-rails", "2.0.0.beta.15"
+  gem "rspec", "2.0.0.beta.17"
+  gem "rspec-rails", "2.0.0.beta.17"
 end

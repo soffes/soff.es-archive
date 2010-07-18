@@ -40,8 +40,7 @@ function showNoFlashMessageForVideos() {
   }
   
   var disabledMessage = '<p style="text-align:center"><strong>Sorry, but you need Flash to watch this video.</strong></p><p style="text-align:center">I hate that as much as you do.</p>';
-  
-//  var is_iphone = (navigator.userAgent.toLowerCase().indexOf('iphone') != -1);
+  var iPhone = (navigator.userAgent.toLowerCase().indexOf('iphone') != -1);
   
   var videos = document.getElementsByClassName('video');
   for (var i in videos) {
@@ -56,7 +55,17 @@ function showNoFlashMessageForVideos() {
       
       if (match != null) {
         var clipId = match[1];
-        video.innerHTML = '<video src="http://www.vimeo.com/play_redirect?clip_id=' + clipId + '" controls="controls" width="' + object.getAttribute('width') + '" height="' + object.getAttribute('height') + '"></video>';
+        
+        var width, height;
+        if (iPhone) {
+          width = 260;
+          height = (video.className.indexOf('wide') != -1) ? 146 : 195;
+        } else {
+          width = object.getAttribute('width');
+          height = object.getAttribute('height');
+        }
+        
+        video.innerHTML = '<video src="http://www.vimeo.com/play_redirect?clip_id=' + clipId + '" controls="controls" width="' + width + '" height="' + height + '"></video>';
 
         var js = document.createElement('script');
         js.setAttribute('src', 'http://www.vimeo.com/api/oembed.json?url=' + encodeURIComponent('http://vimeo.com/' + clipId));

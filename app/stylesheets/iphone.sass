@@ -59,14 +59,20 @@ ul.tracks li span
   display: none
 
 // Blog
-div.post div.video
-  width: 240px
+section > article
+  object, embed
+    display: none
+  div.video
+    width: 260px
+    height: 195px
+  div.video.wide.youtube, div.video.wide.vimeo
+    height: 146px
 
-div.post div.video embed,div.post div.video object
-  display: none
+div.post div.video.wide
+  height: 134px
 
-div.post div.video, div.post div.video.wide.youtube
-  height: 2.8em
+// div.post div.video embed, div.post div.video object
+//   display: none
 
 div.pagination
   line-height: 2em

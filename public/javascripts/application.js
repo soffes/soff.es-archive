@@ -91,13 +91,5 @@ if (top.frames.length != 0) {
   top.location = self.document.location;
 }
 
-// Scroll down on iPhone
-function hideAddressBar() {
-	window.scrollTo(0, 0);
-}
-addEventListener('load', function() {
-	setTimeout(hideAddressBar, 0);
-}, false);
-
 // On DOM load, update videos if no flash
 addLoadEvent(showNoFlashMessageForVideos);

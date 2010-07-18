@@ -41,6 +41,7 @@ function showNoFlashMessageForVideos() {
   
   var disabledMessage = '<p style="text-align:center"><strong>Sorry, but you need Flash to watch this video.</strong></p><p style="text-align:center">I hate that as much as you do.</p>';
   var iPhone = (navigator.userAgent.toLowerCase().indexOf('iphone') != -1);
+  var iPad = (navigator.userAgent.toLowerCase().indexOf('ipad') != -1);
   
   var videos = document.getElementsByClassName('video');
   for (var i in videos) {
@@ -77,7 +78,10 @@ function showNoFlashMessageForVideos() {
     
     // All other videos
     else {
-      video.innerHTML = disabledMessage;
+      // Leave YouTube videos alone on iOS
+      if ((iPhone || iPad) && video.className.indexOf('youtube') == -1) {
+        video.innerHTML = disabledMessage;
+      }
     }
   }
 }

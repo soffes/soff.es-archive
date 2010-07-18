@@ -11,9 +11,10 @@
   <meta name="viewport" content="width=320, user-scalable=no" />
   <%= stylesheet_link_tag "iphone", :media => "only screen and (max-device-width: 480px)" %>
   <%- else -%>
-  <meta name="viewport" content="width=740" />
+  <meta name="viewport" content="width=740, maximum-scale=1.0" />
   <%- end -%>
-  <%= yield(:head) %>
+  <%= javascript_include_tag "application" -%>
+  <%= yield(:head) -%>
   <%= google_analytics(GOOGLE_ANALYTICS_KEY) %>
 </head>
 <body>
@@ -32,7 +33,7 @@
     <%= yield %>
   </section>
   <footer>
-  	<p>&copy 2010 <%= link_to "Sam Soffes", root_url, :rel => "home" %>. <a href="http://github.com/samsoffes/samsoff.es" target="_blank" rel="external nofollow">View source on GitHub</a>.</p>
+  	<p>&copy; 2010 <%= link_to "Sam Soffes", root_url, :rel => "home" %>. <a href="http://github.com/samsoffes/samsoff.es" target="_blank" rel="external nofollow">View source on GitHub</a>.</p>
   </footer>
   <script type="text/javascript" src="http://www.observerapp.com/record.js"></script><script type="text/javascript">Observerapp.record("agtvYnNlcnZlcmFwcHINCxIEU2l0ZRjkyvUBDA");</script>
 </body>

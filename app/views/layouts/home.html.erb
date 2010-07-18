@@ -12,7 +12,12 @@
   <link href="http://feeds.feedburner.com/samsoffes/the-experiment" rel="alternate" title="The Experiment Podcast" type="application/atom+xml" />
   <link rel="me" href="http://www.google.com/profiles/samsoffes" />
   <%= stylesheet_link_tag "application" %>
+  <%- if is_iphone? -%>
+  <meta name="viewport" content="width=320, user-scalable=no" />
   <%= stylesheet_link_tag "iphone", :media => "only screen and (max-device-width: 480px)" %>
+  <%- else -%>
+  <meta name="viewport" content="width=740, maximum-scale=1.0" />
+  <%- end -%>
   <%= yield(:head) %>
   <%= google_analytics(GOOGLE_ANALYTICS_KEY) %>
 </head>
@@ -30,7 +35,7 @@
   </header>
   <%= yield %>
   <footer>
-  	<p>&copy 2010 <%= link_to "Sam Soffes", root_url, :rel => "home" %>. <a href="http://github.com/samsoffes/samsoff.es" target="_blank" rel="external nofollow">View source on GitHub</a>.</p>
+  	<p>&copy; 2010 <%= link_to "Sam Soffes", root_url, :rel => "home" %>. <a href="http://github.com/samsoffes/samsoff.es" target="_blank" rel="external nofollow">View source on GitHub</a>.</p>
   </footer>
 	<script type="text/javascript" src="http://www.observerapp.com/record.js"></script><script type="text/javascript">Observerapp.record("agtvYnNlcnZlcmFwcHINCxIEU2l0ZRjkyvUBDA");</script>
 </body>

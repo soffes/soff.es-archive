@@ -35,11 +35,40 @@ function hasFlash() {
 
 // Replace video embeds with a message if no flash
 function showNoFlashMessageForVideos() {
-  if (hasFlash() == false) {
-    var videos = document.getElementsByClassName('video');
-    for (var i in videos) {
-      var video = videos[i];
-      video.innerHTML = '<strong>Sorry, but you need Flash to watch this video.</strong>';
+  if (hasFlash()) {
+    return;
+  }
+  
+  var disabledMessage = '<p style="text-align:center"><strong>Sorry, but you need Flash to watch this video.</strong></p><p style="text-align:center">I hate that as much as you do.</p>';
+  
+//  var is_iphone = (navigator.userAgent.toLowerCase().indexOf('iphone') != -1);
+  
+  var videos = document.getElementsByClassName('video');
+  for (var i in videos) {
+    var video = videos.item(i);
+    
+    // Vimeo video
+    if (video.className.indexOf('vimeo') != -1) {
+      var object = video.getElementsByTagName('object').item(0);
+      var embed = object.getElementsByTagName('embed').item(0);
+      var regex = new RegExp('[?&]clip_id(?:=([^&]*))?', 'i');
+      var match = regex.exec(embed.getAttribute('src'));
+      
+      if (match != null) {
+        var clipId = match[1];
+        video.innerHTML = '<video src="http://www.vimeo.com/play_redirect?clip_id=' + clipId + '" controls="controls" width="' + object.getAttribute('width') + '" height="' + object.getAttribute('height') + '"></video>';
+
+        var js = document.createElement('script');
+        js.setAttribute('src', 'http://www.vimeo.com/api/oembed.json?url=' + encodeURIComponent('http://vimeo.com/' + clipId));
+        document.getElementsByTagName('head').item(0).appendChild(js);
+      } else {
+        video.innerHTML = disabledMessage;
+      }
+    }
+    
+    // All other flash
+    else {
+      video.innerHTML = disabledMessage;
     }
   }
 }

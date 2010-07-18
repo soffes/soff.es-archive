@@ -1,0 +1,123 @@
+--- 
+dependencies: 
+  compass: 
+    group: 
+    - :default
+    version: = 0.10.2
+  rails: 
+    group: 
+    - :default
+    version: = 3.0.0.beta4
+  pg: 
+    group: 
+    - :default
+    version: = 0.9.0
+  memcache-client: 
+    group: 
+    - :production
+    version: ">= 0"
+  rspec: 
+    group: 
+    - :test
+    version: = 2.0.0.beta.15
+  rspec-rails: 
+    group: 
+    - :test
+    version: = 2.0.0.beta.15
+  will_paginate: 
+    group: 
+    - :default
+    version: = 3.0.pre
+  rdiscount: 
+    group: 
+    - :default
+    version: = 1.6.5
+  memcached-northscale: 
+    group: 
+    - :production
+    version: ">= 0"
+    require: 
+    - memcached
+specs: 
+- rake: 
+    version: 0.8.7
+- abstract: 
+    version: 1.0.0
+- activesupport: 
+    version: 3.0.0.beta4
+- builder: 
+    version: 2.1.2
+- i18n: 
+    version: 0.4.1
+- activemodel: 
+    version: 3.0.0.beta4
+- erubis: 
+    version: 2.6.6
+- rack: 
+    version: 1.1.0
+- rack-mount: 
+    version: 0.6.6
+- rack-test: 
+    version: 0.5.4
+- tzinfo: 
+    version: 0.3.22
+- actionpack: 
+    version: 3.0.0.beta4
+- mime-types: 
+    version: "1.16"
+- polyglot: 
+    version: 0.3.1
+- treetop: 
+    version: 1.4.8
+- mail: 
+    version: 2.2.5
+- actionmailer: 
+    version: 3.0.0.beta4
+- arel: 
+    version: 0.4.0
+- activerecord: 
+    version: 3.0.0.beta4
+- activeresource: 
+    version: 3.0.0.beta4
+- bundler: 
+    version: 0.9.26
+- haml: 
+    version: 3.0.13
+- compass: 
+    version: 0.10.2
+- diff-lcs: 
+    version: 1.1.2
+- memcache-client: 
+    version: 1.8.5
+- memcached-northscale: 
+    version: 0.19.5.3
+- nokogiri: 
+    version: 1.4.2
+- pg: 
+    version: 0.9.0
+- thor: 
+    version: 0.13.7
+- railties: 
+    version: 3.0.0.beta4
+- rails: 
+    version: 3.0.0.beta4
+- rdiscount: 
+    version: 1.6.5
+- rspec-core: 
+    version: 2.0.0.beta.15
+- rspec-expectations: 
+    version: 2.0.0.beta.15
+- rspec-mocks: 
+    version: 2.0.0.beta.15
+- rspec: 
+    version: 2.0.0.beta.15
+- webrat: 
+    version: 0.7.1
+- rspec-rails: 
+    version: 2.0.0.beta.15
+- will_paginate: 
+    version: 3.0.pre
+hash: e4796295b07b8fe6589c75abdc3b757eb4920b32
+sources: 
+- Rubygems: 
+    uri: http://rubygems.org

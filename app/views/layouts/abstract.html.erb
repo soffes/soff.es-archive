@@ -2,23 +2,21 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <%- if is_iphone? -%>
-  <meta name="viewport" content="width=320, user-scalable=no" />
-  <%- else -%>
-  <meta name="viewport" content="width=740" />
-  <%- end -%>
   <title><%= "Sam Soffes"+(yield(:title) && !yield(:title).empty? ? " - "+yield(:title) : "") %></title>
   <link href="http://feeds.feedburner.com/samsoffes/blog" rel="alternate" title="samsoff.es" type="application/atom+xml" />
   <link href="http://feeds.feedburner.com/samsoffes/the-experiment" rel="alternate" title="The Experiment Podcast" type="application/atom+xml" />
+  <link rel="apple-touch-icon-precomposed" href="<%= image_path("apple-touch-icon.png") %>">
   <link rel="me" href="http://www.google.com/profiles/samsoffes" />
   <%= stylesheet_link_tag "application" %>
   <%- if is_iphone? -%>
   <meta name="viewport" content="width=320, user-scalable=no" />
-  <%= stylesheet_link_tag "iphone", :media => "only screen and (max-device-width: 480px)" %>
+  <%= stylesheet_link_tag "iphone" %>
+  <%= stylesheet_link_tag "iphone4", :media => "all and (-webkit-min-device-pixel-ratio:2)" %>
   <%- else -%>
   <meta name="viewport" content="width=740, maximum-scale=1.0" />
   <%- end -%>
-  <%= yield(:head) %>
+  <%= javascript_include_tag "application" -%>
+  <%= yield(:head) -%>
   <%= google_analytics(GOOGLE_ANALYTICS_KEY) %>
 </head>
 <body>
@@ -33,10 +31,12 @@
     </nav>
     <%= yield :admin_nav %>
   </header>
+  <%= yield :pre_content %>
   <%= yield %>
+  <%= yield :post_content %>
   <footer>
   	<p>&copy; 2010 <%= link_to "Sam Soffes", root_url, :rel => "home" %>. <a href="http://github.com/samsoffes/samsoff.es" target="_blank" rel="external nofollow">View source on GitHub</a>.</p>
   </footer>
-	<script type="text/javascript" src="http://www.observerapp.com/record.js"></script><script type="text/javascript">Observerapp.record("agtvYnNlcnZlcmFwcHINCxIEU2l0ZRjkyvUBDA");</script>
+  <script type="text/javascript" src="http://www.observerapp.com/record.js"></script><script type="text/javascript">Observerapp.record("agtvYnNlcnZlcmFwcHINCxIEU2l0ZRjkyvUBDA");</script>
 </body>
 </html>

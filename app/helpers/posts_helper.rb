@@ -1,6 +1,6 @@
 module PostsHelper
   def post_tags_html(post)
-    tags = post.tags
+    tags = post.tags.order("name")
     return "" if !tags || tags.length == 0
     
     links = []

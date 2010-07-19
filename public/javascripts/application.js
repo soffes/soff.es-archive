@@ -33,15 +33,15 @@ function hasFlash() {
   return flash;
 }
 
-// Replace video embeds with a message if no flash
-function showNoFlashMessageForVideos() {
+// Replace video embeds with <video> if possible
+function substituteFlashVideos() {
   if (hasFlash()) {
     return;
   }
   
   var disabledMessage = '<p style="text-align:center"><strong>Sorry, but you need Flash to watch this video.</strong></p><p style="text-align:center">I hate that as much as you do.</p>';
   var iPhone = (navigator.userAgent.toLowerCase().indexOf('iphone') != -1);
-  var iPad = (navigator.userAgent.toLowerCase().indexOf('ipad') != -1);
+  var iOS = (iPhone || navigator.userAgent.toLowerCase().indexOf('ipad') != -1 || navigator.userAgent.toLowerCase().indexOf('ipod') != -1);
   
   var videos = document.getElementsByClassName('video');
   for (var i in videos) {
@@ -79,7 +79,7 @@ function showNoFlashMessageForVideos() {
     // All other videos
     else {
       // Leave YouTube videos alone on iOS
-      if ((iPhone || iPad) && video.className.indexOf('youtube') == -1) {
+      if (iOS && video.className.indexOf('youtube') == -1) {
         video.innerHTML = disabledMessage;
       }
     }
@@ -92,4 +92,4 @@ if (top.frames.length != 0) {
 }
 
 // On DOM load, update videos if no flash
-addLoadEvent(showNoFlashMessageForVideos);
+addLoadEvent(substituteFlashVideos);

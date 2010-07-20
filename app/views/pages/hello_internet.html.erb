@@ -1,0 +1,14 @@
+<%- title "Hello Internet" -%>
+
+<%- unless is_iphone? -%>
+<p><%= link_to image_tag("hello-internet.png"), "http://vimeo.com/channels/hellointernet", :style => "border:0", :rel => "external nofollow" %></p>
+<%- end -%>
+
+<%- if @posts && @posts.length > 0 -%>
+<%= render @posts %>
+<div class="pagination">
+    <%= will_paginate @posts %>
+</div>
+<%- else -%>
+<p>Nothing to see here. Move along.</p>
+<%- end -%>

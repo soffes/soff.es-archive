@@ -33,6 +33,35 @@ function hasFlash() {
   return flash;
 }
 
+// http://faq.nucleuscms.org/item/104
+function externalLinks() {
+   if (!document.getElementsByTagName) {
+      return;
+   }
+   var anchors = document.getElementsByTagName('a');
+   for (var i = 0; i < anchors.length; i++) {
+      var anchor = anchors[i];
+      if (anchor.getAttribute('rel')) {
+         var rel = anchor.getAttribute('rel');
+         var external = false;
+         if (rel.indexOf(" ") > 0) {
+            while (rel.indexOf(" ") > 0 && external == false) {
+               if (rel.substr(0, rel.indexOf(' ')) == 'external') {
+                  external = true;
+               }
+               rel = rel.substr(rel.indexOf(' ') + 1, rel.length - rel.indexOf(' ') + 1);
+            }
+         }
+         if (rel == 'external') {
+            external = true;
+         }
+         if (anchor.getAttribute('href') && external == true) {
+            anchor.target = '_blank';
+         }
+      }
+   }
+}
+
 // Replace video embeds with <video> if possible
 function substituteFlashVideos() {
   if (hasFlash()) {
@@ -90,6 +119,9 @@ function substituteFlashVideos() {
 if (top.frames.length != 0) {
   top.location = self.document.location;
 }
+
+// On DOM load, change external links to open in a new window
+addLoadEvent(externalLinks);
 
 // On DOM load, update videos if no flash
 addLoadEvent(substituteFlashVideos);

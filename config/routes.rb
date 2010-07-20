@@ -34,6 +34,7 @@ SamSoffes::Application.routes.draw do |map|
   match "/music" => "pages#music", :as => "music"
   match "/clearance" => "pages#clearance", :as => "clearance"
   match "/talks" => "pages#talks", :as => "talks"
+  match "/orange" => "pages#orange", :as => "orange"
   
   # Admin
   namespace :admin do

@@ -4,14 +4,14 @@ dependencies:
     group: 
     - :default
     version: = 0.10.2
-  rails: 
-    group: 
-    - :default
-    version: = 3.0.0.beta4
   pg: 
     group: 
     - :default
     version: = 0.9.0
+  rails: 
+    group: 
+    - :default
+    version: = 3.0.0.beta4
   memcache-client: 
     group: 
     - :default
@@ -28,6 +28,10 @@ dependencies:
     group: 
     - :default
     version: = 3.0.pre
+  hoptoad_notifier: 
+    group: 
+    - :default
+    version: = 2.3.2
   rdiscount: 
     group: 
     - :default
@@ -87,6 +91,8 @@ specs:
     version: 0.10.2
 - diff-lcs: 
     version: 1.1.2
+- hoptoad_notifier: 
+    version: 2.3.2
 - memcache-client: 
     version: 1.8.5
 - memcached-northscale: 
@@ -117,7 +123,7 @@ specs:
     version: 2.0.0.beta.17
 - will_paginate: 
     version: 3.0.pre
-hash: 4637966d5fbd066d8d5a59497f767a1baede95b1
+hash: bfe74a288caaa07e84861206a4803a0569ea633e
 sources: 
 - Rubygems: 
     uri: http://rubygems.org

@@ -9,6 +9,7 @@ SamSoffes::Application.routes.draw do |map|
   match "/" => "home#index", :as => "root"
       
   # Blog
+  match "/posts.:format" => "posts#index"
   match "/blog" => "posts#index", :as => "blog"
   resources :posts, :only => [:show]
   resources :tags, :only => [:index, :show]

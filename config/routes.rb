@@ -1,3 +1,5 @@
+require "not_preferred_host"
+
 SamSoffes::Application.routes.draw do |map|
   
   # Rewrite no preferred hosts

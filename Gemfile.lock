@@ -36,7 +36,7 @@ GEM
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
-    haml (3.0.13)
+    haml (3.0.15)
     hoptoad_notifier (2.3.2)
       activesupport
     i18n (0.4.1)
@@ -47,7 +47,7 @@ GEM
     memcache-client (1.8.5)
     memcached-northscale (0.19.5.3)
     mime-types (1.16)
-    nokogiri (1.4.2)
+    nokogiri (1.4.3.1)
     pg (0.9.0)
     polyglot (0.3.1)
     rack (1.2.1)
@@ -89,7 +89,7 @@ GEM
       nokogiri (>= 1.2.0)
       rack (>= 1.0)
       rack-test (>= 0.5.3)
-    will_paginate (3.0.pre)
+    will_paginate (3.0.pre2)
 
 PLATFORMS
   ruby
@@ -104,4 +104,4 @@ DEPENDENCIES
   rdiscount (= 1.6.5)
   rspec (= 2.0.0.beta.19)
   rspec-rails (= 2.0.0.beta.19)
-  will_paginate (= 3.0.pre)
+  will_paginate (= 3.0.pre2)

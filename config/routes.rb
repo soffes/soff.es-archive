@@ -34,6 +34,7 @@ SamSoffes::Application.routes.draw do |map|
   match "/tags/hello-internet" => redirect { |params| "/hello-internet" }
   match "/tags/hellointernet" => redirect { |params| "/hello-internet" }
   match "/hellointernet" => redirect { |params| "/hello-internet" }
+  match "/resume" => redirect { |params| "http://assets.samsoff.es/pdf/Sam%20Soffes%20Resume.pdf" }, :as => "resume"
   
   # Awesome source redirects
   match "/source(/:code_path)" => redirect { |params|

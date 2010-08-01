@@ -1,3 +1,3 @@
-<%- content_for :pre_content do -%><section><%- end -%>
-<%- content_for :post_content do -%></section><%- end -%>
+<%- content_for :pre_content, "<section>".html_safe -%>
+<%- content_for :post_content, "</section>".html_safe -%>
 <%= render :file => "layouts/abstract" -%>

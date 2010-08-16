@@ -1,0 +1,125 @@
+// Layout
+html {
+  width: 320px;
+  font-size: 0.9em;
+}
+
+div.wrapper, body > header, body > section, body > footer {
+  width: 280px;
+}
+
+// Tags
+h2 {
+  font-size: 22px;
+}
+
+//pre, code
+//  font-size: 1em
+//  overflow: hidden
+
+// Header
+body > header {
+  margin: 1em auto 2em;
+  
+  h1 {
+    float: none;
+  }
+  
+  nav {
+    float: none;
+    padding-top: 0;
+  }
+}
+
+// Home
+div#home {
+  section, div.sidebar {
+    float: none;
+    width: 280px;
+  }
+  
+  div.sidebar {
+    background: image-url("dash.png") no-repeat bottom center;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+  }
+}
+
+div.albums {
+  text-align: center;
+  > div {
+    width: 280px;
+  }
+  
+  h3 {
+    font-size: 17px; 
+  }
+  
+  ul {
+    margin: 1.5em 0 0 3.25em; 
+  }
+}
+
+// Music and About
+div#music-art, div#about-photo {
+  float: none;
+  margin: 0 auto 2em;
+  width: 280px;
+  
+  a.photo, img {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+div#music-about, div#about-text {
+  float: none;
+}
+
+// Music
+ul.tracks li span {
+  display: none;
+}
+
+// Blog
+section > article {
+  overflow: hidden;
+  
+  img {
+    width: 280px;
+  }
+  
+  object, embed {
+    display: none;
+  }
+  
+  div.video {
+    width: 260px;
+    height: 195px;
+  }
+  
+  div.video.wide.youtube, div.video.wide.vimeo {
+    height: 146px;
+  } 
+}
+
+div.post div.video.wide {
+  height: 134px;
+}
+
+/*div.post div.video embed, div.post div.video object {
+  display: none;
+}*/
+
+div.pagination {
+  line-height: 2em;
+}
+
+div.pagination a, div.pagination span.gap {
+  display: none;
+  margin: 0;
+}
+
+div.pagination a.next_page, div.pagination a.previous_page {
+  display: inline;
+}

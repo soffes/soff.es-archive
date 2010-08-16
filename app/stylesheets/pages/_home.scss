@@ -1,0 +1,103 @@
+div#home {
+  section {
+    float: left;
+    width: 400px;
+    margin: 0 40px 0 0;
+    
+    > article {
+      background: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+  
+  div.sidebar {
+    float: right;
+    width: 200px;
+    
+    ul {
+      padding-left: 1em;
+      margin-bottom: 2em;
+    }
+    
+    ul:last-child {
+      margin-bottom: 0;
+    }
+    
+    li {
+      list-style: disc;
+      color: $link-color;
+    }
+  }
+}
+
+div#home:after {
+  @include clearAfter;
+}
+
+a.more {
+  color: #999999;
+  font-size: 0.9em;
+  margin-left: 0.5em;
+}
+
+a.more:hover {
+  color: #92abc1;
+}
+
+div.albums {
+  background: image-url("albums-teeth.png") repeat-x;
+  width: 100%;
+  height: 192px;
+  margin: 3em 0 2em;
+  
+  > div {
+    width: $width;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+    
+  h3 {
+    color: #c6994d;
+    font-family: $helvetica;
+    font-size: 20px;
+    margin-bottom: 0.5em;
+  }
+  
+  ul {
+    margin: 0.4em 0 2em;
+    
+    li {
+      float: left;
+      margin: 0 10px 10px 0;
+      position: relative;
+      background: image-url("vinyl_insert.gif") no-repeat;
+    }
+    
+    a {
+      border: 0;
+      display: block;
+      float: left;
+      position: relative;
+      left: -2px;
+      overflow: hidden;
+      text-indent: -9009em;
+      z-index: 1;
+      width: 96px;
+      height: 76px;
+      background: image-url("vinyl.png") no-repeat;
+    }
+    
+    img {
+      width: 72px;
+      height: 72px;
+      position: absolute;
+      left: 0;
+      top: 1px;
+    }
+  }
+  
+  ul:after {
+    @include clearAfter;
+  }
+}

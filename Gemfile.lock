@@ -76,6 +76,7 @@ GEM
     thor (0.14.0)
     treetop (1.4.8)
       polyglot (>= 0.3.1)
+    tweet-button (0.1.0)
     tzinfo (0.3.22)
     will_paginate (3.0.pre2)
 
@@ -91,4 +92,5 @@ DEPENDENCIES
   pg (= 0.9.0)
   rails (= 3.0.0.rc)
   rdiscount (= 1.6.5)
+  tweet-button
   will_paginate (= 3.0.pre2)

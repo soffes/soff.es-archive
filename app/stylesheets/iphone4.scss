@@ -31,8 +31,12 @@ section > article, hr, div#home div.sidebar {
   background-size: 89px 6px;
 }
 
-/*div.albums
-  background-image: image_url('albums-teeth@2x.png') {
+div.albums {
+  h3 {
+    margin: 0 auto 0.7em;
+  }
+}
+/*  background-image: image_url('albums-teeth@2x.png') {
     
   ul {
     li {

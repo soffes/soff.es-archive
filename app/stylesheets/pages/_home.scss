@@ -58,10 +58,12 @@ div.albums {
   }
     
   h3 {
-    color: #c6994d;
-    font-family: $helvetica;
-    font-size: 20px;
-    margin-bottom: 0.5em;
+    width: 201px;
+    height: 17px;
+    text-indent: -9009em;
+    background-image: image-url("recent-listening.svg");
+    background-size: 201px 17px;
+    margin-bottom: 0.7em;
   }
   
   ul {

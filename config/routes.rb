@@ -8,7 +8,7 @@ SamSoffes::Application.routes.draw do |map|
   end
   
   # Root
-  root :to => "home#index"
+  root :to => "pages#home"
       
   # Blog
   match "/posts.:format" => "posts#index"

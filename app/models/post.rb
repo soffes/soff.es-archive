@@ -73,6 +73,7 @@ class Post < ActiveRecord::Base
     cloud_item = CloudApp::Item.create :bookmark, {:name => self.title, :redirect_url => redirect_url}
     
     self[:short_url] = cloud_item.to_hash['url']
+    self.save
   end
 
   private

@@ -74,6 +74,7 @@ class Post < ActiveRecord::Base
     
     self[:short_url] = cloud_item.to_hash['url']
     self.save
+    self[:short_url]
   end
 
   private

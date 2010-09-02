@@ -9,6 +9,7 @@ gem "memcache-client", "1.8.5"
 gem "memcached-northscale", "0.19.5.3", :require => "memcached"
 gem "hoptoad_notifier", "2.3.5"
 gem "tweet-button"
+gem "cloudapp_api"
 
 group :development do
   gem "mongrel", "1.2.0.pre2"

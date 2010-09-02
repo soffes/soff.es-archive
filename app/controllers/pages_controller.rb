@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   
   def home
-    @post = Post.published.first
+    @post = Post.published.where(:homepageable => true).first
     @albums = Rails.cache.read("lastfm_weekly_album_chart")
     @albums = @albums[0..1] if @albums && is_iphone?
     render "home", :layout => "abstract"

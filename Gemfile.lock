@@ -31,8 +31,11 @@ GEM
     arel (0.4.0)
       activesupport (>= 3.0.0.beta)
     builder (2.1.2)
+    cloudapp_api (0.0.2)
+      httparty (>= 0.5.2)
     compass (0.10.4)
       haml (>= 3.0.4)
+    crack (0.1.8)
     daemons (1.0.10)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -40,6 +43,8 @@ GEM
     haml (3.0.17)
     hoptoad_notifier (2.3.5)
       activesupport
+    httparty (0.6.1)
+      crack (= 0.1.8)
     i18n (0.4.1)
     mail (2.2.5)
       activesupport (>= 2.3.6)
@@ -84,6 +89,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  cloudapp_api
   compass (= 0.10.4)
   hoptoad_notifier (= 2.3.5)
   memcache-client (= 1.8.5)

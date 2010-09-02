@@ -9,16 +9,28 @@
     <%= f.text_field :permalink %>
   </p>
   <p>
+    <%= f.label :content %><br />
+    <%= f.text_area :content, :style => "width:100%;height:250px" %>
+  </p>
+  <p>
     <%= f.label :tag_names %><br />
     <%= f.text_field :tag_names %>
   </p>
   <p>
-    <%= f.label :content %><br />
-    <%= f.text_area :content %>
+    <%= f.label :tweet_text %> <small>limit 105 characters</small><br />
+    <%= f.text_field :tweet_text %>
+  </p>
+  <p>
+    <%= f.label :short_url %> <small>Leave blank to auto-generate</small><br />
+    <%= f.text_field :short_url %>
   </p>
   <p<%= @post.published? ? " class=\"published\"" : "" %>>
-    <%= f.label :published_at, "Published" %> <%= @post.published_time_in_words %><br />
+    <%= f.label :published_at, "Published" %> <small><%= @post.published_time_in_words %></small><br />
     <%= f.datetime_select :published_at %>
+  </p>
+  <p>
+    <%= f.label :homepageable %><br />
+    <%= f.check_box :homepageable %>
   </p>
   <p><%= f.submit "Submit" %></p>
 <% end %>

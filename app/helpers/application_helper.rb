@@ -2,7 +2,7 @@ module ApplicationHelper
   include TweetButton
   TweetButton.default_tweet_button_options = {
     :count => "horizontal",
-    :text => "This will blow your face off with awesome",
+    :text => Post::DEFAULT_TWEET_TEXT,
     :via => "samsoffes"
   }
   

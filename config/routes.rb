@@ -35,6 +35,7 @@ SamSoffes::Application.routes.draw do |map|
   match "/:hellointernet" => redirect { |params| "/hello-internet" }, :constraints => { :hellointernet => /hello_?internet/ }
   match "/resume(.:format)" => redirect { |params| "http://assets.samsoff.es/pdf/Sam%20Soffes%20Resume.pdf" }, :as => "resume"
   # match "/:opensource" => redirect { |params| "/open-source" }, :constraints => { :opensource => /open[\-_]?source(?:[\-_]?projects)?/ }
+  match "/ping" => redirect { |params| "http://c.itunes.apple.com/WebObjects/MZConnections.woa/wa/viewProfile?userId=93483474" }
   
   # Awesome source redirects
   match "/source(/:code_path)" => redirect { |params|

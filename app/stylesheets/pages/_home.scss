@@ -55,6 +55,7 @@ div.albums {
     width: $width;
     margin: 0 auto;
     padding-top: 40px;
+    position: relative;
   }
     
   h3 {
@@ -63,11 +64,11 @@ div.albums {
     text-indent: -9009em;
     background-image: image-url("recent-listening.svg");
     background-size: 201px 17px;
-    margin-bottom: 0.7em;
+    margin-bottom: 0.8em;
   }
   
   ul {
-    margin: 0.4em 0 2em;
+    margin: 0.4em 0 0;
     
     li {
       float: left;
@@ -101,5 +102,17 @@ div.albums {
   
   ul:after {
     @include clearAfter;
+  }
+  
+  p {
+    position: absolute;
+    top: 40px;
+    right: 39px;
+    font-size: 0.8em;
+    color: #777;
+    text-align: right;
+    width: 200px;
+    height: 17px;
+    line-height: 17px;
   }
 }

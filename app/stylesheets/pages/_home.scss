@@ -54,17 +54,14 @@ div.albums {
   > div {
     width: $width;
     margin: 0 auto;
-    padding-top: 40px;
+    padding-top: 35px;
     position: relative;
   }
     
   h3 {
-    width: 201px;
-    height: 17px;
-    text-indent: -9009em;
-    background-image: image-url("recent-listening.svg");
-    background-size: 201px 17px;
-    margin-bottom: 0.8em;
+    margin: 0 0 1em;
+    font-size: 1.1em;
+    color: #c6994d;
   }
   
   ul {
@@ -106,7 +103,7 @@ div.albums {
   
   p {
     position: absolute;
-    top: 40px;
+    top: 39px;
     right: 39px;
     font-size: 0.8em;
     color: #777;

@@ -65,6 +65,8 @@ class Post < ActiveRecord::Base
     url = self[:short_url]
     return url unless url.blank?
     
+    return nil unless self.permalink
+    
     # No short_url, make one with CloudApp
     redirect_url = "http://samsoff.es/posts/#{self.permalink}" # TODO: Use helper
     return redirect_url if CLOUDAPP_USERNAME.blank? or CLOUDAPP_PASSWORD.blank?

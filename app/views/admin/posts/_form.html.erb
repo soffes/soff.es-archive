@@ -20,10 +20,6 @@
     <%= f.label :tweet_text %> <small>limit 105 characters, defaults to title</small><br />
     <%= f.text_field :tweet_text %>
   </p>
-  <p>
-    <%= f.label :short_url %> <small>Leave blank to auto-generate</small><br />
-    <%= f.text_field :short_url %>
-  </p>
   <p<%= @post.published? ? " class=\"published\"" : "" %>>
     <%= f.label :published_at, "Published" %> <small><%= @post.published_time_in_words %></small><br />
     <%= f.datetime_select :published_at %>

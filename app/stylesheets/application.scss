@@ -275,6 +275,7 @@ section > article {
   background: image-url("dash.png") no-repeat bottom center;
   padding-bottom: 2em;
   margin-bottom: 2em;
+  
   h2 {
     margin-bottom: 0.5em;
   }
@@ -339,6 +340,12 @@ section > article {
     text-align: left;
     text-justify: none;
   }
+}
+
+div.social {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1em;
 }
 
 // Gist

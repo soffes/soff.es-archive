@@ -31,20 +31,16 @@ GEM
     arel (1.0.1)
       activesupport (~> 3.0.0)
     builder (2.1.2)
-    cloudapp_api (0.0.2)
-      httparty (>= 0.5.2)
     compass (0.10.5)
       haml (>= 3.0.4)
-    crack (0.1.8)
     daemons (1.0.10)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     gem_plugin (0.2.3)
+    goalie (0.0.2)
     haml (3.0.18)
     hoptoad_notifier (2.3.6)
       activesupport
-    httparty (0.6.1)
-      crack (= 0.1.8)
     i18n (0.4.1)
     mail (2.2.5)
       activesupport (>= 2.3.6)
@@ -89,8 +85,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  cloudapp_api (= 0.0.2)
   compass (= 0.10.5)
+  goalie (= 0.0.2)
   hoptoad_notifier (= 2.3.6)
   memcache-client (= 1.8.5)
   memcached-northscale (= 0.19.5.3)

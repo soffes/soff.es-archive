@@ -3,7 +3,7 @@
 <%- if @post -%>
 <%= render @post %>
 <div class="social">
-    <%= tweet_button :url => @post.short_url, :text => (@post.tweet_text or @post.title or Post::DEFAULT_TWEET_TEXT) %>
+    <%= tweet_button :url => post_url(@post, :host => 'samsoff.es'), :text => (@post.tweet_text or @post.title) %>
     <%= like_button post_url(@post) %>
 <%- else -%>
 <p>Nothing to see here. Move along.</p>

@@ -2,18 +2,18 @@ class PagesController < ApplicationController
   
   def home
     @post = Post.published.where(:homepageable => true).first
-    @albums = Rails.cache.read("lastfm_weekly_album_chart")
+    @albums = Rails.cache.read('lastfm_weekly_album_chart')
     @albums = @albums[0..1] if @albums && is_iphone?
-    render "home", :layout => "abstract"
+    render 'home', :layout => 'abstract'
   end
   
   def orange
-    render "orange", :layout => nil
+    render 'orange', :layout => nil
   end
   
   def hello_internet
     # Find tag
-    @tag = Tag.where(:name => "hello-internet").includes(:posts).first
+    @tag = Tag.where(:name => 'hello-internet').includes(:posts).first
     redirect_to tags_url and return unless @tag
 
     # Get posts for tag

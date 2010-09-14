@@ -1,13 +1,13 @@
 module ApplicationHelper
   include TweetButton
   TweetButton.default_tweet_button_options = {
-    :count => "horizontal",
-    :text => Post::DEFAULT_TWEET_TEXT,
-    :via => "samsoffes"
+    :count => 'horizontal',
+    :text => 'This will blow your face off with awesome',
+    :via => 'samsoffes'
   }
   
   def podcast_url
-    "http://itunes.apple.com/podcast/the-experiment/id292395055"
+    'http://itunes.apple.com/podcast/the-experiment/id292395055'
   end
   
   def tag_cloud(tags, classes)

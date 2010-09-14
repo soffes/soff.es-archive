@@ -14,7 +14,7 @@ class Admin::TagsController < AdminController
   def create
     @tag = Tag.new(params[:tag])
     if @tag.save
-      flash[:notice] = "Successfully created tag."
+      flash[:notice] = 'Successfully created tag.'
       redirect_to @tag
     else
       render :action => 'new'
@@ -28,7 +28,7 @@ class Admin::TagsController < AdminController
   def update
     @tag = Tag.find(params[:id])
     if @tag.update_attributes(params[:tag])
-      flash[:notice] = "Successfully updated tag."
+      flash[:notice] = 'Successfully updated tag.'
       redirect_to @tag
     else
       render :action => 'edit'
@@ -38,7 +38,7 @@ class Admin::TagsController < AdminController
   def destroy
     @tag = Tag.find(params[:id])
     @tag.destroy
-    flash[:notice] = "Successfully destroyed tag."
+    flash[:notice] = 'Successfully destroyed tag.'
     redirect_to tags_url
   end
 end

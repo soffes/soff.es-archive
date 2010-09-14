@@ -1,7 +1,5 @@
 class Post < ActiveRecord::Base
-
-  DEFAULT_TWEET_TEXT = 'This will blow your face off with awesome'
-
+  
   # This seems dangerous. There has to be a better way.
   include ActionView::Helpers::DateHelper
 
@@ -61,24 +59,6 @@ class Post < ActiveRecord::Base
     end
   end
   
-  def short_url
-    url = self[:short_url]
-    return url unless url.blank?
-    
-    return nil unless self.permalink
-    
-    # No short_url, make one with CloudApp
-    redirect_url = "http://samsoff.es/posts/#{self.permalink}" # TODO: Use helper
-    return redirect_url if CLOUDAPP_USERNAME.blank? or CLOUDAPP_PASSWORD.blank?
-    
-    client = CloudApp::Client.new :username => CLOUDAPP_USERNAME, :password => CLOUDAPP_PASSWORD
-    cloud_item = CloudApp::Item.create :bookmark, {:name => self.title, :redirect_url => redirect_url}
-    
-    self[:short_url] = cloud_item.to_hash['url']
-    self.save
-    self[:short_url]
-  end
-
   private
 
   def assign_tags

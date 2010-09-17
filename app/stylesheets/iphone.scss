@@ -53,10 +53,15 @@ div.albums {
   
   h3 {
     margin: 0 auto 0.7em;
+    font-size: 1.3em;
   }
   
   ul {
     margin: 1.5em 0 0 3.25em; 
+  }
+  
+  p {
+    display: none;
   }
 }
 

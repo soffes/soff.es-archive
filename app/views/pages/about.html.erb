@@ -4,9 +4,9 @@
 	<div id="about-photo">
 	  <%= link_to image_tag("me.png", :alt => "Sam Soffes"), root_url, :class => "photo", :rel => "home" %>
 		<div>
-		  <p>The best way to get in touch with me is email, but here are some alternatives. If you want me to turn your dreams into software, <a href="&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#115;&#97;m&#x40;s&#97;&#x6d;&#x73;&#x6f;f&#x66;&#x2e;&#101;s">email me</a> and we'll figure something out.</p>
+		  <p>The best way to get in touch with me is email, but here are some alternatives. If you want me to turn your dreams into software, <%= mail_to 'sam@samsoff.es', 'email me', :encode => :hex %>  and we'll figure something out.</p>
 		  <ul class="contact">
-        <li><span>Email:</span> <a href="&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#115;&#97;m&#x40;s&#97;&#x6d;&#x73;&#x6f;f&#x66;&#x2e;&#101;s">&#115;&#97;m&#x40;s&#97;&#x6d;&#x73;&#x6f;f&#x66;&#x2e;&#101;s</a></li>
+        <li><span>Email:</span> <%= mail_to 'sam@samsoff.es', 'sam@samsoff.es', :encode => :hex %></li>
         <li><span>Call:</span> <a href="tel:+1-415-935-3653">(415) 935-3653</a></li>
         <li><span>Tweet:</span> <a href="http://twitter.com/samsoffes" rel="external nofollow" class="twitter-username">samsoffes</a></li>
       </ul>

@@ -25,4 +25,8 @@ class PagesController < ApplicationController
       format.json { render :json => @posts }
     end
   end
+  
+  def work
+    redirect_to "http://github.com/samsoffes" and return
+  end
 end

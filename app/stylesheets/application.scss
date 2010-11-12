@@ -30,18 +30,15 @@ html[xmlns] .clearfix {
 }
 
 // Tags
-body {
-  background: $background-color;
-  margin: 0 auto 30px;
-  line-height: 1.4em;
-  text-shadow:rgba(0, 0, 0, 0.01) 0 0 0;
+html {
+  -webkit-font-smoothing: antialiased;
+  background-color: $background-color;
 }
 
-html, input, textarea {
-  font-family: $helvetica-neue-light;
-  font-size: 18px;
-  font-weight: 300;
+body {
   color: $text-color;
+  font: normal normal normal 15px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.5em;
 }
 
 a {
@@ -61,7 +58,7 @@ strong {
 
 em {
   background-color: $highligh-color;
-  padding: 0 0.2em;
+  padding: 0 0.1em;
 }
 
 abbr {
@@ -108,7 +105,6 @@ pre {
   color: #444;
   font-family: $monaco;
   font-size: 0.8em;
-  line-height: 1.5em;
   margin: 0 0 2em;
   overflow: auto;
   padding: 0.5em;
@@ -132,12 +128,9 @@ code {
 
 h2 {
   color: #000;
-  font-family: $helvetica-neue;
-  font-size: 28px;
+  font-size: 1.6em;
   font-weight: bold;
-  margin-bottom: 4px;
-  line-height: 1.1em;
-  
+    
   a {
     color: #000;
     border: 0;
@@ -145,15 +138,14 @@ h2 {
 }
 
 h3 {
-  font-family: $helvetica-neue;
-  font-size: 20px;
+  font-size: 1.2em;
+  color: #555;
   font-weight: bold;
   margin-bottom: 0.2em;
 }
 
 h4 {
-  color: #555;
-  font-family: $helvetica-neue;
+  color: #999;
   font-weight: bold;
   margin-bottom: 0.2em;
 }
@@ -169,9 +161,7 @@ body > header {
   margin-bottom: 4em;
   
   h1 {
-    color: $orange-color;
-    font-size: 2em;
-    margin: 1em 0;
+    margin: 2em 0;
     
     a {
       border: 0;
@@ -183,7 +173,6 @@ body > header {
     }
     
     a:hover {
-      color: $orange-color;
       border: 0;
     }
   }
@@ -195,7 +184,7 @@ body > header {
   li {
     float: left;
     list-style: none;
-    margin: 0 0 0 1.7em;
+    margin: 0 0 0 30px;
     padding: 0;
     
     a {
@@ -239,31 +228,35 @@ body > header {
 // Footer
 body > footer {
   color: #aaaaaa;
-  margin-bottom: 2em;
+  margin: 2em auto;
   padding: 0;
   font-size: 0.85em;
   text-align: center;
+  
   a {
-    color: #aaaaaa;
-}
+    color: #aaa;
+  }
+  
   a:hover {
-    color: #92abc1; } }
+    color: $link-color;
+  } 
+}
 
 // Post
 section > article {
   background: image-url("dash.png") no-repeat bottom center;
   padding-bottom: 2em;
   margin-bottom: 2em;
-  
+    
   h2 {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.2em;
   }
   
   header {
     p {
       color: #949494;
-      font-size: 18px;
-      margin-bottom: 10px;
+      font-size: 0.9em;
+      margin-bottom: 0.5em;
       
       a {
         color: #949494;
@@ -327,7 +320,6 @@ div.social {
 div.gist div.gist-file div.gist-meta {
   padding: 0.5em;
   font-size: 0.6em;
-  line-height: 1em;
 }
 
 // Tags
@@ -408,8 +400,9 @@ a.twitter-username:before {
 }
 
 div.photo-text {
-  font-size: 0.9em;
+  font-size: 0.95em;
   color: #555;
+  margin-bottom: 1em;
   
   a.photo {
     float: left;
@@ -428,8 +421,8 @@ div.photo-text {
     }
   }
 
-  a.photo-text:hover {
-    border-color: #f7f7f7;
+  a.photo:hover {
+    border-color: #fafafa;
     -moz-box-shadow: 0 0 2px #333;
     -webkit-box-shadow: 0 0 2px #333;
   }

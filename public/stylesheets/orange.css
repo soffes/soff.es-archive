@@ -1,1 +1,106 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline}body{line-height:1;color:black;background:white}ol,ul{list-style:none}table{border-collapse:separate;border-spacing:0;vertical-align:middle}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:"" ""}q:before,q:after,blockquote:before,blockquote:after{content:""}a img{border:none}body,html{background-color:#f05b35}h1{color:white;font-family:HelveticaNeue, "Helvetica Neue", "Helvetica Neue", Helvetica, Arial, sans-serif;font-size:60px;font-weight:bold;text-align:center;width:400px;height:1em;position:absolute;top:50%;left:50%;margin:-1em 0 0 -200px}h1:before{content:"#"}
+/*
+Syntax error: Undefined variable: "$helvetica-neue".
+        on line 10 of /Users/samsoffes/code/samsoffes/samsoff.es/app/stylesheets/orange.scss
+
+5:   background-color: $orange-color;
+6: }
+7: 
+8: h1 {
+9:   color: white;
+10:   font-family: $helvetica-neue;
+11:   font-size: 60px;
+12:   font-weight: bold;
+13:   text-align: center;
+14:   width: 400px;
+15:   height: 1em;
+
+Backtrace:
+/Users/samsoffes/code/samsoffes/samsoff.es/app/stylesheets/orange.scss:10
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/script/variable.rb:39:in `_perform'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/script/node.rb:61:in `perform'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/tree/prop_node.rb:132:in `perform!'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/tree/node.rb:305:in `_perform'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/tree/node.rb:213:in `perform'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/tree/node.rb:326:in `perform_children'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/tree/node.rb:326:in `map'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/tree/node.rb:326:in `perform_children'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/tree/node.rb:317:in `perform!'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/tree/rule_node.rb:191:in `perform!'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/tree/node.rb:305:in `_perform'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/tree/node.rb:213:in `perform'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/tree/node.rb:326:in `perform_children'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/tree/node.rb:326:in `map'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/tree/node.rb:326:in `perform_children'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/tree/node.rb:317:in `perform!'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/tree/root_node.rb:59:in `perform!'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/tree/node.rb:305:in `_perform'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/tree/node.rb:213:in `perform'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/tree/root_node.rb:37:in `perform'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/tree/root_node.rb:29:in `render'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/plugin.rb:220:in `update_stylesheet'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/plugin.rb:85:in `update_stylesheets'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/plugin.rb:78:in `each'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/plugin.rb:78:in `update_stylesheets'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/plugin.rb:76:in `each'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/plugin.rb:76:in `update_stylesheets'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/plugin.rb:50:in `check_for_updates'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.18/lib/sass/plugin/rack.rb:40:in `call'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/hoptoad_notifier-2.3.6/lib/hoptoad_notifier/rack.rb:27:in `call'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/cookies.rb:287:in `call'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:32:in `call'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:12:in `cache'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/query_cache.rb:31:in `call'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/activerecord-3.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/rack/logger.rb:13:in `call'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/actionpack-3.0.0/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/application.rb:168:in `call'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/application.rb:77:in `send'
+/Users/samsoffes/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.0/lib/rails/application.rb:77:in `method_missing'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/lib/phusion_passenger/rack/request_handler.rb:96:in `process_request'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/lib/phusion_passenger/abstract_request_handler.rb:513:in `accept_and_process_next_request'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/lib/phusion_passenger/abstract_request_handler.rb:274:in `main_loop'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/lib/phusion_passenger/rack/application_spawner.rb:205:in `start_request_handler'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/lib/phusion_passenger/rack/application_spawner.rb:170:in `send'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/lib/phusion_passenger/rack/application_spawner.rb:170:in `handle_spawn_application'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/lib/phusion_passenger/utils.rb:479:in `safe_fork'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/lib/phusion_passenger/rack/application_spawner.rb:165:in `handle_spawn_application'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/lib/phusion_passenger/abstract_server.rb:357:in `__send__'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/lib/phusion_passenger/abstract_server.rb:357:in `server_main_loop'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/lib/phusion_passenger/abstract_server.rb:206:in `start_synchronously'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/lib/phusion_passenger/abstract_server.rb:180:in `start'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/lib/phusion_passenger/rack/application_spawner.rb:128:in `start'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/lib/phusion_passenger/spawn_manager.rb:253:in `spawn_rack_application'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/lib/phusion_passenger/abstract_server_collection.rb:132:in `lookup_or_add'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/lib/phusion_passenger/spawn_manager.rb:246:in `spawn_rack_application'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/lib/phusion_passenger/abstract_server_collection.rb:82:in `synchronize'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/lib/phusion_passenger/spawn_manager.rb:244:in `spawn_rack_application'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/lib/phusion_passenger/spawn_manager.rb:137:in `spawn_application'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/lib/phusion_passenger/spawn_manager.rb:275:in `handle_spawn_application'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/lib/phusion_passenger/abstract_server.rb:357:in `__send__'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/lib/phusion_passenger/abstract_server.rb:357:in `server_main_loop'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/lib/phusion_passenger/abstract_server.rb:206:in `start_synchronously'
+/Users/samsoffes/.passenger/standalone/3.0.0.pre4-x86_64-ruby1.8.7-macosx-10.6/support/helper-scripts/passenger-spawn-server:99
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined variable: \"$helvetica-neue\".\A         on line 10 of /Users/samsoffes/code/samsoffes/samsoff.es/app/stylesheets/orange.scss\A \A 5:   background-color: $orange-color;\A 6: }\A 7: \A 8: h1 {\A 9:   color: white;\A 10:   font-family: $helvetica-neue;\A 11:   font-size: 60px;\A 12:   font-weight: bold;\A 13:   text-align: center;\A 14:   width: 400px;\A 15:   height: 1em;"; }

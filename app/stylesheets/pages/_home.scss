@@ -16,7 +16,7 @@ div#home {
     width: 200px;
     
     ul {
-      padding-left: 1em;
+      padding-left: 1.25em;
       margin-bottom: 2em;
     }
     
@@ -36,17 +36,17 @@ div#home:after {
 }
 
 a.more {
-  color: #999999;
+  color: #999;
   font-size: 0.9em;
   margin-left: 0.5em;
 }
 
 a.more:hover {
-  color: #92abc1;
+  color: $link-color;
 }
 
 div.albums {
-  background: image-url("albums-teeth.png") repeat-x;
+  background: image-url("albums-teeth.gif") repeat-x;
   width: 100%;
   height: 192px;
   margin: 3em 0 2em;
@@ -61,7 +61,6 @@ div.albums {
   h3 {
     margin: 0 0 1em;
     font-size: 1.1em;
-    color: #c6994d;
   }
   
   ul {
@@ -111,5 +110,9 @@ div.albums {
     width: 200px;
     height: 17px;
     line-height: 17px;
+    
+    a {
+      color: #777;
+    }
   }
 }

@@ -64,37 +64,66 @@ function externalLinks() {
 
 // Replace video embeds with <video> if possible
 function substituteFlashVideos() {
-  if (hasFlash()) {
+  var userAgent = navigator.userAgent.toLowerCase();
+  
+  // If they have flash or have Firefox, stop since Flash does a better job playing
+  // the video and Firefox doesn't support Vimeo's <video>
+  if (hasFlash() || (userAgent.indexOf('firefox') != -1)) {
     return;
   }
   
-  var disabledMessage = '<p style="text-align:center"><strong>Sorry, but you need Flash to watch this video.</strong></p><p style="text-align:center">I hate that as much as you do.</p>';
-  var iPhone = (navigator.userAgent.toLowerCase().indexOf('iphone') != -1);
-  var iOS = (iPhone || navigator.userAgent.toLowerCase().indexOf('ipad') != -1 || navigator.userAgent.toLowerCase().indexOf('ipod') != -1);
+  var videos = document.getElementsByClassName('video'),
+    l = videos.length;
   
-  var videos = document.getElementsByClassName('video');
-  for (var i in videos) {
-    var video = videos.item(i);
+  // Stop if there are no videos
+  if (l == 0) {
+    return;
+  }
+  
+  var disabledMessage = '<p style="text-align:center"><strong>Sorry, but you need Flash to watch this video.</strong></p><p style="text-align:center">I hate that as much as you do.</p>',
+    iPhone = (userAgent.indexOf('iphone') != -1 || userAgent.indexOf('ipod') != -1),
+    iOS = (iPhone || userAgent.indexOf('ipad') != -1),
+    vimeoObjectRegex = new RegExp('[?&]clip_id(?:=([^&]*))?', 'i'),
+    vimeoIframeRegex = new RegExp('http://player.vimeo.com/video/([^&?]*)\?', 'i'),
+    i = 0,
+    video, width, height, match;
+  
+  // Loop through videos
+  for (; i < l; i++) {
+    video = videos[i];
     
     // Vimeo video
     if (video.className.indexOf('vimeo') != -1) {
-      var object = video.getElementsByTagName('object').item(0);
-      var embed = object.getElementsByTagName('embed').item(0);
-      var regex = new RegExp('[?&]clip_id(?:=([^&]*))?', 'i');
-      var match = regex.exec(embed.getAttribute('src'));
+      
+      var objects = video.getElementsByTagName('object'),
+        iframes = video.getElementsByTagName('iframe'),
+        clipId;
+      
+      // Old <object> embed style
+      if (objects.length == 1) {
+        var object = objects.item(0),
+          embed = object.getElementsByTagName('embed').item(0),
+          match = vimeoObjectRegex.exec(embed.getAttribute('src'));
+          width = object.getAttribute('width');
+          height = object.getAttribute('height');
+      }
+      
+      // New <iframe> embed style
+      else if (iframes.length == 1) {
+        var iframe = iframes.item(0);
+        match = vimeoIframeRegex.exec(iframe.getAttribute('src'));
+        width = iframe.getAttribute('width');
+        height = iframe.getAttribute('height');
+      }
       
       if (match != null) {
-        var clipId = match[1];
-        
-        var width, height;
+        clipId = match[1];
+      
         if (iPhone) {
           width = 260;
           height = (video.className.indexOf('wide') != -1) ? 146 : 195;
-        } else {
-          width = object.getAttribute('width');
-          height = object.getAttribute('height');
         }
-        
+      
         video.innerHTML = '<video src="http://www.vimeo.com/play_redirect?clip_id=' + clipId + '" controls="controls" width="' + width + '" height="' + height + '"></video>';
 
         var js = document.createElement('script');

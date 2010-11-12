@@ -11,8 +11,14 @@ class TagsController < ApplicationController
   end
 
   def show
+    id = params[:id].downcase
+    
+    if id == 'hello-internet'
+      redirect_to hello_internet_url and return
+    end
+    
     # Find tag
-    @tag = Tag.where(:name => params[:id].downcase).includes(:posts).first
+    @tag = Tag.where(:name => id).includes(:posts).first
     redirect_to tags_url and return unless @tag
 
     # Redirect to tag if case doesn't match

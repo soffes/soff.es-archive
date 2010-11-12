@@ -244,9 +244,7 @@ body > footer {
 
 // Post
 section > article {
-  background: image-url("dash.png") no-repeat bottom center;
-  padding-bottom: 2em;
-  margin-bottom: 2em;
+  margin-bottom: 6em;
     
   h2 {
     margin-bottom: 0.2em;
@@ -294,6 +292,7 @@ section > article {
     height: 465px;
     -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.13);
     -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.13);
+    overflow: hidden;
   }
   
   div.video.wide.youtube {

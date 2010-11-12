@@ -32,7 +32,7 @@ div#home {
 }
 
 div#home:after {
-  @include clearAfter;
+  @include clearfix;
 }
 
 a.more {
@@ -98,7 +98,7 @@ div.albums {
   }
   
   ul:after {
-    @include clearAfter;
+    @include clearfix;
   }
   
   p {

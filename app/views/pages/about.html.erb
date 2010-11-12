@@ -1,27 +1,25 @@
 <%- title "About" -%>
 
-<div id="about" class="clearfix">
-	<div id="about-photo">
-	  <%= link_to image_tag("me.png", :alt => "Sam Soffes"), root_url, :class => "photo", :rel => "home" %>
-		<div>
-		  <p>The best way to get in touch with me is email, but here are some alternatives. If you want me to turn your dreams into software, <%= mail_to 'sam@samsoff.es', 'email me', :encode => :hex %>  and we'll figure something out.</p>
-		  <ul class="contact">
-        <li><span>Email:</span> <%= mail_to 'sam@samsoff.es', 'sam@samsoff.es', :encode => :hex %></li>
-        <li><span>FaceTime:</span> <a href="facetime://sam@samsoff.es" rel="external nofollow">sam@samsoff.es</a></li>
-        <li><span>Call:</span> <a href="tel:+1-415-935-3653">(415) 935-3653</a></li>
-        <li><span>Tweet:</span> <a href="http://twitter.com/samsoffes" rel="external nofollow" class="twitter-username">samsoffes</a></li>
-        <li><span>Resume:</span> <a href="http://samsoff.es/resume" rel="external nofollow">Download PDF</a></li>
-      </ul>
-    </div>
-	</div>
-	<div id="about-text">
-    <h3>What I Do</h3>
-    <p>My name is Sam Soffes. I currently live in lovely Dallas, TX. I create iPhone, iPad, Mac, and Rails apps as a freelancer. I also <%= link_to "create music", music_url %> and am in constant pursuit of tasting the best burger (ketchup only with pepperjack of course).</p>
-    <p>You can find some of <a href="http://github.com/samsoffes" rel="external nofollow">my various open source projects on GitHub</a>.</p>
+<div class="photo-text">
+  <%= link_to image_tag("me.png", :alt => "Sam Soffes"), root_url, :class => "photo", :rel => "home" %>
 
-    <h3>What I've Done</h3>
-    <p>I founded <a href="http://tastefulworks.com/trimonix" rel="external nofollow">Trimonix</a> a few years ago and released a <a href="http://tastefulworks.com/countdown-maker" rel="external nofollow">Mac app</a>. I used to work on an iPhone app called <a href="http://youversion.com/iphone" rel="external nofollow">Bible</a> (until version 1.8) that has about 3 million people using it world wide and the web app that powered it, <a href="http://youversion.com" rel="external nofollow">YouVersion.com</a>, at <a href="http://lifechurch.tv" rel="external nofollow">LifeChurch.tv</a>.</p>
-
-    <p>Trimonix is now <a href="http://blog.tastefulworks.com/post/242777197/sam-soffes-and-the-merger-of-trimonix" rel="external nofollow">part of Tasteful Works</a>. Since the merger, we've released a new Mac app called <a href="http://tastefulworks.com/stage-time" rel="external nofollow">Stage Time</a> over at <a href="http://tastefulworks.com" rel="external nofollow">Tasteful Works</a>.</p>
-  </div>
+  <p>The best way to get in touch with me is email, but here are some alternatives. If you want me to turn your dreams into software, <%= mail_to 'sam@samsoff.es', 'email me', :encode => :hex %>  and we'll figure something out.</p>
+  <ul class="contact">
+    <li><span>Email:</span> <%= mail_to 'sam@samsoff.es', 'sam@samsoff.es', :encode => :hex %></li>
+    <li><span>FaceTime:</span> <a href="facetime://sam@samsoff.es" rel="external nofollow">sam@samsoff.es</a></li>
+    <li><span>Call:</span> <a href="tel:+1-415-935-3653">(415) 935-3653</a></li>
+    <li><span>Tweet:</span> <a href="http://twitter.com/samsoffes" rel="external nofollow" class="twitter-username">samsoffes</a></li>
+    <li><span>Resume:</span> <a href="http://samsoff.es/resume" rel="external nofollow">Download PDF</a></li>
+  </ul>
 </div>
+
+<h3>What I Do</h3>
+<p>My name is Sam Soffes. I currently live in lovely Dallas, TX. I create iPhone, iPad, Mac, and Rails apps as a freelancer. I also <%= link_to "create music", music_url %> and am in constant pursuit of tasting the best burger (ketchup only with pepperjack of course).</p>
+<p>You can find some of <a href="http://github.com/samsoffes" rel="external nofollow">my various open source projects on GitHub</a>.</p>
+
+<h3>What I've Done</h3>
+<p>I founded <a href="http://tastefulworks.com/trimonix" rel="external nofollow">Trimonix</a> a few years ago and released a <a href="http://tastefulworks.com/countdown-maker" rel="external nofollow">Mac app</a>. I used to work on an iPhone app called <a href="http://youversion.com/iphone" rel="external nofollow">Bible</a> (until version 1.8) that has about 3 million people using it world wide and the web app that powered it, <a href="http://youversion.com" rel="external nofollow">YouVersion.com</a>, at <a href="http://lifechurch.tv" rel="external nofollow">LifeChurch.tv</a>.</p>
+
+<p>Trimonix is now <a href="http://blog.tastefulworks.com/post/242777197/sam-soffes-and-the-merger-of-trimonix" rel="external nofollow">part of Tasteful Works</a>. Since the merger, we've released a new Mac app called <a href="http://tastefulworks.com/stage-time" rel="external nofollow">Stage Time</a> over at <a href="http://tastefulworks.com" rel="external nofollow">Tasteful Works</a>.</p>
+
+

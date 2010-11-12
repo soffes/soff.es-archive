@@ -11,22 +11,10 @@ mark, time, meter, progress {
   display: inline;
 }
 
-// Fonts
-@font-face {
-  font-family: "NillandRegular";
-  src: url("http://assets.samsoff.es/fonts/Nilland.eot");
-  src: local("Nilland Regular"), local("Nilland"), url("http://assets.samsoff.es/fonts/Nilland.woff") format("woff"), url("http://assets.samsoff.es/fonts/Nilland.ttf") format("truetype"), url("http://assets.samsoff.es/fonts/Nilland.svg#Nilland") format("svg");
-}
-
 
 // Clear-fix
 .clearfix:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
+  @include clearfix;
 }
 
 .clearfix {
@@ -42,35 +30,29 @@ html[xmlns] .clearfix {
 }
 
 // Tags
-html {
-  background: #f4f4f3;
-  font-size: 17px;
-  font-weight: 300;
-  text-shadow: rgba(0, 0, 0, 0.01) 0 0 0;
-}
-
 body {
-  background: #f4f4f3;
-  text-shadow: white 0 1px 0;
+  background: $background-color;
   margin: 0 auto 30px;
   line-height: 1.4em;
+  text-shadow:rgba(0, 0, 0, 0.01) 0 0 0;
 }
 
 html, input, textarea {
   font-family: $helvetica-neue-light;
-  color: #333333;
+  font-size: 18px;
+  font-weight: 300;
+  color: $text-color;
 }
 
 a {
-  border-bottom: 1px dotted $link-border-color;
   color: $link-color;
   text-decoration: none;
   -webkit-transition: all 0.1s linear;
+  border-bottom: 1px solid transparent;
 }
 
 a:hover {
   border-bottom: 1px solid;
-  color: $link-hover-color;
 }
 
 strong {
@@ -92,29 +74,27 @@ p {
 }
 
 hr {
-  background: image-url("dash.png") no-repeat bottom center;
-  padding-bottom: 2em;
   margin-bottom: 2em;
   border: 0;
 }
 
 blockquote {
-  border-left: 5px solid #dddddd;
-  color: #888888;
+  border-left: 5px solid #ddd;
+  color: #888;
   margin: 0 0 1em;
   padding-left: 1em;
   a {
-    color: #888888;
+    color: #888;
   }
 }
 
 small {
   font-size: 0.8em;
-  color: #999999;
+  color: #999;
   margin-left: 0.2em;
   
   a {
-    color: #444444;
+    color: #444;
   }
   
   a:hover {
@@ -125,8 +105,8 @@ small {
 pre {
   background-color: $code-background-color;
   border: 1px solid $code-border-color;
-  color: #444444;
-  font-family: "Bitstream Vera Sans Mono", Courier, monospace;
+  color: #444;
+  font-family: $monaco;
   font-size: 0.8em;
   line-height: 1.5em;
   margin: 0 0 2em;
@@ -144,34 +124,37 @@ pre {
 code {
   background-color: $code-background-color;
   border: 1px solid $code-border-color;
-  color: #444444;
+  color: #444;
   padding: 0 0.2em;
-  font-family: "Bitstream Vera Sans Mono", Courier, monospace;
+  font-family: $monaco;
   font-size: 0.8em;
 }
 
 h2 {
-  background: image-url("lightning.png") no-repeat left center;
-  color: $link-color;
-  font-family: $nilland;
-  font-size: 26px;
-  font-weight: 300;
-  padding-left: 40px;
-  text-transform: lowercase;
+  color: #000;
+  font-family: $helvetica-neue;
+  font-size: 28px;
+  font-weight: bold;
   margin-bottom: 4px;
   line-height: 1.1em;
+  
+  a {
+    color: #000;
+    border: 0;
+  }
 }
 
 h3 {
-  font-size: 1.3em;
-  font-weight: 300;
-  margin-bottom: 0.4em;
-  color: $pink-color;
+  font-family: $helvetica-neue;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0.2em;
 }
 
 h4 {
+  color: #555;
+  font-family: $helvetica-neue;
   font-weight: bold;
-  color: #555555;
   margin-bottom: 0.2em;
 }
 
@@ -183,21 +166,18 @@ div.wrapper, body > header, body > section, body > footer {
 
 // Header
 body > header {
-  margin-top: 10px;
-  margin-bottom: 2em;
-  line-height: 1em;
+  margin-bottom: 4em;
   
   h1 {
     color: $orange-color;
     font-size: 2em;
-    margin: 1em 0 0.5em;
-    float: left;
+    margin: 1em 0;
     
     a {
       border: 0;
       display: block;
-      width: 237px;
-      height: 90px;
+      width: 439px;
+      height: 67px;
       text-indent: -9009em;
       background: image-url("logo.png") no-repeat;
     }
@@ -208,53 +188,52 @@ body > header {
     }
   }
   
-  nav {
-    float: right;
-    width: 280px;
-    padding-top: 80px;
-  }
-  
-  ul {
-    font-size: 19px;
-    text-transform: lowercase;
+  ul:after {
+    @include clearfix;
   }
   
   li {
-    display: inline;
+    float: left;
     list-style: none;
     margin: 0 0 0 1.7em;
     padding: 0;
     
     a {
-      font-family: $nilland;
-      background: transparent no-repeat 0 center;
-      padding-left: 22px;
+      background: image-url("nav-text.png") no-repeat;
+      border: 0;
+      height: 20px;
+      display: block;
+      text-indent: -9009em;
+    }
+    
+    a:hover {
       border: 0;
     }
   }
   
   li.blog a {
-    background-image: image-url("blog.png");
-    color: $blog-color;
+    background-position: 0 0;
+    width: 75px;
   }
   
   li.music a {
-    background-image: image-url("music.png");
-    color: $music-color;
+    background-position: -128px 0;
+    width: 85px;
+  }
+  
+  li.work a {
+    background-position: -264px 0;
+    width: 89px;
   }
   
   li.about a {
-    background-image: image-url("about.png");
-    color: $about-color;
+    background-position: -404px 0;
+    width: 98px;
   }
   
   li:first-child {
     margin-left: 0;
   }
-}
-
-body > header:after {
-  @include clearAfter;
 }
 
 // Footer
@@ -282,14 +261,15 @@ section > article {
   
   header {
     p {
-      color: #bbbbbb;
-      font-size: 0.9em;
+      color: #949494;
+      font-size: 18px;
       margin-bottom: 10px;
+      
+      a {
+        color: #949494;
+        border: 0;
+      }
     }
-    
-    time {
-      color: #01b0f0;
-    } 
   }
   
   ul, ol {
@@ -331,11 +311,6 @@ section > article {
     height: 349px;
   }
   
-  p {
-    text-align: justify;
-    text-justify: newspaper;
-  }
-  
   header p {
     text-align: left;
     text-justify: none;
@@ -357,7 +332,6 @@ div.gist div.gist-file div.gist-meta {
 
 // Tags
 a.tag {
-  color: $light-blue-color;
   word-wrap: nowrap;
 }
 
@@ -372,32 +346,37 @@ div.tags {
     margin: 5px;
     word-wrap: nowrap;
     line-height: 2em;
-}
-  a:hover {
-    color: $pink-color;
-}
+  }
+  
   .nube1 {
     font-size: 1em;
-}
+  }
+  
   .nube2 {
     font-size: 1.2em;
-}
+  }
+  
   .nube3 {
     font-size: 1.4em;
-}
+  }
+  
   .nube4 {
     font-size: 1.6em;
-}
+  }
+  
   .nube5 {
     font-size: 1.8em;
-}
+  }
+  
   .nube6 {
-    font-size: 2em; } }
+    font-size: 2em;
+  }
+}
 
 // Alert
 div.alert {
   background: white;
-  padding: 20px;
+  padding: 1em;
   box-shadow: 1px 1px 1px #dddddd;
   -moz-box-shadow: 1px 1px 1px #dddddd;
   -webkit-box-shadow: 1px 1px 1px #dddddd;
@@ -407,6 +386,7 @@ div.alert {
   border: 1px solid white;
   background: #ffffe6;
   border-color: #ffff99;
+  font-size: 0.9em;
 }
 
 div.alert p:last-child {
@@ -425,4 +405,36 @@ div.alert p:last-child {
 // Misc
 a.twitter-username:before {
   content: "@";
+}
+
+div.photo-text {
+  font-size: 0.9em;
+  color: #555;
+  
+  a.photo {
+    float: left;
+    border: 10px solid white;
+    display: block;
+    width: 300px;
+    height: 300px;
+    margin: 0 20px 20px 0;
+    -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 0.2s ease-in-out;
+  
+    img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  a.photo-text:hover {
+    border-color: #f7f7f7;
+    -moz-box-shadow: 0 0 2px #333;
+    -webkit-box-shadow: 0 0 2px #333;
+  }
+}
+
+div.photo-text:after {
+  @include clearfix;
 }

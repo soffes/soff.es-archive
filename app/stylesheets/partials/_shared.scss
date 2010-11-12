@@ -2,26 +2,22 @@
 $helvetica: Helvetica, Arial, sans-serif;
 $helvetica-neue: HelveticaNeue, "Helvetica Neue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $helvetica-neue-light: HelveticaNeue-Light, HelveticaNeue, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$nilland: NillandRegular, HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
-$link-border-color: #cfdae5;
-$link-color: #455b75;
-$link-hover-color: #92abc1;
+$monaco: Monaco, Courier, monospace;
+$link-color: #0881b3;
 $highligh-color: #fffeca;
 $code-background-color: #f8f8ff;
 $code-border-color: #dedede;
 $orange-color: #f05b35;
-$blog-color: #e16f09;
-$music-color: #121212;
-$about-color: #276abd;
-$light-blue-color: #01b0f0;
-$pink-color: #ff358b;
 $width: 640px;
+$background-color: #fbffff;
+$text-color: #333;
 
 // Mix-ins
-@mixin clearAfter {
-  clear: both;
-  content: " ";
+@mixin clearfix {
+  content: ".";
   display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
   height: 0;
-  zoom: 1;
 }

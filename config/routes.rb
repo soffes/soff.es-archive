@@ -17,9 +17,9 @@ SamSoffes::Application.routes.draw do |map|
   resources :tags, :only => [:index, :show]
   
   # Static pages
-  match '/about' => 'pages#about', :as => 'about'
   match '/music' => 'pages#music', :as => 'music'
-  match '/clearance' => 'pages#clearance', :as => 'clearance'
+  match '/work' => 'pages#work', :as => 'work'
+  match '/about' => 'pages#about', :as => 'about'
   match '/talks' => 'pages#talks', :as => 'talks'
   match '/orange' => 'pages#orange', :as => 'orange'
   match '/hello-internet' => 'pages#hello_internet', :as => 'hello_internet'

@@ -35,7 +35,8 @@ $(function() {
           var audioUrl = track.download_url+"?consumer_key="+apiKey;
           div.html("\
           <div class=\"waveform\">\
-            <div class=\"loading\"><div class=\"position\"></div></div>\
+            <div class=\"loading\"></div>\
+            <div class=\"position\"></div>\
             <img src=\""+track.waveform_url+"\" alt=\"\" />\
           </div>\
           <audio id=\""+audioId+"\" src=\""+audioUrl+"\" autoplay=\"autoplay\"></audio>");

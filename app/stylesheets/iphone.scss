@@ -1,11 +1,14 @@
+$iphone-width: 320px;
+$iphone-content-width: 300px;
+$iphone-media-width: 300px;
+
 // Layout
-html {
-  width: 320px;
-  font-size: 0.9em;
+html, body {
+  width: $iphone-width;
 }
 
 div.wrapper, body > header, body > section, body > footer {
-  width: 280px;
+  width: $iphone-content-width;
 }
 
 // Tags
@@ -13,21 +16,17 @@ h2 {
   font-size: 22px;
 }
 
-//pre, code
-//  font-size: 1em
-//  overflow: hidden
+/*pre, code {
+ font-size: 1em;
+ overflow: hidden;
+}*/
 
 // Header
 body > header {
   margin: 1em auto 2em;
   
-  h1 {
-    float: none;
-  }
-  
-  nav {
-    float: none;
-    padding-top: 0;
+  h1 a {
+    width: $iphone-content-width;
   }
 }
 
@@ -35,7 +34,7 @@ body > header {
 div#home {
   section, div.sidebar {
     float: none;
-    width: 280px;
+    width: $iphone-content-width;
   }
   
   div.sidebar {
@@ -45,8 +44,9 @@ div#home {
 
 div.albums {
   text-align: center;
+  
   > div {
-    width: 280px;
+    width: $iphone-content-width;
   }
   
   h3 {
@@ -64,14 +64,20 @@ div.albums {
 }
 
 // Music and About
-div#music-art, div#about-photo {
+div.photo-text {
   float: none;
   margin: 0 auto 2em;
-  width: 280px;
+  width: $iphone-content-width;
   
-  a.photo, img {
-    width: 260px;
-    height: 260px;
+  a.photo {
+    float: none;
+    width: $iphone-media-width;
+    height: $iphone-media-width;
+    
+    img {
+      width: $iphone-media-width;
+      height: $iphone-media-width;
+    }
   }
 }
 
@@ -87,9 +93,10 @@ ul.tracks li span {
 // Blog
 section > article {
   overflow: hidden;
+  margin-bottom: 3em;
   
   img {
-    width: 280px;
+    width: $iphone-content-width;
   }
   
   object, embed {
@@ -97,22 +104,19 @@ section > article {
   }
   
   div.video {
-    width: 260px;
+    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  div.video, div.video.vimeo iframe {
+    width: $iphone-media-width;
     height: 195px;
   }
   
-  div.video.wide.youtube, div.video.wide.vimeo {
+  div.video.wide.youtube, div.video.wide.vimeo, div.video.vimeo.wide iframe {
     height: 146px;
   } 
 }
-
-div.post div.video.wide {
-  height: 134px;
-}
-
-/*div.post div.video embed, div.post div.video object {
-  display: none;
-}*/
 
 div.pagination {
   line-height: 2em;

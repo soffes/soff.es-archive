@@ -36,9 +36,11 @@ html {
 }
 
 body {
+  background-color: $background-color;
   color: $text-color;
   font: normal normal normal 15px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.5em;
+  margin: 0;
 }
 
 a {
@@ -162,7 +164,8 @@ body > header {
   margin-bottom: 4em;
   
   h1 {
-    margin: 2em 0;
+    padding-top: 2em;
+    margin-bottom: 2em;
     
     a {
       border: 0;
@@ -285,14 +288,13 @@ section > article {
   }
   
   div.video {
-    background: white;
-    padding: 10px;
+    background: #fff;
     text-align: center;
     margin-bottom: 1em;
-    width: 620px;
-    height: 465px;
-    -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.13);
-    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.13);
+    width: 640px;
+    height: 480px;
+    -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
     overflow: hidden;
   }
   
@@ -301,7 +303,7 @@ section > article {
   }
   
   div.video.wide.vimeo {
-    height: 349px;
+    height: 360px;
   }
   
   header p {

@@ -5,6 +5,8 @@
 //  to keep things quick
 //
 
+var callback = function() {};
+
 var hasFlash = function() {
   var flashType = "application/x-shockwave-flash",
     types = navigator.mimeTypes,
@@ -64,11 +66,14 @@ var externalLinks = function() {
 
 // Replace video embeds with <video> if possible
 var substituteFlashVideos = function() {
-  var userAgent = navigator.userAgent.toLowerCase();
+  var userAgent = navigator.userAgent.toLowerCase(),
+    firefox = (userAgent.indexOf("firefox") != -1),
+    iPhone = (userAgent.indexOf("iphone") != -1 || userAgent.indexOf("ipod") != -1),
+    iOS = (iPhone || userAgent.indexOf("ipad") != -1);
   
   // If they have flash or have Firefox, stop since Flash does a better job playing
   // the video and Firefox doesn't support Vimeo's <video>
-  if (hasFlash() || (userAgent.indexOf("firefox") != -1)) {
+  if (iOS || hasFlash() || firefox) {
     return;
   }
   
@@ -81,8 +86,6 @@ var substituteFlashVideos = function() {
   }
   
   var disabledMessage = '<p style="text-align:center"><strong>Sorry, but you need Flash to watch this video.</strong></p><p style="text-align:center">I hate that as much as you do.</p>',
-    iPhone = (userAgent.indexOf("iphone") != -1 || userAgent.indexOf("ipod") != -1),
-    iOS = (iPhone || userAgent.indexOf("ipad") != -1),
     vimeoObjectRegex = new RegExp("[?&]clip_id(?:=([^&]*))?", "i"),
     vimeoIframeRegex = new RegExp("http://player.vimeo.com/video/([^&?]*)\?", "i"),
     i = 0,
@@ -120,15 +123,11 @@ var substituteFlashVideos = function() {
         clipId = match[1];
       
         if (iPhone) {
-          width = 260;
-          height = (video.className.indexOf('wide') != -1) ? 146 : 195;
+          width = 280;
+          height = (video.className.indexOf('wide') != -1) ? 158 : 211;
         }
       
         video.innerHTML = '<video src="http://www.vimeo.com/play_redirect?clip_id=' + clipId + '" controls="controls" width="' + width + '" height="' + height + '"></video>';
-
-        var js = document.createElement('script');
-        js.setAttribute("src", "http://www.vimeo.com/api/oembed.json?url=" + encodeURIComponent("http://vimeo.com/" + clipId));
-        document.getElementsByTagName("head").item(0).appendChild(js);
       } else {
         video.innerHTML = disabledMessage;
       }

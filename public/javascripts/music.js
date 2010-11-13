@@ -51,7 +51,6 @@ $(function() {
           };
           
           var play = function() {
-            console.log(audioId);
             div.addClass("playing");
           };
           

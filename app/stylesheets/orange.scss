@@ -7,9 +7,7 @@ body, html {
 
 h1 {
   color: white;
-  font-family: $helvetica-neue;
-  font-size: 60px;
-  font-weight: bold;
+  font: normal normal bold 60px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-align: center;
   width: 400px;
   height: 1em;

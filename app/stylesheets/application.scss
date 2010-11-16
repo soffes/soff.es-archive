@@ -316,6 +316,7 @@ div.social {
   width: 100%;
   overflow: hidden;
   margin-bottom: 1em;
+  padding-left: 232px;
 }
 
 // Gist
@@ -394,7 +395,6 @@ div.alert p:last-child {
 
 // Pages
 @import "pages/home";
-@import "pages/about";
 @import "pages/music";
 
 // Misc

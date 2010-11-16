@@ -33,5 +33,5 @@ ul.download-slides {
 }
 
 ul.download-slides:after {
-  @include clearAfter;
+  @include clearfix;
 }

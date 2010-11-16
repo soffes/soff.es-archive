@@ -91,6 +91,13 @@ div#music-art, div#music-about {
   margin: 0 auto;
 }
 
+div#music-art {
+  a.photo, img {
+    width: 280px;
+    height: 280px;
+  }
+}
+
 // Music
 ul.tracks li span {
   display: none;

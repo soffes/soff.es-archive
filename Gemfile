@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0'
+gem 'rails', '3.0.3'
 gem 'pg', '0.9.0'
 gem 'rdiscount', '1.6.5'
 gem 'will_paginate', '3.0.pre2'

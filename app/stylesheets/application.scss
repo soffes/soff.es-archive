@@ -313,10 +313,14 @@ section > article {
 }
 
 div.social {
-  width: 100%;
+  width: 408px;
   overflow: hidden;
   margin-bottom: 1em;
   padding-left: 232px;
+  
+  iframe#facebook-like-button {
+    width: 294px;
+  }
 }
 
 // Gist

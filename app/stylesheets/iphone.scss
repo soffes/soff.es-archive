@@ -28,6 +28,10 @@ body > header {
   h1 a {
     width: $iphone-content-width;
   }
+  
+  li {
+    margin-left: 20px;
+  }
 }
 
 // Home
@@ -81,8 +85,10 @@ div.photo-text {
   }
 }
 
-div#music-about, div#about-text {
+div#music-art, div#music-about {
   float: none;
+  width: 300px;
+  margin: 0 auto;
 }
 
 // Music
@@ -119,7 +125,12 @@ section > article {
 }
 
 div.social {
-  padding-left: 0;
+  padding-left: 60px;
+  width: 220px;
+  
+  iframe#facebook-like-button {
+    width: 80px;
+  }
 }
 
 div.pagination {

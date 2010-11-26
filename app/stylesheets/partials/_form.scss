@@ -1,5 +1,6 @@
 input, textarea {
-  font-size: 1em;
+  font-size: 1.1em;
+  color: $text-color;
 }
 
 form dl, form dd {
@@ -8,10 +9,9 @@ form dl, form dd {
 
 input[type=text], input[type=password], textarea {
   background-color: white;
-  border-color: #666666 #cccccc #cccccc;
+  border-color: #666 #ccc #ccc;
   border-style: solid;
   border-width: 1px;
-  color: black;
   padding: 2px;
   margin: 1px;
 }

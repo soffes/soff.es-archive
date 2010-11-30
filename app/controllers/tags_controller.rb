@@ -1,5 +1,4 @@
 class TagsController < ApplicationController
-
   def index
     @tags = Tag.includes(:taggings).all
 
@@ -21,9 +20,6 @@ class TagsController < ApplicationController
     @tag = Tag.where(:name => id).includes(:posts).first
     redirect_to tags_url and return unless @tag
 
-    # Redirect to tag if case doesn't match
-    redirect_to @tag and return unless @tag.name == params[:id]
-    
     # Get posts for tag
     @posts = @tag.posts.published.paginated(params[:page])
 
@@ -33,5 +29,4 @@ class TagsController < ApplicationController
       format.json { render :json => @posts }
     end
   end
-
 end

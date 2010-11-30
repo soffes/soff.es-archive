@@ -3,7 +3,7 @@ namespace :lastfm do
     require 'net/http'
     require 'rexml/document'
 
-    limit = 6 # number of albums to get
+    limit = 8 # number of albums to get
     albums = []
     top_albums_url = "http://ws.audioscrobbler.com/2.0/?method=user.getweeklyalbumchart&user=#{LAST_FM_USERNAME}&api_key=#{LAST_FM_API_KEY}"
     albums_xml = REXML::Document.new(Net::HTTP.get_response(URI.parse(top_albums_url)).body)
@@ -29,7 +29,7 @@ namespace :lastfm do
       end
     end
     
-    Rails.cache.write("lastfm_weekly_album_chart", albums)
+    $redis[:lastfm_weekly_album_chart] = Marshal.dump(albums)
     puts "Successfully cached #{albums.length} albums"
   end
 end

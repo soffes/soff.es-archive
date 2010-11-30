@@ -1,5 +1,4 @@
 class AdminController < ApplicationController
-  
   before_filter :authenticate
   layout 'admin'
 
@@ -14,5 +13,4 @@ class AdminController < ApplicationController
       username == ADMIN_USERNAME && password == ADMIN_PASSWORD
     end
   end
-  
 end

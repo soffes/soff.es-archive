@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-
   def index
     @posts = Post.published.paginated(params[:page])
   
@@ -20,5 +19,4 @@ class PostsController < ApplicationController
       format.json { render :json => @post }
     end
   end
-
 end

@@ -1,3 +1,9 @@
+GIT
+  remote: http://github.com/samsoffes/xmlrpc-endpoint.git
+  revision: 8430248b148b6fa46e9e13901ff0d423b898cb6f
+  specs:
+    xmlrpc-endpoint (0.2.2)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -90,3 +96,4 @@ DEPENDENCIES
   system_timer (= 1.0)
   tweet-button (= 0.1.0)
   will_paginate (= 3.0.pre2)
+  xmlrpc-endpoint!

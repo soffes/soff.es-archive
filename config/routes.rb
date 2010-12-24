@@ -1,6 +1,6 @@
 require 'not_preferred_host'
 
-SamSoffes::Application.routes.draw do |map|
+SamSoffes::Application.routes.draw do
   
   # Rewrite non-preferred hosts in production
   constraints(NotPreferredHost) do
@@ -49,5 +49,7 @@ SamSoffes::Application.routes.draw do |map|
     resources :posts
     resources :tags
   end
+  
+  match 'blog/xmlrpc' => 'posts#xe_index', :format => :xml
 
 end

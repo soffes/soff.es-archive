@@ -1,23 +1,24 @@
-<%- title "About" -%>
+<%- title "About Sam." -%>
 
-<div class="photo-text">
-  <%= link_to image_tag("me.png", :alt => "Sam Soffes"), root_url, :class => "photo", :rel => "home" %>
+<header>
+  <h1><%= link_to 'About Sam.', about_url %></h1>
+</header>
 
-  <p>The best way to get in touch with me is email, but here are some alternatives. If you want me to turn your dreams into software, <%= mail_to 'sam@samsoff.es', 'email me', :encode => :hex %>  and we'll figure something out.</p>
-  <ul class="contact">
-    <li><span>Email:</span> <%= mail_to 'sam@samsoff.es', 'sam@samsoff.es', :encode => :hex %></li>
-    <li><span>FaceTime:</span> <a href="facetime://sam@samsoff.es" rel="external nofollow">sam@samsoff.es</a></li>
-    <li><span>Call:</span> <a href="tel:+1-415-935-3653">(415) 935-3653</a></li>
-    <li><span>Tweet:</span> <a href="http://twitter.com/samsoffes" rel="external nofollow" class="twitter-username">samsoffes</a></li>
-    <li><span>Resume:</span> <a href="http://samsoff.es/resume" rel="external nofollow">Download PDF</a></li>
-  </ul>
-</div>
+<section class="about">
+  <p>I am a <%= link_to 'iOS and Rails software engineer', github_url, :rel => 'external nofollow' %>, <%= link_to 'musician', music_url %>, <%= link_to 'wanna be designer', dribbble_url, :rel => 'external nofollow' %>, and burger connoisseur. I just moved to San Francisco, California in December 2010 to work at <a href="http://scribd.com" rel="external nofollow">Scribd</a> as a software engineer. Read more about that <a href="http://samsoff.es/posts/im-moving-to-san-francisco">here</a>.</p>
 
-<h3>What I Do</h3>
-<p>My name is Sam Soffes. I currently live in lovely Dallas, TX. I create iPhone, iPad, Mac, and Rails apps as a freelancer. I also <%= link_to "create music", music_url %> and am in constant pursuit of tasting the best burger (ketchup only with pepperjack of course).</p>
-<p>You can find some of <a href="http://github.com/samsoffes" rel="external nofollow">my various open source projects on GitHub</a>.</p>
+  <p>I <%= link_to 'make my own music', music_url %> sometimes. I'm also in a band called <a href="http://findingchesterfield.com" rel="external nofollow">Finding Chesterfield</a>. I always in constant pursuit of tasting the perfect burger. So far, the best one I have ever had was at <a href="http://gowalla.com" rel="external nofollow">The Grape in Dallas, TX</a>. It blew my face off with awesome.</p>
 
-<h3>What I've Done</h3>
-<p>I founded <a href="http://tastefulworks.com/trimonix" rel="external nofollow">Trimonix</a> a few years ago and released a <a href="http://tastefulworks.com/countdown-maker" rel="external nofollow">Mac app</a>. I used to work on an iPhone app called <a href="http://youversion.com/iphone" rel="external nofollow">Bible</a> (until version 1.8) that has about 3 million people using it world wide and the web app that powered it, <a href="http://youversion.com" rel="external nofollow">YouVersion.com</a>, at <a href="http://lifechurch.tv" rel="external nofollow">LifeChurch.tv</a>.</p>
-
-<p>Trimonix is now <a href="http://blog.tastefulworks.com/post/242777197/sam-soffes-and-the-merger-of-trimonix" rel="external nofollow">part of Tasteful Works</a>. Since the merger, we've released a new Mac app called <a href="http://tastefulworks.com/stage-time" rel="external nofollow">Stage Time</a> over at <a href="http://tastefulworks.com" rel="external nofollow">Tasteful Works</a>.</p>
+  <p>Recently some of my work I did for a client was featured in <a href="http://bits.blogs.nytimes.com/2010/11/11/social-books-hopes-to-make-e-reading-communal/" rel="external nofollow">The New York Times</a> and <a href="http://techcrunch.com/2010/11/11/rethink-books-social/" rel="external nofollow">Tech Crunch</a>. A few years ago, I wrote this app for the iPhone called <a href="http://youversion.com/iphone" rel="external nofollow">Bible</a> that launched day one of the App Store. There are over 5 million people using it now, so that's pretty cool. I used to own a few companies, freelance, and work at some startups. I can tell you all about it if you're curious.</p>
+  
+  <p>You can <%= link_to 'download my résumé', resume_url %> if you want, but I'm not looking for a job right now or accepting any side projects.</p>
+  
+  <nav>
+    <ul>
+      <li><%= link_to 'Read my blog', blog_url %></li>
+      <li><%= link_to 'Listen to my music', music_url %></li>
+      <li><%= link_to 'See what I\'ve been working on', github_url, :rel => 'external nofollow' %></li>
+      <li><%= link_to 'Go home', root_url, :rel => 'home' %></li>
+    </ul>
+  </nav>
+</section>

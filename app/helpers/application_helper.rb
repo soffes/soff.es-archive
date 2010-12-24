@@ -10,6 +10,18 @@ module ApplicationHelper
     'http://itunes.apple.com/podcast/the-experiment/id292395055'
   end
   
+  def github_url
+    'http://github.com/samsoffes'
+  end
+  
+  def wishlist_url
+    'http://amazon.com'
+  end
+  
+  def dribbble_url
+    'http://dribbble.com/players/samsoffes'
+  end
+  
   def tag_cloud(tags, classes)
     max, min = 0, 0
     tags.each do |tag|

@@ -1,1 +1,0 @@
-task :cron => [:"lastfm:update"]

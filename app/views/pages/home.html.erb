@@ -1,49 +1,20 @@
-<%- title "Pure Awesomeness" -%>
+<%- title "Hi, I'm Sam." -%>
 
-<section>
-  <div id="home">
-    <div class="sidebar">
-      <h3>Hello</h3>
-      <p>My name is Sam. I <%= link_to "write software", work_url %> and <%= link_to "make music", music_url %>. This is <%= link_to "my blog", blog_url %>. Enjoy.</p>
-    
-      <h3>Random Stuff</h3>
-      <ul>
-        <li><%= link_to "Hello Internet", hello_internet_url %></li>
-        <li><%= link_to "Resume", resume_url %></li>
-        <li><%= link_to "Talks", talks_url %></li>
-      </ul>
-    </div>
-    <section>
-    <%- if @post -%>
-      <article>
-        <header>
-          <h2><%= link_to @post.title, @post %></h2>
-          <p>Posted <% if @post.published_at %><time datetime="<%= @post.created_at.as_json %>"><%= @post.published_time_in_words %></time><% end %><%= post_tags_html(@post) %></p>
-        </header>
-        <%= @post.excerpt.gsub('</p>', " #{link_to("Keep reading &raquo;".html_safe, blog_url, :class => "more")}</p>".html_safe) %>
-      </article>
-    <%- else -%>
-      <p>Nothing to see here. Move along.</p>
-    <%- end -%>
-    </section>
-  </div>
-</section>
+<header>
+  <h1><%= link_to 'Hi, I\'m Sam.', root_url %></h1>
+</header>
 
-<%- if @albums && @albums.length > 0 -%>
-<div class="albums">
-  <div>
-    <h3>Recent Listening</h3>
+<section class="home">
+  <p class="welcome">I like to create software, make music, write about technology, make videos, and enjoy great burgers.</p>
+  
+  <p class="gray">I currently work at Scribd as a software engineer and am not available for hire.</p>
+  
+  <nav>
     <ul>
-    <%- for album in @albums -%>
-      <li>
-        <%= link_to("#{album[:name]} by #{album[:artist_name]}", album[:url], :title => "#{album[:name]} by #{album[:artist_name]}", :rel => "external nofollow") %>
-        <%- if album[:image_url] -%>
-        <%= image_tag(album[:image_url], :alt => album[:name]) %>
-        <%- end -%>
-      </li>
-    <%- end -%>
+      <li><%= link_to 'Read my blog', blog_url %></li>
+      <li><%= link_to 'Listen to my music', music_url %></li>
+      <li><%= link_to 'Find out more about me', about_url %></li>
+      <li><%= link_to 'See what I\'ve been working on', github_url, :rel => 'external nofollow' %></li>
     </ul>
-    <p>Follow me on <a href="http://last.fm/user/samsoffes" rel="external nofollow">Last.fm</a> &amp; <a href="<%= PING_PROFILE_URL %>" rel="external nofollow">Ping</a></p>
-  </div>
-</div>
-<%- end -%>
+  </nav>
+</section>

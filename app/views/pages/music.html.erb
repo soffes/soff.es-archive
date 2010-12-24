@@ -1,33 +1,44 @@
-<%- title "Music" -%>
+<%- title "Music by Sam." -%>
 <%- javascript :jquery, "music" -%>
 
-<div id="music" class="clearfix">
-	<div id="music-art">
-	  <%= link_to image_tag("the-experiment.png", :alt => "The Experiment"), podcast_url, :class => "photo", :rel => "external nofollow" %>
-		<div>
-		  <p>This is a collection of my music. It was an experiment because because I didn't think people would actually want to listen to it. I write it for myself to express my feelings (or some emotional crap like that).</p>
-		  <p>You can subscribe to <%= link_to "The Experiment podcast", podcast_url, :rel => "external nofollow" %> or check out my <a href="http://soundcloud.com/samsoffes" rel="external nofollow">SoundCloud profile</a>.</p>
-    </div>
-	</div>
-	<div id="music-about">
-	  <div class="alert">
-      <p>All of my music is on hold for the moment. I'm focusing heavily on <a href="http://findingchesterfield.com" rel="external nofollow">my band</a> right now. Check out <a href="http://findingchesterfield.com" rel="external nofollow">our EP</a>.</p>
-    </div>
-    <hr />
-		<h3>Rough Tracks</h3>
-		<ol class="tracks">
-			<li>Something I Found <a href="http://soundcloud.com/samsoffes/something-i-found">Listen</a></li>
-			<li>Discover <a href="http://soundcloud.com/samsoffes/discover">Listen</a></li>
-			<li>Years <a href="http://soundcloud.com/samsoffes/years">Listen</a></li>
-			<li>To Wait A Lifetime Intro <a href="http://soundcloud.com/samsoffes/to-wait-a-lifetime-intro">Listen</a></li>
-			<li>New Home <a href="http://soundcloud.com/samsoffes/new-home">Listen</a></li>
-			<li>After The Rain <a href="http://soundcloud.com/samsoffes/after-the-rain-2">Listen</a></li>
-		</ol>
-		<h3>Unfinished Tracks</h3>
-  	<ul class="tracks">
-  		<li>Something I Wish I Had <a href="http://soundcloud.com/samsoffes/something-i-wish-i-had">Listen</a></li>
-  		<li>Old Tickets <a href="http://soundcloud.com/samsoffes/old-tickets">Listen</a></li>
-  		<li>The Rain <a href="http://soundcloud.com/samsoffes/the-rain-2">Listen</a></li>
-  	</ul>
-	</div>
-</div>
+<header>
+  <h1><%= link_to 'Music by Sam.', music_url %></h1>
+</header>
+
+<section class="music">
+  <p>I started on this project called The Experiment a couple of years ago. It’s my on and off again attempt to create an album. I’m a major perfectionist and not too happy with any of it. I put it out there as an experiment and some people seemed to like it, so I keep working on it here and there.</p>
+  
+  <p>Also, checkout my band, <a href="http://findingchesterfield.com" rel="external nofollow">Finding Chesterfield</a>. We just released an album in October. I am way proud of it. You can buy it on iTunes.</p>
+  
+  <p>Here is my music:</p>
+  
+  <h3>Rough Tracks</h3>
+  <ul class="tracks">
+		<li>Something I Found <a href="http://soundcloud.com/samsoffes/something-i-found">Listen</a></li>
+		<li>Discover <a href="http://soundcloud.com/samsoffes/discover">Listen</a></li>
+		<li>Years <a href="http://soundcloud.com/samsoffes/years">Listen</a></li>
+		<li>To Wait A Lifetime Intro <a href="http://soundcloud.com/samsoffes/to-wait-a-lifetime-intro">Listen</a></li>
+		<li>New Home <a href="http://soundcloud.com/samsoffes/new-home">Listen</a></li>
+		<li>After The Rain <a href="http://soundcloud.com/samsoffes/after-the-rain-2">Listen</a></li>
+	</ul>
+	
+	<h3>Really Rough Tracks</h3>
+	<ul class="tracks">
+		<li>Something I Wish I Had <a href="http://soundcloud.com/samsoffes/something-i-wish-i-had">Listen</a></li>
+		<li>Old Tickets <a href="http://soundcloud.com/samsoffes/old-tickets">Listen</a></li>
+	</ul>
+	
+	<h3>Noise</h3>
+	<ul class="tracks">
+	  <li>The Rain <a href="http://soundcloud.com/samsoffes/the-rain-2">Listen</a></li>
+	</ul>
+	
+	<nav>
+    <ul>
+      <li><%= link_to 'Read my blog', blog_url %></li>
+      <li><%= link_to 'Find out more about me', about_url %></li>
+      <li><%= link_to 'See what I\'ve been working on', github_url, :rel => 'external nofollow' %></li>
+      <li><%= link_to 'Go home', root_url, :rel => 'home' %></li>
+    </ul>
+  </nav>
+</section>

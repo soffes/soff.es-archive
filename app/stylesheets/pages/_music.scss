@@ -1,61 +1,18 @@
-div#music-art {
-  width: 320px;
-  float: left;
-  margin-right: 40px;
-  font-size: 0.9em;
-  color: #555;
-  
-  a.photo {
-    border: 10px solid white;
-    display: block;
-    width: 300px;
-    height: 300px;
-    margin-bottom: 1em;
-    -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-    -webkit-transition: all 0.2s ease-in-out;
-  }
-  
-  a.photo:hover {
-    border-color: #f7f7f7;
-    -moz-box-shadow: 0 0 2px #333;
-    -webkit-box-shadow: 0 0 2px #333;
-  }
-  
-  img {
-    width: 300px;
-    height: 300px;
-  }
-}
-
-div#music-about {
-  width: 280px;
-  float: left;
-}
-
-div#music {
+section.music {
   margin-bottom: 1em;
   
-  ol {
+  ul.tracks {
     margin-bottom: 1em;
-  }
-  
-  li {
-    margin-bottom: 0.3em;
-    margin-left: 30px;
-  }
-  
-  ol li {
-    list-style: decimal;
-  }
-  
-  ul li {
-    list-style: disc;
-  }
-  
-  li a {
-    font-size: 0.8em;
-    margin-left: 6px;
+    
+    li {
+      margin-left: 1em;
+      list-style: disc;
+      
+      a {
+        font-size: 0.8em;
+        margin-left: 6px;
+      }
+    }
   }
 }
 

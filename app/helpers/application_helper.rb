@@ -15,7 +15,7 @@ module ApplicationHelper
   end
   
   def wishlist_url
-    'http://amazon.com'
+    'http://amzn.com/w/1PUZO1DPV7FFL'
   end
   
   def dribbble_url

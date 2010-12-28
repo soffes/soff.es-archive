@@ -7,6 +7,11 @@ html, body {
   width: $iphone-width;
 }
 
+body {
+  padding: 2em 10px;
+  font-size: 20px;
+}
+
 div.wrapper, body > header, body > section, body > footer {
   width: $iphone-content-width;
 }
@@ -14,88 +19,6 @@ div.wrapper, body > header, body > section, body > footer {
 // Tags
 h2 {
   font-size: 22px;
-}
-
-/*pre, code {
- font-size: 1em;
- overflow: hidden;
-}*/
-
-// Header
-body > header {
-  margin: 1em auto 2em;
-  
-  h1 a {
-    width: $iphone-content-width;
-  }
-  
-  li {
-    margin-left: 20px;
-  }
-}
-
-// Home
-div#home {
-  section, div.sidebar {
-    float: none;
-    width: $iphone-content-width;
-  }
-  
-  div.sidebar {
-    margin-bottom: 2em;
-  }
-}
-
-div.albums {
-  text-align: center;
-  
-  > div {
-    width: $iphone-content-width;
-  }
-  
-  h3 {
-    margin: 0 auto 0.7em;
-    font-size: 1.3em;
-  }
-  
-  ul {
-    margin: 1.5em 0 0 3.25em; 
-  }
-  
-  p {
-    display: none;
-  }
-}
-
-// Music and About
-div.photo-text {
-  float: none;
-  margin: 0 auto 2em;
-  width: $iphone-content-width;
-  
-  a.photo {
-    float: none;
-    width: $iphone-media-width;
-    height: $iphone-media-width;
-    
-    img {
-      width: $iphone-media-width;
-      height: $iphone-media-width;
-    }
-  }
-}
-
-div#music-art, div#music-about {
-  float: none;
-  width: 300px;
-  margin: 0 auto;
-}
-
-div#music-art {
-  a.photo, img {
-    width: 280px;
-    height: 280px;
-  }
 }
 
 // Music

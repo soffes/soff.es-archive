@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   exposes_xmlrpc_methods :method_prefix => 'metaWeblog.'
-  
+
   def index
     @posts = Post.published.paginated(params[:page])
   

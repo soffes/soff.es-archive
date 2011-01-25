@@ -1,25 +1,11 @@
 <%- if @post -%>
 <%- title @post.title -%>
-<header>
-  <h1><%= link_to 'Thoughts by Sam.', blog_url %></h1>
-</header>
-
 <section class="blog">
   <%= render @post %>
   <div class="social">
     <%= tweet_button :url => post_url(@post, :host => 'samsoff.es'), :text => (@post.tweet_text or @post.title) %>
     <%= like_button post_url(@post) %>
   </div>
-  
-  <nav>
-    <ul>
-      <li><%= link_to 'Read my blog', blog_url %></li>
-      <li><%= link_to 'Listen to my music', music_url %></li>
-      <li><%= link_to 'Find out more about me', about_url %></li>
-      <li><%= link_to 'See what I\'ve been working on', github_url, :rel => 'external nofollow' %></li>
-      <li><%= link_to 'Go home', root_url, :rel => 'home' %></li>
-    </ul>
-  </nav>
 </section>
 <%- else -%>
 <%- title 'Post not found' -%>

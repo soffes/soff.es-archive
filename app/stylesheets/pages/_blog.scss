@@ -1,10 +1,6 @@
 // Post
 section article {
   margin-bottom: 6em;
-    
-  h2 {
-    margin-bottom: 0.2em;
-  }
   
   header {
     p {
@@ -64,10 +60,7 @@ section article {
 }
 
 div.social {
-  width: 408px;
   overflow: hidden;
-  margin-bottom: 1em;
-  padding-left: 232px;
   
   iframe#facebook-like-button {
     width: 294px;

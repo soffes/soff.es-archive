@@ -1,4 +1,10 @@
-section.home {
+div#home {
+  width: $width;
+  margin: 3em auto;
+  font-size: 20px;
+}
+
+section.home {  
   p.welcome {
     color: #000;
     font-size: 1.25;

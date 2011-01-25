@@ -19,6 +19,8 @@
   <%= google_analytics %>
 </head>
 <body>
+  <%= yield :pre_content %>
   <%= yield %>
+  <%= yield :post_content %>
 </body>
 </html>

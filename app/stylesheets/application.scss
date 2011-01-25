@@ -1,4 +1,5 @@
 @import "compass/reset";
+@import "compass/css3";
 @import "partials/shared";
 
 // HTML5
@@ -36,14 +37,12 @@ html {
 }
 
 body {
-  background-color: $background-color;
+  background: $background-color image_url('texture.gif');
   color: $text-color;
   font-family: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
-  font-size: 24px;
-  line-height: 1.4em;
-  margin: 0;
-  padding: 3.5em 0 2em;
+  font-size: 17px;
+  line-height: 1.5em;
 }
 
 a {
@@ -133,18 +132,19 @@ code {
 
 h1 {
   color: #000;
-  font-size: 1.6em;
+  font-size: 1.8em;
   font-weight: bold;
   margin: 0 0 1em;
   
   a {
-    color: #000;
+    color: $red-color;
     border: 0;
   }
 }
 
 h2 {
-  font-size: 1.25em;
+  font-size: 1.3em;
+  margin-bottom: 0.2em;
   font-weight: bold;
     
   a {
@@ -164,10 +164,73 @@ h4 {
   margin-bottom: 0.2em;
 }
 
-// Wrapper
-div.wrapper, body > header, body > section, body > footer {
+// Sidebar
+div#sidebar {
+  width: 280px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 60px 0 0 40px;
+  font-size: 20px;
+  
+  p, p a {
+    color: #666;
+  }
+  
+  p a:hover {
+    color: $link-color;
+  }
+}
+
+// Nav
+nav {
+  li {
+    margin-bottom: 0.3em;
+    
+    a:before {
+      content: '— ';
+    }
+    
+    a:hover {
+      border: 0;
+    }
+    
+    a:hover:before {
+      content: '→ ';
+    }
+  }
+}
+
+// Main content
+div#wrapper {
+  margin-left: 360px;
+  background: #fff;
+  padding: 30px;
+  @include box-shadow(rgba(0, 0, 0, 0.3), 0, 0, 10px);
+}
+
+div#content {
   width: $width;
-  margin: 0 auto;
+  padding: 30px 0;
+}
+
+// Footer
+body > footer {
+  width: $width;
+  padding: 20px 30px;
+  margin-left: 360px;
+  color: #aaa;
+  @include text-shadow(#fff, 0, 1px, 0);
+  font-size: 14px;
+  text-align: center;
+  
+  a {
+    color: #aaa;
+  }
+  
+  a:hover {
+    color: $link-color;
+  }
 }
 
 

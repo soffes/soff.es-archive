@@ -180,6 +180,25 @@ div#sidebar {
   p a:hover {
     color: $link-color;
   }
+  
+  p.mark {
+    padding: 60px 0 20px;
+    
+    a {
+      -webkit-transition: none;
+      width: 45px;
+      height: 45px;
+      background: image_url('sidebar-mark.png') no-repeat 0 0;
+      text-indent: -9009em;
+      display: block;
+      margin: 0 auto;
+    }
+    
+    a:hover {
+      border: 0;
+      background-position: 0 -46px;
+    }
+  }
 }
 
 // Nav
@@ -206,6 +225,7 @@ div#wrapper {
   margin-left: 360px;
   background: #fff;
   padding: 30px;
+  min-width: $width;
   @include box-shadow(rgba(0, 0, 0, 0.3), 0, 0, 10px);
 }
 

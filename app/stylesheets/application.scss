@@ -226,7 +226,7 @@ div#wrapper {
   background: #fff;
   padding: 30px;
   min-width: $width;
-  @include box-shadow(rgba(0, 0, 0, 0.3), 0, 0, 10px);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 div#content {

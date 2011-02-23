@@ -43,8 +43,7 @@ section article {
     margin-bottom: 1em;
     width: 640px;
     height: 480px;
-    -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
-    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+    @include box-shadow(rgba(0, 0, 0, 0.7), 0, 0, 6px);
     overflow: hidden;
   }
   

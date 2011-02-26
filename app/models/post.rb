@@ -1,7 +1,4 @@
 class Post < ActiveRecord::Base
-  
-  # This seems dangerous. There has to be a better way.
-  include ActionView::Helpers::DateHelper
 
   has_many :comments, :dependent => :destroy
   has_many :taggings, :dependent => :destroy
@@ -47,16 +44,6 @@ class Post < ActiveRecord::Base
   
   def unpublished?
     !published?
-  end
-  
-  def published_time_in_words
-    return 'not published' unless published?
-    words = time_ago_in_words(published_at)
-    if published?
-      "#{words} ago"
-    else
-      "in #{words}"
-    end
   end
   
   private

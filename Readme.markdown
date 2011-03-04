@@ -4,6 +4,8 @@ This is my new blog in Rails 3. I [moved my blog to Jekyll](http://samsoff.es/po
 
 ## Running Locally
 
+**Note:** I am using Ruby 1.9.2 both on Heroku and locally. I'd recommend using [RVM](http://rvm.beginrescueend.com/) to install Ruby 1.9.2.
+
 Get the source (obviously)
 
     $ git clone git://github.com/samsoffes/samsoff.es.git

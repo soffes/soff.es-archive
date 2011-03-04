@@ -8,9 +8,7 @@ gem 'tweet-button', '0.1.0'
 gem 'goalie', '0.0.2'
 gem 'xmlrpc-endpoint', :git => 'http://github.com/samsoffes/xmlrpc-endpoint.git'
 gem 'dalli', '1.0.2'
-gem 'daemons', '1.0.10'
 
 group :development do
   gem 'compass', '0.10.6'
-  gem 'mongrel', '1.2.0.pre2'
 end

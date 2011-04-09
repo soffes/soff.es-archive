@@ -43,7 +43,7 @@ section article {
     margin-bottom: 1em;
     width: 640px;
     height: 480px;
-    @include box-shadow(rgba(0, 0, 0, 0.7), 0, 0, 6px);
+    @include single-box-shadow(rgba(0, 0, 0, 0.7), 0, 0, 6px);
     overflow: hidden;
   }
   
@@ -89,7 +89,7 @@ div.tags {
   margin-bottom: 3em;
   
   a {
-    text-shadow: none;
+    @include single-text-shadow(none);
     margin: 5px;
     word-wrap: nowrap;
     line-height: 1.5em;

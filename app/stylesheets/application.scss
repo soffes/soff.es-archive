@@ -240,7 +240,7 @@ body > footer {
   padding: 20px 30px;
   margin-left: 360px;
   color: #aaa;
-  @include text-shadow(#fff, 0, 1px, 0);
+  @include single-text-shadow(#fff, 0, 1px, 0);
   font-size: 14px;
   text-align: center;
   

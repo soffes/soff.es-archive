@@ -10,5 +10,5 @@ gem 'xmlrpc-endpoint', :git => 'http://github.com/samsoffes/xmlrpc-endpoint.git'
 gem 'dalli', '1.0.2'
 
 group :development do
-  gem 'compass', '0.10.6'
+  gem 'compass', '0.11.beta.5'
 end

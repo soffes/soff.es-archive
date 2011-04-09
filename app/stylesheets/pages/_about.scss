@@ -1,7 +1,10 @@
+@import "compass/css3";
+
 img#portrait {
   float: left;
-  width: 300px;
-  height: 316px;
+  background: #000;
+  width: 170px;
+  height: 667px;
   margin: 0.25em 1em 1em 0;
-  border: 10px solid #ddd;
+  @include single-box-shadow(rgba(0, 0, 0, 0.7), 0, 1px, 4px);
 }

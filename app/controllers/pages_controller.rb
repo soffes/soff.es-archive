@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def home
     @recent_post = Post.published.first
-    render 'home', :layout => 'home'
+    render 'home', :layout => 'abstract'
   end
   
   def orange

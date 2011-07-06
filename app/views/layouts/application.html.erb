@@ -1,24 +1,15 @@
 <%- content_for :pre_content do -%>
-<div id="sidebar">
-  <h1><%= link_to 'Hi, I\'m Sam.', root_url, :rel => 'home' %></h1>
-  <p class="welcome">I like to <a href="http://github.com/samsoffes" rel="external nofollow">create software</a>, <%= link_to 'make music', music_url %>, <%= link_to 'write about technology', blog_url %>, <a href="http://vimeo.com/samsoffes" rel="external nofollow">make videos</a>, and <a href="http://gowalla.com/samsoffes" rel="external nofollow">enjoy great burgers</a>.</p>
-  <nav>
-    <ul>
-      <li><%= link_to 'Read my blog', blog_url %></li>
-      <li><%= link_to 'Listen to my music', music_url %></li>
-      <li><%= link_to 'Find out more about me', about_url %></li>
-    </ul>
-  </nav>
-  <p class="mark"><%= link_to 'Sam Soffes', root_url, :rel => 'home' %></p>
-</div>
-<div id="wrapper">
-<div id="content">
+<header>
+  <h1><%= link_to 'Hi, I\'m Sam.', root_url %></h1>
+  <p>I like to <a href="http://github.com/samsoffes" rel="external nofollow">create software</a>, <%= link_to 'make music', music_url %>, and <%= link_to 'write about technology', blog_url %>.</p>
+  <p>Find out <%= link_to 'more about me', about_url %>.</p>
+</header>
+<section>
 <%- end -%>
 <%- content_for :post_content do -%>
-</div>
-</div>
+</section>
 <footer>
-  <p>&copy; 2011 <%= link_to 'Sam Soffes', root_url, :rel => 'home' %>. <%= link_to 'View source on GitHub', 'http://github.com/samsoffes/samsoff.es' %>.</p>
+  <p>Copyright &copy; 2011 <%= link_to 'Sam Soffes', root_url, :rel => 'home' %></p>
 </footer>
 <%- end -%>
 <%= render :file => "layouts/abstract" -%>

@@ -1,0 +1,168 @@
+// // ProximaNovaT-Thin
+// @font-face {
+//   font-family: 'ProximaNova';
+//   src: url('http://assets.samsoff.es/fonts/style_148545.eot');
+//   src: url('http://assets.samsoff.es/fonts/style_148545.eot?#iefix') format('embedded-opentype'),
+//        url('http://assets.samsoff.es/fonts/style_148545.woff') format('woff'),
+//        url('http://assets.samsoff.es/fonts/style_148545.ttf') format('truetype'),
+//        url('http://assets.samsoff.es/fonts/style_148545.svg#ProximaNovaT-Thin') format('svg');
+//   font-weight: 100;
+//   font-style: normal;
+// }
+// 
+// 
+// // ProximaNova-ThinIt
+// @font-face {
+//   font-family: 'ProximaNova-ThinIt';
+//   src: url('http://assets.samsoff.es/fonts/style_148512.eot');
+//   src: url('http://assets.samsoff.es/fonts/style_148512.eot?#iefix') format('embedded-opentype'),
+//        url('http://assets.samsoff.es/fonts/style_148512.woff') format('woff'),
+//        url('http://assets.samsoff.es/fonts/style_148512.ttf') format('truetype'),
+//        url('http://assets.samsoff.es/fonts/style_148512.svg#ProximaNova-ThinIt') format('svg');
+//   font-weight: 100;
+//   font-style: italic;
+// }
+
+// ProximaNova-Light
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('http://assets.samsoff.es/fonts/style_148550.eot');
+  src: url('http://assets.samsoff.es/fonts/style_148550.eot?#iefix') format('embedded-opentype'),
+       url('http://assets.samsoff.es/fonts/style_148550.woff') format('woff'),
+       url('http://assets.samsoff.es/fonts/style_148550.ttf') format('truetype'),
+       url('http://assets.samsoff.es/fonts/style_148550.svg#ProximaNova-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+// ProximaNova-LightIt
+@font-face {font-family: 'ProximaNova';
+  src: url('http://assets.samsoff.es/fonts/style_148515.eot');
+  src: url('http://assets.samsoff.es/fonts/style_148515.eot?#iefix') format('embedded-opentype'),
+       url('http://assets.samsoff.es/fonts/style_148515.woff') format('woff'),
+       url('http://assets.samsoff.es/fonts/style_148515.ttf') format('truetype'),
+       url('http://assets.samsoff.es/fonts/style_148515.svg#ProximaNova-LightIt') format('svg');
+  font-weight: 300;
+  font-style: italic;
+}
+
+// ProximaNova-Regular
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('http://assets.samsoff.es/fonts/style_148510.eot');
+  src: url('http://assets.samsoff.es/fonts/style_148510.eot?#iefix') format('embedded-opentype'),
+       url('http://assets.samsoff.es/fonts/style_148510.woff') format('woff'),
+       url('http://assets.samsoff.es/fonts/style_148510.ttf') format('truetype'),
+       url('http://assets.samsoff.es/fonts/style_148510.svg#ProximaNova-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+// ProximaNova-RegularIt
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('http://assets.samsoff.es/fonts/style_148548.eot');
+  src: url('http://assets.samsoff.es/fonts/style_148548.eot?#iefix') format('embedded-opentype'),
+       url('http://assets.samsoff.es/fonts/style_148548.woff') format('woff'),
+       url('http://assets.samsoff.es/fonts/style_148548.ttf') format('truetype'),
+       url('http://assets.samsoff.es/fonts/style_148548.svg#ProximaNova-RegularIt') format('svg');
+  font-weight: 400;
+  font-style: italic;
+}
+
+// // ProximaNova-Semibold
+// @font-face {
+//   font-family: 'ProximaNova';
+//   src: url('http://assets.samsoff.es/fonts/style_148547.eot');
+//   src: url('http://assets.samsoff.es/fonts/style_148547.eot?#iefix') format('embedded-opentype'),
+//        url('http://assets.samsoff.es/fonts/style_148547.woff') format('woff'),
+//        url('http://assets.samsoff.es/fonts/style_148547.ttf') format('truetype'),
+//        url('http://assets.samsoff.es/fonts/style_148547.svg#ProximaNova-Semibold') format('svg');
+//   font-weight: 600;
+//   font-style: normal;
+// }
+// 
+// // ProximaNova-SemiboldIt
+// @font-face {
+//   font-family: 'ProximaNova';
+//   src: url('http://assets.samsoff.es/fonts/style_148544.eot');
+//   src: url('http://assets.samsoff.es/fonts/style_148544.eot?#iefix') format('embedded-opentype'),
+//        url('http://assets.samsoff.es/fonts/style_148544.woff') format('woff'),
+//        url('http://assets.samsoff.es/fonts/style_148544.ttf') format('truetype'),
+//        url('http://assets.samsoff.es/fonts/style_148544.svg#ProximaNova-SemiboldIt') format('svg');
+//   font-weight: 600;
+//   font-style: italic;
+// }
+
+
+// ProximaNova-Bold
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('http://assets.samsoff.es/fonts/style_148514.eot');
+  src: url('http://assets.samsoff.es/fonts/style_148514.eot?#iefix') format('embedded-opentype'),
+       url('http://assets.samsoff.es/fonts/style_148514.woff') format('woff'),
+       url('http://assets.samsoff.es/fonts/style_148514.ttf') format('truetype'),
+       url('http://assets.samsoff.es/fonts/style_148514.svg#ProximaNova-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+// ProximaNova-BoldIt
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('http://assets.samsoff.es/fonts/style_148509.eot');
+  src: url('http://assets.samsoff.es/fonts/style_148509.eot?#iefix') format('embedded-opentype'),
+       url('http://assets.samsoff.es/fonts/style_148509.woff') format('woff'),
+       url('http://assets.samsoff.es/fonts/style_148509.ttf') format('truetype'),
+       url('http://assets.samsoff.es/fonts/style_148509.svg#ProximaNova-BoldIt') format('svg');
+  font-weight: 700;
+  font-style: italic;
+}
+
+// // ProximaNova-Extrabld
+// @font-face {
+//   font-family: 'ProximaNova';
+//   src: url('http://assets.samsoff.es/fonts/style_148511.eot');
+//   src: url('http://assets.samsoff.es/fonts/style_148511.eot?#iefix') format('embedded-opentype'),
+//        url('http://assets.samsoff.es/fonts/style_148511.woff') format('woff'),
+//        url('http://assets.samsoff.es/fonts/style_148511.ttf') format('truetype'),
+//        url('http://assets.samsoff.es/fonts/style_148511.svg#ProximaNova-Extrabld') format('svg');
+//   font-weight: 800;
+//   font-style: normal;
+// }
+// 
+// // ProximaNova-ExtrabldIt
+// @font-face {
+//   font-family: 'ProximaNova';
+//   src: url('http://assets.samsoff.es/fonts/style_148549.eot');
+//   src: url('http://assets.samsoff.es/fonts/style_148549.eot?#iefix') format('embedded-opentype'),
+//        url('http://assets.samsoff.es/fonts/style_148549.woff') format('woff'),
+//        url('http://assets.samsoff.es/fonts/style_148549.ttf') format('truetype'),
+//        url('http://assets.samsoff.es/fonts/style_148549.svg#ProximaNova-ExtrabldIt') format('svg');
+//   font-weight: 800;
+//   font-style: italic;
+// }
+// 
+// // ProximaNova-Black
+// @font-face {
+//   font-family: 'ProximaNova';
+//   src: url('http://assets.samsoff.es/fonts/style_148513.eot');
+//   src: url('http://assets.samsoff.es/fonts/style_148513.eot?#iefix') format('embedded-opentype'),
+//        url('http://assets.samsoff.es/fonts/style_148513.woff') format('woff'),
+//        url('http://assets.samsoff.es/fonts/style_148513.ttf') format('truetype'),
+//        url('http://assets.samsoff.es/fonts/style_148513.svg#ProximaNova-Black') format('svg');
+//   font-weight: 900;
+//   font-style: normal;
+// }
+// 
+// // ProximaNova-BlackIt
+// @font-face {
+//   font-family: 'ProximaNova';
+//   src: url('http://assets.samsoff.es/fonts/style_148546.eot');
+//   src: url('http://assets.samsoff.es/fonts/style_148546.eot?#iefix') format('embedded-opentype'),
+//        url('http://assets.samsoff.es/fonts/style_148546.woff') format('woff'),
+//        url('http://assets.samsoff.es/fonts/style_148546.ttf') format('truetype'),
+//        url('http://assets.samsoff.es/fonts/style_148546.svg#ProximaNova-BlackIt') format('svg');
+//   font-weight: 900;
+//   font-style: italic;
+// }

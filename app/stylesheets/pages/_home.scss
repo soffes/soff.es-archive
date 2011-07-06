@@ -1,15 +1,3 @@
-@mixin bordered-image {
-  display: block;
-  text-indent: -9009em;
-  border: 5px solid #fff;
-  @include single-box-shadow(rgba(0, 0, 0, 0.5), 0, 0, 3px);
-  background: #fff no-repeat;
-  
-  &:hover {
-    @include single-box-shadow(rgba(0, 0, 0, 1.0), 0, 0, 3px);
-  }
-}
-
 section.home {  
   h2 {
     margin-top: 1.7em;
@@ -58,6 +46,7 @@ section.home {
       
       a {
         @include bordered-image;
+        text-indent: -9009em;
         width: 135px;
         height: 135px;
         background: url(http://assets.samsoff.es/images/video-thumbnails.jpg) no-repeat;
@@ -82,11 +71,15 @@ section.home {
   }
   
   a.fc-art {
-    background-image: url(http://assets.samsoff.es/images/fc-art.jpg);
     width: 300px;
     height: 300px;
     margin-left: 20px;
     float: right;
+    
+    img {
+      width: 300px;
+      height: 300px;
+    }
   }
   
   div.music:after {
@@ -96,12 +89,14 @@ section.home {
   a.grape-map {
     background-image: url(http://maps.google.com/maps/api/staticmap?center=32.82385,-96.770239&zoom=14&size=630x123&maptype=roadmap&markers=color:green%7C32.82385,-96.770239&sensor=false);
     width: 630px;
-    height: 123px
+    height: 123px;
+    text-indent: -9009em;
   }
   
   article {
-    padding: 0;
-    margin: 0 0 0 2em;
+    padding: 0 0 0 2em;
+    margin: 0;
+    width: auto;
     color: #777;
     
     header {

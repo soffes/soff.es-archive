@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @recent_post = Post.published.first
+    @recent_post = Post.published.where(:homepageable => true).first
     render 'home', :layout => 'abstract'
   end
   

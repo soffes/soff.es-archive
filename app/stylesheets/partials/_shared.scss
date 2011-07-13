@@ -13,12 +13,16 @@ $red-color: #f6291d;
 
 // Mix-ins
 @mixin clearfix {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
+  display: inline-block;
+  
+  &:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
 }
 
 @mixin bordered-image {
@@ -29,5 +33,19 @@ $red-color: #f6291d;
   
   &:hover {
     @include single-box-shadow(rgba(0, 0, 0, 1.0), 0, 0, 3px);
+  }
+}
+
+@mixin font-face($name, $font-files, $eot: false, $font-weight: normal, $font-style: normal) {
+  $iefont: unquote("#{$eot}?iefix");
+  @font-face {
+    font-family: quote($name);
+    @if $eot {
+      src: font-url($eot);
+      $font-files: font-url($iefont) unquote("format('eot')"), $font-files;
+    }
+    src: $font-files;
+    font-weight: $font-weight;
+    font-style: $font-style;
   }
 }

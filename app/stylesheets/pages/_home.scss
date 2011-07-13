@@ -16,11 +16,8 @@ section.home {
   }
   
   ul.movies {
+    @include clearfix;
     margin: 0.5em 0;
-    
-    &:after {
-      @include clearfix;
-    }
     
     li {
       float: left;
@@ -82,7 +79,7 @@ section.home {
     }
   }
   
-  div.music:after {
+  div.music {
     @include clearfix;
   }
   

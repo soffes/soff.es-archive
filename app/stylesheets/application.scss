@@ -12,24 +12,6 @@ mark, time, meter, progress {
   display: inline;
 }
 
-
-// Clear-fix
-.clearfix:after {
-  @include clearfix;
-}
-
-.clearfix {
-  display: inline-block;
-}
-
-html[xmlns] .clearfix {
-  display: block;
-}
-
-* html .clearfix {
-  height: 1%;
-}
-
 // Fonts
 @import "partials/proxima-nova";
 
@@ -49,8 +31,9 @@ body {
 a {
   color: $link-color;
   text-decoration: none;
-  -webkit-transition: all 0.1s linear;
   border-bottom: 1px solid transparent;
+  @include transition-property(color);
+  @include transition-duration(0.2s);
   
   &:hover {
     border-bottom: 1px solid;

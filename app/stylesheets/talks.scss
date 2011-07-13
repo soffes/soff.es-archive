@@ -4,6 +4,7 @@ ul.download-slides {
   padding: 0;
   margin: 0 0 1em;
   height: 64px;
+  @include clearfix;
   
   li {
     float: left;
@@ -30,8 +31,4 @@ ul.download-slides {
   a.keynote {
     background-image: image-url("keynote-64.png");
   }
-}
-
-ul.download-slides:after {
-  @include clearfix;
 }

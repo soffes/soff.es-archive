@@ -4,7 +4,7 @@ class Admin::PostsController < AdminController
   end
   
   def show
-    @post = Post.where(:permalink => params[:id]).first
+    @post = Post.where(permalink: params[:id]).first
   end
   
   def new
@@ -17,7 +17,7 @@ class Admin::PostsController < AdminController
       flash[:notice] = 'Successfully created post.'
       redirect_to [:admin, @post]
     else
-      render :action => 'new'
+      render action: 'new'
     end
   end
   
@@ -31,7 +31,7 @@ class Admin::PostsController < AdminController
       flash[:notice] = 'Successfully updated post.'
       redirect_to [:admin, @post]
     else
-      render :action => 'edit'
+      render action: 'edit'
     end
   end
   

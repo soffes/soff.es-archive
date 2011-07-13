@@ -1,8 +1,8 @@
 class Post < ActiveRecord::Base
 
-  has_many :comments, :dependent => :destroy
-  has_many :taggings, :dependent => :destroy
-  has_many :tags, :through => :taggings
+  has_many :comments, dependent: :destroy
+  has_many :taggings, dependent: :destroy
+  has_many :tags, through: :taggings
 
   validates_presence_of :title, :content
   attr_writer :tag_names
@@ -17,7 +17,7 @@ class Post < ActiveRecord::Base
   end
   
   def self.paginated page = 1
-    paginate :page => (page), :include => :tags, :per_page => per_page
+    paginate page: (page), include: :tags, per_page: per_page
   end
 
   def tag_names

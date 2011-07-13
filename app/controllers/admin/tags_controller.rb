@@ -17,7 +17,7 @@ class Admin::TagsController < AdminController
       flash[:notice] = 'Successfully created tag.'
       redirect_to @tag
     else
-      render :action => 'new'
+      render action: 'new'
     end
   end
   
@@ -31,7 +31,7 @@ class Admin::TagsController < AdminController
       flash[:notice] = 'Successfully updated tag.'
       redirect_to @tag
     else
-      render :action => 'edit'
+      render action: 'edit'
     end
   end
   

@@ -11,10 +11,6 @@ section.home {
     }  
   }
   
-  .bordered-image {
-    @include bordered-image;
-  }
-  
   ul.movies {
     @include clearfix;
     margin: 0.5em 0;

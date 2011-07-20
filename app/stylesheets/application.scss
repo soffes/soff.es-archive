@@ -209,6 +209,10 @@ body > footer {
 @import "pages/about";
 
 // Misc
+.bordered-image {
+  @include bordered-image;
+}
+
 a.twitter-username:before {
   content: "@";
 }

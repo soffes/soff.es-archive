@@ -3,6 +3,7 @@
 <section class="blog">
   <%= render @post %>
   <div class="social">
+    <script type="text/javascript" src="http://get.zerply.com/js/zebtn/remote.js"></script><script type="text/javascript">button = new zerplyEB({container: 'ZE-button', key: '7f1b8344c499f5eaed9bcf833ac64c46'}); button.init();</script><div id="ZE-button"></div>
     <%= tweet_button :url => post_url(@post, :host => 'samsoff.es'), :text => (@post.tweet_text or @post.title) %>
     <%= like_button post_url(@post) %>
   </div>

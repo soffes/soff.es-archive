@@ -5,13 +5,11 @@
   <div class="social">
     <script type="text/javascript" src="http://get.zerply.com/js/zebtn/remote.js"></script><script type="text/javascript">button = new zerplyEB({container: 'ZE-button', key: '7f1b8344c499f5eaed9bcf833ac64c46'}); button.init();</script><div id="ZE-button"></div>
     <%= tweet_button :url => post_url(@post, :host => 'samsoff.es'), :text => (@post.tweet_text or @post.title) %>
-    <%= like_button post_url(@post) %>
+    <%= like_button post_url(@post, :host => 'samsoff.es') %>
   </div>
   
   <div id="comments">
-    <div id="fb-root"></div>
-    <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
-    <fb:comments href="http://samsoff.es<%= url_for @post %>" num_posts="2" width="640"></fb:comments>
+    <%= facebook_comments post_url(@post, :host => 'samsoff.es') %>
   </div>
 </section>
 <%- else -%>

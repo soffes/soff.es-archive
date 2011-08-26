@@ -65,6 +65,7 @@ section article {
 
 div.social {
   overflow: hidden;
+  margin: -4em 0 1em; // Ugly
   
   iframe#facebook-like-button {
     width: 294px;

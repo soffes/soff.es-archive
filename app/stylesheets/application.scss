@@ -20,12 +20,16 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-body {
+body, input, textarea {
   color: $text-color;
   font-family: 'ProximaNova', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 19px;
   line-height: 1.5em;
+}
+
+input, textarea {
+  line-height: 1em;
 }
 
 a {

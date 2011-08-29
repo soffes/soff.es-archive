@@ -8,7 +8,7 @@ task :'jekyll:export' => :environment do
       file.write "---
 layout: post
 title: #{post.title}
-categories: [#{post.tags.collect { |tag| tag.name }.sort.join(', ')}]
+tags: [#{post.tags.collect { |tag| tag.name }.sort.join(', ')}]
 ---
 
 #{post.content}"

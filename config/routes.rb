@@ -20,7 +20,6 @@ SamSoffes::Application.routes.draw do
   match '/music' => 'pages#music', :as => 'music'
   match '/about' => 'pages#about', :as => 'about'
   match '/talks' => 'pages#talks', :as => 'talks'
-  match '/orange' => 'pages#orange', :as => 'orange'
   
   # Redirects
   match '/posts' => redirect { |params| '/blog' }

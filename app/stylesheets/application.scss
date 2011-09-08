@@ -12,9 +12,6 @@ mark, time, meter, progress {
   display: inline;
 }
 
-// Fonts
-@import "partials/proxima-nova";
-
 // Tags
 html {
   -webkit-font-smoothing: antialiased;
@@ -22,9 +19,9 @@ html {
 
 body {
   color: $text-color;
-  font-family: 'ProximaNova', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
-  font-size: 19px;
+  font-size: 17px;
   line-height: 1.5em;
 }
 

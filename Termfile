@@ -1,8 +1,0 @@
----
-- tab1:
-  - git status
-- tab2:
-  - /usr/local/bin/memcached -vv
-- tab2:
-  - rake lastfm:update
-  - rails server

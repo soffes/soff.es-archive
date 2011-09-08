@@ -8,14 +8,14 @@
   <link rel="apple-touch-icon-precomposed" href="http://assets.samsoff.es/images/apple-touch-icon.png">
   <link rel="me" href="http://www.google.com/profiles/samsoffes" />
   <link rel="author" type="text/plain" href="http://samsoff.es/humans.txt" />
-  <%= stylesheet_link_tag "application" %>
+  <%= stylesheet_link_tag 'application' %>
   <%- if is_iphone? -%>
   <meta name="viewport" content="width=320, user-scalable=no" />
-  <%= stylesheet_link_tag "iphone" %>
+  <%= stylesheet_link_tag 'iphone' %>
   <%- else -%>
   <meta name="viewport" content="width=768, maximum-scale=1.0" />
   <%- end -%>
-  <%= javascript_include_tag "application" -%>
+  <%= javascript_include_tag 'application' -%>
   <%= yield(:head) -%>
   <%= google_analytics %>
 </head>

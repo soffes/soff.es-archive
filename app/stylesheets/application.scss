@@ -17,12 +17,16 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-body {
+body, input, textarea {
   color: $text-color;
   font-family: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 17px;
   line-height: 1.5em;
+}
+
+input {
+  line-height: 1em;
 }
 
 a {

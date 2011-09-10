@@ -64,6 +64,7 @@ section.home {
   }
   
   a.fc-art {
+    @include bordered-image;
     width: 300px;
     height: 300px;
     margin-left: 20px;

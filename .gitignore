@@ -6,3 +6,4 @@ tmp/**/*
 dump.rdb
 tmp
 posts
+.sass-cache

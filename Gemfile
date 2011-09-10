@@ -9,7 +9,11 @@ gem 'goalie', '0.0.4'
 gem 'dalli', '1.1.2'
 
 
-gem 'compass', '0.11.5'
-gem 'coffee-script', '2.2.0'
-gem 'uglifier', '0.5.4'
-gem 'jquery-rails', '1.0.9'
+group :assets do
+  gem 'compass', '0.12.alpha'
+  gem 'sass-rails', '3.1.0'
+  gem 'coffee-rails', '3.1.0'
+  gem 'uglifier'
+end
+
+gem 'jquery-rails'

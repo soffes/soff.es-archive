@@ -34,11 +34,14 @@ GEM
     bcrypt-ruby (3.0.0)
     builder (3.0.0)
     chunky_png (1.2.1)
+    coffee-rails (3.1.0)
+      coffee-script (>= 2.2.0)
+      railties (~> 3.1.0.rc1)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
     coffee-script-source (1.1.2)
-    compass (0.11.5)
+    compass (0.12.alpha.0)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
@@ -91,6 +94,10 @@ GEM
     rdiscount (1.6.8)
     rdoc (3.9.4)
     sass (3.1.7)
+    sass-rails (3.1.0)
+      actionpack (~> 3.1.0)
+      railties (~> 3.1.0)
+      sass (>= 3.1.4)
     sprockets (2.0.0)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -111,14 +118,15 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  coffee-script (= 2.2.0)
-  compass (= 0.11.5)
+  coffee-rails (= 3.1.0)
+  compass (= 0.12.alpha)
   dalli (= 1.1.2)
   goalie (= 0.0.4)
-  jquery-rails (= 1.0.9)
+  jquery-rails
   pg (= 0.11.0)
   rails (= 3.1)
   rdiscount (= 1.6.8)
+  sass-rails (= 3.1.0)
   tweet-button (= 0.1.0)
-  uglifier (= 0.5.4)
+  uglifier
   will_paginate (= 3.0.0)

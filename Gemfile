@@ -8,6 +8,9 @@ gem 'tweet-button', '0.1.0'
 gem 'goalie', '0.0.4'
 gem 'dalli', '1.1.2'
 
+gem 'redcarpet', '1.17.2'
+gem 'albino', '1.3.3'
+gem 'nokogiri', '1.5.0'
 
 group :assets do
   gem 'compass', '0.12.alpha'

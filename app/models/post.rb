@@ -27,16 +27,6 @@ class Post < ActiveRecord::Base
   def to_param
     self.permalink
   end
-
-  def to_html
-    html = content.blank? ? '' : RDiscount.new(content).to_html
-    html.gsub(/\{\{gist: ([0-9]+)(?:,\s?([a-zA-Z0-9\._\+]+))?\}\}/, '<script src="http://gist.github.com/\1.js?file=\2"></script>').html_safe
-  end
-  
-  def excerpt
-    # TODO: Fix for <blockquote>
-    to_html.split("</p>").first+"</p>".html_safe
-  end
   
   def published?
     published_at && published_at < Time.now

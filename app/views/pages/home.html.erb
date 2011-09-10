@@ -14,7 +14,7 @@
       <h3><%= link_to @recent_post.title, @recent_post %></h3>
       <p>Posted <time datetime="<%= @recent_post.published_at.as_json %>"><%= post_published_time_in_words @recent_post %></time><%= post_tags_html(@recent_post) %></p>
     </header>
-    <%= @recent_post.excerpt %>
+    <%= post_excerpt(@recent_post) %>
     <p class="more"><%= link_to 'Read more &raquo;'.html_safe, blog_url %></p>
   </article>
   

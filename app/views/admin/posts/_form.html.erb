@@ -1,5 +1,5 @@
-<% form_for [:admin, @post] do |f| %>
-  <%= f.error_messages %>
+<%= form_for [:admin, @post] do |f| %>
+  <%#= f.error_messages %>
   <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>

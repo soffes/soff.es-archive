@@ -80,6 +80,7 @@ section.home {
   }
   
   a.grape-map {
+    @include bordered-image;
     background-image: url(http://maps.google.com/maps/api/staticmap?center=32.82385,-96.770239&zoom=14&size=630x123&maptype=roadmap&markers=color:green%7C32.82385,-96.770239&sensor=false);
     width: 630px;
     height: 123px;

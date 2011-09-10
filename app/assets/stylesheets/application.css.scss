@@ -1,0 +1,227 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "partials/shared";
+
+// HTML5
+section, header, footer, nav, article, aside, figure {
+  display: block;
+  width: 100%;
+}
+
+mark, time, meter, progress {
+  display: inline;
+}
+
+// Tags
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body, input, textarea {
+  color: $text-color;
+  font-family: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.5em;
+}
+
+input {
+  line-height: 1em;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  @include transition-property(color);
+  @include transition-duration(0.2s);
+  
+  &:hover {
+    border-bottom: 1px solid;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  background-color: $highligh-color;
+  padding: 0 0.1em;
+}
+
+i {
+  font-style:italic
+}
+
+abbr {
+  border-bottom: 1px dashed;
+  cursor: help;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+hr {
+  margin-bottom: 2em;
+  border: 0;
+}
+
+blockquote {
+  border-left: 5px solid #ddd;
+  color: #888;
+  margin: 0 0 1em;
+  padding-left: 1em;
+  
+  a {
+    color: #444;
+    
+    &:hover {
+      color: $link-color;
+    }
+  }
+}
+
+small {
+  font-size: 0.8em;
+  color: #999;
+  margin-left: 0.2em;
+  
+  a {
+    color: #444;
+    
+    &:hover {
+      color: #2e80d3;
+    }
+  }
+}
+
+pre {
+  background-color: $code-background-color;
+  border: 1px solid $code-border-color;
+  color: #444;
+  font-family: $monaco;
+  font-size: 0.8em;
+  margin: 0 0 2em;
+  overflow: auto;
+  padding: 0.5em;
+  
+  code {
+    background-color: $code-background-color;
+    border: medium none;
+    font-size: 1em;
+    padding: 0;
+  }
+}
+
+code {
+  background-color: $code-background-color;
+  border: 1px solid $code-border-color;
+  color: #444;
+  padding: 0 0.2em;
+  font-family: $monaco;
+  font-size: 0.8em;
+}
+
+h1 {
+  color: #000;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 0.25em;
+  
+  a {
+    color: $red-color;
+    border: 0;
+  }
+}
+
+h2 {
+  font-size: 1.3em;
+  margin-bottom: 0.2em;
+  font-weight: 700;
+    
+  a {
+    color: $text-color;
+    border: 0;
+  }
+}
+
+h3 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+h4 {
+  color: #999;
+  font-weight: bold;
+  margin-bottom: 0.2em;
+}
+
+// Content
+body > header, body > section, body > footer {
+  width: $width;
+  margin: 0 auto;
+}
+
+// Header
+body > header {
+  color: #a5a5a5;
+  margin: 5em auto 4em;
+  
+  p {
+    margin: 0;
+    
+    a {
+      color: #73acd6;
+
+      &:hover {
+        color: $link-color;
+      }
+    }
+  }
+}
+
+// Footer
+body > footer {
+  width: $width;
+  color: #aaa;
+  @include single-text-shadow(#fff, 0, 1px, 0);
+  font-size: 0.8em;
+  text-align: center;
+  margin: 3em auto;
+  
+  a {
+    color: #aaa;
+    
+    &:hover {
+      color: $link-color;
+    }
+  }
+}
+
+// Partials
+@import "partials/pagination";
+
+// Pages
+@import "pages/home";
+@import "pages/music";
+@import "pages/blog";
+@import "pages/about";
+
+// Misc
+.bordered-image {
+  @include bordered-image;
+}
+
+a.twitter-username:before {
+  content: "@";
+}
+
+section.server-error {
+  margin-bottom: 3em;
+}
+
+span.gray {
+  color: #777;
+}

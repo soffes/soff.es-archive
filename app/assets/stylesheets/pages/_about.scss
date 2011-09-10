@@ -1,0 +1,17 @@
+a#portrait {
+  @include bordered-image;
+  float: left;
+  width: 300px;
+  height: 300px;
+  margin: 0.5em 1em 0.5em 0;
+  
+  img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+div#ZE-widget {
+  margin: 2em auto 0;
+  width: 302px;
+}

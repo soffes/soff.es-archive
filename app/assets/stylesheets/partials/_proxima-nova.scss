@@ -1,0 +1,41 @@
+// ProximaNova-Light
+@include font-face("ProximaNova", font-files(
+  "http://assets.samsoff.es/fonts/style_148550.woff", woff,
+  "http://assets.samsoff.es/fonts/style_148550.ttf", truetype,
+  "http://assets.samsoff.es/fonts/style_148550.svg#ProximaNova-Light", svg
+), "http://assets.samsoff.es/fonts/style_148550.eot", 300);
+
+// ProximaNova-LightIt
+@include font-face("ProximaNova", font-files(
+  "http://assets.samsoff.es/fonts/style_148515.woff", woff,
+  "http://assets.samsoff.es/fonts/style_148515.ttf", truetype,
+  "http://assets.samsoff.es/fonts/style_148515.svg#ProximaNova-LightIt", svg
+), "http://assets.samsoff.es/fonts/style_148515.eot", 300, italic);
+
+// ProximaNova-Regular
+@include font-face("ProximaNova", font-files(
+  "http://assets.samsoff.es/fonts/style_148510.woff", woff,
+  "http://assets.samsoff.es/fonts/style_148510.ttf", truetype,
+  "http://assets.samsoff.es/fonts/style_148510.svg#ProximaNova-Regular", svg
+), "http://assets.samsoff.es/fonts/style_148510.eot", 400);
+
+// ProximaNova-RegularIt
+@include font-face("ProximaNova", font-files(
+  "http://assets.samsoff.es/fonts/style_148548.woff", woff,
+  "http://assets.samsoff.es/fonts/style_148548.ttf", truetype,
+  "http://assets.samsoff.es/fonts/style_148548.svg#ProximaNova-RegularIt", svg
+), "http://assets.samsoff.es/fonts/style_148548.eot", 400, italic);
+
+// ProximaNova-Bold
+@include font-face("ProximaNova", font-files(
+  "http://assets.samsoff.es/fonts/style_148514.woff", woff,
+  "http://assets.samsoff.es/fonts/style_148514.ttf", truetype,
+  "http://assets.samsoff.es/fonts/style_148514.svg#ProximaNova-Bold", svg
+), "http://assets.samsoff.es/fonts/style_148514.eot", 700);
+
+// ProximaNova-BoldIt
+@include font-face("ProximaNova", font-files(
+  "http://assets.samsoff.es/fonts/style_148509.woff", woff,
+  "http://assets.samsoff.es/fonts/style_148509.ttf", truetype,
+  "http://assets.samsoff.es/fonts/style_148509.svg#ProximaNova-BoldIt", svg
+), "http://assets.samsoff.es/fonts/style_148509.eot", 700, italic);

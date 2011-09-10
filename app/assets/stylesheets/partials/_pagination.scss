@@ -1,0 +1,43 @@
+div.pagination {
+  text-align: center;
+  margin: 0 0 2em;
+  
+  a {
+    padding: 2px 6px;
+    margin-right: 0.2em;
+    text-decoration: none;
+    border: 0;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    background: $link-color;
+    border-color: $link-color;
+    color: white;
+    text-shadow: none;
+  }
+  
+  a.next_page:hover, a.previous_page:hover {
+    background: none;
+    text-decoration: underline;
+    color: $link-color;
+  }
+  
+  span {
+    padding: 2px 6px;
+    margin-right: 0.2em;
+  }
+  
+  span.gap {
+    padding: 2px;
+    color: $gray-color;
+  }
+  
+  span.disabled {
+    color: #aaa;
+  }
+  
+  em {
+    padding: 4px 8px;
+  }
+}

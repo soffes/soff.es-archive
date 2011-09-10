@@ -9,6 +9,8 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+require 'goalie/rails'
+
 module SamSoffes
   class Application < Rails::Application
 

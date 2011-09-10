@@ -13,7 +13,7 @@
       <%- end -%>
     </p>
   </header>
-  <%= markdown(@post.content) %>
+  <%= @post.html_content.html_safe %>
 </article>
 
 

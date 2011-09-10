@@ -92,6 +92,10 @@ section.home {
     width: auto;
     color: #777;
     
+    em {
+      background: transparent;
+    }
+    
     header {
       h3 {
         margin-bottom: 0.25em;

@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.1'
 gem 'pg', '0.11.0'
 gem 'thin', '1.2.11'
+gem 'foreman', '0.21.0'
 
 gem 'kaminari', '0.12.4'
 gem 'tweet-button', '0.1.0'

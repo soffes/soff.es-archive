@@ -28,8 +28,14 @@ Now all you need to do to get going, all you need to is bundle (you'll need to i
     $ rake db:create
     $ rake db:schema:load
 
-If you have issues getting it up and running, [send me an email](mailto:sam@samsoff.es).
+Now you can start the server with [Foreman](https://github.com/ddollar/foreman):
+
+    $ bundle exec foreman start
+
+Then open <http://localhost:5000> in your browser to see it running. If you have issues getting it up and running, [send me an email](mailto:sam@samsoff.es).
 
 ### Admin
 
 The default credentials for the admin area are `admin` and `passw0rd`. These are obviously different on production or if you have environment variables for `ADMIN_USERNAME` and `ADMIN_PASSWORD`.
+
+To access the admin, go to <http://localhost:5000/admin/posts>.

@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
-    per_page = params[:format] == 'atom' ? 25 : 3
-    @posts = Post.published.page(params[:page]).per(per_page)
+    per_page = params[:format] == 'atom' ? 25 : Post.per_page
+    @posts = Post.published.recent.page(params[:page]).per(per_page)
   
     respond_to do |format|
       format.html

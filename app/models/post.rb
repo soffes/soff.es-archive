@@ -7,7 +7,7 @@ class Post < ActiveRecord::Base
   has_many :taggings, dependent: :destroy
   has_many :tags, through: :taggings
 
-  validates_presence_of :title, :content
+  validates_presence_of :title, :published_at, :content
   attr_writer :tag_names
   
   before_save do |post| 
@@ -21,11 +21,15 @@ class Post < ActiveRecord::Base
   end
   
   after_save :assign_tags
-
-  def self.published
-    where('published_at < ?', Time.zone.now).order('published_at DESC')
-  end
   
+  scope :published, lambda { where('published_at <= ?', Time.now.utc) }
+  scope :unpublished, lambda { where('published_at > ?', Time.now.utc) }
+  scope :recent, order('published_at DESC')
+
+  def self.per_page
+    3
+  end
+
   def tag_names
     @tag_names || tags.map(&:name).join(' ')
   end
@@ -35,11 +39,15 @@ class Post < ActiveRecord::Base
   end
   
   def published?
-    published_at && published_at < Time.now
+    published_at < Time.now
   end
   
   def unpublished?
     !published?
+  end
+  
+  def last_published?
+    self == self.class.published.last
   end
   
   private

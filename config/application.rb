@@ -20,7 +20,7 @@ module SamSoffes
     config.generators do |g|
       g.orm             :active_record
       g.template_engine :erb
-      g.test_framework  :rspec, :fixture => true
+      g.test_framework  :rspec, :fixture => false
     end
 
     config.filter_parameters << :password

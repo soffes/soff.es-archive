@@ -17,7 +17,7 @@ class TagsController < ApplicationController
     redirect_to tags_url and return unless @tag
 
     # Get posts for tag
-    @posts = @tag.posts.published.paginated(params[:page])
+    @posts = @tag.posts.published.page(params[:page]).per(Post.per_page)
 
     respond_to do |format|
       format.html

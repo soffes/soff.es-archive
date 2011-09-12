@@ -9,3 +9,4 @@ posts
 .sass-cache
 public/stylesheets
 public/assets
+.rspec

@@ -17,7 +17,18 @@ group :assets do
   gem 'compass', '0.12.alpha'
   gem 'sass-rails', '3.1.0'
   gem 'coffee-rails', '3.1.0'
-  gem 'uglifier'
+  gem 'uglifier', '1.0.3'
+  gem 'jquery-rails', '1.0.14'
 end
 
-gem 'jquery-rails'
+group :test, :development do
+  gem 'rspec-rails', '2.6.1'
+  gem 'rb-fsevent', '0.4.3.1'
+  # gem 'growl_notify', '0.0.1'
+end
+
+group :test do
+  gem 'factory_girl_rails', '1.2.0'
+  gem 'capybara', '1.1.1'
+  gem 'guard-rspec', '0.4.5'
+end

@@ -1,13 +1,11 @@
 <%- title "Tag: #{@tag.name}" -%>
 
-<h2><%= link_to "Tag: #{@tag.name}", @tag %></h2>
+<h2><%= link_to "##{@tag.name} Posts", @tag %></h2>
 
 <section class="tag">
   <%- if @posts && @posts.length > 0 -%>
-  <%= render @posts %>
-  <div class="pagination">
-      <%= will_paginate @posts %>
-  </div>
+  <%= render @posts -%>
+  <%= paginate @posts, :outer_window => 2, :inner_window => 1 -%>
   <%- else -%>
   <p>Nothing to see here. Move along.</p>
   <%- end -%>

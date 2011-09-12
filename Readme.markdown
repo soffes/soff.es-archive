@@ -1,25 +1,28 @@
 # samsoff.es
 
-This is my new blog in Rails 3. I [moved my blog to Jekyll](http://samsoff.es/post/new-blog-on-github-and-jekyll/) a few months ago and really missed playing with a Rails app, so I'm moving it back and starting from scratch.
+This is my new blog in Rails 3.1. I [moved my blog to Jekyll](http://samsoff.es/post/new-blog-on-github-and-jekyll/) a few months ago and really missed playing with a Rails app, so I'm moving it back and starting from scratch.
 
 ## Running Locally
 
-**Note:** I am using Ruby 1.9.2 both on Heroku and locally. I'd recommend using [RVM](http://rvm.beginrescueend.com/) to install Ruby 1.9.2.
+**Note:** I am using Ruby 1.9.2 both on Heroku and locally.
 
 Get the source (obviously)
 
     $ git clone git://github.com/samsoffes/samsoff.es.git
     $ cd samsoff.es
 
-I'm also using Postgres and Nginx (with Passenger) locally. If you don't have it already, you'll need to install Postgres. I wrote [a blog post on how to install Nginx and Postgres](http://samsoff.es/post/running-rails-local-development-with-nginx-postgres-and-passenger-with-homebrew/) that might be helpful. You can skip over the Nginx parts if you want.
+I'm also using Postgres locally. If you don't have it already, you'll need to install Postgres. You can do this easily with [Homebrew](https://github.com/mxcl/homebrew):
+
+    $ brew install postgresql
+
+(Be sure and read the caveats after it installs. You must run some additional commands to get it to complete the installation.)
 
 Run the following queries to setup the user in Postgres:
 
     $ psql postgres
-    # CREATE USER samsoffes SUPERUSER;
-    # \q
+    # CREATE USER samsoffes SUPERUSER;\q
 
-Now all you need to do to get going, all you need to is bundle and setup the database:
+Now all you need to do to get going, all you need to is bundle (you'll need to install [Bundler](http://gembundler.com) if you don't have it with `gem install bundler`) and setup the database:
 
     $ bundle install
     $ rake db:create
@@ -30,20 +33,3 @@ If you have issues getting it up and running, [send me an email](mailto:sam@sams
 ### Admin
 
 The default credentials for the admin area are `admin` and `passw0rd`. These are obviously different on production or if you have environment variables for `ADMIN_USERNAME` and `ADMIN_PASSWORD`.
-
-### Future Goals
-
-* Automatically annotate Google Analytics when a new blog post is published
-* New homepage
-* Integrate music podcast into app
-* Create podcast for screencasts
-* Implement [CanCan](http://github.com/ryanb/cancan) for admin permissions
-* Show recent social activity
-    * [Twitter](http://twitter.com/samsoffes) - most recent tweet
-    * [Last.fm](http://last.fm/user/samsoffes) - most listened to band for this week
-    * [Flickr](http://www.flickr.com/photos/samsoffes) - recent photos
-
-### Dream goals
-
-* Use [Cappuccino](http://cappuccino.org) for admin
-* Implement custom music player in HTML5

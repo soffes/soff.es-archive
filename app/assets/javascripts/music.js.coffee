@@ -23,7 +23,7 @@ $ ->
     
     # Old flash version
     if hasFlash()
-      swfobject.embedSWF "http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fsoundcloud.com%2Fsamsoffes%2F"+track+"&show_comments=false&auto_play=true&color="+soundCloudColor, id, "225", "81", "9.0.0", "/swf/expressInstall.swf", false, {
+      swfobject.embedSWF "http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fsoundcloud.com%2Fsamsoffes%2F"+track+"&show_comments=false&auto_play=true&color="+soundCloudColor, id, "225", "81", "9.0.0", "http://assets.samsoff.es/swf/expressInstall.swf", false, {
         "wmode": "transparent"
         "allowscriptaccess": "always"
       }

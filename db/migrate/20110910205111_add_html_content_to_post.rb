@@ -14,6 +14,6 @@ class AddHtmlContentToPost < ActiveRecord::Migration
   end
 
   def self.down
-    remove_column :posts, :short_url
+    remove_column :posts, :html_content
   end
 end

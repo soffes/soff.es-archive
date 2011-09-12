@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110910205111) do
+ActiveRecord::Schema.define(:version => 20110912053224) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(:version => 20110910205111) do
     t.datetime "updated_at"
     t.string   "permalink",    :limit => 128
     t.datetime "published_at"
-    t.string   "short_url"
     t.string   "tweet_text"
     t.boolean  "homepageable",                :default => true
     t.text     "html_content"

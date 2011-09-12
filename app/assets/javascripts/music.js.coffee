@@ -1,6 +1,6 @@
 #= require jquery
 #= require swfobject
-#= require self
+#= require_self
 
 soundCloudColor = "f6291d"
 apiKey = "TxrZJrlTcohZFYYsx6DIdg"

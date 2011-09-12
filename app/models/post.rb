@@ -26,10 +26,6 @@ class Post < ActiveRecord::Base
     where('published_at < ?', Time.zone.now).order('published_at DESC')
   end
   
-  def self.paginated page = 1, per_page = 3
-    paginate page: (page), include: :tags, per_page: per_page
-  end
-
   def tag_names
     @tag_names || tags.map(&:name).join(' ')
   end

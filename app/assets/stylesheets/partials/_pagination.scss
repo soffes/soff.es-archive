@@ -1,4 +1,4 @@
-div.pagination {
+nav.pagination {
   text-align: center;
   margin: 0 0 2em;
   
@@ -17,7 +17,7 @@ div.pagination {
     text-shadow: none;
   }
   
-  a.next_page:hover, a.previous_page:hover {
+  a[rel=next]:hover, a[rel=prev]:hover {
     background: none;
     text-decoration: underline;
     color: $link-color;

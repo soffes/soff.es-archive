@@ -1,5 +1,4 @@
 #= require jquery
-#= require_self
 
 $ ->
   generatePermalink = (text) ->

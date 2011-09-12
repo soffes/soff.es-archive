@@ -3,7 +3,7 @@
 <%- if @posts && @posts.length > 0 -%>
 <%= render @posts %>
 <div class="pagination">
-    <%= will_paginate @posts %>
+    <%= paginate @posts %>
 </div>
 <%- else -%>
 <p>Nothing to see here. Move along.</p>

@@ -4,7 +4,7 @@ gem 'rails', '3.1'
 gem 'pg', '0.11.0'
 gem 'thin', '1.2.11'
 
-gem 'will_paginate', '3.0.0'
+gem 'kaminari', '0.12.4'
 gem 'tweet-button', '0.1.0'
 gem 'goalie', '0.0.4'
 gem 'dalli', '1.1.2'

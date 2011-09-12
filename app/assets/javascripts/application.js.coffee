@@ -1,5 +1,3 @@
-#= require_self
-
 addLoadEvent = (func) ->
   oldonload = window.onload
   if typeof window.onload != "function"

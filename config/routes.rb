@@ -3,9 +3,9 @@ require 'not_preferred_host'
 SamSoffes::Application.routes.draw do
   
   # Rewrite non-preferred hosts in production
-  constraints(NotPreferredHost) do
-    match '/:path' => redirect { |params| "http://#{NotPreferredHost::PREFERRED_HOST}/#{params[:path]}" }
-  end
+  # constraints(NotPreferredHost) do
+  #   match '/:path' => redirect { |params| "http://#{NotPreferredHost::PREFERRED_HOST}/#{params[:path]}" }
+  # end
   
   # Root
   root :to => 'pages#home'

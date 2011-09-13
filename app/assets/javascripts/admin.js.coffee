@@ -1,6 +1,3 @@
-#= require jquery
-#= require_self
-
 $ ->
   generatePermalink = (text) ->
     text.toLowerCase().replace(/\s+/g, "-").replace(/'":\.\/&^\*/g, "")

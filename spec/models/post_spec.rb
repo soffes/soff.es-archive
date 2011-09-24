@@ -38,6 +38,7 @@ describe Post do
     b = Factory(:post, :published_at => 1.week.ago)
     c = Factory(:post, :published_at => 2.weeks.from_now)
     a.should_not be_last_published
+    a.should_not be_unpublished
     b.should be_last_published
     c.should_not be_last_published
   end

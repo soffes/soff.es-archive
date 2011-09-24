@@ -1,9 +1,9 @@
-<%- title "Edit Post" -%>
-<%- javascript :jquery, "admin" -%>
+<%- title 'Edit Post' -%>
+<%- javascript :jquery, 'admin' -%>
 
-<%= render :partial => "form" %>
+<%= render 'form' %>
 
 <p>
-  <%= link_to "Show", [:admin, @post] %> |
-  <%= link_to "View All", admin_posts_path %>
+  <%= link_to 'Show', [:admin, @post] %> |
+  <%= link_to 'View All', admin_posts_path %>
 </p>

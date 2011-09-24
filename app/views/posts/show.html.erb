@@ -7,7 +7,7 @@
     <%= tweet_button :url => post_url(@post, :host => 'samsoff.es'), :text => (@post.tweet_text or @post.title) %>
     <%= like_button post_url(@post, :host => 'samsoff.es') %>
   </div>
-  
+
   <div id="comments">
     <%= facebook_comments post_url(@post, :host => 'samsoff.es') %>
   </div>

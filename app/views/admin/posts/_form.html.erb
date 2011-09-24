@@ -20,8 +20,8 @@
     <%= f.label :tweet_text %> <small>limit 105 characters, defaults to title</small><br />
     <%= f.text_field :tweet_text %>
   </p>
-  <p<%= @post.published? ? " class=\"published\"" : "" %>>
-    <%= f.label :published_at, "Published" %> <small><%= post_published_time_in_words @post %></small><br />
+  <p>
+    <%= f.label :published_at, "Published" %><br />
     <%= f.datetime_select :published_at %>
   </p>
   <p>

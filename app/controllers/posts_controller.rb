@@ -1,23 +1,12 @@
 class PostsController < ApplicationController
+  respond_to :html, :xml, :json, :atom
+
   def index
     per_page = params[:format] == 'atom' ? 25 : Post.per_page
-    @posts = Post.published.recent.page(params[:page]).per(per_page)
-  
-    respond_to do |format|
-      format.html
-      format.xml  { render xml: @posts }
-      format.json { render json: @posts }
-      format.atom
-    end
+    respond_with @posts = Post.published.recent.page(params[:page]).per(per_page)
   end
 
   def show
-    @post = Post.published.where(permalink: params[:id]).first
-    
-    respond_to do |format|
-      format.html
-      format.xml  { render xml: @post }
-      format.json { render json: @post }
-    end
+    respond_with @post = Post.published.where(:permalink => params[:id]).first
   end
 end

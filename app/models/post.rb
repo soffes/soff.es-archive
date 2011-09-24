@@ -3,14 +3,14 @@ require 'uri'
 
 class Post < ActiveRecord::Base
 
-  has_many :comments, dependent: :destroy
-  has_many :taggings, dependent: :destroy
-  has_many :tags, through: :taggings
+  has_many :comments, :dependent => :destroy
+  has_many :taggings, :dependent => :destroy
+  has_many :tags, :through => :taggings
 
   validates_presence_of :title, :published_at, :content
   attr_writer :tag_names
-  
-  before_save do |post| 
+
+  before_save do |post|
     rc_options = [:hard_wrap, :autolink, :no_intraemphasis, :fenced_code, :gh_blockcode]
     doc = Nokogiri::HTML(Redcarpet.new(post.content, *rc_options).to_html)
     doc.search("//pre[@lang]").each do |pre|
@@ -19,9 +19,9 @@ class Post < ActiveRecord::Base
     end
     post.html_content = doc.css('body > *').to_s
   end
-  
+
   after_save :assign_tags
-  
+
   scope :published, lambda { where('published_at <= ?', Time.now.utc) }
   scope :unpublished, lambda { where('published_at > ?', Time.now.utc) }
   scope :recent, order('published_at DESC')
@@ -33,23 +33,23 @@ class Post < ActiveRecord::Base
   def tag_names
     @tag_names || tags.map(&:name).join(' ')
   end
-  
+
   def to_param
     self.permalink
   end
-  
+
   def published?
     published_at < Time.now
   end
-  
+
   def unpublished?
     !published?
   end
-  
+
   def last_published?
     self == self.class.published.last
   end
-  
+
   private
 
   def assign_tags

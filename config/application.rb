@@ -24,9 +24,9 @@ module SamSoffes
     end
 
     config.filter_parameters << :password
-    
+
     config.secret_token = "n7@XY2a!pUj{oYK*cQ{VqVDH[8DRRhZdQQy!i,Rnw;BZS/7Xk_S8p9Wd@m"
-    
+
     # Enable IdentityMap for Active Record, to disable set to false or remove the line below.
     config.active_record.identity_map = true
 

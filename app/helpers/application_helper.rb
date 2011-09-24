@@ -5,28 +5,25 @@ module ApplicationHelper
     text: 'This will blow your face off with awesome',
     via: 'samsoffes'
   }
-  
+
   def podcast_url
     'http://itunes.apple.com/podcast/the-experiment/id292395055'
   end
-  
+
   def github_url
     'http://github.com/samsoffes'
   end
-  
-  def wishlist_url
-    'http://amzn.com/w/1PUZO1DPV7FFL'
-  end
-  
+
   def dribbble_url
     'http://dribbble.com/players/samsoffes'
   end
-  
+
   def tag_cloud(tags, classes)
     max, min = 0, 0
     tags.each do |tag|
-      max = tag.count.to_i if tag.count.to_i > max
-      min = tag.count.to_i if tag.count.to_i < min
+      count = tag.count.to_i
+      max = count if count > max
+      min = count if count < min
     end
 
     divisor = ((max - min) / classes.size) + 1

@@ -10,3 +10,5 @@ posts
 public/stylesheets
 public/assets
 .rspec
+coverage
+rails_best_practices_output.html

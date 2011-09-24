@@ -4,6 +4,7 @@ class DowncaseTagNames < ActiveRecord::Migration
     tags.each do |tag|
       tag.name = tag.name.downcase
       tag.save
+      say "#{tag.id} was updated"
     end
   end
 

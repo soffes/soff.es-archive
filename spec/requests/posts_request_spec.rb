@@ -41,4 +41,15 @@ describe 'Post request' do
     visit post_path(post)
     page.should have_selector('div.highlight pre')
   end
+  
+  it 'shows all posts' do
+    published_post = Factory(:post, :title => 'Awesome post', :published_at => 2.days.ago)
+    unpublished_post = Factory(:post, :title => 'Silly post')
+    
+    visit post_path(published_post)
+    page.should have_content('Awesome post')
+    
+    visit post_path(unpublished_post)
+    page.should have_content('Silly post')
+  end
 end

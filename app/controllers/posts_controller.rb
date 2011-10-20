@@ -7,6 +7,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    respond_with @post = Post.published.where(:permalink => params[:id]).first
+    respond_with @post = Post.where(permalink: params[:id]).first
   end
 end

@@ -12,6 +12,7 @@ gem 'dalli', '1.1.2'
 
 gem 'redcarpet', '1.17.2'
 gem 'nokogiri', '1.5.0'
+gem 'asset_sync'
 
 group :assets do
   gem 'compass', '0.12.alpha'

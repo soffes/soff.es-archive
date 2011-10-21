@@ -14,6 +14,9 @@ SamSoffes::Application.configure do
   # Compress JavaScripts and CSS
   config.assets.compress = true
   config.assets.precompile += ['admin.js', 'music.js', 'jquery.js', 'iphone.css', 'talks.css']
+  config.action_controller.asset_host = Proc.new do |source, request|
+    request.ssl? ? "https://#{ENV['AWS_BUCKET']}" : "http://#{ENV['AWS_BUCKET']}"
+  end
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
   config.assets.compile = false

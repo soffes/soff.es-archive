@@ -1,6 +1,3 @@
-require 'net/http'
-require 'uri'
-
 class Post < ActiveRecord::Base
 
   has_many :comments, :dependent => :destroy
@@ -14,8 +11,6 @@ class Post < ActiveRecord::Base
     rc_options = [:hard_wrap, :autolink, :no_intraemphasis, :fenced_code, :gh_blockcode]
     doc = Nokogiri::HTML(Redcarpet.new(post.content, *rc_options).to_html)
     doc.search("//pre[@lang]").each do |pre|
-      # pre.replace Net::HTTP.post_form(URI.parse('http://pygments-1-4.appspot.com/'),
-      #                                 {'lang'=>pre[:lang], 'code'=>pre.text.strip}).body
       pre.replace Pygmentize.process(pre.text.strip, pre[:lang].to_sym)
     end
     post.html_content = doc.css('body > *').to_s

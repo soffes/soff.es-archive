@@ -72,6 +72,25 @@ div.social {
   }
 }
 
+nav.posts {
+  @include clearfix;
+  margin: 1em 0 0;
+  
+  li {
+    display: block;
+    width: 44%;
+  }
+  
+  li.previous {
+    float: left;
+  }
+  
+  li.next {
+    float: right;
+    text-align: right;
+  }
+}
+
 // Gist
 div.gist div.gist-file div.gist-meta {
   padding: 0.5em;

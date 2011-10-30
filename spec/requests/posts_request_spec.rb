@@ -36,19 +36,32 @@ describe 'Post request' do
     page.should have_content('Awesome post')
   end
 
+  it 'shows next and previous post' do
+    Post.delete_all
+    Factory(:post, :title => 'Awesome post', :published_at => 3.weeks.ago)
+    post = Factory(:post, :title => 'Something About Trees', :published_at => 2.weeks.ago)
+    visit post_path(post)
+    page.should have_content('Something About Trees')
+
+    Factory(:post, :title => 'Something About Dogs', :published_at => 1.weeks.ago)
+    visit post_path(post)
+    page.should have_content('Something About Trees')
+    page.should have_content('Something About Dogs')
+  end
+
   it 'uses Pygments for code blocks' do
     post = Factory(:post, :title => 'Awesome post', :content => "Hello\n\n``` ruby\nputs 'foo'\n```")
     visit post_path(post)
     page.should have_selector('div.highlight pre')
   end
-  
+
   it 'shows all posts' do
     published_post = Factory(:post, :title => 'Awesome post', :published_at => 2.days.ago)
     unpublished_post = Factory(:post, :title => 'Silly post')
-    
+
     visit post_path(published_post)
     page.should have_content('Awesome post')
-    
+
     visit post_path(unpublished_post)
     page.should have_content('Silly post')
   end

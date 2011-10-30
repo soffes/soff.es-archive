@@ -7,6 +7,24 @@
     <%= tweet_button :url => post_url(@post, :host => 'samsoff.es'), :text => (@post.tweet_text or @post.title) %>
     <%= like_button post_url(@post, :host => 'samsoff.es') %>
   </div>
+  <nav class="posts">
+    <ul>
+      <li class="previous">
+        <%- previous_post = @post.previous; if previous_post -%>
+        <%= link_to "&larr; #{previous_post.title}".html_safe, previous_post  %>
+        <%- else -%>
+        <span class="gray">This is my first post</span>
+        <%- end -%>
+      </li>
+      <li class="next">
+         <%- next_post = @post.next; if next_post -%>
+         <%= link_to "#{next_post.title} &rarr;".html_safe, next_post  %>
+         <%- else -%>
+         <span class="gray">This is my latest post</span>
+         <%- end -%>
+      </li>
+    </ul>
+  </nav>
 </section>
 <%- else -%>
 <%- title 'Post not found' -%>

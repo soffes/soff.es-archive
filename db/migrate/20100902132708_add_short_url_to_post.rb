@@ -1,5 +1,5 @@
 class AddShortUrlToPost < ActiveRecord::Migration
-  def self.up
+  def up
     add_column :posts, :short_url, :string
     add_column :posts, :tweet_text, :string
     add_column :posts, :homepageable, :boolean, :default => true
@@ -11,7 +11,7 @@ class AddShortUrlToPost < ActiveRecord::Migration
     end
   end
 
-  def self.down
+  def down
     remove_column :posts, :short_url
   end
 end

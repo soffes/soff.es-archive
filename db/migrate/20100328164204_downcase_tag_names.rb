@@ -1,5 +1,5 @@
 class DowncaseTagNames < ActiveRecord::Migration
-  def self.up
+  def up
     tags = Tag.all
     tags.each do |tag|
       tag.name = tag.name.downcase
@@ -8,7 +8,7 @@ class DowncaseTagNames < ActiveRecord::Migration
     end
   end
 
-  def self.down
+  def down
     raise ActiveRecord::IrreversibleMigration
   end
 end

@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1'
+gem 'rails', '~> 3.1'
 gem 'pg'
 gem 'thin'
 gem 'foreman'
@@ -14,7 +14,7 @@ gem 'asset_sync'
 gem 'pygmentize'
 
 group :assets do
-  gem 'compass', '0.12.alpha.0'
+  gem 'compass', '~> 0.12.alpha.0'
   gem 'sass-rails'
   gem 'coffee-rails'
   gem 'uglifier'

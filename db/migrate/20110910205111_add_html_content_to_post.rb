@@ -3,7 +3,7 @@ require 'posts_helper'
 class AddHtmlContentToPost < ActiveRecord::Migration
   extend PostsHelper
 
-  def self.up
+  def up
     add_column :posts, :html_content, :text
     Post.all.each do |post|
 
@@ -14,7 +14,7 @@ class AddHtmlContentToPost < ActiveRecord::Migration
     end
   end
 
-  def self.down
+  def down
     remove_column :posts, :html_content
   end
 end

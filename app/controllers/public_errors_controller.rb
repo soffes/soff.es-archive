@@ -1,19 +1,14 @@
 class PublicErrorsController < ApplicationController
   layout 'application'
+  before_filter :internal_server_error, :only => [:conflict, :method_not_allowed, :not_implemented]
 
   def routing_error
     render 'not_found'
   end
 
-  def conflict
-    render 'internal_server_error'
-  end
+  private
 
-  def method_not_allowed
-    render 'internal_server_error'
-  end
-
-  def not_implemented
-    render 'internal_server_error'
+  def internal_server_error
+    render 'internal_server_error' and return
   end
 end

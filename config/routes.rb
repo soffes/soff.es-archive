@@ -42,8 +42,8 @@ SamSoffes::Application.routes.draw do
   # Admin
   namespace :admin do
     root :to => 'admin#index', :as => 'admin'
-    resources :posts, :only => [:show, :new, :create, :update, :destroy, :index]
-    resources :tags, :only => [:new, :create, :update, :destroy, :index]
+    resources :posts, :only => [:show, :new, :create, :update, :edit, :destroy, :index]
+    resources :tags, :only => [:new, :create, :update, :edit, :destroy, :index]
   end
 
   match 'blog/xmlrpc' => 'posts#xe_index', :format => :xml

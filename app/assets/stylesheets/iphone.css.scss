@@ -1,6 +1,12 @@
+@import "compass/css3";
+
 $iphone-width: 320px;
 $iphone-content-width: 300px;
 $iphone-media-width: 300px;
+
+html {
+  -webkit-text-size-adjust: none;
+}
 
 // Layout
 html, body {
@@ -8,8 +14,12 @@ html, body {
 }
 
 body {
-  padding: 2em 10px;
-  font-size: 20px;
+  padding: 1em 10px;
+}
+
+body, input, textarea {
+  font-size: 16px;
+  line-height: 1.6em;
 }
 
 body > header, body > section, body > footer {
@@ -22,7 +32,7 @@ body > header {
 
 // Tags
 h2 {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 // Music
@@ -44,8 +54,7 @@ section > article {
   }
   
   div.video {
-    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
-    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+    @include single-box-shadow(rgba(0, 0, 0, 0.7), 0, 0, 4px);
   }
   
   div.video, div.video.vimeo iframe {

@@ -41,7 +41,7 @@ SamSoffes::Application.routes.draw do
 
   # Admin
   namespace :admin do
-    root :to => 'admin#index', :as => 'admin'
+    root :to => 'admin#index'
     resources :posts, :only => [:show, :new, :create, :update, :edit, :destroy, :index]
     resources :tags, :only => [:new, :create, :update, :edit, :destroy, :index]
   end

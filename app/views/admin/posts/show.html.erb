@@ -1,5 +1,9 @@
 <% title "#{@post.title}" %>
 
+<div class="admin">
+  <p><%= link_to "New Post", new_admin_post_path %></p>
+</div>
+
 <article>
   <header>
     <h2><%= link_to @post.title, [:admin, @post] %></h2>
@@ -15,6 +19,3 @@
   </header>
   <%= @post.html_content.html_safe %>
 </article>
-
-
-<p><%= link_to "New Post", new_admin_post_path %></p>

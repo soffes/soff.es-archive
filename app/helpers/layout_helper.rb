@@ -19,8 +19,4 @@ module LayoutHelper
   def like_button(url)
     "<iframe src=\"http://www.facebook.com/plugins/like.php?href=#{CGI::escape(url)}&amp;layout=button_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=21\" scrolling=\"no\" frameborder=\"0\" id=\"facebook-like-button\" style=\"border:none; overflow:hidden; height:21px;\" allowTransparency=\"true\"></iframe>".html_safe
   end
-
-  def facebook_comments(url)
-    "<div id=\"fb-root\"></div><script src=\"http://connect.facebook.net/en_US/all.js#xfbml=1\"></script><fb:comments href=\"#{url}\" num_posts=\"2\" width=\"640\"></fb:comments>".html_safe
-  end
 end

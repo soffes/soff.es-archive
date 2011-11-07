@@ -4,10 +4,6 @@ $iphone-width: 320px;
 $iphone-content-width: 300px;
 $iphone-media-width: 300px;
 
-html {
-  -webkit-text-size-adjust: none;
-}
-
 // Layout
 html, body {
   width: $iphone-width;

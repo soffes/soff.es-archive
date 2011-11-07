@@ -1,12 +1,8 @@
 class Admin::PostsController < AdminController
-  before_filter :find_post, :only => [:edit, :update, :destroy]
+  before_filter :find_post, :only => [:show, :edit, :update, :destroy]
 
   def index
     @posts = Post.recent.page(params[:page])
-  end
-
-  def show
-    @post = Post.where(:permalink => params[:id]).first
   end
 
   def new

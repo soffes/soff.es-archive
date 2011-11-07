@@ -22,7 +22,7 @@ group :assets do
 end
 
 group :test, :development do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 2.8.0.rc1'
   gem 'rb-fsevent'
   gem 'growl_notify'
 end
@@ -33,4 +33,5 @@ group :test do
   gem 'guard-rspec'
   gem 'simplecov', :require => false
   gem 'metrical'
+  gem 'launchy'
 end

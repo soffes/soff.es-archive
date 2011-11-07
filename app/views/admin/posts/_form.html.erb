@@ -25,8 +25,7 @@
     <%= f.datetime_select :published_at %>
   </p>
   <p>
-    <%= f.label :homepageable %><br />
-    <%= f.check_box :homepageable %>
+    <%= f.check_box :homepageable %> <%= f.label :homepageable %>
   </p>
   <p><%= f.submit "Submit" %></p>
 <% end %>

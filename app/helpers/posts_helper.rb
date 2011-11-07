@@ -15,7 +15,6 @@ module PostsHelper
   end
 
   def post_published_time_in_words post
-    return 'not published' unless post.published?
     words = time_ago_in_words(post.published_at)
     if post.published?
       "#{words} ago"

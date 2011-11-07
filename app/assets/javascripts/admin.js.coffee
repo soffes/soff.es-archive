@@ -1,3 +1,5 @@
+#= require jquery_ujs
+
 $ ->
   generatePermalink = (text) ->
     text.toLowerCase().replace(/\s+/g, "-").replace(/'":\.\/&^\*/g, "")

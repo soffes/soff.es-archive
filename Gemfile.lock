@@ -112,6 +112,11 @@ GEM
       thor (~> 0.14.6)
     guard-rspec (0.5.2)
       guard (>= 0.8.4)
+    heroku (2.12.0)
+      launchy (>= 0.3.2)
+      rest-client (~> 1.6.1)
+      rubyzip
+      term-ansicolor (~> 1.0.5)
     hike (1.2.1)
     hirb (0.5.0)
     i18n (0.6.0)
@@ -201,6 +206,8 @@ GEM
       ruby2ruby (~> 1.2)
       ruby_parser (~> 2.0)
       sexp_processor (~> 3.0)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     roodi (2.1.0)
       ruby_parser
     rspec (2.8.0.rc1)
@@ -277,6 +284,7 @@ DEPENDENCIES
   goalie
   growl_notify
   guard-rspec
+  heroku
   jquery-rails
   kaminari
   launchy

@@ -21,6 +21,10 @@ group :assets do
   gem 'jquery-rails'
 end
 
+group :development do
+  gem 'heroku'
+end
+
 group :test, :development do
   gem 'rspec-rails', '~> 2.8.0.rc1'
   gem 'rb-fsevent'

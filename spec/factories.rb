@@ -7,5 +7,5 @@ Factory.define :post do |f|
 end
 
 Factory.define :tag do |f|
-  f.name 'Awesome'
+  f.sequence(:name) { |n| "tag-#{n}" }
 end

@@ -14,7 +14,7 @@ gem 'asset_sync'
 gem 'pygmentize'
 
 group :assets do
-  gem 'compass', '~> 0.12.alpha.0'
+  gem 'compass', '~> 0.12.alpha.2'
   gem 'sass-rails'
   gem 'coffee-rails'
   gem 'uglifier'

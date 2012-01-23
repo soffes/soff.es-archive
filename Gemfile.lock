@@ -308,7 +308,7 @@ DEPENDENCIES
   pygmentize
   rails (~> 3.1)
   rb-fsevent
-  redcarpet
+  redcarpet (= 1.17.2)
   rspec-rails (~> 2.8.0.rc1)
   sass-rails
   simplecov

@@ -4,7 +4,7 @@ SamSoffes::Application.routes.draw do
 
   # Rewrite non-preferred hosts in production
   constraints(NotPreferredHost) do
-    match '/:path' => redirect { |params| "http://#{NotPreferredHost::PREFERRED_HOST}/#{params[:path]}" }
+    match '/:path' => redirect { |params, request| "http://#{NotPreferredHost::PREFERRED_HOST}/#{params[:path]}" }
   end
 
   # Root
@@ -22,19 +22,18 @@ SamSoffes::Application.routes.draw do
   match '/talks' => 'pages#talks', :as => 'talks'
 
   # Redirects
-  match '/posts' => redirect { |params| '/blog' }
-  match '/post/:permalink' => redirect { |params| "/posts/#{params[:permalink]}" }
-  match '/archive.:format' => redirect { |params| '/blog' }
-  match '/music.:format' => redirect { |params| '/music' }
-  match '/about.:format' => redirect { |params| '/about' }
-  match '/mobilex' => redirect { |params| '/talks' }
-  match '/:hellointernet' => redirect { |params| '/tags/hello-internet' }, :constraints => { :hellointernet => /hello[_-]?internet/ }
-  match '/resume(.:format)' => redirect { |params| 'http://assets.samsoff.es/pdf/Sam%20Soffes%20Resume.pdf' }, :as => 'resume'
-  # match '/:opensource' => redirect { |params| '/open-source' }, :constraints => { :opensource => /open[\-_]?source(?:[\-_]?projects)?/ }
-  match '/ping' => redirect { |params| PING_PROFILE_URL }
+  match '/posts' => redirect('/blog')
+  match '/post/:permalink' => redirect { |params, request| "/posts/#{params[:permalink]}" }
+  match '/archive.:format' => redirect('/blog')
+  match '/music.:format' => redirect('/music')
+  match '/about.:format' => redirect('/about')
+  match '/mobilex' => redirect('/talks')
+  match '/:hellointernet' => redirect { |params, request| '/tags/hello-internet' }, :constraints => { :hellointernet => /hello[_-]?internet/ }
+  match '/resume(.:format)' => redirect('http://assets.samsoff.es/pdf/Sam%20Soffes%20Resume.pdf'), :as => 'resume'
+  match '/ping' => redirect(PING_PROFILE_URL)
 
   # Awesome source redirects
-  match '/source(/:code_path)' => redirect { |params|
+  match '/source(/:code_path)' => redirect { |params, request|
     code_path = params[:code_path] ? "/tree/master/#{params[:code_path]}" : ''
     "http://github.com/samsoffes/samsoff.es#{code_path}"
   }, :constraints => { :code_path => /[a-zA-Z0-9_\-\.\/]+/ }

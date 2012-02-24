@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <title><%= "Sam Soffes"+(yield(:title) && !yield(:title).empty? ? " - "+yield(:title) : "") %></title>
   <link href="http://feeds.feedburner.com/samsoffes/blog" rel="alternate" title="samsoff.es" type="application/atom+xml" />
-  <link href="http://feeds.feedburner.com/samsoffes/the-experiment" rel="alternate" title="The Experiment Podcast" type="application/atom+xml" />
   <link rel="apple-touch-icon-precomposed" href="http://assets.samsoff.es/images/apple-touch-icon.png">
   <link rel="me" href="http://www.google.com/profiles/samsoffes" />
   <link rel="author" type="text/plain" href="http://samsoff.es/humans.txt" />
@@ -17,12 +16,13 @@
   <%- end -%>
   <%= javascript_include_tag 'application' -%>
   <%= yield(:head) -%>
-  <%= google_analytics %>
 </head>
 <body>
   <%= yield :pre_content %>
   <%= yield %>
   <%= yield :post_content %>
+  <% if Rails.env.production? %>
   <script type="text/javascript">var _gauges=_gauges||[];(function(){var t=document.createElement('script');t.async=true;t.id='gauges-tracker';t.setAttribute('data-site-id','4f455996cb25bc5d88000087');t.src='//secure.gaug.es/track.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(t, s);})();</script>
+  <% end %>
 </body>
 </html>

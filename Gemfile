@@ -12,6 +12,7 @@ gem 'redcarpet', '1.17.2'
 gem 'nokogiri'
 gem 'asset_sync'
 gem 'pygmentize'
+gem 'hirefireapp'
 
 group :assets do
   gem 'compass-rails'

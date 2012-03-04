@@ -1,6 +1,6 @@
 <%- title 'Edit Post' -%>
 
-<%= render 'form' %>
+<%= render partial: 'form', locals: { post: @post } %>
 
 <div class="admin">
   <p>

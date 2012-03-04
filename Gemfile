@@ -26,16 +26,10 @@ group :development do
   gem 'heroku'
 end
 
-group :test, :development do
-  gem 'rspec-rails'
-  gem 'rb-fsevent'
-  gem 'growl_notify'
-end
-
 group :test do
   gem 'factory_girl_rails'
+  gem 'minitest'
   gem 'capybara'
-  gem 'guard-rspec'
+  gem 'turn'
   gem 'simplecov', :require => false
-  gem 'launchy'
 end

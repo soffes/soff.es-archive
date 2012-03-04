@@ -1,10 +1,10 @@
-require 'spec_helper'
+require 'test_helper'
 
-describe 'Admin request' do
+describe 'Admin integration' do
   it 'reports unauthorized access as a normal user' do
     page.driver.browser.authorize(nil, nil)
     visit new_admin_post_path
-    page.should have_content('Access denied')
+    page.text.must_include('Access denied')
   end
 
   # Not sure how to test this

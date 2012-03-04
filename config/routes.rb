@@ -7,12 +7,9 @@ SamSoffes::Application.routes.draw do
     match '/:path' => redirect { |params, request| "http://#{NotPreferredHost::PREFERRED_HOST}/#{params[:path]}" }
   end
 
-  # Root
-  root :to => 'pages#home'
-
   # Blog
+  root :to => 'posts#index'
   match '/posts.:format' => 'posts#index'
-  match '/blog' => 'posts#index', :as => 'blog'
   resources :posts, :only => [:show]
   resources :tags, :only => [:index, :show]
 
@@ -22,7 +19,8 @@ SamSoffes::Application.routes.draw do
   match '/talks' => 'pages#talks', :as => 'talks'
 
   # Redirects
-  match '/posts' => redirect('/blog')
+  match '/blog' => redirect('/')
+  match '/posts' => redirect('/')
   match '/post/:permalink' => redirect { |params, request| "/posts/#{params[:permalink]}" }
   match '/archive.:format' => redirect('/blog')
   match '/music.:format' => redirect('/music')
@@ -44,7 +42,4 @@ SamSoffes::Application.routes.draw do
     resources :posts, :only => [:show, :new, :create, :update, :edit, :destroy, :index]
     resources :tags, :only => [:new, :create, :update, :edit, :destroy, :index]
   end
-
-  match 'blog/xmlrpc' => 'posts#xe_index', :format => :xml
-
 end

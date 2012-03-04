@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'test_helper'
 
-describe 'Post admin request' do
+describe 'Post admin integration' do
   before :each do
     page.driver.browser.authorize(ADMIN_USERNAME, ADMIN_PASSWORD)
   end
@@ -8,7 +8,7 @@ describe 'Post admin request' do
   it 'shows published in for future posts' do
     future = Factory(:post, :title => 'Back to the Future', :published_at => 2.days.from_now)
     visit admin_post_path(future)
-    page.should have_content('in 2 days')
+    page.text.must_include('in 2 days')
   end
 
   it 'creates an post as admin' do
@@ -20,8 +20,8 @@ describe 'Post admin request' do
     fill_in 'Tag names', :with => 'awesome lamp'
     click_on 'Submit'
     
-    page.should have_content('Anchorman')
-    Post.last.title.should eq('Anchorman')
+    page.text.must_include('Anchorman')
+    Post.last.title.must_equal('Anchorman')
   end
   
   it 'should show form when create fails' do
@@ -33,7 +33,7 @@ describe 'Post admin request' do
     click_on 'Submit'
     
     # Render form
-    page.should have_content('Homepageable')
+    page.text.must_include('Homepageable')
   end
 
   it 'edits an post as admin' do
@@ -44,7 +44,7 @@ describe 'Post admin request' do
     fill_in 'Title', :with => 'Anchorman'
     click_on 'Submit'
     
-    page.should have_content('Anchorman')
+    page.text.must_include('Anchorman')
   end
   
   it 'should show form when edit fails' do
@@ -56,7 +56,7 @@ describe 'Post admin request' do
     click_on 'Submit'
     
     # Render form
-    page.should have_content('Homepageable')
+    page.text.must_include('Homepageable')
   end
   
   it 'deletes an post as admin' do
@@ -65,6 +65,6 @@ describe 'Post admin request' do
     visit admin_posts_path
     
     click_link 'Destroy'
-    Post.should have(:no).records
+    Post.count.must_equal(0)
   end
 end

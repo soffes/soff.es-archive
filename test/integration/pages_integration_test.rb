@@ -1,18 +1,18 @@
-require 'spec_helper'
+require 'test_helper'
 
-describe 'Page request' do
+describe 'Page integration' do
   it 'should show about page' do
     visit about_path
-    page.should have_content('About')
+    page.text.must_include('About')
   end
 
   it 'should show music page' do
     visit music_path
-    page.should have_content('Music')
+    page.text.must_include('Music')
   end
 
   it 'should show talks page' do
     visit talks_path
-    page.should have_content('Talks')
+    page.text.must_include('Talks')
   end
 end

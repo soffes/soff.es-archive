@@ -1,7 +1,7 @@
 <%- content_for :pre_content do -%>
 <header>
   <h1><%= link_to 'Hi, I\'m Sam.', root_url %></h1>
-  <p>I like to <a href="http://github.com/samsoffes" rel="external nofollow">create software</a>, <%= link_to 'make music', music_url %>, and <%= link_to 'write about technology', blog_url %>.</p>
+  <p>I like to <a href="http://github.com/samsoffes" rel="external nofollow">create software</a>, <%= link_to 'make music', music_url %>, and <%= link_to 'write about technology', root_url, rel: 'home' %>.</p>
   <p>Find out <%= link_to 'more about me', about_url %>.</p>
 </header>
 <section>
@@ -9,7 +9,7 @@
 <%- content_for :post_content do -%>
 </section>
 <footer>
-  <p>Copyright &copy; 2012 <%= link_to 'Sam Soffes', root_url, :rel => 'home' %></p>
+  <p>Copyright &copy; 2012 <%= link_to 'Sam Soffes', root_url, rel: 'home' %></p>
 </footer>
 <%- end -%>
 <%= render :file => "layouts/abstract" -%>

@@ -1,6 +1,6 @@
-source 'http://rubygems.org'
+source :rubygems
 
-gem 'rails', '~> 3.1'
+gem 'rails', '3.2.2'
 gem 'pg'
 gem 'thin'
 gem 'foreman'
@@ -27,7 +27,7 @@ group :development do
 end
 
 group :test, :development do
-  gem 'rspec-rails', '~> 2.8.0.rc1'
+  gem 'rspec-rails'
   gem 'rb-fsevent'
   gem 'growl_notify'
 end
@@ -36,7 +36,6 @@ group :test do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'guard-rspec'
-  # gem 'simplecov', :require => false
-  # gem 'metrical'
+  gem 'simplecov', :require => false
   gem 'launchy'
 end

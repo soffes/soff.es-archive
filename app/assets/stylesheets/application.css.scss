@@ -64,8 +64,10 @@ p {
 }
 
 hr {
-  margin-bottom: 2em;
+  margin: 0 auto 2em;
   border: 0;
+  border-bottom: 1px solid #ddd;
+  width: 60%;
 }
 
 blockquote {

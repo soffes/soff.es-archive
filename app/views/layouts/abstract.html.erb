@@ -15,6 +15,15 @@
   <meta name="viewport" content="width=768, maximum-scale=1.0" />
   <%- end -%>
   <%= javascript_include_tag 'application' -%>
+  <meta property="fb:app_id" content="<%= FACEBOOK_APP_ID %>" />
+  <meta property="og:site_name" content="samsoff.es" />
+  <%- unless @post -%>
+  <link rel="canonical" href="http://samsoff.es/" />
+  <meta property="og:description" content="The blog of Sam Soffes" />
+  <meta property="og:title" content="samsoff.es" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://samsoff.es/" />
+  <%- end -%>
   <%= yield(:head) -%>
 </head>
 <body>

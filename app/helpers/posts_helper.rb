@@ -24,7 +24,13 @@ module PostsHelper
   end
   
   def post_summary(post)
-    doc = Nokogiri::HTML(post.html_content)
-    doc.xpath("//text()").remove.to_s.truncate(200)
+    key = "post-#{post.id}-summary"
+    summary = Rails.cache.read(key)
+    unless summary
+      doc = Nokogiri::HTML(post.html_content)
+      summary = doc.xpath("//text()").remove.to_s.truncate(200)
+      Rails.cache.write(key, summary)
+    end
+    summary
   end
 end

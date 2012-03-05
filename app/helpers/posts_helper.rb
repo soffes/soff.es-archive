@@ -22,4 +22,9 @@ module PostsHelper
       "in #{words}"
     end
   end
+  
+  def post_summary(post)
+    doc = Nokogiri::HTML(post.html_content)
+    doc.xpath("//text()").remove.to_s.truncate(200)
+  end
 end

@@ -4,7 +4,7 @@ This is my new blog in Rails 3.1. I [moved my blog to Jekyll](http://samsoff.es/
 
 ## Running Locally
 
-**Note:** I am using Ruby 1.9.2 both on Heroku and locally.
+**Note:** I am using Ruby 1.9.3 both on Heroku and locally.
 
 Get the source (obviously)
 

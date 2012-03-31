@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <title><%= "Sam Soffes"+(yield(:title) && !yield(:title).empty? ? " - "+yield(:title) : "") %></title>
-  <link href="http://feeds.feedburner.com/samsoffes/blog" rel="alternate" title="samsoff.es" type="application/atom+xml" />
+  <link href="<%= posts_url(format: :atom) %>" rel="alternate" title="samsoff.es" type="application/atom+xml" />
   <link rel="apple-touch-icon-precomposed" href="http://assets.samsoff.es/images/apple-touch-icon.png">
   <link rel="me" href="http://www.google.com/profiles/samsoffes" />
   <link rel="author" type="text/plain" href="http://samsoff.es/humans.txt" />

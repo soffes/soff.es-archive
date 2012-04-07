@@ -61,6 +61,16 @@ section article {
     float: left;
     margin: 0.25em 0.5em 0.5em 0;
   }
+  
+  a.image-left {
+    float: left;
+    margin: 0 1em 1em 0;
+  }
+  
+  a.image-right {
+    float: right;
+    margin: 0 0 1em 1em;
+  }
 }
 
 div.social {

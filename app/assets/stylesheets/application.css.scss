@@ -184,6 +184,10 @@ body > header {
   }
 }
 
+a.hire, a.hire:hover {
+  color: $red-color;
+}
+
 // Footer
 body > footer {
   width: $width;

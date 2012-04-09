@@ -23,6 +23,7 @@ body {
   font-weight: 300;
   font-size: 17px;
   line-height: 1.5em;
+  padding: 0 10px;
 }
 
 input {
@@ -162,7 +163,7 @@ h4 {
 
 // Content
 body > header, body > section, body > footer {
-  width: $width;
+  max-width: $width;
   margin: 0 auto;
 }
 
@@ -170,6 +171,8 @@ body > header, body > section, body > footer {
 body > header {
   color: #a5a5a5;
   margin: 5em auto 4em;
+  @include transition-property(margin);
+	@include transition-duration(0.2s);
   
   p {
     margin: 0;
@@ -190,7 +193,6 @@ a.hire, a.hire:hover {
 
 // Footer
 body > footer {
-  width: $width;
   color: #aaa;
   @include single-text-shadow(#fff, 0, 1px, 0);
   font-size: 0.8em;
@@ -230,4 +232,44 @@ section.server-error {
 
 span.gray {
   color: #777;
+}
+
+@media all and (max-width: 640px) {
+  // Header
+  body > header {
+    margin: 3em auto;
+  }
+  
+  // About
+  a#portrait {
+    border-width: 0;
+  }
+  
+  // Post nav
+  nav.posts {
+    ul {
+      margin-bottom: 0;
+    }
+    li.previous {
+      margin-bottom: 1em;
+    }
+    
+    li.previous, li.next {
+      text-align: center;
+      float: none;
+      width: 100%;
+    }
+  }
+
+  // Pagination
+  nav.pagination {
+    a, span.gap {
+      display: none;
+      margin: 0;
+    }
+    
+    a.prev, a.next {
+      display: inline;
+    }
+  }
 }

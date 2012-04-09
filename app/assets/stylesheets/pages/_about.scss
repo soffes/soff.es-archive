@@ -1,5 +1,7 @@
 a#portrait {
   @include bordered-image;
+  @include transition-property(border-width);
+	@include transition-duration(0.2s);
   float: left;
   width: 300px;
   height: 300px;

@@ -12,9 +12,7 @@
 <section class="blog">
   <%= render @post %>
   <div class="social">
-    <%= zerply_button %>
     <%= tweet_button :url => post_url(@post, :host => 'samsoff.es'), :text => (@post.tweet_text.blank? ? @post.title : @post.tweet_text) %>
-    <%= like_button post_url(@post, :host => 'samsoff.es') %>
   </div>
   <nav class="posts">
     <ul>

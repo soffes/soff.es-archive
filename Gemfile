@@ -1,18 +1,15 @@
 source :rubygems
 
-gem 'rails', '3.2.2'
+gem 'rails', '3.2.3'
 gem 'pg'
 gem 'thin'
-gem 'foreman'
 gem 'kaminari'
 gem 'tweet-button'
 gem 'goalie'
-gem 'dalli'
 gem 'redcarpet', '1.17.2'
 gem 'nokogiri'
 gem 'asset_sync'
 gem 'pygmentize'
-gem 'hirefireapp'
 
 group :assets do
   gem 'compass-rails'
@@ -33,4 +30,9 @@ group :test do
   gem 'capybara'
   gem 'turn'
   gem 'simplecov', :require => false
+end
+
+group :production do
+  gem 'hirefireapp'
+  gem 'dalli'
 end

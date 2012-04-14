@@ -4,31 +4,31 @@ SamSoffes::Application.routes.draw do
 
   # Rewrite non-preferred hosts in production
   constraints(NotPreferredHost) do
-    match '/:path' => redirect { |params, request| "http://#{NotPreferredHost::PREFERRED_HOST}/#{params[:path]}" }
+    match '/:path', to: redirect { |params, request| "http://#{NotPreferredHost::PREFERRED_HOST}/#{params[:path]}" }
   end
 
   # Blog
+  match '/blog/:page', to: 'posts#index', as: 'blog_page'
   root to: 'posts#index'
-  match '/posts.:format' => 'posts#index'
-  resources :posts, :only => [:show]
-  resources :tags, :only => [:index, :show]
+  match '/posts.:format', to: 'posts#index'
+  resources :posts, only: [:show]
+  resources :tags, only: [:index, :show]
 
   # Static pages
-  match '/music' => 'pages#music', as: 'music'
-  match '/about' => 'pages#about', as: 'about'
-  match '/talks' => 'pages#talks', as: 'talks'
+  match '/music', to: 'pages#music', as: 'music'
+  match '/about', to: 'pages#about', as: 'about'
+  match '/talks', to: 'pages#talks', as: 'talks'
 
   # Redirects
-  match '/blog' => redirect('/')
-  match '/posts' => redirect('/')
-  match '/post/:permalink' => redirect { |params, request| "/posts/#{params[:permalink]}" }
-  match '/archive.:format' => redirect('/blog')
-  match '/music.:format' => redirect('/music')
-  match '/about.:format' => redirect('/about')
-  match '/mobilex' => redirect('/talks')
-  match '/:hellointernet' => redirect { |params, request| '/tags/hello-internet' }, constraints: { hellointernet: /hello[_-]?internet/ }
-  match '/resume(.:format)' => redirect('http://assets.samsoff.es/pdf/Sam%20Soffes%20Resume.pdf'), as: 'resume'
-  match '/ping' => redirect(PING_PROFILE_URL)
+  match '/blog', to: redirect('/')
+  match '/posts', to: redirect('/')
+  match '/post/:permalink', to: redirect { |params, request| "/posts/#{params[:permalink]}" }
+  match '/archive.:format', to: redirect('/blog')
+  match '/music.:format', to: redirect('/music')
+  match '/about.:format', to: redirect('/about')
+  match '/mobilex', to: redirect('/talks')
+  match '/:hellointernet', to: redirect { |params, request| '/tags/hello-internet' }, constraints: { hellointernet: /hello[_-]?internet/ }
+  match '/resume(.:format)', to: redirect('http://assets.samsoff.es/pdf/Sam%20Soffes%20Resume.pdf'), as: 'resume'
 
   # Awesome source redirects
   match '/source(/:code_path)' => redirect { |params, request|

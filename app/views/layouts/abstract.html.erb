@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title><%= "Sam Soffes"+(yield(:title) && !yield(:title).empty? ? " - "+yield(:title) : "") %></title>
+  <title><%= (yield(:title) && !yield(:title).empty? ? yield(:title) : 'Sam Soffes') %></title>
   <link href="<%= posts_url(format: :atom) %>" rel="alternate" title="samsoff.es" type="application/atom+xml" />
   <link rel="apple-touch-icon-precomposed" href="http://assets.samsoff.es/images/apple-touch-icon.png">
   <link rel="me" href="http://www.google.com/profiles/samsoffes" />

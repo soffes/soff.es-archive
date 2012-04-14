@@ -14,13 +14,8 @@ module PostsHelper
     (' in '+links.to_sentence).html_safe
   end
 
-  def post_published_time_in_words post
-    words = time_ago_in_words(post.published_at)
-    if post.published?
-      "#{words} ago"
-    else
-      "in #{words}"
-    end
+  def post_published_time post
+    post.published_at.strftime('%B %e, %Y')
   end
   
   def post_summary(post)

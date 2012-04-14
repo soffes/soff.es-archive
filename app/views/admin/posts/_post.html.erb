@@ -1,7 +1,7 @@
 <article>
   <header>
     <h2><%= link_to post.title, [:admin, post] %></h2>
-    <p>Posted <time datetime="<%= post.created_at.as_json %>"><%= post_published_time_in_words post %></time><%= raw post_tags_html(post) %></p>
+    <p>Posted on <time datetime="<%= post.created_at.as_json %>"><%= post_published_time post %></time><%= raw post_tags_html(post) %></p>
     <p>
       <%= link_to "Show", [:admin, post], :class => "show" %>
       <%= link_to "Edit", edit_admin_post_path(post), :class => "edit" %>
@@ -11,5 +11,5 @@
       <%- end -%>
     </p>
   </header>
-  <%= post_excerpt(post) %>
+  <%= raw post_excerpt(post) %>
 </article>

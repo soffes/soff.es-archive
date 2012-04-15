@@ -27,4 +27,12 @@ module LayoutHelper
   def gauges(code)
     %Q{<script type="text/javascript">var _gauges=_gauges||[];(function(){var t=document.createElement('script');t.async=true;t.id='gauges-tracker';t.setAttribute('data-site-id','#{code}');t.src='//secure.gaug.es/track.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(t, s);})();</script>}.html_safe if Rails.env.production?
   end
+  
+  def hn_button
+    content_for :end do
+      %Q{<script>(function(){var hn=document.createElement('script');hn.async=true;hn.src='http://hnbutton.appspot.com/static/hn.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(hn,s);})();</script>}.html_safe
+    end
+    
+    %Q{<a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>}.html_safe    
+  end
 end

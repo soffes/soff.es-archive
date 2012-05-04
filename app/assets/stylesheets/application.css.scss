@@ -132,12 +132,15 @@ h1 {
   font-size: 2.5em;
   font-weight: 700;
   margin-bottom: 0.25em;
-  
-  a {
+}
+
+body > header h1 {
+  a, a:hover {
     color: $red-color;
     border: 0;
   }
 }
+
 
 h2 {
   font-size: 1.3em;
@@ -174,13 +177,13 @@ body > header {
   
   p {
     margin: 0;
+  }
+  
+  a {
+    color: #73acd6;
     
-    a {
-      color: #73acd6;
-      
-      &:hover {
-        color: $link-color;
-      }
+    &:hover {
+      color: $link-color;
     }
   }
   

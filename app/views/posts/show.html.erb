@@ -13,6 +13,7 @@
   <%= render @post %>
   <div class="social">
     <%= hn_button %>
+    <%= follow_button %>
     <%= tweet_button url: post_url(@post, :host => 'samsoff.es'), text: (@post.tweet_text.blank? ? @post.title : @post.tweet_text) %>
   </div>
   <nav class="posts">

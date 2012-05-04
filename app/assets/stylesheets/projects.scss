@@ -2,14 +2,18 @@
 
 section.projects {
   padding-top: 1em;
-}
-
-ul.list {
-  margin: 0 0 2em 0.5em;
   
-  li {
-    margin-left: 1em;
-    list-style: disc;
+  ul {
+    margin: 0 0 2em 0.5em;
+
+    li {
+      margin: 0 0 0.25em 1em;
+      list-style: disc;
+    }
+  }
+  
+  p {
+    text-align: center;
   }
 }
 

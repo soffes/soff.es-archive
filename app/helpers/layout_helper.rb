@@ -19,10 +19,6 @@ module LayoutHelper
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>}.html_safe
   end
 
-  def zerply_button
-    %Q{<script type="text/javascript" src="http://get.zerply.com/js/zebtn/remote.js"></script><script type="text/javascript">button = new zerplyEB({container: 'ZE-button', key: '7f1b8344c499f5eaed9bcf833ac64c46'}); button.init();</script><div id="ZE-button"></div>}.html_safe
-  end
-
   def gauges(code)
     %Q{<script type="text/javascript">var _gauges=_gauges||[];(function(){var t=document.createElement('script');t.async=true;t.id='gauges-tracker';t.setAttribute('data-site-id','#{code}');t.src='//secure.gaug.es/track.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(t, s);})();</script>}.html_safe if Rails.env.production?
   end

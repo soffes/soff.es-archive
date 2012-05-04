@@ -84,8 +84,13 @@ section article {
 }
 
 div.social {
+  @include clearfix;
   overflow: hidden;
   margin: -4em 0 1em; // Ugly
+  
+  iframe.twitter-follow-button {
+    float: right;
+  }
 }
 
 nav.posts {

@@ -1,6 +1,6 @@
-@import "compass/reset";
-@import "compass/css3";
-@import "partials/shared";
+@import "bourbon";
+@import "globals/*";
+@import "components/reset";
 
 // HTML5
 section, header, footer, nav, article, aside, figure {
@@ -171,19 +171,21 @@ body > header, body > section, body > footer {
 body > header {
   color: #a5a5a5;
   margin: 5em auto 4em;
-  @include transition-property(margin);
-	@include transition-duration(0.2s);
   
   p {
     margin: 0;
     
     a {
       color: #73acd6;
-
+      
       &:hover {
         color: $link-color;
       }
     }
+  }
+  
+  @media #{$small-query} {
+    margin: 3em auto;
   }
 }
 
@@ -194,7 +196,7 @@ a.hire, a.hire:hover {
 // Footer
 body > footer {
   color: #aaa;
-  @include single-text-shadow(#fff, 0, 1px, 0);
+  text-shadow: #fff 0 1px 0;
   font-size: 0.8em;
   text-align: center;
   margin: 3em auto;
@@ -209,13 +211,11 @@ body > footer {
 }
 
 // Partials
-@import "partials/pagination";
-@import "partials/syntax";
+@import "components/pagination";
+@import "components/syntax";
 
-// Pages
-@import "pages/music";
-@import "pages/blog";
-@import "pages/about";
+// Sections
+@import "sections/*";
 
 // Misc
 .bordered-image {
@@ -232,44 +232,4 @@ section.server-error {
 
 span.gray {
   color: #777;
-}
-
-@media all and (max-width: 640px) {
-  // Header
-  body > header {
-    margin: 3em auto;
-  }
-  
-  // About
-  a#portrait {
-    border-width: 0;
-  }
-  
-  // Post nav
-  nav.posts {
-    ul {
-      margin-bottom: 0;
-    }
-    li.previous {
-      margin-bottom: 1em;
-    }
-    
-    li.previous, li.next {
-      text-align: center;
-      float: none;
-      width: 100%;
-    }
-  }
-
-  // Pagination
-  nav.pagination {
-    a, span.gap {
-      display: none;
-      margin: 0;
-    }
-    
-    a.prev, a.next {
-      display: inline;
-    }
-  }
 }

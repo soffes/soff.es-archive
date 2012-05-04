@@ -40,4 +40,15 @@ nav.pagination {
   em {
     padding: 4px 8px;
   }
+  
+  @media #{$small-query} {
+    a, span.gap {
+      display: none;
+      margin: 0;
+    }
+    
+    a.prev, a.next {
+      display: inline;
+    }
+  }
 }

@@ -41,7 +41,7 @@ section article {
     margin-bottom: 1em;
     max-width: 100%;
     height: 0;
-    @include single-box-shadow(rgba(0, 0, 0, 0.7), 0, 0, 6px);
+    @include box-shadow(rgba(0, 0, 0, 0.7) 0 0 6px);
     overflow: hidden;
     padding-top: 75%;
     position: relative;
@@ -105,6 +105,22 @@ nav.posts {
     float: right;
     text-align: right;
   }
+  
+  @media #{$small-query} {
+    ul {
+      margin-bottom: 0;
+    }
+    
+    li.previous {
+      margin-bottom: 1em;
+    }
+
+    li.previous, li.next {
+      text-align: center;
+      float: none;
+      width: 100%;
+    }
+  }
 }
 
 // Gist
@@ -128,7 +144,7 @@ div.tags {
   margin-bottom: 3em;
   
   a {
-    @include single-text-shadow(none);
+    text-shadow: none;
     margin: 5px;
     word-wrap: nowrap;
     line-height: 1.5em;

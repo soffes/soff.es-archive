@@ -12,8 +12,12 @@ gem 'asset_sync'
 gem 'pygmentize'
 
 group :assets do
-  gem 'compass-rails'
+  # Stylesheet
+  gem 'sass', '~> 3.2.0.alpha.104'
   gem 'sass-rails'
+  gem 'bourbon'
+  
+  # Javascript
   gem 'coffee-rails'
   gem 'uglifier'
   gem 'jquery-rails'

@@ -1,7 +1,5 @@
 a#portrait {
   @include bordered-image;
-  @include transition-property(border-width);
-	@include transition-duration(0.2s);
   float: left;
   width: 300px;
   height: 300px;
@@ -10,6 +8,10 @@ a#portrait {
   img {
     width: 300px;
     height: 300px;
+  }
+  
+  @media #{$small-query} {
+    border-width: 0;
   }
 }
 

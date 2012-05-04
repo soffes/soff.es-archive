@@ -18,6 +18,7 @@ SamSoffes::Application.routes.draw do
   match '/music', to: 'pages#music', as: 'music'
   match '/about', to: 'pages#about', as: 'about'
   match '/talks', to: 'pages#talks', as: 'talks'
+  match '/projects', to: 'pages#projects', as: 'projects'
 
   # Redirects
   match '/blog', to: redirect('/')

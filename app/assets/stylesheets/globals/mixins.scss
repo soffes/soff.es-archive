@@ -10,3 +10,9 @@
     @include box-shadow(rgba(0, 0, 0, 1.0) 0 0 3px);
   }
 }
+
+@mixin hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}

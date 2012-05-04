@@ -13,7 +13,7 @@ SamSoffes::Application.configure do
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
-  config.assets.precompile += ['admin.js', 'music.js', 'jquery.js', 'talks.css', 'admin.css']
+  config.assets.precompile += ['admin.js', 'music.js', 'jquery.js', 'talks.css', 'admin.css', 'projects.css']
   config.action_controller.asset_host = Proc.new do |source, request|
     request.ssl? ? "https://#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com" : "http://#{ENV['FOG_DIRECTORY']}"
   end

@@ -16,6 +16,8 @@ class PostsController < ApplicationController
   end
 
   def show
-    respond_with @post = Post.where(permalink: params[:id]).first
+    @post = Post.where(permalink: params[:id]).first
+    redirect_to @post.redirect and return unless @post.redirect.blank?
+    respond_with @post
   end
 end

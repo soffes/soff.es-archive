@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   respond_to :html, :xml, :json, :atom
-  caches_action :index, :show
+  # caches_action :index, :show
 
   def index
     per_page = Post.per_page

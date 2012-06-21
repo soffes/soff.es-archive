@@ -1,10 +1,4 @@
 SamSoffes::Application.routes.draw do
-
-  # Rewrite non-preferred hosts in production
-  constraints(SamSoffes::NotPreferredHost) do
-    match '/:path', to: redirect { |params, request| "http://#{SamSoffes::NotPreferredHost::PREFERRED_HOST}/#{params[:path]}" }
-  end
-
   # Blog
   root to: 'pages#home'
   match '/blog/:page', to: 'posts#index', as: 'blog_page'

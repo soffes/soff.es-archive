@@ -43,6 +43,10 @@ class Post < ActiveRecord::Base
   def next
     self.class.where('published_at > ?', published_at).order('published_at ASC').first
   end
+  
+  def is_link?
+    !self.link.blank?
+  end
 
   private
 

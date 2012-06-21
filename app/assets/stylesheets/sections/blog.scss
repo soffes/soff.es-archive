@@ -179,3 +179,8 @@ div.tags {
     font-size: 2em;
   }
 }
+
+a.permalink:hover {
+  border: 0;
+  color: $link-color;
+}

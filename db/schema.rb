@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120621215131) do
+ActiveRecord::Schema.define(:version => 20120621233523) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"
@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(:version => 20120621215131) do
     t.string   "tweet_text"
     t.boolean  "homepageable",                :default => true
     t.text     "html_content"
-    t.string   "redirect"
     t.string   "link"
   end
 

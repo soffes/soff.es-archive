@@ -13,6 +13,8 @@ require 'goalie/rails'
 
 module SamSoffes
   class Application < Rails::Application
+    
+    config.autoload_paths << "#{config.root}/lib"
 
     config.time_zone = 'Central Time (US & Canada)'
     config.encoding = 'utf-8'

@@ -1,14 +1,13 @@
 source :rubygems
 
-gem 'rails', '3.2.3'
+gem 'rails', '3.2.6'
 gem 'pg'
 gem 'thin'
 gem 'kaminari'
 gem 'goalie'
-gem 'redcarpet', '1.17.2'
-gem 'nokogiri'
+gem 'redcarpet'
+gem 'pygments.rb'
 gem 'asset_sync'
-gem 'pygmentize'
 
 group :assets do
   # Stylesheet
@@ -24,7 +23,9 @@ end
 
 group :development do
   gem 'heroku'
-  gem 'taps'
+  # gem 'taps'
+  # gem 'sqlite3'
+  gem 'quiet_assets'
 end
 
 group :test do

@@ -1,4 +1,4 @@
-class NotPreferredHost
+class SamSoffes::NotPreferredHost
   PREFERRED_HOST = "samsoff.es"
 
   def self.matches?(request)

@@ -5,7 +5,7 @@ class Post < ActiveRecord::Base
   validates_presence_of :title, :published_at, :content
   attr_writer :tag_names
 
-  before_save :color_code
+  before_save :render_html
   after_save :assign_tags
 
   scope :published, lambda { where('published_at <= ?', Time.now.utc) }
@@ -46,13 +46,18 @@ class Post < ActiveRecord::Base
 
   private
 
-  def color_code
-    rc_options = [:hard_wrap, :autolink, :no_intraemphasis, :fenced_code, :gh_blockcode]
-    doc = Nokogiri::HTML(Redcarpet.new(self.content, *rc_options).to_html)
-    doc.search("//pre[@lang]").each do |pre|
-      pre.replace Pygmentize.process(pre.text.strip, pre[:lang].to_sym)
-    end
-    self.html_content = doc.css('body > *').to_s
+  def render_html
+    options = {
+      no_intra_emphasis: true,
+      tables: true,
+      fenced_code_blocks: true,
+      autolink: true,      
+      strikethrough: true,
+      space_after_headers: true,
+      superscript: true
+    }
+    markdown = Redcarpet::Markdown.new(SamSoffes::MarkdownRenderer, options)    
+    self.html_content = markdown.render(self.content)
   end
 
   def assign_tags

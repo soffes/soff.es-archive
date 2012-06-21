@@ -15,7 +15,7 @@ group :assets do
   gem 'sass', '~> 3.2.0.alpha.104'
   gem 'sass-rails'
   gem 'bourbon'
-  
+
   # Javascript
   gem 'coffee-rails'
   gem 'uglifier'

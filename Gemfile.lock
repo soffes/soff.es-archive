@@ -34,7 +34,6 @@ GEM
     asset_sync (0.4.2)
       activemodel
       fog
-    blankslate (2.1.2.4)
     bourbon (2.1.0)
       sass (>= 3.1)
     builder (3.0.0)
@@ -119,8 +118,7 @@ GEM
     nokogiri (1.5.4)
     pg (0.13.2)
     polyglot (0.3.3)
-    pygments.rb (0.2.13)
-      rubypython (~> 0.5.3)
+    pygmentize (0.0.3)
     quiet_assets (1.0.1)
       railties (~> 3.1)
     rack (1.4.1)
@@ -152,9 +150,6 @@ GEM
     rest-client (1.6.7)
       mime-types (>= 1.16)
     ruby-hmac (0.4.0)
-    rubypython (0.5.3)
-      blankslate (>= 2.1.2.3)
-      ffi (~> 1.0.7)
     rubyzip (0.9.9)
     sass (3.2.0.alpha.247)
     sass-rails (3.2.5)
@@ -209,7 +204,7 @@ DEPENDENCIES
   kaminari
   minitest
   pg
-  pygments.rb
+  pygmentize
   quiet_assets
   rails (= 3.2.6)
   redcarpet

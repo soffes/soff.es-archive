@@ -1,6 +1,6 @@
 SamSoffes::Application.routes.draw do
   # Blog
-  root to: 'pages#home'
+  root to: 'posts#index'
   match '/blog/:page', to: 'posts#index', as: 'blog_page'
   match '/posts.:format', to: 'posts#index'
   resources :posts, only: [:index, :show]
@@ -13,7 +13,7 @@ SamSoffes::Application.routes.draw do
   match '/projects', to: 'pages#projects', as: 'projects'
 
   # Redirects
-  match '/blog', to: redirect('http://blog.samsoff.es/')
+  match '/blog', to: redirect('/')
   match '/post/:permalink', to: redirect { |params, request| "/posts/#{params[:permalink]}" }
   match '/archive.:format', to: redirect('/blog')
   match '/music.:format', to: redirect('/music')

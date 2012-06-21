@@ -12,7 +12,7 @@ class SamSoffes::PreferredHost
     # Not the standard host
     if host != @preferred_host
       url.host = @preferred_host
-      url.path = "/posts#{url.path}" if url.host == 'blog.samsoff.es'
+      url.path = "/posts#{url.path}" if host == 'blog.samsoff.es'
       headers = { 'Location' => url.to_s }
       [301, headers, []]
 

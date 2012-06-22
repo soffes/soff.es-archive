@@ -3,7 +3,8 @@ SamSoffes::Application.routes.draw do
   root to: 'posts#index'
   match '/blog/:page', to: 'posts#index', as: 'blog_page'
   match '/posts.:format', to: 'posts#index'
-  resources :posts, only: [:index, :show]
+  match '/posts', to: redirect('/')
+  resources :posts, only: [:show]
   resources :tags, only: [:index, :show]
 
   # Static pages

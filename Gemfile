@@ -1,6 +1,6 @@
 source :rubygems
 
-gem 'rails', '3.2.6'
+gem 'rails', '3.2.7'
 gem 'pg'
 gem 'thin'
 gem 'kaminari'
@@ -12,7 +12,7 @@ gem 'asset_sync'
 
 group :assets do
   # Stylesheet
-  gem 'sass', '~> 3.2.0.alpha.104'
+  gem 'sass', '~> 3.2.0.alpha.277'
   gem 'sass-rails'
   gem 'bourbon'
 
@@ -30,14 +30,13 @@ group :development do
 end
 
 group :test do
-  gem 'factory_girl_rails'
   gem 'minitest'
+  gem 'miniskirt', require: false
   gem 'capybara'
   gem 'turn'
   gem 'simplecov', :require => false
 end
 
 group :production do
-  gem 'hirefireapp'
   gem 'dalli'
 end

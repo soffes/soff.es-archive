@@ -1,8 +1,8 @@
 <%- content_for :pre_content do -%>
 <header>
   <h1><%= link_to 'Hi, I\'m Sam.', root_url %></h1>
-  <p>I like to <%= link_to 'make stuff', projects_url %>, <%= link_to 'play music', music_url %>, and <%= link_to 'write on technology', blog_url, rel: 'home' %>.</p>
-  <p>Find out <%= link_to 'more about me', about_url %>.</p>
+  <p><span class="cheddar">I make this app called <a href="https://cheddarapp.com" rel="external nofollow">Cheddar</a>.</span> Find out <%= link_to 'more about me', about_url %>.</p>
+  <p>I also like to <%= link_to 'make stuff', projects_url %>, <%= link_to 'play music', music_url %>, and <%= link_to 'write on technology', root_url, rel: 'home' %>.</p>
 </header>
 <section>
 <%- end -%>

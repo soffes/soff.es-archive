@@ -6,7 +6,6 @@ gem 'thin'
 gem 'kaminari'
 gem 'goalie'
 gem 'redcarpet'
-# gem 'pygments.rb'
 gem 'pygmentize'
 gem 'asset_sync'
 

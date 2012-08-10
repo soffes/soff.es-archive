@@ -1,3 +1,4 @@
+#= require jquery
 #= require swfobject
 #= require_self
 

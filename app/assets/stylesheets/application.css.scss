@@ -36,7 +36,7 @@ a {
   border-bottom: 1px solid transparent;
   @include transition-property(color);
   @include transition-duration(0.2s);
-  
+
   &:hover {
     border-bottom: 1px solid;
   }
@@ -76,10 +76,10 @@ blockquote {
   color: #888;
   margin: 0 0 1em;
   padding-left: 1em;
-  
+
   a {
     color: #444;
-    
+
     &:hover {
       color: $link-color;
     }
@@ -90,10 +90,10 @@ small {
   font-size: 0.8em;
   color: #999;
   margin-left: 0.2em;
-  
+
   a {
     color: #444;
-    
+
     &:hover {
       color: #2e80d3;
     }
@@ -109,7 +109,7 @@ pre {
   margin: 0 0 2em;
   overflow: auto;
   padding: 0.5em;
-  
+
   code {
     background-color: $code-background-color;
     border: medium none;
@@ -176,11 +176,11 @@ body > header, body > section, body > footer {
 body > header {
   color: #949494;
   margin: 5em auto 4em;
-  
+
   p {
     margin: 0;
   }
-  
+
   @media #{$small-query} {
     margin: 3em auto;
   }
@@ -197,10 +197,10 @@ body > footer {
   font-size: 0.8em;
   text-align: center;
   margin: 3em auto;
-  
+
   a {
     color: #aaa;
-    
+
     &:hover {
       color: $link-color;
     }

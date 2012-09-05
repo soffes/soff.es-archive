@@ -15,7 +15,7 @@ module PostsHelper
   end
 
   def post_published_time post
-    post.published_at.strftime('%B %e, %Y')
+    post.published_at.to_time.strftime('%B %e, %Y')
   end
 
   def post_summary(post)

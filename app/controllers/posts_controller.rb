@@ -5,14 +5,21 @@ class PostsController < ApplicationController
   def index
     per_page = Post.per_page
     page = params[:page]
-    
+
     # Serve more posts with atom and only page 1
     if params[:format] == 'atom'
       per_page = 25
       page = 1
     end
-    
-    respond_with @posts = Post.published.recent.page(page).per(per_page)
+
+    # Search
+    if params[:search]
+      @posts = Post.search(params)
+    else
+      @posts = Post.published.recent.page(page).per(per_page)
+    end
+
+    respond_with @posts
   end
 
   def show

@@ -1,6 +1,7 @@
 class Post < ActiveRecord::Base
   include Tire::Model::Search
   include Tire::Model::Callbacks
+  index_name BONSAI_INDEX_NAME if BONSAI_INDEX_NAME
 
   has_many :taggings, :dependent => :destroy
   has_many :tags, :through => :taggings

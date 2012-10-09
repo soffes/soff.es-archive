@@ -1,13 +1,13 @@
 /* TEAM */
 Designer:     Sam Soffes
 Developer:    Sam Soffes
-Contact:      sam@samsoff.es
-Twitter:      @samsoffes
+Contact:      sam@soff.es
+Twitter:      @soffes
 Facebook:     http://facebook.com/samsoffes
 
 /* SITE */
 Last update:  02/21/11
 Language:     English
 Doctype:      HTML5
-Tools:        Ruby on Rails, HTML, CSS (with Compass), 
+Tools:        Ruby on Rails, HTML, CSS (with Compass),
               and a little jQuery all hosted on Heroku

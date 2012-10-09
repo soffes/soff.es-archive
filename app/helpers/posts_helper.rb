@@ -30,6 +30,6 @@ module PostsHelper
   end
 
   def post_tweet_button(post)
-    %Q{<a href="https://twitter.com/share" class="twitter-share-button" data-text="#{post.tweet_text.blank? ? post.title : post.tweet_text}" data-url="#{post_url(post, host: 'samsoff.es')}" data-via="samsoffes">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>}.html_safe
+    %Q{<a href="https://twitter.com/share" class="twitter-share-button" data-text="#{post.tweet_text.blank? ? post.title : post.tweet_text}" data-url="#{post_url(post, host: 'soff.es')}" data-via="soffes">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>}.html_safe
   end
 end

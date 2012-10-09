@@ -1,7 +1,7 @@
 class SamSoffes::PreferredHost
   def initialize(app, options = {})
     @app = app
-    @preferred_host = (options[:host] or 'samsoff.es')
+    @preferred_host = (options[:host] or 'soff.es')
   end
 
   def call(env)

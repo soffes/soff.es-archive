@@ -8,6 +8,6 @@ module ApplicationHelper
   end
 
   def dribbble_url
-    'http://dribbble.com/players/samsoffes'
+    'http://dribbble.com/soffes'
   end
 end

@@ -6,6 +6,10 @@ class PostsController < ApplicationController
     per_page = Post.per_page
     page = params[:page]
 
+    if params[:format] == 'rss'
+      redirect_to posts_url(format: 'atom') and return
+    end
+
     # Serve more posts with atom and only page 1
     if params[:format] == 'atom'
       per_page = 25

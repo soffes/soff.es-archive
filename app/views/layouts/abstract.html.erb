@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <title><%= (yield(:title) && !yield(:title).empty? ? yield(:title) : 'Sam Soffes') %></title>
-  <link href="<%= posts_url(format: :atom) %>" rel="alternate" title="samsoff.es" type="application/atom+xml" />
+  <link href="<%= posts_url(format: :atom) %>" rel="alternate" title="soff.es" type="application/atom+xml" />
   <link rel="shortcut icon" href="<%= image_path('favicon.ico') %>" />
   <link rel="apple-touch-icon-precomposed" href="http://assets.samsoff.es/images/apple-touch-icon.png">
   <link rel="me" href="http://www.google.com/profiles/samsoffes" />
-  <link rel="author" type="text/plain" href="http://samsoff.es/humans.txt" />
+  <link rel="author" type="text/plain" href="http://soff.es/humans.txt" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <%= stylesheet_link_tag 'application' %>
   <%= javascript_include_tag 'application' -%>
   <meta property="fb:app_id" content="<%= FACEBOOK_APP_ID %>" />
-  <meta property="og:site_name" content="samsoff.es" />
+  <meta property="og:site_name" content="soff.es" />
   <%- unless @post -%>
-  <link rel="canonical" href="http://samsoff.es/" />
+  <link rel="canonical" href="http://soff.es/" />
   <meta property="og:description" content="The blog of Sam Soffes" />
-  <meta property="og:title" content="samsoff.es" />
+  <meta property="og:title" content="soff.es" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://samsoff.es/" />
+  <meta property="og:url" content="http://soff.es/" />
   <%- end -%>
   <%= yield(:head) -%>
 </head>

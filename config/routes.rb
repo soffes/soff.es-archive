@@ -26,7 +26,7 @@ SamSoffes::Application.routes.draw do
   # Awesome source redirects
   match '/source(/:code_path)' => redirect { |params, request|
     code_path = params[:code_path] ? "/tree/master/#{params[:code_path]}" : ''
-    "http://github.com/samsoffes/samsoff.es#{code_path}"
+    "https://github.com/soffes/soff.es#{code_path}"
   }, constraints: { code_path: /[a-zA-Z0-9_\-\.\/]+/ }
 
   # Admin

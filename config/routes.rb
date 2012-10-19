@@ -1,10 +1,8 @@
 SamSoffes::Application.routes.draw do
   # Blog
   root to: 'posts#index'
-  match '/blog/:page', to: 'posts#index', as: 'blog_page'
   match '/posts.:format', to: 'posts#index'
-  match '/posts', to: redirect('/')
-  resources :posts, only: [:show]
+
   resources :tags, only: [:index, :show]
 
   # Static pages
@@ -15,7 +13,10 @@ SamSoffes::Application.routes.draw do
 
   # Redirects
   match '/blog', to: redirect('/')
-  match '/post/:permalink', to: redirect { |params, request| "/posts/#{params[:permalink]}" }
+  match '/posts', to: redirect('/')
+  match '/post/:permalink', to: redirect { |params, request| "/#{params[:permalink]}" }
+  match '/posts/:permalink', to: redirect { |params, request| "/#{params[:permalink]}" }
+  match '/blog/:page', to: redirect { |params, request| "/#{params[:page]}" }
   match '/archive.:format', to: redirect('/blog')
   match '/music.:format', to: redirect('/music')
   match '/about.:format', to: redirect('/about')
@@ -35,4 +36,10 @@ SamSoffes::Application.routes.draw do
     resources :posts, only: [:show, :new, :create, :update, :edit, :destroy, :index]
     resources :tags,  only: [:new, :create, :update, :edit, :destroy, :index]
   end
+
+  # Pagination
+  match '/:page', to: 'posts#index', as: 'blog_page', constraints: { page: /[0-9]+/}
+
+  # Post
+  get ':permalink', to: 'posts#show', as: 'post'
 end

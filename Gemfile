@@ -24,6 +24,9 @@ gem 'redcarpet'
 # Code coloring
 gem 'pygmentize'
 
+# HTML Parsing
+gem 'nokogiri'
+
 group :assets do
   # Stylesheet
   gem 'sass', '~> 3.2.0.alpha.277'

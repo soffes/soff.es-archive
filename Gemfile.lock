@@ -216,6 +216,7 @@ DEPENDENCIES
   kaminari
   miniskirt
   minitest
+  nokogiri
   pg
   pygmentize
   quiet_assets

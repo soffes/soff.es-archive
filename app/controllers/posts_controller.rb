@@ -27,6 +27,8 @@ class PostsController < ApplicationController
   end
 
   def show
-    respond_with @post = Post.where(permalink: params[:permalink]).first
+    @post = Post.where(permalink: params[:permalink]).first
+    raise NotFoundError unless @post
+    respond_with @post
   end
 end

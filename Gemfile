@@ -15,9 +15,6 @@ gem 'thin'
 # Pagination
 gem 'kaminari'
 
-# Error pages
-gem 'goalie'
-
 # Markdown
 gem 'redcarpet'
 

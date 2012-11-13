@@ -4,8 +4,6 @@ development:
   database: samsoffes_development
   host: localhost
   pool: 5
-  username: samsoffes
-  password:
   min_messages: WARNING
 
 test:
@@ -14,8 +12,6 @@ test:
   database: samsoffes_test
   host: localhost
   pool: 5
-  username: samsoffes
-  password:
   min_messages: WARNING
 
 production:
@@ -24,6 +20,4 @@ production:
   database: samsoffes_production
   host: localhost
   pool: 5
-  username: samsoffes
-  password:
   min_messages: WARNING

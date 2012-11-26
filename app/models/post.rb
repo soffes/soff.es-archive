@@ -1,7 +1,4 @@
 class Post < ActiveRecord::Base
-  include Tire::Model::Search
-  include Tire::Model::Callbacks
-  index_name BONSAI_INDEX_NAME if defined?(BONSAI_INDEX_NAME)
 
   has_many :taggings, :dependent => :destroy
   has_many :tags, :through => :taggings
@@ -16,34 +13,8 @@ class Post < ActiveRecord::Base
   scope :unpublished, lambda { where('published_at > ?', Time.now.utc) }
   scope :recent, order('published_at DESC')
 
-  mapping do
-    indexes :id, type: 'integer'
-    indexes :title, boost: 10
-    indexes :content, analyzer: 'snowball'
-    indexes :published_at, type: 'date'
-  end
-
   def self.per_page
     3
-  end
-
-  def self.search(params)
-    options = {
-      load: true,
-      deafult_operator: 'AND',
-      page: params[:page],
-      per_page: self.per_page
-    }
-
-    tire.search(options) do
-      query { string params[:search] if params[:search].present? }
-
-      # Only published posts
-      filter :range, published_at: { lte: Time.zone.now }
-
-      # Most recent posts first if there's no search
-      sort { by :published_at, 'desc' } if params[:search].blank?
-    end
   end
 
   def tag_names

@@ -6,9 +6,6 @@ gem 'rails', '3.2.8'
 # Postgres
 gem 'pg'
 
-# Elastic search
-gem 'tire'
-
 # Web server
 gem 'thin'
 

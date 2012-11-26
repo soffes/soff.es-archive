@@ -16,12 +16,8 @@ class PostsController < ApplicationController
       page = 1
     end
 
-    # Search
-    if params[:search]
-      @posts = Post.search(params)
-    else
-      @posts = Post.published.recent.page(page).per(per_page)
-    end
+    # Fetch
+    @posts = Post.published.recent.page(page).per(per_page)
 
     respond_with @posts
   end

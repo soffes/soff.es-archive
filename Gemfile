@@ -34,11 +34,7 @@ group :assets do
 end
 
 group :development do
-  gem 'heroku'
-  gem 'taps'
-  gem 'sqlite3'
   gem 'quiet_assets'
-  gem 'foreman'
 end
 
 group :test do

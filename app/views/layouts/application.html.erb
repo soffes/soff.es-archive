@@ -9,7 +9,7 @@
 <%- content_for :post_content do -%>
 </section>
 <footer>
-  <p>Copyright &copy; Copyright <%= Time.now.year %> <%= link_to 'Sam Soffes', root_url, rel: 'home' %> &mdash; <%= link_to 'Feed', posts_url(format: 'atom') %></p>
+  <p>Copyright &copy; <%= Time.now.year %> <%= link_to 'Sam Soffes', root_url, rel: 'home' %> &mdash; <%= link_to 'Feed', posts_url(format: 'atom') %></p>
 </footer>
 <%- end -%>
 <%= render file: 'layouts/abstract' %>

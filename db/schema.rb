@@ -9,41 +9,44 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended to check this file into your version control system.
+# It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120621233523) do
+ActiveRecord::Schema.define(version: 20120621233523) do
 
-  create_table "posts", :force => true do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "posts", force: true do |t|
     t.string   "title"
     t.text     "content"
-    t.datetime "created_at",                                    :null => false
-    t.datetime "updated_at",                                    :null => false
-    t.string   "permalink",    :limit => 128
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "permalink",    limit: 128
     t.datetime "published_at"
     t.string   "tweet_text"
-    t.boolean  "homepageable",                :default => true
+    t.boolean  "homepageable",             default: true
     t.text     "html_content"
     t.string   "link"
   end
 
-  add_index "posts", ["permalink"], :name => "posts_permalink_index", :unique => true
+  add_index "posts", ["permalink"], name: "posts_permalink_index", unique: true
 
-  create_table "taggings", :force => true do |t|
+  create_table "taggings", force: true do |t|
     t.integer  "post_id"
     t.integer  "tag_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  add_index "taggings", ["post_id"], :name => "taggings_post_id_index"
-  add_index "taggings", ["tag_id"], :name => "taggings_tag_id_index"
+  add_index "taggings", ["post_id"], name: "taggings_post_id_index"
+  add_index "taggings", ["tag_id"], name: "taggings_tag_id_index"
 
-  create_table "tags", :force => true do |t|
+  create_table "tags", force: true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  add_index "tags", ["name"], :name => "tags_name_index", :unique => true
+  add_index "tags", ["name"], name: "tags_name_index", unique: true
 
 end

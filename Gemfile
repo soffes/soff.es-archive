@@ -1,13 +1,16 @@
 source 'https://rubygems.org'
 
+# Latest Ruby
+ruby '2.0.0'
+
 # Rails
-gem 'rails', '3.2.11'
+gem 'rails', '4.0.0.beta1'
 
 # Postgres
 gem 'pg'
 
 # Web server
-gem 'thin'
+gem 'puma'
 
 # Pagination
 gem 'kaminari'
@@ -23,12 +26,12 @@ gem 'nokogiri'
 
 group :assets do
   # Stylesheet
-  gem 'sass', '~> 3.2.0.alpha.277'
-  gem 'sass-rails'
+  gem 'sass', '>= 3.2.0'
+  gem 'sass-rails', '4.0.0.beta1'
   gem 'bourbon'
 
   # Javascript
-  gem 'coffee-rails'
+  gem 'coffee-rails', '4.0.0.beta1'
   gem 'uglifier'
   gem 'jquery-rails'
 end
@@ -42,7 +45,7 @@ group :test do
   gem 'miniskirt', require: false
   gem 'capybara'
   gem 'turn'
-  gem 'simplecov', :require => false
+  gem 'simplecov', require: false
 end
 
 group :production do

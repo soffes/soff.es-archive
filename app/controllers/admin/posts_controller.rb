@@ -1,6 +1,5 @@
 class Admin::PostsController < AdminController
   before_filter :find_post, :only => [:show, :edit, :update, :destroy]
-  cache_sweeper :post_sweeper, only: [:create, :update, :destroy]
 
   def index
     @posts = Post.recent.page(params[:page])

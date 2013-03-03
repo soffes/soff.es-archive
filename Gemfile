@@ -24,7 +24,7 @@ gem 'pygmentize'
 # HTML Parsing
 gem 'nokogiri'
 
-group :assets do
+# group :assets do
   # Stylesheet
   gem 'sass', '>= 3.2.0'
   gem 'sass-rails', '4.0.0.beta1'
@@ -34,7 +34,7 @@ group :assets do
   gem 'coffee-rails', '4.0.0.beta1'
   gem 'uglifier'
   gem 'jquery-rails'
-end
+# end
 
 group :development do
   gem 'quiet_assets'

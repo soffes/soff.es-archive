@@ -2,7 +2,7 @@ class TagsController < ApplicationController
   respond_to :html, :xml, :json
 
   def index
-    respond_with @tags = Tag.includes(:taggings).all
+    respond_with @tags = Tag.includes(:taggings)
   end
 
   def show

@@ -42,9 +42,9 @@ end
 
 group :test do
   gem 'minitest'
+  gem 'minitest-wscolor'
   gem 'miniskirt', require: false
   gem 'capybara'
-  gem 'turn'
   gem 'simplecov', require: false
 end
 

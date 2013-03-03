@@ -1,4 +1,4 @@
-SamSoffes::Application.routes.draw do
+Soffes::Application.routes.draw do
   # Blog
   root to: 'posts#index'
   get '/posts.:format', to: 'posts#index'

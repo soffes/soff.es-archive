@@ -1,4 +1,4 @@
-class SamSoffes::PreferredHost
+class Soffes::PreferredHost
   def initialize(app, options = {})
     @app = app
     @preferred_host = (options[:host] or 'soff.es')

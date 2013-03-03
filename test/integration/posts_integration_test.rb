@@ -20,17 +20,9 @@ describe 'Post integration' do
   it 'redirects /posts and /blog to /' do
     visit '/posts'
     page.current_path.must_equal(root_path)
-    
+
     visit '/blog'
     page.current_path.must_equal(root_path)
-  end
-
-  it 'is homepageable' do
-    Factory(:post, :title => 'Awesome post')
-    Factory(:post, :title => 'Silly post', :homepageable => false)
-    visit root_path
-    page.text.must_include('Awesome post')
-    page.text.must_include('Silly post')
   end
 
   it 'shows a post' do

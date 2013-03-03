@@ -11,7 +11,7 @@
     <p>
       <%= link_to "Show", [:admin, @post], :class => "show" %>
       <%= link_to "Edit", edit_admin_post_path(@post), :class => "edit" %>
-      <%= link_to "Destroy", [:admin, @post], :confirm => 'Are you sure?', :method => :delete, :class => "destroy" %>
+      <%= link_to "Destroy", [:admin, @post], data: { confirm: 'Are you sure?' }, :method => :delete, :class => "destroy" %>
       <%- if @post.published? -%>
       <%= link_to "Published", @post, :class => "published" %>
       <%- end -%>

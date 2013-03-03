@@ -9,7 +9,7 @@
       <td><%=h tag.name %></td>
       <td><%= link_to "Show", tag %></td>
       <td><%= link_to "Edit", edit_tag_path(tag) %></td>
-      <td><%= link_to "Destroy", tag, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Destroy", tag, data: { confirm: 'Are you sure?' }, :method => :delete %></td>
     </tr>
   <% end %>
 </table>

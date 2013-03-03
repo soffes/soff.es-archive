@@ -6,6 +6,6 @@ describe Tag do
     Tag.create!(:name => 'foo')
     tags = Tag.with_names(['foo', 'bar'])
     tags.length.must_equal(2)
-    Tag.find(:all).must_equal(tags)
+    Tag.all.must_equal(tags)
   end
 end

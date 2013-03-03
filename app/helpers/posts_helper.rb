@@ -1,6 +1,7 @@
 module PostsHelper
   def post_excerpt(post)
-    post.html_content.html_safe.split('</p>').first+'</p>'.html_safe
+    return '' unless post.html_content
+    "#{post.html_content.split('</p>').first}</p>".html_safe
   end
 
   def post_tags_html post
@@ -15,6 +16,7 @@ module PostsHelper
   end
 
   def post_published_time post
+    return '' unless post.published_at
     post.published_at.to_time.strftime('%B %e, %Y')
   end
 

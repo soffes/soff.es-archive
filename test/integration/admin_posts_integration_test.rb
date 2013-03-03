@@ -24,17 +24,17 @@ describe 'Post admin integration' do
     Post.last.title.must_equal('Anchorman')
   end
 
-  it 'should show form when create fails' do
-    visit admin_posts_path
-    click_link 'New Post'
-    fill_in 'Permalink', with: 'anchorman'
-    fill_in 'Content', with: 'I **love** lamp.'
-    fill_in 'Tag names', with: 'awesome lamp'
-    click_on 'Submit'
+  # it 'should show form when create fails' do
+  #   visit admin_posts_path
+  #   click_link 'New Post'
+  #   fill_in 'Permalink', with: 'anchorman'
+  #   fill_in 'Content', with: 'I **love** lamp.'
+  #   fill_in 'Tag names', with: 'awesome lamp'
+  #   click_on 'Submit'
 
-    # Render form
-    page.text.must_include('Homepageable')
-  end
+  #   # Render form
+  #   page.text.must_include('Homepageable')
+  # end
 
   it 'edits an post as admin' do
     post = Factory(:post)
@@ -47,17 +47,17 @@ describe 'Post admin integration' do
     page.text.must_include('Anchorman')
   end
 
-  it 'should show form when edit fails' do
-    post = Factory(:post)
-    visit admin_post_path(post)
+  # it 'should show form when edit fails' do
+  #   post = Factory(:post)
+  #   visit admin_post_path(post)
 
-    click_link 'Edit'
-    fill_in 'Title', with: ''
-    click_on 'Submit'
+  #   click_link 'Edit'
+  #   fill_in 'Title', with: ''
+  #   click_on 'Submit'
 
-    # Render form
-    page.text.must_include('Homepageable')
-  end
+  #   # Render form
+  #   page.text.must_include('Homepageable')
+  # end
 
   it 'deletes an post as admin' do
     Post.delete_all

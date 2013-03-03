@@ -1,9 +1,7 @@
 class Post < ActiveRecord::Base
+  has_many :taggings, dependent: :destroy
+  has_many :tags, through: :taggings
 
-  has_many :taggings, :dependent => :destroy
-  has_many :tags, :through => :taggings
-
-  validates_presence_of :title, :published_at, :content
   attr_writer :tag_names
 
   before_save :render_html
@@ -11,7 +9,7 @@ class Post < ActiveRecord::Base
 
   scope :published, lambda { where('published_at <= ?', Time.now.utc) }
   scope :unpublished, lambda { where('published_at > ?', Time.now.utc) }
-  scope :recent, order('published_at DESC')
+  scope :recent, lambda { order('published_at DESC') }
 
   def self.per_page
     3
@@ -26,6 +24,7 @@ class Post < ActiveRecord::Base
   end
 
   def published?
+    return false unless published_at
     published_at < Time.now
   end
 
@@ -52,6 +51,11 @@ class Post < ActiveRecord::Base
   private
 
   def render_html
+    if !self.content or self.content.length == 0
+      self.html_content = ''
+      return
+    end
+
     options = {
       no_intra_emphasis: true,
       tables: true,
@@ -61,14 +65,14 @@ class Post < ActiveRecord::Base
       space_after_headers: true,
       superscript: true
     }
-    markdown = Redcarpet::Markdown.new(SamSoffes::MarkdownRenderer, options)
+    markdown = Redcarpet::Markdown.new(Soffes::MarkdownRenderer, options)
     self.html_content = markdown.render(self.content)
   end
 
   def assign_tags
     if @tag_names
       self.tags = @tag_names.split(/\s+/).map do |name|
-        Tag.find_or_create_by_name(name.gsub(',', ''))
+        Tag.find_or_create_by name: name.gsub(',', '')
       end
     end
   end

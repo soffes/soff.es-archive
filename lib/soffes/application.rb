@@ -3,9 +3,16 @@ require 'redis'
 
 module Soffes
   class Application < Sinatra::Application
-    get '/' do
+    PAGE_SIZE = 3
+
+    get %r{/(\d+)?} do |page|
+      # TODO: This is terrible and doesn't work right
+      page ||= 1
+      page = page.to_i
+      page -= PAGE_SIZE - 1 if page == 1
+
       slugs = []
-      Soffes.redis.zrevrange('sorted-slugs', 0, 3).each do |key|
+      Soffes.redis.zrevrange('sorted-slugs', page + 1, page + PAGE_SIZE).each do |key|
         slugs << Soffes.redis.hgetall("slug-#{key}")
       end
       erb :index, locals: { slugs: slugs }

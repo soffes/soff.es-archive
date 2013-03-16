@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= (@title && !@title.empty? ? @title : 'Sam Soffes') %></title>
+  <link href="/assets/application.css" rel="stylesheet">
+  <link rel="apple-touch-icon-precomposed" href="http://assets.samsoff.es/images/apple-touch-icon.png">
+  <link rel="me" href="http://www.google.com/profiles/samsoffes">
+  <link rel="author" type="text/plain" href="/humans.txt">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:site_name" content="soff.es">
+</head>
+<body>
+  <header>
+    <h1><a href="/" rel="home">Hi, I’m Sam.</a></h1>
+    <p><span class="cheddar">I make this app called <a href="https://cheddarapp.com" rel="external nofollow">Cheddar</a>.</span> Find out <a href="/about">more about me</a>.</p>
+    <p>I also like to <a href="/projects">make stuff</a>, <a href="/music">play music</a>, and <a href="/" rel="home">write on technology</a>.</p>
+  </header>
+  <section>
+  <%= yield %>
+  </section>
+  <footer>
+    <p>© <%= Time.now.year %> <a href="/" rel="home">Sam Soffes</a></p>
+  </footer>
+  <script src="/assets/application.js"></script>
+</body>
+</html>

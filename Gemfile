@@ -3,17 +3,14 @@ source 'https://rubygems.org'
 # Latest Ruby
 ruby '2.0.0'
 
-# Rails
-gem 'rails', '4.0.0.beta1'
-
-# Postgres
-gem 'pg'
-
 # Web server
 gem 'puma'
 
-# Pagination
-gem 'kaminari'
+# Simple HTTP
+gem 'sinatra'
+
+# Faster ERB
+gem 'erubis'
 
 # Markdown
 gem 'redcarpet'
@@ -21,24 +18,22 @@ gem 'redcarpet'
 # Code coloring
 gem 'pygmentize'
 
-# HTML Parsing
-gem 'nokogiri'
+# Redis client
+gem 'redis'
+
+# Asset pipeline
+gem 'sprockets'
 
 # group :assets do
   # Stylesheet
-  gem 'sass', '>= 3.2.0'
-  gem 'sass-rails', '4.0.0.beta1'
+  gem 'sass'
+  gem 'sprockets-sass'
   gem 'bourbon'
 
   # Javascript
-  gem 'coffee-rails', '4.0.0.beta1'
+  gem 'coffee-script'
   gem 'uglifier'
-  gem 'jquery-rails'
 # end
-
-group :development do
-  gem 'quiet_assets'
-end
 
 group :test do
   gem 'minitest'
@@ -48,10 +43,12 @@ group :test do
   gem 'simplecov', require: false
 end
 
-group :production do
-  # Memcached
-  gem 'dalli'
+group :development do
+  # Reloading in development
+  gem 'shotgun'
+end
 
+group :production do
   # Assets
   gem 'asset_sync'
 end

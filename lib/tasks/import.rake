@@ -30,12 +30,13 @@ task :import do
 
     # Store in Redis
     redis.sadd('slugs', key)
+    redis.hset("slug-#{key}", 'key', key)
+    redis.hset("slug-#{key}", 'published_at', published_at)
+    redis.hset("slug-#{key}", 'html', markdown(contents))
     if meta
       redis.hset("slug-#{key}", 'title', meta['title'])
       redis.hset("slug-#{key}", 'tags', meta['tags'].to_yaml)
-    end
-    redis.hset("slug-#{key}", 'html', markdown(contents))
-    redis.hset("slug-#{key}", 'published_at', published_at)
+    end    
     redis.zadd('sorted-slugs', published_at, key)
     puts "Imported #{key}"
   end

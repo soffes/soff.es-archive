@@ -1,9 +1,9 @@
 <article>
   <header>
-    <h2><a href="/<%= @key %>"><%= @slug['title'] %></a></h2>
-    <% if @published_at %>
-    <p>Posted on <time datetime="<%= @published_at.strftime('%Y-%m-%dT%H:%M:%SZ') %>"><%= @published_at.strftime('%B %e, %Y') %></time></p>
+    <h2><a href="/<%= slug['key'] %>"><%= slug['title'] %></a></h2>
+    <% if published_at = Time.at(slug['published_at'].to_i) %>
+    <p>Posted on <time datetime="<%= published_at.strftime('%Y-%m-%dT%H:%M:%SZ') %>"><%= published_at.strftime('%B %e, %Y') %></time></p>
     <% end %>
   </header>
-  <%= @slug['html'] %>
+  <%= slug['html'] %>
 </article>

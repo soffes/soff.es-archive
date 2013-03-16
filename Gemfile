@@ -54,7 +54,7 @@ group :development do
   gem 'shotgun'
 end
 
-group :production do
-  # Assets
-  gem 'asset_sync'
-end
+# group :production do
+#   # Assets
+#   gem 'asset_sync'
+# end

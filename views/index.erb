@@ -1,3 +1,47 @@
 <% slugs.each do |slug| %>
 <%= erb :slug, locals: { slug: slug } %>
 <% end %>
+
+<nav class="pagination">
+  <% if page > 1 %>
+  <a class="previous" href="/<%= page - 1 %>" rel="previous">&larr; Previous</a>
+  <% else %>
+  <span class="disabled">&larr; Previous</span>
+  <% end %>
+
+  <% if page > window %>
+  <% if page == window + 1 %>
+  <a href="/1">1</a>
+  <% else %>
+  <% (1..window).each do |i| %>
+  <a href="/<%= i %>"><%= i %></a>
+  <% end %>
+  <span class="gap">&hellip;</span>
+  <% end %>
+  <% end %>
+
+  <% if page > 1 %>
+  <a href="/<%= page - 1 %>" rel="prev"><%= page - 1 %></a>
+  <% end %>
+  <span class="current"><%= page %></span>
+  <% if page < total_pages %>
+  <a href="/<%= page + 1 %>" rel="next"><%= page + 1 %></a>
+  <% end %>
+
+  <% if page <= total_pages - window %>
+  <% if page == total_pages - window %>
+  <a href="/<%= total_pages %>"><%= total_pages %></a>
+  <% else %>
+  <span class="gap">&hellip;</span>
+  <% ((total_pages - window + 1)..total_pages).each do |i| %>
+  <a href="/<%= i %>"><%= i %></a>
+  <% end %>
+  <% end %>
+  <% end %>
+
+  <% if page < total_pages %>
+  <a class="next" href="/<%= page + 1 %>" rel="next">Next &rarr;</a>
+  <% else %>
+  <span class="disabled">Next &rarr;</span>
+  <% end %>
+</nav>

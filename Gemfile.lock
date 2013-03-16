@@ -26,7 +26,7 @@ GEM
     coffee-script (2.2.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.5.0)
+    coffee-script-source (1.6.1)
     erubis (2.7.0)
     excon (0.20.0)
     execjs (1.4.0)
@@ -51,7 +51,7 @@ GEM
     minitest (4.6.2)
     minitest-wscolor (0.0.3)
       minitest (>= 2.3.1)
-    multi_json (1.6.1)
+    multi_json (1.7.0)
     net-scp (1.1.0)
       net-ssh (>= 2.6.5)
     net-ssh (2.6.6)

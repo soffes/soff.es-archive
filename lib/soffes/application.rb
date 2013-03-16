@@ -6,16 +6,16 @@ module Soffes
     PAGE_SIZE = 3
 
     get %r{/(\d+)?} do |page|
-      # TODO: This is terrible and doesn't work right
-      page ||= 1
-      page = page.to_i
-      page -= PAGE_SIZE - 1 if page == 1
+      # Pagination
+      page = (page || 1).to_i
+      start_index = (page - 1) * PAGE_SIZE
+      total_pages = (Soffes.redis.zcard('sorted-slugs').to_f / PAGE_SIZE.to_f).ceil.to_i
 
       slugs = []
-      Soffes.redis.zrevrange('sorted-slugs', page + 1, page + PAGE_SIZE).each do |key|
+      Soffes.redis.zrevrange('sorted-slugs', start_index, start_index + PAGE_SIZE - 1).each do |key|
         slugs << Soffes.redis.hgetall("slug-#{key}")
       end
-      erb :index, locals: { slugs: slugs }
+      erb :index, locals: { slugs: slugs, page: page, total_pages: total_pages, window: 2 }
     end
 
     get '/:slug' do

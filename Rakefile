@@ -8,3 +8,8 @@ require 'soffes'
 Dir.glob('lib/tasks/*.rake').each do |task|
   import task
 end
+
+
+task :"assets:precompile" do
+  # Nothing, for now
+end

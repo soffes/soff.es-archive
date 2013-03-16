@@ -1,4 +1,5 @@
 require 'soffes/application'
+require 'soffes/markdown_renderer'
 
 module Soffes
   def self.redis

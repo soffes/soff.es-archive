@@ -1,0 +1,9 @@
+<article>
+  <header>
+    <h2><a href="/<%= @key %>"><%= @slug['title'] %></a></h2>
+    <% if @published_at %>
+    <p>Posted on <time datetime="<%= @published_at.strftime('%Y-%m-%dT%H:%M:%S%z') %>"><%= @published_at.strftime('%B %e, %Y') %></time></p>
+    <% end %>
+  </header>
+  <%= @slug['html'] %>
+</article>

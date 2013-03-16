@@ -13,16 +13,22 @@ gem 'sinatra'
 gem 'erubis'
 
 # Markdown
-gem 'redcarpet'
+gem 'redcarpet', require: false
 
 # Code coloring
-gem 'pygmentize'
+gem 'pygmentize', require: false
 
 # Redis client
 gem 'redis'
 
+# Safety
+gem 'safe_yaml'
+
 # Asset pipeline
 gem 'sprockets'
+
+# Utilities
+gem 'rake'
 
 # group :assets do
   # Stylesheet

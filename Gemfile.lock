@@ -64,10 +64,12 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    rake (10.0.3)
     redcarpet (2.2.2)
     redis (3.0.3)
     ruby-hmac (0.4.0)
     rubyzip (0.9.9)
+    safe_yaml (0.8.5)
     sass (3.2.7)
     selenium-webdriver (2.31.0)
       childprocess (>= 0.2.5)
@@ -115,8 +117,10 @@ DEPENDENCIES
   minitest-wscolor
   puma
   pygmentize
+  rake
   redcarpet
   redis
+  safe_yaml
   sass
   shotgun
   simplecov

@@ -11,18 +11,23 @@ module Soffes
       start_index = (page - 1) * PAGE_SIZE
       total_pages = (Soffes.redis.zcard('sorted-slugs').to_f / PAGE_SIZE.to_f).ceil.to_i
 
-      slugs = []
-      Soffes.redis.zrevrange('sorted-slugs', start_index, start_index + PAGE_SIZE - 1).each do |key|
-        slugs << Soffes.redis.hgetall("slug-#{key}")
-      end
+      keys = redis.zrevrange('sorted-slugs', start_index, start_index + PAGE_SIZE - 1)
+      slugs = redis.hmget('slugs', *keys).map { |s| MultiJson.load(s) }
+
       erb :index, locals: { slugs: slugs, page: page, total_pages: total_pages, window: 2 }
     end
 
     get '/:slug' do
-      slug = Soffes.redis.hgetall("slug-#{params[:slug]}")
+      slug = redis.hgetall("slug-#{params[:slug]}")
       return erb :not_found unless slug && slug.length > 0
 
       erb :slug, locals: { slug: slug }
+    end
+
+  private
+
+    def redis
+      Soffes.redis
     end
   end
 end

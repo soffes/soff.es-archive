@@ -30,6 +30,10 @@ gem 'sprockets'
 # Utilities
 gem 'rake'
 
+# JSON
+gem 'multi_json'
+gem 'oj'
+
 # group :assets do
   # Stylesheet
   gem 'sass'

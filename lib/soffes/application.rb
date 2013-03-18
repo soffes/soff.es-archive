@@ -5,7 +5,7 @@ module Soffes
   class Application < Sinatra::Application
     PAGE_SIZE = 3
 
-    get %r{/(\d+)?} do |page|
+    get %r{/$|/(\d+)$} do |page|
       # Pagination
       page = (page || 1).to_i
       start_index = (page - 1) * PAGE_SIZE
@@ -17,11 +17,11 @@ module Soffes
       erb :index, locals: { slugs: slugs, page: page, total_pages: total_pages, window: 2 }
     end
 
-    get '/:slug' do
-      slug = redis.hgetall("slug-#{params[:slug]}")
+    get %r{/([\w\d\-]+)$} do |key|
+      slug = redis.hget('slugs', key)
       return erb :not_found unless slug && slug.length > 0
 
-      erb :slug, locals: { slug: slug }
+      erb :slug, locals: { slug: MultiJson.load(slug) }
     end
 
   private

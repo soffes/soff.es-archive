@@ -5,11 +5,6 @@ log/*.log
 tmp/**/*
 dump.rdb
 tmp
-posts
 .sass-cache
-public/stylesheets
 public/assets
-.rspec
 coverage
-rails_best_practices_output.html
-.powder

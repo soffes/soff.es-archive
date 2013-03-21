@@ -1,0 +1,18 @@
+section.about {
+  p:nth-child(2) > a:first-child {
+    @include bordered-image;
+    float: left;
+    width: 300px;
+    height: 300px;
+    margin: 1em 1em 0.5em 0;
+
+    img {
+      width: 300px;
+      height: 300px;
+    }
+
+    @media #{$small-query} {
+      border-width: 0;
+    }
+  }
+}

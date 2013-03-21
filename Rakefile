@@ -1,2 +1,10 @@
-require File.expand_path('../config/application', __FILE__)
-Soffes::Application.load_tasks
+require 'rubygems'
+require 'bundler'
+Bundler.require
+
+$LOAD_PATH.unshift 'lib'
+require 'soffes'
+
+Dir.glob('lib/tasks/*.rake').each do |task|
+  import task
+end

@@ -1,41 +1,34 @@
 # soff.es
 
-This is my new blog in Rails 3.1. I [moved my blog to Jekyll](http://soff.es/post/new-blog-on-github-and-jekyll/) a few months ago and really missed playing with a Rails app, so I'm moving it back and starting from scratch.
+This is my blog. It's pretty simple. It stores all of the posts in Redis. They are updated via GitHub post-commit hook. My posts are stored [here](https://github.com/soffes/blog).
 
 ## Running Locally
 
-**Note:** I am using Ruby 1.9.3 both on Heroku and locally.
+**Note:** I am using Ruby 2.0.0 both on Heroku and locally.
 
 Get the source (obviously)
 
     $ git clone https://github.com/soffes/soff.es.git
     $ cd soff.es
 
-I'm also using Postgres locally. If you don't have it already, you'll need to install Postgres. You can do this easily with [Homebrew](https://github.com/mxcl/homebrew):
+Import my posts:
 
-    $ brew install postgresql
-
-(Be sure and read the caveats after it installs. You must run some additional commands to get it to complete the installation.)
-
-Run the following queries to setup the user in Postgres:
-
-    $ psql postgres
-    # CREATE USER samsoffes SUPERUSER;\q
-
-Now all you need to do to get going, all you need to is bundle (you'll need to install [Bundler](http://gembundler.com) if you don't have it with `gem install bundler`) and setup the database:
-
-    $ bundle install
-    $ rake db:create
-    $ rake db:schema:load
+    $ rake import
 
 Now you can start the server with [Foreman](https://github.com/ddollar/foreman):
 
-    $ bundle exec foreman start
+    $ bundle exec shotgun
 
-Then open <http://localhost:5000> in your browser to see it running. If you have issues getting it up and running, [send me an email](mailto:sam@soff.es).
+Then open <http://localhost:9292> in your browser to see it running. If you have issues getting it up and running, [send me an email](mailto:sam@soff.es).
 
-### Admin
+## Redis
 
-The default credentials for the admin area are `admin` and `passw0rd`. These are obviously different on production or if you have environment variables for `ADMIN_USERNAME` and `ADMIN_PASSWORD`.
+Here's how things are stored in Redis:
 
-To access the admin, go to <http://localhost:5000/admin/posts>.
+    Set       slugs
+    ZSet      sorted-slugs
+    Hash      slug-NAME
+                html
+                tags
+                title
+                published_at

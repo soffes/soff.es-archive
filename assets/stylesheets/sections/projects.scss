@@ -1,7 +1,9 @@
 @import "../globals/*";
 
 section.projects {
-  padding-top: 1em;
+  header {
+    margin-bottom: 1em;
+  }
 
   ul {
     margin: 0 0 2em 0.5em;

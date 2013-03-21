@@ -16,7 +16,7 @@ gem 'erubis'
 gem 'redcarpet', require: false
 
 # Code coloring
-gem 'pygmentize', require: false
+gem 'pygments.rb', require: false
 
 # Redis client
 gem 'redis'

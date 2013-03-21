@@ -35,9 +35,12 @@ GEM
     multi_json (1.7.0)
     nokogiri (1.5.6)
     oj (2.0.10)
+    posix-spawn (0.3.6)
     puma (1.6.3)
       rack (~> 1.2)
-    pygmentize (0.0.3)
+    pygments.rb (0.3.7)
+      posix-spawn (~> 0.3.6)
+      yajl-ruby (~> 1.1.0)
     rack (1.5.2)
     rack-protection (1.5.0)
       rack
@@ -80,6 +83,7 @@ GEM
     websocket (1.0.7)
     xpath (1.0.0)
       nokogiri (~> 1.3)
+    yajl-ruby (1.1.0)
 
 PLATFORMS
   ruby
@@ -95,7 +99,7 @@ DEPENDENCIES
   multi_json
   oj
   puma
-  pygmentize
+  pygments.rb
   rake
   redcarpet
   redis

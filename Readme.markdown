@@ -15,7 +15,7 @@ Import my posts:
 
     $ rake import
 
-Now you can start the server with [Foreman](https://github.com/ddollar/foreman):
+Now you can start the server with [Shotgun](https://github.com/rtomayko/shotgun):
 
     $ bundle exec shotgun
 

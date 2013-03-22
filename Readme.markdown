@@ -21,14 +21,6 @@ Now you can start the server with [Foreman](https://github.com/ddollar/foreman):
 
 Then open <http://localhost:9292> in your browser to see it running. If you have issues getting it up and running, [send me an email](mailto:sam@soff.es).
 
-## Redis
+## Further
 
-Here's how things are stored in Redis:
-
-    Set       slugs
-    ZSet      sorted-slugs
-    Hash      slug-NAME
-                html
-                tags
-                title
-                published_at
+At some point, I plan on moving a lot of this into a gem.

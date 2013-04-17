@@ -7,7 +7,7 @@ module Soffes
       if language
         Pygments.highlight(code, lexer: language.to_sym)
       else
-        code
+        "<pre>#{code}</pre>"
       end
     end
   end

@@ -4,6 +4,7 @@ require 'redis'
 module Soffes
   class Application < Sinatra::Application
     PAGE_SIZE = 3
+    PAGES = %w{about music projects talks}
 
     get %r{/$|/(\d+)$} do |page|
       # Pagination
@@ -18,10 +19,12 @@ module Soffes
     end
 
     get %r{/([\w\d\-]+)$} do |key|
-      slug = redis.hget('slugs', key)
-      return erb :not_found unless slug && slug.length > 0
+      if PAGES.include? key
+        slug = redis.hget('slugs', key)
+        erb :slug, locals: { slug: MultiJson.load(slug) }
+      end
 
-      erb :slug, locals: { slug: MultiJson.load(slug) }
+      redirect "http://sam.roon.io/#{key}"
     end
 
   private

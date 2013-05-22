@@ -21,7 +21,7 @@ module Soffes
     get %r{/([\w\d\-]+)$} do |key|
       if PAGES.include? key
         slug = redis.hget('slugs', key)
-        erb :slug, locals: { slug: MultiJson.load(slug) }
+        return erb(:slug, locals: { slug: MultiJson.load(slug) })
       end
 
       redirect "http://sam.roon.io/#{key}"

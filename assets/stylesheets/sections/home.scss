@@ -1,18 +1,53 @@
-div.current-project {
-  margin-bottom: 4em;
-  
-  div.row-wide {
-    margin-bottom: 1em;
-  }
-}
+section.home {
+  ul.apps {
+    @include clearfix;
+    margin: 0 auto 30px;
+    width: 520px;
 
-div.latest-post h3 a {
-  font-size: 18px;
-  color: #777;
-}
+    li {
+      border-radius: 20px;
+      float: left;
+      display: block;
+      width: 100px;
+      height: 120px;
+      margin-right: 40px;
 
-span.cheddar {
-  a {
-    color: #ff7243;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      display: block;
+      width: 100px;
+      height: 120px;
+      line-height: 0;
+
+      span {
+        display: block;
+        width: 100px;
+        height: 10px;
+        font-weight: bold;
+        font-size: 0.8em;
+        text-align: center;
+        line-height: 1em;
+        padding: 8px 0 0;
+        color: #888;
+      }
+
+      &:hover {
+        border: 0;
+      }
+    }
+
+    img {
+      @include box-sizing(border-box);
+      border-radius: 20px;
+      height: 100px;
+      width: 100px;
+      position: relative;
+      z-index: -2;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.3), inset 0 0 2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    }
   }
 }

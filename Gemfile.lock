@@ -1,89 +1,80 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (3.2.12)
-      i18n (~> 0.6)
+    activesupport (3.2.13)
+      i18n (= 0.6.1)
       multi_json (~> 1.0)
-    bourbon (3.1.1)
+    backports (3.3.1)
+    bourbon (3.1.7)
       sass (>= 3.2.0)
       thor
-    capybara (2.0.2)
+    capybara (2.1.0)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
-      selenium-webdriver (~> 2.0)
-      xpath (~> 1.0.0)
-    childprocess (0.3.9)
-      ffi (~> 1.0, >= 1.0.11)
+      xpath (~> 2.0)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.6.1)
+    coffee-script-source (1.6.2)
     erubis (2.7.0)
+    eventmachine (1.0.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    ffi (1.4.0)
-    hike (1.2.1)
-    i18n (0.6.4)
-    mime-types (1.21)
+    hike (1.2.3)
+    i18n (0.6.1)
+    mime-types (1.23)
+    mini_portile (0.5.0)
     miniskirt (1.2.1)
       activesupport
-    minitest (4.6.2)
+    minitest (5.0.4)
     minitest-wscolor (0.0.3)
       minitest (>= 2.3.1)
-    multi_json (1.7.0)
-    nokogiri (1.5.6)
-    oj (2.0.10)
-    posix-spawn (0.3.6)
-    puma (1.6.3)
-      rack (~> 1.2)
-    pygments.rb (0.3.7)
-      posix-spawn (~> 0.3.6)
-      yajl-ruby (~> 1.1.0)
+    multi_json (1.7.6)
+    nokogiri (1.6.0)
+      mini_portile (~> 0.5.0)
+    puma (2.0.1)
+      rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-protection (1.5.0)
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    rake (10.0.3)
-    redcarpet (2.2.2)
-    redis (3.0.3)
-    rubyzip (0.9.9)
-    safe_yaml (0.8.6)
-    sass (3.2.7)
-    selenium-webdriver (2.31.0)
-      childprocess (>= 0.2.5)
-      multi_json (~> 1.0)
-      rubyzip
-      websocket (~> 1.0.4)
+    rake (10.0.4)
+    sass (3.2.9)
     shotgun (0.9)
       rack (>= 1.0)
     simplecov (0.7.1)
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
     simplecov-html (0.7.1)
-    sinatra (1.4.1)
-      rack (~> 1.5, >= 1.5.2)
+    sinatra (1.4.3)
+      rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
-    sprockets (2.9.0)
+    sinatra-contrib (1.4.0)
+      backports (>= 2.0)
+      eventmachine
+      rack-protection
+      rack-test
+      sinatra (~> 1.4.2)
+      tilt (~> 1.3)
+    sprockets (2.10.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sprockets-sass (0.9.1)
+    sprockets-sass (1.0.1)
       sprockets (~> 2.0)
       tilt (~> 1.1)
-    thor (0.17.0)
-    tilt (1.3.5)
-    uglifier (1.3.0)
+    thor (0.18.1)
+    tilt (1.4.1)
+    uglifier (2.1.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
-    websocket (1.0.7)
-    xpath (1.0.0)
+    xpath (2.0.0)
       nokogiri (~> 1.3)
-    yajl-ruby (1.1.0)
 
 PLATFORMS
   ruby
@@ -96,18 +87,13 @@ DEPENDENCIES
   miniskirt
   minitest
   minitest-wscolor
-  multi_json
-  oj
   puma
-  pygments.rb
   rake
-  redcarpet
-  redis
-  safe_yaml
   sass
   shotgun
   simplecov
   sinatra
+  sinatra-contrib
   sprockets
   sprockets-sass
   uglifier

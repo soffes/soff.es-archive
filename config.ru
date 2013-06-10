@@ -2,9 +2,6 @@ require 'rubygems'
 require 'bundler'
 Bundler.require
 
-$LOAD_PATH.unshift 'lib'
-require 'soffes'
-
 require 'sprockets'
 map '/assets' do
   sprockets = Sprockets::Environment.new
@@ -14,6 +11,7 @@ map '/assets' do
   run sprockets
 end
 
+require './application'
 map '/' do
-  run Soffes::Application
+  run Soffes
 end

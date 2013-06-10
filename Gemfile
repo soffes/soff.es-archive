@@ -8,31 +8,16 @@ gem 'puma'
 
 # Simple HTTP
 gem 'sinatra'
+gem 'sinatra-contrib'
 
 # Faster ERB
 gem 'erubis'
-
-# Markdown
-gem 'redcarpet', require: false
-
-# Code coloring
-gem 'pygments.rb', require: false
-
-# Redis client
-gem 'redis'
-
-# Safety
-gem 'safe_yaml'
 
 # Asset pipeline
 gem 'sprockets'
 
 # Utilities
 gem 'rake'
-
-# JSON
-gem 'multi_json'
-gem 'oj'
 
 # group :assets do
   # Stylesheet

@@ -1,5 +1,3 @@
-#= require jquery
-#= require swfobject
 #= require_self
 
 soundCloudColor = 'f6291d'
@@ -11,7 +9,7 @@ hasFlash = ->
   return false
 
 $ ->
-  listenButtonClicked = (e) ->    
+  listenButtonClicked = (e) ->
     e.preventDefault()
     href = this.getAttribute("href")
     el = $(this)
@@ -23,14 +21,14 @@ $ ->
       'wmode': 'transparent'
       'allowscriptaccess': 'always'
     }
-    
+
     # Reset the close button
     el.html("Close").unbind("click").click(closeButtonClicked)
-  
+
   closeButtonClicked = (e) ->
     e.preventDefault()
     el = $(this)
     $('div', el.parent('li').get(0)).hide().remove()
     el.html('Listen').unbind('click').click(listenButtonClicked)
-  
+
   $('.tracks li a').click(listenButtonClicked) if hasFlash()

@@ -19,6 +19,12 @@ gem 'sprockets'
 # Utilities
 gem 'rake'
 
+# Key-value store
+gem 'redis'
+
+# Easier networking
+gem 'httparty', require: false
+
 # group :assets do
   # Stylesheet
   gem 'sass'
@@ -29,14 +35,6 @@ gem 'rake'
   gem 'coffee-script'
   gem 'uglifier'
 # end
-
-group :test do
-  gem 'minitest'
-  gem 'minitest-wscolor'
-  gem 'miniskirt', require: false
-  gem 'capybara'
-  gem 'simplecov', require: false
-end
 
 group :development do
   # Reloading in development

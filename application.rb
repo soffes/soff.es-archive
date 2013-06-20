@@ -1,10 +1,19 @@
 require 'sinatra/content_for'
 
+# Connect to Redis
+if ENV['REDISTOGO_URL']
+  uri = URI.parse(ENV['REDISTOGO_URL'])
+  $redis = Redis.new(host: uri.host, port: uri.port, password: uri.password)
+else
+  $redis = Redis.new
+end
+
 class Soffes < Sinatra::Base
   helpers Sinatra::ContentFor
 
   # Homepage
   get '/' do
+    @post = $redis.hgetall('latest_post')
     erb :home
   end
 

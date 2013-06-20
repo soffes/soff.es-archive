@@ -1,15 +1,25 @@
 <section class="home">
-  <p>I should put something cool here.</p>
-  <p>I'm thinking something like:</p>
+  <h2>Hello</h2>
+  <p>I'm a software engineer living in Louisville, KY. I am currently the Vice President of Engineering at <a href="https://seesaw.co" rel="external nofollow">Seesaw</a>. Most of my days are spent writing Objective-C and Ruby.  In my free time, I make this app called <a href="https://roon.io" rel="external nofollow">Roon</a>&mdash;it's the easiest way to blog. <a href="https://twitter.com/soffes" rel="external nofollow">Say hi.</a></p>
+
+  <% if @post %>
+  <h2>Lastest Writing</h2>
+  <article>
+    <h3><a href="<%= @post['url'] %>"><%= @post['title'] %></a></h3>
+    <%= @post['excerpt_html'] %>
+    <p><a href="<%= @post['url'] %>">Continue Reading &rarr;</a></p>
+  </article>
+  <% end %>
+
+  <!-- <p>I should put some more cool stuff here. Ideas:</p>
   <ul>
-    <li>Latest post on Roon</li>
     <li>Featured products</li>
     <li>Recent GitHub projects</li>
     <li>Recent photos from Instagram</li>
     <li>Some facts from Fitbit</li>
-  </ul>
+   </ul> -->
 
-  <h3>Apps</h3>
+  <h2>Apps</h2>
   <p>I started developing for iOS the day the SDK was released way back in 2008. Here are some of the best apps I've worked on. I'm no longer involved in the development of the first four since those belong to previous employers.</p>
 
   <ul class="apps">
@@ -64,4 +74,17 @@
       </a>
     </li>
   </ul>
+
+  <h2>Current Projects</h2>
+  <p>I'm constantly hacking on random stuff. Here's a few recent highlights:</p>
+  <ul class="list">
+    <li><a href="https://github.com/soffes/quesadilla" rel="external nofollow">Quesadilla</a> &mdash; Entity-style text parsing</li>
+    <li><a href="https://github.com/soffes/hue" rel="external nofollow">Hue</a> &mdash; Control Philips lights with Ruby</li>
+    <li><a href="https://github.com/soffes/sonos" rel="external nofollow">Sonos</a> &mdash; Control Sonos speakers with Ruby</li>
+  </ul>
+
+  <p>Check out the full list of my open source projects <a href="https://github.com/soffes" rel="external nofollow">on GitHub</a> or head over to my little <a href="/projects">projects page</a>.</p>
+
+  <p style="text-align:center;margin:2em 0 -1em"><a href="https://twitter.com/soffes" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @soffes</a></p>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </section>

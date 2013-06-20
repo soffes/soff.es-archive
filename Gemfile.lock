@@ -1,19 +1,10 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (3.2.13)
-      i18n (= 0.6.1)
-      multi_json (~> 1.0)
-    backports (3.3.1)
-    bourbon (3.1.7)
+    backports (3.3.2)
+    bourbon (3.1.8)
       sass (>= 3.2.0)
       thor
-    capybara (2.1.0)
-      mime-types (>= 1.16)
-      nokogiri (>= 1.3.3)
-      rack (>= 1.0.0)
-      rack-test (>= 0.5.4)
-      xpath (~> 2.0)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -23,32 +14,23 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     hike (1.2.3)
-    i18n (0.6.1)
-    mime-types (1.23)
-    mini_portile (0.5.0)
-    miniskirt (1.2.1)
-      activesupport
-    minitest (5.0.4)
-    minitest-wscolor (0.0.3)
-      minitest (>= 2.3.1)
-    multi_json (1.7.6)
-    nokogiri (1.6.0)
-      mini_portile (~> 0.5.0)
-    puma (2.0.1)
+    httparty (0.11.0)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
+    multi_json (1.7.7)
+    multi_xml (0.5.4)
+    puma (2.1.0)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-protection (1.5.0)
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    rake (10.0.4)
+    rake (10.1.0)
+    redis (3.0.4)
     sass (3.2.9)
     shotgun (0.9)
       rack (>= 1.0)
-    simplecov (0.7.1)
-      multi_json (~> 1.0)
-      simplecov-html (~> 0.7.1)
-    simplecov-html (0.7.1)
     sinatra (1.4.3)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -73,25 +55,20 @@ GEM
     uglifier (2.1.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
-    xpath (2.0.0)
-      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bourbon
-  capybara
   coffee-script
   erubis
-  miniskirt
-  minitest
-  minitest-wscolor
+  httparty
   puma
   rake
+  redis
   sass
   shotgun
-  simplecov
   sinatra
   sinatra-contrib
   sprockets

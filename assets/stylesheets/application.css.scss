@@ -19,10 +19,9 @@ html {
 
 body {
   color: $text-color;
-  font-family: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 17px;
-  line-height: 1.5em;
+  font-family: $nhg-55;
+  font-size: 18px;
+  line-height: 1.6em;
   padding: 0 10px;
 }
 
@@ -43,7 +42,7 @@ a {
 }
 
 strong {
-  font-weight: bold;
+  font-family: $nhg-65;
 }
 
 em {
@@ -130,7 +129,7 @@ code {
 h1 {
   color: #000;
   font-size: 2.5em;
-  font-weight: 700;
+  font-family: $nhg-75;
   margin-bottom: 0.5em;
 }
 
@@ -145,24 +144,27 @@ body > header h1 {
 h2 {
   font-size: 1.3em;
   margin-bottom: 0.2em;
-  font-weight: 700;
-}
+  font-family: $nhg-65;
 
-h3 {
-  font-size: 1em;
-  font-weight: bold;
-}
-
-h2, h3 {
   a {
     color: $text-color;
     border: 0;
   }
 }
 
+h3 {
+  font-family: $nhg-55;
+  color: #999;
+
+  a {
+    color: #999;
+    border: 0;
+  }
+}
+
 h4 {
   color: #999;
-  font-weight: bold;
+  font-family: $nhg-65;
   margin-bottom: 0.2em;
 }
 
@@ -225,4 +227,24 @@ section.server-error {
 
 span.gray {
   color: #777;
+}
+
+ul.list, ol.list {
+  margin: 0 0 2em 0.5em;
+
+  li {
+    margin-left: 1em;
+  }
+}
+
+ul.list li {
+  list-style: disc;
+}
+
+ol.list li {
+  list-style: decimal;
+}
+
+ol.list li ol li {
+  list-style: lower-alpha;
 }

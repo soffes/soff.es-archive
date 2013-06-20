@@ -2,7 +2,7 @@
   <h2>Hello</h2>
   <p>I'm a software engineer living in Louisville, KY. I am currently the Vice President of Engineering at <a href="https://seesaw.co" rel="external nofollow">Seesaw</a>. Most of my days are spent writing Objective-C and Ruby.  In my free time, I make this app called <a href="https://roon.io" rel="external nofollow">Roon</a>&mdash;it's the easiest way to blog. <a href="https://twitter.com/soffes" rel="external nofollow">Say hi.</a></p>
 
-  <% if @post %>
+  <% if @post && @post.length > 0 %>
   <h2>Lastest Writing</h2>
   <article>
     <h3><a href="<%= @post['url'] %>"><%= @post['title'] %></a></h3>

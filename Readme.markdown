@@ -1,6 +1,6 @@
 # soff.es
 
-This is my blog. It's pretty simple. It stores all of the posts in Redis. They are updated via GitHub post-commit hook. My posts are stored [here](https://github.com/soffes/blog).
+This is my website. It's pretty simple. My blog is [on Roon](http://sam.roon.io).
 
 ## Running Locally
 
@@ -11,16 +11,12 @@ Get the source (obviously)
     $ git clone https://github.com/soffes/soff.es.git
     $ cd soff.es
 
-Import my posts:
+Import my lastest posts:
 
-    $ rake import
+    $ rake update_post
 
 Now you can start the server with [Shotgun](https://github.com/rtomayko/shotgun):
 
     $ bundle exec shotgun
 
-Then open <http://localhost:9292> in your browser to see it running. If you have issues getting it up and running, [send me an email](mailto:sam@soff.es).
-
-## Further
-
-At some point, I plan on moving a lot of this into a gem.
+Then open <http://localhost:9393> in your browser to see it running. If you have issues getting it up and running, [send me an email](mailto:sam@soff.es).

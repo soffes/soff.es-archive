@@ -19,8 +19,10 @@ html {
 
 body {
   color: $text-color;
-  font-family: $nhg-55;
-  font-size: 18px;
+  font-size: 22px;
+  font-family: 'Archer A', 'Archer B';
+  font-weight: 500;
+  font-style: normal;
   line-height: 1.6em;
   padding: 0 10px;
 }
@@ -42,7 +44,8 @@ a {
 }
 
 strong {
-  font-family: $nhg-65;
+  font-weight: 800;
+  font-style: normal;
 }
 
 em {
@@ -99,37 +102,10 @@ small {
   }
 }
 
-pre {
-  background-color: $code-background-color;
-  border: 1px solid $code-border-color;
-  color: #444;
-  font-family: $monaco;
-  font-size: 13px;
-  margin: 0 0 2em;
-  overflow: auto;
-  padding: 0.5em;
-
-  code {
-    background-color: $code-background-color;
-    border: medium none;
-    font-size: 1em;
-    padding: 0;
-  }
-}
-
-code {
-  background-color: $code-background-color;
-  border: 1px solid $code-border-color;
-  color: #444;
-  padding: 0 0.2em;
-  font-family: $monaco;
-  font-size: 0.8em;
-}
-
 h1 {
   color: #000;
   font-size: 2.5em;
-  font-family: $nhg-75;
+  font-weight: 800;
   margin-bottom: 0.5em;
 }
 
@@ -144,7 +120,7 @@ body > header h1 {
 h2 {
   font-size: 1.3em;
   margin-bottom: 0.2em;
-  font-family: $nhg-65;
+  font-weight: 800;
 
   a {
     color: $text-color;
@@ -153,7 +129,7 @@ h2 {
 }
 
 h3 {
-  font-family: $nhg-55;
+  font-weight: 800;
   color: #999;
 
   a {
@@ -164,7 +140,7 @@ h3 {
 
 h4 {
   color: #999;
-  font-family: $nhg-65;
+  font-weight: 800;
   margin-bottom: 0.2em;
 }
 

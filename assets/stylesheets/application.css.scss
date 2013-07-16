@@ -20,11 +20,15 @@ html {
 body {
   color: $text-color;
   font-size: 22px;
-  font-family: 'Archer A', 'Archer B';
-  font-weight: 500;
-  font-style: normal;
-  line-height: 1.6em;
+  font-family: $font-family;
+  font-weight: $standard-weight;
+  line-height: 1.5em;
   padding: 0 10px;
+
+  @media #{$small-query} {
+    font-size: 18px;
+    line-height: 1.6em;
+  }
 }
 
 input {
@@ -44,11 +48,11 @@ a {
 }
 
 strong {
-  font-weight: 800;
+  font-weight: $bold-weight;
   font-style: normal;
 }
 
-em {
+mark {
   background-color: $highligh-color;
   padding: 0 0.1em;
 }
@@ -63,7 +67,7 @@ abbr {
 }
 
 p {
-  margin: 0 0 1em;
+  margin: 0 0 1.5em;
 }
 
 hr {
@@ -104,9 +108,11 @@ small {
 
 h1 {
   color: #000;
-  font-size: 2.5em;
-  font-weight: 800;
+  font-size: 3em;
   margin-bottom: 0.5em;
+  font-family: 'Landmark Dimensional A', 'Landmark Dimensional B';
+  font-weight: 400;
+  text-transform: capitalize;
 }
 
 body > header h1 {
@@ -119,8 +125,7 @@ body > header h1 {
 
 h2 {
   font-size: 1.3em;
-  margin-bottom: 0.2em;
-  font-weight: 800;
+  font-weight: $bold-weight;
 
   a {
     color: $text-color;
@@ -129,7 +134,7 @@ h2 {
 }
 
 h3 {
-  font-weight: 800;
+  font-weight: $bold-weight;
   color: #999;
 
   a {
@@ -140,7 +145,7 @@ h3 {
 
 h4 {
   color: #999;
-  font-weight: 800;
+  font-weight: $bold-weight;
   margin-bottom: 0.2em;
 }
 
@@ -153,14 +158,18 @@ body > header, body > section, body > footer {
 // Header
 body > header {
   color: #949494;
-  margin: 5em auto 4em;
+  margin: 4em auto;
 
   p {
     margin: 0;
   }
 
   @media #{$small-query} {
-    margin: 3em auto;
+    margin: 2em auto 3em;
+
+    p:nth-child(2) {
+      margin-bottom: 1em;
+    }
   }
 }
 

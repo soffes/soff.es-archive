@@ -17,15 +17,15 @@ GEM
     httparty (0.11.0)
       multi_json (~> 1.0)
       multi_xml (>= 0.5.2)
+    kgio (2.8.0)
     multi_json (1.7.7)
     multi_xml (0.5.4)
-    puma (2.1.0)
-      rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-protection (1.5.0)
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    raindrops (0.11.0)
     rake (10.1.0)
     redis (3.0.4)
     sass (3.2.9)
@@ -55,6 +55,10 @@ GEM
     uglifier (2.1.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    unicorn (4.6.3)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
 
 PLATFORMS
   ruby
@@ -64,7 +68,6 @@ DEPENDENCIES
   coffee-script
   erubis
   httparty
-  puma
   rake
   redis
   sass
@@ -74,3 +77,4 @@ DEPENDENCIES
   sprockets
   sprockets-sass
   uglifier
+  unicorn

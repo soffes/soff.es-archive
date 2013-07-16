@@ -1,8 +1,8 @@
 section.home {
   ul.apps {
     @include clearfix;
-    margin: 2em auto 0;
-    width: 520px;
+    margin: 2em auto;
+    width: 400px;
     font-family: 'HelveticaNeue', Helvetica, sans-serif;
     font-size: 14px;
 
@@ -14,9 +14,9 @@ section.home {
       border-radius: 20px;
       float: left;
       display: block;
-      width: 25%;
+      width: 33%;
       height: 120px;
-      margin-bottom: 1em;
+      margin-bottom: 2em;
 
       @media #{$small-query} {
         width: 50%;
@@ -55,10 +55,6 @@ section.home {
       z-index: -2;
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.3), inset 0 0 2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25);
     }
-  }
-
-  h2 {
-    margin-top: 2em;
   }
 
   article {

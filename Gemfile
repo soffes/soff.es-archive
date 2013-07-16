@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 # Web server
-gem 'puma'
+gem 'unicorn'
 
 # Simple HTTP
 gem 'sinatra'

@@ -58,9 +58,17 @@ section.home {
   }
 
   article {
-    p {
+    margin-bottom: 1.5em;
+
+    p, blockquote {
       display: inline;
       margin-right: 0.25em;
+    }
+
+    blockquote {
+      color: $text-color;
+      padding: 0;
+      border: 0;
     }
 
     img, object {

@@ -1,5 +1,3 @@
-#= require_self
-
 soundCloudColor = 'f6291d'
 apiKey = 'TxrZJrlTcohZFYYsx6DIdg'
 
@@ -13,11 +11,11 @@ $ ->
     e.preventDefault()
     href = this.getAttribute("href")
     el = $(this)
-    track = href.replace('http://soundcloud.com/samsoffes/', '')
+    track = href.replace('http://soundcloud.com/soffes/', '')
     id = "soundcloud-player-#{track}"
     el.parent().append("<div class=\"soundcloud-player\"><div><div id=\"#{id}\"></div></div></div>");
-    swfURL = "http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fsoundcloud.com%2Fsamsoffes%2F#{track}&show_comments=false&auto_play=true&color=#{soundCloudColor}"
-    swfobject.embedSWF swfURL, id, 225, 81, '9.0.0', 'http://assets.samsoff.es/swf/expressInstall.swf', false, {
+    swfURL = "http://player.soundcloud.com/player.swf?url=http%3A%2F%2Fsoundcloud.com%2Fsoffes%2F#{track}&show_comments=false&auto_play=true&color=#{soundCloudColor}"
+    swfobject.embedSWF swfURL, id, 225, 81, '9.0.0', 'http://soffes-assets.s3.amazonaws.com/swf/express-install.swf', false, {
       'wmode': 'transparent'
       'allowscriptaccess': 'always'
     }

@@ -11,7 +11,6 @@ map '/assets' do
   run sprockets
 end
 
+require 'sinatra'
 require './application'
-map '/' do
-  run Soffes
-end
+run Soffes

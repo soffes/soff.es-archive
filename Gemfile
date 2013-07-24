@@ -7,8 +7,8 @@ ruby '2.0.0'
 gem 'unicorn'
 
 # Simple HTTP
-gem 'sinatra'
-gem 'sinatra-contrib'
+gem 'sinatra', require: false
+gem 'sinatra-contrib', require: false
 
 # Faster ERB
 gem 'erubis'
@@ -21,6 +21,9 @@ gem 'rake'
 
 # Key-value store
 gem 'redis'
+
+# Instagram
+gem 'instagram'
 
 # Easier networking
 gem 'httparty', require: false

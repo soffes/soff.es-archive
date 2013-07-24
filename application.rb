@@ -1,4 +1,5 @@
 require 'sinatra/content_for'
+require 'json'
 
 # Connect to Redis
 if ENV['REDISTOGO_URL']

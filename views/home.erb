@@ -20,7 +20,7 @@
    </ul> -->
 
   <% if instagram = $redis['instagram'] %>
-  <div class="instagram">
+  <div class="instagram four-up">
     <ul>
     <% JSON(instagram).each do |image| %>
       <li>
@@ -33,6 +33,23 @@
     <p>
       <a href="http://instagram.com/soffes?ref=badge" class="ig-b- ig-b-16"><img src="http://badges.instagram.com/static/images/ig-badge-16.png" alt="Instagram"></a>
       <a href="http://instagram.com/soffes" rel="external nofollow">Follow @soffes</a>
+    </p>
+  </div>
+  <% end %>
+
+  <% if rdio = $redis['rdio_heavy_rotation'] %>
+  <div class="rdio four-up">
+    <ul>
+    <% JSON(rdio).each do |album| %>
+      <li>
+        <a href="<%= album['url'] %>" rel="external nofollow" title="<%= album['name'] %> — <%= album['artist'] %>">
+          <img src="<%= album['icon'] %>" alt="<%= album['name'] %> — <%= album['artist'] %>">
+        </a>
+      </li>
+    <% end %>
+    </ul>
+    <p>
+      <a href="http://rdio.com/people/soffes"></a> <a href="http://rdio.com/people/soffes">Follow soffes</a>
     </p>
   </div>
   <% end %>

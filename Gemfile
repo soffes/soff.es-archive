@@ -23,7 +23,10 @@ gem 'rake'
 gem 'redis'
 
 # Instagram
-gem 'instagram'
+gem 'instagram', require: false
+
+# Rdio
+gem 'rdio_api', require: false
 
 # Easier networking
 gem 'httparty', require: false

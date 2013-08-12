@@ -3,7 +3,7 @@
 ul.apps {
   @include clearfix;
   margin: 2em auto;
-  width: 400px;
+  width: 100%;
   font-family: 'HelveticaNeue', Helvetica, sans-serif;
   font-size: 14px;
 
@@ -15,7 +15,7 @@ ul.apps {
     border-radius: 20px;
     float: left;
     display: block;
-    width: 33%;
+    width: 25%;
     height: 120px;
     margin-bottom: 2em;
 

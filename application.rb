@@ -30,6 +30,11 @@ class Soffes < Sinatra::Base
     redirect 'http://speakerdeck.com/soffes'
   end
 
+  # Redirect resume to GitHub
+  get /resume|cv/ do
+    redirect 'https://github.com/soffes/resume/blob/master/Sam%20Soffes%20Resume.pdf?raw=true'
+  end
+
   # Redirect posts to Roon
   get %r{/([\w\d\-]+)$} do |key|
     # TODO: Maybe hit the Roon API occasionally to get allowed keys

@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.3.5)
     backports (3.3.3)
     bourbon (3.1.8)
       sass (>= 3.2.0)
@@ -32,6 +33,9 @@ GEM
     multi_xml (0.5.4)
     multipart-post (1.2.0)
     rack (1.5.2)
+    rack-canonical-host (0.0.8)
+      addressable
+      rack (~> 1.0)
     rack-protection (1.5.0)
       rack
     rack-test (0.6.2)
@@ -87,6 +91,7 @@ DEPENDENCIES
   erubis
   httparty
   instagram
+  rack-canonical-host
   rake
   rdio_api
   redis

@@ -2,58 +2,6 @@
   <h2>Hello</h2>
   <p>I'm a software engineer living in San Francisco. I work as a freelancer. You can <a href="http://hire.soff.es" rel="external nofollow">hire me</a>. Most of my days are spent writing Objective-C and Ruby. In my free time, I work on a few products at <a href="http://nothingmagical.com" rel="external nofollow">Nothing Magical</a>. If you're curious, find out <a href="/about">more about me</a>.</p>
 
-  <% if @post && @post.length > 0 %>
-  <h2>Latest Writing</h2>
-  <article>
-    <h3><a href="<%= @post['url'] %>"><%= @post['title'] %></a></h3>
-    <%= @post['excerpt_html'] %>
-    <p><a href="<%= @post['url'] %>">Continue Reading &rarr;</a></p>
-  </article>
-  <% end %>
-
-  <!-- <p>I should put some more cool stuff here. Ideas:</p>
-  <ul>
-    <li>Featured products</li>
-    <li>Recent GitHub projects</li>
-    <li>Recent photos from Instagram</li>
-    <li>Some facts from Fitbit</li>
-   </ul> -->
-
-  <% if instagram = $redis['instagram'] %>
-  <div class="instagram four-up">
-    <ul>
-    <% JSON(instagram).each do |image| %>
-      <li>
-        <a href="<%= image['link'] %>" rel="external nofollow" title="<%= image['caption'] ? image['caption']['text'] : nil %>">
-          <img src="<%= image['images']['low_resolution']['url'] %>" alt="<%= image['caption'] ? image['caption']['text'] : nil %>">
-        </a>
-      </li>
-    <% end %>
-    </ul>
-    <p>
-      <a href="http://instagram.com/soffes?ref=badge" class="ig-b- ig-b-16"><img src="http://badges.instagram.com/static/images/ig-badge-16.png" alt="Instagram"></a>
-      <a href="http://instagram.com/soffes" rel="external nofollow">Follow @soffes</a>
-    </p>
-  </div>
-  <% end %>
-
-  <% if rdio = $redis['rdio_heavy_rotation'] %>
-  <div class="rdio four-up">
-    <ul>
-    <% JSON(rdio).each do |album| %>
-      <li>
-        <a href="<%= album['url'] %>" rel="external nofollow" title="<%= album['name'] %> — <%= album['artist'] %>">
-          <img src="<%= album['icon'] %>" alt="<%= album['name'] %> — <%= album['artist'] %>">
-        </a>
-      </li>
-    <% end %>
-    </ul>
-    <p>
-      <a href="http://rdio.com/people/soffes" rel="external nofollow"></a> <a href="http://rdio.com/people/soffes" rel="external nofollow">Follow soffes</a>
-    </p>
-  </div>
-  <% end %>
-
   <h2>Apps</h2>
   <p>I started developing for iOS the day the SDK was released way back in 2008. Here are some of the best apps I've worked on. I'm no longer involved in the development of several of these since some belong to previous employers.</p>
 
@@ -138,6 +86,49 @@
 
   <p>Check out the full list of my open source projects <a href="https://github.com/soffes" rel="external nofollow">on GitHub</a> or head over to my little <a href="/projects">projects page</a>.</p>
 
+  <% if @post && @post.length > 0 %>
+  <h2>Latest Writing</h2>
+  <article>
+    <h3><a href="<%= @post['url'] %>"><%= @post['title'] %></a></h3>
+    <%= @post['excerpt_html'] %>
+    <p><a href="<%= @post['url'] %>">Continue Reading &rarr;</a></p>
+  </article>
+  <% end %>
+
+  <% if instagram = $redis['instagram'] %>
+  <div class="instagram four-up">
+    <ul>
+    <% JSON(instagram).each do |image| %>
+      <li>
+        <a href="<%= image['link'] %>" rel="external nofollow" title="<%= image['caption'] ? image['caption']['text'] : nil %>">
+          <img src="<%= image['images']['low_resolution']['url'] %>" alt="<%= image['caption'] ? image['caption']['text'] : nil %>">
+        </a>
+      </li>
+    <% end %>
+    </ul>
+    <p>
+      <a href="http://instagram.com/soffes?ref=badge" class="ig-b- ig-b-16"><img src="http://badges.instagram.com/static/images/ig-badge-16.png" alt="Instagram"></a>
+      <a href="http://instagram.com/soffes" rel="external nofollow">Follow @soffes</a>
+    </p>
+  </div>
+  <% end %>
+
+  <% if rdio = $redis['rdio_heavy_rotation'] %>
+  <div class="rdio four-up">
+    <ul>
+    <% JSON(rdio).each do |album| %>
+      <li>
+        <a href="<%= album['url'] %>" rel="external nofollow" title="<%= album['name'] %> — <%= album['artist'] %>">
+          <img src="<%= album['icon'] %>" alt="<%= album['name'] %> — <%= album['artist'] %>">
+        </a>
+      </li>
+    <% end %>
+    </ul>
+    <p>
+      <a href="http://rdio.com/people/soffes" rel="external nofollow"></a> <a href="http://rdio.com/people/soffes" rel="external nofollow">Follow soffes</a>
+    </p>
+  </div>
+  <% end %>
 
   <p style="text-align:center;margin:2em 0 -1em"><a href="https://twitter.com/soffes" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @soffes</a></p>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>

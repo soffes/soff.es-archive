@@ -16,11 +16,15 @@
 <body>
   <header>
     <h1><a href="/" rel="home">Hi, I’m Sam</a></h1>
-    <p>I make this app called <a href="https://roon.io" rel="external nofollow">Roon</a>. Find out <a href="/about">more about me</a>.</p>
-    <p>I also like to <a href="/projects">make stuff</a>, <a href="/music">play music</a>, and <a href="http://sam.roon.io" rel="external nofollow">write occasionally</a>.</p>
   </header>
   <%= yield %>
   <footer>
+    <ul>
+      <li><a href="/music">Music</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
     <p>© <%= Time.now.year %> <a href="/" rel="home">Sam Soffes</a></p>
   </footer>
   <script src="/assets/application.js"></script>

@@ -192,6 +192,16 @@ body > footer {
       color: $link-color;
     }
   }
+
+
+  li {
+    margin-right: 1em;
+    display: inline-block;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 // Sections

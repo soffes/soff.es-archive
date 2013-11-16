@@ -32,6 +32,8 @@ GEM
     multi_json (1.3.7)
     multi_xml (0.5.4)
     multipart-post (1.2.0)
+    octokit (2.6.0)
+      sawyer (~> 0.5.1)
     rack (1.5.2)
     rack-canonical-host (0.0.8)
       addressable
@@ -50,6 +52,9 @@ GEM
       simple_oauth (~> 0.1.5)
     redis (3.0.4)
     sass (3.2.9)
+    sawyer (0.5.1)
+      addressable (~> 2.3.5)
+      faraday (~> 0.8, < 0.10)
     shotgun (0.9)
       rack (>= 1.0)
     simple_oauth (0.1.9)
@@ -91,6 +96,7 @@ DEPENDENCIES
   erubis
   httparty
   instagram
+  octokit
   rack-canonical-host
   rake
   rdio_api

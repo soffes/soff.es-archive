@@ -6,9 +6,10 @@ require 'httparty'
 require 'json'
 require 'instagram'
 require 'rdio_api'
+require 'octokit'
 
 desc 'Update all of the things'
-task :update => [:'update:instagram', :'update:blog', :'update:rdio']
+task :update => [:'update:instagram', :'update:blog', :'update:rdio', :'update:github']
 
 namespace :update do
   desc 'Get Instagram photos'
@@ -48,6 +49,50 @@ namespace :update do
 
     redis['rdio_heavy_rotation'] = JSON(rotation)
     puts 'Done! Cached Rdio albums.'
+  end
+
+  desc 'Get my libraries from GitHub'
+  task :github do
+    Octokit.auto_paginate = true
+    client = Octokit::Client.new access_token: ENV['GITHUB_ACCESS_TOKEN']
+    repos = client.repositories('soffes')
+
+    gems = []
+    pods = []
+
+    repos.each do |repo|
+      next if repo.fork? || (repo.language != 'Ruby' && repo.language != 'Objective-C')
+
+      contents = client.contents(repo.full_name)
+      files = contents.collect(&:name)
+      lib = {
+        id: repo.id,
+        repo: repo.name,
+        stars: repo.stars,
+        forks: repo.forks,
+        description: repo.description,
+        url: repo.html_url,
+        created_at: repo.created_at.to_i,
+        pushed_at: repo.pushed_at.to_i
+      }
+
+      name = if repo.language == 'Ruby'
+        next unless spec = files.grep(/\.gemspec$/).first
+        lib[:name] = spec.gsub(/\.gemspec$/, '')
+        gems << lib
+      elsif repo.language == 'Objective-C'
+        next unless spec = files.grep(/\.podspec$/).first
+        lib[:name] = spec.gsub(/\.podspec$/, '')
+        pods << lib
+      end
+    end
+
+    gems.sort! { |a, b| b[:pushed_at] <=> a[:pushed_at] }
+    pods.sort! { |a, b| b[:pushed_at] <=> a[:pushed_at] }
+
+    redis['gems'] = JSON.dump(gems)
+    redis['pods'] = JSON.dump(pods)
+    puts "Done! Cached GitHub libraries. #{pods.length} Cocoa Pods and #{gems.length} Ruby Gems."
   end
 end
 

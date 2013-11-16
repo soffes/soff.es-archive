@@ -31,6 +31,9 @@ gem 'rdio_api', require: false
 # Easier networking
 gem 'httparty', require: false
 
+# GitHub
+gem 'octokit', require: false
+
 # Use the right host
 gem 'rack-canonical-host'
 

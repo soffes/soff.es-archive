@@ -2,12 +2,8 @@ require 'sinatra/content_for'
 require 'json'
 
 # Connect to Redis
-if ENV['REDISTOGO_URL']
-  uri = URI.parse(ENV['REDISTOGO_URL'])
-  $redis = Redis.new(host: uri.host, port: uri.port, password: uri.password)
-else
-  $redis = Redis.new
-end
+uri = URI.parse(ENV['REDISTOGO_URL'] || 'redis://localhost:6379')
+$redis = Redis.new(host: uri.host, port: uri.port, password: uri.password)
 
 class Soffes < Sinatra::Base
   helpers Sinatra::ContentFor
@@ -18,8 +14,15 @@ class Soffes < Sinatra::Base
     erb :home
   end
 
+  # Projects
+  get '/projects' do
+    @gems = JSON($redis['gems'])
+    @pods = JSON($redis['pods'])
+    erb :projects
+  end
+
   # Static Pages
-  %w{about projects music}.each do |page|
+  %w{about music}.each do |page|
     get "/#{page}" do
       erb page.to_sym
     end

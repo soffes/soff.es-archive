@@ -61,7 +61,7 @@ namespace :update do
     pods = []
 
     repos.each do |repo|
-      next if repo.fork? || (repo.language != 'Ruby' && repo.language != 'Objective-C')
+      next if repo.private? || repo.fork? || (repo.language != 'Ruby' && repo.language != 'Objective-C')
 
       contents = client.contents(repo.full_name)
       files = contents.collect(&:name)
@@ -71,7 +71,7 @@ namespace :update do
         stars: repo.stars,
         forks: repo.forks,
         description: repo.description,
-        url: repo.html_url,
+        url: repo.rels['html'].href,
         created_at: repo.created_at.to_i,
         pushed_at: repo.pushed_at.to_i
       }

@@ -15,4 +15,4 @@ end
 
 require 'sinatra'
 require './application'
-run Soffes
+run Soffes::Application

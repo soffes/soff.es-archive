@@ -7,6 +7,7 @@ require 'json'
 require 'instagram'
 require 'rdio_api'
 require 'octokit'
+require 'open-uri'
 
 desc 'Update all of the things'
 task :update => [:'update:instagram', :'update:blog', :'update:rdio', :'update:github']
@@ -53,6 +54,8 @@ namespace :update do
 
   desc 'Get my libraries from GitHub'
   task :github do
+    gemspecs = JSON.load(open('https://rubygems.org/api/v1/owners/soffes/gems.json'))
+
     Octokit.auto_paginate = true
     client = Octokit::Client.new access_token: ENV['GITHUB_ACCESS_TOKEN']
     repos = client.repositories('soffes')
@@ -63,12 +66,10 @@ namespace :update do
     repos.each do |repo|
       next if repo.private? || repo.fork? || (repo.language != 'Ruby' && repo.language != 'Objective-C')
 
-      contents = client.contents(repo.full_name)
-      files = contents.collect(&:name)
       lib = {
         id: repo.id,
         repo: repo.name,
-        stars: repo.stars,
+        stars: repo.stargazers_count,
         forks: repo.forks,
         description: repo.description,
         url: repo.rels['html'].href,
@@ -77,18 +78,27 @@ namespace :update do
       }
 
       name = if repo.language == 'Ruby'
-        next unless spec = files.grep(/\.gemspec$/).first
-        lib[:name] = spec.gsub(/\.gemspec$/, '')
+        next unless gemspec = gemspecs.select { |spec|
+          uri = spec['homepage_uri']
+          uri.sub!('http://github.com', 'https://github.com')
+          uri.sub!('samsoffes', 'soffes')
+          uri == lib[:url]
+        }.first
+        lib[:name] = gemspec['name']
+        lib[:downloads] = gemspec['downloads']
+        lib[:version] = gemspec['version']
         gems << lib
       elsif repo.language == 'Objective-C'
+        contents = client.contents(repo.full_name)
+        files = contents.collect(&:name)
         next unless spec = files.grep(/\.podspec$/).first
         lib[:name] = spec.gsub(/\.podspec$/, '')
         pods << lib
       end
     end
 
-    gems.sort! { |a, b| b[:pushed_at] <=> a[:pushed_at] }
-    pods.sort! { |a, b| b[:pushed_at] <=> a[:pushed_at] }
+    gems.sort! { |a, b| b[:stars] <=> a[:stars] }
+    pods.sort! { |a, b| b[:stars] <=> a[:stars] }
 
     redis['gems'] = JSON.dump(gems)
     redis['pods'] = JSON.dump(pods)

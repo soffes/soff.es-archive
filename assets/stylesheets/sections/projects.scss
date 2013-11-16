@@ -5,17 +5,52 @@ section.projects {
     margin-bottom: 1em;
   }
 
-  ul {
-    margin: 0 0 2em 0.5em;
-
-    li {
-      margin: 0 0 0.25em 1em;
-      list-style: disc;
-    }
-  }
-
   p {
     text-align: center;
+  }
+
+  ul.repos {
+    li {
+      margin-bottom: 1em;
+    }
+
+    p {
+      text-align: left;
+      margin-bottom: 0;
+    }
+
+    a.stars, a.forks, a.downloads {
+      font-size: 0.8em;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #fff;
+      font-weight: $bold-weight;
+      border: 0;
+
+      &:hover {
+        border: 0;
+      }
+
+      img {
+        width: 16px;
+        height: 16px;
+        position: relative;
+        top: 1px;
+        margin-right: 3px;
+      }
+    }
+
+    a.stars {
+      background: #fdc72e;
+    }
+
+    a.forks {
+      background: #7ccd56;
+    }
+
+    a.downloads {
+      background: #e51a1c;
+    }
   }
 }
 

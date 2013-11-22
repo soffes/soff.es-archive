@@ -1,5 +1,48 @@
-/* TEAM */
 
-  Sam Soffes
-  Site: http://soff.es
-  Location: Louisville, KY
+
+                                    __  __
+                         ___  ___  / _|/ _| ___  ___
+                        / __|/ _ \| |_| |_ / _ \/ __|
+                        \__ \ (_) |  _|  _|  __/\__ \
+                        |___/\___/|_| |_|(_)___||___/
+
+                    Hand-crafted by Sam Soffes since 2005.
+
+_______________________________________________________________________________
+
+
+PEOPLE
+
+Sam Soffes
+Design & Development
+http://soff.es
+
+
+_______________________________________________________________________________
+
+
+TECHNOLOGY
+
+Ruby
+https://ruby-lang.org
+
+Sinatra
+http://sinatrarb.com
+
+Sprockets
+https://github.com/sstephenson/sprockets
+
+Heroku
+https://heroku.com
+
+GitHub
+https://github.com
+
+
+_______________________________________________________________________________
+
+
+GRAPHICS
+
+Whitney by H&FJ (font)
+http://typography.com/fonts/whitney/overview/

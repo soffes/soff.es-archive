@@ -6,7 +6,7 @@
                         \__ \ (_) |  _|  _|  __/\__ \
                         |___/\___/|_| |_|(_)___||___/
 
-                    Hand-crafted by Sam Soffes since 2005.
+                    Hand-crafted by Sam Soffes since 2003.
 
 _______________________________________________________________________________
 
@@ -46,3 +46,4 @@ GRAPHICS
 
 Whitney by H&FJ (font)
 http://typography.com/fonts/whitney/overview/
+

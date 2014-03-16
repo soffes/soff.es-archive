@@ -47,6 +47,11 @@ module Soffes
       redirect 'https://github.com/soffes/resume/blob/master/Sam%20Soffes%20Resume.pdf?raw=true'
     end
 
+    # Redirect blog to Roon
+    get '/blog' do
+      redirect 'http://sam.roon.io'
+    end
+
     # Redirect posts to Roon
     get %r{/([\w\d\-]+)$} do |key|
       # TODO: Maybe hit the Roon API occasionally to get allowed keys

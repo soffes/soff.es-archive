@@ -47,6 +47,10 @@ module Soffes
       redirect 'https://github.com/soffes/resume/blob/master/Sam%20Soffes%20Resume.pdf?raw=true'
     end
 
+    get '/clock' do
+      redirect 'https://github.com/soffes/clock-saver'
+    end
+
     # Redirect blog to Roon
     get '/blog' do
       redirect 'http://sam.roon.io'

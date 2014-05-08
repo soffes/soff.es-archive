@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Latest Ruby
-ruby '2.1.0'
+ruby '2.1.1'
 
 # Web server
 gem 'unicorn'

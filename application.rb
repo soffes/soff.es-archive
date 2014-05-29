@@ -31,7 +31,7 @@ module Soffes
     end
 
     # Static Pages
-    %w{about music}.each do |page|
+    %w{about music drone}.each do |page|
       get "/#{page}" do
         erb page.to_sym
       end

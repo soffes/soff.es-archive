@@ -34,6 +34,10 @@ gem 'httparty', require: false
 # GitHub
 gem 'octokit', require: false
 
+# XML Parsing (for talking to Amazon)
+gem 'nokogiri', require: false
+gem 'nori', require: false
+
 # Use the right host
 gem 'rack-canonical-host'
 

@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
 # Latest Ruby
-ruby '2.1.1'
+ruby '2.1.2'
 
 # Web server
-gem 'unicorn'
+gem 'puma'
 
 # Simple HTTP
 gem 'sinatra', require: false

@@ -113,10 +113,10 @@
   </article>
   <% end %>
 
-  <% if instagram = $redis['instagram'] %>
+  <% if @instagram_posts %>
   <div class="instagram four-up">
     <ul>
-    <% JSON(instagram).each do |image| %>
+    <% @instagram_posts.each do |image| %>
       <li>
         <a href="<%= image['link'] %>" rel="external nofollow" title="<%= image['caption'] ? image['caption']['text'] : nil %>">
           <img src="<%= image['images']['low_resolution']['url'] %>" alt="<%= image['caption'] ? image['caption']['text'] : nil %>">

@@ -19,6 +19,7 @@ module Soffes
     # Homepage
     get '/' do
       @post = $redis.hgetall('latest_post')
+      @instagram_posts = JSON($redis['instagram']) if ($redis['instagram'].try(:length) || 0) > 0
       erb :home
     end
 

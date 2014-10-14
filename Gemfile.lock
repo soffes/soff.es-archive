@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.3.6)
-    backports (3.6.1)
+    backports (3.6.3)
     bourbon (4.0.2)
       sass (~> 3.3)
       thor
@@ -34,7 +34,7 @@ GEM
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     nori (2.4.0)
-    octokit (3.3.1)
+    octokit (3.4.0)
       sawyer (~> 0.5.3)
     puma (2.9.1)
       rack (>= 1.1, < 2.0)
@@ -58,8 +58,6 @@ GEM
     sawyer (0.5.5)
       addressable (~> 2.3.5)
       faraday (~> 0.8, < 0.10)
-    shotgun (0.9)
-      rack (>= 1.0)
     simple_oauth (0.1.9)
     sinatra (1.4.5)
       rack (~> 1.4)
@@ -104,7 +102,6 @@ DEPENDENCIES
   rdio_api
   redis
   sass
-  shotgun
   sinatra
   sinatra-contrib
   sprockets

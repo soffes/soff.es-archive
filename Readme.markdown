@@ -11,7 +11,7 @@ Get the source (obviously)
     $ git clone https://github.com/soffes/soff.es.git
     $ cd soff.es
 
-Import my lastest posts:
+Import my latest posts:
 
     $ rake update_post
 

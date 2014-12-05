@@ -57,16 +57,16 @@ module Soffes
       redirect 'https://github.com/soffes/clock-saver'
     end
 
-    # Redirect blog to Roon
+    # Redirect blog
     get '/blog' do
-      redirect 'http://sam.roon.io'
+      redirect 'http://blog.soff.es'
     end
 
-    # Redirect posts to Roon
+    # Redirect posts to blog
     get %r{/([\w\d\-]+)$} do |key|
-      # TODO: Maybe hit the Roon API occasionally to get allowed keys
+      # TODO: Maybe hit an API occasionally to get allowed keys
       # and then 404 if it's not a blog post I've written.
-      redirect "http://sam.roon.io/#{key}"
+      redirect "http://blog.soff.es/#{key}"
     end
   end
 end

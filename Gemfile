@@ -22,9 +22,6 @@ gem 'rake'
 # Key-value store
 gem 'redis'
 
-# Instagram
-gem 'instagram', require: false
-
 # Rdio
 gem 'rdio_api', require: false
 
@@ -37,6 +34,9 @@ gem 'octokit', require: false
 # XML Parsing (for talking to Amazon)
 gem 'nokogiri', require: false
 gem 'nori', require: false
+
+# Truncate HTML for blog post
+gem 'truncate_html'
 
 # Use the right host
 gem 'rack-canonical-host'

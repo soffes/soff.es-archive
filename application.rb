@@ -12,9 +12,23 @@ module Soffes
     end
   end
 
+  module TruncateHTMLHelpers
+    def truncate_html(html, options = {})
+      return '' if html.nil?
+
+      default_options = {
+        length: 256
+      }
+
+      html_string = TruncateHtml::HtmlString.new(html)
+      TruncateHtml::HtmlTruncator.new(html_string, default_options.merge(options)).truncate
+    end
+  end
+
   class Application < Sinatra::Base
     helpers Sinatra::ContentFor
     helpers Soffes::NumberHelpers
+    helpers Soffes::TruncateHTMLHelpers
 
     # Homepage
     get '/' do

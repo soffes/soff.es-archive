@@ -108,7 +108,7 @@
   <h2>Latest Writing</h2>
   <article>
     <h3><a href="<%= @latest_post['url'] %>"><%= @latest_post['title'] %></a></h3>
-    <%= @latest_post['excerpt_html'] %>
+    <%= truncate_html @latest_post['excerpt_html'] %>
     <p><a href="<%= @latest_post['url'] %>">Continue Reading &rarr;</a></p>
   </article>
   <% end %>

@@ -5,7 +5,6 @@ Bundler.require
 require 'base64'
 require 'httparty'
 require 'json'
-require 'instagram'
 require 'rdio_api'
 require 'octokit'
 require 'open-uri'
@@ -25,12 +24,12 @@ namespace :update do
 
   desc 'Store my latest post in Redis'
   task :blog do
-    response = HTTParty.get('https://roon.io/api/v1/blogs/sam/posts?limit=1')
-    post = JSON(response.body).first
+    doc = Nori.new.parse(open('http://blog.soff.es/rss').read)
+    post = doc['rss']['channel']['item'].first
 
-    %w{title excerpt_html url}.each do |key|
-      redis.hset 'latest_post', key, post[key]
-    end
+    redis.hset 'latest_post', 'title', post['title']
+    redis.hset 'latest_post', 'excerpt_html', post['description']
+    redis.hset 'latest_post', 'url', post['link']
 
     puts "Done! Cached `#{post['title']}`"
   end

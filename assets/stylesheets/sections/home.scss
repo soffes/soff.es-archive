@@ -48,7 +48,7 @@ ul.apps {
   }
 
   img {
-    @include box-sizing(border-box);
+    box-sizing: border-box;
     border-radius: 20px;
     height: 100px;
     width: 100px;
@@ -134,12 +134,4 @@ div.four-up {
       }
     }
   }
-}
-
-div.rdio p a:first-child {
-  background: url(/assets/rdio.png) no-repeat 0 2px;
-  background-size: 16px 16px;
-  width: 16px;
-  height: 16px;
-  display: inline-block;
 }

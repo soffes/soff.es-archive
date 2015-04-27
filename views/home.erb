@@ -131,23 +131,6 @@
   </div>
   <% end %>
 
-  <% if @rdio_albums && @rdio_albums.length > 0 %>
-  <div class="rdio four-up">
-    <ul>
-    <% @rdio_albums.each do |album| %>
-      <li>
-        <a href="<%= album['url'] %>" rel="external nofollow" title="<%= album['name'] %> — <%= album['artist'] %>">
-          <img src="<%= album['icon'] %>" alt="<%= album['name'] %> — <%= album['artist'] %>">
-        </a>
-      </li>
-    <% end %>
-    </ul>
-    <p>
-      <a href="http://rdio.com/people/soffes" rel="external nofollow"></a> <a href="http://rdio.com/people/soffes" rel="external nofollow">Follow soffes</a>
-    </p>
-  </div>
-  <% end %>
-
   <p style="text-align:center;margin:2em 0 -1em"><a href="https://twitter.com/soffes" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @soffes</a></p>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </section>

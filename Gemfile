@@ -22,9 +22,6 @@ gem 'rake'
 # Key-value store
 gem 'redis'
 
-# Rdio
-gem 'rdio_api', require: false
-
 # Easier networking
 gem 'httparty', require: false
 

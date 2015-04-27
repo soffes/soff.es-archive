@@ -35,7 +35,6 @@ module Soffes
       begin
         @latest_post = $redis.hgetall('latest_post')
         @instagram_posts = JSON($redis['instagram'])
-        @rdio_albums = JSON($redis['rdio_heavy_rotation'])
       rescue
       end
 

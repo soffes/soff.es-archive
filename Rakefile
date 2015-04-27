@@ -5,13 +5,12 @@ Bundler.require
 require 'base64'
 require 'httparty'
 require 'json'
-require 'rdio_api'
 require 'octokit'
 require 'open-uri'
 require 'nori'
 
 desc 'Update all of the things'
-task :update => [:'update:instagram', :'update:blog', :'update:rdio', :'update:github', :'update:amazon']
+task :update => [:'update:instagram', :'update:blog', :'update:github', :'update:amazon']
 
 namespace :update do
   desc 'Get Instagram photos'
@@ -32,25 +31,6 @@ namespace :update do
     redis.hset 'latest_post', 'url', post['link']
 
     puts "Done! Cached `#{post['title']}`"
-  end
-
-  desc 'Get my heavy rotation'
-  task :rdio do
-    client = RdioApi.new(consumer_key: ENV['RDIO_CONSUMER_KEY'], consumer_secret: ENV['RDIO_CONSUMER_SECRET'])
-    rotation = client.getHeavyRotation(type: 'albums', user: ENV['RDIO_USER_KEY'])[0...4]
-    rotation.each do |album|
-      %w{baseIcon releaseDate duration isClean shortUrl canStream embedUrl type price key canSample hits isExplicit artistKey length trackKeys canTether displayDate}. each do |key|
-        album.delete key
-      end
-
-      album.url = "http://rdio.com#{album.url}"
-      album.icon.gsub!('-200.jpg', '-400.jpg')
-      album.artist_url = "http://rdio.com#{album.artistUrl}"
-      album.delete 'artistUrl'
-    end
-
-    redis['rdio_heavy_rotation'] = JSON(rotation)
-    puts 'Done! Cached Rdio albums.'
   end
 
   desc 'Get my libraries from GitHub'

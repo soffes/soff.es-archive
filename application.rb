@@ -43,9 +43,8 @@ module Soffes
 
     # Projects
     get '/projects' do
-      @pods = JSON($redis['pods'])
-      @gems = JSON($redis['gems'])
-
+      @pods = JSON(pods) if pods = $redis['pods']
+      @gems = JSON(gems) if gems = $redis['gems']
       erb :projects
     end
 

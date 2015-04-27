@@ -1,6 +1,6 @@
 # soff.es
 
-This is my website. It's pretty simple. My blog is [on Roon](http://sam.roon.io).
+This is my website. It's pretty simple. My blog is [on Ghost](http://blog.soff.es).
 
 ## Running Locally
 

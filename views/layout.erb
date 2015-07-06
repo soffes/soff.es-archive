@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <% if @home %>
-<head prefix="og: http://ogp.me/ns# profile: http://ogp.me/ns/profile#">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# profile: http://ogp.me/ns/profile#">
 <% else %>
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <% end %>
   <meta charset="utf-8">
   <title><%= title = yield_content(:title); title = (title && !title.empty? ? title : 'Sam Soffes'); title %></title>
@@ -14,6 +14,7 @@
   <link rel="author" type="text/plain" href="/humans.txt">
   <link rel="alternate" type="application/atom+xml" href="http://sam.roon.io/feed">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="fb:admins" content="1203270129">
   <meta property="og:site_name" content="Sam Soffes">
   <meta property="og:title" content="<%= title %>">
   <% if @home %>

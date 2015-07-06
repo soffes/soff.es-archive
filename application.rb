@@ -38,6 +38,7 @@ module Soffes
       rescue
       end
 
+      @home = true
       erb :home
     end
 

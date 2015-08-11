@@ -42,13 +42,6 @@ module Soffes
       erb :home
     end
 
-    # Projects
-    get '/projects' do
-      @pods = JSON(pods) if pods = $redis['pods']
-      @gems = JSON(gems) if gems = $redis['gems']
-      erb :projects
-    end
-
     # Static Pages
     %w{about music drone}.each do |page|
       get "/#{page}" do

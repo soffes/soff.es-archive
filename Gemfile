@@ -25,11 +25,7 @@ gem 'redis'
 # Easier networking
 gem 'httparty', require: false
 
-# GitHub
-gem 'octokit', require: false
-
-# XML Parsing (for talking to Amazon)
-gem 'nokogiri', require: false
+# XML Parsing
 gem 'nori', require: false
 
 # Truncate HTML for blog post

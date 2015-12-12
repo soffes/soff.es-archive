@@ -28,6 +28,8 @@ GEM
       rack (~> 1.0)
     rack-protection (1.5.3)
       rack
+    rack-ssl (1.4.1)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rake (10.4.2)
@@ -72,6 +74,7 @@ DEPENDENCIES
   nori
   puma
   rack-canonical-host
+  rack-ssl
   rake
   redis
   sass

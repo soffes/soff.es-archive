@@ -34,6 +34,9 @@ gem 'truncate_html'
 # Use the right host
 gem 'rack-canonical-host'
 
+# Always use SSL
+gem 'rack-ssl'
+
 # Stylesheet
 gem 'sass'
 gem 'sprockets-sass'

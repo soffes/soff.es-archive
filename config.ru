@@ -3,6 +3,7 @@ require 'bundler'
 Bundler.require
 
 use Rack::CanonicalHost, ENV['CANONICAL_HOST'] if ENV['CANONICAL_HOST']
+use Rack::SSL if ENV['RACK_ENV'] == 'production'
 
 require 'sprockets'
 map '/assets' do

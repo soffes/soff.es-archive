@@ -51,7 +51,7 @@ module Soffes
 
     # Redirect talks to Speaker Deck
     get 'talks' do
-      redirect 'http://speakerdeck.com/soffes'
+      redirect 'https://speakerdeck.com/soffes'
     end
 
     # Redirect resume to GitHub

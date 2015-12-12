@@ -65,14 +65,14 @@ module Soffes
 
     # Redirect blog
     get '/blog' do
-      redirect 'http://blog.soff.es'
+      redirect 'https://blog.soff.es'
     end
 
     # Redirect posts to blog
     get %r{/([\w\d\-]+)$} do |key|
       # TODO: Maybe hit an API occasionally to get allowed keys
       # and then 404 if it's not a blog post I've written.
-      redirect "http://blog.soff.es/#{key}"
+      redirect "https://blog.soff.es/#{key}"
     end
   end
 end

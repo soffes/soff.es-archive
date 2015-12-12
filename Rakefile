@@ -21,7 +21,7 @@ namespace :update do
 
   desc 'Store my latest post in Redis'
   task :blog do
-    doc = Nori.new.parse(open('http://blog.soff.es/rss').read)
+    doc = Nori.new.parse(open('https://blog.soff.es/rss').read)
     post = doc['rss']['channel']['item'].first
 
     redis.hset 'latest_post', 'title', post['title']

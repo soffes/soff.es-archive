@@ -1,6 +1,6 @@
 # soff.es
 
-This is my website. It's pretty simple. My blog is [on Ghost](http://blog.soff.es).
+This is my website. It's pretty simple. My blog is at [blog.soff.es](https://blog.soff.es).
 
 ## Running Locally
 

@@ -208,10 +208,6 @@ body > footer {
 @import "sections/*";
 
 // Misc
-.bordered-image {
-  @include bordered-image;
-}
-
 a.twitter-username:before {
   content: "@";
 }

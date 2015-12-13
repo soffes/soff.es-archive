@@ -1,6 +1,5 @@
 section.about {
   a.portrait {
-    @include bordered-image;
     float: left;
     width: 300px;
     height: 300px;

@@ -26,6 +26,7 @@ gem 'redis'
 gem 'httparty', require: false
 
 # XML Parsing
+gem 'nokogiri', require: false
 gem 'nori', require: false
 
 # Truncate HTML for blog post

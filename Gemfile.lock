@@ -10,7 +10,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
-    concurrent-ruby (1.0.0)
     erubis (2.7.0)
     execjs (2.6.0)
     hike (1.2.3)
@@ -18,8 +17,11 @@ GEM
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     json (1.8.3)
+    mini_portile2 (2.0.0)
     multi_json (1.11.2)
     multi_xml (0.5.5)
+    nokogiri (1.6.7)
+      mini_portile2 (~> 2.0.0.rc2)
     nori (2.6.0)
     puma (2.15.3)
     rack (1.6.4)
@@ -71,6 +73,7 @@ DEPENDENCIES
   coffee-script
   erubis
   httparty
+  nokogiri
   nori
   puma
   rack-canonical-host

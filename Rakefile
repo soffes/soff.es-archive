@@ -1,4 +1,3 @@
-require 'rubygems'
 require 'bundler'
 Bundler.require
 
@@ -32,11 +31,11 @@ namespace :update do
   end
 end
 
+private
+
 def redis
-  @redis ||= if ENV['REDISTOGO_URL']
-    uri = URI.parse(ENV['REDISTOGO_URL'])
+  @_redis ||= begin
+    uri = URI.parse(ENV['REDIS_URL'] || 'redis://localhost:6379')
     Redis.new(host: uri.host, port: uri.port, password: uri.password)
-  else
-    Redis.new
   end
 end

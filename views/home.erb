@@ -31,19 +31,19 @@
       </a>
     </li>
     <li>
-      <a href="javascript:alert('I sold Cheddar in 2013. It’s no longer available. I’m sad about it too.')" rel="external nofollow" title="Cheddar">
+      <a href="javascript:alert('I sold Cheddar in 2013. It’s no longer available.')" rel="external nofollow" title="Cheddar">
         <img src="/assets/cheddar.jpg" alt="Cheddar">
         <span>Cheddar</span>
       </a>
     </li>
     <li>
-      <a href="https://itunes.apple.com/us/app/roon/id634949849?mt=8&amp;uo=4&amp;at=1l3vmtU" rel="external nofollow" title="Roon">
+      <a href="javascript:alert('Roon is no longer available.')" rel="external nofollow" title="Roon">
         <img src="/assets/roon.jpg" alt="Roon">
         <span>Roon</span>
       </a>
     </li>
     <li>
-      <a href="https://itunes.apple.com/app/everlapse/id658120886?mt=8&amp;uo=4&amp;at=1l3vmtU" rel="external nofollow" title="Everlapse">
+      <a href="javascript:alert('Everlapse is no longer available.')" rel="external nofollow" title="Everlapse">
         <img src="/assets/everlapse.jpg" alt="Everlapse">
         <span>Everlapse</span>
       </a>
@@ -79,9 +79,15 @@
       </a>
     </li>
     <li>
-      <a href="https://itunes.apple.com/app/id915963345?mt=8&amp;uo=4&amp;at=1l3vmtU" rel="external nofollow" title="Tiiny">
+      <a href="javascript:alert('Tiiny is no longer available.')" rel="external nofollow" title="Tiiny">
         <img src="/assets/tiiny.svg" alt="Tiiny">
         <span>Tiiny</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://itunes.apple.com/app/old-sport/id1041222643?mt=8&amp;at=1l3vmtU" rel="external nofollow" title="Old Sport">
+        <img src="/assets/old-sport.svg" alt="Old Sport">
+        <span>Old Sport</span>
       </a>
     </li>
   </ul>
@@ -100,6 +106,7 @@
     <ul>
     <% @instagram_posts.each do |image| %>
       <li>
+      <%= image['images']['low_resolution'].inspect %>
         <a href="<%= image['link'] %>" rel="external nofollow" title="<%= image['caption'] ? image['caption']['text'] : nil %>">
           <img src="<%= image['images']['low_resolution']['url'] %>" alt="<%= image['caption'] ? image['caption']['text'] : nil %>">
         </a>
@@ -112,7 +119,4 @@
     </p>
   </div>
   <% end %>
-
-  <p style="text-align:center;margin:2em 0 -1em"><a href="https://twitter.com/soffes" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @soffes</a></p>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </section>

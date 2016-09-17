@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Latest Ruby
-ruby '2.3.0'
+ruby '2.3.1'
 
 # Web server
 gem 'puma'
@@ -34,6 +34,9 @@ gem 'truncate_html'
 
 # Use the right host
 gem 'rack-canonical-host'
+
+# ACME challenge response
+gem 'acme_challenge'
 
 # Always use SSL
 gem 'rack-ssl'

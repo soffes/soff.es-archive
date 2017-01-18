@@ -4,7 +4,7 @@ This is my website. It's pretty simple. My blog is at [blog.soff.es](https://blo
 
 ## Running Locally
 
-**Note:** I am using Ruby 2.0.0 both on Heroku and locally.
+**Note:** I am using Ruby '2.3.1' locally.
 
 Get the source (obviously)
 
@@ -13,7 +13,7 @@ Get the source (obviously)
 
 Import my latest posts:
 
-    $ rake update_post
+    $ rake update:blog
 
 Now you can start the server with [Shotgun](https://github.com/rtomayko/shotgun):
 

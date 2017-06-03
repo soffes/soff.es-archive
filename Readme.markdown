@@ -15,8 +15,8 @@ Import my latest posts:
 
     $ rake update:blog
 
-Now you can start the server with [Shotgun](https://github.com/rtomayko/shotgun):
+Now you can start the server with [Foreman](https://github.com/theforeman/foreman):
 
-    $ bundle exec shotgun
+    $ bundle exec foreman start
 
-Then open <http://localhost:9393> in your browser to see it running. If you have issues getting it up and running, [send me an email](mailto:sam@soff.es).
+Then open <http://localhost:5000> in your browser to see it running. If you have issues getting it up and running, [send me an email](mailto:sam@soff.es).

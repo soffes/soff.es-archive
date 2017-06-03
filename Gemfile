@@ -50,7 +50,5 @@ gem 'sprockets-sass'
 gem 'coffee-script'
 gem 'uglifier'
 
-group :development do
-  # Automatic reloading
-  gem 'shotgun'
-end
+# Processes
+gem 'foreman', require: false

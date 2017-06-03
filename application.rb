@@ -43,10 +43,14 @@ module Soffes
     end
 
     # Static Pages
-    %w{about music drone}.each do |page|
+    %w{about drone}.each do |page|
       get "/#{page}" do
         erb page.to_sym
       end
+    end
+
+    get '/music' do
+      redirect 'https://soundcloud.com/soffes'
     end
 
     # Redirect talks to Speaker Deck

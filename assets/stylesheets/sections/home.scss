@@ -1,11 +1,16 @@
 @import "components/instagram_button";
 
 ul.apps {
-  @include clearfix;
   margin: 2em auto;
   width: 100%;
   font-family: 'HelveticaNeue', Helvetica, sans-serif;
   font-size: 14px;
+
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
 
   @media #{$small-query} {
     width: 280px;

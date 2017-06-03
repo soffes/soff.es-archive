@@ -5,6 +5,7 @@ ruby '2.4.1'
 
 # Web server
 gem 'puma'
+gem 'foreman', require: false
 
 # Simple HTTP
 gem 'sinatra', require: false
@@ -42,13 +43,9 @@ gem 'acme_challenge'
 gem 'rack-ssl'
 
 # Stylesheet
-gem 'bourbon'
 gem 'sass'
 gem 'sprockets-sass'
 
 # JavaScript
 gem 'coffee-script'
 gem 'uglifier'
-
-# Processes
-gem 'foreman', require: false

@@ -4,19 +4,17 @@ This is my website. It's pretty simple. My blog is at [blog.soff.es](https://blo
 
 ## Running Locally
 
-**Note:** I am using Ruby '2.3.1' locally.
-
-Get the source (obviously)
+Get the source:
 
     $ git clone https://github.com/soffes/soff.es.git
     $ cd soff.es
 
-Import my latest posts:
+Get the dependencies:
 
-    $ rake update:blog
+    $ npm install
 
-Now you can start the server with [Foreman](https://github.com/theforeman/foreman):
+Now you can start the server:
 
-    $ bundle exec foreman start
+    $ npm run dev
 
-Then open <http://localhost:5000> in your browser to see it running. If you have issues getting it up and running, [send me an email](mailto:sam@soff.es).
+Then open <http://localhost:3000> in your browser to see it running. If you have issues getting it up and running, [send me an email](mailto:sam@soff.es).

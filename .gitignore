@@ -1,11 +1,12 @@
+# Build output
+dist
+.next
+
+# Dependencies
+node_modules
+
+# Logs
+*.log
+
+# macOS
 .DS_Store
-.bundle
-db/*.sqlite3
-log/*.log
-tmp/**/*
-dump.rdb
-tmp
-.sass-cache
-public/assets
-coverage
-.env

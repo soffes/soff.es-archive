@@ -101,7 +101,7 @@
   </article>
   <% end %>
 
-  <% if @instagram_posts %>
+  <% if @instagram_posts.is_a?(Array) %>
   <div class="instagram four-up">
     <ul>
     <% @instagram_posts.each do |image| %>

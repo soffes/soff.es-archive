@@ -24,7 +24,7 @@ export default () => (
     </Apps>
 
     <SubHeading>Retired Apps</SubHeading>
-    <p>Much of my past work is no longer available. Here‘s some highlights from the graveyard.</p>
+    <p>Much of my past work is no longer available. Here’s some highlights from the graveyard.</p>
 
     <Apps>
       <App name="Old Sport" image_url="/static/old-sport.svg" url="https://itunes.apple.com/app/old-sport/id1041222643?mt=8&amp;at=1l3vmtU" />

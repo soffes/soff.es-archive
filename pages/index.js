@@ -20,6 +20,7 @@ export default () => (
       <App name="Over" image_url="/static/over.jpg" url="https://itunes.apple.com/app/over/id535811906?mt=8&amp;uo=4&amp;at=1l3vmtU" />
       <App name="Obaby" image_url="/static/obaby.jpg" url="https://itunes.apple.com/app/obaby/id738877924?mt=8&amp;uo=4&amp;at=1l3vmtU" />
       <App name="Cape Town" image_url="/static/capetownlove.jpg" url="https://itunes.apple.com/app/cape-town-love/id704402892?mt=8&amp;uo=4&amp;at=1l3vmtU" />
+      <App name="Redacted" image_url="/static/redacted.svg" url="https://itunes.apple.com/app/redacted-easily-obscure-parts-of-an-image/id992003008?mt=8&amp;at=1l3vmtU" />
     </Apps>
 
     <SubHeading>Retired Apps</SubHeading>

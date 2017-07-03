@@ -1,6 +1,6 @@
 # soff.es
 
-This is my [website](https://soff.es). It's pretty simple. My blog is at [blog.soff.es](https://blog.soff.es).
+This is my [website](https://soff.es). It’s pretty simple. My blog is at [blog.soff.es](https://blog.soff.es).
 
 ## Running Locally
 

@@ -7,10 +7,10 @@ import SubHeading from '../components/subheading'
 export default () => (
   <Page>
     <Heading>Hello</Heading>
-    <p>I'm a software engineer living in Louisville, KY. I currently work as a Swift freelancer. I co-host two weekly podcasts: <a href="http://immutable.fm" rel="external nofollow">Immutable</a> &amp; <a href="http://runtime.fm" rel="external nofollow">Runtime</a>. I also really enjoy motorcycles and a good burger. If you're curious, find out <a href="/about">more about me</a>.</p>
+    <p>I’m a software engineer living in Louisville, KY. I currently work as a Swift freelancer. I co-host two weekly podcasts: <a href="http://immutable.fm" rel="external nofollow">Immutable</a> &amp; <a href="http://runtime.fm" rel="external nofollow">Runtime</a>. I also really enjoy motorcycles and a good burger. If you're curious, find out <a href="/about">more about me</a>.</p>
 
     <Heading>Apps</Heading>
-    <p>I started developing for iOS the day the SDK was released way back in 2008. Here are some of the best apps I've worked on. I'm no longer involved in the development of several of these since some belong to previous employers.</p>
+    <p>I started developing for iOS the day the SDK was released way back in 2008. Here are some of the best apps I’ve worked on. I’m no longer involved in the development of several of these since some belong to previous employers.</p>
 
     <Apps>
       <App name="Bible" image_url="/static/bible.jpg" url="https://itunes.apple.com/app/bible/id282935706?mt=8&uo=4&at=1l3vmtU" />

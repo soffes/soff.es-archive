@@ -11,8 +11,8 @@ export default () => (
     <p>I’ve been working with iOS since its release in 2008—and macOS before that. Here are my current projects:</p>
 
     <Apps>
-      <MacApp name="Contrast" image_url="/static/contrast.svg" url="https://itunes.apple.com/app/redacted-easily-obscure-parts-of-an-image/id992003008?mt=8&amp;at=1l3vmtU" />
-      <MacApp name="Redacted" image_url="/static/redacted-mac.svg" url="https://itunes.apple.com/app/redacted/id984968384?mt=12&amp;uo=6&amp;at=1l3vmtU&amp;ct=" title="Redacted for macOS" />
+      <MacApp name="Contrast" image_url="/static/contrast.svg" url="https://usecontrast.com" />
+      <MacApp name="Redacted" image_url="/static/redacted-mac.svg" url="https://useredacted.com" title="Redacted for macOS" />
       <App name="Redacted" image_url="/static/redacted.svg" url="https://itunes.apple.com/app/redacted-easily-obscure-parts-of-an-image/id992003008?mt=8&amp;at=1l3vmtU" title="Redacted for iOS" />
       <MacApp name="Spotlight Tools" image_url="/static/spotlight-tools.png" url="https://spotlight.tools" />
     </Apps>

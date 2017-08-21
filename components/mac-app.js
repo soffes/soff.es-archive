@@ -52,7 +52,6 @@ const AppIcon = styled.img`
   box-sizing: border-box;
   width: 100%;
   position: relative;
-  z-index: -2;
 `
 
 const MacApp = (props) => {

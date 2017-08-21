@@ -20,6 +20,7 @@ const AppLink = styled.a`
   margin: 0 auto;
   text-decoration: none;
   border: 0;
+  cursor: pointer !important;
 
   &:hover {
     border: 0;
@@ -53,7 +54,6 @@ const AppIcon = styled.img`
   border-radius: 20px;
   width: 100%;
   position: relative;
-  z-index: -2;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3), inset 0 0 2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25);
 
   @media all and (max-width: 660px) {

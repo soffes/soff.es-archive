@@ -13,7 +13,9 @@ const AppsContainer = styled.ul`
     grid-template-columns: repeat(3, auto);
     grid-column-gap: auto;
     grid-row-gap: 0.5rem;
-    width: 100%;
+    width: 288px;
+    margin-left: auto;
+    margin-right: auto;
   }
 `
 

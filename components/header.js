@@ -5,14 +5,18 @@ import Title from '../components/title'
 const HeaderContainer = styled.header`
   display: block;
   max-width: 640px;
-  margin: 3rem auto 4rem;
+  margin: 8rem 0 2rem;
+
+  @media all and (max-width: 660px) {
+    margin: 5rem 0 3rem;
+  }
 `
 
 const Header = (props) => {
   return(
     <HeaderContainer>
       <Title>
-        <a href="/" rel="home">Hi, I’m Sam</a>
+        <a href="/" rel="home">Hi, I’m Sam.</a>
       </Title>
     </HeaderContainer>
   )

@@ -56,19 +56,19 @@ html {
 body {
   color: #222;
   font-size: 22px;
-  font-family: "Whitney A", "Whitney B", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif;
   font-weight: 400;
   line-height: 1.5em;
-  padding: 0 10px; }
+  padding: 0 10px 0 64px; }
   @media all and (max-width: 660px) {
     body {
-      font-size: 18px;
-      line-height: 1.6em; } }
+      line-height: 1.6em;
+      padding: 0 16px; } }
 
 a {
   color: #0881b3;
   text-decoration: none;
-  border-bottom: 1px solid transparent; }
+  border-bottom: 2px solid transparent; }
   a:hover {
     -webkit-transition-property: border;
     -moz-transition-property: border;
@@ -76,7 +76,7 @@ a {
     -webkit-transition-duration: 0.2s;
     -moz-transition-duration: 0.2s;
     transition-duration: 0.2s;
-    border-bottom: 1px solid; }
+    border-bottom: 2px solid; }
 
 p {
   margin-bottom: 2rem;

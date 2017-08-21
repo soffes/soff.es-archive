@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 
 const Title = styled.h1`
-  font-family: 'Landmark Dimensional A', 'Landmark Dimensional B', sans-serif;
-  font-size: 66px;
+  font-size: 32px;
   line-height: 1em;
+  font-weight: 500;
 
   a {
-    color: rgb(246, 41, 29);
+    color: #222;
   }
 
-  a, a:hover {
-    border: 0;
+  a:hover {
+    color: #0881b3;
   }
 `
 export default Title

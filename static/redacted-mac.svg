@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="-3.55271368e-14" y="1.98951966e-13" width="65" height="80" rx="1.14285714"></rect>
+        <filter x="-20.0%" y="-13.8%" width="140.0%" height="132.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-14.6%" y="-9.4%" width="129.2%" height="123.8%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="100%" y1="0%" x2="0%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#36D2FB" offset="0%"></stop>
+            <stop stop-color="#2078EE" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy">
+            <g id="Group" transform="translate(49.500000, 50.000000) rotate(-9.000000) translate(-49.500000, -50.000000) translate(17.000000, 10.000000)">
+                <g id="Background" fill-opacity="1" fill="black">
+                    <use filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use filter="url(#filter-3)" xlink:href="#path-1"></use>
+                </g>
+                <rect id="Background" fill="url(#linearGradient-4)" x="-3.55271368e-14" y="1.98951966e-13" width="65" height="80" rx="1.14285714"></rect>
+                <rect id="Rectangle-2" fill="#52BCF8" x="2.84217094e-14" y="22.0952381" width="14.4338235" height="18.3809524"></rect>
+                <rect id="Rectangle-2" fill="#1179C9" x="-7.10542736e-15" y="40.4761905" width="14.4338235" height="18.3809524"></rect>
+                <rect id="Rectangle-2" fill="#207AEE" x="14.2426471" y="22.0952381" width="18.5441176" height="18.3809524"></rect>
+                <rect id="Rectangle-2" fill="#5FC5F8" x="14.2426471" y="40.4761905" width="18.5441176" height="18.3809524"></rect>
+                <rect id="Rectangle-2" fill="#33C4F9" x="32.7867647" y="22.0952381" width="18.4485294" height="18.3809524"></rect>
+                <rect id="Rectangle-2" fill="#2EB3F6" x="32.7867647" y="40.4761905" width="18.4485294" height="18.3809524"></rect>
+                <rect id="Rectangle-2" fill="#2792F2" x="51.2352941" y="22.0952381" width="13.7647059" height="18.3809524"></rect>
+                <rect id="Rectangle-2" fill="#14589D" x="51.2352941" y="40.4761905" width="13.7647059" height="18.3809524"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -31,7 +31,6 @@ export default class MyDocument extends Document {
           <meta property="profile:last_name" content="Soffes" />
           <meta property="profile:gender" content="male" />
           <meta property="profile:username" content="soffes" />
-          <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/619254/777982/css/fonts.css" />
           <link rel="stylesheet" type="text/css" href="/static/base.css" />
           {styleTags}
         </Head>

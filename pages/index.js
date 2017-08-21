@@ -2,6 +2,7 @@ import Page from '../components/page'
 import Apps from '../components/apps'
 import App from '../components/app'
 import MacApp from '../components/mac-app'
+import Link from 'next/link'
 
 export default () => (
   <Page>
@@ -37,6 +38,6 @@ export default () => (
       <App name="Everlapse" image_url="/static/everlapse.jpg" url="https://soffes.blog/onward" />
     </Apps>
 
-    <p>Feel free to email me at <a href="mailto:sam@soff.es">sam@soff.es</a> or read more <a href="/about">about me</a>. 👋</p>
+    <p>Feel free to email me at <a href="mailto:sam@soff.es">sam@soff.es</a> or read more <Link href="/about"><a>about me</a></Link>. 👋</p>
   </Page>
 )

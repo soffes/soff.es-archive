@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Title from '../components/title'
+import Link from 'next/link'
 
 const HeaderContainer = styled.header`
   display: block;
@@ -16,7 +17,7 @@ const Header = (props) => {
   return(
     <HeaderContainer>
       <Title>
-        <a href="/" rel="home">Hi, I’m Sam.</a>
+        <Link href="/"><a rel="home">Hi, I’m Sam.</a></Link>
       </Title>
     </HeaderContainer>
   )

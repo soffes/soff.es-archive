@@ -1,6 +1,6 @@
 const express = require('express')
 const next = require('next')
-const { join } = require('path')
+const path = require('path')
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -18,6 +18,10 @@ const oldPostSlugs = ['the-motorola-rokr', 'ipod-scare', 'apple-boot-camp-public
 
 app.prepare().then(() => {
   const server = express()
+
+  server.get('/soffes.asc', (req, res) => {
+    res.sendFile(path.resolve('static', 'soffes.asc'))
+  })
 
   redirects.forEach(({ from, to, type = 301, method = 'get' }) => {
     server[method](from, (req, res) => {

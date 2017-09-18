@@ -1,0 +1,146 @@
+{
+  "current": [
+    {
+      "type": "MacApp",
+      "name": "Contrast",
+      "image_url": "/static/contrast.svg",
+      "url": "https://usecontrast.com"
+    },
+    {
+      "type": "MacApp",
+      "name": "Redacted",
+      "image_url": "/static/redacted-mac.svg",
+      "url": "https://useredacted.com",
+      "title": "Redacted for macOS"
+    },
+    {
+      "type": "App",
+      "name": "Redacted",
+      "image_url": "/static/redacted.svg",
+      "url": "https://itunes.apple.com/app/redacted-easily-obscure-parts-of-an-image/id992003008?mt=8&amp;at=1l3vmtU",
+      "title": "Redacted for iOS"
+    },
+    {
+      "type": "MacApp",
+      "name": "Spotlight Tools",
+      "image_url": "/static/spotlight-tools.png",
+      "url": "https://spotlight.tools"
+    }
+  ],
+  "past": [
+    {
+      "type": "App",
+      "name": "Bible",
+      "image_url": "/static/bible.jpg",
+      "url": "https://itunes.apple.com/app/bible/id282935706?mt=8&uo=4&at=1l3vmtU"
+    },
+    {
+      "type": "App",
+      "name": "Venmo",
+      "image_url": "/static/venmo.jpg",
+      "url": "https://venmo.com/"
+    },
+    {
+      "type": "App",
+      "name": "Hipstamatic",
+      "image_url": "/static/hipstamatic.jpg",
+      "url": "https://itunes.apple.com/app/hipstamatic/id342115564?mt=8&uo=4&at=1l3vmtU"
+    },
+    {
+      "type": "App",
+      "name": "Litely",
+      "image_url": "/static/litely.jpg",
+      "url": "https://itunes.apple.com/app/litely/id850707754?mt=8&amp;uo=4&amp;at=1l3vmtU"
+    },
+    {
+      "type": "App",
+      "name": "Houseparty",
+      "image_url": "/static/houseparty.svg",
+      "url": "https://joinhouse.party"
+    },
+    {
+      "type": "App",
+      "name": "Over",
+      "image_url": "/static/over.jpg",
+      "url": "https://itunes.apple.com/app/over/id535811906?mt=8&amp;uo=4&amp;at=1l3vmtU"
+    },
+    {
+      "type": "App",
+      "name": "Cheddar",
+      "image_url": "/static/cheddar.jpg",
+      "url": "https://soffes.blog/parting-ways-with-cheddar"
+    },
+    {
+      "type": "App",
+      "name": "Canvas",
+      "image_url": "/static/canvas.svg",
+      "url": "https://github.com/usecanvas/ios-v1"
+    },
+    {
+      "type": "App",
+      "name": "Tiiny",
+      "image_url": "/static/tiiny.svg",
+      "url": "https://medium.com/@kevinrose/we-re-shutting-down-tiiny-14254524f9b6"
+    },
+    {
+      "type": "App",
+      "name": "Shares",
+      "image_url": "/static/shares.svg",
+      "url": "https://soffes.blog/shares-2"
+    },
+    {
+      "type": "App",
+      "name": "Old Sport",
+      "image_url": "/static/old-sport.svg",
+      "url": "https://itunes.apple.com/app/old-sport/id1041222643?mt=8&amp;at=1l3vmtU"
+    },
+    {
+      "type": "App",
+      "name": "Roon",
+      "image_url": "/static/roon.jpg",
+      "url": "https://blog.ghost.org/roon"
+    },
+    {
+      "type": "App",
+      "name": "IncrediBooth",
+      "image_url": "/static/incredibooth.jpg",
+      "url": "https://itunes.apple.com/app/incredibooth/id378754705?mt=8&amp;uo=4&amp;at=1l3vmtU"
+    },
+    {
+      "type": "App",
+      "name": "Obaby",
+      "image_url": "/static/obaby.jpg",
+      "url": "https://itunes.apple.com/app/obaby/id738877924?mt=8&amp;uo=4&amp;at=1l3vmtU"
+    },
+    {
+      "type": "App",
+      "name": "Cape Town",
+      "image_url": "/static/capetownlove.jpg",
+      "url": "https://itunes.apple.com/app/cape-town-love/id704402892?mt=8&amp;uo=4&amp;at=1l3vmtU"
+    },
+    {
+      "type": "App",
+      "name": "Coins",
+      "image_url": "/static/coins.svg",
+      "url": "https://github.com/nothingmagical/coins"
+    },
+    {
+      "type": "App",
+      "name": "Seesaw",
+      "image_url": "/static/seesaw.jpg",
+      "url": "https://soffes.blog/onward"
+    },
+    {
+      "type": "App",
+      "name": "Everlapse",
+      "image_url": "/static/everlapse.jpg",
+      "url": "https://soffes.blog/onward"
+    },
+    {
+      "type": "MacApp",
+      "name": "Whiskey",
+      "image_url": "/static/whiskey.png",
+      "url": "http://usewhiskey.com"
+    }
+  ]
+}

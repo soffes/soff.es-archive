@@ -51,21 +51,24 @@ const AppName = styled.span`
 
 const AppIcon = styled.img`
   box-sizing: border-box;
-  border-radius: 20px;
   width: 100%;
   position: relative;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3), inset 0 0 2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25);
 
   @media all and (max-width: 660px) {
     border-radius: 15px;
   }
+
+  &.App {
+    border-radius: 20px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3), inset 0 0 2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  }
 `
 
 const App = (props) => {
-  return(
-    <AppContainer>
+  return (
+    <AppContainer className={props.type}>
       <AppLink href={props.url} title={props.title || props.name}>
-        <AppIcon src={props.image_url} alt={props.name} />
+        <AppIcon src={props.image_url} alt={props.name} className={props.type} />
         <AppName>{props.name}</AppName>
       </AppLink>
     </AppContainer>

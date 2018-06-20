@@ -13,6 +13,9 @@ export default class MyDocument extends Document {
         <Head>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <title>Sam Soffes</title>
+          <link rel="mask-icon" sizes="any" href="/favicon.svg" color="#f6291d" />
+          <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+          <link rel="apple-touch-icon" href="/apple-touch-icon-192x192.png" sizes="192x192" />
           <link rel="me" href="https://www.google.com/profiles/samsoffes" />
           <link rel="author" type="text/plain" href="/humans.txt" />
           <meta property="fb:admins" content="1203270129" />

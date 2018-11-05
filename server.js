@@ -20,6 +20,16 @@ const rootStaticFiles = ['soffes.asc', 'keybase.txt', 'favicon.ico', 'favicon.sv
 app.prepare().then(() => {
   const server = express()
 
+  if (!dev) {
+    server.use((req, res, next) => {
+      if (req.hostname !== 'soff.es') {
+        res.redirect(301, 'https://soff.es' + req.originalUrl)
+      } else {
+        next()
+      }
+    })
+  }
+
   rootStaticFiles.forEach((fileName) => {
     server.get('/' + fileName, (req, res) => {
       res.sendFile(path.resolve('static', fileName))

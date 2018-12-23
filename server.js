@@ -22,7 +22,7 @@ app.prepare().then(() => {
 
   if (!dev) {
     server.use((req, res, next) => {
-      if (req.hostname !== 'soff.es') {
+      if (req.hostname !== 'soff.es' && !req.hostname.endsWith('.now.sh')) {
         res.redirect(301, 'https://soff.es' + req.originalUrl)
       } else {
         next()
@@ -34,10 +34,6 @@ app.prepare().then(() => {
     server.get('/' + fileName, (req, res) => {
       res.sendFile(path.resolve('static', fileName))
     })
-  })
-
-  server.get('/soffes.asc', (req, res) => {
-    res.sendFile(path.resolve('static', 'soffes.asc'))
   })
 
   redirects.forEach(({ from, to, type = 301, method = 'get' }) => {

@@ -8,15 +8,15 @@
   },
   "main": "pages/index.js",
   "dependencies": {
-    "next": "^8.0.0",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "express": "^4.16.4",
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "express": "^4.17.0",
     "react-twitter-widgets": "^1.7.1",
-    "styled-components": "^4.0.0"
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.8.0"
+    "babel-plugin-styled-components": "^1.10.0"
   },
   "description": "Personal website for Sam Soffes",
   "repository": "https://github.com/soffes/soff.es",

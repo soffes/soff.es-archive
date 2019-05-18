@@ -2,16 +2,16 @@
   "name": "soffes",
   "version": "1.0.0",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "next start",
+    "export": "next build && next export"
   },
   "main": "pages/index.js",
   "dependencies": {
     "next": "^8.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "express": "^4.17.0",
     "react-twitter-widgets": "^1.7.1",
     "styled-components": "^4.2.0"
   },

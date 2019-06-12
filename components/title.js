@@ -12,5 +12,11 @@ const Title = styled.h1`
   a:hover {
     color: #0881b3;
   }
+
+  @media (prefers-color-scheme: dark) {
+    a {
+      color: #ccc;
+    }
+  }
 `
 export default Title

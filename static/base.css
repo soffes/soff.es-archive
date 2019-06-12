@@ -81,3 +81,10 @@ a {
 p {
   margin-bottom: 2rem;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #111;
+    color: #eee;
+  }
+}

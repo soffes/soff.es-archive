@@ -55,6 +55,7 @@ const AppIcon = styled.img`
   width: 100%;
   position: relative;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3), inset 0 0 2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  background: #fff;
 
   @media all and (max-width: 660px) {
     border-radius: 15px;

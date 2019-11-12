@@ -16,7 +16,7 @@
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.10.0"
+    "babel-plugin-styled-components": "^1.10.6"
   },
   "description": "Personal website for Sam Soffes",
   "repository": "https://github.com/soffes/soff.es",

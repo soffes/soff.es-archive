@@ -1,4 +1,4 @@
-import App, {Container} from 'next/app'
+import App from 'next/app'
 import Head from 'next/head'
 import React from 'react'
 
@@ -17,7 +17,7 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props
 
     return (
-      <Container>
+      <div>
         <Head>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <title>Sam Soffes</title>
@@ -42,10 +42,10 @@ export default class MyApp extends App {
           <meta property="profile:last_name" content="Soffes" />
           <meta property="profile:gender" content="male" />
           <meta property="profile:username" content="soffes" />
-          <link rel="stylesheet" type="text/css" href="/static/base.css" />
+          <link rel="stylesheet" type="text/css" href="/base.css" />
         </Head>
         <Component {...pageProps} />
-      </Container>
+      </div>
     )
   }
 }

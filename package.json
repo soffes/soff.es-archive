@@ -9,14 +9,14 @@
   },
   "main": "pages/index.js",
   "dependencies": {
-    "next": "^9.1.6",
+    "next": "^9.2.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-twitter-widgets": "^1.7.1",
-    "styled-components": "^4.4.1"
+    "styled-components": "^5.0.1"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.10.6"
+    "babel-plugin-styled-components": "^1.10.7"
   },
   "description": "Personal website for Sam Soffes",
   "repository": "https://github.com/soffes/soff.es",

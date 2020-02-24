@@ -8,18 +8,10 @@ export default () => (
   <Page>
     <p>I’m a software engineer living in San Francisco. I work on the Design Systems team at <a href="https://lyft.com" rel="external nofollow" style={{ color: "#FF00BF" }}>Lyft</a> as an iOS engineer. You can follow me on <a href="https://twitter.com/soffes" rel="external nofollow" style={{ color: "#1DA1F2" }}>Twitter</a>, see my code on <a href="https://github.com/soffes" rel="external nofollow" style={{ color: "#4078C0" }}>GitHub</a>, and watch my videos on <a href="https://youtube.com/samsoffes" rel="external nofollow" style={{ color: "#cd201f" }}>YouTube</a>. I occasionally <a href="https://soffes.blog" rel="external">blog</a> too.</p>
 
-    <p>I’ve been working with iOS since its release in 2008—and macOS before that. Here are my current projects:</p>
+    <p>I’ve been working with iOS since its release in 2008—and macOS before that. Here is some of my past work. Some were full time jobs, some were for clients, and some were my own projects.</p>
 
     <Apps>
       <MacApp name="Contrast" image_url="/contrast.svg" url="https://usecontrast.com" />
-      <MacApp name="Redacted" image_url="/redacted-mac.svg" url="https://useredacted.com" title="Redacted for macOS" />
-      <App name="Redacted" image_url="/redacted.svg" url="https://itunes.apple.com/app/redacted-easily-obscure-parts-of-an-image/id992003008?mt=8&amp;at=1l3vmtU" title="Redacted for iOS" />
-      <MacApp name="Spotlight Tools" image_url="/spotlight-tools.png" url="https://spotlight.tools" />
-    </Apps>
-
-    <p>Here is some of my past work. Some were full time jobs, some were for clients, and some were my own projects.</p>
-
-    <Apps>
       <App name="Bible" image_url="/bible.jpg" url="https://itunes.apple.com/app/bible/id282935706?mt=8&uo=4&at=1l3vmtU" />
       <App name="Venmo" image_url="/venmo.jpg" url="https://venmo.com/" />
       <App name="Hipstamatic" image_url="/hipstamatic.jpg" url="https://itunes.apple.com/app/hipstamatic/id342115564?mt=8&uo=4&at=1l3vmtU" />
@@ -39,6 +31,9 @@ export default () => (
       <App name="Seesaw" image_url="/seesaw.jpg" url="https://soffes.blog/onward" />
       <App name="Everlapse" image_url="/everlapse.jpg" url="https://soffes.blog/onward" />
       <MacApp name="Whiskey" image_url="/whiskey.png" url="http://usewhiskey.com" />
+      <MacApp name="Redacted" image_url="/redacted-mac.svg" url="https://useredacted.com" title="Redacted for macOS" />
+      <App name="Redacted" image_url="/redacted.svg" url="https://itunes.apple.com/app/redacted-easily-obscure-parts-of-an-image/id992003008?mt=8&amp;at=1l3vmtU" title="Redacted for iOS" />
+      <MacApp name="Spotlight Tools" image_url="/spotlight-tools.png" url="https://spotlight.tools" />
     </Apps>
 
     <p>Feel free to email me at <a href="mailto:sam@soff.es">sam@soff.es</a> or read more <Link href="/about"><a>about me</a></Link>. 👋</p>

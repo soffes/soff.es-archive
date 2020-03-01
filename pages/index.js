@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export default () => (
   <Page>
-    <p>I’m a software engineer living in San Francisco. I work on the Design Systems team at <a href="https://lyft.com" rel="external nofollow" style={{ color: "#FF00BF" }}>Lyft</a> as an iOS engineer. You can follow me on <a href="https://twitter.com/soffes" rel="external nofollow" style={{ color: "#1DA1F2" }}>Twitter</a>, see my code on <a href="https://github.com/soffes" rel="external nofollow" style={{ color: "#4078C0" }}>GitHub</a>, and watch my videos on <a href="https://youtube.com/samsoffes" rel="external nofollow" style={{ color: "#cd201f" }}>YouTube</a>. I occasionally <a href="https://soffes.blog" rel="external">blog</a> too.</p>
+    <p>I’m a software engineer living in San Francisco. You can follow me on <a href="https://twitter.com/soffes" rel="external nofollow" style={{ color: "#1DA1F2" }}>Twitter</a>, see my code on <a href="https://github.com/soffes" rel="external nofollow" style={{ color: "#4078C0" }}>GitHub</a>, and watch my videos on <a href="https://youtube.com/samsoffes" rel="external nofollow" style={{ color: "#cd201f" }}>YouTube</a>. I occasionally <a href="https://soffes.blog" rel="external">blog</a> too.</p>
 
     <p>I’ve been working with iOS since its release in 2008—and macOS before that. Here is some of my past work. Some were full time jobs, some were for clients, and some were my own projects.</p>
 

@@ -9,6 +9,9 @@ https://www.samsoff.es/* https://soff.es/:splat 301!
 /clock  https://github.com/soffes/clock-saver
 /blog   https://soffes.blog
 
+/apple-touch-icon.png /apple-touch-icon-192x192.png
+/apple-touch-icon-precomposed.png /apple-touch-icon-192x192.png
+
 /post/* https://soffes.blog/:splat
 /posts/* https://soffes.blog/:splat
 /the-motorola-rokr https://soffes.blog/the-motorola-rokr

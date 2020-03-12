@@ -1,0 +1,242 @@
+/* ---- Variables ---- */
+
+:root {
+  --text-color: #222;
+  --light-text-color: #ccc;
+  --link-color: #0881b3;
+}
+
+/* ---- Reset ---- */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #eee;
+    --background-color: #111;
+  }
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+section, header, footer, nav, article, aside, figure {
+  display: block;
+  width: 100%; }
+
+mark, time, meter, progress {
+  display: inline; }
+
+/* ---- Base ---- */
+
+html {
+  -webkit-font-smoothing: antialiased; }
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  font-size: 22px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif;
+  font-weight: 400;
+  line-height: 1.5em;
+  padding: 0 10px 0 64px;
+}
+
+@media all and (max-width: 660px) {
+  body {
+    line-height: 1.6em;
+    padding: 0 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--background-color);
+    color: var(--light-text-color);
+  }
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+a:hover {
+  -webkit-transition-property: border;
+  -moz-transition-property: border;
+  transition-property: border;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  border-bottom: 2px solid;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+/* ---- Layout ---- */
+
+body > header {
+  display: block;
+  max-width: 640px;
+  margin: 8rem 0 2rem;
+}
+
+@media all and (max-width: 660px) {
+  body > header {
+    margin: 5rem 0 3rem;
+  }
+}
+
+body > header h1 {
+  font-size: 32px;
+  line-height: 1em;
+  font-weight: 500;
+}
+
+body > header h1 a {
+  color: var(--text-color);
+}
+
+body > header h1 a:hover {
+  color: var(--link-color);
+}
+
+body > main {
+  display: block;
+  max-width: 640px;
+}
+
+body > footer {
+  margin: 2rem 0;
+  color: var(--light-text-color);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+body > footer a {
+  color: var(--light-text-color);
+}
+
+body > footer a:hover {
+  color: var(--link-color);
+}
+
+/* ---- Home ---- */
+
+ul.apps {
+  max-width: 640px;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+}
+
+@media all and (max-width: 660px) {
+  ul.apps {
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: auto;
+    grid-row-gap: 0.5rem;
+    width: 288px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+ul.apps a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 0;
+  margin: 0 auto;
+  text-decoration: none;
+  border: 0;
+}
+
+ul.apps a:hover {
+  border: 0;
+}
+
+ul.apps span {
+  font-family: 'HelveticaNeue', Helvetica, sans-serif;
+  font-size: 14px;
+  display: block;
+  width: 100%;
+  height: 10px;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1em;
+  padding: 8px 0 0;
+  color: #888;
+}
+
+@media all and (max-width: 660px) {
+  ul.apps span {
+    font-size: 13px;
+  }
+}
+
+ul.apps img {
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3), inset 0 0 2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  background: #fff;
+}
+
+@media all and (max-width: 660px) {
+  ul.apps img {
+    border-radius: 15px;
+  }
+}
+
+ul.apps li.mac {
+  border-radius: 0;
+}
+
+ul.apps li.mac img {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}

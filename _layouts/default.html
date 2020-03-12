@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+    <link rel="mask-icon" sizes="any" href="/favicon.svg" color="#f6291d" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-192x192.png" sizes="192x192" />
+    <link rel="me" href="https://www.google.com/profiles/samsoffes" />
+    <link rel="author" type="text/plain" href="/humans.txt" />
+    <meta property="fb:admins" content="1203270129" />
+    <meta property="og:site_name" content="Sam Soffes" />
+    <meta property="og:title" content="Sam Soffes" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:locale" content="en_US" />
+    <link rel="canonical" href="https://soff.es" />
+    <meta property="og:url" content="https://soff.es" />
+    <meta property="og:image" content="https://soffes-assets.s3.amazonaws.com/images/Sam-Soffes.jpg" />
+    <meta property="og:image:secure_url" content="https://soffes-assets.s3.amazonaws.com/images/Sam-Soffes.jpg" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="profile:first_name" content="Sam" />
+    <meta property="profile:last_name" content="Soffes" />
+    <meta property="profile:gender" content="male" />
+    <meta property="profile:username" content="soffes" />
+    <link rel="stylesheet" type="text/css" href="/css/base.css" />
+  </head>
+  <body>
+    <header>
+      <h1><a href="/" rel="home">Hi, I’m Sam</a></h1>
+    </header>
+    <main>
+      {{ content }}
+    </main>
+    <footer>
+      <p>&copy; {{ 'now' | date: "%Y" }} <a href="/" rel="home">Sam Soffes</a></p>
+    </footer>
+    <script>
+      const addLoadEvent=function(t){const n=window.onload;return"function"!=typeof window.onload?window.onload=t:window.onload=function(){return n&&n(),t()}};addLoadEvent(function(){if(document.getElementsByTagName&&String.prototype.indexOf)for(let t of document.getElementsByTagName("a")){const n=t.getAttribute("rel"),e=n&&n.indexOf("external")>=0;t.getAttribute("href")&&!0===e&&(t.target="_blank")}});
+      (function(f,a,t,h,o,m){a[h]=a[h]||function(){(a[h].q=a[h].q||[]).push(arguments)};o=f.createElement('script'),m=f.getElementsByTagName('script')[0];o.async=1; o.src=t; o.id='fathom-script';m.parentNode.insertBefore(o,m)})(document,window,'https://cdn.usefathom.com/tracker.js','fathom');fathom('set','siteId','JXPGBKDQ');fathom('trackPageview');
+    </script>
+  </body>
+</html>

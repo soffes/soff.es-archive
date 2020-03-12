@@ -1,0 +1,17 @@
+title: Sam Soffes
+email: sam@soff.es
+author: Sam Soffes
+baseurl: ""
+url: https://soff.es
+timezone: America/Los_Angeles
+encoding: utf-8
+strict_front_matter: true
+exclude:
+  - README.md
+permalink: /:title
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"

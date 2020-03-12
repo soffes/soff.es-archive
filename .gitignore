@@ -1,13 +1,2 @@
-# Build output
-dist
-.next
-out
-
-# Dependencies
-node_modules
-
-# Logs
-*.log
-
-# macOS
-.DS_Store
+.jekyll-metadata
+_site

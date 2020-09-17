@@ -9,14 +9,14 @@ Get the source:
     $ git clone https://github.com/soffes/soff.es.git
     $ cd soff.es
 
-Get the dependencies:
+Get the dependencies with [Bundler](https://bundler.io):
 
-    $ npm install
+    $ bundle install
 
 Now you can start the server:
 
-    $ npm run dev
+    $ bundle exec rake server
 
-Then open <http://localhost:3000> in your browser to see it running.
+Then open [localhost:4000](http://localhost:4000) in your browser to see it running.
 
-If you have issues getting it up and running, [send me an email](mailto:sam@soff.es).
+If you have issues getting it up and running, [open an issue](https://github.com/soffes/soff.es/issues/new).

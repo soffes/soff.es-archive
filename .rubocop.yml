@@ -1,0 +1,14 @@
+AllCops:
+  NewCops: enable
+  Exclude:
+    - bin/**/*
+    - vendor/**/*
+    - _site/**/*
+
+Style/AsciiComments:
+  # Disabled because this isn’t fun
+  Enabled: false
+
+Style/IfUnlessModifier:
+  # Disabled because I don’t understand what it wants me to do
+  Enabled: false

@@ -19,6 +19,24 @@ I’ve been working with iOS since its release in 2008—and macOS before that. 
     </a>
   </li>
   <li>
+    <a href="https://github.com/mobile">
+      <img src="/images/github.png" alt="GitHub">
+      <span>GitHub</span>
+    </a>
+  </li>
+  <li>
+    <a href="https://lyft.com/">
+      <img src="/images/lyft.png" alt="Lyft">
+      <span>Lyft</span>
+    </a>
+  </li>
+  <li>
+    <a href="https://lyft.com/driver">
+      <img src="/images/driver.png" alt="Lyft Driver">
+      <span>Lyft Driver</span>
+    </a>
+  </li>
+  <li>
     <a href="https://venmo.com/">
       <img src="/images/venmo.jpg" alt="Venmo">
       <span>Venmo</span>

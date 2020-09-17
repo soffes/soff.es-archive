@@ -1,9 +1,6 @@
----
----
+I’m a software engineer living in San Francisco. You can follow me on <a href="https://twitter.com/soffes" rel="external nofollow" style="color:#1DA1F2">Twitter</a>, see my code on <a href="https://github.com/soffes" rel="external nofollow" style="color:#333">GitHub</a>, and watch my videos on <a href="https://youtube.com/samsoffes" rel="external nofollow" style="color:#cd201f">YouTube</a>. I occasionally <a href="https://soffes.blog" rel="external">blog</a> too.
 
-I’m a software engineer living in San Francisco and work at <a href="https://github.com/mobile" rel="external nofollow" style="color:#4078C0">GitHub</a>. You can follow me on <a href="https://twitter.com/soffes" rel="external nofollow" style="color:#1DA1F2">Twitter</a>, see my code on <a href="https://github.com/soffes" rel="external nofollow" style="color:#4078C0">GitHub</a>, and watch my videos on <a href="https://youtube.com/samsoffes" rel="external nofollow" style="color:#cd201f">YouTube</a>. I occasionally <a href="https://soffes.blog" rel="external">blog</a> too.
-
-I’ve been working with iOS since its release in 2008—and macOS before that. Here is some of my past work. Some were full time jobs, some were for clients, and some were my own projects.
+I’ve been working with iOS since its release in 2008 and macOS before that. Here is some of my past work. Some were full time jobs, some were for clients, and some were my own projects.
 
 <ul class="apps">
   <li class="mac">

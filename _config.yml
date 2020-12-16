@@ -8,6 +8,8 @@ encoding: utf-8
 strict_front_matter: true
 exclude:
   - README.md
+include:
+  - _redirects
 permalink: /:title
 defaults:
   -

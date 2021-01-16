@@ -238,3 +238,18 @@ ul.apps li.mac img {
   border-radius: 0;
   box-shadow: none;
 }
+
+a.along-link {
+  background-color: rgb(204, 0, 255);
+  background-image: radial-gradient(126.9% 2009.27% at 0% 0%, rgb(204, 0, 255) 0%, rgb(100, 5, 255) 100%);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+a.along-link:hover {
+  border-color: rgb(100, 5, 255);
+}

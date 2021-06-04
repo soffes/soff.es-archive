@@ -20,115 +20,109 @@ I’ve been working with iOS since its release in 2008 and macOS before that. He
     </a>
   </li>
   <li>
-    <a href="https://github.com/mobile">
+    <a href="https://github.com/mobile" rel="external nofollow">
       <img src="/images/github.png" alt="GitHub">
       <span>GitHub</span>
     </a>
   </li>
   <li>
-    <a href="https://lyft.com/">
+    <a href="https://lyft.com/" rel="external nofollow">
       <img src="/images/lyft.png" alt="Lyft">
       <span>Lyft</span>
     </a>
   </li>
   <li>
-    <a href="https://lyft.com/driver">
+    <a href="https://lyft.com/driver" rel="external nofollow">
       <img src="/images/driver.png" alt="Lyft Driver">
       <span>Lyft Driver</span>
     </a>
   </li>
   <li>
-    <a href="https://venmo.com/">
+    <a href="https://venmo.com/" rel="external nofollow">
       <img src="/images/venmo.jpg" alt="Venmo">
       <span>Venmo</span>
     </a>
   </li>
   <li>
-    <a href="https://itunes.apple.com/app/hipstamatic/id342115564?mt=8&uo=4&at=1l3vmtU">
+    <a href="https://itunes.apple.com/app/hipstamatic/id342115564?mt=8&uo=4&at=1l3vmtU" rel="external nofollow">
       <img src="/images/hipstamatic.jpg" alt="Hipstamatic">
       <span>Hipstamatic</span>
     </a>
   </li>
   <li>
-    <a href="https://itunes.apple.com/app/litely/id850707754?mt=8&amp;uo=4&amp;at=1l3vmtU">
+    <a href="https://itunes.apple.com/app/litely/id850707754?mt=8&amp;uo=4&amp;at=1l3vmtU" rel="external nofollow">
       <img src="/images/litely.jpg" alt="Litely">
       <span>Litely</span>
     </a>
   </li>
   <li>
-    <a href="https://joinhouse.party">
+    <a href="https://joinhouse.party" rel="external nofollow">
       <img src="/images/houseparty.svg" alt="Houseparty">
       <span>Houseparty</span>
     </a>
   </li>
   <li>
-    <a href="https://itunes.apple.com/app/over/id535811906?mt=8&amp;uo=4&amp;at=1l3vmtU">
+    <a href="https://itunes.apple.com/app/over/id535811906?mt=8&amp;uo=4&amp;at=1l3vmtU" rel="external nofollow">
       <img src="/images/over.jpg" alt="Over">
       <span>Over</span>
     </a>
   </li>
   <li>
-    <a href="https://soffes.blog/parting-ways-with-cheddar">
+    <a href="https://soffes.blog/parting-ways-with-cheddar" rel="external">
       <img src="/images/cheddar.jpg" alt="Cheddar">
       <span>Cheddar</span>
     </a>
   </li>
   <li>
-    <a href="https://github.com/usecanvas/ios-v1">
+    <a href="https://github.com/usecanvas/ios-v1" rel="external nofollow">
       <img src="/images/canvas.svg" alt="Canvas">
       <span>Canvas</span>
     </a>
   </li>
   <li>
-    <a href="https://medium.com/@kevinrose/we-re-shutting-down-tiiny-14254524f9b6">
+    <a href="https://medium.com/@kevinrose/we-re-shutting-down-tiiny-14254524f9b6" rel="external nofollow">
       <img src="/images/tiiny.svg" alt="Tiiny">
       <span>Tiiny</span>
     </a>
   </li>
   <li>
-    <a href="https://soffes.blog/shares-2">
+    <a href="https://soffes.blog/shares-2" rel="external">
       <img src="/images/shares.svg" alt="Shares">
       <span>Shares</span>
     </a>
   </li>
   <li>
-    <a href="https://itunes.apple.com/app/old-sport/id1041222643?mt=8&amp;at=1l3vmtU">
-      <img src="/images/old-sport.svg" alt="Old Sport">
-      <span>Old Sport</span>
-    </a>
-  </li>
-  <li>
-    <a href="https://blog.ghost.org/roon">
+    <a href="https://blog.ghost.org/roon" rel="external nofollow">
       <img src="/images/roon.jpg" alt="Roon">
       <span>Roon</span>
     </a>
   </li>
   <li>
-    <a href="https://itunes.apple.com/app/incredibooth/id378754705?mt=8&amp;uo=4&amp;at=1l3vmtU">
+    <a href="https://itunes.apple.com/app/incredibooth/id378754705?mt=8&amp;uo=4&amp;at=1l3vmtU" rel="external nofollow">
       <img src="/images/incredibooth.jpg" alt="IncrediBooth">
       <span>IncrediBooth</span>
     </a>
   </li>
   <li>
-    <a href="https://github.com/nothingmagical/coins">
+    <a href="https://github.com/nothingmagical/coins" rel="external nofollow">
       <img src="/images/coins.svg" alt="Coins">
       <span>Coins</span>
     </a>
   </li>
   <li>
-    <a href="https://soffes.blog/onward">
+    <a href="https://soffes.blog/onward" rel="external">
       <img src="/images/seesaw.jpg" alt="Seesaw">
       <span>Seesaw</span>
     </a>
   </li>
   <li>
-    <a href="https://soffes.blog/onward">
+    <a href="https://soffes.blog/onward" rel="external">
       <img src="/images/everlapse.jpg" alt="Everlapse">
       <span>Everlapse</span>
     </a>
   </li>
   <li class="mac">
-    <a href="http://usewhiskey.com">
+    <a href="http://usewhiskey.com" rel="external nofollow">
       <img src="/images/whiskey.png" alt="Whiskey">
       <span>Whiskey</span>
     </a>
@@ -140,7 +134,7 @@ I’ve been working with iOS since its release in 2008 and macOS before that. He
     </a>
   </li>
   <li class="mac">
-    <a href="https://spotlight.tools">
+    <a href="https://github.com/soffes/spotlight-tools" rel="external nofollow">
       <img src="/images/spotlight-tools.png" alt="Spotlight Tools">
       <span>Spotlight Tools</span>
     </a>

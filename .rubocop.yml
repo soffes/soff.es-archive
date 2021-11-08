@@ -1,3 +1,8 @@
+# Rubocop extensions
+require:
+  - rubocop-performance
+  - rubocop-rake
+
 AllCops:
   NewCops: enable
   Exclude:

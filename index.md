@@ -7,6 +7,12 @@ I’m a software engineer living in San Francisco. I’m currently building <a h
 I’ve been working with iOS since its release in 2008 and macOS before that. Here is some of my past work. Some were full time jobs, some were for clients, and some were my own projects.
 
 <ul class="apps">
+  <li>
+    <a href="https://along.video" rel="external nofollow">
+      <img src="/images/along.svg" alt="Along">
+      <span>Along</span>
+    </a>
+  </li>
   <li class="mac">
     <a href="https://usecontrast.com" rel="external nofollow">
       <img src="/images/contrast.svg" alt="Contrast">

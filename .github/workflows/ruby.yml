@@ -20,12 +20,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.0.1
-      - name: Cache gems
-        uses: actions/cache@v1
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
+          bundler-cache: true
       - name: Install dependencies
         run: |
           bundle config path vendor/bundle

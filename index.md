@@ -110,21 +110,9 @@ I’ve been working with iOS since its release in 2008 and macOS before that. He
     </a>
   </li>
   <li>
-    <a href="https://github.com/nothingmagical/coins" rel="external nofollow">
-      <img src="/images/coins.svg" alt="Coins">
-      <span>Coins</span>
-    </a>
-  </li>
-  <li>
     <a href="https://soffes.blog/onward" rel="external">
       <img src="/images/seesaw.jpg" alt="Seesaw">
       <span>Seesaw</span>
-    </a>
-  </li>
-  <li>
-    <a href="https://soffes.blog/onward" rel="external">
-      <img src="/images/everlapse.jpg" alt="Everlapse">
-      <span>Everlapse</span>
     </a>
   </li>
   <li class="mac">
@@ -137,12 +125,6 @@ I’ve been working with iOS since its release in 2008 and macOS before that. He
     <a href="https://useredacted.com" rel="external nofollow">
       <img src="/images/redacted-mac.svg" alt="Redacted for macOS">
       <span>Redacted</span>
-    </a>
-  </li>
-  <li class="mac">
-    <a href="https://github.com/soffes/spotlight-tools" rel="external nofollow">
-      <img src="/images/spotlight-tools.png" alt="Spotlight Tools">
-      <span>Spotlight Tools</span>
     </a>
   </li>
 </ul>

@@ -1,23 +1,23 @@
 # frozen_string_literal: true
 
-desc 'Build'
+desc "Build"
 task :build do
-  system 'bundle exec jekyll build --config _config.yml --trace'
+  system "bundle exec jekyll build --config _config.yml --trace"
 end
 
 task default: :build
 
-desc 'Clean'
+desc "Clean"
 task :clean do
-  system 'rm -rf _site .jekyll-cache'
+  system "rm -rf _site .jekyll-cache"
 end
 
-desc 'Local server'
+desc "Local server"
 task :server do
-  system 'bundle exec jekyll server --config _config.yml --trace --incremental'
+  system "bundle exec jekyll server --config _config.yml --trace --incremental"
 end
 
-desc 'Run Rubocop'
+desc "Run Rubocop"
 task :lint do
-  system 'bundle exec rubocop --parallel --config .rubocop.yml'
+  system "bundle exec standardrb"
 end

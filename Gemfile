@@ -1,15 +1,11 @@
-# frozen_string_literal: true
+source "https://rubygems.org"
 
-source 'https://rubygems.org'
+ruby "3.1.2"
 
-ruby '3.0.3'
-
-gem 'jekyll'
-gem 'rake'
+gem "jekyll"
+gem "rake"
 
 group :development do
-  gem 'rubocop', require: false
-  gem 'rubocop-performance', require: false
-  gem 'rubocop-rake', require: false
-  gem 'webrick'
+  gem "standard"
+  gem "webrick"
 end
